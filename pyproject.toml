@@ -1,0 +1,17 @@
+[project]
+name = "livingwp"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Ming", email = "ming.cheuk@elementx.ai" }
+]
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+livingwp = "livingwp:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
