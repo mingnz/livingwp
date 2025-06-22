@@ -1,0 +1,12 @@
+body {
+  font-family: sans-serif;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 1rem;
+}
+header, footer {
+  margin-bottom: 1rem;
+}
+nav a {
+  margin-right: 0.5rem;
+}

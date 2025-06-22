@@ -1,0 +1,8 @@
+baseurl: ""
+title: "AI Forum NZ - Generative AI Working Group"
+description: "Up-to-date snapshots of the Generative AI landscape in Aotearoa New Zealand"
+markdown: kramdown
+collections:
+  industries:
+    output: true
+    permalink: /industries/:name/
