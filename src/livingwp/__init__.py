@@ -1,6 +1,6 @@
 import asyncio
-from livingwp.agents import run_agent
+from livingwp.agents import update_articles
 
 
 def main() -> None:
-    asyncio.run(run_agent())
+    asyncio.run(update_articles())
