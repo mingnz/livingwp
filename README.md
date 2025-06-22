@@ -27,6 +27,10 @@ New Zealand.  The repository contains two parts:
    uv run livingwp
    ```
 
+Running the command above now iterates over each markdown file in
+`src/website/whitepaper/content`, rewriting it with the latest research using
+the agent pipeline.
+
 ## Working on the Website
 
 1. Change to the site directory:
