@@ -1,2 +1,6 @@
+import asyncio
+from livingwp.agents import run_agent
+
+
 def main() -> None:
-    print("Hello from livingwp!")
+    asyncio.run(run_agent())
