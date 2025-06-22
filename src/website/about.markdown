@@ -4,8 +4,8 @@ title: About
 permalink: /about/
 ---
 
-The AI Forum of New Zealand convenes the Generative AI Working Group to explore
-and share developments in this fast moving field. This site is part of that
+AI Forum New Zealand formed the Generative AI Working Group to explore and
+share developments in this fast-moving field. This site is part of that
 initiative and serves as a living record of how generative AI is being applied
 across industries in Aotearoa.
 

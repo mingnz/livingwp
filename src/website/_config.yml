@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: AI Forum of NZ - Generative AI Working Group
+title: AI Forum New Zealand - Generative AI Working Group
 email: info@aiforum.org.nz
 description: >-
   A living snapshot of the Generative AI landscape in Aotearoa New Zealand.
@@ -32,6 +32,9 @@ github_username:  jekyll
 theme: minima
 plugins:
   - jekyll-feed
+
+header_pages:
+  - whitepaper.markdown
 
 # Exclude from processing.
 # The following items will not be processed, by default.

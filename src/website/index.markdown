@@ -5,10 +5,12 @@
 layout: home
 ---
 
-Welcome to the AI Forum of New Zealand's Generative AI Working Group.
+Welcome to AI Forum New Zealand's Generative AI Working Group.
 
 This website is an evolving snapshot of how generative AI is being used across Aotearoa.
 An autonomous agent regularly scans the web for new articles and updates our industry pages so the information here stays current.
+
+Explore the [Living Whitepaper](whitepaper) for sector-specific updates.
 
 Curious about the process? [Learn how it works](how-it-works) and join the experiment.
 
