@@ -34,7 +34,7 @@ plugins:
   - jekyll-feed
 
 header_pages:
-  - whitepaper.markdown
+  - whitepaper/index.markdown
 
 # Exclude from processing.
 # The following items will not be processed, by default.
