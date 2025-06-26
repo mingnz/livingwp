@@ -6,7 +6,7 @@ readme = "README.md"
 authors = [{ name = "Ming", email = "ming.cheuk@elementx.ai" }]
 requires-python = ">=3.10"
 dependencies = [
-    "openai-agents>=0.0.17",
+    "openai-agents>=0.0.19",
 ]
 
 [project.scripts]
