@@ -79,9 +79,4 @@ flowchart TD
     I --> J[GitHub Action<br/>Auto Deploy to Website]
 
     J --> K[End]
-
-    style A fill:#e1f5fe
-    style C1 fill:#f3e5f5
-    style C2 fill:#f3e5f5
-    style F fill:#e8f5e8
 ```
