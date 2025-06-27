@@ -1,7 +1,7 @@
 # Living Whitepaper
 
 An open source experiment tracking how generative AI is used across Aotearoa
-New Zealand.  The repository contains two parts:
+New Zealand. The repository contains two parts:
 
 - **`src/livingwp`** – the Python code for an LLM agent that gathers research and
   writes updates.
@@ -51,5 +51,32 @@ the agent pipeline.
    bundle exec jekyll serve
    ```
 
-The site will be available at `http://localhost:4000` by default.  Contributions
-are welcome on [GitHub](https://github.com/mingnz/livingwp).
+The site will be available at `http://localhost:4000` by default.
+
+## Process
+
+```mermaid
+flowchart TD
+    A[Run Update Task<br/>on Schedule] --> B{Check for<br/>Existing Article}
+
+    B -->|Article Found| C1[Run Deep Research Agent<br/>Topic + Previous Article]
+    B -->|No Article| C2[Run Deep Research Agent<br/>Topic Only]
+
+    C1 --> D[Update Article<br/>with Research Results]
+    C2 --> D
+
+    D --> E[Commit Changes]
+
+    E -->     F[Open PR<br/>for Review]
+
+    F --> G{Human Review}
+
+    G -->|Needs Edits| H[Human Makes Edits<br/>to PR]
+    G -->|Approve| I[Merge PR]
+
+    H --> G
+
+    I --> J[GitHub Action<br/>Auto Deploy to Website]
+
+    J --> K[End]
+```
