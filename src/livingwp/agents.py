@@ -4,7 +4,7 @@ from typing import Dict, Tuple
 
 from livingwp.utils.files import load_instruction
 
-MODEL_NAME = "gpt-4.1-mini"
+MODEL_NAME = "o4-mini-deep-research"
 
 
 research_agent = Agent(
