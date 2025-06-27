@@ -7,11 +7,12 @@ layout: home
 
 Welcome to AI Forum New Zealand's Generative AI Working Group.
 
-This website is an evolving snapshot of how generative AI is being used across Aotearoa.
-An autonomous agent regularly scans the web for new articles and updates our industry pages so the information here stays current.
+Discover how generative AI is shaping industries across Aotearoa. This website evolves in real-time, powered by an autonomous agent that scans the web for the latest insights and updates.
 
-Explore the [Living Whitepaper](whitepaper) for sector-specific updates.
+Dive into the [Living Whitepaper](whitepaper) for sector-specific updates and trends.
 
-Curious about the process? [Learn how it works](how-it-works) and join the experiment.
+Curious about the process? [Learn how it works](how-it-works)
 
-Contributions are welcome at [GitHub](https://github.com/mingnz/livingwp).
+Your contributions are invaluable—join us on [GitHub](https://github.com/mingnz/livingwp) and help shape the future of AI in New Zealand.
+
+Researching AI topics, using AI, for the AI community. Developed with the help of AI.
