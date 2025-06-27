@@ -6,29 +6,12 @@ from livingwp.utils.files import load_instruction
 
 MODEL_NAME = "gpt-4.1-mini"
 
-writing_agent = Agent(
-    name="WritingAgent",
-    model=MODEL_NAME,
-    handoff_description="Takes research notes and previous article to update or rewrite the article.",
-    instructions=load_instruction("instructions_writing.md"),
-)
-
 
 research_agent = Agent(
     name="ResearchAgent",
     model=MODEL_NAME,
-    handoff_description="Takes a research plan and gathers information.",
     instructions=load_instruction("instructions_research.md"),
-    tools=[WebSearchTool(user_location={"type": "approximate", "country": "NZ"})],
-    handoffs=[writing_agent],
-)
-
-
-planning_agent = Agent(
-    name="PlanningAgent",
-    model=MODEL_NAME,
-    instructions=load_instruction("instructions_planning.md"),
-    handoffs=[research_agent],
+    tools=[WebSearchTool()],
 )
 
 
@@ -53,14 +36,17 @@ def _parse_markdown(text: str) -> Tuple[Dict[str, str], str, str]:
 
 async def update_articles() -> None:
     """Run the agent pipeline for each industry article."""
-    content_dir = Path(__file__).resolve().parent.parent / "website" / "whitepaper" / "content"
+    content_dir = (
+        Path(__file__).resolve().parent.parent / "website" / "whitepaper" / "content"
+    )
     for path in sorted(content_dir.glob("*.markdown")):
         text = path.read_text()
         front_matter, fm_text, body = _parse_markdown(text)
         topic = front_matter.get("title", path.stem.replace("-", " "))
         initial_input = f"Topic: {topic}\nPrevious article:\n{body}"
-        result = await Runner.run(planning_agent, input=initial_input)
-        updated = f"---\n{fm_text}\n---\n\n{result.final_output.strip()}\n"
+        research_result = await Runner.run(research_agent, input=initial_input)
+        print(f"Research result for {topic}:\n{research_result.final_output}\n")
+        updated = f"---\n{fm_text}\n---\n\n{research_result.final_output.strip()}\n"
         path.write_text(updated)
 
 
@@ -68,6 +54,6 @@ async def run_agent() -> None:
     """Legacy entry point for running a single topic."""
     topic = "AI in Education"
     initial_input = f"Topic: {topic}"
-    result = await Runner.run(planning_agent, input=initial_input)
+    result = await Runner.run(research_agent, input=initial_input)
     print("Final Output:")
     print(result.final_output)
