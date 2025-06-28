@@ -1,7 +1,12 @@
 name: Update whitepapers
 
 on:
-  workflow_dispatch: # Allow manual triggering
+  workflow_dispatch:
+    inputs:
+      article_filter:
+        description: "Filter for articles to update (optional)"
+        required: false
+        default: ""
 
 env:
   # Sets the model name used for the research agent
@@ -23,7 +28,7 @@ jobs:
       - name: Run livingwp update
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-        run: uv run livingwp
+        run: uv run livingwp "${{ github.event.inputs.article_filter }}"
 
       - name: Check for changes
         id: changes
