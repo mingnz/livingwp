@@ -4,12 +4,8 @@ on:
   workflow_dispatch: # Allow manual triggering
 
 env:
-  # This workflow sets the RESEARCH_MODEL environment variable for all jobs
-  # To change the model, edit the value below or set it as a secret
-  #
-  # Example: RESEARCH_MODEL: o4-mini-deep-research
-  #
-  RESEARCH_MODEL: gpt-4.1-mini
+  # Sets the model name used for the research agent
+  RESEARCH_MODEL: ${{ vars.RESEARCH_MODEL || 'o4-mini-deep-research' }}
 
 jobs:
   update-articles:
