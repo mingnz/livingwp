@@ -1,9 +1,13 @@
 import argparse
 import asyncio
+import logging
+from livingwp.utils.logging import logger
 from livingwp.agents import update_articles
 
 
 def main() -> None:
+    logging.basicConfig(level=logging.INFO, format="%(message)s")
+
     parser = argparse.ArgumentParser(description="Update Living Whitepaper articles.")
     parser.add_argument(
         "article_filter",
@@ -13,5 +17,5 @@ def main() -> None:
     )
     args = parser.parse_args()
 
-    print("Starting Living Whitepaper update...")
+    logger.info("Starting Living Whitepaper update...")
     asyncio.run(update_articles(args.article_filter))
