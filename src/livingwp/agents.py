@@ -1,10 +1,11 @@
 from agents import Agent, Runner, WebSearchTool
 from pathlib import Path
+from os import environ
 
 from livingwp.utils.files import load_instruction
 from livingwp.utils.markdown import parse_markdown
 
-MODEL_NAME = "o4-mini-deep-research"
+MODEL_NAME = environ.get("RESEARCH_MODEL", "o4-mini-deep-research")
 
 
 research_agent = Agent(
