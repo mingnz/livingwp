@@ -11,6 +11,8 @@ New Zealand. The repository contains two parts:
 - **`src/website`** – a Jekyll site that is automatically populated with those
   updates and served on GitHub Pages.
 
+![system diagram](docs/assets/system.excalidraw.png)
+
 ## Requirements
 
 - [uv](https://github.com/astral-sh/uv) for Python dependencies
