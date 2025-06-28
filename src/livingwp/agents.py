@@ -5,6 +5,7 @@ from os import environ
 from livingwp.utils.files import load_instruction
 from livingwp.utils.markdown import parse_markdown
 
+# For testing, you should use a lightweight model like gpt-4.1-mini.
 MODEL_NAME = environ.get("RESEARCH_MODEL", "o4-mini-deep-research")
 
 
