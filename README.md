@@ -1,5 +1,8 @@
 # Living Whitepaper
 
+[![Update whitepapers](https://github.com/mingnz/livingwp/actions/workflows/run_agent.yml/badge.svg)](https://github.com/mingnz/livingwp/actions/workflows/run_agent.yml)
+[![Deploy website to Github Pages](https://github.com/mingnz/livingwp/actions/workflows/deploy_website.yml/badge.svg)](https://github.com/mingnz/livingwp/actions/workflows/deploy_website.yml)
+
 An open source experiment tracking how generative AI is used across Aotearoa
 New Zealand. The repository contains two parts:
 
