@@ -17,12 +17,14 @@ research_agent = Agent(
 )
 
 
-async def update_articles() -> None:
+async def update_articles(article_filter=None) -> None:
     """Run the agent pipeline for each industry article using streaming."""
     content_dir = (
         Path(__file__).resolve().parent.parent / "website" / "whitepaper" / "content"
     )
-    for path in sorted(content_dir.glob("*.markdown")):
+    pattern = f"*{article_filter}*.markdown" if article_filter else "*.markdown"
+    print(f"Update with filter: {article_filter or 'all articles'}")
+    for path in sorted(content_dir.glob(pattern)):
         text = path.read_text()
         front_matter, fm_text, body = parse_markdown(text)
         topic = front_matter.get("title", path.stem.replace("-", " "))
