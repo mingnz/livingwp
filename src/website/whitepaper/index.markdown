@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Living Whitepaper
+title: Articles
 permalink: /whitepaper/
 ---
 
