@@ -30,51 +30,6 @@ The prompt that guides the research agent is defined in [`src/livingwp/prompts/i
 
 We look forward to your contributions!
 
-## Requirements
-
-- [uv](https://github.com/astral-sh/uv) for Python dependencies
-- Ruby and [Bundler](https://bundler.io) for running the website locally
-
-## Running the Agent
-
-1. Install Python dependencies:
-
-   ```sh
-   uv sync
-   ```
-
-2. Run the agent:
-
-   ```sh
-   uv run livingwp
-   ```
-
-Running the command above now iterates over each markdown file in
-`src/website/whitepaper/content`, rewriting it with the latest research using
-the agent pipeline.
-
-## Working on the Website
-
-1. Change to the site directory:
-
-   ```sh
-   cd src/website
-   ```
-
-2. Install Ruby gems:
-
-   ```sh
-   bundle install
-   ```
-
-3. Serve the site locally:
-
-   ```sh
-   bundle exec jekyll serve
-   ```
-
-The site will be available at `http://localhost:4000` by default.
-
 ## Process
 
 ```mermaid
@@ -102,3 +57,50 @@ flowchart TD
 
     J --> K[End]
 ```
+
+## Development
+
+### Requirements
+
+- [uv](https://github.com/astral-sh/uv) for Python dependencies
+- Ruby and [Bundler](https://bundler.io) for running the website locally
+
+### Running the Agent
+
+1. Install Python dependencies:
+
+   ```sh
+   uv sync
+   ```
+
+2. Run the agent:
+
+   ```sh
+   uv run livingwp
+   ```
+
+Running the command above now iterates over each markdown file in
+`src/website/whitepaper/content`, rewriting it with the latest research using
+the agent pipeline.
+
+### Working on the Website
+
+1. Change to the site directory:
+
+   ```sh
+   cd src/website
+   ```
+
+2. Install Ruby gems:
+
+   ```sh
+   bundle install
+   ```
+
+3. Serve the site locally:
+
+   ```sh
+   bundle exec jekyll serve
+   ```
+
+The site will be available at `http://localhost:4000` by default.
