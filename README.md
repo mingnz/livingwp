@@ -13,50 +13,22 @@ New Zealand. The repository contains two parts:
 
 ![system diagram](docs/assets/system.excalidraw.png)
 
-## Requirements
+## Contributing
 
-- [uv](https://github.com/astral-sh/uv) for Python dependencies
-- Ruby and [Bundler](https://bundler.io) for running the website locally
+We welcome contributions from the community! There are two main ways you can get involved:
 
-## Running the Agent
+- **Open a Pull Request**: If you want to make direct edits to the code or documentation, please fork the repository and open a Pull Request with your changes. This includes updates to the agent logic, website, or any other part of the project.
 
-1. Install Python dependencies:
+- **Open an Issue**: If you have suggestions, ideas, or have found a bug, feel free to open an Issue. This is a great way to propose new features, report problems, or discuss improvements.
 
-   ```sh
-   uv sync
-   ```
+### Editing the Research Prompt
 
-2. Run the agent:
+The prompt that guides the research agent is defined in [`src/livingwp/prompts/instructions_research.md`](https://github.com/mingnz/livingwp/blob/main/src/livingwp/prompts/instructions_research.md). You can suggest changes to this prompt by either:
 
-   ```sh
-   uv run livingwp
-   ```
+- Opening a Pull Request directly with your proposed edits to the prompt file.
+- Opening an Issue to discuss or suggest changes to the prompt.
 
-Running the command above now iterates over each markdown file in
-`src/website/whitepaper/content`, rewriting it with the latest research using
-the agent pipeline.
-
-## Working on the Website
-
-1. Change to the site directory:
-
-   ```sh
-   cd src/website
-   ```
-
-2. Install Ruby gems:
-
-   ```sh
-   bundle install
-   ```
-
-3. Serve the site locally:
-
-   ```sh
-   bundle exec jekyll serve
-   ```
-
-The site will be available at `http://localhost:4000` by default.
+We look forward to your contributions!
 
 ## Process
 
@@ -86,19 +58,49 @@ flowchart TD
     J --> K[End]
 ```
 
-## Contributing
+## Development
 
-We welcome contributions from the community! There are two main ways you can get involved:
+### Requirements
 
-- **Open a Pull Request**: If you want to make direct edits to the code or documentation, please fork the repository and open a Pull Request with your changes. This includes updates to the agent logic, website, or any other part of the project.
+- [uv](https://github.com/astral-sh/uv) for Python dependencies
+- Ruby and [Bundler](https://bundler.io) for running the website locally
 
-- **Open an Issue**: If you have suggestions, ideas, or have found a bug, feel free to open an Issue. This is a great way to propose new features, report problems, or discuss improvements.
+### Running the Agent
 
-### Editing the Research Prompt
+1. Install Python dependencies:
 
-The prompt that guides the research agent is defined in [`src/livingwp/prompts/instructions_research.md`](https://github.com/mingnz/livingwp/blob/main/src/livingwp/prompts/instructions_research.md). You can suggest changes to this prompt by either:
+   ```sh
+   uv sync
+   ```
 
-- Opening a Pull Request directly with your proposed edits to the prompt file.
-- Opening an Issue to discuss or suggest changes to the prompt.
+2. Run the agent:
 
-We look forward to your contributions!
+   ```sh
+   uv run livingwp
+   ```
+
+Running the command above now iterates over each markdown file in
+`src/website/whitepaper/content`, rewriting it with the latest research using
+the agent pipeline.
+
+### Working on the Website
+
+1. Change to the site directory:
+
+   ```sh
+   cd src/website
+   ```
+
+2. Install Ruby gems:
+
+   ```sh
+   bundle install
+   ```
+
+3. Serve the site locally:
+
+   ```sh
+   bundle exec jekyll serve
+   ```
+
+The site will be available at `http://localhost:4000` by default.
