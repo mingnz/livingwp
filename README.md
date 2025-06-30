@@ -13,6 +13,23 @@ New Zealand. The repository contains two parts:
 
 ![system diagram](docs/assets/system.excalidraw.png)
 
+## Contributing
+
+We welcome contributions from the community! There are two main ways you can get involved:
+
+- **Open a Pull Request**: If you want to make direct edits to the code or documentation, please fork the repository and open a Pull Request with your changes. This includes updates to the agent logic, website, or any other part of the project.
+
+- **Open an Issue**: If you have suggestions, ideas, or have found a bug, feel free to open an Issue. This is a great way to propose new features, report problems, or discuss improvements.
+
+### Editing the Research Prompt
+
+The prompt that guides the research agent is defined in [`src/livingwp/prompts/instructions_research.md`](https://github.com/mingnz/livingwp/blob/main/src/livingwp/prompts/instructions_research.md). You can suggest changes to this prompt by either:
+
+- Opening a Pull Request directly with your proposed edits to the prompt file.
+- Opening an Issue to discuss or suggest changes to the prompt.
+
+We look forward to your contributions!
+
 ## Requirements
 
 - [uv](https://github.com/astral-sh/uv) for Python dependencies
@@ -85,20 +102,3 @@ flowchart TD
 
     J --> K[End]
 ```
-
-## Contributing
-
-We welcome contributions from the community! There are two main ways you can get involved:
-
-- **Open a Pull Request**: If you want to make direct edits to the code or documentation, please fork the repository and open a Pull Request with your changes. This includes updates to the agent logic, website, or any other part of the project.
-
-- **Open an Issue**: If you have suggestions, ideas, or have found a bug, feel free to open an Issue. This is a great way to propose new features, report problems, or discuss improvements.
-
-### Editing the Research Prompt
-
-The prompt that guides the research agent is defined in [`src/livingwp/prompts/instructions_research.md`](https://github.com/mingnz/livingwp/blob/main/src/livingwp/prompts/instructions_research.md). You can suggest changes to this prompt by either:
-
-- Opening a Pull Request directly with your proposed edits to the prompt file.
-- Opening an Issue to discuss or suggest changes to the prompt.
-
-We look forward to your contributions!
