@@ -9,8 +9,10 @@ on:
         default: ""
 
 env:
-  # Sets the model name used for the research agent
+  # Sets the default model name used for the research agent
   RESEARCH_MODEL: ${{ vars.RESEARCH_MODEL || 'o4-mini-deep-research' }}
+  # Sets the default instruction file for the research agent
+  RESEARCH_INSTRUCTIONS_FILENAME: ${{ vars.RESEARCH_INSTRUCTIONS_FILENAME || 'instructions_research.md' }}
 
 jobs:
   update-articles:

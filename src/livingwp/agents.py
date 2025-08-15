@@ -3,20 +3,22 @@ from agents import Agent, Runner, WebSearchTool
 from pathlib import Path
 from os import environ
 
-from livingwp.utils.files import load_instruction
+from livingwp.utils.files import load_instruction, load_industry_config
 from livingwp.utils.markdown import parse_markdown
 
 # For testing, you should use a lightweight model like gpt-4.1-mini.
-MODEL_NAME = environ.get("RESEARCH_MODEL", "o4-mini-deep-research")
+DEFAULT_MODEL_NAME = environ.get("RESEARCH_MODEL", "o4-mini-deep-research")
+DEFAULT_INSTRUCTIONS_FILENAME = environ.get("RESEARCH_INSTRUCTIONS_FILENAME", "instructions_research.md")
 
-research_agent = Agent(
-    name="ResearchAgent",
-    model=MODEL_NAME,
-    instructions=load_instruction("instructions_research.md"),
-    tools=[WebSearchTool()],
-)
-
-
+def get_research_agent(industry_name, config = {}):
+    """Create agent using config or defaults"""
+    return Agent(
+        name=f"ResearchAgent-{industry_name}",
+        model=config.get("research_model",DEFAULT_MODEL_NAME),
+        instructions=load_instruction(config.get("instructions_filename",DEFAULT_INSTRUCTIONS_FILENAME)),
+        tools=[WebSearchTool()],
+    )
+            
 async def update_articles(article_filter=None) -> None:
     """Run the agent pipeline for each industry article using streaming."""
     content_dir = (
@@ -24,7 +26,10 @@ async def update_articles(article_filter=None) -> None:
     )
     pattern = f"*{article_filter}*.markdown" if article_filter else "*.markdown"
     logger.info(f"Update with filter: {article_filter or 'all articles'}")
+    industry_config = load_industry_config()
     for path in sorted(content_dir.glob(pattern)):
+        industry_name=Path(path).stem
+        research_agent = get_research_agent(industry_name,industry_config.get(industry_name,{}))
         text = path.read_text()
         front_matter, fm_text, body = parse_markdown(text)
         topic = front_matter.get("title", path.stem.replace("-", " "))
