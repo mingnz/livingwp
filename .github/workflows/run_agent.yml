@@ -13,6 +13,8 @@ env:
   RESEARCH_MODEL: ${{ vars.RESEARCH_MODEL || 'o4-mini-deep-research' }}
   # Sets the default instruction file for the research agent
   RESEARCH_INSTRUCTIONS_FILENAME: ${{ vars.RESEARCH_INSTRUCTIONS_FILENAME || 'instructions_research.md' }}
+  #Enables / disables streaming for agent run
+  STREAMING_ENABLED: ${{ vars.STREAMING_ENABLED || 'True' }}
 
 jobs:
   update-articles:

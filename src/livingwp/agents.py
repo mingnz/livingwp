@@ -8,32 +8,26 @@ from livingwp.utils.markdown import parse_markdown
 
 # For testing, you should use a lightweight model like gpt-4.1-mini.
 DEFAULT_MODEL_NAME = environ.get("RESEARCH_MODEL", "o4-mini-deep-research")
-DEFAULT_INSTRUCTIONS_FILENAME = environ.get("RESEARCH_INSTRUCTIONS_FILENAME", "instructions_research.md")
+DEFAULT_INSTRUCTIONS_FILENAME = environ.get(
+    "RESEARCH_INSTRUCTIONS_FILENAME", "instructions_research.md"
+)
+STREAMING_ENABLED = environ.get("STREAMING_ENABLED", "True") == "True"
 
-def get_research_agent(industry_name, config = {}):
+
+def get_research_agent(industry_name, config={}):
     """Create agent using config or defaults"""
     return Agent(
         name=f"ResearchAgent-{industry_name}",
-        model=config.get("research_model",DEFAULT_MODEL_NAME),
-        instructions=load_instruction(config.get("instructions_filename",DEFAULT_INSTRUCTIONS_FILENAME)),
+        model=config.get("research_model", DEFAULT_MODEL_NAME),
+        instructions=load_instruction(
+            config.get("instructions_filename", DEFAULT_INSTRUCTIONS_FILENAME)
+        ),
         tools=[WebSearchTool()],
     )
-            
-async def update_articles(article_filter=None) -> None:
-    """Run the agent pipeline for each industry article using streaming."""
-    content_dir = (
-        Path(__file__).resolve().parent.parent / "website" / "whitepaper" / "content"
-    )
-    pattern = f"*{article_filter}*.markdown" if article_filter else "*.markdown"
-    logger.info(f"Update with filter: {article_filter or 'all articles'}")
-    industry_config = load_industry_config()
-    for path in sorted(content_dir.glob(pattern)):
-        industry_name=Path(path).stem
-        research_agent = get_research_agent(industry_name,industry_config.get(industry_name,{}))
-        text = path.read_text()
-        front_matter, fm_text, body = parse_markdown(text)
-        topic = front_matter.get("title", path.stem.replace("-", " "))
-        initial_input = f"Topic: {topic}\nPrevious article:\n{body}"
+
+
+async def perform_research(topic, research_agent, initial_input):
+    if STREAMING_ENABLED:
         logger.info(f"Researching: {topic}")
         result_stream = Runner.run_streamed(research_agent, initial_input)
         async for ev in result_stream.stream_events():
@@ -48,9 +42,34 @@ async def update_articles(article_filter=None) -> None:
                 action = ev.data.item.action
                 # Use attribute access instead of .get()
                 if getattr(action, "type", None) == "search":
-                    logger.info(f"[Web search] query={getattr(action, 'query', None)!r}")
+                    logger.info(
+                        f"[Web search] query={getattr(action, 'query', None)!r}"
+                    )
         # streaming is complete → final_output is now populated
-        research_result = result_stream
+        return result_stream
+    else:
+        logger.info(f"Researching: {topic} (Streaming Disabled)")
+        return await Runner.run(research_agent, initial_input)
+
+
+async def update_articles(article_filter=None) -> None:
+    """Run the agent pipeline for each industry article using streaming."""
+    content_dir = (
+        Path(__file__).resolve().parent.parent / "website" / "whitepaper" / "content"
+    )
+    pattern = f"*{article_filter}*.markdown" if article_filter else "*.markdown"
+    logger.info(f"Update with filter: {article_filter or 'all articles'}")
+    industry_config = load_industry_config()
+    for path in sorted(content_dir.glob(pattern)):
+        industry_name = Path(path).stem
+        research_agent = get_research_agent(
+            industry_name, industry_config.get(industry_name, {})
+        )
+        text = path.read_text()
+        front_matter, fm_text, body = parse_markdown(text)
+        topic = front_matter.get("title", path.stem.replace("-", " "))
+        initial_input = f"Topic: {topic}\nPrevious article:\n{body}"
+        research_result = await perform_research(topic, research_agent, initial_input)
         logger.info(f"Research result for {topic}:\n{research_result.final_output}\n")
         updated = f"---\n{fm_text}\n---\n\n{research_result.final_output.strip()}\n"
         path.write_text(updated)
