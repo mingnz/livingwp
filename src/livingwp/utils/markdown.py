@@ -10,9 +10,9 @@ def parse_markdown(text: str) -> tuple[dict[str, object], str]:
 
 
 def format_markdown(metadata: dict[str, object], body: str) -> str:
-    """Combines metadata and body into markdown document with YAML frontmatter.
+    """Combines metadata and body into a markdown document with YAML frontmatter.
 
-    Returns the thge text of the markdown document with frontmatter
+    Returns the markdown document as a string.
     """
     post = frontmatter.Post(body, **metadata)
     return frontmatter.dumps(post)
