@@ -4,7 +4,7 @@ from pathlib import Path
 from os import environ
 
 from livingwp.utils.files import load_instruction, load_industry_config
-from livingwp.utils.markdown import parse_markdown
+from livingwp.utils.markdown import parse_markdown, format_markdown
 
 # For testing, you should use a lightweight model like gpt-4.1-mini.
 DEFAULT_MODEL_NAME = environ.get("RESEARCH_MODEL", "o4-mini-deep-research")
@@ -66,10 +66,10 @@ async def update_articles(article_filter=None) -> None:
             industry_name, industry_config.get(industry_name, {})
         )
         text = path.read_text()
-        front_matter, fm_text, body = parse_markdown(text)
+        front_matter, body = parse_markdown(text)
         topic = front_matter.get("title", path.stem.replace("-", " "))
         initial_input = f"Topic: {topic}\nPrevious article:\n{body}"
         research_result = await perform_research(topic, research_agent, initial_input)
         logger.info(f"Research result for {topic}:\n{research_result.final_output}\n")
-        updated = f"---\n{fm_text}\n---\n\n{research_result.final_output.strip()}\n"
+        updated = format_markdown(front_matter,research_result.final_output.strip())
         path.write_text(updated)

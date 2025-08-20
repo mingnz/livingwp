@@ -5,7 +5,10 @@ description = "GenAI Working Group's Living Whitepaper"
 readme = "README.md"
 authors = [{ name = "Ming", email = "ming.cheuk@elementx.ai" }]
 requires-python = ">=3.10"
-dependencies = ["openai-agents>=0.0.19"]
+dependencies = [
+    "openai-agents>=0.0.19",
+    "python-frontmatter>=1.1.0",
+]
 
 [project.scripts]
 livingwp = "livingwp:main"

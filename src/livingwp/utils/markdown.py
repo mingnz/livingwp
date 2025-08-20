@@ -1,20 +1,18 @@
-from typing import Dict, Tuple
+import frontmatter
 
 
-def parse_markdown(text: str) -> Tuple[Dict[str, str], str, str]:
+def parse_markdown(text: str) -> tuple[dict[str, object], str]:
     """Parse a markdown file with YAML front matter.
 
-    Returns a tuple of (front_matter_dict, front_matter_text, body).
+    Returns a tuple of (front_matter_dict, body).
     """
-    if text.startswith("---"):
-        parts = text.split("---", 2)
-        if len(parts) >= 3:
-            fm_text = parts[1].strip()
-            body = parts[2].lstrip("\n")
-            front_matter: Dict[str, str] = {}
-            for line in fm_text.splitlines():
-                if ":" in line:
-                    key, val = line.split(":", 1)
-                    front_matter[key.strip()] = val.strip()
-            return front_matter, fm_text, body
-    return {}, "", text
+    return frontmatter.parse(text)
+
+
+def format_markdown(metadata: dict[str, object], body: str) -> str:
+    """Combines metadata and body into markdown document with YAML frontmatter.
+
+    Returns the thge text of the markdown document with frontmatter
+    """
+    post = frontmatter.Post(body, **metadata)
+    return frontmatter.dumps(post)
