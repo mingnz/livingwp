@@ -33,8 +33,7 @@ Discover how generative AI is shaping industries across Aotearoa. This website i
 
 **Explore the Living Whitepaper:**
 
-- [Education](whitepaper/education/)
-- [Healthcare](whitepaper/healthcare/)
+{% include article_list.md %}
 
 Curious about the process? [Learn how it works](how-it-works)
 

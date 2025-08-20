@@ -62,6 +62,7 @@ def get_article_stub(industry: str):
         "layout": "page",
         "title": f"AI in {industry.capitalize()}",
         "permalink": f"/whitepaper/{industry}/",
+        "article": True
     }
     body = f"This page is a placeholder for updates on AI adoption in the {industry} sector of Aotearoa New Zealand. It will be populated automatically by an LLM agent as new information becomes available."
     return format_markdown(front_matter, body)
