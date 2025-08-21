@@ -7,4 +7,8 @@
     "instructions_filename": "instructions_research.md",
     "research_model": "o4-mini-deep-research"
   }
+  "finance": {
+    "instructions_filename": "instructions_research.md",
+    "research_model": "o4-mini-deep-research"
+  }
 }
