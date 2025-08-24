@@ -23,10 +23,19 @@ We welcome contributions from the community! There are two main ways you can get
 
 ### Editing the Research Prompt
 
-The prompt that guides the research agent is defined in [`src/livingwp/prompts/instructions_research.md`](https://github.com/mingnz/livingwp/blob/main/src/livingwp/prompts/instructions_research.md). You can suggest changes to this prompt by either:
+The default prompt that guides the research agent is defined in [`src/livingwp/prompts/instructions_research.md`](https://github.com/mingnz/livingwp/blob/main/src/livingwp/prompts/instructions_research.md). You can suggest changes to this prompt by either:
 
 - Opening a Pull Request directly with your proposed edits to the prompt file.
 - Opening an Issue to discuss or suggest changes to the prompt.
+
+## Industries, prompts and models
+
+The settings for each industry are defined in [`src/livingwp/config/industries.json`](https://github.com/mingnz/livingwp/blob/main/src/livingwp/config/industries.json). Changing these settings allows you to:
+
+- Add a new industry. A new article will be created and added to the site the next time the update process runs.
+- Specify which OpenAI model to use for an industry.
+- Add a new instructions file to [`src/livingwp/prompts/`](https://github.com/mingnz/livingwp/blob/main/src/livingwp/prompts/) and use it to prompt the research agent for a specifc industry
+
 
 We look forward to your contributions!
 
