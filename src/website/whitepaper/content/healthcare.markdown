@@ -2,6 +2,7 @@
 layout: page
 title: AI in Healthcare
 permalink: /whitepaper/healthcare/
+article: true
 ---
 
 # AI Adoption in Healthcare in New Zealand: A Living Whitepaper

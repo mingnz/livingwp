@@ -2,6 +2,7 @@
 layout: page
 title: AI in Education
 permalink: /whitepaper/education/
+article: true
 ---
 
 # AI Adoption in Education in New Zealand: A Living Whitepaper
