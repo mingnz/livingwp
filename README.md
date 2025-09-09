@@ -36,7 +36,6 @@ The settings for each industry are defined in [`src/livingwp/config/industries.j
 - Specify which OpenAI model to use for an industry.
 - Add a new instructions file to [`src/livingwp/prompts/`](https://github.com/mingnz/livingwp/blob/main/src/livingwp/prompts/) and use it to prompt the research agent for a specifc industry
 
-
 We look forward to your contributions!
 
 ## Process
@@ -91,6 +90,12 @@ flowchart TD
 Running the command above now iterates over each markdown file in
 `src/website/whitepaper/content`, rewriting it with the latest research using
 the agent pipeline.
+
+You can also target specifc industries by passing the industry slugs as arguments. For example, to update only the finance and banking article:
+
+```sh
+uv run livingwp finance banking
+```
 
 ### Working on the Website
 
