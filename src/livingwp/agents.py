@@ -58,13 +58,14 @@ async def perform_research(topic, research_agent, initial_input):
 
 def get_article_stub(industry: str):
     logger.info(f"Creating article stub for new industry: {industry}")
+    industry_name = industry.replace('_',' ').title()
     front_matter = {
         "layout": "page",
-        "title": f"AI in {industry.capitalize()}",
+        "title": f"AI in {industry_name}",
         "permalink": f"/whitepaper/{industry}/",
         "article": True
     }
-    body = f"This page is a placeholder for updates on AI adoption in the {industry} sector of Aotearoa New Zealand. It will be populated automatically by an LLM agent as new information becomes available."
+    body = f"This page is a placeholder for updates on AI adoption in the {industry_name} sector of Aotearoa New Zealand. It will be populated automatically by an LLM agent as new information becomes available."
     return format_markdown(front_matter, body)
 
 
