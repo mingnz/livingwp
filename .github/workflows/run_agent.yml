@@ -7,6 +7,14 @@ on:
         description: "Filter for articles to update (optional)"
         required: false
         default: ""
+  workflow_call:
+    inputs:
+      article_filter:
+        required: false
+        type: string
+      branch_name:
+        type: string
+        required: false
 
 env:
   # Sets the default model name used for the research agent
@@ -16,15 +24,25 @@ env:
   #Enables / disables streaming for agent run
   STREAMING_ENABLED: ${{ vars.STREAMING_ENABLED || 'True' }}
 
+  BRANCH_NAME: ${{ inputs.branch_name || format('chore/article-update-{0}', github.run_number)}}
+
 jobs:
   update-articles:
     runs-on: ubuntu-latest
 
-    steps:
+    steps:      
       - name: Checkout repository
+        if: ${{ !inputs.branch_name }} 
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}          
+
+      - name: Checkout branch
+        if: ${{ inputs.branch_name }} 
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          ref: ${{ inputs.branch_name }} 
 
       - name: Install uv
         uses: astral-sh/setup-uv@v5
@@ -32,7 +50,7 @@ jobs:
       - name: Run livingwp update
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-        run: uv run livingwp "${{ github.event.inputs.article_filter }}"
+        run: uv run livingwp "${{ inputs.article_filter }}"
 
       - name: Check for changes
         id: changes
@@ -46,7 +64,7 @@ jobs:
           fi
 
       - name: Create Pull Request
-        if: steps.changes.outputs.changes == 'true'
+        if:  ${{ !inputs.branch_name && steps.changes.outputs.changes == 'true' }} 
         uses: peter-evans/create-pull-request@v7
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -60,6 +78,14 @@ jobs:
             - Generated on: ${{ github.run_id }}
 
             Please review the changes before merging.
-          branch: chore/article-update-${{ github.run_number }}
+          branch: ${{ env.BRANCH_NAME }}
           delete-branch: true
           draft: false
+
+      - name: Commit changes to PR
+        if:  ${{ inputs.branch_name && steps.changes.outputs.changes == 'true' }} 
+        uses: devops-infra/action-commit-push@master
+        with:
+          github_token: "${{ secrets.GITHUB_TOKEN }}"
+          commit_prefix: "chore"
+          commit_message: "Generate articles"
