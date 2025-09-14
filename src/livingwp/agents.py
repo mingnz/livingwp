@@ -1,5 +1,5 @@
 from livingwp.utils.logging import logger
-from agents import Agent, Runner, WebSearchTool
+from agents import Agent, Runner, WebSearchTool, ToolCallItem
 from os import environ
 
 from livingwp.utils.files import (
@@ -9,6 +9,7 @@ from livingwp.utils.files import (
     save_industry_article,
 )
 from livingwp.utils.markdown import parse_markdown, format_markdown
+from livingwp.utils.file_search import get_file_search_tool
 
 # For testing, you should use a lightweight model like gpt-4.1-mini.
 DEFAULT_MODEL_NAME = environ.get("RESEARCH_MODEL", "o4-mini-deep-research")
@@ -20,13 +21,22 @@ STREAMING_ENABLED = environ.get("STREAMING_ENABLED", "True") == "True"
 
 def get_research_agent(industry_name, config={}):
     """Create agent using config or defaults"""
+
+    tools_to_use = [WebSearchTool()]
+    #If a file store name is provided, add the file search tool
+    file_store_name = config.get("file_store_name", None)
+    if file_store_name:
+        file_search_tool = get_file_search_tool(file_store_name)
+        if file_search_tool:
+            tools_to_use.append(file_search_tool)
+
     return Agent(
         name=f"ResearchAgent-{industry_name}",
         model=config.get("research_model", DEFAULT_MODEL_NAME),
         instructions=load_instruction(
             config.get("instructions_filename", DEFAULT_INSTRUCTIONS_FILENAME)
         ),
-        tools=[WebSearchTool()],
+        tools=tools_to_use,
     )
 
 
@@ -49,6 +59,13 @@ async def perform_research(topic, research_agent, initial_input):
                     logger.info(
                         f"[Web search] query={getattr(action, 'query', None)!r}"
                     )
+            elif (
+                hasattr(ev, "item")
+                and isinstance(ev.item, ToolCallItem)
+                and ev.item.raw_item.type == "file_search_call"
+            ):
+                for q in ev.item.raw_item.queries:
+                    logger.info(f"[File search] query={q}")
         # streaming is complete → final_output is now populated
         return result_stream
     else:
@@ -58,14 +75,14 @@ async def perform_research(topic, research_agent, initial_input):
 
 def get_article_stub(industry: str):
     logger.info(f"Creating article stub for new industry: {industry}")
-    industry_name = industry.replace('_',' ').title()
+    industry_name = industry.replace("_", " ").title()
     front_matter = {
         "layout": "page",
         "title": f"AI in {industry_name}",
         "permalink": f"/whitepaper/{industry}/",
-        "article": True
+        "article": True,
     }
-    body = f"This page is a placeholder for updates on AI adoption in the {industry_name} sector of Aotearoa New Zealand. It will be populated automatically by an LLM agent as new information becomes available."
+    body = f"# AI in {industry_name} in Aotearoa New Zealand: A Living Whitepaper"
     return format_markdown(front_matter, body)
 
 
