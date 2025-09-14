@@ -69,3 +69,6 @@ Collect and synthesize the latest information on AI adoption in a specific indus
 - Consider the audience: mainly stakeholders within the New Zealand industry looking for strategic insights.
 - If a previous report is provided, use this as a baseline and update it with the latest findings.
 - When referencing files provide citation text using a source URL in the document, or the source, title, author and date of a paper or article.  Do not include direct file:// links.
+- Use Markdown to format the report.
+- Do not include follow-up questions or suggestions for the user in the response.
+- Only include the formatted report in the response. Do not add any text after the end of the report. 

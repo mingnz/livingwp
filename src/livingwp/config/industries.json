@@ -9,7 +9,7 @@
   },
   "data_analytics": {
     "instructions_filename": "instructions_research_data_analytics.md",
-    "research_model": "o4-mini-deep-research",
+    "research_model": "gpt-5",
     "file_store_name": "data_analytics"
   },
   "civil_construction": {
