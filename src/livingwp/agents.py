@@ -1,5 +1,6 @@
 from livingwp.utils.logging import logger
-from agents import Agent, Runner, WebSearchTool
+from agents import Agent, ModelSettings, Runner, WebSearchTool
+from openai.types.shared.reasoning import Reasoning
 from os import environ
 
 from livingwp.utils.files import (
@@ -10,19 +11,25 @@ from livingwp.utils.files import (
 )
 from livingwp.utils.markdown import parse_markdown, format_markdown
 
-# For testing, you should use a lightweight model like gpt-4.1-mini.
-DEFAULT_MODEL_NAME = environ.get("RESEARCH_MODEL", "o4-mini-deep-research")
+DEFAULT_MODEL_NAME = environ.get("RESEARCH_MODEL", "gpt-5.4-2026-03-05")
+# Keep GPT-5 behavior explicit so output shape stays stable across SDK upgrades.
+DEFAULT_MODEL_SETTINGS = ModelSettings(
+    reasoning=Reasoning(effort="medium"),
+    verbosity="medium",
+)
 DEFAULT_INSTRUCTIONS_FILENAME = environ.get(
     "RESEARCH_INSTRUCTIONS_FILENAME", "instructions_research.md"
 )
 STREAMING_ENABLED = environ.get("STREAMING_ENABLED", "True") == "True"
 
 
-def get_research_agent(industry_name, config={}):
+def get_research_agent(industry_name, config=None):
     """Create agent using config or defaults"""
+    config = config or {}
     return Agent(
         name=f"ResearchAgent-{industry_name}",
         model=config.get("research_model", DEFAULT_MODEL_NAME),
+        model_settings=DEFAULT_MODEL_SETTINGS,
         instructions=load_instruction(
             config.get("instructions_filename", DEFAULT_INSTRUCTIONS_FILENAME)
         ),

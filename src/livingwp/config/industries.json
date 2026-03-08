@@ -1,10 +1,10 @@
 {
   "healthcare": {
     "instructions_filename": "instructions_research.md",
-    "research_model": "o4-mini-deep-research"
+    "research_model": "gpt-5.4-2026-03-05"
   },
   "education": {
     "instructions_filename": "instructions_research.md",
-    "research_model": "o4-mini-deep-research"
+    "research_model": "gpt-5.4-2026-03-05"
   }
 }
