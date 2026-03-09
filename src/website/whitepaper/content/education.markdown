@@ -3,6 +3,13 @@ article: true
 article_history: true
 article_latest: true
 article_series: education
+article_updated_at: '2026-03-09T14:05:33+13:00'
+date: '2026-03-09T14:05:33+13:00'
+last_modified_at: '2026-03-09T14:05:33+13:00'
+description: >-
+  New Zealand education has moved beyond debating AI as a cheating tool into
+  building policies, redesigning assessment, and expanding AI literacy across
+  schools and tertiary providers.
 layout: article
 permalink: /whitepaper/education/
 title: AI in Education

@@ -4,6 +4,12 @@ article_history: true
 article_latest: true
 article_series: healthcare
 article_updated_at: '2026-03-09T14:05:33+13:00'
+date: '2026-03-09T14:05:33+13:00'
+last_modified_at: '2026-03-09T14:05:33+13:00'
+description: >-
+  AI adoption in New Zealand healthcare is moving from exploration to selective
+  operational deployment, with AI scribes now live in every public emergency
+  department.
 article_version: false
 layout: article
 permalink: /whitepaper/healthcare/

@@ -1,5 +1,8 @@
 ---
 layout: home
+description: >-
+  Explore how generative AI is shaping industries across Aotearoa New Zealand.
+  AI-researched sector reports, automatically updated.
 ---
 
 <div class="homepage-img-right">
