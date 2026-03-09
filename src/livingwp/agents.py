@@ -4,6 +4,7 @@ from openai.types.shared.reasoning import Reasoning
 from os import environ
 
 from livingwp.utils.files import (
+    archive_industry_article,
     load_instruction,
     load_industry_config,
     load_industry_article,
@@ -66,10 +67,13 @@ async def perform_research(topic, research_agent, initial_input):
 def get_article_stub(industry: str):
     logger.info(f"Creating article stub for new industry: {industry}")
     front_matter = {
-        "layout": "page",
-        "title": f"AI in {industry.capitalize()}",
+        "layout": "article",
+        "title": f"AI in {industry.replace('_', ' ').title()}",
         "permalink": f"/whitepaper/{industry}/",
-        "article": True
+        "article": True,
+        "article_history": True,
+        "article_latest": True,
+        "article_series": industry,
     }
     body = f"This page is a placeholder for updates on AI adoption in the {industry} sector of Aotearoa New Zealand. It will be populated automatically by an LLM agent as new information becomes available."
     return format_markdown(front_matter, body)
@@ -90,11 +94,17 @@ async def update_articles(article_filter: str | None = None) -> None:
         research_agent = get_research_agent(
             industry_name, industry_config.get(industry_name, {})
         )
-        text = load_industry_article(industry_name) or get_article_stub(industry_name)
+        existing_article = load_industry_article(industry_name)
+        text = existing_article or get_article_stub(industry_name)
         front_matter, body = parse_markdown(text)
         topic = front_matter.get("title", industry_name.replace("-", " "))
         initial_input = f"Topic: {topic}\nPrevious article:\n{body}"
         research_result = await perform_research(topic, research_agent, initial_input)
         logger.info(f"Research result for {topic}:\n{research_result.final_output}\n")
         updated = format_markdown(front_matter, research_result.final_output.strip())
+        if existing_article:
+            archive_path = archive_industry_article(industry_name, existing_article)
+            logger.info(
+                f"Archived previous version for {industry_name} to {archive_path}"
+            )
         save_industry_article(industry_name, updated)

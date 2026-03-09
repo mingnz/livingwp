@@ -1,0 +1,79 @@
+---
+layout: default
+---
+{% assign history_pages = site.pages | where_exp: "item", "item.article_history == true and item.article_series == page.article_series" %}
+{% assign latest_page = history_pages | where: "article_latest", true | first %}
+{% assign archived_pages = history_pages | where: "article_version", true | sort: "article_updated_at" | reverse %}
+
+<div class="article-layout">
+  <article class="article-layout__main">
+    {% if page.article_updated_at %}
+      <header class="article-layout__header">
+        <p class="article-layout__meta">
+          {% if page.article_latest %}
+            Latest update
+          {% else %}
+            Archived update
+          {% endif %}
+          <time datetime="{{ page.article_updated_at }}">
+            {{ page.article_updated_at | date: "%-d %B %Y" }}
+          </time>
+        </p>
+      </header>
+    {% endif %}
+
+    <div class="article-layout__content">
+      {{ content }}
+    </div>
+    <section class="article-history">
+      <p class="article-history__eyebrow">Sector updates</p>
+      <h2 class="article-history__title">Article history</h2>
+
+      <ul class="article-history__list">
+        {% if latest_page %}
+          <li>
+            <a
+              class="article-history__link{% if latest_page.url == page.url %} is-current{% endif %}"
+              href="{{ latest_page.url | relative_url }}"
+            >
+              <span class="article-history__item-title">Latest update</span>
+              {% if latest_page.article_updated_at %}
+                <span class="article-history__item-meta">
+                  <time datetime="{{ latest_page.article_updated_at }}">
+                    {{ latest_page.article_updated_at | date: "%-d %b %Y" }}
+                  </time>
+                </span>
+              {% endif %}
+            </a>
+          </li>
+        {% endif %}
+
+        {% for item in archived_pages %}
+          <li>
+            <a
+              class="article-history__link{% if item.url == page.url %} is-current{% endif %}"
+              href="{{ item.url | relative_url }}"
+            >
+              <span class="article-history__item-title">Previous update</span>
+              {% if item.article_updated_at %}
+                <span class="article-history__item-meta">
+                  <time datetime="{{ item.article_updated_at }}">
+                    {{ item.article_updated_at | date: "%-d %b %Y" }}
+                  </time>
+                </span>
+              {% else %}
+                <span class="article-history__item-meta">Archived</span>
+              {% endif %}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+
+      {% if archived_pages.size == 0 %}
+        <p class="article-history__empty">No previous sector updates have been archived yet.</p>
+      {% endif %}
+
+      <a class="article-history__index" href="{{ '/whitepaper/' | relative_url }}">Back to all sectors</a>
+    </section>
+  </article>
+</div>
