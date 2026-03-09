@@ -106,7 +106,7 @@ jobs:
         uses: devops-infra/action-commit-push@master
         with:
           github_token: "${{ secrets.GITHUB_TOKEN }}"
-          commit_prefix: "chore"
+          commit_prefix: "chore: "
           commit_message: "generate article updates"
 
       - name: Resolve pull request number
