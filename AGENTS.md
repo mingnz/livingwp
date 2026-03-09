@@ -105,12 +105,14 @@ Notes:
 - Runs `uv run livingwp`.
 - Creates a PR automatically when content changes.
 - If invoked with `branch_name`, it commits directly onto that branch instead of opening a new PR.
+- Requires `OPENAI_API_KEY` to be available as a GitHub Actions secret. Reusable callers must pass that secret through.
 
 ### `.github/workflows/add_industry.yml`
 
 - Adds a new industry to `industries.json`.
 - Opens a PR for the config change.
 - Then calls `run_agent.yml` to generate the initial article on the same branch.
+- Inherits repository secrets when calling `run_agent.yml` so the OpenAI-backed article generation step can authenticate.
 
 ### `.github/workflows/deploy_website.yml`
 

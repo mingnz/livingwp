@@ -61,5 +61,4 @@ jobs:
     with:
       article_filter: ${{ needs.add-industry.outputs.industry_key }}
       branch_name: ${{ needs.add-industry.outputs.branch_name }}
-
-    
+    secrets: inherit

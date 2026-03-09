@@ -15,6 +15,9 @@ on:
       branch_name:
         type: string
         required: false
+    secrets:
+      OPENAI_API_KEY:
+        required: true
 
 env:
   # Sets the default model name used for the research agent
@@ -46,6 +49,15 @@ jobs:
 
       - name: Install uv
         uses: astral-sh/setup-uv@v5
+
+      - name: Validate OpenAI credentials
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          if [ -z "$OPENAI_API_KEY" ]; then
+            echo "OPENAI_API_KEY is not set. Add it to repository secrets or pass it to the reusable workflow." >&2
+            exit 1
+          fi
 
       - name: Run livingwp update
         env:
