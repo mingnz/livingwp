@@ -1,6 +1,9 @@
 ---
 article: true
-layout: page
+article_history: true
+article_latest: true
+article_series: education
+layout: article
 permalink: /whitepaper/education/
 title: AI in Education
 ---

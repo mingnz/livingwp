@@ -89,9 +89,10 @@ flowchart TD
    uv run livingwp
    ```
 
-Running the command above now iterates over each markdown file in
-`src/website/whitepaper/content`, rewriting it with the latest research using
-the agent pipeline.
+Running the command above now iterates over each industry page in
+`src/website/whitepaper/content`, rewriting the latest sector page with fresh
+research and archiving the outgoing version under
+`src/website/whitepaper/content/archive/<industry>/`.
 
 You can also target specifc industries by passing the industry slugs as arguments. For example, to update only the finance and banking article:
 

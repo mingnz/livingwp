@@ -1,6 +1,9 @@
 ---
 article: true
-layout: page
+article_history: true
+article_latest: true
+article_series: healthcare
+layout: article
 permalink: /whitepaper/healthcare/
 title: AI in Healthcare
 ---
