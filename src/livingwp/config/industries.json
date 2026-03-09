@@ -14,5 +14,9 @@
   "agriculture": {
     "instructions_filename": "instructions_research.md",
     "research_model": "gpt-5.4-2026-03-05"
+  },
+  "creative_industries": {
+    "instructions_filename": "instructions_research.md",
+    "research_model": "gpt-5.4-2026-03-05"
   }
 }
