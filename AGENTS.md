@@ -105,6 +105,7 @@ Notes:
 
 - Manual or reusable workflow for article updates.
 - Runs `uv run livingwp`.
+- PR usage comment helper: `.github/scripts/comment-generation-usage.mjs`
 - Creates a PR automatically when content changes.
 - If invoked with `branch_name`, it commits directly onto that branch instead of opening a new PR.
 - After generation finishes, it upserts a PR comment with token usage, web search call count, and estimated OpenAI cost when a PR exists for the run.
