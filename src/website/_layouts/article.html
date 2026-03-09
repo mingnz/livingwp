@@ -7,27 +7,36 @@ layout: default
 
 <div class="article-layout">
   <article class="article-layout__main">
-    {% if page.article_updated_at %}
-      <header class="article-layout__header">
-        <p class="article-layout__meta">
+    <header class="article-layout__header">
+      <nav class="article-layout__breadcrumb">
+        <a href="{{ '/whitepaper/' | relative_url }}">Articles</a>
+        <span aria-hidden="true">/</span>
+        <span>{{ page.title }}</span>
+      </nav>
+      {% if page.article_updated_at %}
+        <div class="article-layout__status">
           {% if page.article_latest %}
-            Latest update
+            <span class="article-layout__badge article-layout__badge--latest">Latest</span>
           {% else %}
-            Archived update
+            <span class="article-layout__badge article-layout__badge--archived">Archived</span>
           {% endif %}
-          <time datetime="{{ page.article_updated_at }}">
+          <time class="article-layout__date" datetime="{{ page.article_updated_at }}">
             {{ page.article_updated_at | date: "%-d %B %Y" }}
           </time>
-        </p>
-      </header>
-    {% endif %}
+        </div>
+      {% endif %}
+    </header>
+
 
     <div class="article-layout__content">
       {{ content }}
     </div>
-    <section class="article-history">
-      <p class="article-history__eyebrow">Sector updates</p>
-      <h2 class="article-history__title">Article history</h2>
+
+    <details class="article-history" open>
+      <summary class="article-history__toggle">
+        <span class="article-history__eyebrow">Sector updates</span>
+        <h2 class="article-history__title">Article history</h2>
+      </summary>
 
       <ul class="article-history__list">
         {% if latest_page %}
@@ -70,10 +79,10 @@ layout: default
       </ul>
 
       {% if archived_pages.size == 0 %}
-        <p class="article-history__empty">No previous sector updates have been archived yet.</p>
+        <p class="article-history__empty">No previous updates have been archived yet.</p>
       {% endif %}
+    </details>
 
-      <a class="article-history__index" href="{{ '/whitepaper/' | relative_url }}">Back to all sectors</a>
-    </section>
+    <a class="article-history__index" href="{{ '/whitepaper/' | relative_url }}">Back to all sectors</a>
   </article>
 </div>
