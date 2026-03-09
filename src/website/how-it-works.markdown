@@ -2,6 +2,9 @@
 layout: page
 title: How it Works
 permalink: /how-it-works/
+description: >-
+  How an AI agent researches and publishes sector reports on generative AI
+  adoption in Aotearoa New Zealand.
 ---
 
 An AI agent keeps this site up to date. It searches the web for recent news, research, and case studies for each sector, then writes a new version of the report. Each update is submitted as a pull request on GitHub so the community can review changes before they go live.

@@ -2,6 +2,9 @@
 layout: page
 title: About
 permalink: /about/
+description: >-
+  About the AI Forum NZ Generative AI Working Group and the Living Whitepaper
+  project.
 ---
 
 The Generative AI Working Group was formed under the [AI Forum New Zealand](https://aiforum.org.nz) to explore and share developments in this fast-moving field.

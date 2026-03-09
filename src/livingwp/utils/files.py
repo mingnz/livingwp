@@ -1,4 +1,5 @@
 import json
+import re
 from datetime import date, datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -134,6 +135,9 @@ def normalize_article_metadata(
     normalized["article_version"] = not latest
     normalized["article_series"] = industry
     normalized["article_updated_at"] = article_updated_at.isoformat()
+    normalized["date"] = article_updated_at.isoformat()
+    normalized["last_modified_at"] = article_updated_at.isoformat()
+    normalized["description"] = extract_description(body)
     if latest:
         normalized["permalink"] = f"/whitepaper/{industry}/"
     else:
@@ -141,6 +145,26 @@ def normalize_article_metadata(
             raise ValueError("archive_slug is required for archived articles")
         normalized["permalink"] = f"/whitepaper/{industry}/{archive_slug}/"
     return format_markdown(normalized, body)
+
+
+def extract_description(body: str, max_length: int = 160) -> str:
+    """Extract a plain-text description from the first paragraph of markdown."""
+    # Strip headings, bold/italic markers, links, and images
+    text = re.sub(r"^#+\s.*$", "", body, flags=re.MULTILINE)
+    text = re.sub(r"!\[.*?\]\(.*?\)", "", text)
+    text = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", text)
+    text = re.sub(r"\*{1,2}(.+?)\*{1,2}", r"\1", text)
+    text = re.sub(r"_+(.+?)_+", r"\1", text)
+
+    # Find the first non-empty paragraph
+    for paragraph in text.split("\n\n"):
+        cleaned = " ".join(paragraph.split()).strip()
+        if len(cleaned) > 20:
+            if len(cleaned) > max_length:
+                return cleaned[: max_length - 1].rsplit(" ", 1)[0] + "\u2026"
+            return cleaned
+
+    return ""
 
 
 def load_instruction(filename: str) -> str:
