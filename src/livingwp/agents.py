@@ -11,6 +11,12 @@ from livingwp.utils.files import (
     save_industry_article,
 )
 from livingwp.utils.markdown import parse_markdown, format_markdown
+from livingwp.utils.usage import (
+    build_article_usage_report,
+    build_usage_report,
+    write_usage_comment_if_configured,
+    write_usage_report_if_configured,
+)
 
 DEFAULT_MODEL_NAME = environ.get("RESEARCH_MODEL", "gpt-5.4-2026-03-05")
 # Keep GPT-5 behavior explicit so output shape stays stable across SDK upgrades.
@@ -79,7 +85,7 @@ def get_article_stub(industry: str):
     return format_markdown(front_matter, body)
 
 
-async def update_articles(article_filter: str | None = None) -> None:
+async def update_articles(article_filter: str | None = None) -> dict[str, object]:
     """Run the agent pipeline for each industry article"""
     logger.info(f"Update with filter: {article_filter or 'all articles'}")
     industry_config = load_industry_config()
@@ -90,6 +96,7 @@ async def update_articles(article_filter: str | None = None) -> None:
         industries = [
             industry for industry in industries if industry in industries_in_filter
         ]
+    article_reports: list[dict[str, object]] = []
     for industry_name in industries:
         research_agent = get_research_agent(
             industry_name, industry_config.get(industry_name, {})
@@ -100,6 +107,14 @@ async def update_articles(article_filter: str | None = None) -> None:
         topic = front_matter.get("title", industry_name.replace("-", " "))
         initial_input = f"Topic: {topic}\nPrevious article:\n{body}"
         research_result = await perform_research(topic, research_agent, initial_input)
+        article_reports.append(
+            build_article_usage_report(
+                industry=industry_name,
+                topic=topic,
+                model_name=str(research_agent.model),
+                result=research_result,
+            )
+        )
         logger.info(f"Research result for {topic}:\n{research_result.final_output}\n")
         updated = format_markdown(front_matter, research_result.final_output.strip())
         if existing_article:
@@ -108,3 +123,9 @@ async def update_articles(article_filter: str | None = None) -> None:
                 f"Archived previous version for {industry_name} to {archive_path}"
             )
         save_industry_article(industry_name, updated)
+    usage_report = build_usage_report(
+        article_filter=article_filter, article_reports=article_reports
+    )
+    write_usage_report_if_configured(usage_report)
+    write_usage_comment_if_configured(usage_report)
+    return usage_report
