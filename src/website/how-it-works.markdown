@@ -4,10 +4,10 @@ title: How it Works
 permalink: /how-it-works/
 ---
 
-This project uses generative AI to keep the content up to date. An LLM agent regularly searches for the latest news and automatically creates or updates markdown pages for each industry in Aotearoa. The goal is to maintain a living record of the rapidly evolving generative AI landscape.
+An AI agent keeps this site up to date. It searches the web for recent news, research, and case studies for each sector, then writes a new version of the report. Each update is submitted as a pull request on GitHub so the community can review changes before they go live.
 
 ![system architecture](../assets/system.svg)
 
-Full transparency is ensured through the open-source nature of the project, allowing anyone to inspect the prompts, workflows, and code that power the system.
+Previous versions of every report are archived automatically, so you can always trace how the content has evolved over time.
 
-If you have suggestions or would like to help, visit the [GitHub repository](https://github.com/mingnz/livingwp).
+The entire system — prompts, agent code, and workflows — is open source. Visit the [GitHub repository](https://github.com/mingnz/livingwp) to see how it works or to contribute.

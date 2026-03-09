@@ -3,19 +3,118 @@
 
 @import "minima";
 
+// ── Article cards (used on homepage and whitepaper index) ──
+
+.article-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  list-style: none;
+  margin: 1rem 0;
+  padding: 0;
+}
+
+.article-card {
+  background: #ffffff;
+  border: 1px solid #d0d7de;
+  border-radius: 12px;
+  color: inherit;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.875rem 1rem;
+  text-decoration: none;
+  transition: border-color 0.15s;
+
+  &:hover {
+    border-color: #0969da;
+    text-decoration: none;
+  }
+
+  &:visited {
+    color: inherit;
+  }
+}
+
+.article-card__title {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.article-card__meta {
+  color: #57606a;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+// ── Article layout ──
+
 .article-layout {
   display: block;
 }
 
 .article-layout__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
   margin-bottom: 2rem;
 }
 
-.article-layout__meta {
+.article-layout__breadcrumb {
+  font-size: 0.85rem;
   color: #57606a;
-  font-size: 0.95rem;
-  margin-bottom: 0;
+  margin-bottom: 0.5rem;
+
+  a {
+    color: #0969da;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  span[aria-hidden] {
+    margin: 0 0.35rem;
+  }
 }
+
+.article-layout__status {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.article-layout__badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  text-transform: uppercase;
+}
+
+.article-layout__badge--latest {
+  background: #dafbe1;
+  color: #1a7f37;
+}
+
+.article-layout__badge--archived {
+  background: #fff8c5;
+  color: #6a5300;
+}
+
+.article-layout__date {
+  color: #57606a;
+  font-size: 0.9rem;
+}
+
+// ── Article history ──
 
 .article-history {
   background: #f6f8fa;
@@ -25,23 +124,51 @@
   padding: 1.25rem;
 }
 
-.article-history__eyebrow {
-  color: #57606a;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  margin-bottom: 0.35rem;
-  text-transform: uppercase;
+.article-history__toggle {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+
+  &::-webkit-details-marker {
+    display: none;
+  }
+
+  .article-history__eyebrow {
+    color: #57606a;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.25rem;
+    text-transform: uppercase;
+  }
+
+  .article-history__title {
+    font-size: 1.1rem;
+    margin-bottom: 0;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 0.4rem;
+      height: 0.4rem;
+      border-right: 2px solid #57606a;
+      border-bottom: 2px solid #57606a;
+      transform: rotate(45deg);
+      margin-left: 0.5rem;
+      vertical-align: middle;
+      transition: transform 0.2s;
+    }
+  }
 }
 
-.article-history__title {
-  font-size: 1.3rem;
-  margin-bottom: 1.5rem;
+details[open] > .article-history__toggle .article-history__title::after {
+  transform: rotate(-135deg);
 }
 
 .article-history__list {
   list-style: none;
-  margin: 0;
+  margin: 1rem 0 0;
   padding: 0;
 }
 
@@ -60,6 +187,7 @@
   justify-content: space-between;
   padding: 0.75rem 0.85rem;
   text-decoration: none;
+  transition: border-color 0.15s;
 }
 
 .article-history__item-title {
@@ -85,10 +213,64 @@
 .article-history__empty {
   color: #57606a;
   font-size: 0.95rem;
-  margin-bottom: 0;
+  margin: 1rem 0 0;
 }
 
 .article-history__index {
   display: inline-block;
-  margin-top: 1.75rem;
+  margin-top: 1.25rem;
+}
+
+// ── Homepage ──
+
+.homepage-img-right {
+  float: right;
+  margin-left: 20px;
+  width: 220px;
+
+  img {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  @media (max-width: 600px) {
+    float: none;
+    display: block;
+    margin: 0 auto 20px auto;
+    width: 90%;
+    max-width: 320px;
+  }
+}
+
+// ── 404 page ──
+
+.error-page {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.error-page__code {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  color: #57606a;
+}
+
+// ── Mobile adjustments ──
+
+@media (max-width: 600px) {
+  .article-history {
+    border-radius: 12px;
+    padding: 1rem;
+  }
+
+  .article-history[open] .article-history__list {
+    margin-top: 0.75rem;
+  }
+
+  .article-card {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
 }

@@ -4,6 +4,6 @@ title: Articles
 permalink: /whitepaper/
 ---
 
-This living whitepaper collects industry updates on generative AI adoption across Aotearoa New Zealand. Each sector page opens on the latest version and keeps an on-page history of archived updates.
+Each sector report is researched and written by an AI agent, then published here as a living document. Open any report to read the latest version or browse its full update history.
 
 {% include article_list.md %}
