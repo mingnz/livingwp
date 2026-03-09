@@ -14,6 +14,7 @@ from livingwp.utils.markdown import parse_markdown, format_markdown
 from livingwp.utils.usage import (
     build_article_usage_report,
     build_usage_report,
+    write_usage_comment_if_configured,
     write_usage_report_if_configured,
 )
 
@@ -126,4 +127,5 @@ async def update_articles(article_filter: str | None = None) -> dict[str, object
         article_filter=article_filter, article_reports=article_reports
     )
     write_usage_report_if_configured(usage_report)
+    write_usage_comment_if_configured(usage_report)
     return usage_report

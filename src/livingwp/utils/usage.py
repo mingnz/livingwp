@@ -13,8 +13,10 @@ from agents.usage import Usage
 from livingwp.utils.logging import logger
 
 USAGE_REPORT_PATH_ENV = "LIVINGWP_USAGE_REPORT_PATH"
+USAGE_COMMENT_PATH_ENV = "LIVINGWP_USAGE_COMMENT_PATH"
 MODEL_PRICING_OVERRIDES_ENV = "LIVINGWP_MODEL_PRICING_OVERRIDES_JSON"
 WEB_SEARCH_COST_ENV = "LIVINGWP_WEB_SEARCH_COST_PER_1000_USD"
+USAGE_COMMENT_MARKER = "<!-- livingwp-usage-report -->"
 
 # Default rates are sourced from OpenAI's public pricing page and can be overridden
 # in CI via LIVINGWP_MODEL_PRICING_OVERRIDES_JSON if pricing changes.
@@ -126,6 +128,17 @@ def write_usage_report_if_configured(report: dict[str, Any]) -> None:
     logger.info(f"Wrote usage report to {report_path}")
 
 
+def write_usage_comment_if_configured(report: dict[str, Any]) -> None:
+    output_path = environ.get(USAGE_COMMENT_PATH_ENV)
+    if not output_path:
+        return
+
+    comment_path = Path(output_path)
+    comment_path.parent.mkdir(parents=True, exist_ok=True)
+    comment_path.write_text(format_usage_comment(report))
+    logger.info(f"Wrote usage comment to {comment_path}")
+
+
 def format_usage_summary(report: dict[str, Any]) -> str:
     totals = report["totals"]
     estimated_cost = totals["estimated_cost_usd"]
@@ -141,6 +154,78 @@ def format_usage_summary(report: dict[str, Any]) -> str:
         f"{totals['web_search_calls']} web search call(s), "
         f"estimated cost ${cost_label}"
     )
+
+
+def format_usage_comment(report: dict[str, Any]) -> str:
+    totals = report["totals"]
+    cost_label = format_usage_cost_label(
+        totals["estimated_cost_usd"], totals["cost_complete"]
+    )
+
+    article_rows = []
+    for article in report["articles"]:
+        article_rows.append(
+            "| "
+            + " | ".join(
+                [
+                    str(article["industry"]),
+                    f"`{article['model']}`",
+                    format_usage_integer(article["total_tokens"]),
+                    format_usage_integer(article["input_tokens"]),
+                    format_usage_integer(article["output_tokens"]),
+                    format_usage_integer(article["web_search_calls"]),
+                    format_usage_cost_label(
+                        article["estimated_cost_usd"], article["cost_complete"]
+                    ),
+                ]
+            )
+            + " |"
+        )
+
+    table = "\n".join(
+        [
+            "| Industry | Model | Total tokens | Input | Output | Web searches | Estimated cost |",
+            "| --- | --- | ---: | ---: | ---: | ---: | ---: |",
+            *article_rows,
+        ]
+    )
+    if not article_rows:
+        table = "_No articles were processed._"
+
+    lines = [
+        USAGE_COMMENT_MARKER,
+        "## Generation Usage",
+        "",
+        f"- Generated at: {report['generated_at']}",
+        f"- Articles processed: {format_usage_integer(totals['articles'])}",
+        f"- Requests: {format_usage_integer(totals['requests'])}",
+        f"- Total tokens: {format_usage_integer(totals['total_tokens'])}",
+        f"- Cached input tokens: {format_usage_integer(totals['cached_input_tokens'])}",
+        f"- Reasoning tokens: {format_usage_integer(totals['reasoning_tokens'])}",
+        f"- Web search calls: {format_usage_integer(totals['web_search_calls'])}",
+        f"- Estimated cost: {cost_label}",
+    ]
+
+    if report["article_filter"]:
+        lines.append(f"- Filter: `{report['article_filter']}`")
+
+    lines.extend(
+        [
+            "",
+            table,
+            "",
+            "Estimated cost is derived from token usage plus OpenAI web-search call pricing.",
+        ]
+    )
+
+    if report["unpriced_models"]:
+        unpriced_models = ", ".join(
+            f"`{model}`" for model in report["unpriced_models"]
+        )
+        lines.append("")
+        lines.append(f"Cost could not be calculated for: {unpriced_models}.")
+
+    return "\n".join(lines) + "\n"
 
 
 def aggregate_usage(raw_responses: list[Any]) -> Usage:
@@ -280,6 +365,22 @@ def get_item_value(item: Any, key: str) -> Any:
     if isinstance(item, dict):
         return item.get(key)
     return getattr(item, key, None)
+
+
+def format_usage_integer(value: object) -> str:
+    return f"{int(value):,}"
+
+
+def format_usage_cost_label(
+    estimated_cost_usd: object | None, cost_complete: object
+) -> str:
+    if estimated_cost_usd is None:
+        return "n/a (partial)"
+
+    cost_label = f"${float(estimated_cost_usd):.4f}"
+    if not bool(cost_complete):
+        return f"{cost_label} (partial)"
+    return cost_label
 
 
 def format_decimal(value: Decimal) -> str:

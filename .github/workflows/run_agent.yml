@@ -67,7 +67,7 @@ jobs:
       - name: Run livingwp update
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          LIVINGWP_USAGE_REPORT_PATH: ${{ runner.temp }}/livingwp-usage-report.json
+          LIVINGWP_USAGE_COMMENT_PATH: ${{ runner.temp }}/livingwp-usage-comment.md
         run: uv run livingwp "${{ inputs.article_filter }}"
 
       - name: Check for changes
@@ -109,14 +109,47 @@ jobs:
           commit_prefix: "chore"
           commit_message: "generate article updates"
 
-      - name: Comment generation usage on PR
+      - name: Resolve pull request number
+        id: pr_number
         if: ${{ inputs.branch_name || steps.create_pr.outputs['pull-request-number'] }}
         env:
-          GITHUB_API_URL: ${{ github.api_url }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: ${{ github.repository }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH_NAME: ${{ inputs.branch_name }}
           CREATED_PR_NUMBER: ${{ steps.create_pr.outputs['pull-request-number'] }}
-          USAGE_REPORT_PATH: ${{ runner.temp }}/livingwp-usage-report.json
-          CHANGES_DETECTED: ${{ steps.changes.outputs.changes }}
-        run: node .github/scripts/comment-generation-usage.mjs
+        run: |
+          if [ -n "$CREATED_PR_NUMBER" ]; then
+            echo "number=$CREATED_PR_NUMBER" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          if [ -z "$BRANCH_NAME" ]; then
+            echo "number=" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          PR_NUMBER="$(gh pr list \
+            --repo "$GITHUB_REPOSITORY" \
+            --head "$BRANCH_NAME" \
+            --state open \
+            --json number \
+            --jq '.[0].number // ""')"
+          echo "number=$PR_NUMBER" >> "$GITHUB_OUTPUT"
+
+      - name: Find existing generation usage comment
+        id: usage_comment
+        if: ${{ steps.pr_number.outputs.number != '' }}
+        uses: peter-evans/find-comment@v4
+        with:
+          issue-number: ${{ steps.pr_number.outputs.number }}
+          comment-author: "github-actions[bot]"
+          body-includes: "<!-- livingwp-usage-report -->"
+
+      - name: Comment generation usage on PR
+        if: ${{ steps.pr_number.outputs.number != '' }}
+        uses: peter-evans/create-or-update-comment@v5
+        with:
+          comment-id: ${{ steps.usage_comment.outputs.comment-id }}
+          issue-number: ${{ steps.pr_number.outputs.number }}
+          body-path: ${{ runner.temp }}/livingwp-usage-comment.md
+          edit-mode: replace
