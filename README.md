@@ -36,6 +36,8 @@ The settings for each industry are defined in [`src/livingwp/config/industries.j
 - Specify which OpenAI model to use for an industry.
 - Add a new instructions file to [`src/livingwp/prompts/`](https://github.com/mingnz/livingwp/blob/main/src/livingwp/prompts/) and use it to prompt the research agent for a specifc industry
 
+The default runtime now uses the `openai-agents` Python SDK on the `0.10.x` line with `gpt-5.4-2026-03-05` as the research model snapshot. You can still override the model with the `RESEARCH_MODEL` environment variable or per-industry config.
+
 We look forward to your contributions!
 
 ## Process

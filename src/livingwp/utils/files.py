@@ -2,7 +2,10 @@ import json
 from pathlib import Path
 
 SITE_CONTENT_DIR = (
-    Path(__file__).resolve().parent.parent.parent / "website" / "whitepaper" / "content"
+    Path(__file__).resolve().parent.parent.parent
+    / "website"
+    / "whitepaper"
+    / "content"
 )
 INDUSTRIES_CONFIG_PATH = (
     Path(__file__).resolve().parent.parent / "config" / "industries.json"
@@ -17,12 +20,11 @@ def load_industry_article(industry: str) -> str | None:
     file_path = Path(SITE_CONTENT_DIR, f"{industry}.markdown")
     if file_path.is_file():
         return file_path.read_text()
-    else:
-        return None
+    return None
 
 
 def save_industry_article(industry: str, article: str):
-    """Saves the article to [industry].markdown in the website content folder,"""
+    """Saves the article to [industry].markdown in the website content folder."""
     Path(SITE_CONTENT_DIR, f"{industry}.markdown").write_text(article)
 
 
@@ -53,7 +55,7 @@ def add_industry(industry_name: str) -> str:
     # Add new industry with default configuration
     config[industry_key] = {
         "instructions_filename": "instructions_research.md",
-        "research_model": "o4-mini-deep-research",
+        "research_model": "gpt-5.4-2026-03-05",
     }
 
     # Save updated config

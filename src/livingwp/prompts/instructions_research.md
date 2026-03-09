@@ -64,4 +64,5 @@ Collect and synthesize the latest information on AI adoption in a specific indus
 - Ensure all sources are credible and up-to-date.
 - Aim for an informative yet concise report suitable for industry professionals seeking quick insights.
 - Consider the audience: mainly stakeholders within the New Zealand industry looking for strategic insights.
-- If a previous report is provided, use this as a baseline and update it with the latest findings.
+- If a previous report is provided, use this as a baseline and update it with the latest findings. However, also don't limit the scope to the content in the previous report - look for new developments also and highlight changes since the last report.
+- The output should be publication ready, do not include any followup suggestions or anything else similar.
