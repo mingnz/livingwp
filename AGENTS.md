@@ -144,6 +144,7 @@ Notes:
 - The updater currently passes only the previous article body into the model, not the full archive history.
 - The update pipeline archives the outgoing latest page before writing the new latest page.
 - The homepage snapshot is regenerated from all current latest sector pages after every run, including filtered runs.
+- The homepage snapshot prompt is comparison-oriented, and the pipeline falls back to a generic comparative summary if the generated output names too many tracked industries.
 - Archive filenames are timestamp-based in `Pacific/Auckland`.
 - Usage reporting is based on `openai-agents` response usage plus counted `web_search_call` tool invocations, and includes the homepage snapshot generation step. Cost is an estimate, not a billing export.
 
