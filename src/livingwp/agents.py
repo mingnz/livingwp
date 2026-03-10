@@ -105,7 +105,7 @@ def get_article_stub(industry: str):
     return format_markdown(front_matter, body)
 
 
-def build_snapshot_article_excerpt(body: str, max_chars: int = 3000) -> str:
+def build_snapshot_article_excerpt(body: str, max_chars: int = 5000) -> str:
     if len(body) <= max_chars:
         return body
 
@@ -157,7 +157,11 @@ def build_homepage_snapshot_input(articles: list[dict[str, object]]) -> str:
             )
         )
 
-    return "\n\n---\n\n".join(sections)
+    return (
+        "Compare these sectors and extract representative real-world use cases that "
+        "show where AI is actually being applied.\n\n---\n\n"
+        + "\n\n---\n\n".join(sections)
+    )
 
 
 async def update_articles(article_filter: str | None = None) -> dict[str, object]:
