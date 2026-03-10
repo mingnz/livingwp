@@ -8,11 +8,14 @@ from livingwp.utils.files import (
     load_instruction,
     load_industry_config,
     load_industry_article,
+    load_latest_articles,
     save_industry_article,
+    save_homepage_snapshot,
 )
 from livingwp.utils.markdown import parse_markdown, format_markdown
 from livingwp.utils.usage import (
     build_article_usage_report,
+    build_generation_usage_report,
     build_usage_report,
     write_usage_comment_if_configured,
     write_usage_report_if_configured,
@@ -24,8 +27,16 @@ DEFAULT_MODEL_SETTINGS = ModelSettings(
     reasoning=Reasoning(effort="medium"),
     verbosity="medium",
 )
+SNAPSHOT_MODEL_NAME = environ.get("SNAPSHOT_MODEL", DEFAULT_MODEL_NAME)
+SNAPSHOT_MODEL_SETTINGS = ModelSettings(
+    reasoning=Reasoning(effort="low"),
+    verbosity="low",
+)
 DEFAULT_INSTRUCTIONS_FILENAME = environ.get(
     "RESEARCH_INSTRUCTIONS_FILENAME", "instructions_research.md"
+)
+DEFAULT_SNAPSHOT_INSTRUCTIONS_FILENAME = environ.get(
+    "SNAPSHOT_INSTRUCTIONS_FILENAME", "instructions_snapshot.md"
 )
 STREAMING_ENABLED = environ.get("STREAMING_ENABLED", "True") == "True"
 
@@ -44,14 +55,23 @@ def get_research_agent(industry_name, config=None):
     )
 
 
-async def perform_research(topic, research_agent, initial_input):
+def get_snapshot_agent():
+    return Agent(
+        name="HomepageSnapshotAgent",
+        model=SNAPSHOT_MODEL_NAME,
+        model_settings=SNAPSHOT_MODEL_SETTINGS,
+        instructions=load_instruction(DEFAULT_SNAPSHOT_INSTRUCTIONS_FILENAME),
+    )
+
+
+async def run_agent_task(task_name, agent, initial_input):
     if STREAMING_ENABLED:
-        logger.info(f"Researching: {topic}")
-        result_stream = Runner.run_streamed(research_agent, initial_input)
+        logger.info(f"Running task: {task_name}")
+        result_stream = Runner.run_streamed(agent, initial_input)
         async for ev in result_stream.stream_events():
             if ev.type == "agent_updated_stream_event":
                 logger.info(f"\n--- switched to agent: {ev.new_agent.name} ---")
-                logger.info("\n--- RESEARCHING ---")
+                logger.info("\n--- PROCESSING ---")
             elif (
                 ev.type == "raw_response_event"
                 and hasattr(ev.data, "item")
@@ -66,8 +86,8 @@ async def perform_research(topic, research_agent, initial_input):
         # streaming is complete → final_output is now populated
         return result_stream
     else:
-        logger.info(f"Researching: {topic} (Streaming Disabled)")
-        return await Runner.run(research_agent, initial_input)
+        logger.info(f"Running task: {task_name} (Streaming Disabled)")
+        return await Runner.run(agent, initial_input)
 
 
 def get_article_stub(industry: str):
@@ -85,6 +105,34 @@ def get_article_stub(industry: str):
     return format_markdown(front_matter, body)
 
 
+def build_snapshot_article_excerpt(body: str, max_chars: int = 3000) -> str:
+    if len(body) <= max_chars:
+        return body
+
+    excerpt = body[:max_chars].rsplit("\n\n", 1)[0].strip()
+    if excerpt:
+        return excerpt
+    return body[:max_chars].strip()
+
+
+def build_homepage_snapshot_input(articles: list[dict[str, object]]) -> str:
+    sections: list[str] = []
+    for article in articles:
+        sections.append(
+            "\n".join(
+                [
+                    f"Title: {article['title']}",
+                    f"Industry: {article['industry']}",
+                    f"Updated at: {article['article_updated_at'] or 'unknown'}",
+                    "Article excerpt:",
+                    build_snapshot_article_excerpt(str(article["body"])),
+                ]
+            )
+        )
+
+    return "\n\n---\n\n".join(sections)
+
+
 async def update_articles(article_filter: str | None = None) -> dict[str, object]:
     """Run the agent pipeline for each industry article"""
     logger.info(f"Update with filter: {article_filter or 'all articles'}")
@@ -97,6 +145,7 @@ async def update_articles(article_filter: str | None = None) -> dict[str, object
             industry for industry in industries if industry in industries_in_filter
         ]
     article_reports: list[dict[str, object]] = []
+    extra_reports: list[dict[str, object]] = []
     for industry_name in industries:
         research_agent = get_research_agent(
             industry_name, industry_config.get(industry_name, {})
@@ -106,7 +155,7 @@ async def update_articles(article_filter: str | None = None) -> dict[str, object
         front_matter, body = parse_markdown(text)
         topic = front_matter.get("title", industry_name.replace("-", " "))
         initial_input = f"Topic: {topic}\nPrevious article:\n{body}"
-        research_result = await perform_research(topic, research_agent, initial_input)
+        research_result = await run_agent_task(topic, research_agent, initial_input)
         article_reports.append(
             build_article_usage_report(
                 industry=industry_name,
@@ -123,8 +172,33 @@ async def update_articles(article_filter: str | None = None) -> dict[str, object
                 f"Archived previous version for {industry_name} to {archive_path}"
             )
         save_industry_article(industry_name, updated)
+
+    latest_articles = load_latest_articles()
+    if latest_articles:
+        snapshot_agent = get_snapshot_agent()
+        snapshot_input = build_homepage_snapshot_input(latest_articles)
+        snapshot_result = await run_agent_task(
+            "Homepage snapshot", snapshot_agent, snapshot_input
+        )
+        snapshot_text = str(snapshot_result.final_output).strip()
+        snapshot_path = save_homepage_snapshot(snapshot_text)
+        logger.info(f"Updated homepage snapshot at {snapshot_path}")
+        extra_reports.append(
+            build_generation_usage_report(
+                name="homepage_snapshot",
+                label="Homepage snapshot",
+                model_name=str(snapshot_agent.model),
+                result=snapshot_result,
+            )
+        )
+    else:
+        snapshot_path = save_homepage_snapshot("")
+        logger.info(f"Wrote fallback homepage snapshot to {snapshot_path}")
+
     usage_report = build_usage_report(
-        article_filter=article_filter, article_reports=article_reports
+        article_filter=article_filter,
+        article_reports=article_reports,
+        extra_reports=extra_reports,
     )
     write_usage_report_if_configured(usage_report)
     write_usage_comment_if_configured(usage_report)

@@ -37,6 +37,28 @@ def build_article_usage_report(
     model_name: str,
     result: Any,
 ) -> dict[str, Any]:
+    return {
+        "industry": industry,
+        "topic": topic,
+        **build_usage_metrics_report(model_name=model_name, result=result),
+    }
+
+
+def build_generation_usage_report(
+    *,
+    name: str,
+    label: str,
+    model_name: str,
+    result: Any,
+) -> dict[str, Any]:
+    return {
+        "name": name,
+        "label": label,
+        **build_usage_metrics_report(model_name=model_name, result=result),
+    }
+
+
+def build_usage_metrics_report(*, model_name: str, result: Any) -> dict[str, Any]:
     usage = aggregate_usage(result.raw_responses)
     web_search_calls = count_web_search_calls(result.raw_responses)
     estimated_cost, pricing_model = estimate_usage_cost(
@@ -49,8 +71,6 @@ def build_article_usage_report(
     reasoning_tokens = get_reasoning_tokens(usage)
 
     return {
-        "industry": industry,
-        "topic": topic,
         "model": model_name,
         "pricing_model": pricing_model,
         "requests": usage.requests or len(result.raw_responses),
@@ -68,8 +88,12 @@ def build_article_usage_report(
 
 
 def build_usage_report(
-    *, article_filter: str | None, article_reports: list[dict[str, Any]]
+    *,
+    article_filter: str | None,
+    article_reports: list[dict[str, Any]],
+    extra_reports: list[dict[str, Any]] | None = None,
 ) -> dict[str, Any]:
+    extra_reports = extra_reports or []
     total_cost = Decimal("0")
     cost_complete = True
     has_priced_cost = False
@@ -77,6 +101,7 @@ def build_usage_report(
 
     totals = {
         "articles": len(article_reports),
+        "extra_generations": len(extra_reports),
         "requests": 0,
         "input_tokens": 0,
         "cached_input_tokens": 0,
@@ -86,7 +111,7 @@ def build_usage_report(
         "web_search_calls": 0,
     }
 
-    for report in article_reports:
+    for report in [*article_reports, *extra_reports]:
         totals["requests"] += int(report["requests"])
         totals["input_tokens"] += int(report["input_tokens"])
         totals["cached_input_tokens"] += int(report["cached_input_tokens"])
@@ -112,6 +137,7 @@ def build_usage_report(
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "article_filter": article_filter or None,
         "articles": article_reports,
+        "extras": extra_reports,
         "totals": totals,
         "unpriced_models": sorted(unpriced_models),
     }
@@ -146,9 +172,16 @@ def format_usage_summary(report: dict[str, Any]) -> str:
     if not totals["cost_complete"]:
         cost_label = f"{cost_label} (partial estimate)"
 
+    summary_parts = [f"{totals['articles']} article(s)"]
+    if totals.get("extra_generations"):
+        summary_parts.append(
+            f"{totals['extra_generations']} extra generation step(s)"
+        )
+
     return (
         "Usage summary: "
-        f"{totals['articles']} article(s), "
+        + ", ".join(summary_parts)
+        + ", "
         f"{totals['requests']} request(s), "
         f"{totals['total_tokens']} total token(s), "
         f"{totals['web_search_calls']} web search call(s), "
@@ -198,6 +231,10 @@ def format_usage_comment(report: dict[str, Any]) -> str:
         "",
         f"- Generated at: {report['generated_at']}",
         f"- Articles processed: {format_usage_integer(totals['articles'])}",
+        (
+            "- Extra generation steps: "
+            f"{format_usage_integer(totals.get('extra_generations', 0))}"
+        ),
         f"- Requests: {format_usage_integer(totals['requests'])}",
         f"- Total tokens: {format_usage_integer(totals['total_tokens'])}",
         f"- Cached input tokens: {format_usage_integer(totals['cached_input_tokens'])}",
@@ -213,6 +250,43 @@ def format_usage_comment(report: dict[str, Any]) -> str:
         [
             "",
             table,
+        ]
+    )
+
+    extra_rows = []
+    for extra in report.get("extras", []):
+        extra_rows.append(
+            "| "
+            + " | ".join(
+                [
+                    str(extra["label"]),
+                    f"`{extra['model']}`",
+                    format_usage_integer(extra["total_tokens"]),
+                    format_usage_integer(extra["input_tokens"]),
+                    format_usage_integer(extra["output_tokens"]),
+                    format_usage_integer(extra["web_search_calls"]),
+                    format_usage_cost_label(
+                        extra["estimated_cost_usd"], extra["cost_complete"]
+                    ),
+                ]
+            )
+            + " |"
+        )
+
+    if extra_rows:
+        lines.extend(
+            [
+                "",
+                "### Extra Outputs",
+                "",
+                "| Output | Model | Total tokens | Input | Output | Web searches | Estimated cost |",
+                "| --- | --- | ---: | ---: | ---: | ---: | ---: |",
+                *extra_rows,
+            ]
+        )
+
+    lines.extend(
+        [
             "",
             "Estimated cost is derived from token usage plus OpenAI web-search call pricing.",
         ]

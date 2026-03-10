@@ -21,6 +21,7 @@ When adding features, changing workflows, or updating the architecture, update t
 - Usage/cost reporting helpers: `src/livingwp/utils/usage.py`
 - Industry config: `src/livingwp/config/industries.json`
 - Default research prompt: `src/livingwp/prompts/instructions_research.md`
+- Homepage snapshot prompt: `src/livingwp/prompts/instructions_snapshot.md`
 
 Runtime flow:
 
@@ -29,12 +30,15 @@ Runtime flow:
 3. Pass the existing article body into the OpenAI Agents research pipeline as context.
 4. Before writing the refreshed article, archive the outgoing latest page to `src/website/whitepaper/content/archive/<industry>/<timestamp>.markdown`.
 5. Rewrite the stable latest page at `/whitepaper/<industry>/`.
-6. When `LIVINGWP_USAGE_REPORT_PATH` is set, write a JSON usage report for the full run, including token totals, web search calls, and estimated cost.
-7. When `LIVINGWP_USAGE_COMMENT_PATH` is set, write a markdown PR comment body for the full run, including a stable marker for comment updates.
+6. After article writes finish, load all current latest sector pages and generate a short national snapshot include at `src/website/_includes/homepage_snapshot.html` for the homepage.
+7. When `LIVINGWP_USAGE_REPORT_PATH` is set, write a JSON usage report for the full run, including token totals, web search calls, and estimated cost.
+8. When `LIVINGWP_USAGE_COMMENT_PATH` is set, write a markdown PR comment body for the full run, including a stable marker for comment updates.
 
 ### Website
 
 - Site config: `src/website/_config.yml`
+- Homepage: `src/website/index.markdown`
+- Generated homepage snapshot include: `src/website/_includes/homepage_snapshot.html`
 - Sector index include: `src/website/_includes/article_list.md`
 - Sector article layout: `src/website/_layouts/article.html`
 - Site styles: `src/website/assets/main.scss`
@@ -47,6 +51,7 @@ Rendering flow:
 2. Latest sector pages use stable permalinks like `/whitepaper/healthcare/`.
 3. Archived snapshots use dated permalinks like `/whitepaper/healthcare/2026-03-09-140533/`.
 4. The article layout builds the history list by collecting pages that share `article_series`.
+5. The homepage renders the generated NZ-wide snapshot include and links to `/whitepaper/` instead of rendering sector cards directly.
 
 ## Article Metadata Contract
 
@@ -138,12 +143,14 @@ Notes:
 
 - The updater currently passes only the previous article body into the model, not the full archive history.
 - The update pipeline archives the outgoing latest page before writing the new latest page.
+- The homepage snapshot is regenerated from all current latest sector pages after every run, including filtered runs.
 - Archive filenames are timestamp-based in `Pacific/Auckland`.
-- Usage reporting is based on `openai-agents` response usage plus counted `web_search_call` tool invocations. Cost is an estimate, not a billing export.
+- Usage reporting is based on `openai-agents` response usage plus counted `web_search_call` tool invocations, and includes the homepage snapshot generation step. Cost is an estimate, not a billing export.
 
 ### Working on the article layout
 
 - The sector index should list only latest pages. That filter lives in `src/website/_includes/article_list.md`.
+- The homepage should render `src/website/_includes/homepage_snapshot.html` and link users through to `/whitepaper/` for the full sector list.
 - The bottom-of-page history list is generated dynamically from page front matter. There is no separate data file.
 - Archived pages must remain visible to Jekyll. Do not exclude `src/website/whitepaper/content/archive`.
 
@@ -161,6 +168,7 @@ Notes:
 ## Safe Change Patterns
 
 - If you change article persistence rules, test both the latest page and an archived snapshot.
+- If you change homepage snapshot generation, verify both the generated include output and the rendered homepage.
 - If you change front matter generation, inspect the rendered HTML for one latest page and one archive page.
 - If you change workflows, verify whether the result should open a PR or commit onto an existing branch.
 - Prefer small commits that separate infrastructure changes from generated article content updates.

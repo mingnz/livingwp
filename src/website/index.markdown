@@ -13,6 +13,10 @@ Explore how generative AI is shaping industries across Aotearoa New Zealand. Thi
 
 Want to know what's behind the curtain? [See how it works](how-it-works). This is an open-source project from the AI Forum NZ. Contributions welcome on [GitHub](https://github.com/mingnz/livingwp).
 
-**Sector reports:**
+## Snapshot of AI in New Zealand
 
-{% include article_list.md %}
+<div class="homepage-snapshot">
+  {% include homepage_snapshot.html %}
+</div>
+
+<p><a class="homepage-link-card" href="{{ '/whitepaper/' | relative_url }}">Browse all sector articles</a></p>
