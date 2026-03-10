@@ -2,7 +2,6 @@ from livingwp.utils.logging import logger
 from agents import Agent, ModelSettings, Runner, WebSearchTool
 from openai.types.shared.reasoning import Reasoning
 from os import environ
-import re
 
 from livingwp.utils.files import (
     archive_industry_article,
@@ -40,14 +39,6 @@ DEFAULT_SNAPSHOT_INSTRUCTIONS_FILENAME = environ.get(
     "SNAPSHOT_INSTRUCTIONS_FILENAME", "instructions_snapshot.md"
 )
 STREAMING_ENABLED = environ.get("STREAMING_ENABLED", "True") == "True"
-MAX_NAMED_INDUSTRIES_IN_SNAPSHOT = 3
-SNAPSHOT_ROLL_CALL_FALLBACK = (
-    "Across the sectors tracked here, AI adoption is furthest along in lower-risk "
-    "operational and productivity use cases, and less mature where decisions are "
-    "high-stakes, public-facing, or tightly regulated. New Zealand is moving past "
-    "experimentation, but progress remains uneven and constrained by governance, "
-    "trust, skills, privacy, and the challenge of scaling pilots into durable capability."
-)
 
 
 def get_research_agent(industry_name, config=None):
@@ -124,51 +115,31 @@ def build_snapshot_article_excerpt(body: str, max_chars: int = 3000) -> str:
     return body[:max_chars].strip()
 
 
-def normalize_snapshot_text(text: str) -> str:
-    return re.sub(r"[^a-z0-9]+", " ", text.lower()).strip()
-
-
-def build_snapshot_industry_labels(article: dict[str, object]) -> set[str]:
-    title = str(article["title"]).strip()
-    labels = {
-        str(article["industry"]).replace("_", " ").strip(),
-        title,
-    }
-    if title.lower().startswith("ai in "):
-        labels.add(title[6:].strip())
-
-    return {
-        normalize_snapshot_text(label)
-        for label in labels
-        if normalize_snapshot_text(label)
-    }
-
-
-def count_named_industries_in_snapshot(
-    snapshot_text: str, articles: list[dict[str, object]]
-) -> int:
-    normalized_snapshot = f" {normalize_snapshot_text(snapshot_text)} "
-    count = 0
+def build_homepage_snapshot_note(articles: list[dict[str, object]]) -> str:
+    tracked_titles = []
     for article in articles:
-        if any(
-            f" {label} " in normalized_snapshot
-            for label in build_snapshot_industry_labels(article)
-        ):
-            count += 1
-    return count
+        title = str(article["title"]).strip()
+        if title.lower().startswith("ai in "):
+            tracked_title = title[6:].strip().lower()
+        else:
+            tracked_title = title.lower()
 
+        if tracked_title == "public sector":
+            tracked_title = "the public sector"
 
-def finalize_homepage_snapshot(
-    snapshot_text: str, articles: list[dict[str, object]]
-) -> str:
-    named_industries = count_named_industries_in_snapshot(snapshot_text, articles)
-    if named_industries > MAX_NAMED_INDUSTRIES_IN_SNAPSHOT:
-        logger.warning(
-            "Homepage snapshot named %s industries; using comparison fallback",
-            named_industries,
-        )
-        return SNAPSHOT_ROLL_CALL_FALLBACK
-    return snapshot_text
+        tracked_titles.append(tracked_title)
+
+    if not tracked_titles:
+        return ""
+    if len(tracked_titles) == 1:
+        tracked_list = tracked_titles[0]
+    else:
+        tracked_list = ", ".join(tracked_titles[:-1]) + f", and {tracked_titles[-1]}"
+
+    return (
+        "This living whitepaper currently tracks AI in "
+        f"{tracked_list} in Aotearoa New Zealand."
+    )
 
 
 def build_homepage_snapshot_input(articles: list[dict[str, object]]) -> str:
@@ -233,13 +204,15 @@ async def update_articles(article_filter: str | None = None) -> dict[str, object
     if latest_articles:
         snapshot_agent = get_snapshot_agent()
         snapshot_input = build_homepage_snapshot_input(latest_articles)
+        snapshot_note = build_homepage_snapshot_note(latest_articles)
         snapshot_result = await run_agent_task(
             "Homepage snapshot", snapshot_agent, snapshot_input
         )
-        snapshot_text = finalize_homepage_snapshot(
-            str(snapshot_result.final_output).strip(), latest_articles
+        snapshot_summary = str(snapshot_result.final_output).strip()
+        snapshot_path = save_homepage_snapshot(
+            snapshot_summary,
+            note=snapshot_note,
         )
-        snapshot_path = save_homepage_snapshot(snapshot_text)
         logger.info(f"Updated homepage snapshot at {snapshot_path}")
         extra_reports.append(
             build_generation_usage_report(

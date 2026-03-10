@@ -30,7 +30,7 @@ Runtime flow:
 3. Pass the existing article body into the OpenAI Agents research pipeline as context.
 4. Before writing the refreshed article, archive the outgoing latest page to `src/website/whitepaper/content/archive/<industry>/<timestamp>.markdown`.
 5. Rewrite the stable latest page at `/whitepaper/<industry>/`.
-6. After article writes finish, load all current latest sector pages and generate a short national snapshot include at `src/website/_includes/homepage_snapshot.html` for the homepage.
+6. After article writes finish, load all current latest sector pages and generate a short national snapshot include at `src/website/_includes/homepage_snapshot.html` for the homepage. The snapshot contains a generated comparative summary sentence followed by a note listing the currently tracked industries.
 7. When `LIVINGWP_USAGE_REPORT_PATH` is set, write a JSON usage report for the full run, including token totals, web search calls, and estimated cost.
 8. When `LIVINGWP_USAGE_COMMENT_PATH` is set, write a markdown PR comment body for the full run, including a stable marker for comment updates.
 
@@ -144,7 +144,7 @@ Notes:
 - The updater currently passes only the previous article body into the model, not the full archive history.
 - The update pipeline archives the outgoing latest page before writing the new latest page.
 - The homepage snapshot is regenerated from all current latest sector pages after every run, including filtered runs.
-- The homepage snapshot prompt is comparison-oriented, and the pipeline falls back to a generic comparative summary if the generated output names too many tracked industries.
+- The homepage snapshot renders a generated comparative summary first, then appends a note listing the industries currently tracked by the whitepaper.
 - Archive filenames are timestamp-based in `Pacific/Auckland`.
 - Usage reporting is based on `openai-agents` response usage plus counted `web_search_call` tool invocations, and includes the homepage snapshot generation step. Cost is an estimate, not a billing export.
 
