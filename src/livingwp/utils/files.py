@@ -2,6 +2,7 @@ import json
 import re
 from datetime import date, datetime
 from pathlib import Path
+from typing import Any
 from zoneinfo import ZoneInfo
 
 from livingwp.utils.markdown import format_markdown, parse_markdown
@@ -28,6 +29,35 @@ def load_industry_article(industry: str) -> str | None:
     if file_path.is_file():
         return file_path.read_text()
     return None
+
+
+def load_article_archive_entries(
+    industry: str, limit: int | None = None
+) -> list[dict[str, Any]]:
+    """Load archived article bodies and metadata for an article series."""
+    archive_dir = SITE_ARCHIVE_DIR / industry
+    if not archive_dir.is_dir():
+        return []
+
+    entries: list[dict[str, Any]] = []
+    for path in archive_dir.glob("*.markdown"):
+        metadata, body = parse_markdown(path.read_text())
+        entries.append(
+            {
+                "path": path,
+                "metadata": metadata,
+                "body": body,
+                "article_updated_at": parse_article_timestamp(
+                    metadata.get("article_updated_at")
+                )
+                or datetime.min.replace(tzinfo=SITE_TIMEZONE),
+            }
+        )
+
+    entries.sort(key=lambda item: item["article_updated_at"], reverse=True)
+    if limit is not None:
+        return entries[:limit]
+    return entries
 
 
 def save_industry_article(
@@ -132,6 +162,8 @@ def normalize_article_metadata(
     normalized["article"] = latest
     normalized["article_history"] = True
     normalized["article_latest"] = latest
+    normalized["article_kind"] = normalized.get("article_kind", "industry")
+    normalized["article_summary"] = extract_description(body, max_length=320)
     normalized["article_version"] = not latest
     normalized["article_series"] = industry
     normalized["article_updated_at"] = article_updated_at.isoformat()
@@ -159,6 +191,8 @@ def extract_description(body: str, max_length: int = 160) -> str:
     # Find the first non-empty paragraph
     for paragraph in text.split("\n\n"):
         cleaned = " ".join(paragraph.split()).strip()
+        if cleaned.lower().startswith(("updated:", "last updated:")):
+            continue
         if len(cleaned) > 20:
             if len(cleaned) > max_length:
                 return cleaned[: max_length - 1].rsplit(" ", 1)[0] + "\u2026"
@@ -174,8 +208,7 @@ def load_instruction(filename: str) -> str:
 
 def load_industry_config() -> dict:
     """Load industry configuration from industries.json."""
-    config_path = Path(__file__).resolve().parent.parent / "config" / "industries.json"
-    with open(config_path, "r") as f:
+    with open(INDUSTRIES_CONFIG_PATH, "r") as f:
         return json.load(f)
 
 

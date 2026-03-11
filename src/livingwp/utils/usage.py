@@ -184,7 +184,7 @@ def format_usage_comment(report: dict[str, Any]) -> str:
 
     table = "\n".join(
         [
-            "| Industry | Model | Total tokens | Input | Output | Web searches | Estimated cost |",
+            "| Article | Model | Total tokens | Input | Output | Web searches | Estimated cost |",
             "| --- | --- | ---: | ---: | ---: | ---: | ---: |",
             *article_rows,
         ]

@@ -4,7 +4,9 @@
 [![Deploy website to Github Pages](https://github.com/mingnz/livingwp/actions/workflows/deploy_website.yml/badge.svg)](https://github.com/mingnz/livingwp/actions/workflows/deploy_website.yml)
 
 An open source experiment tracking how generative AI is used across Aotearoa
-New Zealand. The repository contains two parts:
+New Zealand. The site publishes a monthly national "State of AI in New Zealand"
+snapshot alongside sector-specific living articles. The repository contains two
+parts:
 
 - **`src/livingwp`** – the Python code for an LLM agent that gathers research and
   writes updates.
@@ -21,22 +23,26 @@ We welcome contributions from the community! There are two main ways you can get
 
 - **Open an Issue**: If you have suggestions, ideas, or have found a bug, feel free to open an Issue. This is a great way to propose new features, report problems, or discuss improvements.
 
-### Editing the Research Prompt
+### Editing the Research Prompts
 
-The default prompt that guides the research agent is defined in [`src/livingwp/prompts/instructions_research.md`](https://github.com/mingnz/livingwp/blob/main/src/livingwp/prompts/instructions_research.md). You can suggest changes to this prompt by either:
+The default industry prompt is defined in [`src/livingwp/prompts/instructions_research.md`](https://github.com/mingnz/livingwp/blob/main/src/livingwp/prompts/instructions_research.md).
+The New Zealand snapshot uses [`src/livingwp/prompts/instructions_research_nz_snapshot.md`](https://github.com/mingnz/livingwp/blob/main/src/livingwp/prompts/instructions_research_nz_snapshot.md).
+
+You can suggest changes to these prompts by either:
 
 - Opening a Pull Request directly with your proposed edits to the prompt file.
 - Opening an Issue to discuss or suggest changes to the prompt.
 
-## Industries, prompts and models
+## Articles, prompts and models
 
-The settings for each industry are defined in [`src/livingwp/config/industries.json`](https://github.com/mingnz/livingwp/blob/main/src/livingwp/config/industries.json). Changing these settings allows you to:
+The settings for each generated article are defined in [`src/livingwp/config/industries.json`](https://github.com/mingnz/livingwp/blob/main/src/livingwp/config/industries.json). Changing these settings allows you to:
 
-- Add a new industry. A new article will be created and added to the site the next time the update process runs.
-- Specify which OpenAI model to use for an industry.
-- Add a new instructions file to [`src/livingwp/prompts/`](https://github.com/mingnz/livingwp/blob/main/src/livingwp/prompts/) and use it to prompt the research agent for a specifc industry
+- Add a new industry article. A new page will be created and added to the site the next time the update process runs.
+- Configure special non-industry articles such as the `nz` monthly national snapshot.
+- Specify which OpenAI model to use for an article.
+- Add a new instructions file to [`src/livingwp/prompts/`](https://github.com/mingnz/livingwp/blob/main/src/livingwp/prompts/) and use it to prompt the research agent for a specific article or industry
 
-The default runtime now uses the `openai-agents` Python SDK on the `0.10.x` line with `gpt-5.4-2026-03-05` as the research model snapshot. You can still override the model with the `RESEARCH_MODEL` environment variable or per-industry config.
+The default runtime now uses the `openai-agents` Python SDK on the `0.10.x` line with `gpt-5.4-2026-03-05` as the research model snapshot. You can still override the model with the `RESEARCH_MODEL` environment variable or per-article config.
 
 We look forward to your contributions!
 
@@ -83,21 +89,29 @@ flowchart TD
    uv sync
    ```
 
-2. Run the agent:
+2. Make sure `OPENAI_API_KEY` is available in your environment before running a
+   real update.
+
+3. Run the agent:
 
    ```sh
    uv run livingwp
    ```
 
-Running the command above now iterates over each industry page in
-`src/website/whitepaper/content`, rewriting the latest sector page with fresh
+Running the command above iterates over each configured article in
+`src/livingwp/config/industries.json`, rewriting the latest page with fresh
 research and archiving the outgoing version under
-`src/website/whitepaper/content/archive/<industry>/`.
+`src/website/whitepaper/content/archive/<slug>/`.
 
-You can also target specifc industries by passing the industry slugs as arguments. For example, to update only the finance and banking article:
+That includes both sector articles such as `healthcare` and the national
+snapshot article `nz`.
+
+You can also target specific articles by passing a comma-separated filter. For
+example:
 
 ```sh
-uv run livingwp finance banking
+uv run livingwp nz
+uv run livingwp finance,healthcare
 ```
 
 ### Working on the Website

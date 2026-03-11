@@ -1,4 +1,12 @@
 {
+  "nz": {
+    "instructions_filename": "instructions_research_nz_snapshot.md",
+    "research_model": "gpt-5.4-2026-03-05",
+    "title": "State of AI in New Zealand",
+    "article_kind": "snapshot",
+    "history_context_count": 6,
+    "stub_body": "This page is a placeholder for a monthly snapshot of major AI developments across Aotearoa New Zealand. It will be populated automatically by an LLM agent as new information becomes available."
+  },
   "healthcare": {
     "instructions_filename": "instructions_research.md",
     "research_model": "gpt-5.4-2026-03-05"
