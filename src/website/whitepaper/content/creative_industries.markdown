@@ -121,7 +121,7 @@ In Aotearoa, AI adoption is increasingly being evaluated not only through produc
 
 ## Conclusion
 
-AI adoption in Aotearoa New Zealand’s creative industries has clearly moved beyond the placeholder stage. By **2025**, the sector had real operating examples, dedicated summits, newsroom tools, VFX workflow use, agency restructuring, creator-rights lobbying, and explicit government strategy language. ([aiforum.org.nz](https://aiforum.org.nz/2025/05/30/creative-industries-summit-success-ai-hackathon-festival-2025-launch-plus-film-festival-winners-announced/))
+AI adoption in Aotearoa New Zealand’s creative industries is now clearly substantive rather than speculative. By **2025**, the sector had real operating examples, dedicated summits, newsroom tools, VFX workflow use, agency restructuring, creator-rights lobbying, and explicit government strategy language. ([aiforum.org.nz](https://aiforum.org.nz/2025/05/30/creative-industries-summit-success-ai-hackathon-festival-2025-launch-plus-film-festival-winners-announced/))
 
 The sector’s current state can be summarised simply:
 

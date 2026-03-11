@@ -43,9 +43,9 @@ What is changing fastest is not just the number of research projects, but the **
 - university policies for secure and responsible use, ([otago.ac.nz](https://www.otago.ac.nz/administration/policies/policy-collection/ai-governance-policy))
 - and emerging publication and peer-review norms. ([ojs.aut.ac.nz](https://ojs.aut.ac.nz/nzjer/AIPolicy))
 
-### What has changed since the placeholder stage
+### What changed across 2025-2026
 
-Since the earlier placeholder article, several concrete developments have materially changed the picture:
+Several concrete developments across 2025-2026 have materially changed the picture:
 
 - **8 July 2025:** MBIE released the country’s first AI strategy. ([mbie.govt.nz](https://www.mbie.govt.nz/assets/new-zealands-strategy-for-artificial-intelligence.pdf))
 - **5 August 2025:** MBIE announced a unified national eResearch platform through REANNZ–NeSI integration. ([mbie.govt.nz](https://www.mbie.govt.nz/about/news/new-era-for-digital-research-infrastructure))
