@@ -22,7 +22,7 @@ title: AI in Education
 
 New Zealand’s education sector has moved beyond the first-wave debate of “AI as cheating tool” into a more operational phase: schools and tertiary providers are now building policies, redesigning assessment, testing classroom use cases, and expanding AI literacy. The sector is not yet in full-scale transformation, but it is clearly past the experimental fringe. The strongest evidence of adoption sits in teacher workflow support, school-level policy redesign, NZQA assessment infrastructure, and emerging national AI-literacy initiatives. ([education.govt.nz](https://www.education.govt.nz/education-professionals/schools-year-0-13/digital-technology/generative-ai))
 
-Three changes stand out since the previous version of this whitepaper. First, the Ministry of Education has updated its school guidance, including explicit principles for using AI in marking and new New Zealand case studies. Second, AI now appears directly in draft curriculum architecture, especially in the Years 9–10 Technology and Computer Science material now out for consultation. Third, the evidence-gathering phase is deepening: as of March 2026, ERO is actively surveying schools on how AI is being used by teachers, leaders, and students. ([education.govt.nz](https://www.education.govt.nz/education-professionals/schools-year-0-13/digital-technology/generative-ai))
+Three developments define the current picture. First, the Ministry of Education has updated its school guidance, including explicit principles for using AI in marking and new New Zealand case studies. Second, AI now appears directly in draft curriculum architecture, especially in the Years 9–10 Technology and Computer Science material now out for consultation. Third, the evidence-gathering phase is deepening: as of March 2026, ERO is actively surveying schools on how AI is being used by teachers, leaders, and students. ([education.govt.nz](https://www.education.govt.nz/education-professionals/schools-year-0-13/digital-technology/generative-ai))
 
 ## Overall State of Adoption
 
@@ -44,7 +44,7 @@ The most operationally mature AI use in New Zealand education is not in classroo
 
 NZQA is also using AI for service delivery. Its chatbot, Awhina, has been helping users since 2023, and a generative AI upgrade began rolling out in April 2025 to improve question handling by searching and ranking relevant website information. NZQA has said its AI tools already support more than 250,000 student and customer interactions each year. ([www2.nzqa.govt.nz](https://www2.nzqa.govt.nz/about-us/news/our-website-chatbot-awhina-is-growing/?utm_source=openai))
 
-## What Has Changed Since the Previous Report
+## Recent Developments
 
 - **School guidance is now more explicit.** The Ministry’s generative AI page, last updated on 28 October 2025, now includes updated guidance on AI tools for marking, GenAI in NCEA, and downloadable school case studies. It reiterates that schools must have a policy on acceptable GenAI use, and that GenAI is not permitted in NCEA external assessment. ([education.govt.nz](https://www.education.govt.nz/education-professionals/schools-year-0-13/digital-technology/generative-ai))
 - **Curriculum work has advanced into live consultation.** Draft Years 0–10 curriculum content is currently out for consultation until **24 April 2026**, with draft Technology material explicitly including AI within the Years 9–10 Computer Science strand. ([newzealandcurriculum.tahurangi.education.govt.nz](https://newzealandcurriculum.tahurangi.education.govt.nz/5637293836.p))
