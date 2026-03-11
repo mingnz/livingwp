@@ -19,34 +19,38 @@ When adding features, changing workflows, or updating the architecture, update t
 - Storage/front matter helpers: `src/livingwp/utils/files.py`
 - Markdown parsing/serialization: `src/livingwp/utils/markdown.py`
 - Usage/cost reporting helpers: `src/livingwp/utils/usage.py`
-- Industry config: `src/livingwp/config/industries.json`
+- Article config: `src/livingwp/config/industries.json`
 - Default research prompt: `src/livingwp/prompts/instructions_research.md`
+- NZ snapshot prompt: `src/livingwp/prompts/instructions_research_nz_snapshot.md`
 
 Runtime flow:
 
-1. Load industry definitions from `industries.json`.
-2. For each industry, load the current latest article from `src/website/whitepaper/content/<industry>.markdown`.
+1. Load article definitions from `industries.json`.
+2. For each configured article slug, load the current latest article from `src/website/whitepaper/content/<slug>.markdown`.
 3. Pass the existing article body into the OpenAI Agents research pipeline as context.
-4. Before writing the refreshed article, archive the outgoing latest page to `src/website/whitepaper/content/archive/<industry>/<timestamp>.markdown`.
-5. Rewrite the stable latest page at `/whitepaper/<industry>/`.
-6. When `LIVINGWP_USAGE_REPORT_PATH` is set, write a JSON usage report for the full run, including token totals, web search calls, and estimated cost.
-7. When `LIVINGWP_USAGE_COMMENT_PATH` is set, write a markdown PR comment body for the full run, including a stable marker for comment updates.
+4. If an article config sets `history_context_count`, also pass excerpts from recent archived versions into the research input.
+5. Before writing the refreshed article, archive the outgoing latest page to `src/website/whitepaper/content/archive/<slug>/<timestamp>.markdown`.
+6. Rewrite the stable latest page at `/whitepaper/<slug>/`.
+7. When `LIVINGWP_USAGE_REPORT_PATH` is set, write a JSON usage report for the full run, including token totals, web search calls, and estimated cost.
+8. When `LIVINGWP_USAGE_COMMENT_PATH` is set, write a markdown PR comment body for the full run, including a stable marker for comment updates.
 
 ### Website
 
 - Site config: `src/website/_config.yml`
-- Sector index include: `src/website/_includes/article_list.md`
-- Sector article layout: `src/website/_layouts/article.html`
+- Industry article list include: `src/website/_includes/article_list.md`
+- Snapshot feature include: `src/website/_includes/snapshot_feature.md`
+- Article layout: `src/website/_layouts/article.html`
 - Site styles: `src/website/assets/main.scss`
 - Latest article pages: `src/website/whitepaper/content/*.markdown`
-- Archived article pages: `src/website/whitepaper/content/archive/<industry>/*.markdown`
+- Archived article pages: `src/website/whitepaper/content/archive/<slug>/*.markdown`
 
 Rendering flow:
 
 1. Jekyll treats each markdown file as a page.
-2. Latest sector pages use stable permalinks like `/whitepaper/healthcare/`.
+2. Latest article pages use stable permalinks like `/whitepaper/healthcare/` and `/whitepaper/nz/`.
 3. Archived snapshots use dated permalinks like `/whitepaper/healthcare/2026-03-09-140533/`.
-4. The article layout builds the history list by collecting pages that share `article_series`.
+4. The homepage and `/whitepaper/` page feature the latest page with `article_kind: snapshot` separately from industry reports.
+5. The article layout builds the history list by collecting pages that share `article_series`.
 
 ## Article Metadata Contract
 
@@ -58,6 +62,8 @@ These front matter fields are now part of the contract between the updater and t
 - `article`
 - `article_history`
 - `article_latest`
+- `article_kind`
+- `article_summary`
 - `article_version`
 - `article_series`
 - `article_updated_at`
@@ -66,7 +72,9 @@ Semantics:
 
 - Latest pages must have `article: true`, `article_latest: true`, `article_version: false`.
 - Archived pages must have `article: false`, `article_latest: false`, `article_version: true`.
-- `article_series` must match the industry slug and is how the layout groups history entries.
+- `article_kind: snapshot` is used for the New Zealand national snapshot; pages without it are treated as industry articles by the list templates.
+- `article_summary` is extracted from the article body and is used by the snapshot feature card.
+- `article_series` must match the article slug and is how the layout groups history entries.
 - `article_updated_at` is written in ISO 8601 and is used for display and ordering.
 
 If you change any of these names or meanings, update both:
@@ -133,17 +141,20 @@ Notes:
 - Add industries through `src/livingwp/config/industries.json` or the `Add Industry` workflow.
 - The industry key becomes the page slug and the `article_series` value.
 - Keep keys stable. Renaming an industry slug changes URLs and separates old archives from new ones unless you migrate content deliberately.
+- Special non-industry articles can also live in `industries.json`; the current example is `nz`, which is rendered separately via `article_kind: snapshot`.
 
 ### Working on article generation
 
-- The updater currently passes only the previous article body into the model, not the full archive history.
+- The updater always passes the previous latest article body into the model.
+- When `history_context_count` is configured, the updater also passes recent archive excerpts; the `nz` snapshot uses this to compare month-on-month trends.
 - The update pipeline archives the outgoing latest page before writing the new latest page.
 - Archive filenames are timestamp-based in `Pacific/Auckland`.
 - Usage reporting is based on `openai-agents` response usage plus counted `web_search_call` tool invocations. Cost is an estimate, not a billing export.
 
 ### Working on the article layout
 
-- The sector index should list only latest pages. That filter lives in `src/website/_includes/article_list.md`.
+- `src/website/_includes/snapshot_feature.md` renders the latest national snapshot on the homepage and article index.
+- `src/website/_includes/article_list.md` should list only latest non-snapshot pages.
 - The bottom-of-page history list is generated dynamically from page front matter. There is no separate data file.
 - Archived pages must remain visible to Jekyll. Do not exclude `src/website/whitepaper/content/archive`.
 
@@ -183,7 +194,7 @@ bundle exec jekyll serve
 
 For end-to-end article history checks:
 
-1. Run a single-industry update.
+1. Run a single-article update.
 2. Confirm the latest page was rewritten.
-3. Confirm a dated archive file was created under `src/website/whitepaper/content/archive/<industry>/`.
-4. Open the sector page and verify the history list links to the archive snapshot.
+3. Confirm a dated archive file was created under `src/website/whitepaper/content/archive/<slug>/`.
+4. Open the article page and verify the history list links to the archive snapshot.

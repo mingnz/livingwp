@@ -1,4 +1,4 @@
-{% assign article_pages = site.pages | where: "article", true | sort: "title" %}
+{% assign article_pages = site.pages | where: "article", true | where_exp: "item", "item.article_kind != 'snapshot'" | sort: "title" %}
 
 <div class="article-cards">
   {% for pg in article_pages %}
