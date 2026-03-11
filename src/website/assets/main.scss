@@ -101,7 +101,8 @@
   margin-top: 1rem;
 }
 
-.snapshot-feature__link {
+.snapshot-feature__link,
+.snapshot-feature__link:visited {
   background: #0969da;
   border: 1px solid #0969da;
   border-radius: 999px;
@@ -113,18 +114,22 @@
   text-decoration: none;
 }
 
-.snapshot-feature__link:hover {
+.snapshot-feature__link:hover,
+.snapshot-feature__link:visited:hover {
   background: #0550ae;
   border-color: #0550ae;
+  color: #ffffff;
   text-decoration: none;
 }
 
-.snapshot-feature__link--muted {
+.snapshot-feature__link--muted,
+.snapshot-feature__link--muted:visited {
   background: transparent;
   color: #0969da;
 }
 
-.snapshot-feature__link--muted:hover {
+.snapshot-feature__link--muted:hover,
+.snapshot-feature__link--muted:visited:hover {
   background: #e7f3ff;
   color: #0550ae;
 }
