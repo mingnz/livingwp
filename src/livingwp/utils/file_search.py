@@ -71,16 +71,16 @@ async def convert_citation(
     )
 
 
-def get_file_citation_converter_tool(filename_urls: dict[str, str]):
+def get_file_citation_tool(filename_urls: dict[str, str]):
     """
-    Returns a function tool to convert filenames into url citations from the details in filename_urls
+    Returns a function tool to convert filenames into url citations using the URLs in filename_urls
 
     Returns:
         A function tool to convert filenames into url citations
     """
 
     return FunctionTool(
-        name="file_citation_converter",
+        name="file_citation",
         description="Provides a url_citation for a file returned by the file search tool",
         on_invoke_tool=partial(convert_citation, filename_urls),
         params_json_schema={
