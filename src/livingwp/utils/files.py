@@ -27,7 +27,7 @@ def load_industry_article(industry: str) -> str | None:
     """
     file_path = Path(SITE_CONTENT_DIR, f"{industry}.markdown")
     if file_path.is_file():
-        return file_path.read_text()
+        return file_path.read_text(encoding="utf-8")
     return None
 
 
@@ -41,7 +41,7 @@ def load_article_archive_entries(
 
     entries: list[dict[str, Any]] = []
     for path in archive_dir.glob("*.markdown"):
-        metadata, body = parse_markdown(path.read_text())
+        metadata, body = parse_markdown(path.read_text(encoding="utf-8"))
         entries.append(
             {
                 "path": path,
@@ -73,7 +73,7 @@ def save_industry_article(
         article_updated_at=timestamp,
         latest=True,
     )
-    Path(SITE_CONTENT_DIR, f"{industry}.markdown").write_text(normalized)
+    Path(SITE_CONTENT_DIR, f"{industry}.markdown").write_text(normalized, encoding="utf-8")
 
 
 def archive_industry_article(industry: str, article: str) -> Path:
@@ -94,7 +94,7 @@ def archive_industry_article(industry: str, article: str) -> Path:
         latest=False,
         archive_slug=archive_slug,
     )
-    archive_path.write_text(normalized)
+    archive_path.write_text(normalized, encoding="utf-8")
     return archive_path
 
 
@@ -203,7 +203,7 @@ def extract_description(body: str, max_length: int = 160) -> str:
 
 def load_instruction(filename: str) -> str:
     prompts_dir = Path(__file__).resolve().parent.parent / "prompts"
-    return (prompts_dir / filename).read_text()
+    return (prompts_dir / filename).read_text(encoding="utf-8")
 
 
 def load_industry_config() -> dict:
