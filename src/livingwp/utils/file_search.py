@@ -46,13 +46,13 @@ def get_file_search_tool(file_store_name: str):
     return None
 
 
-async def convert_citation(
+async def convert_file_name_to_link(
     filename_urls: dict[str, str], context: ToolContext, filename: str
 ) -> str:
-    """Called by the file_annotation tool to convert a filename into a markdown link based on the filename_lookup
+    """Called by the filename_to_link_converter tool to convert a filename into a markdown link based on the filename_lookup
     The agent will usually pass in a JSON object with a filename attribute (but sometimes it's just the filename as a string)
     """
-    logger.info(f"Citation requested for: {filename}")
+    logger.info(f"Link requested for filename: {filename}")
     try:
         filename = json.loads(filename).get("filename", filename)
     except json.JSONDecodeError as exc:
@@ -60,29 +60,33 @@ async def convert_citation(
             f"JSON decoding failed. Assuming filename passed as string: {exc}"
         )
 
-    file_details = filename_urls.get("filename")
+    file_details = filename_urls.get(filename)
 
-    return json.dumps(
-        {
-            "type": "url_citation",
-            "url": file_details.get("url") if file_details else "",
-            "title": file_details.get("title") if file_details else Path(filename).stem,
-        }
-    )
+    if not file_details:
+        logger.warning(f"No link found for {filename}")
+        #Returning null as a string, rather than an empty string or None, resulted in more consistent behaviour
+        return "null"
+
+    result = f"[{file_details.get('title')}]({file_details.get('url')})"        
+
+    logger.info(f"Returning link: {result}")
+
+    return result
+    
 
 
-def get_file_citation_tool(filename_urls: dict[str, str]):
+def get_file_link_tool(filename_urls: dict[str, str]):
     """
-    Returns a function tool to convert filenames into url citations using the URLs in filename_urls
+    Returns a function tool to convert filenames into links from the details in filename_urls
 
     Returns:
-        A function tool to convert filenames into url citations
+        A function tool to convert filenames into links
     """
 
     return FunctionTool(
-        name="file_citation",
-        description="Provides a url_citation for a file returned by the file search tool",
-        on_invoke_tool=partial(convert_citation, filename_urls),
+        name="filename_to_link_converter",
+        description="Provides a markdown link for a file name returned by the file search tool, if one is available. Use this tool to include a markdown link in place of every reference to a file in the output.",
+        on_invoke_tool=partial(convert_file_name_to_link, filename_urls),
         params_json_schema={
             "type": "object",
             "properties": {

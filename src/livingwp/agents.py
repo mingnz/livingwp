@@ -21,7 +21,7 @@ from livingwp.utils.usage import (
 )
 from livingwp.utils.file_search import (
     get_file_search_tool,
-    get_file_citation_tool,
+    get_file_link_tool,
 )
 
 DEFAULT_MODEL_NAME = environ.get("RESEARCH_MODEL", "gpt-5.4-2026-03-05")
@@ -48,9 +48,9 @@ def get_research_agent(industry_name, config=None):
             tools_to_use.append(file_search_tool)
             filename_urls = config.get("filename_urls", {})
             if filename_urls:
-                file_citation_tool = get_file_citation_tool(filename_urls)
-                if file_citation_tool:
-                    tools_to_use.append(file_citation_tool)
+                file_link_tool = get_file_link_tool(filename_urls)
+                if file_link_tool:
+                    tools_to_use.append(file_link_tool)
     return Agent(
         name=f"ResearchAgent-{industry_name}",
         model=config.get("research_model", DEFAULT_MODEL_NAME),
