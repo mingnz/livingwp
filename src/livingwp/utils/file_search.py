@@ -23,7 +23,7 @@ def get_store_id(name: str) -> Optional[str]:
     vector_stores = client.vector_stores.list()
 
     # Find the store with matching name
-    for store in vector_stores.data:
+    for store in vector_stores:
         if store.name == name:
             logger.info(f"Found store id {store.id} for {name} store")
             return store.id
