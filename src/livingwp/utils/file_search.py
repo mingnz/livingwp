@@ -5,7 +5,6 @@ from agents.tool_context import ToolContext
 from openai import OpenAI
 from typing import Optional
 from livingwp.utils.logging import logger
-from pathlib import Path
 import json
 
 
