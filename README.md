@@ -42,7 +42,11 @@ The settings for each generated article are defined in [`src/livingwp/config/ind
 - Specify which OpenAI model to use for an article.
 - Add a new instructions file to [`src/livingwp/prompts/`](https://github.com/mingnz/livingwp/blob/main/src/livingwp/prompts/) and use it to prompt the research agent for a specific article or industry.
 
-### File search (optional)
+The default runtime now uses the `openai-agents` Python SDK on the `0.10.x` line with `gpt-5.4-2026-03-05` as the research model snapshot. You can still override the model with the `RESEARCH_MODEL` environment variable or per-article config.
+
+We look forward to your contributions!
+
+## File search
 
 In addition to web search results, the agent can be prompted to incorporate material from your collated articles, papers and transcripts:
 
@@ -69,13 +73,17 @@ E.g.
 
 E.g. 
 
-> - Use the file search tool to perform an extensive review of all of the available curated articles, papers and transcripts. 
-> - Use the file citation tool to produce url citations for the files returned by the file search tool.
+```md
+# Gather Information
+- ...
+- Use the file search tool to perform an extensive review of all of the available curated articles, papers and transcripts.
+    
+# Output Format
+- ...
+- For file search results, include a markdown link for every factual claim from a private file. Use the filename_to_link_converter tool to provide the link for each file. Do not include placeholders for file links if the tool doesn't return one. Enclose each file link in parentheses e.g. (markdown_link). Include links for files after any web search links for the same paragraph.
+    
+```
 
-
-The default runtime now uses the `openai-agents` Python SDK on the `0.10.x` line with `gpt-5.4-2026-03-05` as the research model snapshot. You can still override the model with the `RESEARCH_MODEL` environment variable or per-article config.
-
-We look forward to your contributions!
 
 ## Process
 
