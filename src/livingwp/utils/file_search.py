@@ -63,15 +63,14 @@ async def convert_file_name_to_link(
 
     if not file_details:
         logger.warning(f"No link found for {filename}")
-        #Returning null as a string, rather than an empty string or None, resulted in more consistent behaviour
+        # Returning null as a string, rather than an empty string or None, resulted in more consistent behaviour
         return "null"
 
-    result = f"[{file_details.get('title')}]({file_details.get('url')})"        
+    result = f"[{file_details.get('title')}]({file_details.get('url')})"
 
     logger.info(f"Returning link: {result}")
 
     return result
-    
 
 
 def get_file_link_tool(filename_urls: dict[str, str]):
