@@ -81,6 +81,7 @@ E.g.
 # Output Format
 - ...
 - For file search results, include a markdown link for every factual claim from a private file. Use the filename_to_link_converter tool to provide the link for each file. Do not include placeholders for file links if the tool doesn't return one. Enclose each file link in parentheses e.g. (markdown_link). Include links for files after any web search links for the same paragraph.
+- Ensure all markdown hyperlinks in the final output are correctly formatted
     
 ```
 
