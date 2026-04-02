@@ -1,0 +1,139 @@
+---
+article: false
+article_history: true
+article_kind: industry
+article_latest: false
+article_series: creative_industries
+article_summary: 'This whitepaper tracks AI adoption across Aotearoa New Zealand’s
+  creative industries, with the strongest current public evidence coming from screen,
+  journalism/publishing, advertising/marketing, music, and adjacent digital creative
+  practice. The picture is no longer one of pure experimentation: by 2025, AI had
+  become…'
+article_updated_at: '2026-03-09T19:01:37+13:00'
+article_version: true
+date: '2026-03-09T19:01:37+13:00'
+description: This whitepaper tracks AI adoption across Aotearoa New Zealand’s creative
+  industries, with the strongest current public evidence coming from screen,…
+last_modified_at: '2026-03-09T19:01:37+13:00'
+layout: article
+permalink: /whitepaper/creative_industries/2026-03-09-190137/
+title: AI in Creative Industries
+---
+
+# AI in Creative Industries in Aotearoa New Zealand: A Living Whitepaper  
+**Updated: March 9, 2026**
+
+## Introduction
+
+This whitepaper tracks AI adoption across Aotearoa New Zealand’s creative industries, with the strongest current public evidence coming from screen, journalism/publishing, advertising/marketing, music, and adjacent digital creative practice. The picture is no longer one of pure experimentation: by 2025, AI had become a live operational, commercial, and policy issue for the sector, while government strategy documents began explicitly addressing AI’s role in creative and cultural development. ([aucklandeconomicdevelopment.com](https://aucklandeconomicdevelopment.com/te-puna-creative/news/ai-and-creativity-converge-te-puna-creative-hub))
+
+## Executive Snapshot
+
+- **AI adoption in New Zealand’s creative industries is now real, visible, and unevenly distributed.** The most mature public examples are in screen production, journalism/publishing, and advertising; music is highly engaged but more through rights advocacy and creator protection than through celebratory case studies. ([rnz.co.nz](https://www.rnz.co.nz/news/media-technology/570668/nz-film-tv-industry-weighs-pros-and-cons-of-artificial-intelligence))
+- **The dominant New Zealand framing is “AI as augmentation, not replacement.”** That shows up repeatedly in the NZ Film Commission’s principles, RNZ’s AI principles, TVNZ’s generative AI statement, and local newsroom and VFX case studies. ([nzfilm.co.nz](https://www.nzfilm.co.nz/news/people-first-navigating-ai-our-screen-sector))
+- **Policy has started to catch up.** New Zealand released its first national AI strategy on **July 8, 2025**, and the government’s creative-sector strategy *Amplify* includes a dedicated action to support uptake of new technology, including the responsible use and development of AI in the creative and cultural sectors. ([rnz.co.nz](https://www.rnz.co.nz/news/top/566320/government-unveils-its-first-ever-national-artificial-intelligence-strategy?utm_source=openai))
+- **The central tensions are now clear:** productivity gains versus job compression; creative enablement versus IP leakage; accessibility and discoverability versus misinformation and deepfakes; and innovation versus cultural integrity, including Te Tiriti, Māori cultural rights, and data sovereignty concerns. ([rnz.co.nz](https://www.rnz.co.nz/news/media-technology/570668/nz-film-tv-industry-weighs-pros-and-cons-of-artificial-intelligence))
+
+## Current News and Developments
+
+### National context
+
+- New Zealand’s broader AI environment accelerated during 2025. The government’s AI strategy says a 2024 Datacom survey found **67% of larger New Zealand businesses** were using some form of AI, up from **48% in 2023**, while also noting that **68% of SMEs** had no plans to evaluate or invest in AI. Datacom’s 2025 State of AI research then reported **87% of New Zealand organisations** using some form of AI. ([beehive.govt.nz](https://www.beehive.govt.nz/sites/default/files/2025-07/New%20Zealand%27s%20AI%20Strategy%20-%20Investing%20with%20confidence.pdf))
+- On **July 18, 2025**, Business.govt.nz published new responsible AI guidance for businesses alongside the national strategy, signalling a policy preference for adoption with voluntary guardrails rather than heavy ex ante regulation. ([business.govt.nz](https://www.business.govt.nz/news/new-guidance-to-help-you-use-ai-responsibly))
+- In parallel, the government’s creative-sector strategy *Amplify* states that AI support work should address concerns around **misinformation, workforce impacts, privacy, IP, and data sovereignty**. ([mch.govt.nz](https://www.mch.govt.nz/sites/default/files/2025-08/Amplify_2025-2030_Implementation_Plan.pdf))
+
+### Creative industry ecosystem activity
+
+- The **AI in Creative Industries Summit 2025**, held on **May 19–20, 2025** in Auckland and Wellington, shows AI has moved into mainstream sector convening. The event was presented as the summit’s second year, spanned film, VFX, gaming, design, publishing and audience engagement, and was run by AI Forum NZ with WeCreate. ([aiforum.org.nz](https://aiforum.org.nz/event/ai-in-creative-industries-summit/?utm_source=openai))
+- AI Forum NZ described the 2025 summit as a major success, with **50 speakers** and a parallel **1 Minute AI Film Festival** that drew **187 entries**, indicating a growing experimentation culture around AI-native creative work. ([aiforum.org.nz](https://aiforum.org.nz/2025/05/30/creative-industries-summit-success-ai-hackathon-festival-2025-launch-plus-film-festival-winners-announced/))
+
+## Sector-by-Sector Overview
+
+### 1) Screen, Film, TV and VFX
+
+- The strongest formal governance move came from the **New Zealand Film Commission (NZFC)**, which released AI Guiding Principles in **March 2025**. NZFC said the principles are grounded in **human creativity, cultural integrity, and ethical responsibility**, and that they are being operationalised through practical steps such as adding AI-related questions to funding applications. ([nzfilm.co.nz](https://www.nzfilm.co.nz/news/people-first-navigating-ai-our-screen-sector))
+- NZFC’s position is explicitly values-led: AI should support productivity, but also protect creators’ rights, honour **Te Tiriti o Waitangi**, and respect Indigenous Cultural and Intellectual Property. ([nzfilm.co.nz](https://www.nzfilm.co.nz/news/people-first-navigating-ai-our-screen-sector))
+- The **New Zealand Writers Guild (NZWG)** launched its **AI Advice: Handbook for Screenwriters** alongside NZFC’s principles, and by late 2025 was redrafting the guide, showing how quickly policy and professional practice are evolving. ([nzfilm.co.nz](https://www.nzfilm.co.nz/news/people-first-navigating-ai-our-screen-sector))
+- Public case studies show actual workflow use. In an **RNZ** report on **August 21, 2025**, Auckland VFX company **Fathom VFX** said AI can dramatically cut tedious post-production tasks; one example described rain-removal work on a five-second clip that would normally take at least a week frame-by-frame. ([rnz.co.nz](https://www.rnz.co.nz/news/media-technology/570668/nz-film-tv-industry-weighs-pros-and-cons-of-artificial-intelligence))
+- That same RNZ report captures the sector’s dual reality: AI is improving competitiveness and making lower-budget work more possible, but also raising credible fears about smaller teams, fewer entry-level pathways, and script/IP risk. ([rnz.co.nz](https://www.rnz.co.nz/news/media-technology/570668/nz-film-tv-industry-weighs-pros-and-cons-of-artificial-intelligence))
+
+**Assessment:** Screen is currently New Zealand’s most visibly structured creative-AI segment: policy is more developed, practical use is public, and tensions are openly debated. ([nzfilm.co.nz](https://www.nzfilm.co.nz/news/people-first-navigating-ai-our-screen-sector))
+
+### 2) Journalism and Publishing
+
+- AI adoption in news media has become operational rather than hypothetical. The **AUT Journalism, Media and Democracy (JMAD)** baseline report published in **2026** says AI tools are already used in day-to-day New Zealand news and content production, with **Stuff** and **NZME** experimenting more widely than **RNZ** and **TVNZ**. ([jmadresearch.com](https://www.jmadresearch.com/_files/ugd/a95e86_0f7588b42f2b46c5a4bb8e0f76dfbd37.pdf))
+- JMAD also found that all major newsrooms had published AI principles or ethics statements, but transparency remains unsettled, with editors not consistently disclosing how AI is used in production workflows. ([jmadresearch.com](https://www.jmadresearch.com/_files/ugd/a95e86_0f7588b42f2b46c5a4bb8e0f76dfbd37.pdf))
+- The clearest New Zealand newsroom case study is **Stuff’s Democracy.AI**. Stuff’s Masthead Publishing division built the tool to scan council material, surface relevant issues, and draft article elements for journalists. In a two-month **Waikato Times** pilot covering **11 local councils**, Stuff said digital subscriptions more than doubled and subscriber net promoter score rose **19 points**. ([iab.org.nz](https://www.iab.org.nz/members-hub/how-stuff-uses-ai-to-power-local-journalism?utm_source=openai))
+- Public broadcasters have taken a more conservative stance. **RNZ’s AI Principles** say RNZ will generally not knowingly publish or broadcast work created by generative AI. **TVNZ/1News** says AI should only ever be a tool for journalists, with human checking required and disclosure if significant AI-generated elements are used. ([rnz.co.nz](https://www.rnz.co.nz/assets/cms_uploads/000/000/490/AI_Principles.pdf))
+- Audience trust is a major constraint. JMAD reports that only about **8%** of New Zealanders are comfortable with news produced mostly by AI with some human oversight, while roughly **26%** are comfortable with journalism produced mainly by humans with AI assistance. ([jmadresearch.com](https://www.jmadresearch.com/_files/ugd/a95e86_0f7588b42f2b46c5a4bb8e0f76dfbd37.pdf))
+
+**Assessment:** Publishing is one of the most advanced local AI-use cases, but also one of the clearest examples of “high utility, low trust.” ([iab.org.nz](https://www.iab.org.nz/members-hub/how-stuff-uses-ai-to-power-local-journalism?utm_source=openai))
+
+### 3) Advertising, Marketing and Commercial Creative
+
+- Advertising and marketing appear to be among the fastest-normalising AI users in the creative economy. A 2025 New Zealand in-house agency report cited by **Campaign Brief NZ** found **76% of New Zealand marketers** were already using or planning to implement AI tools, with **ChatGPT** the most-used example among respondents. ([campaignbrief.co.nz](https://campaignbrief.co.nz/2025/02/05/in-house-agency-council-launches-in-nz-research-shows-71-of-brands-embrace-in-housing/))
+- Industry capability-building is now mainstream. **IAB New Zealand’s** “AI & The Future of Marketing” event in **June 2025** was sold out and drew **over 100 industry professionals**, with discussion spanning automation, analytics, creativity, customer experience, and local implementation. ([iab.org.nz](https://www.iab.org.nz/news-resources/ai-the-future-of-marketing-event-wrap-1))
+- Agency-side investment is becoming more formal. **TBWA\New Zealand** launched **TBWA\i** in **June 2025** as a dedicated practice intended to embed AI across strategy, creative, production and client work rather than isolate it in a lab model. ([campaignbrief.co.nz](https://campaignbrief.co.nz/2025/06/11/tbwanew-zealand-launches-tbwai-a-new-practice-bringing-people-product-and-process-together-to-unlock-ais-potential-for-brands/))
+- Local research also suggests the disruption is structural, not just tactical. An **AUT** journal article published in **October 2024**, based on five focus groups in Aotearoa advertising agencies, found practitioners expected AI-driven speed to increase client pressure, enable some clients to bypass agencies, and create tension over aesthetic judgment and creative value. ([openrepository.aut.ac.nz](https://openrepository.aut.ac.nz/items/33d32413-9a2a-48d6-bd36-4ed055ed0d68))
+
+**Assessment:** In advertising, AI is moving fastest where creative work is already data-rich, iterative, and commercially measurable. The open question is not whether agencies will use AI, but how much value they can keep when clients gain access to the same tools. ([campaignbrief.co.nz](https://campaignbrief.co.nz/2025/02/05/in-house-agency-council-launches-in-nz-research-shows-71-of-brands-embrace-in-housing/))
+
+### 4) Music
+
+- Music is one of the most mobilised sectors on AI, but local momentum is being driven more by **rights, transparency and remuneration** than by celebratory adoption narratives. In **December 2024**, Recorded Music NZ and APRA AMCOS jointly called on government to require AI companies to disclose copyrighted music used in training models. ([nzmusic.org.nz](https://nzmusic.org.nz/music-industry-news/recorded-music-nz-and-apra-amcos-share-joint-call-to-government-on-requirements-for-ai-companies/))
+- The underlying adoption signal is still significant. APRA AMCOS’ survey of more than **4,200** members across Australia and New Zealand found **38%** had already used AI in their work connected to music and creation, and **54%** agreed AI can support the human creative process. ([nzmusic.org.nz](https://nzmusic.org.nz/music-industry-news/recorded-music-nz-and-apra-amcos-share-joint-call-to-government-on-requirements-for-ai-companies/))
+- But the concern signal is stronger. The same research found **82%** worried AI could stop creators making a living, while **97%** wanted more policymaker attention to AI and copyright; APRA AMCOS later summarised creator demands as **96%** wanting credit and transparency, **95%** consent, and **93%** remuneration. ([apraamcos.co.nz](https://www.apraamcos.co.nz/about/supporting-the-industry/research-papers/aiandmusic))
+- The government’s own long-term cultural briefing adds another important indicator: it says research on AI and music in Australia and New Zealand found **50% of New Zealand music companies** had already implemented AI technologies. ([mch.govt.nz](https://www.mch.govt.nz/sites/default/files/2025-06/Long-term-Insights-Briefing-2025.pdf))
+- Māori cultural integrity is a specific issue. APRA AMCOS notes that, in Aotearoa, Māori member feedback points to particular challenges in protecting Māori cultural integrity in the AI era. ([apraamcos.co.nz](https://www.apraamcos.co.nz/about/supporting-the-industry/research-papers/aiandmusic))
+
+**Assessment:** Music may be the sector where AI’s commercial logic is clearest and its legitimacy crisis sharpest. Adoption exists, but so does organised resistance to unlicensed training and cultural extraction. ([nzmusic.org.nz](https://nzmusic.org.nz/music-industry-news/recorded-music-nz-and-apra-amcos-share-joint-call-to-government-on-requirements-for-ai-companies/))
+
+### 5) Games and Interactive Media
+
+- Publicly documented New Zealand AI case studies in games are still thinner than in screen, publishing, and advertising. Even so, the sector matters because it is one of the country’s fastest-growing creative exports, and government cultural analysis explicitly identifies video games as an early technology-adopting creative field. ([nzgda.com](https://nzgda.com/news/nz-gamedev-industry-booms/))
+- The **New Zealand Game Developers Association** said the local games industry grew **26% in 2024**, far above the global average cited in the same report, and is pushing toward a **$1 billion export** ambition. ([nzgda.com](https://nzgda.com/news/nz-gamedev-industry-booms/))
+- AI Forum’s 2025 creative industries summit also included **gaming** among the core domains being explored for AI-enabled content creation and audience engagement. ([aiforum.org.nz](https://aiforum.org.nz/event/ai-in-creative-industries-summit/?utm_source=openai))
+
+**Assessment:** Games look like a likely next-wave AI growth area in New Zealand, but public evidence is still stronger on sector growth than on named local AI deployments. That is an inference from the current source base, not a claim that adoption is absent. ([nzgda.com](https://nzgda.com/news/nz-gamedev-industry-booms/))
+
+## Research Overview
+
+- The Ministry for Culture and Heritage’s **Long-term Insights Briefing 2025** argues that digital technology, including AI, will continue to shape New Zealand’s future stories, and explicitly links AI to music, screen, and games. ([mch.govt.nz](https://www.mch.govt.nz/sites/default/files/2025-06/Long-term-Insights-Briefing-2025.pdf))
+- Across the wider economy, the **AI Forum NZ** productivity report for **September 2024** found **67%** of surveyed organisations were using AI, **96%** reported improved worker efficiency, and only **8%** reported employee replacement, generally at low levels. While this is not creative-sector-specific, it is consistent with the way local creative case studies frame AI as workflow acceleration rather than wholesale automation. ([nztech.org.nz](https://nztech.org.nz/wp-content/uploads/sites/8/2024/09/AI-Business-Productivity-Report_September-2024_final.pdf?utm_source=openai))
+- A reasonable synthesis is that New Zealand creative industries are following the broader national pattern: **high experimentation, patchy depth, and stronger uptake in larger or digitally mature organisations**. That is an inference based on economy-wide adoption data, the SME gap, and the concentration of public case studies in established media and agency businesses. ([beehive.govt.nz](https://www.beehive.govt.nz/sites/default/files/2025-07/New%20Zealand%27s%20AI%20Strategy%20-%20Investing%20with%20confidence.pdf))
+
+## Policy, Governance and Risk Environment
+
+- New Zealand’s formal policy environment is still developing. The national AI strategy released on **July 8, 2025** was welcomed by business groups, but public debate quickly focused on whether it is too light-touch on ethics and harm. ([rnz.co.nz](https://www.rnz.co.nz/news/top/566320/government-unveils-its-first-ever-national-artificial-intelligence-strategy?utm_source=openai))
+- For the creative industries specifically, *Amplify* is the key government signal. Its AI action commits MBIE and MCH to consider how government can support sustainable AI development in creative and cultural sectors between **2025 and 2028**, while explicitly naming misinformation, workforce, privacy, IP, and data sovereignty as issues to be managed. ([mch.govt.nz](https://www.mch.govt.nz/sites/default/files/2025-08/Amplify_2025-2030_Implementation_Plan.pdf))
+- New Zealand’s content-law environment is also becoming more relevant to creatives. The **Classification Office** states that AI-generated content is treated the same as any other content under New Zealand law: what matters is what the content shows, not how it was made. The Office specifically notes relevance to advertising, gaming and entertainment. ([classificationoffice.govt.nz](https://www.classificationoffice.govt.nz/classification-info/what-we-classify/ai-generated-content/))
+- At the harm frontier, recent reporting shows growing pressure for stronger AI-era privacy and safety rules around deepfakes and synthetic sexual imagery, underscoring the reputational and legal exposure that creative tools now carry. ([rnz.co.nz](https://www.rnz.co.nz/news/national/583838/we-can-t-rely-on-goodwill-nz-lags-behind-on-battling-ai-creation-of-sexual-images))
+
+## Key Trends
+
+### Trend 1: Human-centred AI is becoming the default local position
+New Zealand’s creative institutions are not rejecting AI outright; they are trying to govern it around human authorship, oversight, transparency, cultural respect, and trust. ([nzfilm.co.nz](https://www.nzfilm.co.nz/news/people-first-navigating-ai-our-screen-sector))
+
+### Trend 2: Workflow AI is advancing faster than fully synthetic content
+The most credible local case studies are about transcription, summarisation, document analysis, VFX clean-up, ideation, and production acceleration, not about replacing end-to-end creative teams. ([iab.org.nz](https://www.iab.org.nz/members-hub/how-stuff-uses-ai-to-power-local-journalism?utm_source=openai))
+
+### Trend 3: Rights and provenance are now strategic issues
+Music and screen bodies are especially focused on consent, copyright, compensation, and the origin of training data. This is no longer a niche legal concern; it is central to sector strategy. ([nzmusic.org.nz](https://nzmusic.org.nz/music-industry-news/recorded-music-nz-and-apra-amcos-share-joint-call-to-government-on-requirements-for-ai-companies/))
+
+### Trend 4: Public trust remains a limiting factor
+Creative organisations can gain efficiency from AI while still losing trust if provenance, disclosure, or editorial standards are unclear. The journalism evidence is the clearest warning sign. ([jmadresearch.com](https://www.jmadresearch.com/_files/ugd/a95e86_0f7588b42f2b46c5a4bb8e0f76dfbd37.pdf))
+
+### Trend 5: Māori cultural integrity and data sovereignty will shape the next phase
+In Aotearoa, AI adoption is increasingly being evaluated not only through productivity, but through Te Tiriti, Indigenous Cultural and Intellectual Property, and Māori data sovereignty lenses. ([nzfilm.co.nz](https://www.nzfilm.co.nz/news/people-first-navigating-ai-our-screen-sector))
+
+## Conclusion
+
+AI adoption in Aotearoa New Zealand’s creative industries is now clearly substantive rather than speculative. By **2025**, the sector had real operating examples, dedicated summits, newsroom tools, VFX workflow use, agency restructuring, creator-rights lobbying, and explicit government strategy language. ([aiforum.org.nz](https://aiforum.org.nz/2025/05/30/creative-industries-summit-success-ai-hackathon-festival-2025-launch-plus-film-festival-winners-announced/))
+
+The sector’s current state can be summarised simply:
+
+- **Adoption is real.**
+- **Governance is catching up.**
+- **Trust, rights, and cultural integrity are the decisive battlegrounds.** ([rnz.co.nz](https://www.rnz.co.nz/news/top/566320/government-unveils-its-first-ever-national-artificial-intelligence-strategy?utm_source=openai))
+
+The near-term outlook is that New Zealand’s creative industries will continue adopting AI where it reduces repetitive work, improves speed, or expands what smaller teams can produce. But the organisations most likely to lead sustainably will be the ones that combine experimentation with clear disclosure, strong rights practices, and a distinctly Aotearoa approach to culture, community, and human creativity. ([rnz.co.nz](https://www.rnz.co.nz/news/media-technology/570668/nz-film-tv-industry-weighs-pros-and-cons-of-artificial-intelligence))
