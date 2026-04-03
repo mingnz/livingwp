@@ -40,11 +40,51 @@ The settings for each generated article are defined in [`src/livingwp/config/ind
 - Add a new industry article. A new page will be created and added to the site the next time the update process runs.
 - Configure special non-industry articles such as the `nz` monthly national snapshot.
 - Specify which OpenAI model to use for an article.
-- Add a new instructions file to [`src/livingwp/prompts/`](https://github.com/mingnz/livingwp/blob/main/src/livingwp/prompts/) and use it to prompt the research agent for a specific article or industry
+- Add a new instructions file to [`src/livingwp/prompts/`](https://github.com/mingnz/livingwp/blob/main/src/livingwp/prompts/) and use it to prompt the research agent for a specific article or industry.
 
 The default runtime now uses the `openai-agents` Python SDK on the `0.10.x` line with `gpt-5.4-2026-03-05` as the research model snapshot. You can still override the model with the `RESEARCH_MODEL` environment variable or per-article config.
 
 We look forward to your contributions!
+
+## File search
+
+In addition to web search results, the agent can be prompted to incorporate material from your collated articles, papers and transcripts:
+
+**Update the article config** 
+
+- Create the vector store in [platform.openai.com](https://platform.openai.com/storage/vector_stores/). 
+- Add a `file_store_name` key for the article in [`src/livingwp/config/industries.json`](https://github.com/mingnz/livingwp/blob/main/src/livingwp/config/industries.json).
+- Where they're available, you can also provide public URLs for any files in the store by adding `filename_urls` to the configuration. This will allow the agent to include citation links for any referenced files.
+
+E.g.
+
+```json
+   "file_store_name": "finance_files",
+   "filename_urls": {        
+        "2504.20086v1.pdf": {"title":"Understanding and Mitigating Risks of Generative AI", "url": "https://arxiv.org/pdf/2504.20086v1"},
+        "BloombergGPT.pdf": {"title":"BloombergGPT", "url": "https://arxiv.org/pdf/2303.17564"},
+        "Large Language Models in Finance.pdf": {"title":"Large Language Models in Finance", "url": "https://arxiv.org/pdf/2311.10723"}
+    }
+```
+
+**Update the instructions:** 
+
+- The configuration changes will give the agent access to the required tools but you'll also need to provide specific instructions on how to use them
+
+E.g. 
+
+```md
+# Gather Information
+- ...
+- Use the file search tool to perform an extensive review of all of the available curated articles, papers and transcripts.
+    
+# Output Format
+- ...
+- For file search results, include a markdown link for every factual claim from a private file. Use the filename_to_link_converter tool to provide the link for each file. Do not include placeholders for file links if the tool doesn't return one. Enclose each file link in parentheses e.g. (markdown_link). Include links for files after any web search links for the same paragraph.
+- Ensure all markdown hyperlinks in the final output are correctly formatted
+    
+```
+
 
 ## Process
 

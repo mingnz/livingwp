@@ -1,5 +1,5 @@
 from livingwp.utils.logging import logger
-from agents import Agent, ModelSettings, Runner, WebSearchTool
+from agents import Agent, ModelSettings, Runner, WebSearchTool, ToolCallItem
 from openai.types.shared.reasoning import Reasoning
 from os import environ
 
@@ -19,6 +19,10 @@ from livingwp.utils.usage import (
     write_usage_comment_if_configured,
     write_usage_report_if_configured,
 )
+from livingwp.utils.file_search import (
+    get_file_search_tool,
+    get_file_link_tool,
+)
 
 DEFAULT_MODEL_NAME = environ.get("RESEARCH_MODEL", "gpt-5.4-2026-03-05")
 # Keep GPT-5 behavior explicit so output shape stays stable across SDK upgrades.
@@ -35,6 +39,18 @@ STREAMING_ENABLED = environ.get("STREAMING_ENABLED", "True") == "True"
 def get_research_agent(industry_name, config=None):
     """Create agent using config or defaults"""
     config = config or {}
+    tools_to_use = [WebSearchTool()]
+    # If a file store name is provided, add the file search tool
+    file_store_name = config.get("file_store_name", None)
+    if file_store_name:
+        file_search_tool = get_file_search_tool(file_store_name)
+        if file_search_tool:
+            tools_to_use.append(file_search_tool)
+            filename_urls = config.get("filename_urls", {})
+            if filename_urls:
+                file_link_tool = get_file_link_tool(filename_urls)
+                if file_link_tool:
+                    tools_to_use.append(file_link_tool)
     return Agent(
         name=f"ResearchAgent-{industry_name}",
         model=config.get("research_model", DEFAULT_MODEL_NAME),
@@ -42,7 +58,7 @@ def get_research_agent(industry_name, config=None):
         instructions=load_instruction(
             config.get("instructions_filename", DEFAULT_INSTRUCTIONS_FILENAME)
         ),
-        tools=[WebSearchTool()],
+        tools=tools_to_use,
     )
 
 
@@ -70,7 +86,9 @@ def excerpt_history_body(body: str, max_chars: int = 2500) -> str:
     return "\n\n".join(paragraphs).strip()
 
 
-def format_history_context(industry: str, history_entries: list[dict[str, object]]) -> str:
+def format_history_context(
+    industry: str, history_entries: list[dict[str, object]]
+) -> str:
     sections: list[str] = []
     default_title = industry.replace("_", " ").title()
 
@@ -152,6 +170,13 @@ async def perform_research(topic, research_agent, initial_input):
                     logger.info(
                         f"[Web search] query={getattr(action, 'query', None)!r}"
                     )
+            elif (
+                hasattr(ev, "item")
+                and isinstance(ev.item, ToolCallItem)
+                and ev.item.raw_item.type == "file_search_call"
+            ):
+                for q in ev.item.raw_item.queries:
+                    logger.info(f"[File search] query={q}")
         # streaming is complete → final_output is now populated
         return result_stream
     else:
@@ -201,9 +226,7 @@ async def update_articles(article_filter: str | None = None) -> dict[str, object
     article_reports: list[dict[str, object]] = []
     for industry_name in industries:
         article_config = industry_config.get(industry_name, {})
-        research_agent = get_research_agent(
-            industry_name, article_config
-        )
+        research_agent = get_research_agent(industry_name, article_config)
         existing_article = load_industry_article(industry_name)
         text = existing_article or get_article_stub(industry_name, article_config)
         front_matter, body = parse_markdown(text)
