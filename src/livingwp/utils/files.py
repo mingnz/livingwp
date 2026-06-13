@@ -21,11 +21,11 @@ SITE_TIMEZONE = ZoneInfo("Pacific/Auckland")
 
 
 def load_industry_article(industry: str) -> str | None:
-    """Loads [industry].markdown from the website content folder,
+    """Loads [industry].md from the website content folder,
 
     Returns the file contents or None if the article doesn't exist
     """
-    file_path = Path(SITE_CONTENT_DIR, f"{industry}.markdown")
+    file_path = Path(SITE_CONTENT_DIR, f"{industry}.md")
     if file_path.is_file():
         return file_path.read_text(encoding="utf-8")
     return None
@@ -40,7 +40,7 @@ def load_article_archive_entries(
         return []
 
     entries: list[dict[str, Any]] = []
-    for path in archive_dir.glob("*.markdown"):
+    for path in archive_dir.glob("*.md"):
         metadata, body = parse_markdown(path.read_text(encoding="utf-8"))
         entries.append(
             {
@@ -73,7 +73,7 @@ def save_industry_article(
         article_updated_at=timestamp,
         latest=True,
     )
-    Path(SITE_CONTENT_DIR, f"{industry}.markdown").write_text(normalized, encoding="utf-8")
+    Path(SITE_CONTENT_DIR, f"{industry}.md").write_text(normalized, encoding="utf-8")
 
 
 def archive_industry_article(industry: str, article: str) -> Path:
@@ -84,7 +84,7 @@ def archive_industry_article(industry: str, article: str) -> Path:
         timestamp = current_article_timestamp()
 
     archive_slug = build_archive_slug(industry, timestamp)
-    archive_path = SITE_ARCHIVE_DIR / industry / f"{archive_slug}.markdown"
+    archive_path = SITE_ARCHIVE_DIR / industry / f"{archive_slug}.md"
     archive_path.parent.mkdir(parents=True, exist_ok=True)
     normalized = normalize_article_metadata(
         industry,
@@ -139,7 +139,7 @@ def build_archive_slug(industry: str, timestamp: datetime) -> str:
     base_slug = timestamp.strftime("%Y-%m-%d-%H%M%S")
     candidate = base_slug
     suffix = 1
-    while (SITE_ARCHIVE_DIR / industry / f"{candidate}.markdown").exists():
+    while (SITE_ARCHIVE_DIR / industry / f"{candidate}.md").exists():
         suffix += 1
         candidate = f"{base_slug}-{suffix}"
     return candidate

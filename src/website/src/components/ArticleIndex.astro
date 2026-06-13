@@ -1,0 +1,37 @@
+---
+import { getIndustryReports, formatDateShort } from '../lib/articles';
+
+const reports = await getIndustryReports();
+---
+
+<ol class="border-rule divide-rule divide-y border-y">
+  {
+    reports.map((report, i) => (
+      <li>
+        <a
+          href={report.data.permalink}
+          class="group hover:bg-cream grid grid-cols-[2.5rem_1fr] items-baseline gap-x-4 px-2 py-4 transition-colors sm:grid-cols-[3.5rem_1fr_auto] sm:px-4"
+        >
+          <span class="font-mono text-clay text-[0.72rem] tracking-wider">
+            {String(i + 1).padStart(2, '0')}
+          </span>
+          <span class="font-display group-hover:text-pounamu-deep text-lg font-medium tracking-tight transition-colors sm:text-xl">
+            {report.data.title}
+            <span
+              aria-hidden="true"
+              class="ml-2 inline-block opacity-0 transition-all duration-200 group-hover:translate-x-1 group-hover:opacity-100"
+            >
+              →
+            </span>
+          </span>
+          <span class="font-mono text-ink-muted col-start-2 text-[0.7rem] tracking-wider uppercase sm:col-start-3">
+            Updated{' '}
+            <time datetime={report.data.article_updated_at.toISOString()}>
+              {formatDateShort(report.data.article_updated_at)}
+            </time>
+          </span>
+        </a>
+      </li>
+    ))
+  }
+</ol>

@@ -10,7 +10,7 @@ parts:
 
 - **`src/livingwp`** – the Python code for an LLM agent that gathers research and
   writes updates.
-- **`src/website`** – a Jekyll site that is automatically populated with those
+- **`src/website`** – an Astro site that is automatically populated with those
   updates and served on GitHub Pages.
 
 ![system diagram](docs/assets/system.excalidraw.png)
@@ -119,7 +119,7 @@ flowchart TD
 ### Requirements
 
 - [uv](https://github.com/astral-sh/uv) for Python dependencies
-- Ruby and [Bundler](https://bundler.io) for running the website locally
+- [Node.js](https://nodejs.org) 22+ for running the website locally
 
 ### Running the Agent
 
@@ -162,16 +162,16 @@ uv run livingwp finance,healthcare
    cd src/website
    ```
 
-2. Install Ruby gems:
+2. Install dependencies:
 
    ```sh
-   bundle install
+   npm install
    ```
 
 3. Serve the site locally:
 
    ```sh
-   bundle exec jekyll serve
+   npm run dev
    ```
 
-The site will be available at `http://localhost:4000` by default.
+The site will be available at `http://localhost:4321` by default.
