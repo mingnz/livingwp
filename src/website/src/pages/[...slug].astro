@@ -2,6 +2,8 @@
 import { render } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import EditionTimeline from '../components/EditionTimeline.astro';
+import ogImage from '../assets/ainz.jpg';
+import { articleNode } from '../lib/seo';
 import {
   getAllArticles,
   getSeriesHistory,
@@ -28,17 +30,37 @@ const { entry } = Astro.props;
 const { Content } = await render(entry);
 const { data } = entry;
 
+const history = await getSeriesHistory(data.article_series);
 const latest = data.article_latest
   ? undefined
-  : (await getSeriesHistory(data.article_series)).find(
-      (e) => e.data.article_latest,
-    );
+  : history.find((e) => e.data.article_latest);
+
+const description = data.description ?? data.article_summary ?? '';
+const canonical = new URL(entry.data.permalink, Astro.site);
+// First edition in the series = original publication; this edition = modified.
+const firstPublished =
+  history[history.length - 1]?.data.article_updated_at ?? data.article_updated_at;
+
+const articleSchema = articleNode(Astro.site!, {
+  url: canonical,
+  headline: data.title,
+  description,
+  datePublished: firstPublished,
+  dateModified: data.article_updated_at,
+  image: new URL(ogImage.src, Astro.site),
+});
+
+// Clean-markdown view for AI crawlers / "copy as markdown" — latest editions only.
+const markdownUrl = data.article_latest
+  ? `/whitepaper/${data.article_series}.md`
+  : undefined;
 ---
 
 <Base
   title={data.title}
-  description={data.description ?? data.article_summary}
+  description={description}
   noindex={!data.article_latest}
+  jsonLd={[articleSchema]}
 >
   <div
     class="gap-12 py-10 sm:py-14 lg:grid lg:grid-cols-[minmax(0,1fr)_13rem] lg:gap-16"
@@ -93,12 +115,24 @@ const latest = data.article_latest
         <Content />
       </div>
 
-      <a
-        class="font-mono text-ink-muted hover:text-pounamu-deep mt-14 inline-block text-[0.72rem] tracking-[0.14em] uppercase underline decoration-rule underline-offset-4 transition-colors"
-        href="/whitepaper/"
-      >
-        ← Back to all articles
-      </a>
+      <div class="mt-14 flex flex-wrap items-center gap-x-7 gap-y-2">
+        <a
+          class="font-mono text-ink-muted hover:text-pounamu-deep inline-block text-[0.72rem] tracking-[0.14em] uppercase underline decoration-rule underline-offset-4 transition-colors"
+          href="/whitepaper/"
+        >
+          ← Back to all articles
+        </a>
+        {
+          markdownUrl && (
+            <a
+              class="font-mono text-ink-muted hover:text-pounamu-deep inline-block text-[0.72rem] tracking-[0.14em] uppercase underline decoration-rule underline-offset-4 transition-colors"
+              href={markdownUrl}
+            >
+              View as Markdown
+            </a>
+          )
+        }
+      </div>
     </article>
 
     <aside class="reveal reveal-2 border-rule mt-14 border-t pt-8 lg:mt-0 lg:border-t-0 lg:pt-0">
