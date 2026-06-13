@@ -1,0 +1,330 @@
+---
+// A native, themed rendering of the publishing pipeline — replaces the old
+// static Excalidraw export. Connectors animate a subtle "data flow"; hovering
+// or focusing a node updates the caption below. Fully legible with no motion
+// and no JS (the script only enhances the caption).
+
+interface Node {
+  id: string;
+  /** rect: x, y, width, height */
+  rect: [number, number, number, number];
+  title: string;
+  sub?: string;
+  desc: string;
+  planned?: boolean;
+  hub?: boolean;
+}
+
+const nodes: Node[] = [
+  {
+    id: 'trigger',
+    rect: [16, 168, 176, 84],
+    title: 'Pipeline',
+    sub: 'scheduled · manual',
+    desc: 'A GitHub Actions workflow starts a run — on a schedule or on demand.',
+  },
+  {
+    id: 'agent',
+    rect: [296, 142, 300, 136],
+    title: 'Research Agent',
+    sub: 'gpt-5.4 · Vercel AI SDK',
+    desc: 'The agent reads the current report, then researches the latest developments for that sector and writes a fresh version.',
+    hub: true,
+  },
+  {
+    id: 'search',
+    rect: [330, 20, 232, 72],
+    title: 'Web search',
+    sub: 'live sources, cited',
+    desc: 'The agent runs live web searches and cites primary sources inline in every report.',
+  },
+  {
+    id: 'drive',
+    rect: [322, 330, 248, 64],
+    title: 'Google Drive',
+    sub: 'via MCP · planned',
+    desc: 'Planned: pull curated source material from Google Drive through an MCP connector.',
+    planned: true,
+  },
+  {
+    id: 'markdown',
+    rect: [664, 166, 92, 92],
+    title: 'Markdown',
+    sub: 'versioned',
+    desc: 'Each report is a Markdown file. The previous version is archived, the new one saved — so history is preserved.',
+  },
+  {
+    id: 'site',
+    rect: [800, 170, 84, 84],
+    title: 'Website',
+    sub: 'GitHub Pages',
+    desc: 'A pull request is opened for review; once merged, the site rebuilds and deploys automatically.',
+  },
+];
+
+interface Edge {
+  d: string;
+  label?: string;
+  lx?: number;
+  ly?: number;
+  planned?: boolean;
+}
+
+const edges: Edge[] = [
+  { d: 'M192,210 H296', label: 'trigger', lx: 244, ly: 200 },
+  { d: 'M446,142 V92', label: 'search', lx: 446, ly: 120 },
+  { d: 'M446,278 V330', label: 'planned', lx: 446, ly: 308, planned: true },
+  { d: 'M596,232 H664', label: 'writes', lx: 630, ly: 222 },
+  // Markdown reads the previous version back into the agent (loop over the top).
+  { d: 'M710,166 C710,108 560,112 560,142', label: 'reads previous', lx: 636, ly: 100 },
+  { d: 'M756,212 H800', label: 'build', lx: 778, ly: 202 },
+];
+
+const titleId = 'system-diagram-title';
+const descId = 'system-diagram-desc';
+---
+
+<figure class="reveal reveal-2 mx-auto mt-10 max-w-4xl">
+  <div class="diagram-scroll border-rule bg-cream border">
+    <svg
+      class="system-diagram"
+      viewBox="0 0 900 416"
+      role="img"
+      aria-labelledby={`${titleId} ${descId}`}
+    >
+      <title id={titleId}>How the Living Whitepaper is published</title>
+      <desc id={descId}>
+        A GitHub Actions pipeline runs the research agent, which uses live web
+        search (and, planned, Google Drive via MCP) to rewrite each report. The
+        agent reads the previous Markdown version and writes a new one, which is
+        reviewed and then built and deployed to the website.
+      </desc>
+
+      <defs>
+        <marker
+          id="diag-arrow"
+          viewBox="0 0 10 10"
+          refX="8"
+          refY="5"
+          markerWidth="6"
+          markerHeight="6"
+          orient="auto-start-reverse"
+        >
+          <path d="M0,0 L10,5 L0,10 z" class="arrow-head" />
+        </marker>
+      </defs>
+
+      {/* Connectors (behind the nodes) */}
+      <g class="edges">
+        {
+          edges.map((e) => (
+            <g class:list={['edge', { 'edge--planned': e.planned }]}>
+              <path d={e.d} class="edge-track" />
+              {!e.planned && <path d={e.d} class="edge-flow" marker-end="url(#diag-arrow)" />}
+              {e.planned && <path d={e.d} class="edge-planned" marker-end="url(#diag-arrow)" />}
+              {e.label && (
+                <text x={e.lx} y={e.ly} class="edge-label" text-anchor="middle">
+                  {e.label}
+                </text>
+              )}
+            </g>
+          ))
+        }
+      </g>
+
+      {/* Nodes */}
+      {
+        nodes.map((n) => {
+          const [x, y, w, h] = n.rect;
+          const cx = x + w / 2;
+          return (
+            <g
+              class:list={['node', { 'node--hub': n.hub, 'node--planned': n.planned }]}
+              tabindex="0"
+              role="button"
+              aria-label={`${n.title}. ${n.desc}`}
+              data-desc={n.desc}
+            >
+              <rect x={x} y={y} width={w} height={h} rx="10" class="node-box" />
+              {n.hub && <circle cx={x + 18} cy={y + 18} r="3.5" class="node-pulse" />}
+              <text x={cx} y={y + h / 2 - (n.sub ? 8 : -2)} class="node-title" text-anchor="middle">
+                {n.title}
+              </text>
+              {n.sub && (
+                <text x={cx} y={y + h / 2 + 12} class="node-sub" text-anchor="middle">
+                  {n.sub}
+                </text>
+              )}
+            </g>
+          );
+        })
+      }
+    </svg>
+  </div>
+
+  <figcaption
+    id="diagram-caption"
+    class="text-ink-muted mt-4 min-h-[2.5em] text-[0.95rem] leading-snug"
+    data-default="Hover or focus any step to see what it does. Solid lines carry live data; the dashed line is planned."
+    aria-live="polite"
+  >
+    Hover or focus any step to see what it does. Solid lines carry live data; the
+    dashed line is planned.
+  </figcaption>
+</figure>
+
+<style>
+  .diagram-scroll {
+    padding: 1.5rem 1rem;
+    overflow-x: auto;
+  }
+  .system-diagram {
+    display: block;
+    width: 100%;
+    min-width: 640px;
+    height: auto;
+  }
+
+  /* ── Nodes ── */
+  .node {
+    transform-box: fill-box;
+    transform-origin: center;
+    transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+    cursor: default;
+    outline: none;
+  }
+  .node-box {
+    fill: var(--color-paper);
+    stroke: var(--color-ink);
+    stroke-width: 1.5;
+    transition:
+      stroke 0.2s,
+      stroke-width 0.2s,
+      fill 0.2s;
+  }
+  .node--hub .node-box {
+    fill: var(--color-cream);
+    stroke: var(--color-pounamu-deep);
+    stroke-width: 2;
+  }
+  .node--planned .node-box {
+    stroke: var(--color-ink-muted);
+    stroke-dasharray: 5 4;
+  }
+  .node-title {
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: 560;
+    fill: var(--color-ink);
+    letter-spacing: -0.01em;
+  }
+  .node--hub .node-title {
+    font-size: 21px;
+    fill: var(--color-pounamu-deep);
+  }
+  .node-sub {
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    fill: var(--color-ink-muted);
+  }
+  .node-pulse {
+    fill: var(--color-pounamu);
+    animation: diagram-pulse 2.4s ease-in-out infinite;
+  }
+
+  /* hover / keyboard focus */
+  .node:hover,
+  .node:focus-visible {
+    transform: translateY(-4px);
+  }
+  .node:hover .node-box,
+  .node:focus-visible .node-box {
+    stroke: var(--color-pounamu);
+    stroke-width: 2.5;
+  }
+
+  /* ── Edges ── */
+  .edge-track {
+    fill: none;
+    stroke: var(--color-rule);
+    stroke-width: 5;
+    stroke-linecap: round;
+  }
+  .edge-flow {
+    fill: none;
+    stroke: var(--color-pounamu);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-dasharray: 2 7;
+    animation: diagram-flow 1.1s linear infinite;
+  }
+  .edge-planned {
+    fill: none;
+    stroke: var(--color-ink-muted);
+    stroke-width: 1.5;
+    stroke-dasharray: 6 6;
+    opacity: 0.65;
+  }
+  .arrow-head {
+    fill: var(--color-pounamu);
+  }
+  .edge--planned .arrow-head {
+    fill: var(--color-ink-muted);
+  }
+  .edge-label {
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    fill: var(--color-ink-muted);
+  }
+
+  @keyframes diagram-flow {
+    to {
+      stroke-dashoffset: -18;
+    }
+  }
+  @keyframes diagram-pulse {
+    0%,
+    100% {
+      opacity: 1;
+      r: 3.5;
+    }
+    50% {
+      opacity: 0.35;
+      r: 2.5;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .edge-flow {
+      animation: none;
+      stroke-dasharray: none;
+    }
+    .node-pulse {
+      animation: none;
+    }
+    .node {
+      transition: none;
+    }
+  }
+</style>
+
+<script>
+  const caption = document.getElementById('diagram-caption');
+  if (caption) {
+    const fallback = caption.dataset.default ?? caption.textContent ?? '';
+    const show = (text: string) => (caption.textContent = text);
+    const reset = () => (caption.textContent = fallback);
+    document.querySelectorAll<SVGGElement>('.system-diagram .node').forEach((node) => {
+      const desc = node.dataset.desc;
+      if (!desc) return;
+      node.addEventListener('pointerenter', () => show(desc));
+      node.addEventListener('focus', () => show(desc));
+      node.addEventListener('pointerleave', reset);
+      node.addEventListener('blur', reset);
+    });
+  }
+</script>
