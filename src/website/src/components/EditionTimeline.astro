@@ -19,14 +19,19 @@ const editions = history.map((edition, i) => ({
   <p class="font-mono text-ink-muted text-[0.65rem] tracking-[0.18em] uppercase">
     Edition history
   </p>
-  <ol class="border-rule mt-4 ml-1 max-h-[60vh] space-y-0 overflow-y-auto border-l pr-1">
-    {
-      editions.map(({ edition, number, isCurrent }) => (
-        <li class="relative pb-5 pl-5 last:pb-0">
-          <span
-            aria-hidden="true"
-            class:list={[
-              'absolute top-1.5 -left-[4.5px] size-2 rounded-full',
+  {/* Overflow lives on the wrapper, not the <ol>: overflow-y also clips the
+      x-axis, and the dots/ring straddle the left border (negative offset), so
+      clipping on the <ol> would shear them into crescents. The wrapper's left
+      padding keeps the protruding dots inside the clip region. */}
+  <div class="mt-4 max-h-[60vh] overflow-y-auto pl-3">
+    <ol class="border-rule space-y-0 border-l pr-1">
+      {
+        editions.map(({ edition, number, isCurrent }) => (
+          <li class="relative pb-5 pl-5 last:pb-0">
+            <span
+              aria-hidden="true"
+              class:list={[
+                'absolute top-1.5 -left-[4.5px] size-2 rounded-full',
               isCurrent
                 ? 'bg-pounamu ring-pounamu/25 ring-4'
                 : 'bg-paper border-ink-muted border',
@@ -61,5 +66,6 @@ const editions = history.map((edition, i) => ({
         </li>
       ))
     }
-  </ol>
+    </ol>
+  </div>
 </nav>
