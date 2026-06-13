@@ -35,7 +35,11 @@ const latest = data.article_latest
     );
 ---
 
-<Base title={data.title} description={data.description ?? data.article_summary}>
+<Base
+  title={data.title}
+  description={data.description ?? data.article_summary}
+  noindex={!data.article_latest}
+>
   <div
     class="gap-12 py-10 sm:py-14 lg:grid lg:grid-cols-[minmax(0,1fr)_13rem] lg:gap-16"
   >

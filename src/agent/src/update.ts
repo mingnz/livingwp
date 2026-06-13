@@ -143,52 +143,63 @@ export async function updateArticles(articleFilter?: string): Promise<UsageRepor
 
   const articleReports: ArticleUsageReport[] = [];
   const failures: string[] = [];
+  // Sequential by design: each iteration is a network-heavy LLM + web-search
+  // run, so running them in parallel would multiply provider rate-limit
+  // pressure and interleave the streaming logs. A throw in one industry must
+  // not abort the others or lose the usage report, so each is isolated.
   for (const industryName of industries) {
-    const articleConfig = industryConfig[industryName] ?? {};
-    const { agent, modelName } = await getResearchAgent(industryName, articleConfig);
-    const existingArticle = loadIndustryArticle(industryName);
-    const text = existingArticle ?? getArticleStub(industryName, articleConfig);
-    const [frontMatter, body] = parseMarkdown(text);
-    const topic = String(frontMatter['title'] ?? industryName.replaceAll('-', ' '));
-    const initialInput = await buildResearchInput(
-      industryName,
-      frontMatter,
-      body,
-      articleConfig,
-    );
-    const researchResult = await performResearch(topic, agent, initialInput);
-    articleReports.push(
-      buildArticleUsageReport({
-        industry: industryName,
-        topic,
-        modelName,
-        result: researchResult,
-      }),
-    );
-
-    // Never destroy a good article on a failed/incomplete run. A research run
-    // that returns no usable text (e.g. a dropped connection, a content filter,
-    // or an incomplete response) must leave the existing article and its
-    // archive untouched rather than archiving the good version and overwriting
-    // it with an empty body.
-    const newBody = researchResult.text.trim();
-    if (researchResult.finishReason !== 'stop' || newBody.length < MIN_ARTICLE_BODY_CHARS) {
-      console.error(
-        `Research for ${industryName} produced no usable output ` +
-          `(finishReason=${researchResult.finishReason}, body length=${newBody.length}); ` +
-          'leaving the existing article unchanged.',
+    try {
+      const articleConfig = industryConfig[industryName] ?? {};
+      const { agent, modelName } = await getResearchAgent(industryName, articleConfig);
+      const existingArticle = loadIndustryArticle(industryName);
+      const text = existingArticle ?? getArticleStub(industryName, articleConfig);
+      const [frontMatter, body] = parseMarkdown(text);
+      const topic = String(frontMatter['title'] ?? industryName.replaceAll('-', ' '));
+      const initialInput = await buildResearchInput(
+        industryName,
+        frontMatter,
+        body,
+        articleConfig,
       );
-      failures.push(industryName);
-      continue;
-    }
+      const researchResult = await performResearch(topic, agent, initialInput);
+      articleReports.push(
+        buildArticleUsageReport({
+          industry: industryName,
+          topic,
+          modelName,
+          result: researchResult,
+        }),
+      );
 
-    console.log(`Research result for ${topic}:\n${newBody}\n`);
-    const updated = formatMarkdown(frontMatter, newBody);
-    if (existingArticle) {
-      const archivePath = archiveIndustryArticle(industryName, existingArticle);
-      console.log(`Archived previous version for ${industryName} to ${archivePath}`);
+      // Never destroy a good article on a failed/incomplete run. A research run
+      // that returns no usable text (e.g. a dropped connection, a content
+      // filter, or an incomplete response) must leave the existing article and
+      // its archive untouched rather than archiving the good version and
+      // overwriting it with an empty body.
+      const newBody = researchResult.text.trim();
+      if (researchResult.finishReason !== 'stop' || newBody.length < MIN_ARTICLE_BODY_CHARS) {
+        console.error(
+          `Research for ${industryName} produced no usable output ` +
+            `(finishReason=${researchResult.finishReason}, body length=${newBody.length}); ` +
+            'leaving the existing article unchanged.',
+        );
+        failures.push(industryName);
+        continue;
+      }
+
+      console.log(`Research result for ${topic}:\n${newBody}\n`);
+      const updated = formatMarkdown(frontMatter, newBody);
+      if (existingArticle) {
+        const archivePath = archiveIndustryArticle(industryName, existingArticle);
+        console.log(`Archived previous version for ${industryName} to ${archivePath}`);
+      }
+      saveIndustryArticle(industryName, updated);
+    } catch (error) {
+      // Isolate the failure: record it, keep going, and still emit the usage
+      // report below so accounting for completed industries isn't lost.
+      console.error(`Research for ${industryName} threw: ${error}`);
+      failures.push(industryName);
     }
-    saveIndustryArticle(industryName, updated);
   }
 
   const usageReport = buildUsageReport({

@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "typecheck": "astro check"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.12",
@@ -19,6 +20,11 @@
     "@tailwindcss/vite": "^4.1.10",
     "astro": "^5.9.0",
     "sharp": "^0.34.2",
-    "tailwindcss": "^4.1.10"
+    "tailwindcss": "^4.1.10",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "typescript": "^5.8.0"
   }
 }

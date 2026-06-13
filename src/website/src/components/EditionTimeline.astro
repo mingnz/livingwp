@@ -19,7 +19,7 @@ const editions = history.map((edition, i) => ({
   <p class="font-mono text-ink-muted text-[0.65rem] tracking-[0.18em] uppercase">
     Edition history
   </p>
-  <ol class="border-rule mt-4 ml-1 space-y-0 border-l">
+  <ol class="border-rule mt-4 ml-1 max-h-[60vh] space-y-0 overflow-y-auto border-l pr-1">
     {
       editions.map(({ edition, number, isCurrent }) => (
         <li class="relative pb-5 pl-5 last:pb-0">
