@@ -1,13 +1,7 @@
-# Python-generated files
-__pycache__/
-*.py[oc]
-build/
+# Node
+node_modules/
 dist/
-wheels/
-*.egg-info
-
-# Virtual environments
-.venv
+.astro/
 
 # env files
 .env
