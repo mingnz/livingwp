@@ -1,0 +1,169 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e4]:
+      - generic [ref=e5]: AI Forum NZ — Generative AI Working Group
+      - generic [ref=e11]: A living document
+    - generic [ref=e12]:
+      - link "Living Whitepaper" [ref=e13] [cursor=pointer]:
+        - /url: /
+      - navigation [ref=e14]:
+        - link "Articles" [ref=e15] [cursor=pointer]:
+          - /url: /whitepaper/
+        - link "How it works" [ref=e16] [cursor=pointer]:
+          - /url: /how-it-works/
+        - link "About" [ref=e17] [cursor=pointer]:
+          - /url: /about/
+  - main [ref=e18]:
+    - generic [ref=e19]:
+      - heading "How Aotearoa is adopting AI, sector by sector." [level=1] [ref=e20]:
+        - text: How Aotearoa is adopting AI,
+        - emphasis [ref=e21]: sector by sector.
+      - paragraph [ref=e22]: A living resource — automatically researched and updated by an AI agent that publishes a monthly national snapshot alongside deeper sector reports.
+      - generic [ref=e23]:
+        - generic [ref=e24]:
+          - definition [ref=e25]: "8"
+          - term [ref=e26]: Sector reports
+        - generic [ref=e27]:
+          - definition [ref=e28]: "27"
+          - term [ref=e29]: Editions published
+        - generic [ref=e30]:
+          - definition [ref=e31]: 10 June 2026
+          - term [ref=e32]: Last updated
+    - generic [ref=e36]:
+      - paragraph [ref=e37]: Latest national snapshot
+      - heading "State of AI in New Zealand" [level=2] [ref=e38]:
+        - link "State of AI in New Zealand" [ref=e39] [cursor=pointer]:
+          - /url: /whitepaper/nz/
+      - paragraph [ref=e40]: "The past month in Aotearoa New Zealand was not defined by a single blockbuster AI announcement. Instead, it looked like a practical adoption month: government expanded hands-on support for small firms using AI, health moved breast-screening AI from exploration into procurement and validation, Digital.govt.nz surfaced…"
+      - generic [ref=e41]:
+        - link "Read the full snapshot" [ref=e42] [cursor=pointer]:
+          - /url: /whitepaper/nz/
+          - text: Read the full snapshot
+          - generic [ref=e43]: →
+        - link "Browse industry articles" [ref=e44] [cursor=pointer]:
+          - /url: /whitepaper/#industry-reports
+    - generic [ref=e45]:
+      - generic [ref=e46]:
+        - heading "Industry reports" [level=2] [ref=e47]
+        - link "All articles" [ref=e48] [cursor=pointer]:
+          - /url: /whitepaper/
+      - list [ref=e49]:
+        - listitem [ref=e50]:
+          - link "01 AI in Academic Research Updated 10 Jun 2026" [ref=e51] [cursor=pointer]:
+            - /url: /whitepaper/academic_research/
+            - generic [ref=e52]: "01"
+            - generic [ref=e53]:
+              - text: AI in Academic Research
+              - generic [ref=e54]: →
+            - generic [ref=e55]:
+              - text: Updated
+              - time [ref=e56]: 10 Jun 2026
+        - listitem [ref=e57]:
+          - link "02 AI in Agriculture Updated 10 Jun 2026" [ref=e58] [cursor=pointer]:
+            - /url: /whitepaper/agriculture/
+            - generic [ref=e59]: "02"
+            - generic [ref=e60]:
+              - text: AI in Agriculture
+              - generic [ref=e61]: →
+            - generic [ref=e62]:
+              - text: Updated
+              - time [ref=e63]: 10 Jun 2026
+        - listitem [ref=e64]:
+          - link "03 AI in Architecture, Engineering and Construction Updated 10 Jun 2026" [ref=e65] [cursor=pointer]:
+            - /url: /whitepaper/architecture_engineering_construction/
+            - generic [ref=e66]: "03"
+            - generic [ref=e67]:
+              - text: AI in Architecture, Engineering and Construction
+              - generic [ref=e68]: →
+            - generic [ref=e69]:
+              - text: Updated
+              - time [ref=e70]: 10 Jun 2026
+        - listitem [ref=e71]:
+          - link "04 AI in Creative Industries Updated 10 Jun 2026" [ref=e72] [cursor=pointer]:
+            - /url: /whitepaper/creative_industries/
+            - generic [ref=e73]: "04"
+            - generic [ref=e74]:
+              - text: AI in Creative Industries
+              - generic [ref=e75]: →
+            - generic [ref=e76]:
+              - text: Updated
+              - time [ref=e77]: 10 Jun 2026
+        - listitem [ref=e78]:
+          - link "05 AI in Education Updated 10 Jun 2026" [ref=e79] [cursor=pointer]:
+            - /url: /whitepaper/education/
+            - generic [ref=e80]: "05"
+            - generic [ref=e81]:
+              - text: AI in Education
+              - generic [ref=e82]: →
+            - generic [ref=e83]:
+              - text: Updated
+              - time [ref=e84]: 10 Jun 2026
+        - listitem [ref=e85]:
+          - link "06 AI in Finance Updated 10 Jun 2026" [ref=e86] [cursor=pointer]:
+            - /url: /whitepaper/finance/
+            - generic [ref=e87]: "06"
+            - generic [ref=e88]:
+              - text: AI in Finance
+              - generic [ref=e89]: →
+            - generic [ref=e90]:
+              - text: Updated
+              - time [ref=e91]: 10 Jun 2026
+        - listitem [ref=e92]:
+          - link "07 AI in Healthcare Updated 10 Jun 2026" [ref=e93] [cursor=pointer]:
+            - /url: /whitepaper/healthcare/
+            - generic [ref=e94]: "07"
+            - generic [ref=e95]:
+              - text: AI in Healthcare
+              - generic [ref=e96]: →
+            - generic [ref=e97]:
+              - text: Updated
+              - time [ref=e98]: 10 Jun 2026
+        - listitem [ref=e99]:
+          - link "08 AI in Public Sector Updated 10 Jun 2026" [ref=e100] [cursor=pointer]:
+            - /url: /whitepaper/public_sector/
+            - generic [ref=e101]: "08"
+            - generic [ref=e102]:
+              - text: AI in Public Sector
+              - generic [ref=e103]: →
+            - generic [ref=e104]:
+              - text: Updated
+              - time [ref=e105]: 10 Jun 2026
+    - generic [ref=e107]:
+      - paragraph [ref=e108]: Behind the curtain
+      - heading "Researched by AI, reviewed by humans" [level=2] [ref=e109]
+      - paragraph [ref=e110]: Every update is researched and written by an AI agent, then submitted as a pull request for community review before it goes live. This is an open-source project from the AI Forum NZ — contributions welcome.
+      - generic [ref=e111]:
+        - link "See how it works" [ref=e112] [cursor=pointer]:
+          - /url: /how-it-works/
+        - link "View on GitHub" [ref=e113] [cursor=pointer]:
+          - /url: https://github.com/mingnz/livingwp
+  - contentinfo [ref=e114]:
+    - generic [ref=e115]:
+      - generic [ref=e116]:
+        - paragraph [ref=e117]: Living Whitepaper
+        - paragraph [ref=e118]: A living record of AI adoption across Aotearoa New Zealand — researched and written by an AI agent, reviewed by the community, and updated as the landscape evolves.
+      - generic [ref=e119]:
+        - paragraph [ref=e120]: Project
+        - list [ref=e121]:
+          - listitem [ref=e122]:
+            - link "Articles" [ref=e123] [cursor=pointer]:
+              - /url: /whitepaper/
+          - listitem [ref=e124]:
+            - link "How it works" [ref=e125] [cursor=pointer]:
+              - /url: /how-it-works/
+          - listitem [ref=e126]:
+            - link "About" [ref=e127] [cursor=pointer]:
+              - /url: /about/
+      - generic [ref=e128]:
+        - paragraph [ref=e129]: Elsewhere
+        - list [ref=e130]:
+          - listitem [ref=e131]:
+            - link "GitHub" [ref=e132] [cursor=pointer]:
+              - /url: https://github.com/mingnz/livingwp
+          - listitem [ref=e133]:
+            - link "AI Forum NZ" [ref=e134] [cursor=pointer]:
+              - /url: https://aiforum.org.nz
+          - listitem [ref=e135]:
+            - link "RSS feed" [ref=e136] [cursor=pointer]:
+              - /url: /feed.xml
+    - paragraph [ref=e138]: © 2026 AI Forum New Zealand · Open source · Researched by AI, reviewed by humans

@@ -1,0 +1,41 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base
+  title="How it Works"
+  description="How an AI agent researches and publishes sector reports on generative AI adoption in Aotearoa New Zealand."
+>
+  <section class="max-w-2xl py-14 sm:py-16">
+    <h1 class="font-display reveal text-4xl font-semibold tracking-tight sm:text-5xl">
+      How it works
+    </h1>
+    <div class="article-prose reveal reveal-1 mt-8">
+      <p>
+        An AI agent keeps this site up to date. It searches the web for recent
+        news, research, and case studies for each sector, then writes a new version
+        of the report. Each update is submitted as a pull request on GitHub so the
+        community can review changes before they go live.
+      </p>
+    </div>
+    <figure class="border-rule bg-cream reveal reveal-2 mt-10 border p-6 sm:p-8">
+      <img
+        src="/system.svg"
+        alt="System architecture: an AI agent researches each sector, archives the previous article, and publishes updates through GitHub pull requests"
+        class="mx-auto w-full"
+        loading="lazy"
+      />
+    </figure>
+    <div class="article-prose reveal reveal-3 mt-10">
+      <p>
+        Previous versions of every report are archived automatically, so you can
+        always trace how the content has evolved over time.
+      </p>
+      <p>
+        The entire system — prompts, agent code, and workflows — is open source.
+        Visit the <a href="https://github.com/mingnz/livingwp">GitHub repository</a>
+        to see how it works or to contribute.
+      </p>
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,65 @@
+---
+import { getSeriesHistory, formatDateShort, type Article } from '../lib/articles';
+
+interface Props {
+  entry: Article;
+}
+
+const { entry } = Astro.props;
+const history = await getSeriesHistory(entry.data.article_series);
+// Newest first; edition numbers count up from the oldest.
+const editions = history.map((edition, i) => ({
+  edition,
+  number: history.length - i,
+  isCurrent: edition.id === entry.id,
+}));
+---
+
+<nav aria-label="Edition history">
+  <p class="font-mono text-ink-muted text-[0.65rem] tracking-[0.18em] uppercase">
+    Edition history
+  </p>
+  <ol class="border-rule mt-4 ml-1 space-y-0 border-l">
+    {
+      editions.map(({ edition, number, isCurrent }) => (
+        <li class="relative pb-5 pl-5 last:pb-0">
+          <span
+            aria-hidden="true"
+            class:list={[
+              'absolute top-1.5 -left-[4.5px] size-2 rounded-full',
+              isCurrent
+                ? 'bg-pounamu ring-pounamu/25 ring-4'
+                : 'bg-paper border-ink-muted border',
+            ]}
+          />
+          <a
+            href={edition.data.permalink}
+            aria-current={isCurrent ? 'page' : undefined}
+            class:list={[
+              'group block transition-colors',
+              isCurrent ? 'text-pounamu-deep' : 'hover:text-pounamu-deep',
+            ]}
+          >
+            <span
+              class:list={[
+                'font-mono block text-[0.7rem] tracking-wider uppercase',
+                edition.data.article_latest ? 'text-pounamu' : 'text-clay',
+              ]}
+            >
+              {edition.data.article_latest ? 'Latest' : `Edition ${number}`}
+            </span>
+            <time
+              datetime={edition.data.article_updated_at.toISOString()}
+              class:list={[
+                'mt-0.5 block text-[0.95rem]',
+                isCurrent ? 'font-semibold' : 'group-hover:underline decoration-rule underline-offset-4',
+              ]}
+            >
+              {formatDateShort(edition.data.article_updated_at)}
+            </time>
+          </a>
+        </li>
+      ))
+    }
+  </ol>
+</nav>

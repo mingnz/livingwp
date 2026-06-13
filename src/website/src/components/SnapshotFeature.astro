@@ -1,0 +1,83 @@
+---
+import { getLatestSnapshot, formatDate } from '../lib/articles';
+
+interface Props {
+  heading?: string;
+  primaryLabel?: string;
+  secondaryLabel?: string;
+  showIndustryLink?: boolean;
+}
+
+const {
+  heading = 'Latest national snapshot',
+  primaryLabel = 'Read the full snapshot',
+  secondaryLabel = 'Browse industry articles',
+  showIndustryLink = false,
+} = Astro.props;
+
+const snapshot = await getLatestSnapshot();
+const summary = snapshot?.data.article_summary ?? snapshot?.data.description;
+---
+
+{
+  snapshot ? (
+    <section class="border-ink/90 bg-cream relative border-y-2">
+      <div class="border-rule grid sm:grid-cols-[1fr_auto] sm:divide-x sm:divide-rule">
+        <div class="px-6 py-8 sm:px-8 sm:py-10">
+          <p class="font-mono text-clay text-[0.65rem] tracking-[0.18em] uppercase">
+            {heading}
+          </p>
+          <h2 class="font-display mt-4 max-w-2xl text-3xl leading-[1.08] font-semibold tracking-tight text-balance sm:text-[2.6rem]">
+            <a
+              href={snapshot.data.permalink}
+              class="hover:text-pounamu-deep transition-colors"
+            >
+              {snapshot.data.title}
+            </a>
+          </h2>
+          {summary && (
+            <p class="text-ink-muted mt-5 max-w-2xl text-[1.05rem] leading-relaxed">
+              {summary}
+            </p>
+          )}
+          <div class="mt-7 flex flex-wrap items-center gap-x-7 gap-y-3">
+            <a
+              href={snapshot.data.permalink}
+              class="group bg-pounamu-deep hover:bg-pounamu font-mono inline-flex items-center gap-2 px-5 py-2.5 text-[0.72rem] tracking-[0.14em] text-paper uppercase transition-colors"
+            >
+              {primaryLabel}
+              <span aria-hidden="true" class="transition-transform group-hover:translate-x-1">→</span>
+            </a>
+            {showIndustryLink && (
+              <a
+                href="/whitepaper/#industry-reports"
+                class="font-mono text-ink-muted hover:text-pounamu-deep text-[0.72rem] tracking-[0.14em] uppercase underline decoration-rule underline-offset-4 transition-colors"
+              >
+                {secondaryLabel}
+              </a>
+            )}
+          </div>
+        </div>
+        <div class="border-rule hidden flex-col justify-end border-t px-8 py-10 sm:flex sm:w-52 sm:border-t-0">
+          <p class="font-mono text-ink-muted text-[0.65rem] tracking-[0.14em] uppercase">
+            Updated
+          </p>
+          <time
+            datetime={snapshot.data.article_updated_at.toISOString()}
+            class="font-display mt-2 block text-xl leading-snug font-medium"
+          >
+            {formatDate(snapshot.data.article_updated_at)}
+          </time>
+        </div>
+      </div>
+    </section>
+  ) : (
+    <p class="text-ink-muted">
+      No national AI snapshot has been published yet.{' '}
+      <a class="text-pounamu-deep underline underline-offset-4" href="/whitepaper/">
+        Browse the industry articles
+      </a>
+      .
+    </p>
+  )
+}

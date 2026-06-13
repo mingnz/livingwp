@@ -1,0 +1,140 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+@theme {
+  --font-display: 'Fraunces Variable', Georgia, serif;
+  --font-serif: 'Newsreader Variable', Georgia, serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, monospace;
+
+  /* Warm paper + ink editorial palette, pounamu green accent, clay secondary */
+  --color-paper: #f5f0e6;
+  --color-cream: #fbf8f1;
+  --color-parchment: #ece4d2;
+  --color-ink: #211d15;
+  --color-ink-muted: #6e6452;
+  --color-rule: #d8cfba;
+  --color-pounamu: #16654e;
+  --color-pounamu-deep: #0c4534;
+  --color-clay: #a8501f;
+
+  --animate-pulse-ring: pulse-ring 2.4s cubic-bezier(0.2, 0.6, 0.4, 1) infinite;
+
+  @keyframes pulse-ring {
+    0% {
+      transform: scale(0.5);
+      opacity: 0.8;
+    }
+    70%,
+    100% {
+      transform: scale(2.4);
+      opacity: 0;
+    }
+  }
+}
+
+/* ── Paper grain ── */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  pointer-events: none;
+  opacity: 0.5;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.04 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ── Page-load staggered reveal ── */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.reveal {
+  animation: rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.reveal-1 { animation-delay: 0.07s; }
+.reveal-2 { animation-delay: 0.16s; }
+.reveal-3 { animation-delay: 0.26s; }
+.reveal-4 { animation-delay: 0.38s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal-1,
+  .reveal-2,
+  .reveal-3,
+  .reveal-4 {
+    animation: none;
+  }
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ── Article prose: editorial overrides on top of @tailwindcss/typography ── */
+.article-prose {
+  @apply prose prose-lg max-w-none font-serif;
+  --tw-prose-body: var(--color-ink);
+  --tw-prose-headings: var(--color-ink);
+  --tw-prose-bold: var(--color-ink);
+  --tw-prose-links: var(--color-pounamu);
+  --tw-prose-quotes: var(--color-ink);
+  --tw-prose-quote-borders: var(--color-pounamu);
+  --tw-prose-hr: var(--color-rule);
+  --tw-prose-th-borders: var(--color-rule);
+  --tw-prose-td-borders: var(--color-rule);
+  --tw-prose-bullets: var(--color-clay);
+  --tw-prose-counters: var(--color-clay);
+  --tw-prose-captions: var(--color-ink-muted);
+  --tw-prose-code: var(--color-ink);
+}
+
+.article-prose :where(h1, h2, h3, h4) {
+  font-family: var(--font-display);
+  font-weight: 560;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+
+.article-prose :where(h1) {
+  font-size: 2.1em;
+  line-height: 1.12;
+}
+
+.article-prose :where(h2) {
+  border-top: 1px solid var(--color-rule);
+  padding-top: 1em;
+  margin-top: 1.8em;
+}
+
+.article-prose :where(a) {
+  font-weight: inherit;
+  text-decoration-color: color-mix(in srgb, var(--color-pounamu) 35%, transparent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.15s ease;
+}
+
+.article-prose :where(a:hover) {
+  text-decoration-color: var(--color-pounamu);
+}
+
+.article-prose :where(table) {
+  font-family: var(--font-mono);
+  font-size: 0.72em;
+  line-height: 1.5;
+}
+
+.article-prose :where(thead th) {
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}

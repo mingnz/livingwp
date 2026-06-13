@@ -1,0 +1,39 @@
+---
+import Base from '../../layouts/Base.astro';
+import SnapshotFeature from '../../components/SnapshotFeature.astro';
+import ArticleIndex from '../../components/ArticleIndex.astro';
+---
+
+<Base
+  title="Articles"
+  description="A national AI snapshot plus sector-by-sector reports on AI adoption in Aotearoa New Zealand, researched and written by an AI agent."
+>
+  <section class="py-14 sm:py-16">
+    <h1 class="font-display reveal text-4xl font-semibold tracking-tight sm:text-5xl">
+      Articles
+    </h1>
+    <p class="reveal reveal-1 text-ink-muted mt-5 max-w-2xl text-lg leading-relaxed">
+      Each article is researched and written by an AI agent, then published here as
+      a living document. Start with the national snapshot for a cross-sector view,
+      then open any industry report to read the latest version or browse its update
+      history.
+    </p>
+  </section>
+
+  <div class="reveal reveal-2">
+    <SnapshotFeature
+      heading="National monthly overview"
+      primaryLabel="Open the latest snapshot"
+    />
+  </div>
+
+  <section class="reveal reveal-3 py-14 sm:py-16">
+    <h2
+      id="industry-reports"
+      class="font-display mb-8 scroll-mt-8 text-2xl font-semibold tracking-tight sm:text-3xl"
+    >
+      Industry reports
+    </h2>
+    <ArticleIndex />
+  </section>
+</Base>

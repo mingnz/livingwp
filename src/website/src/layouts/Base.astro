@@ -1,0 +1,57 @@
+---
+import '@fontsource-variable/fraunces';
+import '@fontsource-variable/newsreader';
+import '@fontsource-variable/newsreader/wght-italic.css';
+import '@fontsource/ibm-plex-mono/400.css';
+import '@fontsource/ibm-plex-mono/500.css';
+import '../styles/global.css';
+import { ClientRouter } from 'astro:transitions';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const siteTitle = 'AI in NZ Living Whitepaper';
+const {
+  title,
+  description = 'A living snapshot of the Generative AI landscape in Aotearoa New Zealand. Researching AI topics, using AI, for the AI community.',
+} = Astro.props;
+
+const pageTitle = title ? `${title} · Living Whitepaper` : siteTitle;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang="en-NZ">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title={siteTitle}
+      href={new URL('/feed.xml', Astro.site)}
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content={siteTitle} />
+    <ClientRouter />
+  </head>
+  <body class="bg-paper text-ink font-serif antialiased">
+    <Header />
+    <main class="mx-auto w-full max-w-6xl px-5 sm:px-8">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

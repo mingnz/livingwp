@@ -1,0 +1,55 @@
+---
+import LivePulse from './LivePulse.astro';
+
+const nav = [
+  { href: '/whitepaper/', label: 'Articles' },
+  { href: '/how-it-works/', label: 'How it works' },
+  { href: '/about/', label: 'About' },
+];
+
+const current = Astro.url.pathname;
+const isActive = (href: string) =>
+  href === '/' ? current === '/' : current.startsWith(href);
+---
+
+<header class="border-ink/90 border-b-2">
+  <div class="border-rule border-b">
+    <div
+      class="font-mono text-ink-muted mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-2 text-[0.65rem] tracking-[0.14em] uppercase sm:px-8"
+    >
+      <span class="truncate">AI Forum NZ — Generative AI Working Group</span>
+      <span class="text-pounamu-deep shrink-0">
+        <LivePulse label="A living document" />
+      </span>
+    </div>
+  </div>
+
+  <div
+    class="mx-auto flex max-w-6xl flex-wrap items-baseline justify-between gap-x-8 gap-y-2 px-5 py-5 sm:px-8"
+  >
+    <a
+      href="/"
+      class="font-display hover:text-pounamu-deep text-[1.7rem] leading-none font-semibold tracking-tight transition-colors"
+    >
+      Living&nbsp;Whitepaper
+    </a>
+    <nav class="font-mono flex gap-6 text-[0.72rem] tracking-[0.14em] uppercase">
+      {
+        nav.map(({ href, label }) => (
+          <a
+            href={href}
+            aria-current={isActive(href) ? 'page' : undefined}
+            class:list={[
+              'hover:text-pounamu-deep pb-0.5 transition-colors',
+              isActive(href)
+                ? 'border-pounamu text-pounamu-deep border-b'
+                : 'text-ink-muted',
+            ]}
+          >
+            {label}
+          </a>
+        ))
+      }
+    </nav>
+  </div>
+</header>

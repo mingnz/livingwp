@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Living Whitepaper tracks AI adoption across industries in Aotearoa New Zealand. It combines a Python agent (OpenAI Agents SDK + web search) that conducts research with a Jekyll static site that publishes the findings. GitHub Actions orchestrate automated article updates and deployment.
+Living Whitepaper tracks AI adoption across industries in Aotearoa New Zealand. It combines a Python agent (OpenAI Agents SDK + web search) that conducts research with an Astro static site that publishes the findings. GitHub Actions orchestrate automated article updates and deployment.
 
 ## Commands
 
@@ -17,12 +17,12 @@ uv run livingwp healthcare,education          # Multiple industries (comma-separ
 uv run python -m compileall src/livingwp      # Verify Python syntax (no test suite)
 ```
 
-### Website (Jekyll)
+### Website (Astro)
 ```bash
 cd src/website
-bundle install
-bundle exec jekyll serve    # Local dev server
-bundle exec jekyll build    # Production build
+npm install
+npm run dev      # Local dev server (http://localhost:4321)
+npm run build    # Production build to dist/
 ```
 
 ### Linting
@@ -36,28 +36,30 @@ uv run ruff format src/     # Format Python code
 ### Two-Part System
 
 1. **Python agent** (`src/livingwp/`) — Reads industry config, loads the current article, runs an OpenAI research agent with web search, archives the old article, and saves the new one.
-2. **Jekyll website** (`src/website/`) — Static site that renders articles from markdown files with YAML frontmatter. Deployed to GitHub Pages on push to main.
+2. **Astro website** (`src/website/`) — Static site (Astro 5 + Tailwind v4) that renders articles from markdown files with YAML frontmatter via a content collection. Deployed to GitHub Pages on push to main.
+
+The two halves share only the markdown files and their frontmatter contract — neither invokes the other.
 
 ### Core Data Flow
 
 Industries are defined in `src/livingwp/config/industries.json`. For each industry, the agent:
-1. Loads the current article from `src/website/whitepaper/content/<industry>.markdown`
+1. Loads the current article from `src/website/whitepaper/content/<industry>.md`
 2. Runs a research agent (model + prompt from config) with the previous article as context
-3. Archives the old article to `src/website/whitepaper/content/archive/<industry>/<timestamp>.markdown`
+3. Archives the old article to `src/website/whitepaper/content/archive/<industry>/<timestamp>.md`
 4. Overwrites the latest article at the stable URL path
 
 ### Article Metadata Contract
 
-Every article requires these frontmatter fields (enforced by `normalize_article_metadata()` in `utils/files.py`):
+Every article requires these frontmatter fields (written by `normalize_article_metadata()` in `utils/files.py`, validated by the Zod schema in `src/website/src/content.config.ts`):
 
-- `layout: article` — Uses `_layouts/article.html`
+- `layout: article` — Inert legacy field (kept for compatibility; Astro ignores it)
 - `article: true/false` — `true` for latest (shown in index), `false` for archived
-- `article_latest: true/false` — Controls history sidebar highlighting
+- `article_latest: true/false` — Controls edition timeline highlighting
 - `article_version: true/false` — `true` for archived versions
-- `article_history: true` — Enables history sidebar
+- `article_history: true` — Enables edition history
 - `article_series: <industry>` — Groups articles for history navigation
 - `article_updated_at` — ISO 8601 timestamp in Pacific/Auckland timezone
-- `permalink` — Stable URL for latest, timestamped URL for archives
+- `permalink` — Stable URL for latest, timestamped URL for archives. **Routes are generated from this field, never from file paths.**
 
 ### Key Files
 
@@ -66,20 +68,22 @@ Every article requires these frontmatter fields (enforced by `normalize_article_
 - `src/livingwp/utils/files.py` — File I/O, archiving, metadata normalization, industry config
 - `src/livingwp/utils/markdown.py` — YAML frontmatter parsing/serialization
 - `src/livingwp/prompts/instructions_research.md` — Research agent prompt template
-- `src/website/_layouts/article.html` — Article template with history sidebar (Liquid)
+- `src/website/src/content.config.ts` — Content collection + frontmatter schema (Zod)
+- `src/website/src/pages/[...slug].astro` — Article page (routes from permalinks, edition timeline)
+- `src/website/src/lib/articles.ts` — Collection query helpers (latest/snapshot/history)
+- `src/website/src/styles/global.css` — Tailwind v4 theme tokens + article prose styles
 
 ### GitHub Actions Workflows
 
 - `run_agent.yml` — Runs the agent and opens a PR with updated articles
 - `add_industry.yml` — Adds a new industry to config and generates its first article
-- `deploy_website.yml` — Builds and deploys Jekyll site to GitHub Pages (triggers on `src/website/**` changes to main)
+- `deploy_website.yml` — Builds the Astro site (Node 22, `npm ci && npm run build`) and deploys to GitHub Pages (triggers on `src/website/**` changes to main)
 
 ## Key Conventions
 
-- **Package manager**: `uv` for Python, Bundler for Ruby
+- **Package manager**: `uv` for Python, npm for the website
 - **Timezone**: All article timestamps use Pacific/Auckland
 - **Archive immutability**: Archived articles are never modified; new versions create new files
 - **No post-processing**: Agent output is publication-ready markdown written directly to files
 - **Industry config-driven**: Adding industries requires no code changes — only `industries.json` updates
-- **Jekyll quirk**: `_config.yml` changes require server restart (no auto-reload)
-- **Sass warnings**: Minima theme emits deprecation warnings — this is an upstream issue, not a bug
+- **Content extension**: Article files are `.md` (required by Astro's content layer); the agent writes `.md` too
