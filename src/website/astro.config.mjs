@@ -5,7 +5,11 @@ import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   site: 'https://www.livingwhitepaper.com',
-  trailingSlash: 'always',
+  // 'ignore' (the default) — pages still emit as directory/index.html (trailing
+  // slash) and canonicals/sitemap use that form, but extension endpoints like
+  // /whitepaper/<series>.md resolve cleanly in dev too. 'always' wrongly forces
+  // a trailing slash onto those dynamic .md endpoints (404 in dev).
+  trailingSlash: 'ignore',
   integrations: [
     // Keep archived editions (…/whitepaper/<series>/<timestamp>/) out of the
     // sitemap — they're noindexed near-duplicates of the latest version.
