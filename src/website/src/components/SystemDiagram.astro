@@ -11,7 +11,6 @@ interface Node {
   title: string;
   sub?: string;
   desc: string;
-  planned?: boolean;
   hub?: boolean;
 }
 
@@ -39,14 +38,6 @@ const nodes: Node[] = [
     desc: 'The agent runs live web searches and cites primary sources inline in every report.',
   },
   {
-    id: 'drive',
-    rect: [322, 330, 248, 64],
-    title: 'Google Drive',
-    sub: 'via MCP · planned',
-    desc: 'Planned: pull curated source material from Google Drive through an MCP connector.',
-    planned: true,
-  },
-  {
     id: 'markdown',
     rect: [664, 166, 92, 92],
     title: 'Markdown',
@@ -67,13 +58,11 @@ interface Edge {
   label?: string;
   lx?: number;
   ly?: number;
-  planned?: boolean;
 }
 
 const edges: Edge[] = [
   { d: 'M192,210 H296', label: 'trigger', lx: 244, ly: 200 },
   { d: 'M446,142 V92', label: 'search', lx: 446, ly: 120 },
-  { d: 'M446,278 V330', label: 'planned', lx: 446, ly: 308, planned: true },
   { d: 'M596,232 H664', label: 'writes', lx: 630, ly: 222 },
   // Markdown reads the previous version back into the agent (loop over the top).
   { d: 'M710,166 C710,108 560,112 560,142', label: 'reads previous', lx: 636, ly: 100 },
@@ -88,16 +77,16 @@ const descId = 'system-diagram-desc';
   <div class="diagram-scroll border-rule bg-cream border">
     <svg
       class="system-diagram"
-      viewBox="0 0 900 416"
+      viewBox="0 0 900 300"
       role="img"
       aria-labelledby={`${titleId} ${descId}`}
     >
       <title id={titleId}>How the Living Whitepaper is published</title>
       <desc id={descId}>
         A GitHub Actions pipeline runs the research agent, which uses live web
-        search (and, planned, Google Drive via MCP) to rewrite each report. The
-        agent reads the previous Markdown version and writes a new one, which is
-        reviewed and then built and deployed to the website.
+        search to rewrite each report. The agent reads the previous Markdown
+        version and writes a new one, which is reviewed and then built and
+        deployed to the website.
       </desc>
 
       <defs>
@@ -118,10 +107,9 @@ const descId = 'system-diagram-desc';
       <g class="edges">
         {
           edges.map((e) => (
-            <g class:list={['edge', { 'edge--planned': e.planned }]}>
+            <g class="edge">
               <path d={e.d} class="edge-track" />
-              {!e.planned && <path d={e.d} class="edge-flow" marker-end="url(#diag-arrow)" />}
-              {e.planned && <path d={e.d} class="edge-planned" marker-end="url(#diag-arrow)" />}
+              <path d={e.d} class="edge-flow" marker-end="url(#diag-arrow)" />
               {e.label && (
                 <text x={e.lx} y={e.ly} class="edge-label" text-anchor="middle">
                   {e.label}
@@ -139,7 +127,7 @@ const descId = 'system-diagram-desc';
           const cx = x + w / 2;
           return (
             <g
-              class:list={['node', { 'node--hub': n.hub, 'node--planned': n.planned }]}
+              class:list={['node', { 'node--hub': n.hub }]}
               tabindex="0"
               role="button"
               aria-label={`${n.title}. ${n.desc}`}
@@ -165,11 +153,11 @@ const descId = 'system-diagram-desc';
   <figcaption
     id="diagram-caption"
     class="text-ink-muted mt-4 min-h-[2.5em] text-[0.95rem] leading-snug"
-    data-default="Hover or focus any step to see what it does. Solid lines carry live data; the dashed line is planned."
+    data-default="Hover or focus any step to see what it does. The flowing lines trace how data moves through the pipeline."
     aria-live="polite"
   >
-    Hover or focus any step to see what it does. Solid lines carry live data; the
-    dashed line is planned.
+    Hover or focus any step to see what it does. The flowing lines trace how data
+    moves through the pipeline.
   </figcaption>
 </figure>
 
@@ -206,10 +194,6 @@ const descId = 'system-diagram-desc';
     fill: var(--color-cream);
     stroke: var(--color-pounamu-deep);
     stroke-width: 2;
-  }
-  .node--planned .node-box {
-    stroke: var(--color-ink-muted);
-    stroke-dasharray: 5 4;
   }
   .node-title {
     font-family: var(--font-display);
@@ -260,18 +244,8 @@ const descId = 'system-diagram-desc';
     stroke-dasharray: 2 7;
     animation: diagram-flow 1.1s linear infinite;
   }
-  .edge-planned {
-    fill: none;
-    stroke: var(--color-ink-muted);
-    stroke-width: 1.5;
-    stroke-dasharray: 6 6;
-    opacity: 0.65;
-  }
   .arrow-head {
     fill: var(--color-pounamu);
-  }
-  .edge--planned .arrow-head {
-    fill: var(--color-ink-muted);
   }
   .edge-label {
     font-family: var(--font-mono);
