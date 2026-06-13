@@ -189,6 +189,13 @@ export function normalizeArticleMetadata(
 }
 
 /** Extract a plain-text description from the first paragraph of markdown. */
+// Lead lines that are metadata, not prose (date stamps, "snapshot date:",
+// "updated from the … edition", etc.). The extracted description feeds the
+// page meta description, OG/Twitter cards, JSON-LD, and llms.txt, so picking
+// one of these as the summary hurts both SEO and GEO.
+const METADATA_LEAD =
+  /^(updated\b|last updated\b|snapshot date\b|snapshot:|published\b|publication date\b)/i;
+
 export function extractDescription(body: string, maxLength = 160): string {
   // Strip headings, bold/italic markers, links, and images
   let text = body.replace(/^#+\s.*$/gm, '');
@@ -197,23 +204,26 @@ export function extractDescription(body: string, maxLength = 160): string {
   text = text.replace(/\*{1,2}(.+?)\*{1,2}/g, '$1');
   text = text.replace(/_+(.+?)_+/g, '$1');
 
-  // Find the first non-empty paragraph
+  const truncate = (s: string) => {
+    if (s.length <= maxLength) return s;
+    const head = s.slice(0, maxLength - 1);
+    return `${head.slice(0, head.lastIndexOf(' '))}…`;
+  };
+
+  // Prefer the first paragraph that reads like prose (long enough and with
+  // sentence punctuation), so headings, labels, and date lines aren't used.
+  // Fall back to the first non-metadata paragraph so we never return empty.
+  let fallback = '';
   for (const paragraph of text.split('\n\n')) {
     const cleaned = paragraph.split(/\s+/).join(' ').trim();
-    const lowered = cleaned.toLowerCase();
-    if (lowered.startsWith('updated:') || lowered.startsWith('last updated:')) {
-      continue;
-    }
-    if (cleaned.length > 20) {
-      if (cleaned.length > maxLength) {
-        const truncated = cleaned.slice(0, maxLength - 1);
-        return `${truncated.slice(0, truncated.lastIndexOf(' '))}…`;
-      }
-      return cleaned;
+    if (cleaned.length <= 20 || METADATA_LEAD.test(cleaned)) continue;
+    if (!fallback) fallback = cleaned;
+    if (cleaned.length >= 60 && /[.!?]/.test(cleaned)) {
+      return truncate(cleaned);
     }
   }
 
-  return '';
+  return fallback ? truncate(fallback) : '';
 }
 
 export function loadInstruction(filename: string): string {

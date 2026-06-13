@@ -10,11 +10,15 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import ogImage from '../assets/ainz.jpg';
 
+import { organizationNode, webSiteNode } from '../lib/seo';
+
 interface Props {
   title?: string;
   description?: string;
   /** Set on archived editions so search engines don't index near-duplicates. */
   noindex?: boolean;
+  /** Extra schema.org nodes (e.g. an Article) merged into the JSON-LD @graph. */
+  jsonLd?: Record<string, unknown>[];
 }
 
 const siteTitle = 'AI in NZ Living Whitepaper';
@@ -22,11 +26,21 @@ const {
   title,
   description = 'A living snapshot of the Generative AI landscape in Aotearoa New Zealand. Researching AI topics, using AI, for the AI community.',
   noindex = false,
+  jsonLd = [],
 } = Astro.props;
 
 const pageTitle = title ? `${title} · Living Whitepaper` : siteTitle;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const socialImage = new URL(ogImage.src, Astro.site);
+
+// Sitewide Organization + WebSite, plus any page-specific nodes. A single
+// @graph lets the Article node reference the org/website by @id.
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [organizationNode(Astro.site!), webSiteNode(Astro.site!), ...jsonLd],
+};
+// Escape `<` so a stray "</script>" in any string can't break out of the tag.
+const jsonLdHtml = JSON.stringify(structuredData).replace(/</g, '\\u003c');
 ---
 
 <!doctype html>
@@ -56,6 +70,7 @@ const socialImage = new URL(ogImage.src, Astro.site);
     <meta name="twitter:title" content={pageTitle} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={socialImage} />
+    <script type="application/ld+json" is:inline set:html={jsonLdHtml} />
     <ClientRouter />
   </head>
   <body class="bg-paper text-ink font-serif antialiased">
