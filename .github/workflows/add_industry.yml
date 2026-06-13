@@ -25,15 +25,13 @@ jobs:
         with:
           node-version: 22
           cache: npm
-          cache-dependency-path: src/agent/package-lock.json
+          cache-dependency-path: package-lock.json
 
       - name: Install dependencies
-        working-directory: src/agent
         run: npm ci
 
       - name: Add industry to config
         id: add_industry_to_config
-        working-directory: src/agent
         env:
           INDUSTRY_NAME: ${{ inputs.industry_name }}
         run: |

@@ -11,6 +11,7 @@
   "dependencies": {
     "@astrojs/rss": "^4.0.12",
     "@astrojs/sitemap": "^3.4.1",
+    "@livingwp/article-contract": "*",
     "@fontsource-variable/fraunces": "^5.2.6",
     "@fontsource-variable/newsreader": "^5.2.6",
     "@fontsource/ibm-plex-mono": "^5.2.6",

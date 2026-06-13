@@ -3,7 +3,16 @@ import { readdir } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { DateTime } from 'luxon';
+import { z } from 'zod';
+import { articleFrontmatterShape } from '@livingwp/article-contract';
 import { formatMarkdown, parseMarkdown, type FrontMatter } from './markdown.js';
+
+/**
+ * The on-disk article contract, built from the shared definition with the
+ * agent's own Zod instance. `.strict()` ensures the agent writes exactly the
+ * contract fields and nothing else — drift fails loudly at generation time.
+ */
+const storedArticleSchema = z.object(articleFrontmatterShape(z)).strict();
 
 const AGENT_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 export const SITE_CONTENT_DIR = path.resolve(
@@ -141,29 +150,39 @@ export function normalizeArticleMetadata(
   { latest, archiveSlug }: { latest: boolean; archiveSlug?: string },
 ): string {
   const isoTimestamp = articleUpdatedAt.toISO({ suppressMilliseconds: true });
-  const normalized: FrontMatter = { ...metadata };
-  normalized['layout'] = 'article';
-  normalized['title'] =
-    normalized['title'] ?? `AI in ${titleCase(industry.replaceAll('_', ' '))}`;
-  normalized['article'] = latest;
-  normalized['article_history'] = true;
-  normalized['article_latest'] = latest;
-  normalized['article_kind'] = normalized['article_kind'] ?? 'industry';
-  normalized['article_summary'] = extractDescription(body, 320);
-  normalized['article_version'] = !latest;
-  normalized['article_series'] = industry;
-  normalized['article_updated_at'] = isoTimestamp;
-  normalized['date'] = isoTimestamp;
-  normalized['last_modified_at'] = isoTimestamp;
-  normalized['description'] = extractDescription(body);
-  if (latest) {
-    normalized['permalink'] = `/whitepaper/${industry}/`;
-  } else {
-    if (archiveSlug == null) {
-      throw new Error('archiveSlug is required for archived articles');
-    }
-    normalized['permalink'] = `/whitepaper/${industry}/${archiveSlug}/`;
+  if (!latest && archiveSlug == null) {
+    throw new Error('archiveSlug is required for archived articles');
   }
+
+  // Build exactly the contract fields — do not carry forward arbitrary keys
+  // from the source (e.g. the retired Jekyll `layout`/`date`/`last_modified_at`
+  // still present in older articles).
+  const normalized: FrontMatter = {
+    title: metadata['title'] ?? `AI in ${titleCase(industry.replaceAll('_', ' '))}`,
+    permalink: latest
+      ? `/whitepaper/${industry}/`
+      : `/whitepaper/${industry}/${archiveSlug}/`,
+    article: latest,
+    article_history: true,
+    article_latest: latest,
+    article_version: !latest,
+    article_series: industry,
+    article_kind: metadata['article_kind'] ?? 'industry',
+    article_updated_at: isoTimestamp,
+    article_summary: extractDescription(body, 320),
+    description: extractDescription(body),
+  };
+
+  // Validate against the shared contract before writing, so any drift between
+  // what the agent emits and what the site expects fails here, not at deploy.
+  const result = storedArticleSchema.safeParse(normalized);
+  if (!result.success) {
+    throw new Error(
+      `Normalized article for ${industry} does not satisfy the article contract: ` +
+        result.error.issues.map((i) => `${i.path.join('.')}: ${i.message}`).join('; '),
+    );
+  }
+
   return formatMarkdown(normalized, body);
 }
 

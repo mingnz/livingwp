@@ -61,10 +61,9 @@ jobs:
         with:
           node-version: 22
           cache: npm
-          cache-dependency-path: src/agent/package-lock.json
+          cache-dependency-path: package-lock.json
 
       - name: Install dependencies
-        working-directory: src/agent
         run: npm ci
 
       - name: Validate provider credentials
@@ -79,13 +78,12 @@ jobs:
           fi
 
       - name: Run livingwp update
-        working-directory: src/agent
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           GOOGLE_GENERATIVE_AI_API_KEY: ${{ secrets.GOOGLE_GENERATIVE_AI_API_KEY }}
           LIVINGWP_USAGE_COMMENT_PATH: ${{ runner.temp }}/livingwp-usage-comment.md
-        run: npm start -- "${{ inputs.article_filter }}"
+        run: npm run agent -- "${{ inputs.article_filter }}"
 
       - name: Check for changes
         id: changes

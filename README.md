@@ -12,6 +12,8 @@ parts:
   writes updates.
 - **`src/website`** – an Astro site that is automatically populated with those
   updates and served on GitHub Pages.
+- **`packages/article-contract`** – the shared article frontmatter contract used
+  by both, so the agent and site can't drift.
 
 ![system diagram](docs/assets/system.excalidraw.png)
 
@@ -118,29 +120,29 @@ flowchart TD
 
 ### Requirements
 
-- [Node.js](https://nodejs.org) 22+ for both the agent and the website
+- [Node.js](https://nodejs.org) 22+
+
+The repo is an npm-workspaces monorepo (`src/agent`, `src/website`,
+`packages/article-contract`). Install everything once from the root:
+
+```sh
+npm install
+```
 
 ### Running the Agent
 
-1. Install dependencies:
-
-   ```sh
-   cd src/agent
-   npm install
-   ```
-
-2. Make sure the API key for your configured provider is available in your
+1. Make sure the API key for your configured provider is available in your
    environment (`OPENAI_API_KEY` by default; `ANTHROPIC_API_KEY` or
    `GOOGLE_GENERATIVE_AI_API_KEY` if you use those providers). See
    [`.env.sample`](.env.sample).
 
-3. Run the agent:
+2. Run the agent from the repo root:
 
    ```sh
-   npm start
+   npm run agent
    ```
 
-Running the command above iterates over each configured article in
+This iterates over each configured article in
 `src/agent/config/industries.json`, rewriting the latest page with fresh
 research and archiving the outgoing version under
 `src/website/whitepaper/content/archive/<slug>/`.
@@ -152,28 +154,16 @@ You can also target specific articles by passing a comma-separated filter. For
 example:
 
 ```sh
-npm start -- nz
-npm start -- finance,healthcare
+npm run agent -- nz
+npm run agent -- finance,healthcare
 ```
 
 ### Working on the Website
 
-1. Change to the site directory:
+Serve the site locally from the repo root:
 
-   ```sh
-   cd src/website
-   ```
-
-2. Install dependencies:
-
-   ```sh
-   npm install
-   ```
-
-3. Serve the site locally:
-
-   ```sh
-   npm run dev
-   ```
+```sh
+npm run dev:site
+```
 
 The site will be available at `http://localhost:4321` by default.

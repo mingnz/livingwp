@@ -8,33 +8,37 @@ Living Whitepaper tracks AI adoption across industries in Aotearoa New Zealand. 
 
 ## Commands
 
-### Agent (TypeScript)
+This is an npm-workspaces monorepo. Run `npm install` once at the repo root; it
+installs all workspaces. The root scripts are the canonical entry points:
+
 ```bash
-cd src/agent
-npm install
-npm start                              # Run agent for all industries
-npm start -- healthcare                # Run for specific industry
-npm start -- healthcare,education      # Multiple industries (comma-separated)
+npm install                            # Install all workspaces (run at root)
+npm run agent -- healthcare            # Run agent for an industry (omit arg = all)
+npm run agent -- healthcare,education  # Multiple industries (comma-separated)
 npm run add-industry -- "Logistics"    # Add an industry to industries.json
-npm run typecheck                      # Verify types (no test suite)
+npm run typecheck                      # Typecheck the shared contract + agent
+npm run dev:site                       # Website dev server (http://localhost:4321)
+npm run build:site                     # Website production build to src/website/dist/
 ```
 
-### Website (Astro)
-```bash
-cd src/website
-npm install
-npm run dev      # Local dev server (http://localhost:4321)
-npm run build    # Production build to dist/
-```
+You can also run a workspace directly, e.g. `npm start -w livingwp-agent -- healthcare`.
 
 ## Architecture
+
+### Workspaces
+
+- **`src/agent`** (`livingwp-agent`) — the TypeScript research/update agent.
+- **`src/website`** (`livingwp-website`) — the Astro 5 + Tailwind v4 site.
+- **`packages/article-contract`** (`@livingwp/article-contract`) — the shared
+  frontmatter contract (a Zod-shape factory) consumed by both above, so the
+  field definitions can't drift between writer and reader.
 
 ### Two-Part System
 
 1. **TypeScript agent** (`src/agent/`) — Reads industry config, loads the current article, runs a research agent (Vercel AI SDK `ToolLoopAgent`) with web search, archives the old article, and saves the new one.
-2. **Astro website** (`src/website/`) — Static site (Astro 5 + Tailwind v4) that renders articles from markdown files with YAML frontmatter via a content collection. Deployed to GitHub Pages on push to main.
+2. **Astro website** (`src/website/`) — Static site that renders articles from markdown files with YAML frontmatter via a content collection. Deployed to GitHub Pages on push to main.
 
-The two halves share only the markdown files and their frontmatter contract — neither invokes the other.
+The two halves share only the markdown files and the `@livingwp/article-contract` schema — neither invokes the other.
 
 ### Provider flexibility
 
@@ -50,16 +54,20 @@ Industries are defined in `src/agent/config/industries.json`. For each industry,
 
 ### Article Metadata Contract
 
-Every article requires these frontmatter fields (written by `normalizeArticleMetadata()` in `src/agent/src/files.ts`, validated by the Zod schema in `src/website/src/content.config.ts`):
+The field set is defined **once** in `packages/article-contract` (`articleFrontmatterShape`). The agent builds a strict Zod schema from it and validates its output in `normalizeArticleMetadata()` (`src/agent/src/files.ts`) before writing; the Astro content collection (`src/website/src/content.config.ts`) builds its read schema from the same shape (adding string→Date coercion for `article_updated_at`). Change the contract in one place.
 
-- `layout: article` — Inert legacy field (kept for compatibility; Astro ignores it)
+- `title`
+- `permalink` — Stable URL for latest, timestamped URL for archives. **Routes are generated from this field, never from file paths.**
 - `article: true/false` — `true` for latest (shown in index), `false` for archived
 - `article_latest: true/false` — Controls edition timeline highlighting
 - `article_version: true/false` — `true` for archived versions
 - `article_history: true` — Enables edition history
 - `article_series: <industry>` — Groups articles for history navigation
+- `article_kind: industry|snapshot`
 - `article_updated_at` — ISO 8601 timestamp in Pacific/Auckland timezone
-- `permalink` — Stable URL for latest, timestamped URL for archives. **Routes are generated from this field, never from file paths.**
+- `article_summary`, `description` — extracted from the body
+
+The agent writes exactly these fields. Retired Jekyll-era fields (`layout`, `date`, `last_modified_at`) are no longer written; the read schema strips unknown keys so older archives that still contain them stay valid.
 
 ### Key Files
 
@@ -70,7 +78,8 @@ Every article requires these frontmatter fields (written by `normalizeArticleMet
 - `src/agent/src/markdown.ts` — YAML frontmatter parsing/serialization (gray-matter + js-yaml)
 - `src/agent/src/usage.ts` — Token usage and cost reporting
 - `src/agent/prompts/instructions_research.md` — Research agent prompt template
-- `src/website/src/content.config.ts` — Content collection + frontmatter schema (Zod)
+- `packages/article-contract/src/index.ts` — Shared frontmatter contract (single source of truth)
+- `src/website/src/content.config.ts` — Content collection; builds its schema from the shared contract
 - `src/website/src/pages/[...slug].astro` — Article page (routes from permalinks, edition timeline)
 - `src/website/src/lib/articles.ts` — Collection query helpers (latest/snapshot/history)
 - `src/website/src/styles/global.css` — Tailwind v4 theme tokens + article prose styles
@@ -79,11 +88,13 @@ Every article requires these frontmatter fields (written by `normalizeArticleMet
 
 - `run_agent.yml` — Runs the agent and opens a PR with updated articles
 - `add_industry.yml` — Adds a new industry to config and generates its first article
-- `deploy_website.yml` — Builds the Astro site (Node 22, `npm ci && npm run build`) and deploys to GitHub Pages (triggers on `src/website/**` changes to main)
+- `deploy_website.yml` — Builds the Astro site (Node 22, `npm ci` at root + `npm run build:site`) and deploys to GitHub Pages (triggers on `src/website/**` changes to main)
+
+All workflows `npm ci` at the repo root (workspaces share one lockfile).
 
 ## Key Conventions
 
-- **Package manager**: npm (both `src/agent` and `src/website`)
+- **Package manager**: npm workspaces (root install; `src/agent`, `src/website`, `packages/*`)
 - **Timezone**: All article timestamps use Pacific/Auckland
 - **Archive immutability**: Archived articles are never modified; new versions create new files
 - **No post-processing**: Agent output is publication-ready markdown written directly to files
