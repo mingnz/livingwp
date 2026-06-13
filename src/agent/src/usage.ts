@@ -164,7 +164,11 @@ export function formatUsageSummary(report: UsageReport): string {
   const totals = report.totals;
   const estimatedCost = totals['estimated_cost_usd'];
   let costLabel = estimatedCost != null ? String(estimatedCost) : 'n/a';
-  if (!totals['cost_complete']) costLabel = `${costLabel} (partial estimate)`;
+  // "(partial estimate)" only makes sense when there is a partial figure to
+  // qualify; an unpriced run is just "n/a".
+  if (estimatedCost != null && !totals['cost_complete']) {
+    costLabel = `${costLabel} (partial estimate)`;
+  }
 
   return (
     'Usage summary: ' +

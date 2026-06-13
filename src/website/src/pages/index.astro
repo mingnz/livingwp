@@ -1,7 +1,9 @@
 ---
+import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
 import SnapshotFeature from '../components/SnapshotFeature.astro';
 import ArticleIndex from '../components/ArticleIndex.astro';
+import ainz from '../assets/ainz.jpg';
 import {
   getAllArticles,
   getIndustryReports,
@@ -111,13 +113,13 @@ const stats = [
       </div>
     </div>
     <figure class="border-ink/90 hidden border-2 sm:block">
-      <img
-        src="/ainz.jpg"
-        alt="AI in New Zealand"
+      <Image
+        src={ainz}
+        alt=""
+        widths={[280, 560]}
+        sizes="280px"
         class="block w-full grayscale-25 sepia-20 transition-all duration-500 hover:grayscale-0 hover:sepia-0"
         loading="lazy"
-        width="600"
-        height="600"
       />
     </figure>
   </section>

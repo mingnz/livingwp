@@ -124,8 +124,10 @@ export function parseArticleTimestamp(value: unknown): DateTime | null {
 
   const parsed = DateTime.fromISO(text, { setZone: true });
   if (!parsed.isValid) return null;
-  // Date-only or zone-less strings are interpreted in the site timezone.
-  if (!/[+Zz]|\d{2}:\d{2}$/.test(text.slice(10))) {
+  // Strings without an explicit zone (a trailing Z or ±hh:mm offset) are
+  // interpreted in the site timezone rather than the host's. Without this,
+  // a zone-less timestamp would be read in the CI runner's zone (UTC).
+  if (!/(?:[Zz]|[+-]\d{2}:?\d{2})$/.test(text)) {
     return DateTime.fromISO(text, { zone: SITE_TIMEZONE });
   }
   return parsed;

@@ -13,6 +13,6 @@
     "add-industry": "npm run --silent add-industry -w livingwp-agent --",
     "build:site": "npm run build -w livingwp-website",
     "dev:site": "npm run dev -w livingwp-website",
-    "typecheck": "npm run typecheck -w @livingwp/article-contract -w livingwp-agent"
+    "typecheck": "npm run typecheck -w @livingwp/article-contract -w livingwp-agent -w livingwp-website"
   }
 }
