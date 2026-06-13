@@ -143,6 +143,7 @@ export async function updateArticles(articleFilter?: string): Promise<UsageRepor
   }
 
   const articleReports: ArticleUsageReport[] = [];
+  const failures: string[] = [];
   for (const industryName of industries) {
     const articleConfig = industryConfig[industryName] ?? {};
     const { agent, modelName } = await getResearchAgent(industryName, articleConfig);
@@ -165,8 +166,25 @@ export async function updateArticles(articleFilter?: string): Promise<UsageRepor
         result: researchResult,
       }),
     );
-    console.log(`Research result for ${topic}:\n${researchResult.text}\n`);
-    const updated = formatMarkdown(frontMatter, researchResult.text.trim());
+
+    // Never destroy a good article on a failed/incomplete run. A research run
+    // that returns no usable text (e.g. a dropped connection, a content filter,
+    // or an incomplete response) must leave the existing article and its
+    // archive untouched rather than archiving the good version and overwriting
+    // it with an empty body.
+    const newBody = researchResult.text.trim();
+    if (researchResult.finishReason !== 'stop' || newBody.length < MIN_ARTICLE_BODY_CHARS) {
+      console.error(
+        `Research for ${industryName} produced no usable output ` +
+          `(finishReason=${researchResult.finishReason}, body length=${newBody.length}); ` +
+          'leaving the existing article unchanged.',
+      );
+      failures.push(industryName);
+      continue;
+    }
+
+    console.log(`Research result for ${topic}:\n${newBody}\n`);
+    const updated = formatMarkdown(frontMatter, newBody);
     if (existingArticle) {
       const archivePath = archiveIndustryArticle(industryName, existingArticle);
       console.log(`Archived previous version for ${industryName} to ${archivePath}`);
@@ -180,5 +198,20 @@ export async function updateArticles(articleFilter?: string): Promise<UsageRepor
   });
   writeUsageReportIfConfigured(usageReport);
   writeUsageCommentIfConfigured(usageReport);
+
+  if (failures.length > 0) {
+    throw new Error(
+      `Research failed to produce usable output for: ${failures.join(', ')}. ` +
+        'Their articles were left unchanged.',
+    );
+  }
+
   return usageReport;
 }
+
+/**
+ * Minimum body length for a research result to be considered usable. Real
+ * articles are many kilobytes; anything shorter signals a failed or truncated
+ * run that must not overwrite the existing article.
+ */
+const MIN_ARTICLE_BODY_CHARS = 200;

@@ -21,6 +21,7 @@ export const STREAMING_ENABLED =
 
 export interface ResearchResult {
   text: string;
+  finishReason: Awaited<ReturnType<ToolLoopAgent['generate']>>['finishReason'];
   steps: StepResult<ToolSet>[];
   totalUsage: Awaited<ReturnType<ToolLoopAgent['generate']>>['totalUsage'];
 }
@@ -143,6 +144,7 @@ export async function performResearch(
     // Stream is complete → the result promises are now populated.
     return {
       text: await stream.text,
+      finishReason: await stream.finishReason,
       steps: await stream.steps,
       totalUsage: await stream.totalUsage,
     };
@@ -150,5 +152,10 @@ export async function performResearch(
 
   console.log(`Researching: ${topic} (Streaming Disabled)`);
   const result = await agent.generate({ prompt: initialInput });
-  return { text: result.text, steps: result.steps, totalUsage: result.totalUsage };
+  return {
+    text: result.text,
+    finishReason: result.finishReason,
+    steps: result.steps,
+    totalUsage: result.totalUsage,
+  };
 }
