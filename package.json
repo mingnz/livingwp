@@ -1,0 +1,18 @@
+{
+  "name": "livingwp",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "src/agent",
+    "src/website"
+  ],
+  "scripts": {
+    "agent": "npm start -w livingwp-agent --",
+    "add-industry": "npm run --silent add-industry -w livingwp-agent --",
+    "build:site": "npm run build -w livingwp-website",
+    "dev:site": "npm run dev -w livingwp-website",
+    "typecheck": "npm run typecheck -w @livingwp/article-contract -w livingwp-agent"
+  }
+}

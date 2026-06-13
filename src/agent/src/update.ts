@@ -115,7 +115,6 @@ export function getArticleStub(industry: string, config: IndustryConfig = {}): s
   const title = config.title ?? `AI in ${titleCase(industry.replaceAll('_', ' '))}`;
   const articleKind = config.article_kind ?? 'industry';
   const frontMatter: FrontMatter = {
-    layout: 'article',
     title,
     permalink: `/whitepaper/${industry}/`,
     article: true,

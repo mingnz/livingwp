@@ -1,29 +1,22 @@
 import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
+import { articleFrontmatterShape } from '@livingwp/article-contract';
 
 /**
- * The article frontmatter contract, as written by the Python agent
- * (`normalize_article_metadata()` in src/livingwp/utils/files.py).
- * Older archives predate some fields, so those are optional or defaulted.
- * Archived files are immutable — the schema must keep accepting them as-is.
+ * Article frontmatter contract. Field names and types come from the shared
+ * `@livingwp/article-contract` package — the same definition the agent
+ * validates its output against — so the two ends can't drift.
+ *
+ * The shared shape describes the on-disk form (ISO string timestamps); here we
+ * override `article_updated_at` with `z.coerce.date()` because the site's
+ * components render it as a `Date`. Unknown keys (e.g. the Jekyll-era `layout`
+ * still present in older archives) are stripped, so immutable archives stay
+ * valid without re-listing retired fields.
  */
 const articles = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './whitepaper/content' }),
-  schema: z.object({
-    title: z.string(),
-    permalink: z.string(),
-    article: z.boolean(),
-    article_history: z.boolean(),
-    article_latest: z.boolean(),
-    article_version: z.boolean(),
-    article_series: z.string(),
+  schema: z.object(articleFrontmatterShape(z)).extend({
     article_updated_at: z.coerce.date(),
-    article_kind: z.enum(['snapshot', 'industry']).default('industry'),
-    article_summary: z.string().optional(),
-    description: z.string().optional(),
-    date: z.coerce.date().optional(),
-    last_modified_at: z.coerce.date().optional(),
-    layout: z.string().optional(),
   }),
 });
 
