@@ -1,0 +1,35 @@
+---
+import Base from '../layouts/Base.astro';
+import SystemDiagram from '../components/SystemDiagram.astro';
+---
+
+<Base
+  title="How it Works"
+  description="How an AI agent researches and publishes sector reports on generative AI adoption in Aotearoa New Zealand."
+>
+  <section class="py-14 sm:py-16">
+    <div class="max-w-2xl">
+      <h1 class="font-display reveal text-4xl font-semibold tracking-tight sm:text-5xl">
+        How it works
+      </h1>
+      <div class="article-prose reveal reveal-1 mt-8">
+        <p>
+          An AI agent keeps this site up to date. For each sector it searches the
+          web for recent news, research, and case studies, then writes a fresh
+          version of the report with its sources cited inline. Every update is
+          opened as a pull request on GitHub, so the community can review the
+          changes before they go live.
+        </p>
+        <p>
+          Previous versions of each report are archived automatically, so you can
+          always trace how the content has evolved over time. The whole system —
+          prompts, agent code, and workflows — is open source: explore the
+          <a href="https://github.com/mingnz/livingwp">GitHub repository</a> to
+          see how it works or to contribute.
+        </p>
+      </div>
+    </div>
+
+    <SystemDiagram />
+  </section>
+</Base>

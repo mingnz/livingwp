@@ -17,7 +17,11 @@ on:
         required: false
     secrets:
       OPENAI_API_KEY:
-        required: true
+        required: false
+      ANTHROPIC_API_KEY:
+        required: false
+      GOOGLE_GENERATIVE_AI_API_KEY:
+        required: false
 
 permissions:
   contents: write
@@ -52,23 +56,34 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           ref: ${{ inputs.branch_name }} 
 
-      - name: Install uv
-        uses: astral-sh/setup-uv@v5
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: package-lock.json
 
-      - name: Validate OpenAI credentials
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Validate provider credentials
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GOOGLE_GENERATIVE_AI_API_KEY: ${{ secrets.GOOGLE_GENERATIVE_AI_API_KEY }}
         run: |
-          if [ -z "$OPENAI_API_KEY" ]; then
-            echo "OPENAI_API_KEY is not set. Add it to repository secrets or pass it to the reusable workflow." >&2
+          if [ -z "$OPENAI_API_KEY" ] && [ -z "$ANTHROPIC_API_KEY" ] && [ -z "$GOOGLE_GENERATIVE_AI_API_KEY" ]; then
+            echo "No provider API key is set. Add OPENAI_API_KEY (or ANTHROPIC_API_KEY / GOOGLE_GENERATIVE_AI_API_KEY) to repository secrets or pass it to the reusable workflow." >&2
             exit 1
           fi
 
       - name: Run livingwp update
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GOOGLE_GENERATIVE_AI_API_KEY: ${{ secrets.GOOGLE_GENERATIVE_AI_API_KEY }}
           LIVINGWP_USAGE_COMMENT_PATH: ${{ runner.temp }}/livingwp-usage-comment.md
-        run: uv run livingwp "${{ inputs.article_filter }}"
+        run: npm run agent -- "${{ inputs.article_filter }}"
 
       - name: Check for changes
         id: changes
@@ -103,7 +118,7 @@ jobs:
 
       - name: Commit changes to PR
         if:  ${{ inputs.branch_name && steps.changes.outputs.changes == 'true' }} 
-        uses: devops-infra/action-commit-push@master
+        uses: devops-infra/action-commit-push@v1.5.0
         with:
           github_token: "${{ secrets.GITHUB_TOKEN }}"
           commit_prefix: "chore: "

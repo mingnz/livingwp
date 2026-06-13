@@ -1,0 +1,144 @@
+---
+import { render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import EditionTimeline from '../components/EditionTimeline.astro';
+import ogImage from '../assets/ainz.jpg';
+import { articleNode } from '../lib/seo';
+import {
+  getAllArticles,
+  getSeriesHistory,
+  permalinkToSlug,
+  formatDate,
+  type Article,
+} from '../lib/articles';
+
+export async function getStaticPaths() {
+  // Routes derive from the permalink frontmatter field — never from file
+  // paths — so published URLs are stable by construction.
+  const articles = await getAllArticles();
+  return articles.map((entry) => ({
+    params: { slug: permalinkToSlug(entry.data.permalink) },
+    props: { entry },
+  }));
+}
+
+interface Props {
+  entry: Article;
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const { data } = entry;
+
+const history = await getSeriesHistory(data.article_series);
+const latest = data.article_latest
+  ? undefined
+  : history.find((e) => e.data.article_latest);
+
+const description = data.description ?? data.article_summary ?? '';
+const canonical = new URL(entry.data.permalink, Astro.site);
+// First edition in the series = original publication; this edition = modified.
+const firstPublished =
+  history[history.length - 1]?.data.article_updated_at ?? data.article_updated_at;
+
+const articleSchema = articleNode(Astro.site!, {
+  url: canonical,
+  headline: data.title,
+  description,
+  datePublished: firstPublished,
+  dateModified: data.article_updated_at,
+  image: new URL(ogImage.src, Astro.site),
+});
+
+// Clean-markdown view for AI crawlers / "copy as markdown" — latest editions only.
+const markdownUrl = data.article_latest
+  ? `/whitepaper/${data.article_series}.md`
+  : undefined;
+---
+
+<Base
+  title={data.title}
+  description={description}
+  noindex={!data.article_latest}
+  jsonLd={[articleSchema]}
+>
+  <div
+    class="gap-12 py-10 sm:py-14 lg:grid lg:grid-cols-[minmax(0,1fr)_13rem] lg:gap-16"
+  >
+    <article class="min-w-0">
+      <header class="reveal">
+        <nav class="font-mono text-ink-muted text-[0.7rem] tracking-[0.14em] uppercase">
+          <a class="hover:text-pounamu-deep transition-colors" href="/whitepaper/">
+            Articles
+          </a>
+          <span aria-hidden="true" class="mx-2">/</span>
+          <span>{data.title}</span>
+        </nav>
+
+        <div class="mt-6 flex flex-wrap items-center gap-3">
+          {
+            data.article_latest ? (
+              <span class="bg-pounamu-deep font-mono px-2.5 py-1 text-[0.65rem] tracking-[0.14em] text-paper uppercase">
+                Latest
+              </span>
+            ) : (
+              <span class="bg-clay font-mono px-2.5 py-1 text-[0.65rem] tracking-[0.14em] text-paper uppercase">
+                Archived
+              </span>
+            )
+          }
+          <time
+            datetime={data.article_updated_at.toISOString()}
+            class="font-mono text-ink-muted text-[0.72rem] tracking-wider uppercase"
+          >
+            {formatDate(data.article_updated_at)}
+          </time>
+        </div>
+
+        {
+          latest && (
+            <p class="border-clay bg-cream mt-6 border-l-2 px-4 py-3 text-[0.95rem]">
+              You're reading an archived edition.{' '}
+              <a
+                class="text-pounamu-deep font-medium underline underline-offset-4"
+                href={latest.data.permalink}
+              >
+                Read the latest version
+              </a>{' '}
+              from {formatDate(latest.data.article_updated_at)}.
+            </p>
+          )
+        }
+      </header>
+
+      <div class="article-prose reveal reveal-1 mt-10">
+        <Content />
+      </div>
+
+      <div class="mt-14 flex flex-wrap items-center gap-x-7 gap-y-2">
+        <a
+          class="font-mono text-ink-muted hover:text-pounamu-deep inline-block text-[0.72rem] tracking-[0.14em] uppercase underline decoration-rule underline-offset-4 transition-colors"
+          href="/whitepaper/"
+        >
+          ← Back to all articles
+        </a>
+        {
+          markdownUrl && (
+            <a
+              class="font-mono text-ink-muted hover:text-pounamu-deep inline-block text-[0.72rem] tracking-[0.14em] uppercase underline decoration-rule underline-offset-4 transition-colors"
+              href={markdownUrl}
+            >
+              View as Markdown
+            </a>
+          )
+        }
+      </div>
+    </article>
+
+    <aside class="reveal reveal-2 border-rule mt-14 border-t pt-8 lg:mt-0 lg:border-t-0 lg:pt-0">
+      <div class="lg:sticky lg:top-10">
+        <EditionTimeline entry={entry} />
+      </div>
+    </aside>
+  </div>
+</Base>

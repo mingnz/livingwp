@@ -1,0 +1,126 @@
+---
+import { Image } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import SnapshotFeature from '../components/SnapshotFeature.astro';
+import ArticleIndex from '../components/ArticleIndex.astro';
+import ainz from '../assets/ainz.jpg';
+import {
+  getAllArticles,
+  getIndustryReports,
+  formatDate,
+} from '../lib/articles';
+
+const allEditions = await getAllArticles();
+const reports = await getIndustryReports();
+const lastUpdated = new Date(
+  Math.max(...allEditions.map((a) => a.data.article_updated_at.getTime())),
+);
+
+const stats = [
+  { value: String(reports.length), label: 'Sector reports' },
+  { value: String(allEditions.length), label: 'Editions published' },
+  { value: formatDate(lastUpdated), label: 'Last updated' },
+];
+---
+
+<Base
+  description="Explore the latest national AI snapshot and sector reports across Aotearoa New Zealand."
+>
+  <section class="py-14 sm:py-20">
+    <h1
+      class="font-display reveal max-w-4xl text-[2.6rem] leading-[1.04] font-semibold tracking-tight text-balance sm:text-[4rem]"
+    >
+      How Aotearoa is adopting AI,
+      <em class="text-pounamu-deep font-medium">sector by sector.</em>
+    </h1>
+    <p
+      class="reveal reveal-1 text-ink-muted mt-6 max-w-2xl text-lg leading-relaxed sm:text-xl"
+    >
+      A living resource — automatically researched and updated by an AI agent that
+      publishes a monthly national snapshot alongside deeper sector reports.
+    </p>
+
+    <dl
+      class="reveal reveal-2 border-rule divide-rule mt-12 grid divide-y border-y sm:grid-cols-3 sm:divide-x sm:divide-y-0"
+    >
+      {
+        stats.map(({ value, label }) => (
+          <div class="px-2 py-5 sm:px-6 sm:first:pl-2">
+            <dd class="font-display text-2xl font-semibold tracking-tight sm:text-3xl">
+              {value}
+            </dd>
+            <dt class="font-mono text-ink-muted mt-1 text-[0.65rem] tracking-[0.16em] uppercase">
+              {label}
+            </dt>
+          </div>
+        ))
+      }
+    </dl>
+  </section>
+
+  <div class="reveal reveal-3">
+    <SnapshotFeature
+      heading="Latest national snapshot"
+      primaryLabel="Read the full snapshot"
+      secondaryLabel="Browse industry articles"
+      showIndustryLink
+    />
+  </div>
+
+  <section class="reveal reveal-4 py-16 sm:py-20">
+    <div class="mb-8 flex items-baseline justify-between gap-4">
+      <h2 class="font-display text-2xl font-semibold tracking-tight sm:text-3xl">
+        Industry reports
+      </h2>
+      <a
+        href="/whitepaper/"
+        class="font-mono text-ink-muted hover:text-pounamu-deep shrink-0 text-[0.72rem] tracking-[0.14em] uppercase underline decoration-rule underline-offset-4 transition-colors"
+      >
+        All articles
+      </a>
+    </div>
+    <ArticleIndex />
+  </section>
+
+  <section
+    class="border-rule grid items-center gap-10 border-t py-16 sm:grid-cols-[1fr_280px] sm:py-20"
+  >
+    <div>
+      <p class="font-mono text-clay text-[0.65rem] tracking-[0.18em] uppercase">
+        Behind the curtain
+      </p>
+      <h2 class="font-display mt-4 text-2xl font-semibold tracking-tight sm:text-3xl">
+        Researched by AI, reviewed by humans
+      </h2>
+      <p class="text-ink-muted mt-4 max-w-xl leading-relaxed">
+        Every update is researched and written by an AI agent, then submitted as a
+        pull request for community review before it goes live. This is an
+        open-source project from the AI Forum NZ — contributions welcome.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-x-7 gap-y-3">
+        <a
+          href="/how-it-works/"
+          class="font-mono text-pounamu-deep hover:text-pounamu text-[0.72rem] tracking-[0.14em] uppercase underline decoration-pounamu/40 underline-offset-4 transition-colors"
+        >
+          See how it works
+        </a>
+        <a
+          href="https://github.com/mingnz/livingwp"
+          class="font-mono text-ink-muted hover:text-pounamu-deep text-[0.72rem] tracking-[0.14em] uppercase underline decoration-rule underline-offset-4 transition-colors"
+        >
+          View on GitHub
+        </a>
+      </div>
+    </div>
+    <figure class="border-ink/90 hidden border-2 sm:block">
+      <Image
+        src={ainz}
+        alt=""
+        widths={[280, 560]}
+        sizes="280px"
+        class="block w-full grayscale-25 sepia-20 transition-all duration-500 hover:grayscale-0 hover:sepia-0"
+        loading="lazy"
+      />
+    </figure>
+  </section>
+</Base>
