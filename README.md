@@ -8,7 +8,7 @@ New Zealand. The site publishes a monthly national "State of AI in New Zealand"
 snapshot alongside sector-specific living articles. The repository contains two
 parts:
 
-- **`src/livingwp`** – the Python code for an LLM agent that gathers research and
+- **`src/agent`** – the TypeScript code for an LLM agent that gathers research and
   writes updates.
 - **`src/website`** – an Astro site that is automatically populated with those
   updates and served on GitHub Pages.
@@ -25,8 +25,8 @@ We welcome contributions from the community! There are two main ways you can get
 
 ### Editing the Research Prompts
 
-The default industry prompt is defined in [`src/livingwp/prompts/instructions_research.md`](https://github.com/mingnz/livingwp/blob/main/src/livingwp/prompts/instructions_research.md).
-The New Zealand snapshot uses [`src/livingwp/prompts/instructions_research_nz_snapshot.md`](https://github.com/mingnz/livingwp/blob/main/src/livingwp/prompts/instructions_research_nz_snapshot.md).
+The default industry prompt is defined in [`src/agent/prompts/instructions_research.md`](https://github.com/mingnz/livingwp/blob/main/src/agent/prompts/instructions_research.md).
+The New Zealand snapshot uses [`src/agent/prompts/instructions_research_nz_snapshot.md`](https://github.com/mingnz/livingwp/blob/main/src/agent/prompts/instructions_research_nz_snapshot.md).
 
 You can suggest changes to these prompts by either:
 
@@ -35,14 +35,14 @@ You can suggest changes to these prompts by either:
 
 ## Articles, prompts and models
 
-The settings for each generated article are defined in [`src/livingwp/config/industries.json`](https://github.com/mingnz/livingwp/blob/main/src/livingwp/config/industries.json). Changing these settings allows you to:
+The settings for each generated article are defined in [`src/agent/config/industries.json`](https://github.com/mingnz/livingwp/blob/main/src/agent/config/industries.json). Changing these settings allows you to:
 
 - Add a new industry article. A new page will be created and added to the site the next time the update process runs.
 - Configure special non-industry articles such as the `nz` monthly national snapshot.
-- Specify which OpenAI model to use for an article.
-- Add a new instructions file to [`src/livingwp/prompts/`](https://github.com/mingnz/livingwp/blob/main/src/livingwp/prompts/) and use it to prompt the research agent for a specific article or industry.
+- Specify which model to use for an article via `research_model`. Bare names (e.g. `gpt-5.4-2026-03-05`) use OpenAI; prefix with `anthropic/` or `google/` to use those providers.
+- Add a new instructions file to [`src/agent/prompts/`](https://github.com/mingnz/livingwp/blob/main/src/agent/prompts/) and use it to prompt the research agent for a specific article or industry.
 
-The default runtime now uses the `openai-agents` Python SDK on the `0.10.x` line with `gpt-5.4-2026-03-05` as the research model snapshot. You can still override the model with the `RESEARCH_MODEL` environment variable or per-article config.
+The agent is built on the [Vercel AI SDK](https://ai-sdk.dev), so it works with any supported provider. The default research model is `gpt-5.4-2026-03-05` (OpenAI). You can override it with the `RESEARCH_MODEL` environment variable or per-article config. Each provider's hosted web-search tool is used automatically based on the resolved provider.
 
 We look forward to your contributions!
 
@@ -53,7 +53,7 @@ In addition to web search results, the agent can be prompted to incorporate mate
 **Update the article config** 
 
 - Create the vector store in [platform.openai.com](https://platform.openai.com/storage/vector_stores/). 
-- Add a `file_store_name` key for the article in [`src/livingwp/config/industries.json`](https://github.com/mingnz/livingwp/blob/main/src/livingwp/config/industries.json).
+- Add a `file_store_name` key for the article in [`src/agent/config/industries.json`](https://github.com/mingnz/livingwp/blob/main/src/agent/config/industries.json). File search uses OpenAI vector stores, so the article's `research_model` must be an OpenAI model.
 - Where they're available, you can also provide public URLs for any files in the store by adding `filename_urls` to the configuration. This will allow the agent to include citation links for any referenced files.
 
 E.g.
@@ -118,28 +118,30 @@ flowchart TD
 
 ### Requirements
 
-- [uv](https://github.com/astral-sh/uv) for Python dependencies
-- [Node.js](https://nodejs.org) 22+ for running the website locally
+- [Node.js](https://nodejs.org) 22+ for both the agent and the website
 
 ### Running the Agent
 
-1. Install Python dependencies:
+1. Install dependencies:
 
    ```sh
-   uv sync
+   cd src/agent
+   npm install
    ```
 
-2. Make sure `OPENAI_API_KEY` is available in your environment before running a
-   real update.
+2. Make sure the API key for your configured provider is available in your
+   environment (`OPENAI_API_KEY` by default; `ANTHROPIC_API_KEY` or
+   `GOOGLE_GENERATIVE_AI_API_KEY` if you use those providers). See
+   [`.env.sample`](.env.sample).
 
 3. Run the agent:
 
    ```sh
-   uv run livingwp
+   npm start
    ```
 
 Running the command above iterates over each configured article in
-`src/livingwp/config/industries.json`, rewriting the latest page with fresh
+`src/agent/config/industries.json`, rewriting the latest page with fresh
 research and archiving the outgoing version under
 `src/website/whitepaper/content/archive/<slug>/`.
 
@@ -150,8 +152,8 @@ You can also target specific articles by passing a comma-separated filter. For
 example:
 
 ```sh
-uv run livingwp nz
-uv run livingwp finance,healthcare
+npm start -- nz
+npm start -- finance,healthcare
 ```
 
 ### Working on the Website

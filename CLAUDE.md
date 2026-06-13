@@ -4,17 +4,19 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Living Whitepaper tracks AI adoption across industries in Aotearoa New Zealand. It combines a Python agent (OpenAI Agents SDK + web search) that conducts research with an Astro static site that publishes the findings. GitHub Actions orchestrate automated article updates and deployment.
+Living Whitepaper tracks AI adoption across industries in Aotearoa New Zealand. It combines a TypeScript agent (Vercel AI SDK + provider-hosted web search) that conducts research with an Astro static site that publishes the findings. GitHub Actions orchestrate automated article updates and deployment.
 
 ## Commands
 
-### Python Agent
+### Agent (TypeScript)
 ```bash
-uv sync                                      # Install dependencies
-uv run livingwp                               # Run agent for all industries
-uv run livingwp healthcare                    # Run for specific industry
-uv run livingwp healthcare,education          # Multiple industries (comma-separated)
-uv run python -m compileall src/livingwp      # Verify Python syntax (no test suite)
+cd src/agent
+npm install
+npm start                              # Run agent for all industries
+npm start -- healthcare                # Run for specific industry
+npm start -- healthcare,education      # Multiple industries (comma-separated)
+npm run add-industry -- "Logistics"    # Add an industry to industries.json
+npm run typecheck                      # Verify types (no test suite)
 ```
 
 ### Website (Astro)
@@ -25,24 +27,22 @@ npm run dev      # Local dev server (http://localhost:4321)
 npm run build    # Production build to dist/
 ```
 
-### Linting
-```bash
-uv run ruff check src/      # Lint Python code
-uv run ruff format src/     # Format Python code
-```
-
 ## Architecture
 
 ### Two-Part System
 
-1. **Python agent** (`src/livingwp/`) — Reads industry config, loads the current article, runs an OpenAI research agent with web search, archives the old article, and saves the new one.
+1. **TypeScript agent** (`src/agent/`) — Reads industry config, loads the current article, runs a research agent (Vercel AI SDK `ToolLoopAgent`) with web search, archives the old article, and saves the new one.
 2. **Astro website** (`src/website/`) — Static site (Astro 5 + Tailwind v4) that renders articles from markdown files with YAML frontmatter via a content collection. Deployed to GitHub Pages on push to main.
 
 The two halves share only the markdown files and their frontmatter contract — neither invokes the other.
 
+### Provider flexibility
+
+The research model is set per-article in `industries.json` via `research_model`. Bare model names (e.g. `gpt-5.4-2026-03-05`) default to OpenAI; prefix with `anthropic/` or `google/` to use those providers. Web search is provider-hosted, so `resolveModel()` in `src/agent/src/agent.ts` maps each provider to its own search tool (`openai.tools.webSearch`, `anthropic.tools.webSearch_20250305`, `google.tools.googleSearch`). File search (OpenAI vector stores) is OpenAI-only.
+
 ### Core Data Flow
 
-Industries are defined in `src/livingwp/config/industries.json`. For each industry, the agent:
+Industries are defined in `src/agent/config/industries.json`. For each industry, the agent:
 1. Loads the current article from `src/website/whitepaper/content/<industry>.md`
 2. Runs a research agent (model + prompt from config) with the previous article as context
 3. Archives the old article to `src/website/whitepaper/content/archive/<industry>/<timestamp>.md`
@@ -50,7 +50,7 @@ Industries are defined in `src/livingwp/config/industries.json`. For each indust
 
 ### Article Metadata Contract
 
-Every article requires these frontmatter fields (written by `normalize_article_metadata()` in `utils/files.py`, validated by the Zod schema in `src/website/src/content.config.ts`):
+Every article requires these frontmatter fields (written by `normalizeArticleMetadata()` in `src/agent/src/files.ts`, validated by the Zod schema in `src/website/src/content.config.ts`):
 
 - `layout: article` — Inert legacy field (kept for compatibility; Astro ignores it)
 - `article: true/false` — `true` for latest (shown in index), `false` for archived
@@ -63,11 +63,13 @@ Every article requires these frontmatter fields (written by `normalize_article_m
 
 ### Key Files
 
-- `src/livingwp/__init__.py` — CLI entry point, parses args, calls `update_articles()`
-- `src/livingwp/agents.py` — Agent creation, research execution, article update loop
-- `src/livingwp/utils/files.py` — File I/O, archiving, metadata normalization, industry config
-- `src/livingwp/utils/markdown.py` — YAML frontmatter parsing/serialization
-- `src/livingwp/prompts/instructions_research.md` — Research agent prompt template
+- `src/agent/src/cli.ts` — CLI entry point, parses args, calls `updateArticles()`
+- `src/agent/src/update.ts` — Research input building and article update loop
+- `src/agent/src/agent.ts` — Agent creation, provider resolution, research execution
+- `src/agent/src/files.ts` — File I/O, archiving, metadata normalization, industry config
+- `src/agent/src/markdown.ts` — YAML frontmatter parsing/serialization (gray-matter + js-yaml)
+- `src/agent/src/usage.ts` — Token usage and cost reporting
+- `src/agent/prompts/instructions_research.md` — Research agent prompt template
 - `src/website/src/content.config.ts` — Content collection + frontmatter schema (Zod)
 - `src/website/src/pages/[...slug].astro` — Article page (routes from permalinks, edition timeline)
 - `src/website/src/lib/articles.ts` — Collection query helpers (latest/snapshot/history)
@@ -81,7 +83,7 @@ Every article requires these frontmatter fields (written by `normalize_article_m
 
 ## Key Conventions
 
-- **Package manager**: `uv` for Python, npm for the website
+- **Package manager**: npm (both `src/agent` and `src/website`)
 - **Timezone**: All article timestamps use Pacific/Auckland
 - **Archive immutability**: Archived articles are never modified; new versions create new files
 - **No post-processing**: Agent output is publication-ready markdown written directly to files

@@ -1,0 +1,29 @@
+{
+  "name": "livingwp-agent",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "tsx src/cli.ts",
+    "add-industry": "tsx src/addIndustry.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@ai-sdk/anthropic": "^3.0.0",
+    "@ai-sdk/google": "^3.0.0",
+    "@ai-sdk/openai": "^3.0.0",
+    "@ai-sdk/provider-utils": "^3.0.0",
+    "ai": "^6.0.34",
+    "gray-matter": "^4.0.3",
+    "js-yaml": "^4.1.0",
+    "luxon": "^3.6.1",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "@types/luxon": "^3.6.2",
+    "@types/node": "^22.15.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.8.0"
+  }
+}
