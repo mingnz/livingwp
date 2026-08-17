@@ -5,162 +5,180 @@ article_kind: industry
 article_latest: true
 article_series: creative_industries
 article_summary: >-
-  AI adoption in Aotearoa New Zealand’s creative industries continues to deepen,
-  but the shape of that adoption is becoming clearer. In the public sources
-  reviewed through July 13, 2026, the strongest sector-wide baseline still
-  remains Manatū Taonga’s March 18, 2026 Cultural Participation release: 70% of
-  creators use…
-article_updated_at: '2026-07-13T23:00:19+12:00'
+  AI adoption in Aotearoa New Zealand’s creative industries has moved another
+  step away from experimentation and further into operational practice, funding
+  architecture, and trust management. The broadest public creator baseline is
+  still Manatū Taonga’s March 18, 2026 finding that 70% of creators use digital
+  tools in…
+article_updated_at: '2026-08-18T11:41:51+12:00'
 article_version: false
 description: >-
-  AI adoption in Aotearoa New Zealand’s creative industries continues to deepen,
-  but the shape of that adoption is becoming clearer. In the public sources…
+  AI adoption in Aotearoa New Zealand’s creative industries has moved another
+  step away from experimentation and further into operational practice, funding…
 permalink: /whitepaper/creative_industries/
 title: AI in Creative Industries
 ---
 
 # AI in Creative Industries in Aotearoa New Zealand: A Living Whitepaper
 
-**Updated: July 13, 2026**
+**Updated: August 18, 2026**
 
 ## Introduction
 
-AI adoption in Aotearoa New Zealand’s creative industries continues to deepen, but the shape of that adoption is becoming clearer. In the public sources reviewed through **July 13, 2026**, the strongest sector-wide baseline still remains Manatū Taonga’s **March 18, 2026** Cultural Participation release: **70%** of creators use digital tools in their creative or cultural practice, and **65%** of those digital-tool users use generative AI. Nearly half use it to support or refine ideas, around one in three use it to produce creative work, and **14%** use it to share work more widely. ([mch.govt.nz](https://www.mch.govt.nz/news/new-zealand-creatives-embrace-digital-tools))
+AI adoption in Aotearoa New Zealand’s creative industries has moved another step away from experimentation and further into **operational practice, funding architecture, and trust management**. The broadest public creator baseline is still Manatū Taonga’s March 18, 2026 finding that **70% of creators use digital tools** in their practice and **65% of those digital-tool users use generative AI**. That baseline has not been overturned since the last update. What has changed is the thickness of the surrounding system: more formal guidance, more explicit assessment criteria, clearer institutional strategy, and a widening trust debate that now includes not just rights and misinformation, but sustainability too. ([mch.govt.nz](https://www.mch.govt.nz/news/new-zealand-creatives-embrace-digital-tools?utm_source=openai))
 
-What has changed since the previous update on **June 10, 2026** is not the basic direction of travel, but the level of institutionalisation. AI is now being absorbed into funding rules, broadcaster principles, creator guidance, commercial workflows, and emerging copyright debates. New July data from NZ On Air also shows that the games sector’s economic scale has strengthened again, reinforcing the importance of AI-capable creative-tech infrastructure even where studio-level AI use remains under-documented publicly. ([nzonair.govt.nz](https://www.nzonair.govt.nz/news/nz-games-sector-shows-continued-growth-as-new-gdsr-data-released/))
-
-The strategic reading is now sharper: AI in New Zealand’s creative economy is no longer mainly a question of experimentation. It is increasingly a question of **governed adoption** — who can use AI productively while maintaining audience trust, human accountability, cultural legitimacy, and creator rights. ([media.one.nz](https://media.one.nz/ai-trust-report-2026))
+As of **August 18, 2026**, the strongest reading is that AI in New Zealand’s creative economy is becoming **human-led but infrastructure-shaped**. Publicly visible use remains strongest in newsroom workflows, accessibility, discoverability, recommendation, document analysis, and capability building. At the same time, copyright, consent, mātauranga Māori, likeness, transparency, and audience trust remain the main brakes on more aggressive synthetic-content deployment. ([jmadresearch.com](https://www.jmadresearch.com/_files/ugd/a95e86_0f7588b42f2b46c5a4bb8e0f76dfbd37.pdf))
 
 ## Executive Snapshot
 
-- **The best public adoption baseline is still broad and creator-led.** Manatū Taonga’s latest survey shows seven in 10 creators use digital tools, and 65% of those digital-tool users already use generative AI. ([mch.govt.nz](https://www.mch.govt.nz/news/new-zealand-creatives-embrace-digital-tools))
-- **The most mature New Zealand use cases remain workflow-first rather than fully synthetic-output-first.** Public examples are concentrated in research, summarisation, transcription, accessibility, recommendation, moderation, document scanning, and creative ideation support. ([jmadresearch.com](https://www.jmadresearch.com/_files/ugd/a95e86_0f7588b42f2b46c5a4bb8e0f76dfbd37.pdf))
-- **Governance has thickened further since June.** NZFC now asks applicants to disclose proposed AI use in funding applications and assess it against cultural authenticity, creative integrity, transparency, and legal/ethical impact. NZ On Air and Creative New Zealand also maintain explicit AI guidance for funded creators and applicants. ([nzfilm.co.nz](https://www.nzfilm.co.nz/assets/resources/Final-Published-HPTRM-Version-June-2026.pdf))
-- **Trust remains the main constraint on visible deployment.** One NZ’s **AI Trust Report 2026** found **62%** of New Zealanders would stop using a product or service if concerned about how AI was being used, and **68%** say a human option would increase their comfort. In news specifically, AUT/JMAD reports only about **8%** are comfortable with news produced mainly by AI with human oversight, while around **26%** are comfortable when humans lead and AI assists. ([media.one.nz](https://media.one.nz/ai-trust-report-2026))
-- **Rights, consent, likeness, and Māori cultural integrity remain the hardest unresolved issues.** This is now visible across music, screen funding, broadcaster policy, and sector advocacy on deepfakes and copyright. ([apraamcos.co.nz](https://www.apraamcos.co.nz/about-us/news-and-events/proof-of-theft-ai-investigation-the-atlantic?utm_source=openai))
-- **Commercial creative is moving fastest toward AI-shaped discoverability.** New Zealand marketing bodies are now framing the issue not just as content generation, but as how brands and media are surfaced inside AI answers, search, and agent-mediated discovery. ([marketing.org.nz](https://marketing.org.nz/resource-hub/brand/brainy-breakfast-recap-when-machines-become-the-marketers-new-audience?hs_amp=true&utm_source=openai))
-- **Games and creative tech remain the strongest growth frontier.** On **July 8, 2026**, NZ On Air reported **$829 million** combined studio revenue across 2026 GDSR recipients, **194** games in development, and **43** recipient studios, with **98%** of revenue export-based. ([nzonair.govt.nz](https://www.nzonair.govt.nz/news/nz-games-sector-shows-continued-growth-as-new-gdsr-data-released/))
+- **Adoption remains broad at creator level.** Manatū Taonga’s latest public baseline still shows 70% of creators use digital tools and 65% of those users use generative AI. ([mch.govt.nz](https://www.mch.govt.nz/news/new-zealand-creatives-embrace-digital-tools?utm_source=openai))
+- **The centre of gravity remains workflow AI, not fully synthetic publishing.** Public New Zealand evidence is still concentrated in research, transcription, summarisation, document scanning, homepage optimisation, text-to-audio, and ideation support. ([jmadresearch.com](https://www.jmadresearch.com/_files/ugd/a95e86_0f7588b42f2b46c5a4bb8e0f76dfbd37.pdf))
+- **Governance is now deeply embedded in funding practice.** NZFC asks applicants to disclose proposed AI use and address cultural authenticity, creative integrity, transparency, and ethical impact; NZ On Air and Creative New Zealand continue to assess or guide AI use in funding applications and creative mahi. ([nzfilm.co.nz](https://www.nzfilm.co.nz/assets/resources/Final-Published-HPTRM-Version-June-2026.pdf?utm_source=openai))
+- **Trust is still the decisive constraint.** One NZ’s May 26, 2026 AI Trust Report found 76% of New Zealanders had knowingly interacted with AI, but only 29% were “AI Actives,” and misuse can trigger rejection. AUT/JMAD’s 2026 trust research found about 60% remain uncomfortable with news mainly produced by AI, even with human oversight. ([media.one.nz](https://media.one.nz/ai-trust-report-2026?utm_source=openai))
+- **The trust debate has widened since July.** One NZ’s July 29, 2026 Sustainability Edition added environmental scrutiny to the AI conversation, finding 45% of New Zealanders are concerned about the environmental impacts of businesses using AI. ([media.one.nz](https://media.one.nz/ai-trust-report-2026-sustainability-edition?utm_source=openai))
+- **Discoverability is hardening into a commercial priority.** NZ On Air’s updated Investment Model elevates “Discoverability” as a core funding stream, while IAB New Zealand’s August AI & Search positioning shows brands and publishers are now treating AI-mediated discovery as a mainstream issue. ([nzonair.govt.nz](https://www.nzonair.govt.nz/documents/963/NZ_On_Air_Investment_Model_2026.pdf))
+- **Games and creative tech remain the highest-growth frontier.** NZ On Air’s July 8, 2026 GDSR release reported **$21.9 million** distributed to **43 studios**, **$829 million** combined studio revenue, and **194** games in development. ([nzonair.govt.nz](https://www.nzonair.govt.nz/news/nz-games-sector-shows-continued-growth-as-new-gdsr-data-released/?utm_source=openai))
 
-## What Changed Since the June 10, 2026 Update
+## What Changed Since the July 13, 2026 Update
 
-- **Games-sector economics strengthened again.** NZ On Air’s **July 8, 2026** GDSR release lifted the public baseline from last month’s figures: recipient studios now report **$829 million** combined revenue, up **17%** year on year, with studios rising from **40 to 43** and games in development from **170 to 194**. ([nzonair.govt.nz](https://www.nzonair.govt.nz/news/nz-games-sector-shows-continued-growth-as-new-gdsr-data-released/))
-- **NZFC moved AI governance deeper into production funding practice.** June 2026 NZFC funding guidelines now explicitly require applicants to outline proposed AI use and address cultural authenticity, creative integrity, transparency, and ethical/industry impact. ([nzfilm.co.nz](https://www.nzfilm.co.nz/assets/resources/Final-Published-HPTRM-Version-June-2026.pdf))
-- **Copyright and AI moved closer to formal policy treatment.** On **June 3, 2026**, the Government said Cabinet had invited the Commerce and Consumer Affairs Minister to report back by **March 31, 2027** on a possible copyright framework for generative AI in New Zealand. ([beehive.govt.nz](https://www.beehive.govt.nz/release/creative-and-cultural-sector-gets-further-copyright-support?utm_source=openai))
-- **Music-rights pressure intensified.** On **June 19, 2026**, APRA AMCOS highlighted a new investigation reporting that Australian and New Zealand songs were present in leaked AI training datasets, pushing the debate from abstract concern toward documented dataset exposure. ([apraamcos.co.nz](https://www.apraamcos.co.nz/about-us/news-and-events/proof-of-theft-ai-investigation-the-atlantic?utm_source=openai))
-- **Commercial case studies became more concrete.** Public event and industry materials now present Trade Me as a visible local example of AI-first or AI-native marketing workflows across planning, creative, optimisation, and reporting. ([braze.com](https://www.braze.com/resources/articles/key-insights-from-grow-with-braze-auckland-2026?utm_source=openai))
+- **AI trust expanded beyond privacy and transparency into sustainability.** One NZ’s July 29, 2026 Sustainability Edition found concern about AI’s environmental impacts is now material: 45% expressed concern, with specific worries around electricity use (66%), water consumption (51%), e-waste (50%), and carbon emissions (44%). ([media.one.nz](https://media.one.nz/ai-trust-report-2026-sustainability-edition?utm_source=openai))
+- **NZ On Air updated its operational architecture on August 4, 2026.** Its renamed **Investment Model** now explicitly organises funding around **Insights, Capability, Creation, and Discoverability**, reinforcing that AI-era value in media is not only about production but also about access, audience reach, and adaptation to emerging technologies. ([nzonair.govt.nz](https://www.nzonair.govt.nz/documents/963/NZ_On_Air_Investment_Model_2026.pdf))
+- **TVNZ supplied stronger evidence of enterprise adoption.** In its FY25 annual report, TVNZ said Microsoft Copilot had been implemented across the organisation, and in its FY27 Statement of Intent it described workforce capability as including the integration of AI and technology. ([corporate.tvnz.co.nz](https://corporate.tvnz.co.nz/assets/Uploads/TVNZ-Annual-Report-FY25.pdf))
+- **Government strategy is now easier to read as a coherent sector position.** Manatū Taonga’s Amplify strategy and Long-term Insights Briefing place responsible AI uptake, accessibility technology, IP, privacy, misinformation, and data sovereignty inside the formal creative-sector policy agenda. ([mch.govt.nz](https://www.mch.govt.nz/publications/amplify-creative-and-cultural-strategy-new-zealand))
+- **The games sector’s July data remains the clearest growth proof-point after the last update.** NZ On Air’s GDSR figures continued to strengthen the case that AI-capable creative-tech infrastructure matters economically, even where studio-level AI use remains less publicly documented than in journalism. ([nzonair.govt.nz](https://www.nzonair.govt.nz/news/nz-games-sector-shows-continued-growth-as-new-gdsr-data-released/?utm_source=openai))
 
-## Sector Overview
+## Sector-Wide Baseline
 
-## 1) Journalism and Publishing
+The most important top-line number is still the March 2026 Manatū Taonga cultural participation release. It remains the best creator-level public indicator that AI use is already mainstream enough to matter across the sector rather than only inside specialist firms or early-adopter studios. The ministry also ties this adoption story directly to its wider digital-age policy work with MBIE on responsible AI and accessibility technology. ([mch.govt.nz](https://www.mch.govt.nz/news/new-zealand-creatives-embrace-digital-tools?utm_source=openai))
 
-Journalism remains New Zealand’s clearest evidence base for day-to-day operational AI use in a creative industry. AUT’s 2026 JMAD baseline says AI tools are widely used in everyday news and content production, with commercial outlets **Stuff** and **NZME** experimenting more widely than **RNZ** and **TVNZ**. The report also finds that all major newsrooms now have AI principles or ethics, but that transparency about exact production use remains uneven. ([jmadresearch.com](https://www.jmadresearch.com/_files/ugd/a95e86_0f7588b42f2b46c5a4bb8e0f76dfbd37.pdf))
+At the same time, the wider government framing has become clearer. **Amplify: A Creative and Cultural Strategy for New Zealand 2025–2030** sets a goal of growing the arts and creative sector’s GDP contribution from **$17.5 billion in 2024** to at least **$22 billion by 2030**, and explicitly includes support for the sector’s uptake of new technology, including the responsible use and development of AI. The strategy says government will consider how to support sustainable AI development in the creative and cultural sectors while responding to concerns around misinformation, workforce impacts, privacy, IP, and data sovereignty. ([mch.govt.nz](https://www.mch.govt.nz/publications/amplify-creative-and-cultural-strategy-new-zealand))
 
-Public case studies are unusually specific:
+## Current News and Developments
 
-- **Stuff’s Democracy.AI** helps Waikato Times journalists scan public documents such as local council minutes. JMAD says it helped generate more local stories and supported the **Ratepayers’ Roundup** subscription section, with digital subscriptions more than doubling during the pilot period. ([jmadresearch.com](https://www.jmadresearch.com/_files/ugd/a95e86_0f7588b42f2b46c5a4bb8e0f76dfbd37.pdf))
-- **NZME’s Bidi** enables BusinessDesk to rewrite and publish NZX announcement stories in about **30 seconds**, freeing journalists for higher-value work. ([jmadresearch.com](https://www.jmadresearch.com/_files/ugd/a95e86_0f7588b42f2b46c5a4bb8e0f76dfbd37.pdf))
-- **NZ Herald’s Polaris** homepage system reportedly cut homepage curation time and lifted click-through rates by **15%**. ([jmadresearch.com](https://www.jmadresearch.com/_files/ugd/a95e86_0f7588b42f2b46c5a4bb8e0f76dfbd37.pdf))
-- **BusinessDesk’s Today in Business** used AI to draft and voice a podcast based on journalist-created and edited articles, with layered AI checking and final human editorial review before publication. ([jmadresearch.com](https://www.jmadresearch.com/_files/ugd/a95e86_0f7588b42f2b46c5a4bb8e0f76dfbd37.pdf))
+### 1) Government strategy is now explicitly AI-aware
 
-Public-service broadcasters remain more conservative. RNZ’s published principles say it generally will not knowingly publish or broadcast generative-AI-created material, while permitting assistive uses such as research, brainstorming, summarisation, administration, and transformation of already-created content. TVNZ’s March 2026 principles likewise emphasise human-first use, validation of outputs, risk assessment, and disclosure where editorial integrity or audience trust may be affected. ([rnz.co.nz](https://www.rnz.co.nz/assets/cms_uploads/000/000/534/RNZ_AI_Principles_2026.pdf?utm_source=openai))
+Manatū Taonga’s **Long-term Insights Briefing 2025** and **Amplify** together now form the clearest official strategic frame for AI in the creative industries. They present AI as both a productivity and accessibility opportunity, while also warning about originality, copyright, cultural appropriation, trust, and the risk of Māori cultural knowledge being used without permission or proper context. ([mch.govt.nz](https://www.mch.govt.nz/publications/culture-digital-age-long-term-insights-briefing-2025?utm_source=openai))
 
-Trust still caps how far automation can go. AUT’s 2026 Trust in News report says general trust in news improved to **37%**, but discomfort with news mostly produced by AI remained around **60%**. JMAD’s AI report similarly shows only about **8%** are comfortable with AI-produced news with some human oversight, versus about **26%** when humans remain primary and AI is assistive. ([aut.ac.nz](https://www.aut.ac.nz/news/stories/trust-in-news-up-significantly-in-2026?utm_source=openai))
+The accompanying **Amplify summary of submissions** shows that sector feedback is pushing government toward more concrete intervention. Submitters called for stronger protection of creatives’ IP, transparency over what New Zealand content is used in model training, and action against unauthorised voice, image, and likeness cloning. At the same time, submissions also acknowledged AI’s potential to improve accessibility and support growth in areas like games and virtual reality. ([mch.govt.nz](https://www.mch.govt.nz/publications/amplify-summary-submissions))
 
-## 2) Screen, Film, TV and VFX
+### 2) Trust has become more demanding, not less
 
-Screen remains New Zealand’s **governance lead sector** for creative AI. NZFC’s AI Guiding Principles put human talent, creativity, culture, Te Tiriti, and Indigenous Cultural and Intellectual Property at the centre, while also acknowledging productivity and efficiency gains from appropriate AI use. ([nzfilm.co.nz](https://www.nzfilm.co.nz/about-us/ai-strategy?utm_source=openai))
+One NZ’s **AI Trust Report 2026** found AI exposure is high, but public acceptance remains conditional. The report says **76%** of New Zealanders have knowingly interacted with AI, but only **29%** are considered confident, frequent “AI Actives,” and human oversight is increasingly a baseline expectation. ([media.one.nz](https://media.one.nz/ai-trust-report-2026?utm_source=openai))
 
-The most important June-July shift is procedural rather than rhetorical: NZFC’s June 2026 funding guidelines now ask applicants to disclose AI use and say assessment will consider:
+The more important July development is that One NZ’s **Sustainability Edition** widened the trust frame. AI in business is now being evaluated not just on usefulness or fairness, but also on physical infrastructure impacts. That matters for creative industries because many of their most visible AI use cases, especially generative image, video, and search workflows, are energy- and compute-intensive. This is an inference from the report’s findings and the nature of these tools, rather than a claim made explicitly about the creative sector. ([media.one.nz](https://media.one.nz/ai-trust-report-2026-sustainability-edition?utm_source=openai))
 
-- cultural authenticity, including respect for te ao Māori and mātauranga Māori,
-- creative integrity,
-- transparency to NZFC and audiences,
-- and ethical implications and broader sector impact. ([nzfilm.co.nz](https://www.nzfilm.co.nz/assets/resources/Final-Published-HPTRM-Version-June-2026.pdf))
+### 3) Discoverability is becoming a first-order business issue
 
-That is a meaningful step forward. It means screen-sector AI governance in Aotearoa is no longer only principle-based; it is now part of how projects are evaluated for support. ([nzfilm.co.nz](https://www.nzfilm.co.nz/assets/resources/Final-Published-HPTRM-Version-June-2026.pdf))
+A major shift since earlier 2026 is that AI is increasingly being treated as a **discovery layer**, not just a content-production layer. NZ On Air’s updated Investment Model makes **Discoverability** one of its four funding streams and describes the challenge of ensuring audiences can still find local content as they move away from traditional broadcasters. ([nzonair.govt.nz](https://www.nzonair.govt.nz/documents/963/NZ_On_Air_Investment_Model_2026.pdf))
 
-Experimentation is also becoming more visible at entry and independent levels. The **Aotearoa 1 Minute AI Film Festival 2026** ran on **May 5, 2026**, and **FutureFrames:NZ** launched as a nationwide hybrid AI short film competition supported by NZFC and NZ On Air, signalling a more organised experimentation layer around AI filmmaking. ([filmfreeway.com](https://filmfreeway.com/1MinuteAIFilmFestival?utm_source=openai))
+That same commercial logic is now visible in industry bodies. IAB New Zealand framed its **Discovery: AI & Search Summit** around the consequences of “AI-generated answers and instant-response search” for brands, publishers, and agencies. The Marketing Association’s August 2026 event framing also shows marketing leaders moving from ad hoc tool use to questions of operating model, governance, and brand integrity. ([iab.org.nz](https://www.iab.org.nz/all-events/discovery-ai-search-summit?utm_source=openai))
 
-The forward-looking infrastructure signal is Wētā FX’s involvement in the proposed **Aotearoa Creative Artificial Intelligence Research Institute**, one of the concepts selected for further development under the national AI Research Platform. Its proposed focus includes computer vision, generative models, digital twins, physically plausible datasets, and AI rights management. ([mbie.govt.nz](https://www.mbie.govt.nz/about/news/concepts-selected-for-ai-research-platform?utm_source=openai))
+## Research Overview
 
-## 3) Advertising, Marketing and Commercial Creative
+### Public research and institutional evidence
 
-Advertising and marketing remain the fastest-normalising segment for AI use. In 2026, New Zealand industry bodies have shifted the conversation from “should we use AI?” to “how does AI change creative production, discoverability, and marketing structure?” ([marketing.org.nz](https://marketing.org.nz/resource-hub/ai-search-marketing/future-of-ai-2026?hs_amp=true&utm_source=openai))
+The official and semi-official research base is now reasonably strong in four areas:
 
-IAB New Zealand’s April 2026 creativity event wrap argued that the market is separating into two layers:
+- **Creator adoption:** Manatū Taonga’s March 2026 cultural participation release remains the broadest baseline for everyday use. ([mch.govt.nz](https://www.mch.govt.nz/news/new-zealand-creatives-embrace-digital-tools?utm_source=openai))
+- **Policy foresight:** Manatū Taonga’s Long-term Insights Briefing provides the strongest public government analysis of the long-run risks and opportunities around AI, accessibility, cultural integrity, and data sovereignty. ([mch.govt.nz](https://www.mch.govt.nz/publications/culture-digital-age-long-term-insights-briefing-2025?utm_source=openai))
+- **Journalism operations:** AUT/JMAD’s February 2026 report remains the richest public evidence on actual day-to-day AI use in a New Zealand creative subsector. ([jmadresearch.com](https://www.jmadresearch.com/_files/ugd/a95e86_0f7588b42f2b46c5a4bb8e0f76dfbd37.pdf))
+- **Trust and audience response:** AUT/JMAD’s April 2026 Trust in News report and One NZ’s 2026 trust research together show that public comfort is highest when AI is assistive and humans remain clearly accountable. ([openrepository.aut.ac.nz](https://openrepository.aut.ac.nz/server/api/core/bitstreams/167d7db5-caec-44f1-b1bf-841399076b3a/content))
 
-- **high-volume, lower-stakes content** that is increasingly automatable, and
-- **brand, broadcast, and higher-craft work** where human creative judgment remains the bottleneck. ([iab.org.nz](https://www.iab.org.nz/news-resources/the-future-of-creativity-ai-event-wrap?utm_source=openai))
+### Industry framing
 
-The next shift is discoverability. The Marketing Association’s May 2026 Wellington recap framed the issue as brands increasingly needing to be understood by machines first, because AI systems are starting to filter information before consumers see it. IAB’s **Discovery: AI & Search Summit**, published on **May 29, 2026** for **August 13, 2026**, is explicitly built around this shift in brand and content discovery. ([marketing.org.nz](https://marketing.org.nz/resource-hub/brand/brainy-breakfast-recap-when-machines-become-the-marketers-new-audience?hs_amp=true&utm_source=openai))
+The AI Forum’s 2026 **AI Blueprint** now gives the sector a clearer narrative: by 2030, New Zealand’s creative industries should use AI to “power the business of creativity,” while preserving the “unique and irreplaceable value of human creativity.” Its 2026 priorities for the creative industries emphasise trust and ensuring creatives benefit from AI rather than being displaced by it. ([aiforum.org.nz](https://aiforum.org.nz/wp-content/uploads/2026/05/NZT009-AI_Blueprint_Report-v05.pdf?utm_source=openai))
 
-Trade Me is emerging as one of the clearest local commercial case signals. Braze’s Auckland 2026 recap described Trade Me as running **AI-native marketing workflows**, and Marketing Association event materials describe the company’s marketing team as embedding AI across planning, creative development, data modelling, optimisation, and reporting. ([braze.com](https://www.braze.com/resources/articles/key-insights-from-grow-with-braze-auckland-2026?utm_source=openai))
+## Case Studies
 
-The implication is that in commercial creative, AI is no longer just a production tool. It is increasingly part of **how brands are found, interpreted, and chosen**. ([marketing.org.nz](https://marketing.org.nz/resource-hub/brand/brainy-breakfast-recap-when-machines-become-the-marketers-new-audience?hs_amp=true&utm_source=openai))
+### 1) Journalism: the most documented live-use environment
 
-## 4) Music
+Journalism remains New Zealand’s best-documented creative-industry AI lab.
 
-Music remains the subsector where adoption pressure and rights conflict are most tightly fused. APRA AMCOS’ AI and Music work still provides the strongest regional evidence base: **54%** of surveyed creators agree AI can assist the human creative process, **82%** worry AI could stop them making a living, and by **2028** an estimated **23%** of music creators’ revenues are at risk without an effective licensing framework. ([apraamcos.co.nz](https://www.apraamcos.co.nz/about/supporting-the-industry/research-papers/aiandmusic?utm_source=openai))
+- **Stuff / Waikato Times – Democracy.AI:** Used to scan public documents like council minutes and support local reporting. JMAD says it helped generate more local stories and supported a subscription product, with digital subscriptions more than doubling during the pilot period. ([jmadresearch.com](https://www.jmadresearch.com/_files/ugd/a95e86_0f7588b42f2b46c5a4bb8e0f76dfbd37.pdf))
+- **NZME / BusinessDesk – Bidi:** Rewrites and publishes NZX announcement stories in about 30 seconds, freeing journalists for higher-value work. ([jmadresearch.com](https://www.jmadresearch.com/_files/ugd/a95e86_0f7588b42f2b46c5a4bb8e0f76dfbd37.pdf))
+- **NZ Herald – Polaris:** AI-driven homepage management reportedly cut curation time and lifted click-through rates by 15%. ([jmadresearch.com](https://www.jmadresearch.com/_files/ugd/a95e86_0f7588b42f2b46c5a4bb8e0f76dfbd37.pdf))
+- **BusinessDesk – Today in Business:** An experimental podcast used AI to draft, voice, and check content derived from journalist-created and edited articles, with final human editorial review before publication. ([jmadresearch.com](https://www.jmadresearch.com/_files/ugd/a95e86_0f7588b42f2b46c5a4bb8e0f76dfbd37.pdf))
 
-Since the June 10 update, the debate has sharpened materially. On **June 19, 2026**, APRA AMCOS pointed to an investigation reporting that Australian and New Zealand songs — including works associated with major Aotearoa artists — were found in leaked AI training datasets. That development makes the training-data issue feel less hypothetical for New Zealand creators. ([apraamcos.co.nz](https://www.apraamcos.co.nz/about-us/news-and-events/proof-of-theft-ai-investigation-the-atlantic?utm_source=openai))
+This remains the clearest evidence that mature local adoption is still mostly **assistive, editorially supervised, and workflow-oriented** rather than fully autonomous. ([jmadresearch.com](https://www.jmadresearch.com/_files/ugd/a95e86_0f7588b42f2b46c5a4bb8e0f76dfbd37.pdf))
 
-At the policy level, the Government’s **May 26** and **June 3, 2026** copyright announcements matter for music and other creative fields. New Zealand is moving to extend copyright protection terms, and Cabinet has asked for advice on a possible generative-AI copyright framework by **March 31, 2027**. That does not resolve AI licensing or training questions yet, but it formally moves generative AI copyright into the government work programme. ([beehive.govt.nz](https://www.beehive.govt.nz/release/keeping-kiwi-music-kiwi-hands?utm_source=openai))
+### 2) Broadcaster operations: cautious use, real implementation
 
-For Māori creators, cultural and collective rights remain especially sensitive. APRA AMCOS’ AI and Music position continues to emphasise consent, credit, transparency, and fair remuneration, with Māori members expressing strong concern about cultural misuse and appropriation. ([apraamcos.co.nz](https://www.apraamcos.co.nz/about/supporting-the-industry/research-papers/aiandmusic?utm_source=openai))
+RNZ and TVNZ both retain human-first positions, but the evidence now shows this is not equivalent to non-use. RNZ’s principles allow assistive uses such as research, brainstorming, summarisation, and transformation of already-created content, while generally rejecting publication of generative-AI-created material. TVNZ’s published principles similarly stress human validation, risk assessment, and disclosure where trust or editorial integrity may be affected. ([rnz.co.nz](https://www.rnz.co.nz/assets/cms_uploads/000/000/534/RNZ_AI_Principles_2026.pdf?utm_source=openai))
 
-## 5) Games and Creative Technology
+TVNZ’s FY25 annual report adds an important practical detail: **Copilot has been implemented across TVNZ** for productivity and efficiency, and the company says 1News has advanced a generative AI policy as part of wider trust initiatives. Its FY27 Statement of Intent goes further by making AI integration part of workforce capability planning. ([corporate.tvnz.co.nz](https://corporate.tvnz.co.nz/assets/Uploads/TVNZ-Annual-Report-FY25.pdf))
 
-Games and creative tech are now too large to be treated as a niche side story. NZ On Air’s **July 8, 2026** release shows:
+### 3) Publicly funded experimentation in screen and media capability
 
-- **$21.9 million** in 2026 GDSR rebates distributed to **43 studios**, ([nzonair.govt.nz](https://www.nzonair.govt.nz/news/nz-games-sector-shows-continued-growth-as-new-gdsr-data-released/))
-- **$829 million** combined studio revenue for recipients in 2025/26, up **17%**, ([nzonair.govt.nz](https://www.nzonair.govt.nz/news/nz-games-sector-shows-continued-growth-as-new-gdsr-data-released/))
-- **194** games in development, up from **170**, ([nzonair.govt.nz](https://www.nzonair.govt.nz/news/nz-games-sector-shows-continued-growth-as-new-gdsr-data-released/))
-- **98%** of recipient revenue coming from exports, and ([nzonair.govt.nz](https://www.nzonair.govt.nz/news/nz-games-sector-shows-continued-growth-as-new-gdsr-data-released/))
-- **90%** of recipient studios being SMEs. ([nzonair.govt.nz](https://www.nzonair.govt.nz/news/nz-games-sector-shows-continued-growth-as-new-gdsr-data-released/))
+NZ On Air’s 2024/25 annual report shows that AI is also appearing inside public capability-building and experimentation budgets, not just in newsroom operations. The report lists support for a **Network AI Project** (Kowhai Media), a **Text to Video AI Project** (Awa Films), and the **1-Minute AI Film Festival**. This does not prove mass adoption, but it does show public money supporting practical exploration and skill development around AI tools. ([nzonair.govt.nz](https://www.nzonair.govt.nz/documents/1323/2024-25_NZ_On_Air_Annual_Report.pdf))
 
-This does not by itself prove widespread studio-level AI deployment, but it does show a creative-tech sector with real scale, export intensity, and strong incentives to adopt tooling that improves productivity, art pipelines, simulation, testing, and content workflows. That is an inference from the sector’s economics and adjacent capability signals. ([nzonair.govt.nz](https://www.nzonair.govt.nz/news/nz-games-sector-shows-continued-growth-as-new-gdsr-data-released/))
+NZFC’s 2025 **Industry Development Fund Update** also backed **FutureFrames:NZ**, described as an **AI Short Film Hackathon** run by the Screen Music & Sound Guild of Aotearoa. That indicates AI filmmaking experimentation is being given formal developmental space, even as NZFC governance remains conservative on rights, accountability, and cultural integrity. ([nzfilm.co.nz](https://www.nzfilm.co.nz/news/industry-development-fund-update))
 
-Capability formation is also becoming more structured. The **Creative Tech Accelerator**, showcased in March 2026, is a 12-week micro-credential co-designed with Microsoft and Seen Ventures to help creatives apply AI and creative tech to production-ready work. ([nzist.ac.nz](https://www.nzist.ac.nz/news/creative-tech-accelerator-showcases-future-ai-enabled-creativity?utm_source=openai))
+## Subsector Snapshot
 
-## 6) Arts Funding and Creative Institutions
+### Journalism and publishing
 
-A notable shift in 2026 is that public-facing arts funders are no longer treating AI as an external issue. They are building it into application processes and creator guidance.
+This is still the most advanced and publicly visible AI-using creative subsector in New Zealand. JMAD reports AI is now common in everyday newsroom work, with commercial publishers generally more experimental than public-service media. At the same time, the same research warns that disclosure remains uneven, which is a trust risk in itself. ([jmadresearch.com](https://www.jmadresearch.com/_files/ugd/a95e86_0f7588b42f2b46c5a4bb8e0f76dfbd37.pdf))
 
-- **Creative New Zealand** says applicants will not be disadvantaged for using AI, but asks them to be transparent about where AI was used, lead with their own voice, check factual and ethical integrity, respect IP, and take care around privacy and cultural integrity, especially for Ngā Toi Māori and Pacific arts. ([creativenz.govt.nz](https://creativenz.govt.nz/funding-and-support/advice-and-support/making-an-application/use-of-artificial-intelligence))
-- **NZ On Air** requires disclosure of intended AI use in funding applications and assesses proposals against cultural authenticity, creative integrity, risk management, diversity/accessibility, capability, transparency, and ethical implications. ([nzonair.govt.nz](https://www.nzonair.govt.nz/documents/1277/NZ_On_Air_-_AI_Content_Creator_Guidance.pdf))
+Audience tolerance remains limited. AUT/JMAD’s 2026 Trust in News report found general trust in news rose to **37%**, but around **60%** of New Zealanders remain uncomfortable with news produced mainly by AI, even with some human oversight; comfort rose only to **11%** in 2026. ([openrepository.aut.ac.nz](https://openrepository.aut.ac.nz/server/api/core/bitstreams/167d7db5-caec-44f1-b1bf-841399076b3a/content))
 
-This is a significant maturation point: AI is now being normalised not only in market activity, but in the **public funding architecture** that shapes what gets made and how. ([creativenz.govt.nz](https://creativenz.govt.nz/funding-and-support/advice-and-support/making-an-application/use-of-artificial-intelligence))
+### Screen, film, television and VFX
 
-## Policy, Rights and Trust Environment
+The screen sector remains New Zealand’s **governance lead**. NZFC’s AI Guiding Principles prioritise human creativity, fairness, accountability, consent, and respect for cultural integrity, including Te Tiriti and Indigenous Cultural and Intellectual Property. Its June 2026 funding guidelines require applicants to disclose proposed AI use and address cultural authenticity, creative integrity, transparency, and ethical implications. ([nzfilm.co.nz](https://www.nzfilm.co.nz/about-us/ai-strategy?utm_source=openai))
 
-The national policy setting still favours adoption, but with a comparatively light-touch approach. MBIE’s AI strategy continues to emphasise confidence, productivity, and uptake rather than heavy sector-specific regulation. ([mbie.govt.nz](https://www.mbie.govt.nz/business-and-employment/economic-growth/digital-policy/new-zealands-ai-strategy-investing-with-confidence?utm_source=openai))
+TVNZ adds the broadcaster side of the picture: AI is being incorporated into organisational capability and product workflows, but under a trust-led, human-validated model. ([corporate.tvnz.co.nz](https://corporate.tvnz.co.nz/assets/Uploads/TVNZ-Annual-Report-FY25.pdf))
 
-Within the creative industries, however, the practical mood is more guarded than permissive. Trust research from One NZ shows widespread use but rising scrutiny, while the news sector’s trust data shows clear resistance to heavily automated public-facing content. ([media.one.nz](https://media.one.nz/ai-trust-report-2026))
+### Advertising, marketing and commercial creative
 
-Rights policy is now the biggest open strategic issue. The June 2026 copyright package strengthened creator protections in several areas and explicitly set a timetable for considering a generative-AI copyright framework. Sector advocacy from WeCreate also shows that creators are pushing the conversation beyond narrow deepfake harms toward voice, image, consent, and economic control. ([beehive.govt.nz](https://www.beehive.govt.nz/release/creative-and-cultural-sector-gets-further-copyright-support?utm_source=openai))
+Public evidence here is less case-rich than journalism, but the institutional direction is increasingly obvious. The commercial conversation has moved toward **AI-mediated discovery, organisational operating models, and brand governance**. IAB New Zealand’s August positioning around AI search and the Marketing Association’s August focus on the “AI Operating Model” both point to normalisation of AI inside mainstream marketing practice. ([iab.org.nz](https://www.iab.org.nz/all-events/discovery-ai-search-summit?utm_source=openai))
+
+### Music
+
+Music remains the place where AI’s commercial utility and rights conflict meet most directly. APRA AMCOS’ regional **AI and Music** research found **54%** of creators agree AI can assist the human creative process, but **82%** worry it could stop them making a living, and it estimates **23%** of music creators’ revenues could be at risk by 2028 without an effective licensing framework. ([apraamcos.co.nz](https://www.apraamcos.co.nz/about/supporting-the-industry/research-papers/aiandmusic?utm_source=openai))
+
+The rights argument hardened further in 2026 when APRA AMCOS highlighted reporting that Australian and New Zealand songs, including works associated with major Aotearoa artists, appeared in leaked AI training datasets. Manatū Taonga’s Amplify submissions summary shows the same anxiety in policy feedback: creators want stronger IP protection, dataset disclosure, and safeguards around voice, image, and likeness misuse. ([apraamcos.co.nz](https://www.apraamcos.co.nz/about-us/news-and-events/proof-of-theft-ai-investigation-the-atlantic?utm_source=openai))
+
+### Games and creative technology
+
+Games remain the strongest scale signal in the wider creative-tech ecosystem. NZ On Air’s July 8, 2026 GDSR data reported **$21.9 million** in rebates to **43 studios**, **$829 million** in combined studio revenue, **194** games in development, and a sector where the revenue base is overwhelmingly export-oriented. ([nzonair.govt.nz](https://www.nzonair.govt.nz/news/nz-games-sector-shows-continued-growth-as-new-gdsr-data-released/?utm_source=openai))
+
+That does not, by itself, prove studio-wide AI adoption. But it does support a strong inference: sectors with this level of technical intensity, export pressure, and production complexity have clear incentives to adopt AI for art pipelines, testing, simulation, workflow automation, and content operations. NZ On Air’s updated Investment Model also keeps the GDSR inside its capability architecture, reinforcing games as a strategic capability frontier. ([nzonair.govt.nz](https://www.nzonair.govt.nz/news/nz-games-sector-shows-continued-growth-as-new-gdsr-data-released/?utm_source=openai))
+
+### Arts funding and creative institutions
+
+Creative New Zealand continues to take a permissive-but-cautious line: applicants are not disadvantaged for using AI, but they are expected to be transparent, protect IP, check factual and ethical quality, and take care around privacy and cultural integrity, especially for Māori and Pacific arts. ([creativenz.govt.nz](https://creativenz.govt.nz/funding-and-support/advice-and-support/making-an-application/use-of-artificial-intelligence?utm_source=openai))
+
+NZ On Air’s application systems now explicitly direct both music and screen applicants to AI guidance, showing that AI is no longer treated as an edge-case issue in public funding. It is part of normal application assessment. ([nzonair.govt.nz](https://www.nzonair.govt.nz/funding/music-funding/applying-for-music-funding/?utm_source=openai))
 
 ## Key Trends
 
-### 1) Adoption is broad, but public evidence remains uneven
-The March 2026 Manatū Taonga baseline confirms broad uptake among creators, but detailed public case studies remain concentrated in journalism, marketing, and funding/governance settings rather than across the full arts ecosystem. ([mch.govt.nz](https://www.mch.govt.nz/news/new-zealand-creatives-embrace-digital-tools))
+### 1) Broad use, uneven visibility
 
-### 2) Governance is moving from principles to process
-The clearest July-era shift is operational: NZFC, NZ On Air, and Creative New Zealand are not just stating values; they are embedding AI disclosure and assessment into applications and decision processes. ([nzfilm.co.nz](https://www.nzfilm.co.nz/assets/resources/Final-Published-HPTRM-Version-June-2026.pdf))
+AI use is clearly widespread, but public evidence is still asymmetrical. Journalism offers rich case studies; other subsectors show clearer guidance and strategic signalling than day-to-day public operational detail. ([mch.govt.nz](https://www.mch.govt.nz/news/new-zealand-creatives-embrace-digital-tools?utm_source=openai))
 
-### 3) Workflow AI is still moving faster than synthetic public output
-The most visible New Zealand deployments continue to be assistive: transcription, scanning, summarising, personalisation, text-to-audio, drafting support, and discoverability optimisation. ([jmadresearch.com](https://www.jmadresearch.com/_files/ugd/a95e86_0f7588b42f2b46c5a4bb8e0f76dfbd37.pdf))
+### 2) Governance is becoming infrastructure
 
-### 4) Discoverability is becoming a core creative-economy issue
-For marketers, publishers, and platforms, the question is increasingly how brands and content are surfaced inside AI-generated answers and machine-mediated customer journeys. ([marketing.org.nz](https://marketing.org.nz/resource-hub/brand/brainy-breakfast-recap-when-machines-become-the-marketers-new-audience?hs_amp=true&utm_source=openai))
+The most important structural shift in 2026 is not a single breakthrough tool. It is the embedding of AI into **funding rules, broadcaster principles, strategic documents, and capability systems**. ([nzfilm.co.nz](https://www.nzfilm.co.nz/assets/resources/Final-Published-HPTRM-Version-June-2026.pdf?utm_source=openai))
 
-### 5) Rights and provenance are hardening into policy priorities
-Music dataset exposure, copyright reform, and calls for a generative-AI framework all point to a sector moving from cultural concern toward formal policy design. ([apraamcos.co.nz](https://www.apraamcos.co.nz/about-us/news-and-events/proof-of-theft-ai-investigation-the-atlantic?utm_source=openai))
+### 3) Trust is now multi-dimensional
 
-### 6) Games and VFX are the highest-upside capability frontier
-The economics of games, the Wētā FX-linked research platform proposal, and structured creative-tech training all suggest the strongest future AI leverage may come from technically intensive creative subsectors. ([nzonair.govt.nz](https://www.nzonair.govt.nz/news/nz-games-sector-shows-continued-growth-as-new-gdsr-data-released/))
+Trust concerns have expanded from hallucinations and bias into provenance, human accountability, cultural legitimacy, and now environmental footprint. That widens the standard creative organisations will need to meet before AI-heavy public-facing work becomes normalised. ([openrepository.aut.ac.nz](https://openrepository.aut.ac.nz/server/api/core/bitstreams/167d7db5-caec-44f1-b1bf-841399076b3a/content))
+
+### 4) Discoverability may matter as much as generation
+
+For publishers, broadcasters, and marketers, the next competitive question is increasingly whether local stories, brands, and songs can be **found** inside AI-mediated interfaces, not only whether they can be produced faster. ([nzonair.govt.nz](https://www.nzonair.govt.nz/documents/963/NZ_On_Air_Investment_Model_2026.pdf))
+
+### 5) Rights and cultural integrity remain the hardest unresolved issues
+
+The strongest unresolved tensions are still around copyright, consent, training data, likeness, and the protection of Māori cultural knowledge. These issues are visible across music advocacy, government strategy, and screen-sector funding frameworks. ([apraamcos.co.nz](https://www.apraamcos.co.nz/about-us/news-and-events/proof-of-theft-ai-investigation-the-atlantic?utm_source=openai))
+
+### 6) Games and screen-tech capability remain the upside frontier
+
+The sectors most likely to capture disproportionate AI value in Aotearoa appear to be those already operating with technical depth and export ambition: games, screen technology, post-production, and adjacent creative tooling. That is a synthesis from the GDSR growth figures, public funding patterns, and institutional strategy rather than a single-source claim. ([nzonair.govt.nz](https://www.nzonair.govt.nz/news/nz-games-sector-shows-continued-growth-as-new-gdsr-data-released/?utm_source=openai))
 
 ## Conclusion
 
-As of **July 13, 2026**, AI adoption in Aotearoa New Zealand’s creative industries is best described as **broad, real, and increasingly governed**. The baseline adoption story has not been overturned since March; what has changed is the sector’s maturity. Funders are asking for disclosure. Broadcasters have public principles. Journalists are using AI in production but keeping humans in charge. Marketers are reorganising around AI-shaped discovery. Music creators are pressing harder on consent and compensation. Games and creative tech are scaling fast enough to make AI capability a strategic infrastructure issue, not just a tooling issue. ([mch.govt.nz](https://www.mch.govt.nz/news/new-zealand-creatives-embrace-digital-tools))
+As of **August 18, 2026**, AI adoption in Aotearoa New Zealand’s creative industries is best understood as **broad, practical, and increasingly institutionalised**. The March creator-adoption baseline still holds. The biggest changes since mid-July are not explosive new creator statistics, but deeper systematisation: AI is now more clearly embedded in sector strategy, public funding assessment, broadcaster capability plans, discoverability thinking, and trust governance. ([mch.govt.nz](https://www.mch.govt.nz/news/new-zealand-creatives-embrace-digital-tools?utm_source=openai))
 
-The clearest overall pattern is that New Zealand’s creative sector is not moving toward unbounded automation. It is moving toward **human-led, rules-aware, culturally specific, commercially pragmatic AI adoption**. The organisations most likely to lead the next phase will be those that can show not only capability, but legitimacy: clear consent, clear accountability, strong craft, and visible respect for cultural and creator rights. ([nzfilm.co.nz](https://www.nzfilm.co.nz/about-us/ai-strategy?utm_source=openai))
+The strongest public pattern remains **workflow-first adoption under human supervision**. Where AI is visibly creating value in New Zealand, it is usually by helping professionals search, scan, summarise, transcribe, optimise, voice, or distribute content more effectively. Fully synthetic public-facing output remains far more contested, especially where audience trust, journalistic integrity, creator rights, or cultural legitimacy are at stake. ([jmadresearch.com](https://www.jmadresearch.com/_files/ugd/a95e86_0f7588b42f2b46c5a4bb8e0f76dfbd37.pdf))
+
+The strategic takeaway is now clearer than it was on July 13: New Zealand’s creative industries are not moving toward unbounded automation. They are moving toward **governed adoption**, where productivity gains are acceptable only when paired with human accountability, transparency, cultural respect, and defensible rights practices. The organisations best placed for the next phase will be those that can combine AI capability with legitimacy. ([nzfilm.co.nz](https://www.nzfilm.co.nz/about-us/ai-strategy?utm_source=openai))
