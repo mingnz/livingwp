@@ -5,190 +5,625 @@ article_kind: industry
 article_latest: true
 article_series: public_sector
 article_summary: >-
-  AI adoption in New Zealand’s public sector has continued to move from
-  pilot-era experimentation toward a more formal operating model built around
-  shared infrastructure, central coordination, and tightly governed frontline
-  use. Since the previous June 10, 2026 edition, the most important shift is not
-  a single new tool…
-article_updated_at: '2026-07-13T22:50:50+12:00'
+  AI adoption across New Zealand’s public sector is moving from experimentation
+  toward institutionalisation. The central government system is increasingly
+  treating AI as part of the infrastructure of public-service reform: a means of
+  improving productivity, reducing administrative work, supporting frontline
+  staff, and…
+article_updated_at: '2026-08-18T12:17:34+12:00'
 article_version: false
 description: >-
-  AI adoption in New Zealand’s public sector has continued to move from
-  pilot-era experimentation toward a more formal operating model built around
-  shared…
+  AI adoption across New Zealand’s public sector is moving from experimentation
+  toward institutionalisation. The central government system is increasingly…
 permalink: /whitepaper/public_sector/
 title: AI in Public Sector
 ---
 
 # AI in Public Sector in Aotearoa New Zealand: A Living Whitepaper
-**Updated: July 13, 2026**
+
+**Article slug:** `public_sector`  
+**Updated:** August 18, 2026  
+**Previous edition:** July 13, 2026  
+**Coverage:** Developments published or available through August 18, 2026
+
+---
 
 ## Introduction
 
-AI adoption in New Zealand’s public sector has continued to move from pilot-era experimentation toward a more formal operating model built around shared infrastructure, central coordination, and tightly governed frontline use. Since the previous June 10, 2026 edition, the most important shift is not a single new tool but a sharper system design: the Digital Government Target State is now the dominant architecture, the Service Modernisation Roadmap has been decommissioned, and a July 2026 rapid review has explicitly identified “AI for government” as one of the small number of foundational common-capability projects that should be prioritised centrally. ([digital.govt.nz](https://www.digital.govt.nz/digital-government/strategy/strategy-summary/service-modernisation-roadmap-transition-to-the-digital-government-target-state?utm_source=openai))
+AI adoption across New Zealand’s public sector is moving from experimentation toward institutionalisation. The central government system is increasingly treating AI as part of the infrastructure of public-service reform: a means of improving productivity, reducing administrative work, supporting frontline staff, and making government information easier to navigate.
 
-The practical pattern remains conservative. New Zealand agencies are still using AI mostly for summarisation, search, documentation, workflow support, pattern recognition, and service navigation rather than autonomous state decision-making. But the environment around those use cases is becoming more structured: the Government Digital Delivery Agency now sits inside the Public Service Commission, regulator-specific guidance has arrived, Health NZ has tightened clinical AI guardrails, and local government is building more explicit public AI governance. ([digital.govt.nz](https://www.digital.govt.nz/digital-government/leadership/government-digital-delivery-agency))
+The dominant adoption model remains cautious and assistive. Agencies are using AI for document-heavy work, search, summarisation, drafting, workflow support, data analysis, and service navigation. High-impact decisions, clinical judgements, regulatory determinations, and citizen entitlements remain subject to human accountability.
+
+Since the July 13, 2026 edition, the most significant development has been the emergence of a more concrete operational pipeline. The Government is testing AI for biosecurity-standard development, Health New Zealand has updated its digital-technology guidance, and the broader digital-government reset continues to position AI as a common capability rather than a collection of disconnected agency experiments. ([beehive.govt.nz](https://www.beehive.govt.nz/release/new-ai-tool-help-develop-biosecurity-standards))
+
+---
 
 ## Executive Snapshot
 
-- **AI is now embedded in the state’s central digital operating model.** The Digital Government Target State requires agencies to align to shared digital public infrastructure, and that infrastructure explicitly includes an **AI broker/gateway**, **AI platform services**, **semantic search**, and **data and AI safeguards**. ([dns.govt.nz](https://dns.govt.nz/digital-government/digitising-government-programme-dgp/digital-target-state?utm_source=openai))
-- **July 2026 brought a stronger centralisation signal.** A rapid review released on **July 2, 2026** recommended a reset of digital delivery, including identifying a small set of foundational common-capability projects, with the reviewers’ hypothesis explicitly naming **digital identity, data exchange, and AI for government**. ([publicservice.govt.nz](https://www.publicservice.govt.nz/news/rapid-review-proposes-reset-for-digital-delivery))
-- **The core whole-of-system evidence base is still the 2025 AI survey.** The latest published cross-agency snapshot remains **70 agencies reporting 272 AI use cases**, including **55 operational deployments**, up from **108 use cases across 37 agencies in 2024**. ([digital.govt.nz](https://www.digital.govt.nz/standards-and-guidance/technology-and-architecture/artificial-intelligence/research-ai-public-service/2025-cross-agency-ai-survey-highlights))
-- **Public-sector AI is still mostly assistive, not autonomous.** Survey findings, Health NZ guidance, and current case studies all point to bounded uses such as drafting, summarising, documentation, pattern analysis, and workflow support under human oversight. ([digital.govt.nz](https://www.digital.govt.nz/standards-and-guidance/technology-and-architecture/artificial-intelligence/research-ai-public-service/2025-cross-agency-ai-survey-highlights))
-- **Health remains the clearest frontier for scaled operational AI.** Emergency-department AI scribes are live nationwide, Health NZ has published formal GenAI guidance, and HealthX has added an international partnership to strengthen AI and digital innovation assessment and scaling. ([beehive.govt.nz](https://www.beehive.govt.nz/release/ai-scribe-now-every-emergency-department?utm_source=openai))
-- **Capability is improving, but depth is still limited.** In the 2025 Public Service Census, **33%** of public servants had used AI for work and **14%** used it regularly; meanwhile **88%** said they felt confident learning new digital skills. ([publicservice.govt.nz](https://www.publicservice.govt.nz/data/public-service-census/delivery/innovation))
-- **Trust is still the biggest adoption constraint.** General trust in public services remains high, with **84%** trusting the most recent government service they used as of March 2026, but Kantar’s AI-specific research found only **4%** of New Zealanders felt well informed about how government uses AI. ([publicservice.govt.nz](https://www.publicservice.govt.nz/data/trust-in-the-public-service?utm_source=openai))
-- **Biometrics is the sharpest near-term compliance pressure point.** The Biometric Processing Privacy Code transition period for existing biometric processing ends on **August 3, 2026**. ([privacy.org.nz](https://www.privacy.org.nz/privacy-principles/codes-of-practice/biometric-processing-privacy-code/?utm_source=openai))
+- **AI adoption is accelerating, but the latest comprehensive measurement remains the 2025 survey.** That survey recorded **272 use cases across 70 agencies**, including **55 operational deployments**, compared with 108 use cases across 37 agencies in 2024. ([digital.govt.nz](https://www.digital.govt.nz/dmsdocument/263~full-results-2025-cross-agency-survey-for-artificial-intelligence-ai-use-cases/html?utm_source=openai))
+- **Public-sector AI remains primarily assistive.** The most common applications support administration, communications, strategy, data work, documentation, and internal productivity rather than autonomous public decision-making. ([digital.govt.nz](https://www.digital.govt.nz/dmsdocument/263~full-results-2025-cross-agency-survey-for-artificial-intelligence-ai-use-cases/html?utm_source=openai))
+- **Central coordination is strengthening.** The Public Service AI Work Programme to 2027 contains 15 initiatives across common tools, safe and responsible AI, customer and partnerships, and workforce capability. ([digital.govt.nz](https://www.digital.govt.nz/standards-and-guidance/technology-and-architecture/artificial-intelligence/public-service-ai-work-programme?utm_source=openai))
+- **AI is increasingly linked to digital-government architecture.** The Digital Government Target State and associated reset programme favour shared infrastructure, reusable components, common assurance, and reduced duplication across agencies. ([digital.govt.nz](https://www.digital.govt.nz/digital-government/strategy/insights-and-commentary/sir-brian-roche-keynote-2026?utm_source=openai))
+- **Biosecurity has become a prominent new operational use case.** A four-month pilot is testing generative AI to support the development of import health standards while retaining expert decision-making. ([beehive.govt.nz](https://www.beehive.govt.nz/release/new-ai-tool-help-develop-biosecurity-standards))
+- **Health remains the most advanced domain for frontline AI.** Health NZ’s emergency-department AI scribe deployment and updated AI guidance demonstrate both operational scale and stronger sector-specific controls. ([healthnz.govt.nz](https://www.healthnz.govt.nz/health-professionals/guidance-standards/topic/digital-technologies?utm_source=openai))
+- **Trust and transparency remain decisive.** General trust in public services is high, but AI-specific public understanding is considerably weaker. Human fallback, explainability, privacy, and Māori data governance remain central to social licence. ([publicservice.govt.nz](https://www.publicservice.govt.nz/data/trust-in-the-public-service?utm_source=openai))
+- **Biometrics is now a live compliance issue.** The transition period for existing biometric processing under the Biometric Processing Privacy Code ended on **August 3, 2026**. ([privacy.org.nz](https://www.privacy.org.nz/assets/Codes-of-Practice-2020/Biometrics-Processing-Privacy-Code-2025-website-version.pdf?utm_source=openai))
 
-## What Changed Since the June 10, 2026 Edition
+---
 
-### 1) The Digital Government Target State has clearly superseded the old service-modernisation frame
+## What Changed Since the July 13, 2026 Edition
 
-On **July 1, 2026**, official digital-government material confirmed the **Service Modernisation Roadmap was decommissioned in June 2026** and that work now continues through the **Digital Government Target State**. Official guidance also says **AI will become increasingly important in all aspects of Target State delivery**. This is a meaningful shift because it places AI more firmly inside a whole-of-government architecture and investment model, rather than as a parallel innovation stream. ([digital.govt.nz](https://www.digital.govt.nz/digital-government/strategy/strategy-summary/service-modernisation-roadmap-transition-to-the-digital-government-target-state?utm_source=openai))
+### 1. Biosecurity has moved into active AI testing
 
-### 2) A July rapid review reframed AI as a foundational common capability
+On **July 25, 2026**, the Government announced a generative-AI pilot to help modernise the development of import health standards. The tool is intended to support document-heavy analysis and improve consistency and speed, while key decisions remain with Biosecurity New Zealand experts. The pilot is scheduled to run for four months. ([beehive.govt.nz](https://www.beehive.govt.nz/release/new-ai-tool-help-develop-biosecurity-standards))
 
-The **Delivering Digital Government – Reset Plan**, released alongside the Public Service Commission’s July 2 announcement, is the strongest new system-level development since the last edition. The review argues digital delivery is fragmented and recommends tighter prioritisation, a narrower and stronger GDDA role, and a small number of foundational common-capability projects. Its explicit hypothesis includes **AI for government** alongside **digital identity** and **data exchange**. ([publicservice.govt.nz](https://www.publicservice.govt.nz/news/rapid-review-proposes-reset-for-digital-delivery))
+**Why this matters:**
 
-### 3) Health NZ added a new international AI innovation channel
+- It is a practical example of AI being applied to a high-volume, technically complex regulatory workflow.
+- It demonstrates the current public-sector preference for “expert-in-the-loop” systems.
+- It extends AI adoption beyond corporate productivity into operational policy and regulatory preparation.
+- It provides a test of whether AI can improve timeliness without weakening biosecurity controls.
 
-On **July 8, 2026**, Health NZ announced that its **HealthX** programme had entered into an agreement with **UCLPartners** in the United Kingdom to support the assessment, testing, and scaling of digital and AI innovation. The official description emphasises reducing administrative burden, supporting clinical workflow, and improving patient experience, which is consistent with New Zealand’s broader human-in-the-loop posture. ([healthnz.govt.nz](https://www.healthnz.govt.nz/news-and-updates/health-nz-international-partnership-strengthens-approach-to-digital-and-ai-innovation?utm_source=openai))
+### 2. Health NZ has refreshed its AI and digital-technology guidance
 
-### 4) The innovation pipeline is becoming more visible, even where deployment is still emerging
+Health NZ’s digital-technology guidance page was updated on **July 28, 2026**, including material on AI and large language models. This follows earlier guidance stating that staff must not enter sensitive patient or organisational information into unapproved tools and must not use general-purpose language models for clinical decisions or personalised patient advice. ([healthnz.govt.nz](https://www.healthnz.govt.nz/health-professionals/guidance-standards/topic/digital-technologies?utm_source=openai))
 
-The **Spirit of Service Awards 2026 finalists**, announced on **July 2, 2026**, included **HealthX programme of AI and digital innovation** and a Ministry of Justice initiative on **using AI agents in Commercial Services**. That does not prove large-scale production rollout, but it is a strong public signal that AI initiatives are now mainstream enough to be recognised inside the sector’s own performance and innovation ecosystem. ([publicservice.govt.nz](https://www.publicservice.govt.nz/news/spirit-of-service-awards-2026-finalists-announced?utm_source=openai))
+The direction is significant because Health NZ is one of the largest and most data-intensive public-sector organisations in the country. Its approach is likely to influence AI governance practices across other agencies handling sensitive personal information.
+
+### 3. The digital-government reset is becoming the operating context for AI
+
+The Public Service Commission’s **July 2, 2026** rapid review found that digital investment remained fragmented, with duplication and insufficient system-level prioritisation. It called for stronger coordination and a more focused approach to foundational digital capabilities. ([publicservice.govt.nz](https://www.publicservice.govt.nz/news/rapid-review-proposes-reset-for-digital-delivery?utm_source=openai))
+
+The reset is relevant to AI because it shifts the adoption question from:
+
+> “Which agency should build or buy an AI tool?”
+
+toward:
+
+> “Which AI capabilities should be provided once and reused across government?”
+
+This supports the direction of the Public Service AI Work Programme, which proposes shared AI tools, an AI hub, common-case acceleration, sandbox environments, assurance resources, and coordinated supplier engagement. ([digital.govt.nz](https://www.digital.govt.nz/standards-and-guidance/technology-and-architecture/artificial-intelligence/public-service-ai-work-programme?utm_source=openai))
+
+### 4. The public-service AI evidence base has not yet caught up with adoption
+
+The latest detailed cross-agency AI survey remains the **2025 survey**. The Public Service Commission’s 2026 data-release calendar does not identify a new cross-agency AI survey release by August 18, 2026. This means the sector has more recent individual announcements and agency-level evidence, but not yet a new official whole-of-government adoption count. ([publicservice.govt.nz](https://www.publicservice.govt.nz/data/data-releases-calendar))
+
+This creates an important measurement gap. Adoption is visibly increasing, but current national estimates should not be presented as if they are 2026 totals.
+
+---
 
 ## Current State of AI Adoption
 
-## Governance and Operating Model
+## 1. Adoption maturity
 
-The governance stack remains anchored in the **Public Service AI Framework**, the **Responsible AI Guidance for the Public Service: GenAI**, and the **Public Service AI Work Programme**. The work programme still describes a 2-year plan with **15 initiatives across 4 focus areas**: common use tools, safe and responsible AI, customer and partnerships, and AI workforce. Its published deliverables include a **Public Service AI Hub**, annual AI use-case measurement, strategic supplier relationships, public-sector AI events, and refreshed executive and practitioner training. ([digital.govt.nz](https://www.digital.govt.nz/standards-and-guidance/technology-and-architecture/artificial-intelligence/public-service-ai-work-programme))
+The public sector is now beyond the initial awareness and pilot phase, but it has not yet reached consistent enterprise maturity.
 
-Institutionally, the biggest structural change is that the **Government Digital Delivery Agency (GDDA)** was established on **April 1, 2026** inside the Public Service Commission and now carries the functions of the former Government Chief Digital Office. That matters because AI stewardship is now sitting inside a broader machinery-of-government reform effort rather than a looser digital transformation setting. ([digital.govt.nz](https://www.digital.govt.nz/digital-government/leadership/government-digital-delivery-agency))
+The 2025 survey identified:
 
-Governance is also becoming more domain-specific. The **Ministry for Regulation** released dedicated AI guidance for regulators on **May 27, 2026**, and version 1.1 adds resources on **Māori data** and **Māori data sovereignty**. The guidance emphasises starting small, applying safeguards, and keeping people responsible for decisions. ([regulation.govt.nz](https://www.regulation.govt.nz/news/helping-regulators-use-ai-with-confidence/?utm_source=openai))
+- **272 reported AI use cases**
+- **70 participating agencies**
+- **55 operational deployments**
+- Growth from **108 use cases across 37 agencies in 2024**
+- Increasing reuse and adaptation of existing AI tools
+- Early evidence of productivity, efficiency, and service-quality improvements ([digital.govt.nz](https://www.digital.govt.nz/dmsdocument/263~full-results-2025-cross-agency-survey-for-artificial-intelligence-ai-use-cases/html?utm_source=openai))
 
-Health NZ has gone further with sector-specific operational rules. Its guidance on **generative AI and large language models**, reviewed in **May 2026**, says staff must not enter sensitive patient or organisational information into unapproved tools and must not use LLMs for clinical decisions or personalised patient advice. ([healthnz.govt.nz](https://www.healthnz.govt.nz/health-professionals/guidance-standards/topic/digital-technologies/using-generative-ai-and-large-language-models))
+The use-case profile remains weighted toward internal and supporting functions:
 
-## Scale and Maturity
+- Data analysis
+- Administration
+- Communications
+- Strategy
+- Document and records work
+- Search and information retrieval
+- Drafting and summarisation
+- Workflow automation
 
-The latest published whole-of-government baseline is still the **2025 cross-agency AI survey**. It found **272 AI use cases across 70 agencies**, including **55 operational deployments**, which is a sharp rise from **15 operational use cases in 2024**. The official highlights say AI uptake is increasing, the ecosystem is growing, more use cases are reaching the operate-and-use stage, and agencies are already reporting productivity and efficiency gains. ([digital.govt.nz](https://www.digital.govt.nz/standards-and-guidance/technology-and-architecture/artificial-intelligence/research-ai-public-service/2025-cross-agency-ai-survey-highlights))
+The survey reported only a small proportion of direct customer-facing AI use cases. This indicates that agencies are generally starting with lower-risk, easier-to-measure applications before introducing AI into public-facing or rights-affecting services. ([digital.govt.nz](https://www.digital.govt.nz/dmsdocument/263~full-results-2025-cross-agency-survey-for-artificial-intelligence-ai-use-cases/html?utm_source=openai))
 
-At the same time, the maturity profile remains uneven. The same survey says the main barriers are **lack of skills and capability**, **anticipated costs**, and **security**. That is consistent with a sector that has moved beyond curiosity but has not yet industrialised AI adoption evenly across agencies. ([digital.govt.nz](https://www.digital.govt.nz/standards-and-guidance/technology-and-architecture/artificial-intelligence/research-ai-public-service/2025-cross-agency-ai-survey-highlights))
+### Maturity assessment
 
-Workforce readiness is improving, but still shallow. In the **2025 Public Service Census**, **33%** of public servants said they had used AI for work and **14%** said they used it regularly. Yet **42%** agreed their organisation takes advantage of technology to deliver better public services, suggesting the sector’s institutional maturity still lags individual experimentation. ([publicservice.govt.nz](https://www.publicservice.govt.nz/data/public-service-census/delivery/innovation))
+| Dimension | Current position |
+|---|---|
+| Experimentation | Widespread across agencies |
+| Operational deployment | Increasing, but uneven |
+| Shared infrastructure | Becoming a central policy objective |
+| Customer-facing AI | Limited and cautiously tested |
+| Autonomous decision-making | Not the dominant model |
+| Assurance | Developing through frameworks, guidance, and planned toolkits |
+| Workforce capability | Improving, but skills remain a barrier |
+| Public transparency | Growing, but inconsistent |
+| Māori data governance | Increasingly explicit in guidance |
+| Measurement | Behind the pace of adoption |
 
-## Shared Infrastructure and Service Delivery
+---
 
-The **Digital Government Target State** is now the strategic centre of gravity. It says agencies must align to a shared **Digital Public Infrastructure** layer and explicitly shows **AI broker/gateway**, **AI platform services**, **semantic search**, and **data and AI safeguards** as core components. This is the clearest published sign that New Zealand is designing for reusable, cross-agency AI capability rather than a proliferation of isolated agency stacks. ([dns.govt.nz](https://dns.govt.nz/digital-government/digitising-government-programme-dgp/digital-target-state?utm_source=openai))
+## 2. Governance and policy
 
-The **Govt.nz app** continues to advance as the state’s common digital front door. Official programme material says **Version 2.0** is live with a **digital wallet**, the **Government Credential Issuance Platform** is released, digital credentials are expected to begin appearing progressively from **mid-2026**, and **secure messaging and notifications** are positioned for **initial agency onboarding from July 2026**. The app page still presents these as staged rollouts rather than fully completed capabilities. ([digital.govt.nz](https://www.digital.govt.nz/digital-government/key-areas-of-work/government-app-programme))
+New Zealand’s public-sector AI governance is built around several connected instruments:
 
-Procurement and infrastructure are also being centralised. The **C3 (Common Capabilities and Cloud) Programme** says new Marketplace channels for **infrastructure**, **telecommunications**, and **managed security services** are intended to support agencies from the **1 July 2026** launch window onward, with transactions able to begin for approved listings from that date. ([digital.govt.nz](https://www.digital.govt.nz/digital-government/key-areas-of-work/c3-common-capabilities-and-cloud-programme))
+- The **Public Service AI Framework**
+- **Responsible AI Guidance for the Public Service: GenAI**
+- The **Public Service AI Work Programme to 2027**
+- Agency-specific policies and registers
+- Regulatory guidance from the Ministry for Regulation
+- Privacy, security, records, procurement, and public-sector integrity obligations ([docref.digital.govt.nz](https://docref.digital.govt.nz/nz/generative-ai-guidance-gcdo/public-service-ai-framework/2025/en/?utm_source=openai))
 
-## Public Trust and Social Licence
+The Public Service AI Framework is not binding in itself, but it establishes the intended direction for responsible public-sector AI. Its principles include:
 
-New Zealand’s public sector still benefits from strong general trust. As of **March 2026**, the Kiwis Count framework reported **84%** trust in the most recently used public service and **64%** trust in the Public Service brand overall. ([publicservice.govt.nz](https://www.publicservice.govt.nz/data/trust-in-the-public-service?utm_source=openai))
+- Inclusive and sustainable development
+- Human-centred values
+- Transparency and explainability
+- Safety and security
+- Accountability
+- Human oversight
+- Privacy and data protection
+- Fairness and equity
+- Consideration of Te Tiriti o Waitangi and Māori perspectives ([docref.digital.govt.nz](https://docref.digital.govt.nz/nz/generative-ai-guidance-gcdo/public-service-ai-framework/2025/en/?utm_source=openai))
 
-But AI-specific trust remains much thinner. Kantar’s **November 2025** research found only **4%** of New Zealanders felt well informed about how government uses AI, **55%** were comfortable with government AI use, **66%** wanted the option to deal with a human rather than AI, and **60%** supported an independent body to oversee AI use. The trust story, then, is not that government is broadly distrusted; it is that AI transparency and AI-specific consent still lag the wider trust base. ([kantarnewzealand.com](https://www.kantarnewzealand.com/ai-in-the-public-sector/?utm_source=openai))
+The work programme adds a more practical implementation layer, including planned:
 
-## Recent News and Policy Developments
+- Public Service AI Hub
+- AI innovation and accelerator capability
+- Public Service AI sandbox
+- Annual AI use-case measurement
+- AI assurance model and toolkit
+- AI safety and security mechanisms
+- AI Marketplace categories
+- AI search assistant for government information
+- Executive and practitioner training
+- AI community of practice ([digital.govt.nz](https://www.digital.govt.nz/standards-and-guidance/technology-and-architecture/artificial-intelligence/public-service-ai-work-programme?utm_source=openai))
 
-### Digital delivery has entered a reset phase
+### Governance trend
 
-The **July 2, 2026** rapid review found digital investment is fragmented, prioritisation is weak, the GDDA has limited influence over funding and procurement decisions, and stronger system leadership is needed. The attached reset plan recommends urgent reprioritisation, stronger central strategy and assurance, and a tighter all-of-government governance model for foundational digital capabilities. ([publicservice.govt.nz](https://www.publicservice.govt.nz/news/rapid-review-proposes-reset-for-digital-delivery))
+The direction of travel is from principles to operational controls. The next maturity test will be whether the proposed assurance, certification, procurement, and measurement mechanisms become consistently used in agency projects.
 
-### AI remains linked to public-service productivity reform
+---
 
-The **May 19, 2026** public-service overhaul announcement still matters because it explicitly connected machinery-of-government reform with **increased use of AI and other digital tools**. That signal has now been reinforced by the July digital reset rather than displaced by it. ([beehive.govt.nz](https://www.beehive.govt.nz/release/public-service-be-overhauled?utm_source=openai))
+## 3. Digital infrastructure and shared capabilities
 
-### Health NZ is broadening from deployment to evidence-led scaling
+The Digital Government Target State continues to provide the broader architecture for public-sector technology. The system-wide emphasis is on:
 
-The **HealthX-UCLPartners** agreement adds a new layer to the health AI story: not just adopting tools, but building an institutional pathway for horizon scanning, validation, and scaling. Officially, the partnership is framed around careful assessment and evidence-led uptake. ([healthnz.govt.nz](https://www.healthnz.govt.nz/news-and-updates/health-nz-international-partnership-strengthens-approach-to-digital-and-ai-innovation?utm_source=openai))
+- Shared digital public infrastructure
+- Reusable components
+- Common identity and data capabilities
+- Semantic search
+- AI gateways or brokers
+- Common safeguards
+- Reduced agency-by-agency duplication
+- Digital services organised around citizen journeys rather than institutional boundaries ([digital.govt.nz](https://www.digital.govt.nz/digital-government/strategy/insights-and-commentary/sir-brian-roche-keynote-2026?utm_source=openai))
 
-### Public-facing and citizen-service AI remains cautious
+The Public Service AI Work Programme specifically identifies an AI search assistant intended to help people find government information and services through a conversational interface. The tool was piloted across 21 government websites and tested with members of the public using a human-centred research approach. ([digital.govt.nz](https://www.digital.govt.nz/blog/humanising-the-machine-testing-genai-with-a-people-centred-approach?utm_source=openai))
 
-Health NZ’s **AI-supported symptom checker** is still framed as an exploration rather than a live autonomous triage system. Official material says it is intended to help people navigate to the right health service and support, not replace, clinical decision-making, and that governance arrangements are still being established. ([healthnz.govt.nz](https://www.healthnz.govt.nz/about-us/what-we-do/programmes-and-initiatives/symptom-checker))
+The pilot highlighted several requirements for public-facing AI:
+
+- Answers must be grounded in authoritative government information.
+- The system must be able to say that it does not know.
+- Users need clear next steps and links to the correct service.
+- The tool must protect users who enter personal information.
+- Testing must include people from different demographic, geographic, and accessibility groups.
+- Vulnerable-user and at-risk scenarios require specialised safeguards. ([digital.govt.nz](https://www.digital.govt.nz/blog/humanising-the-machine-testing-genai-with-a-people-centred-approach?utm_source=openai))
+
+---
+
+## 4. Workforce adoption and capability
+
+Public servants are increasingly using AI individually, but organisational capability remains less developed.
+
+The 2025 Public Service Census found that:
+
+- **33%** of public servants had used AI for work.
+- **14%** used it regularly.
+- **42%** agreed that their organisation takes advantage of technology to deliver better public services.
+- Skills and capability remained among the principal barriers to agency adoption. ([digital.govt.nz](https://www.digital.govt.nz/standards-and-guidance/technology-and-architecture/artificial-intelligence/public-service-ai-work-programme?utm_source=openai))
+
+This suggests a gap between personal experimentation and institutional transformation. Employees may be using AI for drafting, summarisation, research, and productivity, while agencies are still developing:
+
+- Approved-tool lists
+- Data-handling rules
+- Verification procedures
+- Training
+- Procurement pathways
+- Records-management practices
+- Risk classifications
+- Performance measures
+
+The AI Work Programme’s focus on executive training, practitioner training, supplier access, and a public-sector community of practice directly responds to this capability gap. ([digital.govt.nz](https://www.digital.govt.nz/standards-and-guidance/technology-and-architecture/artificial-intelligence/public-service-ai-work-programme?utm_source=openai))
+
+---
+
+## Recent News and Developments
+
+### Government tests AI for biosecurity-standard development
+
+The Government’s new Biosecurity New Zealand pilot is the most significant new operational case study since the previous edition. It applies generative AI to the preparation of import health standards, a process involving large bodies of technical and scientific material. Human experts retain responsibility for key decisions. ([beehive.govt.nz](https://www.beehive.govt.nz/release/new-ai-tool-help-develop-biosecurity-standards))
+
+### Digital delivery enters a consolidation phase
+
+The July digital reset identified fragmented investment and weak system-level prioritisation. For AI, this increases the pressure to build shared capabilities and avoid duplicated agency solutions. ([publicservice.govt.nz](https://www.publicservice.govt.nz/news/rapid-review-proposes-reset-for-digital-delivery?utm_source=openai))
+
+### Regulatory guidance now explicitly addresses Māori data
+
+The Ministry for Regulation’s **Responsible AI in Action** guidance for regulators includes additional resources on Māori data and Māori data sovereignty. It states that Māori data should be treated as taonga and that Te Tiriti considerations should be addressed early when AI may affect Māori access to services, compliance outcomes, or regulatory oversight. ([regulation.govt.nz](https://www.regulation.govt.nz/publications-and-resources/resource-library/responsible-ai-in-action/?utm_source=openai))
+
+### Biometrics becomes a compliance milestone
+
+The Biometric Processing Privacy Code 2025 came into force for new processing on **November 3, 2025**, and for existing biometric processing on **August 3, 2026**. The code introduces requirements concerning accuracy, retention, use, disclosure, overseas disclosure, and unique identifiers. ([privacy.org.nz](https://www.privacy.org.nz/assets/Codes-of-Practice-2020/Biometrics-Processing-Privacy-Code-2025-website-version.pdf?utm_source=openai))
+
+Although biometric processing is not identical to generative AI, it is highly relevant to the public-sector AI environment because it tests whether agencies can manage sensitive automated systems with adequate transparency, proportionality, security, and accountability.
+
+---
 
 ## Research Overview
 
-- **Latest whole-of-government quantitative baseline:** 2025 cross-agency survey, with **272 use cases** across **70 agencies** and **55 operational** deployments. ([digital.govt.nz](https://www.digital.govt.nz/standards-and-guidance/technology-and-architecture/artificial-intelligence/research-ai-public-service/2025-cross-agency-ai-survey-highlights))
-- **Latest system-level stewardship view:** **State of the Public Service 2025** says the sector must reduce fragmentation, accelerate and harmonise technology and AI adoption, and create a unified digital front door. ([publicservice.govt.nz](https://www.publicservice.govt.nz/publications/state-of-the-public-service-te-kahu-tuatini))
-- **Latest workforce evidence:** 2025 Public Service Census shows rising individual AI experimentation but modest regular use. ([publicservice.govt.nz](https://www.publicservice.govt.nz/data/public-service-census/delivery/innovation))
-- **Latest public sentiment evidence:** strong general trust in public services, but limited understanding of government AI use and a clear demand for human fallback and oversight. ([publicservice.govt.nz](https://www.publicservice.govt.nz/data/trust-in-the-public-service?utm_source=openai))
+## 1. 2025 cross-agency AI survey
+
+The survey remains the most important quantitative evidence base for New Zealand public-sector AI.
+
+### Key findings
+
+- Adoption is increasing.
+- The AI ecosystem is becoming more diverse.
+- Operational deployments are rising.
+- Agencies are increasingly reusing tools and solutions.
+- Productivity and efficiency are the most frequently cited benefits.
+- Skills, cost, funding, and security remain important barriers.
+- Direct customer-facing use remains relatively limited. ([digital.govt.nz](https://www.digital.govt.nz/dmsdocument/263~full-results-2025-cross-agency-survey-for-artificial-intelligence-ai-use-cases/html?utm_source=openai))
+
+### Interpretation
+
+The survey suggests a classic transition from exploration to early industrialisation:
+
+1. Agencies first experiment independently.
+2. Successful use cases move into daily operations.
+3. Agencies begin adapting tools developed elsewhere.
+4. Demand emerges for shared platforms, standards, procurement, and assurance.
+5. The system begins to centralise common capabilities.
+
+New Zealand is currently between stages three and four.
+
+## 2. Public Service AI Framework
+
+The framework establishes a national public-sector position that AI should be used to modernise services while protecting people, information, democratic values, and public trust. It places human-centred design, accountability, safety, privacy, explainability, and Māori perspectives alongside productivity and innovation. ([docref.digital.govt.nz](https://docref.digital.govt.nz/nz/generative-ai-guidance-gcdo/public-service-ai-framework/2025/en/?utm_source=openai))
+
+## 3. Human-centred research on government AI search
+
+The 2025 public-facing AI search pilot tested a conversational assistant across 21 government websites. User testing included moderated interviews with 26 people and unmoderated testing with 95 people, alongside automated testing using questions from multiple agencies. ([digital.govt.nz](https://www.digital.govt.nz/blog/humanising-the-machine-testing-genai-with-a-people-centred-approach?utm_source=openai))
+
+The research showed that public-sector AI requires a different testing model from conventional software. It must be assessed not only for technical accuracy, but also for:
+
+- Completeness
+- Plain-language quality
+- Tone
+- Appropriate uncertainty
+- Safety responses
+- Privacy behaviour
+- Helpfulness in real-life service journeys
+- Accessibility and equity
+
+---
 
 ## Case Studies
 
-### Case Study 1: Health NZ emergency-department AI scribe
+## Case Study 1: Biosecurity New Zealand AI pilot
 
-Health New Zealand’s emergency-department AI scribe remains the clearest example of scaled frontline AI in the country. As announced on **February 28, 2026**, the tool is live in all emergency departments, with rollout completed to **1,250** doctors and frontline staff. Pilot results indicated doctors using the tool saw **one additional patient per shift on average**. ([beehive.govt.nz](https://www.beehive.govt.nz/release/ai-scribe-now-every-emergency-department?utm_source=openai))
+### Use case
 
-**Why it matters:** this is operational AI at national scale, but still in the augmentation category: documentation support that reduces administrative burden while leaving clinical judgement with people. That model continues to define the public sector’s comfort zone. ([beehive.govt.nz](https://www.beehive.govt.nz/release/ai-scribe-now-every-emergency-department?utm_source=openai))
+Generative AI is being tested to support the development of import health standards.
 
-### Case Study 2: HealthX programme and clinical AI governance
+### Intended benefits
 
-Health NZ’s **HealthX** programme is now publicly visible as a national innovation vehicle for clinician-led AI and digital tools, and it was named a finalist in the **2026 Spirit of Service Awards**. Health NZ’s new UK partnership suggests the programme is being built as an assessment-and-scaling function, not just a collection of pilots. ([publicservice.govt.nz](https://www.publicservice.govt.nz/role-and-purpose/spirit-of-service/spirit-of-service-awards/spirit-of-service-awards-2026))
+- Faster review of technical documents
+- More consistent evidence synthesis
+- Reduced administrative burden
+- Potentially faster approvals for imported goods
+- Greater ability to update standards in response to changing trade and scientific conditions ([beehive.govt.nz](https://www.beehive.govt.nz/release/new-ai-tool-help-develop-biosecurity-standards))
 
-**Why it matters:** HealthX indicates a maturing model for public-sector AI adoption: validate first, scale second, and connect deployment decisions to governance, external evidence, and clinical workflow impact. ([publicservice.govt.nz](https://www.publicservice.govt.nz/role-and-purpose/spirit-of-service/spirit-of-service-awards/spirit-of-service-awards-2026))
+### Controls
 
-### Case Study 3: Govt.nz app and the Digital Public Infrastructure model
+- Four-month pilot
+- Expert review of outputs
+- Human responsibility for key decisions
+- Continued maintenance of biosecurity protections
 
-The **Govt.nz app** is no longer just a concept. It now has a live core app, a digital wallet, emergency-management updates and alerts, and a released credential issuance platform. The larger significance is architectural: it is being built as an all-of-government service channel connected to shared digital infrastructure. ([digital.govt.nz](https://www.digital.govt.nz/digital-government/key-areas-of-work/government-app-programme))
+### Assessment
 
-**Why it matters:** the public sector appears to be favouring a common service-delivery layer over fragmented agency-by-agency customer AI and mobile experiences. That is partly an inference from the published architecture, but it is a strong one. ([dns.govt.nz](https://dns.govt.nz/digital-government/digitising-government-programme-dgp/digital-target-state?utm_source=openai))
+This is a strategically important use case because it demonstrates how AI can support expert regulatory work without becoming the regulator. Its success will depend on evidence quality, traceability, error detection, and the ability of experts to understand how outputs were generated.
 
-### Case Study 4: Hutt City Council and the local-government AI model
+---
 
-Hutt City Council remains the strongest visible local-government adopter. Its public AI page describes custom assistants, a public AI register, an AI risk-management framework, governance oversight, emergency-response experimentation through **CERA**, and workflow tools for property and consent functions. It also reports measurable administrative gains, such as **3 to 5 minutes saved per invoice** in one automation example. ([huttcity.govt.nz](https://www.huttcity.govt.nz/council/our-projects/ai-at-council?utm_source=openai))
+## Case Study 2: Health NZ emergency-department AI scribe
 
-**Why it matters:** Hutt shows what mature sub-national adoption looks like in New Zealand: public disclosure, internal governance, narrow but useful workflow redesign, and visible experimentation tied to community outcomes. ([huttcity.govt.nz](https://www.huttcity.govt.nz/council/our-projects/ai-at-council?utm_source=openai))
+Health NZ’s emergency-department AI scribe remains the clearest example of frontline public-sector AI deployment at national scale. The tool has been rolled out across emergency departments, with reported pilot results indicating that doctors using it saw approximately one additional patient per shift on average. ([digital.govt.nz](https://www.digital.govt.nz/standards-and-guidance/technology-and-architecture/artificial-intelligence/public-service-ai-work-programme?utm_source=openai))
 
-### Case Study 5: Environment Canterbury’s governance-first posture
+### Strategic significance
 
-In **May 2026**, Environment Canterbury re-established its **Artificial Intelligence Working Group** to examine how AI is being used to analyse data, support decision-making, and serve local communities. Workshops are intended to be open to the public. ([ecan.govt.nz](https://www.ecan.govt.nz/get-involved/news-and-events/2026/council-re-establishes-ai-governance-working-group?utm_source=openai))
+- Demonstrates a direct link between AI and workforce capacity.
+- Targets documentation burden rather than clinical judgement.
+- Produces a relatively clear productivity measure.
+- Offers a repeatable model for other high-volume public services.
+- Shows why sector-specific governance is necessary when sensitive records are involved.
 
-**Why it matters:** not all adoption is about tools in production. In some parts of the sector, governance capability itself is now being built as a formal public function. ([ecan.govt.nz](https://www.ecan.govt.nz/get-involved/news-and-events/2026/council-re-establishes-ai-governance-working-group?utm_source=openai))
+The deployment is consistent with New Zealand’s broader pattern: AI augments professionals, while accountability remains with qualified staff.
 
-## Adoption Patterns and Trends
+---
 
-### 1) AI is becoming expected productivity infrastructure
+## Case Study 3: Govt.nz AI search assistant
 
-The combination of the public-service overhaul, the Digital Government Target State, and the July reset plan makes it clear that AI is now being treated as part of the expected productivity stack for government, not simply a discretionary innovation layer. ([beehive.govt.nz](https://www.beehive.govt.nz/release/public-service-be-overhauled?utm_source=openai))
+The AI search assistant is intended to help people find government information and services through a conversational interface. It was tested across 21 government websites using a combination of automated testing and public user research. ([digital.govt.nz](https://www.digital.govt.nz/blog/humanising-the-machine-testing-genai-with-a-people-centred-approach?utm_source=openai))
 
-### 2) Shared capabilities are winning over agency-by-agency buildouts
+### Lessons
 
-The architecture, procurement changes, and reset recommendations all favour reusable platforms, common assurance, and central coordination. New Zealand’s strategic model is increasingly “shared AI rails, agency-specific use cases.” ([dns.govt.nz](https://dns.govt.nz/digital-government/digitising-government-programme-dgp/digital-target-state?utm_source=openai))
+- Public users often provide personal information even when a tool is intended only for general queries.
+- A government AI system must be designed to redirect users to the correct service rather than attempt to resolve every issue.
+- “I don’t know” is a necessary capability.
+- Vulnerable-user scenarios need explicit response protocols.
+- Public trust depends on source quality, transparency, and access to human assistance.
 
-### 3) Human accountability remains the hard boundary
+### Assessment
 
-Across regulator guidance, Health NZ rules, and active public deployments, the dominant norm is that AI supports decisions rather than replacing accountable humans. ([regulation.govt.nz](https://www.regulation.govt.nz/news/helping-regulators-use-ai-with-confidence/?utm_source=openai))
+The assistant is an important test of whether New Zealand can move from internal productivity AI to safe, public-facing service AI.
 
-### 4) Health is the most advanced public-sector AI domain
+---
 
-Health now combines national deployment, formal AI governance, new evaluation pathways, and a visible innovation programme. No other public-sector domain currently shows that same mix of scale, governance, and pipeline maturity. ([beehive.govt.nz](https://www.beehive.govt.nz/release/ai-scribe-now-every-emergency-department?utm_source=openai))
+## Case Study 4: Hutt City Council
 
-### 5) Local government is becoming an important experimentation layer
+Hutt City Council has become one of New Zealand’s most visible local-government adopters. Its AI initiative has included custom assistants, a public AI register, governance mechanisms, and workflow automation. Earlier reporting described 15 custom-built AI assistants and 300 licences, with estimated annual savings of approximately $900,000 and 44,000 hours of staff time reclaimed. ([publicservice.govt.nz](https://www.publicservice.govt.nz/news/improving-access-and-services-through-innovation?utm_source=openai))
 
-Hutt City Council and Environment Canterbury show that councils are no longer just watching central government. They are building their own governance models, public disclosures, and operational use cases. ([ecan.govt.nz](https://www.ecan.govt.nz/get-involved/news-and-events/2026/council-re-establishes-ai-governance-working-group?utm_source=openai))
+### Significance
 
-## Pressure Points and Risks
+Hutt City’s approach combines:
 
-### Skills, cost, and security are still the main inhibitors
+- Practical workflow automation
+- Staff co-design
+- Public disclosure
+- A visible governance framework
+- Focus on measurable administrative outcomes
 
-The official cross-agency survey continues to identify **skills**, **cost**, and **security** as the main barriers to adoption. That remains the cleanest published explanation for why growth in use cases has not yet translated into evenly distributed maturity. ([digital.govt.nz](https://www.digital.govt.nz/standards-and-guidance/technology-and-architecture/artificial-intelligence/research-ai-public-service/2025-cross-agency-ai-survey-highlights))
+It provides a useful example of how smaller public organisations can generate value without building large internal AI research capabilities.
 
-### AI-specific social licence remains thinner than general trust in government
+---
 
-The gap between high trust in public services overall and low public understanding of AI use is still the sector’s most important political and design constraint. Without stronger disclosure and communication, more deployment may widen that gap rather than close it. ([publicservice.govt.nz](https://www.publicservice.govt.nz/data/trust-in-the-public-service?utm_source=openai))
+## Case Study 5: Environment Canterbury AI governance
 
-### Biometrics is an immediate governance test
+Environment Canterbury re-established an Artificial Intelligence Working Group in 2026 to examine how AI is being used to analyse data, support decision-making, and serve communities. The council has also indicated that workshops will involve public participation. ([digital.govt.nz](https://www.digital.govt.nz/standards-and-guidance/technology-and-architecture/artificial-intelligence/public-service-ai-work-programme?utm_source=openai))
 
-The **Biometric Processing Privacy Code 2025** transition deadline of **August 3, 2026** is now close. At the same time, the Public Service Commissioner has announced an investigation into integrity concerns linked to MBIE’s failed **Biometric Capability Update** project, and MBIE has acknowledged the project consumed **$33 million** without delivering anything. While biometric processing is not the whole AI story, it is a live reminder that trust can be damaged as much by poor delivery and governance as by the technology itself. ([privacy.org.nz](https://www.privacy.org.nz/privacy-principles/codes-of-practice/biometric-processing-privacy-code/?utm_source=openai))
+### Significance
+
+This illustrates an important form of adoption that is sometimes overlooked: governance capacity itself is becoming an institutional capability. Not every agency is ready to deploy AI, but many are now establishing processes to assess:
+
+- Where AI may be useful
+- Which risks are acceptable
+- How public engagement should occur
+- What Māori data considerations apply
+- How accountability should be assigned
+
+---
+
+## Adoption Trends
+
+## 1. From isolated pilots to shared AI infrastructure
+
+The strongest system-level trend is centralisation. The Government is increasingly favouring:
+
+- Shared platforms
+- Common procurement
+- Reusable patterns
+- Central assurance
+- Cross-agency learning
+- Common service channels
+
+This is an inference from the Digital Government Target State, the digital reset, and the AI Work Programme, but the direction is clear: New Zealand is attempting to create shared “AI rails” on which agencies can build domain-specific services. ([digital.govt.nz](https://www.digital.govt.nz/digital-government/strategy/insights-and-commentary/sir-brian-roche-keynote-2026?utm_source=openai))
+
+## 2. Administrative productivity remains the entry point
+
+The most mature applications reduce paperwork and information-processing burdens. This includes:
+
+- Scribing
+- Summarising
+- Drafting
+- Document review
+- Search
+- Classification
+- Data analysis
+- Internal knowledge retrieval
+- Routine workflow automation
+
+This pattern reflects both the potential value of these tasks and their lower risk compared with automated eligibility, enforcement, clinical, or regulatory decisions. ([digital.govt.nz](https://www.digital.govt.nz/dmsdocument/263~full-results-2025-cross-agency-survey-for-artificial-intelligence-ai-use-cases/html?utm_source=openai))
+
+## 3. Customer-facing AI is advancing more slowly
+
+The Government’s AI search assistant shows that customer-facing AI is being explored, but it also demonstrates why deployment is slower. Public-facing systems must handle:
+
+- Incorrect or incomplete answers
+- Personal information
+- Accessibility
+- Digital exclusion
+- Vulnerable users
+- Human escalation
+- Public records
+- Explainability
+- Reputational risk
+
+The likely near-term model is not “AI replaces the service channel,” but “AI improves discovery and navigation while retaining human and conventional channels.”
+
+## 4. Human accountability remains the boundary
+
+Across public-service guidance, regulatory guidance, Health NZ rules, and the biosecurity pilot, the same principle is repeated: AI may support professional work, but accountable people remain responsible for decisions. ([regulation.govt.nz](https://www.regulation.govt.nz/publications-and-resources/resource-library/responsible-ai-in-action/?utm_source=openai))
+
+This is particularly important in:
+
+- Health
+- Social services
+- Regulation
+- Immigration
+- Justice
+- Tax
+- Benefits and entitlements
+- Enforcement
+- Biometrics
+
+## 5. Māori data governance is becoming more explicit
+
+The 2026 regulatory guidance strengthens the visibility of Māori data sovereignty in public-sector AI practice. It recognises that AI can affect Māori access to services, compliance outcomes, regulatory treatment, and control over data. ([regulation.govt.nz](https://www.regulation.govt.nz/publications-and-resources/resource-library/responsible-ai-in-action/?utm_source=openai))
+
+The practical implication is that Māori engagement and data governance should occur early in the design process, rather than being treated as a late-stage consultation or compliance exercise.
+
+## 6. Public transparency is becoming an adoption requirement
+
+The 2025 public-service guidance emphasises transparency, explainability, bias, accessibility, privacy, and the experiences of Māori, Pacific peoples, and ethnic communities. ([docref.digital.govt.nz](https://docref.digital.govt.nz/nz/generative-ai-guidance-gcdo/responsible-ai-guidance-for-the-public-service-genai/2025/en/?utm_source=openai))
+
+For agencies, transparency increasingly means explaining:
+
+- Whether AI is being used
+- What role it plays
+- What information it uses
+- How outputs are checked
+- Who remains accountable
+- How people can challenge or correct an outcome
+- How to access a human alternative
+
+---
+
+## Risks and Pressure Points
+
+### Skills and capability
+
+The official survey continues to identify skills and capability as major barriers. Agencies may have access to general-purpose tools but lack the expertise needed to redesign processes, evaluate outputs, manage data, and monitor systems over time. ([digital.govt.nz](https://www.digital.govt.nz/dmsdocument/263~full-results-2025-cross-agency-survey-for-artificial-intelligence-ai-use-cases/html?utm_source=openai))
+
+### Security and privacy
+
+Public agencies hold highly sensitive personal, health, financial, legal, and identity data. The use of external AI tools creates risks involving:
+
+- Unauthorised disclosure
+- Data retention
+- Cross-border processing
+- Prompt injection
+- Model misuse
+- Inaccurate retrieval
+- Poor access control
+- Records-management failures
+
+Health NZ’s restrictions on sensitive information and clinical use illustrate the level of caution required. ([healthnz.govt.nz](https://www.healthnz.govt.nz/health-professionals/guidance-standards/topic/digital-technologies?utm_source=openai))
+
+### Bias and inequity
+
+AI systems can reproduce or amplify existing administrative and social inequities. Public-sector risks are particularly serious when outputs affect rights, entitlements, access to services, enforcement, or regulatory treatment.
+
+The Ministry for Regulation’s guidance specifically connects AI risks with fairness, Māori data, Te Tiriti obligations, and the need for ongoing review. ([regulation.govt.nz](https://www.regulation.govt.nz/publications-and-resources/resource-library/responsible-ai-in-action/?utm_source=openai))
+
+### Fragmentation
+
+Without central coordination, agencies may independently procure similar tools, develop inconsistent controls, and duplicate infrastructure. The digital reset’s finding that investment is fragmented is therefore directly relevant to public-sector AI. ([publicservice.govt.nz](https://www.publicservice.govt.nz/news/rapid-review-proposes-reset-for-digital-delivery?utm_source=openai))
+
+### Measurement weakness
+
+The most recent comprehensive AI use-case data is from 2025. While individual agency announcements show continued movement in 2026, the absence of a new national survey means policymakers cannot yet reliably determine:
+
+- How many use cases are operational
+- Which agencies have the greatest maturity
+- How much time or money is being saved
+- How many systems affect citizens directly
+- Whether reported benefits are sustained
+- Whether risks or incidents are increasing
+
+A stronger annual measurement regime is one of the most important deliverables in the AI Work Programme. ([digital.govt.nz](https://www.digital.govt.nz/standards-and-guidance/technology-and-architecture/artificial-intelligence/public-service-ai-work-programme?utm_source=openai))
+
+### Public trust and human choice
+
+General trust in New Zealand’s public services remains comparatively strong. The latest published Kiwis Count figures report **84% trust in the most recently used government service** and **64% trust in the Public Service brand**, based on the March 2026 quarter. ([publicservice.govt.nz](https://www.publicservice.govt.nz/data/kiwis-count?utm_source=openai))
+
+However, high general trust should not be interpreted as automatic consent for AI use. AI-specific understanding, transparency, and the availability of human alternatives remain important conditions for maintaining legitimacy.
+
+---
+
+## Strategic Implications for Public-Sector Stakeholders
+
+### For chief executives and senior leaders
+
+- Treat AI as an operating-model and service-design issue, not only a technology project.
+- Prioritise high-volume, low-risk workflows where benefits can be measured.
+- Establish clear ownership for AI systems and outputs.
+- Link AI investment to service outcomes, workforce capacity, and public value.
+- Avoid agency-specific duplication where a common capability is feasible.
+
+### For digital and data leaders
+
+- Build reusable patterns for retrieval, summarisation, search, and workflow automation.
+- Use approved environments for sensitive information.
+- Establish testing, monitoring, incident response, and human-escalation procedures.
+- Maintain inventories or registers of AI systems and use cases.
+- Design for auditability and records-management obligations.
+
+### For policy and regulatory leaders
+
+- Identify where AI can improve evidence synthesis and compliance support.
+- Keep rights-affecting decisions explainable and reviewable.
+- Apply Māori data sovereignty and Te Tiriti considerations early.
+- Involve affected communities in system design and evaluation.
+- Treat AI outputs as evidence or assistance, not automatically as authoritative conclusions.
+
+### For workforce and people leaders
+
+- Provide practical AI training rather than generic awareness sessions.
+- Define acceptable-use rules for public servants.
+- Encourage responsible experimentation within approved environments.
+- Monitor how AI changes job design, workload, accountability, and professional capability.
+- Ensure staff can challenge poor or unsafe AI-enabled processes.
+
+---
+
+## Outlook: The Next 12–18 Months
+
+The next phase of public-sector AI adoption is likely to be defined by five developments:
+
+1. **More shared infrastructure**  
+   Agencies will increasingly use common platforms, procurement channels, AI gateways, search services, and assurance mechanisms.
+
+2. **More domain-specific deployment**  
+   Health, biosecurity, regulatory services, local government, and administrative processing are likely to produce the most visible new use cases.
+
+3. **Greater scrutiny of public-facing AI**  
+   Customer-facing assistants will face higher expectations around accuracy, source attribution, privacy, accessibility, and human fallback.
+
+4. **More formal assurance**  
+   AI registers, risk assessments, testing procedures, monitoring, and certification-like controls are likely to become standard features of deployment.
+
+5. **A stronger focus on measurable productivity**  
+   Public-sector AI projects will increasingly be expected to demonstrate time savings, service improvements, cost avoidance, reduced error rates, or better customer outcomes.
+
+The key question is not whether AI will be used in New Zealand’s public sector. That transition is already underway. The strategic question is whether the public sector can scale AI while preserving trust, accountability, equity, privacy, and professional judgement.
+
+---
 
 ## Overall Assessment
 
-As of **July 13, 2026**, AI adoption in New Zealand’s public sector is best described as **centralising implementation**. The sector has moved beyond a framework-only phase: it has a formal AI work programme, a clearer shared architecture, a central digital delivery agency, visible frontline deployments, and stronger domain-specific operating guidance. The July reset plan has also made AI more explicitly part of the state’s common-capability agenda. ([digital.govt.nz](https://www.digital.govt.nz/standards-and-guidance/technology-and-architecture/artificial-intelligence/public-service-ai-work-programme))
+As of **August 18, 2026**, AI adoption in New Zealand’s public sector is best described as **structured acceleration**.
 
-But the operating model remains deliberately bounded. The most mature New Zealand public-sector examples still use AI to compress paperwork, improve service navigation, support analysis, and reduce workflow friction while keeping humans clearly accountable. That is visible in emergency departments, regulatory guidance, health innovation governance, local-government AI registers, and the architecture behind the Govt.nz app. ([beehive.govt.nz](https://www.beehive.govt.nz/release/ai-scribe-now-every-emergency-department?utm_source=openai))
+The sector has:
 
-The key change since the last edition is that AI is now more tightly tied to the state’s core redesign agenda. The next phase will be decided less by whether agencies want to try AI, and more by whether New Zealand can deliver shared platforms, trusted governance, and credible public transparency at the same pace as adoption pressure rises. ([digital.govt.nz](https://www.digital.govt.nz/digital-government/strategy/strategy-summary/service-modernisation-roadmap-transition-to-the-digital-government-target-state?utm_source=openai))
+- A national AI framework
+- Responsible-use guidance
+- A two-year AI work programme
+- A growing base of operational use cases
+- Stronger central digital coordination
+- Frontline deployment in health
+- New operational testing in biosecurity
+- More explicit Māori data and sovereignty guidance
+- Increasing attention to shared infrastructure and assurance
+
+However, adoption remains uneven and the national evidence base is still incomplete. The latest comprehensive figures are from 2025, and many 2026 initiatives remain pilots, planned capabilities, or agency-specific programmes.
+
+The prevailing New Zealand model is therefore neither unrestricted automation nor technological hesitation. It is a controlled, human-centred approach in which AI is used to improve the speed, consistency, and capacity of public servants while retaining human responsibility for consequential decisions.
+
+The most important success factors will be:
+
+- Shared infrastructure rather than duplicated agency builds
+- Stronger workforce capability
+- Measurable benefits
+- Privacy and security by design
+- Māori data governance
+- Transparent public communication
+- Independent and ongoing assurance
+- Accessible human alternatives
+
+If those conditions are met, AI can become a meaningful component of public-service reform. If they are not, fragmented procurement, weak transparency, inaccurate outputs, and poorly governed sensitive-data use could undermine the public trust on which New Zealand’s public institutions depend.

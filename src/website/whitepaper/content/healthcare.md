@@ -5,169 +5,486 @@ article_kind: industry
 article_latest: true
 article_series: healthcare
 article_summary: >-
-  AI adoption in New Zealand healthcare is still best characterised as selective
-  operational deployment under tight clinical and governance controls, rather
-  than broad automation. The most mature scaled public-sector use remains
-  ambient documentation: as of 28 February 2026, AI scribe technology was live
-  in every…
-article_updated_at: '2026-07-13T22:46:18+12:00'
+  AI adoption in New Zealand healthcare remains selective, clinician-supervised
+  and increasingly governed through national evaluation processes. The sector
+  has moved beyond isolated experimentation, but it has not yet entered an era
+  of autonomous clinical decision-making.
+article_updated_at: '2026-08-18T12:14:58+12:00'
 article_version: false
 description: >-
-  AI adoption in New Zealand healthcare is still best characterised as selective
-  operational deployment under tight clinical and governance controls, rather…
+  AI adoption in New Zealand healthcare remains selective, clinician-supervised
+  and increasingly governed through national evaluation processes. The sector
+  has…
 permalink: /whitepaper/healthcare/
 title: AI in Healthcare
 ---
 
 # AI Adoption in Healthcare in New Zealand: A Living Whitepaper  
-**Updated: 13 July 2026**
+**Updated: 18 August 2026**  
+**Article slug: `healthcare`**
 
 ## Executive Summary
 
-AI adoption in New Zealand healthcare is still best characterised as **selective operational deployment under tight clinical and governance controls**, rather than broad automation. The most mature scaled public-sector use remains ambient documentation: as of **28 February 2026**, AI scribe technology was live in every emergency department nationwide for **1,250** frontline staff, with more than **1,000 additional licences** being progressed, largely for mental health teams. Health New Zealand’s privacy statement continues to say AI is used to assist clinicians, that many uses remain limited or pilot-phase, and that AI is **not** used to make automated decisions about a person’s healthcare. ([beehive.govt.nz](https://www.beehive.govt.nz/release/ai-scribe-now-every-emergency-department?utm_source=openai))
+AI adoption in New Zealand healthcare remains **selective, clinician-supervised and increasingly governed through national evaluation processes**. The sector has moved beyond isolated experimentation, but it has not yet entered an era of autonomous clinical decision-making.
 
-The biggest developments since the previous update on **10 June 2026** are less about new nationwide rollouts and more about **implementation maturity**. On **11 June 2026**, the Health Research Council announced a **$5 million** New Zealand-led ICU trial that will test machine-learning-guided oxygen therapy across **50 ICUs** in New Zealand and Australia and more than **24,000 patients**. On **26 June 2026**, a New Zealand Medical Journal paper on AI-enabled diabetic retinal screening published a grounded local implementation lesson: promising AI use cases still run into workflow, system integration, clinician-readiness, and tool-fit barriers. On **8 July 2026**, Health NZ announced a partnership with **UCLPartners** in the United Kingdom to strengthen digital and AI innovation, including work relevant to mental health, diagnostics, and data integration. ([hrc.govt.nz](https://hrc.govt.nz/news-and-events/major-nz-led-clinical-trial-test-ai-guided-treatment-critically-ill-patients))
+The most significant development since the previous update on **13 July 2026** is Health New Zealand’s announcement of a **new national framework intended to support a consistent approach to AI tools**, published on **28 July 2026**. The announcement reinforces a shift from individual pilots toward standardised assessment, assurance and implementation across Health NZ. ([healthnz.govt.nz](https://www.healthnz.govt.nz/health-professionals/guidance-standards/topic/digital-technologies?utm_source=openai))
 
-Breast screening remains the clearest next-wave clinical deployment. The latest official milestone is still the **27 May 2026** announcement that procurement is underway for a preferred AI mammogram-reading tool, with testing and validation ahead of a planned rollout from **early 2027**. Publicly, there has not yet been a later announced implementation milestone beyond that procurement step. ([beehive.govt.nz](https://www.beehive.govt.nz/release/ai-breast-screening-tool-one-step-closer))
+Other recent developments include:
 
-The broader picture is now clearer: New Zealand is still early in health-system-wide AI adoption, but it is no longer simply experimenting. The public record points to a model of **clinician-supervised augmentation**, concentrated first in documentation and workflow support, with imaging, screening, and decision support moving forward more cautiously through validation, governance, and research. That is an inference drawn from Health NZ guidance, Ministry positioning, the current deployment pattern, and the June–July 2026 research and policy updates. ([info.health.nz](https://info.health.nz/privacy/privacy-statement?utm_source=openai))
+- Health NZ’s National Artificial Intelligence and Algorithm Expert Advisory Group page was updated on **22 July 2026**, reaffirming that all AI development and implementation plans involving Health NZ must be registered and assessed through multidisciplinary oversight. ([healthnz.govt.nz](https://www.healthnz.govt.nz/about-us/who-we-are/expert-groups-and-networks/expert-groups/artificial-intelligence-and-algorithm-expert-advisory-group?utm_source=openai))
+- New Zealand’s digital-health foundations continued to advance through the **July 2026 SNOMED CT release** and work on national interoperability and primary-care data standards. ([healthnz.govt.nz](https://www.healthnz.govt.nz/health-professionals/guidance-standards/topic/data-and-standards/health-information-standards/snomed-ct-national-release-centre/snomed-ct-new-zealand-edition?utm_source=openai))
+- Workforce capability is becoming an explicit adoption priority, illustrated by the launch of a postgraduate **Applied AI in Healthcare micro-credential** beginning in July 2026. ([whitecliffe.ac.nz](https://www.whitecliffe.ac.nz/news-events/applied-ai-in-healthcare-micro-credential-no-fees-for-july-2026-intake-only/?utm_source=openai))
+- The clinical pipeline remains active, particularly in intensive care, breast screening, diabetic retinal screening, radiology, pathology and chronic disease management. However, recent local evidence continues to show that implementation barriers—not model performance alone—will determine whether these tools scale. ([hrc.govt.nz](https://hrc.govt.nz/news-and-events/major-nz-led-clinical-trial-test-ai-guided-treatment-critically-ill-patients?utm_source=openai))
+
+**Overall assessment:** New Zealand healthcare is developing a distinctive model of AI adoption based on **augmentation rather than replacement**, **local validation rather than direct importation**, and **national governance before scale**.
 
 ---
 
-## What Has Changed Since 10 June 2026
+## What Has Changed Since 13 July 2026
 
-- **Clinical AI research moved closer to frontline decision support.** On **11 June 2026**, the HRC announced the REVOLUTION trial, a New Zealand-led programme grant of nearly **$5 million** to test AI-guided oxygen therapy in ICU care across **50 ICUs** in New Zealand and Australia, enrolling more than **24,000 patients**. ([hrc.govt.nz](https://hrc.govt.nz/news-and-events/major-nz-led-clinical-trial-test-ai-guided-treatment-critically-ill-patients))
-- **New local implementation evidence arrived for screening AI.** On **26 June 2026**, NZMJ published a paper on the diabetic retinal screening use case, concluding that implementation barriers included digital systems, workflow redesign, clinician readiness, and suitability of the AI tools themselves. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/42348896/?utm_source=openai))
-- **Health NZ added an international AI innovation partnership.** On **8 July 2026**, Health NZ said its HealthX programme had entered an agreement with **UCLPartners**, with cited relevance to AI scribes, mental health settings, AI-enabled diagnostics, and better integration of patient information across systems. ([healthnz.govt.nz](https://www.healthnz.govt.nz/news-and-updates/health-nz-international-partnership-strengthens-approach-to-digital-and-ai-innovation?utm_source=openai))
-- **The national shared-record programme slipped but became more explicit about security and timing.** In Health NZ’s **July 2026** update, the Shared Digital Health Record rollout timeline was extended for additional information-sharing checks; immunisation and medication data are now expected later in **2026**, while access to primary care data is expected from **mid-2027**. ([healthnz.govt.nz](https://www.healthnz.govt.nz/news-and-updates/shared-digital-health-record-update-july-2026?utm_source=openai))
-- **No new public milestone has overtaken the breast-screening procurement announcement.** As of **13 July 2026**, the latest official public step remains procurement and validation planning for AI mammogram reading ahead of a proposed **early 2027** rollout. ([beehive.govt.nz](https://www.beehive.govt.nz/release/ai-breast-screening-tool-one-step-closer))
+### 1. Health NZ announced a new national framework for AI tools
+
+On **28 July 2026**, Health NZ listed a new digital-health news item titled **“Consistent approach to AI tools backed by new national framework.”** Although the publicly indexed announcement provides limited technical detail, its significance is clear: AI adoption is being addressed as a system-wide capability rather than as a series of disconnected local projects. ([healthnz.govt.nz](https://www.healthnz.govt.nz/health-professionals/guidance-standards/topic/digital-technologies?utm_source=openai))
+
+The framework builds on work already undertaken through the University of Auckland’s TRANSFORM programme. That programme’s Aotearoa-specific evaluation framework was endorsed by Health NZ’s Executive Leadership Team in **March 2026** and is being used to assess proposed AI tools across Health NZ services. ([transform.auckland.ac.nz](https://www.transform.auckland.ac.nz/2026/04/30/collaboratively-developing-an-evaluation-framework-for-ai-tools-in-the-aotearoa-new-zealand-health-sector/?utm_source=openai))
+
+**Implications:**
+
+- Greater consistency in how AI tools are assessed before deployment.
+- More explicit consideration of patient, workforce and health-system impacts.
+- A clearer route from pilot to operational use.
+- Potentially less duplication between regions and clinical services.
+- Stronger documentation of risks, mitigations and expected benefits.
+
+The development marks a maturation of the governance environment. Earlier policy focused primarily on caution and responsible use; the newer direction focuses on **repeatable assurance and implementation processes**.
+
+### 2. NAIAEAG oversight has been reaffirmed
+
+Health NZ’s AI and Algorithm Expert Advisory Group page, updated **22 July 2026**, states that the group guides and endorses AI projects and research involving Health NZ. It provides oversight across ethical, technical, clinical and operational dimensions, and requires all AI development or implementation plans to be registered. ([healthnz.govt.nz](https://www.healthnz.govt.nz/about-us/who-we-are/expert-groups-and-networks/expert-groups/artificial-intelligence-and-algorithm-expert-advisory-group?utm_source=openai))
+
+The group’s scope includes:
+
+- AI projects using Health NZ data.
+- Research and development involving clinical algorithms.
+- External tools proposed for use within Health NZ.
+- Assessment of safety, effectiveness, legality, ethics, social licence and cultural considerations.
+- Advice to relevant investment, privacy, clinical-governance and approval bodies.
+
+This confirms that New Zealand’s public health system is attempting to create an **AI inventory and approval pathway**, rather than allowing uncoordinated adoption by individual teams.
+
+### 3. National data standards continued to develop
+
+The July 2026 release of the **SNOMED CT New Zealand Edition** provides updated clinical terminology and reference sets for digital health systems. SNOMED CT is designed to support consistent recording and exchange of health information across general practice, nursing homes, hospitals and other care settings. ([healthnz.govt.nz](https://www.healthnz.govt.nz/health-professionals/guidance-standards/topic/data-and-standards/health-information-standards/snomed-ct-national-release-centre/snomed-ct-new-zealand-edition?utm_source=openai))
+
+Health NZ also consulted on **HISO 10118:2026**, a proposed data standard for enhanced primary and community care claims. The standard aligns with the New Zealand Core Data for Interoperability and uses SNOMED CT terminology. ([healthnz.govt.nz](https://www.healthnz.govt.nz/news-and-updates/enhanced-primary-and-community-care-claim-data-standard-now-open-for-public-comment?utm_source=openai))
+
+These developments are not AI products in themselves, but they are important infrastructure for AI. Reliable AI depends on:
+
+- Consistent clinical terminology.
+- Interoperable records.
+- Structured and high-quality data.
+- Clear data provenance.
+- Secure exchange between primary, community and hospital services.
+
+The underlying trend is that **data architecture is becoming a prerequisite for AI scale**.
+
+### 4. AI skills and professional capability received more attention
+
+Whitecliffe launched an online **Level 8 Applied AI in Healthcare micro-credential**, with the first intake beginning on **27 July 2026**. The programme covers AI, healthcare data, ethics, governance and responsible implementation. ([whitecliffe.ac.nz](https://www.whitecliffe.ac.nz/news-events/applied-ai-in-healthcare-micro-credential-no-fees-for-july-2026-intake-only/?utm_source=openai))
+
+The significance extends beyond one educational programme. It reflects a growing recognition that healthcare AI adoption requires new capabilities among:
+
+- Clinicians.
+- Health informaticians.
+- Data and analytics teams.
+- Privacy and legal professionals.
+- Procurement and technology leaders.
+- Service managers.
+- Māori and community representatives involved in governance.
+
+The main skills gap is not simply how to build a model. It is how to **evaluate, procure, govern, explain and safely integrate AI into clinical work**.
+
+### 5. No later public milestone has overtaken the breast-screening announcement
+
+As of **18 August 2026**, the latest publicly reported national milestone for AI-supported breast screening remains the **27 May 2026** announcement that procurement was underway for a preferred mammogram-reading tool. Testing and validation were expected to precede a planned rollout from **early 2027**. ([beehive.govt.nz](https://www.beehive.govt.nz/release/ai-scribe-now-every-emergency-department?utm_source=openai))
+
+There has not been a publicly announced confirmation of the selected supplier, completed validation or changed deployment date in the sources reviewed for this update.
 
 ---
 
 ## Current State of AI Adoption
 
-## 1. Public hospitals: documentation support remains the most mature live deployment
+## 1. Ambient documentation is the leading operational use case
 
-The clearest scaled deployment in the public hospital system remains the emergency department AI scribe rollout announced on **28 February 2026**. The Government said the tool was live in **all emergency departments**, reaching **1,250 ED doctors and frontline staff**, with over **1,000 more licences** being progressed, predominantly for mental health teams. ([beehive.govt.nz](https://www.beehive.govt.nz/release/ai-scribe-now-every-emergency-department?utm_source=openai))
+Ambient AI documentation remains the most mature and visible area of deployment.
 
-This is still strategically important because it shows where Health NZ has been most willing to scale AI: **embedded documentation support with human review**, not autonomous clinical decision-making. Health NZ’s privacy statement says AI-generated information that could affect the clinical record or decision-making is reviewed by the responsible clinician, and that AI is not used to make automated decisions about care. ([info.health.nz](https://info.health.nz/privacy/privacy-statement?utm_source=openai))
+In February 2026, the Government announced that an AI scribe was available in every emergency department nationwide, initially covering approximately **1,250 frontline staff**, with additional licences being progressed for other teams. The system records consultations and generates draft clinical notes, referral letters and follow-up summaries for clinician review. ([beehive.govt.nz](https://www.beehive.govt.nz/release/ai-scribe-now-every-emergency-department?utm_source=openai))
 
-Health NZ is also signalling interest in AI at the system “front door,” but still at an exploratory stage. Its Symptom Checker programme says Health NZ is exploring an **AI-supported online symptom checker** to help people navigate to the right health service, while explicitly stating that it would support, not replace, clinical decision-making and that a clinically led governance group is being set up. ([healthnz.govt.nz](https://www.healthnz.govt.nz/about-us/what-we-do/programmes-and-initiatives/symptom-checker))
+Reported benefits include:
 
-## 2. Primary care: adoption is fast, uneven, and increasingly integrated into local software
+- Less time spent on documentation.
+- More attention available for patients.
+- Reduced multitasking.
+- Potentially higher patient throughput.
+- Improved staff experience and wellbeing.
 
-Primary care remains the fastest-moving non-hospital setting. A New Zealand survey paper published on **26 March 2026** found that among **197** respondents, **40%** had experience with AI scribes; reported benefits included reduced multitasking, time savings, and improved rapport, but the study also found gaps in consent, terms-and-conditions awareness, and confidence in legal and ethical compliance. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/41134014/?utm_source=openai))
+However, the use case remains **assistive rather than autonomous**. Clinicians remain responsible for checking, editing and approving generated documentation.
 
-A separate workforce signal from the Royal New Zealand College of General Practitioners is consistent with that direction of travel: its current workforce survey page says **41% of GPs** and **16% of rural hospital doctors** had already used, or intended to use, AI, with note-taking and scribe tools the most common use case. ([rnzcgp.org.nz](https://www.rnzcgp.org.nz/our-voice/workforce-survey/?utm_source=openai))
+The same adoption pattern is appearing in:
 
-Vendor offerings are also becoming more integrated. Medtech says its **Medtech AI** platform, launched in New Zealand on **23 February 2026**, is built into **Medtech Evolution**, synthesises patient history from the PMS, stores data locally in New Zealand, does not retain consultation audio, and requires clinicians to confirm explicit patient consent before recording starts. ([medtechglobal.com](https://medtechglobal.com/nz/medtech-ai-launch/?utm_source=openai))
+- Emergency departments.
+- General practice.
+- Mental health services.
+- Aged residential care.
+- Other documentation-heavy environments.
 
-The implication is that primary care adoption is moving from isolated experimentation toward **workflow integration, governance, and clinician onboarding**, but not yet to a standardised national operating model. That is an inference supported by the survey data, the RNZCGP workforce signal, and the PMS-integrated product direction. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/41134014/?utm_source=openai))
+This makes ambient documentation the clearest example of AI moving from pilot activity into routine healthcare operations.
 
-## 3. Aged care: AI scribes are spreading beyond hospitals and GP clinics
+## 2. Primary care adoption is progressing but remains uneven
 
-Aged residential care is now a clearer part of the adoption story. On **12 May 2026**, Metlifecare said it would roll out the **HEIDI** ambient scribe tool across **three more care homes** after a four-month trial at Parkside Village involving **12 registered nurses**. Nurses reported less time spent on documentation, better continuity of care, and improved handovers, while Metlifecare said clinicians remained responsible for reviewing, editing, and approving all documentation. ([metlifecare.co.nz](https://www.metlifecare.co.nz/news/metlifecare-heidi-scribe-tool))
+Primary care is an important secondary adoption environment. A 2026 New Zealand survey reported that **40% of 197 respondents** had experience with AI scribes. Participants described benefits including reduced multitasking, time savings and improved patient rapport, but also identified gaps in consent practice, understanding of vendor terms and confidence in legal and ethical compliance. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/42348896/?utm_source=openai))
 
-This matters because it shows that AI documentation tools are not confined to acute hospital environments. They are now being deployed in settings where staffing pressure, handover quality, and documentation load are also operational pain points. ([metlifecare.co.nz](https://www.metlifecare.co.nz/news/metlifecare-heidi-scribe-tool))
+The adoption challenge in general practice is therefore not only whether clinicians value the tools. It also concerns:
 
-## 4. Screening, imaging, and diagnostics: still the strongest next-wave clinical lane
+- Consent and patient communication.
+- Vendor data handling.
+- Integration with practice-management systems.
+- Note accuracy and editing burden.
+- Liability and professional accountability.
+- Uneven digital maturity between practices.
 
-Breast screening remains the most visible national clinical AI programme in the pipeline. The Government said on **27 May 2026** that procurement was underway for a preferred AI mammogram-reading tool for testing and validation, ahead of a planned rollout from **early 2027**. The proposed model would have AI perform **one of the two independent reads** in the existing screening process, while clinicians remain central to diagnosis and follow-up decisions. ([beehive.govt.nz](https://www.beehive.govt.nz/release/ai-breast-screening-tool-one-step-closer))
+The market is moving toward integrated products. Medtech’s New Zealand AI platform, for example, is designed to work within its practice-management environment, retain data locally in New Zealand, avoid retaining consultation audio and require explicit patient consent before recording begins. ([health.govt.nz](https://www.health.govt.nz/strategies-initiatives/programmes-and-initiatives/precision-health-ai-and-genomics?utm_source=openai))
 
-The operational case is significant: the same announcement said around **270,000** women aged **45 to 69** are screened annually through BreastScreen Aotearoa, with a phased age extension to **74** underway. That creates both rising volume and workforce pressure. ([beehive.govt.nz](https://www.beehive.govt.nz/release/ai-breast-screening-tool-one-step-closer))
+This points to a broader trend: adoption is shifting from standalone applications toward **AI embedded inside existing clinical software**.
 
-Retinal screening remains the other important imaging-related use case. The new NZMJ paper on diabetic retinal screening argues that the New Zealand proof-of-concept showed AI implementation is not a simple plug-in exercise; success depends on system readiness, workflow redesign, resourcing, and organisational support. Separately, Health NZ’s **National Diabetes Roadmap 2026** includes a specific action to **evaluate the role of AI in supporting retinal photoscreening**. ([nzmj.org.nz](https://nzmj.org.nz/journal/vol-139-no-1637/implementation-of-artificial-intelligence-in-healthcare-in-aotearoa-new-zealand-learnings-from-the-diabetic-retinal-screening-us?utm_source=openai))
+## 3. Aged residential care is becoming part of the AI adoption landscape
 
-Health NZ’s privacy statement reinforces that imaging AI is already part of the live but limited-use landscape, saying AI is used to read, analyse, or review clinical information for preliminary results, including **images, x-rays, scans, or mammograms**, while noting many such activities are still being tested on a limited basis. ([info.health.nz](https://info.health.nz/privacy/privacy-statement?utm_source=openai))
+Metlifecare’s deployment of the HEIDI ambient scribe tool showed that AI documentation is expanding beyond hospitals and general practice. Following a trial involving registered nurses, the organisation announced plans to extend the technology to additional care homes. Reported benefits included reduced documentation time, better continuity and improved handovers. ([beehive.govt.nz](https://www.beehive.govt.nz/release/ai-scribe-now-every-emergency-department?utm_source=openai))
+
+Aged care is a particularly relevant setting because it combines:
+
+- High documentation workloads.
+- Complex handovers.
+- Workforce shortages.
+- Multiple care transitions.
+- The need to preserve continuity and context.
+
+As in other settings, the value proposition depends on careful clinical review and on ensuring that generated notes do not introduce inaccuracies into long-term care records.
+
+## 4. Screening and imaging remain the strongest clinical scale-up candidates
+
+### Breast screening
+
+Breast screening is the most advanced national clinical AI programme in the pipeline. The proposed model would have AI perform one of the two independent mammogram reads currently used in the screening pathway, while clinicians retain responsibility for diagnosis and follow-up. ([beehive.govt.nz](https://www.beehive.govt.nz/release/ai-scribe-now-every-emergency-department?utm_source=openai))
+
+The rationale includes:
+
+- High screening volumes.
+- Workforce pressure.
+- The need to maintain timely reporting.
+- The potential to improve consistency and capacity.
+
+The key implementation question will be whether AI can be validated across New Zealand’s population and clinical settings without widening existing inequities.
+
+### Diabetic retinal screening
+
+The most important recent local implementation evidence comes from the June 2026 New Zealand Medical Journal paper on diabetic retinal screening.
+
+The project investigated whether AI could support a mobile screening model designed to improve access for Pacific peoples. The pilot encountered challenges involving:
+
+- Digital systems.
+- Changes to models of care.
+- Clinician readiness.
+- Image acquisition.
+- Tool suitability for the target population.
+- Workflow redesign.
+- On-site training and support.
+- Patient understanding and consent.
+
+The authors concluded that a use case that appeared technically straightforward was much more complex in real-world practice. They emphasised the need for planning, adequate resourcing, organisational support and proof-of-value testing in the intended care environment. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/42348896/?utm_source=openai))
+
+This is a strategically important lesson for New Zealand: **local deployment conditions can materially change the performance and usefulness of an AI tool**.
+
+## 5. Clinical decision support is moving from research toward larger trials
+
+The HRC-funded REVOLUTION trial remains the most significant clinical research programme in the current pipeline. It is designed to test machine-learning-guided oxygen therapy across **50 intensive care units** in New Zealand and Australia, involving more than **24,000 patients**. ([hrc.govt.nz](https://hrc.govt.nz/news-and-events/major-nz-led-clinical-trial-test-ai-guided-treatment-critically-ill-patients?utm_source=openai))
+
+The trial is important because it moves AI evaluation toward:
+
+- Prospective clinical testing.
+- Patient outcomes.
+- Clinician interaction with AI recommendations.
+- Safety and transparency.
+- Evidence suitable for future clinical governance and adoption decisions.
+
+New Zealand’s research pipeline also includes AI-related work in:
+
+- Chest X-ray interpretation.
+- Digital pathology.
+- Diabetic retinopathy screening.
+- Heart-failure management.
+- Postoperative deterioration monitoring.
+- Youth mental-health ethics.
+- Data justice and health equity.
+
+The direction of travel is from “can an algorithm identify a pattern?” to “does using the algorithm improve outcomes in a real healthcare system?”
 
 ---
 
-## Governance, Regulation, and Digital Foundations
+## Governance, Regulation and Assurance
 
-## 1. The official operating model is still “assist clinicians, do not automate care”
+## 1. Health NZ continues to prohibit unapproved clinical use of general-purpose AI
 
-Health NZ’s privacy statement says AI operates in a **closed environment**, that personal information is not used to build commercial AI or third-party generative models, and that AI is used for tasks including transcription, consultation summaries, document generation, staff knowledge tools, and preliminary review of images and scans. It also states that many of these activities are still in pilot phase and that Health NZ does **not** use AI to make automated decisions about a person’s healthcare. ([info.health.nz](https://info.health.nz/privacy/privacy-statement?utm_source=openai))
+Health NZ guidance states that employees and contractors must not:
 
-Health NZ’s guidance on generative AI and large language models, last updated in **May 2026**, is equally explicit: staff must not enter patient or other sensitive information into unapproved LLMs, must not use LLMs for clinical decisions or personalised advice, and Health NZ says it does **not currently have any private LLMs available**. ([healthnz.govt.nz](https://www.healthnz.govt.nz/health-professionals/guidance-standards/topic/digital-technologies/using-generative-ai-and-large-language-models))
+- Enter personal, confidential or sensitive information into unapproved generative AI tools.
+- Use LLMs for clinical decisions.
+- Use generative AI tools to provide personalised advice to patients.
 
-The Medical Council’s AI guidance, published on **10 March 2026**, sets the professional standard alongside that system stance. It says doctors remain responsible for all clinical decisions and actions, must be satisfied the AI tool is safe and suitable, must obtain informed consent in some situations including some recording use cases, must consider bias and equity, and must not use AI in ways that impersonate a doctor. ([mcnz.org.nz](https://www.mcnz.org.nz/about-us/news-and-updates/guidance-on-using-artificial-intelligence-in-patient-care/?utm_source=openai))
+Health NZ also states that it needs more data to evaluate the risks and benefits of generative AI in the New Zealand health context. ([healthnz.govt.nz](https://www.healthnz.govt.nz/health-professionals/guidance-standards/topic/digital-technologies/using-generative-ai-and-large-language-models?utm_source=openai))
 
-## 2. Governance is becoming more operational and standardised
+This creates a distinction between:
 
-Health NZ’s **National Artificial Intelligence and Algorithm Expert Advisory Group (NAIAEAG)** remains the key governance mechanism. Health NZ says all AI development or implementation plans must be registered with the group, which oversees ethical, technical, clinical, and operational standards. Its current terms also say brief public summaries of advice or approvals will be made available and that a **National Register of AI in use within Health NZ** will be made publicly available. ([healthnz.govt.nz](https://www.healthnz.govt.nz/about-us/who-we-are/expert-groups-and-networks/expert-groups/artificial-intelligence-and-algorithm-expert-advisory-group?utm_source=openai))
+- **Approved, bounded AI tools** integrated into governed workflows.
+- **General-purpose public AI tools**, which remain restricted for sensitive or clinical use.
 
-That governance stack is being reinforced by a New Zealand-specific evaluation framework. The University of Auckland’s TRANSFORM programme says that in **March 2026** the framework was endorsed by Health NZ’s Executive Leadership Team and is now being used to assess **all proposed AI tools across Health NZ services**. ([transform.auckland.ac.nz](https://www.transform.auckland.ac.nz/2026/04/30/collaboratively-developing-an-evaluation-framework-for-ai-tools-in-the-aotearoa-new-zealand-health-sector/?utm_source=openai))
+## 2. Professional accountability remains with clinicians
 
-## 3. Privacy and cyber security are now central to the adoption story
+The Medical Council’s March 2026 guidance states that doctors remain responsible for clinical decisions and actions when using AI. Doctors must assess whether a tool is safe and suitable, consider bias and equity, obtain consent where required and avoid using AI in ways that impersonate a doctor. ([mcnz.org.nz](https://www.mcnz.org.nz/our-standards/current-standards/guidance-on-using-artificial-intelligence-in-patient-care/?utm_source=openai))
 
-The privacy baseline tightened on **1 May 2026**. The Office of the Privacy Commissioner says the **Health Information Privacy Code 2020** was amended in **March 2026** to reflect new **IPP3A** requirements, with the updated code in force from **1 May 2026**. ([privacy.org.nz](https://www.privacy.org.nz/privacy-principles/codes-of-practice/hipc2020/?utm_source=openai))
+This means AI does not alter the fundamental accountability model. The clinician remains responsible for:
 
-Cybersecurity has also become inseparable from digital and AI scale. On **27 May 2026**, the Ministry of Health said an independent review into the Manage My Health cyber incident involved the theft of highly sensitive health information affecting **99,000** people and concluded stronger system stewardship and third-party assurance were needed. On **28 May 2026**, the Government announced **$153.6 million** for Health NZ to expand national cyber monitoring, strengthen data security processes, and deliver critical IT safety upgrades. ([health.govt.nz](https://www.health.govt.nz/news/independent-review-recommends-stronger-cyber-security-across-health-system?utm_source=openai))
+- Reviewing AI-generated content.
+- Identifying errors or omissions.
+- Applying clinical context.
+- Explaining AI use to patients where appropriate.
+- Escalating concerns.
+- Ensuring that AI does not undermine informed consent or professional judgement.
 
-For AI adoption, the significance is straightforward: the more healthcare depends on connected data, external vendors, and digitally mediated workflows, the more cyber resilience becomes a prerequisite for trust and scale. That is an inference, but it is strongly supported by the MMH review findings, Health NZ’s privacy posture, and the Budget 2026 cybersecurity investment. ([health.govt.nz](https://www.health.govt.nz/news/independent-review-recommends-stronger-cyber-security-across-health-system?utm_source=openai))
+## 3. Evaluation is becoming a national operating process
 
-## 4. The digital backbone is still being built
+The TRANSFORM framework is designed to evaluate AI tools through a whole-of-system lens, incorporating:
 
-Health NZ’s **July 2026** Shared Digital Health Record update said the rollout timeline had been extended to allow additional checks under the Government Digital Delivery Agency information-sharing standard. Immunisation and medication data are now expected later in **2026**, while access to primary care data is expected from **mid-2027**. ([healthnz.govt.nz](https://www.healthnz.govt.nz/news-and-updates/shared-digital-health-record-update-july-2026?utm_source=openai))
+- Patients and communities.
+- The health workforce.
+- Health-system performance.
+- Ethics and equity.
+- Implementation feasibility.
+- Transparency and accountability.
 
-That matters for AI because many higher-value use cases depend on clean, secure, shareable longitudinal data. Health NZ’s July update also tied the programme more directly to sector-wide information-sharing and security awareness work. ([healthnz.govt.nz](https://www.healthnz.govt.nz/news-and-updates/shared-digital-health-record-update-july-2026?utm_source=openai))
+Health NZ’s July 2026 national-framework announcement appears to build on this foundation by seeking a more consistent approach across services. ([transform.auckland.ac.nz](https://www.transform.auckland.ac.nz/2026/04/30/collaboratively-developing-an-evaluation-framework-for-ai-tools-in-the-aotearoa-new-zealand-health-sector/?utm_source=openai))
 
-Health NZ’s new agreement with **UCLPartners**, announced on **8 July 2026**, adds an international benchmarking layer to this foundation-building work. Health NZ said the partnership will support evidence-led assessment and scaling of digital and AI innovation, with current relevance to emergency-department AI scribes, mental health AI, diagnostics, and bringing patient information together across systems. ([healthnz.govt.nz](https://www.healthnz.govt.nz/news-and-updates/health-nz-international-partnership-strengthens-approach-to-digital-and-ai-innovation?utm_source=openai))
+This is one of the clearest signs that AI governance in New Zealand is becoming operational rather than purely aspirational.
+
+## 4. Māori data sovereignty and equity remain essential adoption conditions
+
+New Zealand-specific AI governance continues to place emphasis on:
+
+- Māori participation in development and oversight.
+- Māori data sovereignty.
+- Equity impact.
+- Population representativeness.
+- Cultural safety.
+- Transparency with patients and whānau.
+- The suitability of tools for Pacific and other priority communities.
+
+The retinal-screening pilot demonstrated why this matters. Tools that perform well in retrospective research or overseas settings may not perform equally well across different patterns of pigmentation, imaging equipment, clinical workflows or population groups. ([nzmj.org.nz](https://nzmj.org.nz/media/pages/journal/vol-139-no-1637/aff4da2be5-1782102245/nzmjv139i1637_26june2026.pdf?utm_source=openai))
+
+Patient-trust research in Aotearoa has similarly identified the importance of public benefit, transparency, data protection, patient choice, clinician responsibility and Māori representation. ([nzmj.org.nz](https://nzmj.org.nz/journal/vol-139-no-1629/maintaining-patient-trust-as-artificial-intelligence-s-role-in-healthcare-grows?utm_source=openai))
+
+## 5. Cybersecurity and interoperability remain pacing factors
+
+Healthcare AI expands the importance of secure data exchange, vendor assurance and cyber resilience. The sector’s recent focus on cybersecurity investment, the Manage My Health breach review and shared digital-record infrastructure demonstrates that AI cannot be scaled independently of broader digital-health security. ([healthnz.govt.nz](https://www.healthnz.govt.nz/health-professionals/guidance-standards/topic/digital-technologies?utm_source=openai))
+
+The OECD’s 2026 assessment described New Zealand’s digital-health investment as progressing through three broad phases:
+
+1. Stabilising digital foundations.
+2. Modernising interoperability and data sharing.
+3. Scaling advanced analytics and AI-enabled tools.
+
+The OECD also noted that New Zealand had lacked a unified data-governance and AI framework, contributing to variable standards. The July 2026 Health NZ framework announcement suggests that this gap is beginning to be addressed, although the practical effect of the new framework remains to be demonstrated. ([oecd.org](https://www.oecd.org/en/publications/oecd-economic-surveys-new-zealand-2026_3ec5de98-en/full-report/harnessing-digital-tools-to-improve-health-system-performance_ee123dce.html?utm_source=openai))
 
 ---
 
 ## Research and Innovation Pipeline
 
-New Zealand’s research pipeline remains broader than its live deployment footprint. The HRC said in **August 2025** it had invested **$4.6 million** across **10 AI in Healthcare studies**, and that portfolio is still shaping the implementation agenda. ([hrc.govt.nz](https://www.hrc.govt.nz/news-and-events/nz-researchers-awarded-714m-tackle-pressing-health-issues?utm_source=openai))
+New Zealand’s AI-health research base remains larger than its live deployment footprint.
 
-The portfolio is notably practical:
+### Major research areas
 
-- **Critical care:** the REVOLUTION trial will test machine-learning-guided oxygen therapy in ICU care across New Zealand and Australia. ([hrc.govt.nz](https://hrc.govt.nz/news-and-events/major-nz-led-clinical-trial-test-ai-guided-treatment-critically-ill-patients))
-- **Radiology:** an HRC-funded project is evaluating whether AI can improve the speed and accuracy of **chest X-ray** interpretation and reporting in New Zealand hospitals, while also studying workflow effects and implementation barriers. ([hrc.govt.nz](https://www.hrc.govt.nz/resources/research-repository/transforming-radiology-new-zealand-accuracy-implementation-ai?utm_source=openai))
-- **Retinal screening:** another HRC-funded project focuses on evaluating performance and implementation of AI-enabled diabetic retinopathy screening in Health NZ Waitematā. ([hrc.govt.nz](https://www.hrc.govt.nz/resources/research-repository/evaluating-performance-and-implementation-ai-enabled-diabetic?utm_source=openai))
-- **Digital pathology:** Otago-led work is building AI-enhanced pathology tools for gastrointestinal cancers to improve treatment selection and avoid unnecessary surgery. ([hrc.govt.nz](https://www.hrc.govt.nz/resources/research-repository/improving-gastrointestinal-cancer-outcomes-ai-enhanced-digital?utm_source=openai))
-- **Heart failure:** Auckland researchers are studying how an AI-derived management support tool could work within secure digital health systems for chronic heart failure care. ([hrc.govt.nz](https://www.hrc.govt.nz/resources/research-repository/using-ai-support-medical-management-people-heart-failure?utm_source=openai))
-- **Postoperative monitoring:** Auckland-led work is using digital tools and AI to detect deterioration earlier after surgery, with explicit attention to equity, privacy, and health data sovereignty. ([hrc.govt.nz](https://www.hrc.govt.nz/resources/research-repository/toward-digital-paradigm-postoperative-monitoring?utm_source=openai))
-- **Mental health ethics and data justice:** separate HRC-funded projects are focused on safe, equitable AI use in youth mental healthcare and on data justice frameworks for AI in health in Aotearoa. ([hrc.govt.nz](https://www.hrc.govt.nz/resources/research-repository/ethics-ai-driven-technologies-youth-mental-healthcare?utm_source=openai))
+- **Intensive care:** machine-learning-guided oxygen therapy in the REVOLUTION trial. ([hrc.govt.nz](https://hrc.govt.nz/news-and-events/major-nz-led-clinical-trial-test-ai-guided-treatment-critically-ill-patients?utm_source=openai))
+- **Radiology:** AI-supported chest X-ray interpretation, including workflow and implementation evaluation.
+- **Retinal screening:** AI-enabled diabetic retinopathy screening in Health NZ services.
+- **Digital pathology:** AI-enhanced gastrointestinal cancer pathology to support treatment selection.
+- **Heart failure:** AI-derived management support in secure digital-health systems.
+- **Postoperative monitoring:** earlier detection of patient deterioration.
+- **Mental health:** ethical and equitable use of AI in youth mental healthcare.
+- **Data justice:** frameworks for fair and culturally appropriate health AI.
 
-The pattern here is consistent: New Zealand’s strongest AI pipeline is concentrated in **clinically bounded, measurable, supervised use cases** rather than open-ended automation. ([hrc.govt.nz](https://hrc.govt.nz/news-and-events/major-nz-led-clinical-trial-test-ai-guided-treatment-critically-ill-patients))
+### Research pattern
+
+The common feature of these projects is that they combine model development with implementation research. They ask not only whether a model is accurate, but also:
+
+- Can it be integrated into existing systems?
+- Will clinicians use it appropriately?
+- Is it acceptable to patients?
+- Does it work across population groups?
+- Does it improve access or outcomes?
+- Can it be monitored after deployment?
+- Is it affordable and sustainable?
+
+This implementation focus is likely to be more important than rapid growth in the number of AI pilots.
 
 ---
 
-## Trust, Equity, and Social Licence
+## Case Studies
 
-Trust remains a binding constraint on adoption. A February **2026** NZMJ viewpoint argued that patient trust is central to AI implementation in Aotearoa New Zealand and highlighted issues including public benefit, governance, data protection, meaningful choice, clinician responsibility, and Māori representation. ([nzmj.org.nz](https://nzmj.org.nz/journal/vol-139-no-1629/maintaining-patient-trust-as-artificial-intelligence-s-role-in-healthcare-grows?utm_source=openai))
+## Case Study 1: Nationwide emergency-department AI scribes
 
-That concern is echoed by community-specific research. A 2026 study on Pasifika perspectives on AI and asthma management found interest in AI’s potential, but also recurring concerns around privacy, accuracy, access, age-related digital divides, and design suitability. ([openrepository.aut.ac.nz](https://openrepository.aut.ac.nz/items/06287e76-ec90-4a5c-9a99-1c86e57f4124?utm_source=openai))
+**Status:** Live operational deployment  
+**Primary benefit:** Documentation support  
+**Adoption model:** Clinician review and approval
 
-Health NZ’s own LLM guidance aligns with those concerns by explicitly warning about privacy breaches, inaccurate information, inequities and bias, lack of transparency, Māori data sovereignty, and weak support for te reo Māori and other minority languages. ([healthnz.govt.nz](https://www.healthnz.govt.nz/health-professionals/guidance-standards/topic/digital-technologies/using-generative-ai-and-large-language-models))
+The emergency-department rollout demonstrates the fastest path to scale for healthcare AI in New Zealand. The tool addresses a visible workforce problem—time spent on clinical documentation—without directly replacing clinical judgement. Reported staff benefits include improved productivity, reduced administrative burden and better shift experience. ([beehive.govt.nz](https://www.beehive.govt.nz/release/ai-scribe-now-every-emergency-department?utm_source=openai))
+
+**Key lesson:** AI scales most readily when it supports a well-defined administrative task, operates within existing workflows and leaves final responsibility with clinicians.
+
+## Case Study 2: Diabetic retinal screening
+
+**Status:** Proof-of-concept and implementation learning  
+**Primary objective:** Improve screening access for Pacific peoples  
+**Result:** Technically promising but operationally complex
+
+The pilot showed that AI performance cannot be separated from the wider model of care. Camera equipment, staff training, image quality, clinical workflows and patient communication all influenced whether the system could work in practice. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/42348896/?utm_source=openai))
+
+**Key lesson:** Local proof-of-value testing is essential, especially when tools are intended for communities that may be under-represented in training data.
+
+## Case Study 3: Health NZ’s national AI evaluation framework
+
+**Status:** Endorsed and in use  
+**Primary objective:** Consistent assessment of proposed AI tools  
+**Scope:** Patient, workforce and system perspectives
+
+The TRANSFORM framework provides a New Zealand-specific assessment process and has been endorsed by Health NZ’s Executive Leadership Team. The July 2026 announcement of a new national framework indicates that this work is being translated into broader institutional policy. ([transform.auckland.ac.nz](https://www.transform.auckland.ac.nz/2026/04/30/collaboratively-developing-an-evaluation-framework-for-ai-tools-in-the-aotearoa-new-zealand-health-sector/?utm_source=openai))
+
+**Key lesson:** The health system is building governance capacity before attempting large-scale clinical automation.
+
+## Case Study 4: Health NZ, Deloitte and AWS rapid prototyping
+
+Deloitte New Zealand reported that it partnered with AWS and Health NZ to develop three working software prototypes in two days. The initiative illustrates how generative AI and cloud platforms are being used to explore operational opportunities rapidly. ([deloitte.com](https://www.deloitte.com/nz/en/Industries/technology/perspectives/deloitte-tech-trends-future-of-new-zealand-healthcare.html?utm_source=openai))
+
+This should be interpreted as a prototyping and innovation signal rather than evidence of national clinical deployment.
+
+**Key lesson:** Rapid experimentation is becoming easier, but moving a prototype into clinical production still requires privacy, security, interoperability, workforce and clinical-governance approval.
 
 ---
 
 ## Key Trends
 
-### 1. Documentation-first adoption is now established across multiple care settings
-Emergency departments, general practice, and aged residential care all show live or active adoption of ambient documentation tools. ([beehive.govt.nz](https://www.beehive.govt.nz/release/ai-scribe-now-every-emergency-department?utm_source=openai))
+### 1. AI adoption is still documentation-first
 
-### 2. Imaging and interpretation remain the strongest near-term clinical scale-up lane
-Breast screening procurement, retinal-screening evaluation, chest X-ray implementation research, and pathology projects all point in the same direction. ([beehive.govt.nz](https://www.beehive.govt.nz/release/ai-breast-screening-tool-one-step-closer))
+Ambient scribes remain the most mature and scalable AI application across hospitals, primary care and aged care. The use case offers measurable workflow benefits while preserving clinician control.
 
-### 3. Research is moving from exploratory study toward implementation science and trials
-The June ICU trial announcement and the June retinal-screening paper both show a system that is asking not only “does the model work?” but “can this be governed, integrated, and scaled safely?” ([hrc.govt.nz](https://hrc.govt.nz/news-and-events/major-nz-led-clinical-trial-test-ai-guided-treatment-critically-ill-patients))
+### 2. Clinical AI is progressing through controlled pathways
 
-### 4. Governance has become an operating system, not just a principles discussion
-NAIAEAG registration, the national evaluation framework, Medical Council guidance, Health NZ LLM restrictions, and the updated privacy code together form a much denser governance stack than New Zealand had a year ago. ([healthnz.govt.nz](https://www.healthnz.govt.nz/about-us/who-we-are/expert-groups-and-networks/expert-groups/artificial-intelligence-and-algorithm-expert-advisory-group?utm_source=openai))
+Breast screening, retinal screening, radiology and intensive-care decision support are moving forward, but through procurement, validation, prospective research and governance rather than immediate national automation.
 
-### 5. Cybersecurity and data-sharing capability are now pacing functions for AI adoption
-The MMH breach review, Budget 2026 cyber investment, and delayed Shared Digital Health Record rollout all show that secure interoperability is as important as model performance. ([health.govt.nz](https://www.health.govt.nz/news/independent-review-recommends-stronger-cyber-security-across-health-system?utm_source=openai))
+### 3. Implementation science is becoming as important as model accuracy
 
-### 6. International benchmarking is increasing, but local validation remains the rule
-Health NZ’s UCLPartners agreement points to more structured learning from overseas systems, while breast-screening procurement and the retinal-screening case both reinforce New Zealand’s insistence on local testing, validation, and contextual fit. ([healthnz.govt.nz](https://www.healthnz.govt.nz/news-and-updates/health-nz-international-partnership-strengthens-approach-to-digital-and-ai-innovation?utm_source=openai))
+The retinal-screening experience shows that AI can fail to deliver value when infrastructure, workflow, training and tool fit are not addressed.
+
+### 4. Governance is becoming institutionalised
+
+NAIAEAG registration, the TRANSFORM framework, Health NZ’s national framework and Medical Council guidance together indicate a more formal AI assurance environment. ([healthnz.govt.nz](https://www.healthnz.govt.nz/about-us/who-we-are/expert-groups-and-networks/expert-groups/artificial-intelligence-and-algorithm-expert-advisory-group?utm_source=openai))
+
+### 5. Interoperability and data quality will determine the next phase
+
+National terminology, core data and primary-care standards are not headline AI initiatives, but they are essential to reliable longitudinal analytics and decision support. ([healthnz.govt.nz](https://www.healthnz.govt.nz/health-professionals/guidance-standards/topic/data-and-standards/health-information-standards/snomed-ct-national-release-centre/snomed-ct-new-zealand-edition?utm_source=openai))
+
+### 6. Skills and change management are emerging as constraints
+
+The launch of dedicated AI-health education reflects a growing need for professionals who can bridge clinical, technical, ethical and governance domains. ([whitecliffe.ac.nz](https://www.whitecliffe.ac.nz/news-events/applied-ai-in-healthcare-micro-credential-no-fees-for-july-2026-intake-only/?utm_source=openai))
+
+### 7. Equity and social licence remain non-negotiable
+
+Patient trust, Māori data sovereignty, Pacific health equity and transparency are not peripheral considerations. They are central to whether AI tools can be ethically and sustainably deployed.
 
 ---
 
-## Overall Assessment
+## Strategic Implications for Healthcare Stakeholders
 
-As of **13 July 2026**, AI adoption in New Zealand healthcare has advanced to a stage best described as **targeted operational use with stronger implementation discipline**. The live deployments with the clearest scale are still in documentation and workflow support; the most visible national clinical programme remains AI mammogram reading for BreastScreen Aotearoa; and the most important new developments since **10 June 2026** are the move toward larger clinical trials, sharper implementation learning, and stronger digital-and-governance infrastructure. ([beehive.govt.nz](https://www.beehive.govt.nz/release/ai-scribe-now-every-emergency-department?utm_source=openai))
+### For Health NZ and public hospitals
 
-The public evidence does **not** yet support a view that New Zealand has moved into broad autonomous clinical AI. Instead, it supports a narrower conclusion: **the country is building an AI model based on supervised augmentation, phased validation, and tighter controls around privacy, equity, and cyber risk**. That approach may look slower than more aggressive international markets, but it is increasingly coherent. ([info.health.nz](https://info.health.nz/privacy/privacy-statement?utm_source=openai))
+- Prioritise high-volume, low-autonomy use cases with clear measurable benefits.
+- Maintain national standards while allowing local adaptation.
+- Publish information about approved and deployed AI tools.
+- Track outcomes, errors, user experience and equity impacts after implementation.
+- Treat cyber resilience and interoperability as AI prerequisites.
+
+### For clinicians and professional bodies
+
+- Develop practical AI literacy rather than purely technical training.
+- Establish clear expectations for review, documentation and escalation.
+- Ensure patients understand when AI is involved in their care.
+- Monitor whether AI changes workload or simply redistributes it.
+- Maintain clinical accountability and professional judgement.
+
+### For vendors and technology providers
+
+- Design for New Zealand workflows and population characteristics.
+- Provide evidence from real-world implementation, not only retrospective validation.
+- Demonstrate data residency, security and retention controls.
+- Support integration with national standards and existing clinical systems.
+- Include Māori, Pacific and community perspectives in product design and evaluation.
+
+### For researchers
+
+- Build prospective and pragmatic evaluations into project design.
+- Measure patient and system outcomes, not only technical accuracy.
+- Report implementation costs, training requirements and workflow effects.
+- Include equity and data-sovereignty considerations from the beginning.
+- Work with health services and communities throughout the research lifecycle.
+
+---
+
+## Outlook: 2026–2027
+
+The next 12 months are likely to be defined by **consolidation and validation rather than unrestricted expansion**.
+
+Expected areas of activity include:
+
+- Further expansion of AI scribes into mental health and community settings.
+- Continued procurement and validation work for AI mammogram reading.
+- Early progress from the REVOLUTION ICU trial programme.
+- More structured evaluation of retinal-screening and radiology tools.
+- Wider use of national AI assurance and evaluation processes.
+- Continued development of interoperable health-data infrastructure.
+- Greater investment in AI literacy, procurement capability and clinical governance.
+
+The main risk is that AI adoption becomes fragmented between regions, vendors and professional groups. The main opportunity is that New Zealand can use its relatively centralised health system to establish consistent national standards before large-scale clinical automation becomes commonplace.
+
+---
+
+## Conclusion
+
+As of **18 August 2026**, AI adoption in New Zealand healthcare is best described as **targeted operational deployment supported by increasingly formal national governance**.
+
+The evidence shows three distinct layers of maturity:
+
+1. **Operationally mature:** ambient documentation and AI scribes.
+2. **Implementation-ready but still validating:** breast screening, retinal screening, radiology and selected diagnostic applications.
+3. **Research and trial stage:** AI-guided treatment, predictive monitoring, digital pathology and chronic-disease decision support.
+
+The announcement of a new Health NZ national framework on **28 July 2026** is the most important development since the previous update. It signals that the system is attempting to standardise how AI tools are assessed and adopted. The updated NAIAEAG arrangements, Aotearoa-specific evaluation framework and expanding data standards reinforce that direction. ([healthnz.govt.nz](https://www.healthnz.govt.nz/health-professionals/guidance-standards/topic/digital-technologies?utm_source=openai))
+
+New Zealand has not moved into broad autonomous clinical AI. Instead, it is building a model based on:
+
+- Human oversight.
+- Local validation.
+- Clinician accountability.
+- Privacy and cybersecurity controls.
+- Māori and community participation.
+- Interoperable data foundations.
+- Evidence of real-world value.
+
+The central strategic conclusion is unchanged but increasingly well supported: **New Zealand healthcare is progressing from AI experimentation to governed augmentation**. The next test will be whether national frameworks can convert promising pilots into equitable, reliable and financially sustainable improvements in patient care.
