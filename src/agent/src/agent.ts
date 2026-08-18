@@ -3,7 +3,7 @@ import { google } from '@ai-sdk/google';
 import { openai } from '@ai-sdk/openai';
 import {
   ToolLoopAgent,
-  stepCountIs,
+  isStepCount,
   type LanguageModel,
   type StepResult,
   type ToolSet,
@@ -112,7 +112,7 @@ export async function getResearchAgent(
       config.instructions_filename ?? DEFAULT_INSTRUCTIONS_FILENAME,
     ),
     tools,
-    stopWhen: stepCountIs(30),
+    stopWhen: isStepCount(30),
     ...(providerOptions ? { providerOptions } : {}),
   });
 
@@ -137,18 +137,18 @@ export async function performResearch(
 ): Promise<ResearchResult> {
   if (STREAMING_ENABLED) {
     console.log(`Researching: ${topic}`);
-    const stream = await agent.stream({ prompt: initialInput });
-    for await (const part of stream.fullStream) {
+    const result = await agent.stream({ prompt: initialInput });
+    for await (const part of result.stream) {
       if (part.type === 'tool-call') {
         logToolCall(part.toolName, part.input);
       }
     }
     // Stream is complete → the result promises are now populated.
     return {
-      text: await stream.text,
-      finishReason: await stream.finishReason,
-      steps: await stream.steps,
-      totalUsage: await stream.totalUsage,
+      text: await result.text,
+      finishReason: await result.finishReason,
+      steps: await result.steps,
+      totalUsage: await result.totalUsage,
     };
   }
 
