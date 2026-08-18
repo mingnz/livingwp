@@ -241,16 +241,15 @@ export function loadIndustryConfig(): Record<string, IndustryConfig> {
 export function addIndustry(industryName: string): string {
   const industryKey = industryName.toLowerCase().replaceAll(' ', '_');
   const config = loadIndustryConfig();
+  // No research_model: new industries inherit the RESEARCH_MODEL default so a
+  // single env var can move every article at once. Add the key by hand only to
+  // pin one article to a different model.
   config[industryKey] = {
     instructions_filename: 'instructions_research.md',
-    research_model: DEFAULT_INDUSTRY_MODEL,
   };
   writeFileSync(INDUSTRIES_CONFIG_PATH, `${JSON.stringify(config, null, 2)}\n`, 'utf-8');
   return industryKey;
 }
-
-/** Default model written into new industry config entries. */
-const DEFAULT_INDUSTRY_MODEL = 'gpt-5.4-2026-03-05';
 
 export function titleCase(value: string): string {
   return value.replace(/\b\w/g, (c) => c.toUpperCase());

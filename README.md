@@ -41,10 +41,12 @@ The settings for each generated article are defined in [`src/agent/config/indust
 
 - Add a new industry article. A new page will be created and added to the site the next time the update process runs.
 - Configure special non-industry articles such as the `nz` monthly national snapshot.
-- Specify which model to use for an article via `research_model`. Bare names (e.g. `gpt-5.4-2026-03-05`) use OpenAI; prefix with `anthropic/` or `google/` to use those providers.
+- Pin one article to a specific model via `research_model`. Bare names (e.g. `gpt-5.4-2026-03-05`) use OpenAI; prefix with `anthropic/` or `google/` to use those providers. Leave the key out to use the default model for every article.
 - Add a new instructions file to [`src/agent/prompts/`](https://github.com/mingnz/livingwp/blob/main/src/agent/prompts/) and use it to prompt the research agent for a specific article or industry.
 
-The agent is built on the [Vercel AI SDK](https://ai-sdk.dev), so it works with any supported provider. The default research model is `gpt-5.4-2026-03-05` (OpenAI). You can override it with the `RESEARCH_MODEL` environment variable or per-article config. Each provider's hosted web-search tool is used automatically based on the resolved provider.
+The agent is built on the [Vercel AI SDK](https://ai-sdk.dev), so it works with any supported provider. The default research model is `gpt-5.4-2026-03-05` (OpenAI), overridden by the `RESEARCH_MODEL` environment variable (a repository variable of that name in GitHub Actions). Each provider's hosted web-search tool is used automatically based on the resolved provider.
+
+An article's `research_model` takes precedence over `RESEARCH_MODEL`. Articles with no `research_model` key follow the environment variable, so a single variable change moves every article to a new model.
 
 We look forward to your contributions!
 
