@@ -5,143 +5,348 @@ article_kind: industry
 article_latest: true
 article_series: academic_research
 article_summary: >-
-  Since the previous update on 10 June 2026, the clearest shift in Aotearoa New
-  Zealand’s academic research sector is that AI use is becoming more operational
-  at institution level even while the biggest national investment decision
-  remains publicly unresolved. Research universities are now publishing or
-  activating more…
-article_updated_at: '2026-07-13T22:57:31+12:00'
+  AI adoption in Aotearoa New Zealand’s academic research sector is continuing
+  to move from experimentation toward governed, institutionally supported and
+  application-oriented use.
+article_updated_at: '2026-08-19T00:32:17+12:00'
 article_version: false
 description: >-
-  Since the previous update on 10 June 2026, the clearest shift in Aotearoa New
-  Zealand’s academic research sector is that AI use is becoming more
-  operational…
+  AI adoption in Aotearoa New Zealand’s academic research sector is continuing
+  to move from experimentation toward governed, institutionally supported and…
 permalink: /whitepaper/academic_research/
 title: AI in Academic Research
 ---
 
 # AI in Academic Research in Aotearoa New Zealand: A Living Whitepaper
 
-**Last updated: 13 July 2026**
+**Last updated: 19 August 2026**  
+**Article slug:** `academic_research`  
+**Update window:** 14 July–19 August 2026, building on the previous update of 13 July 2026.
 
 ## Introduction
 
-Since the previous update on **10 June 2026**, the clearest shift in Aotearoa New Zealand’s academic research sector is that **AI use is becoming more operational at institution level even while the biggest national investment decision remains publicly unresolved**. Research universities are now publishing or activating more concrete rules, approved-tool pathways, disclosure requirements, and researcher training for AI use; infrastructure providers are showing how AI workloads are being supported in practice; and high-impact applied research continues to expand, especially in health and climate-related science. At the same time, the **MBIE AI Research Platform** still does not appear to have a public award announcement on its main call page, despite earlier programme material pointing to funding decisions in **May 2026** and contracting from **1 July 2026**. ([mbie.govt.nz](https://www.mbie.govt.nz/science-and-technology/science-and-innovation/refocusing-the-science-innovation-and-technology-system/public-research-organisations/new-zealand-institute-for-advanced-technology/call-for-proposals-for-the-artificial-intelligence-research-platform))
+AI adoption in Aotearoa New Zealand’s academic research sector is continuing to move from experimentation toward **governed, institutionally supported and application-oriented use**.
+
+The latest evidence shows progress in four connected areas:
+
+- Universities are formalising rules for doctoral research, data handling, disclosure and supervision.
+- Researchers are applying AI to health, climate science, environmental monitoring, agriculture and spatial data.
+- New research is examining the cultural, ethical and social consequences of AI itself.
+- Government science reforms are redirecting funding toward advanced technologies, while the proposed national AI Research Platform remains publicly unresolved.
+
+The sector’s development is therefore uneven. **Operational adoption is accelerating below the national-policy level, while national coordination remains incomplete.**
+
+---
 
 ## Executive Summary
 
-- **The AI Research Platform is still the sector’s central unresolved story.** The live MBIE platform page still lists only the completed phase-two milestones and says that an updated announcement timeline will be provided “in due course,” while earlier official programme material anticipated a funding decision in **late April 2026**, public announcement in **May 2026**, and contract commencement on **1 July 2026**. As of **13 July 2026**, the absence of a public outcome is itself a material development. ([mbie.govt.nz](https://www.mbie.govt.nz/science-and-technology/science-and-innovation/refocusing-the-science-innovation-and-technology-system/public-research-organisations/new-zealand-institute-for-advanced-technology/call-for-proposals-for-the-artificial-intelligence-research-platform?utm_source=openai))
+- **The national AI Research Platform remains unresolved.** MBIE’s official page still lists the five phase-one concepts and phase-two process but does not publish a final funding decision. This is significant because earlier official timelines anticipated a public announcement in the first half of 2026 and platform funding from July 2026. ([mbie.govt.nz](https://www.mbie.govt.nz/science-and-technology/science-and-innovation/refocusing-the-science-innovation-and-technology-system/public-research-organisations/new-zealand-institute-for-advanced-technology/call-for-proposals-for-the-artificial-intelligence-research-platform?utm_source=openai))
 
-- **Institutional governance has broadened beyond Auckland and Otago into a more system-wide pattern.** The University of Auckland’s doctoral GenAI guidelines still take effect on **1 September 2026**; the University of Waikato has published postgraduate AI guidelines requiring disclosure, audit trails and use of protected university environments where possible; AUT now has a dedicated postgraduate AI-in-research hub plus formal ethical guidelines; Lincoln has published a university-wide Generative AI Policy covering research and research training; and UC now explicitly routes research students through AI-related responsible-research guidance and approved tool pathways. ([auckland.ac.nz](https://www.auckland.ac.nz/en/about-us/about-the-university/policy-hub/research-innovation/doctoral-study/undertaking-research/generative-artificial-intelligence-in-doctoral-research-guidelines.html?utm_source=openai))
+- **University governance is becoming more specific and enforceable.** The University of Auckland’s doctoral GenAI guidelines take effect on **1 September 2026** and require acknowledgement, documentation, verification, data protection and a formal declaration of GenAI use. Preparation workshops are already running for doctoral candidates and supervisors. ([auckland.ac.nz](https://www.auckland.ac.nz/en/about-us/about-the-university/policy-hub/research-innovation/doctoral-study/undertaking-research/generative-artificial-intelligence-in-doctoral-research-guidelines.html?utm_source=openai))
 
-- **The policy environment has become more explicitly pro-translation and pro-advanced technology.** The Government’s **Science Investment Plan 2026–2036**, released on **10 June 2026**, says public investment will be aligned to four priority areas and that **$122 million** will progressively shift toward advanced technologies, including funding already committed through NZIAT; the accompanying plan document says **$142 million** has been invested through NZIAT in high-potential areas such as AI and quantum technologies. ([beehive.govt.nz](https://www.beehive.govt.nz/release/new-science-investment-plan-drive-economic-growth-and-prosperity?utm_source=openai))
+- **Research funding is being reorganised around national priorities.** Research Funding New Zealand has been established to consolidate major science-funding decision-making, including functions previously associated with the HRC, Marsden Fund Council and Science Board. The transition is occurring alongside the Science Investment Plan’s planned shift of **$122 million toward advanced technologies by 2029/30**. ([mbie.govt.nz](https://www.mbie.govt.nz/science-and-technology/science-and-innovation/refocusing-the-science-innovation-and-technology-system/research-funding-new-zealand?utm_source=openai))
 
-- **Funder settings are now in active execution, not just guidance mode.** The Marsden Fund received **1,021 EOIs** for the 2026 round, invited **161** applicants to submit full proposals, and closed full proposals on **25 June 2026**. Marsden’s guidance continues to allow only cautious use of generative AI while making applicants fully responsible for content accuracy, source validity and originality. ([royalsociety.org.nz](https://www.royalsociety.org.nz/news/marsden-fund-preliminary-proposals-for-2026?utm_source=openai))
+- **AI-specific research capability is receiving stronger recognition.** The 2026 Tāwhia te Mana Distinguished Researcher Fellowship round specifically includes **Artificial Intelligence Technologies** as a research field. Applications closed on 9 July 2026, with results expected in November–December 2026. ([royalsociety.org.nz](https://www.royalsociety.org.nz/what-we-do/funds-and-opportunities/tawhia-te-mana/faq?utm_source=openai))
 
-- **Visible applied AI research remains strongest in health and environmental science.** The strongest post-10 June development is HRC’s **11 June 2026** announcement of a **NZ$5 million** programme grant for the **REVOLUTION** trial, involving **50 ICUs** across New Zealand and Australia and more than **24,000 patients**, described as the first major clinical trial worldwide to test whether AI-guided treatment improves ICU survival. On the infrastructure side, REANNZ’s June case study shows University of Auckland climate-extremes research using thousands of parallel machine-learning training runs on national compute infrastructure. ([hrc.govt.nz](https://hrc.govt.nz/news-and-events/major-nz-led-clinical-trial-test-ai-guided-treatment-critically-ill-patients))
+- **Applied research is becoming more translational.** The NZ$5 million REVOLUTION clinical trial will test machine-learning-guided oxygen therapy across 50 intensive-care units and more than 24,000 patients. Other 2026 HRC grants include AI for marker-less tumour localisation and equitable cognitive assessment for ADHD. ([hrc.govt.nz](https://hrc.govt.nz/news-and-events/major-nz-led-clinical-trial-test-ai-guided-treatment-critically-ill-patients?utm_source=openai))
 
-- **Researcher capability-building is becoming a normal part of the AI stack.** ResBaz Aotearoa 2026 ran from **29 June to 3 July** and included AI-literature-review training that was sufficiently oversubscribed to require an extra session, while UC’s SAIL framework work and UC Online’s new applied AI programme both point to a growing expectation that AI literacy and AI governance are now core research capabilities rather than optional extras. ([resbaz.auckland.ac.nz](https://resbaz.auckland.ac.nz/?utm_source=openai))
+- **Cultural responsiveness is emerging as a distinctive New Zealand research priority.** Recent University of Waikato and University of Canterbury research argues that AI systems must account for local cultural concepts, Māori and Indigenous knowledge, and culturally diverse user expectations if they are to earn trust. ([nature.com](https://www.nature.com/articles/s41599-026-08567-0))
 
-## What Changed Since the 10 June 2026 Version
+- **Commercialisation links are strengthening.** University of Auckland alumni startup Hyades has raised **NZ$1.5 million** to develop AI agents that convert satellite imagery, climate records, radar and other spatial datasets into usable machine-learning models. ([auckland.ac.nz](https://www.auckland.ac.nz/en/news/2026/07/28/reaching-for-the-stars--alumni-secure--1-5m-for-startup.html))
 
-### 1) The national platform story has shifted from “likely delayed” to “still publicly unresolved after the planned July start window”
+---
 
-The previous report treated the lack of an AI Research Platform outcome as a likely delay. By **13 July 2026**, that interpretation is stronger. MBIE’s main platform page still says only that announcement timing will be updated “in due course,” and the page itself still shows **Last updated: 18 December 2025**. Earlier official programme material anticipated decisions in **April–May 2026** and contract start from **1 July 2026**. The most defensible reading is that no public award outcome has yet been posted on the main official platform page. ([mbie.govt.nz](https://www.mbie.govt.nz/science-and-technology/science-and-innovation/refocusing-the-science-innovation-and-technology-system/public-research-organisations/new-zealand-institute-for-advanced-technology/call-for-proposals-for-the-artificial-intelligence-research-platform?utm_source=openai))
+## What Changed Since the 13 July 2026 Version
 
-### 2) AI governance has spread across more universities and become more workflow-specific
+### 1. The national platform delay is now more consequential
 
-What was previously most visible at Auckland and Otago is now more clearly a **multi-institution pattern**. Waikato’s March 2026 postgraduate guidelines require supervisor discussion, validation of outputs, audit trails, explicit thesis acknowledgement, and use of university-protected environments where possible. AUT’s postgraduate AI-in-research hub frames AI as part of how research is “designed, analysed and communicated,” backed by formal ethical guidelines. Lincoln’s new Generative AI Policy explicitly covers research and research training, while UC now directs research students to responsible-AI and approved-tool guidance within its responsible-research framework. ([waikato.ac.nz](https://www.waikato.ac.nz/assets/Uploads/Study-with-us/Find-a-study-option/Postgraduate/Generative-AI-in-Postgraduate-Research-Degree-Guidelines.pdf))
+The proposed AI Research Platform was expected to provide a national “centre of gravity” for AI research and commercialisation. Five concepts were selected for phase two, covering agentic AI, creative AI, autonomous systems, bioeconomy applications and physical AI for outdoor and industrial environments. ([beehive.govt.nz](https://www.beehive.govt.nz/release/next-steps-advanced-tech-research))
 
-### 3) National science-policy settings are now more explicit about advanced-technology investment
+However, the official MBIE platform page still does not identify a successful final proposal. The published page continues to state that an updated announcement timeline will be provided in due course. This means the sector has now moved beyond the planned July 2026 commencement window without a publicly visible national platform award. ([mbie.govt.nz](https://www.mbie.govt.nz/science-and-technology/science-and-innovation/refocusing-the-science-innovation-and-technology-system/public-research-organisations/new-zealand-institute-for-advanced-technology/call-for-proposals-for-the-artificial-intelligence-research-platform?utm_source=openai))
 
-A major new contextual development since the last update is the publication of the **Science Investment Plan 2026–2036** on **10 June 2026**. The Government says existing science investment will be aligned to four priority areas and that **$122 million** will progressively shift toward advanced technologies. The plan document also records **$142 million** invested through NZIAT in high-potential areas such as AI and quantum technologies, reinforcing that AI research is now embedded in the wider science-system redesign rather than sitting as a side initiative. ([beehive.govt.nz](https://www.beehive.govt.nz/release/new-science-investment-plan-drive-economic-growth-and-prosperity?utm_source=openai))
+**Assessment:** The unresolved platform is no longer simply a scheduling issue. It affects decisions about research leadership, infrastructure coordination, talent recruitment, doctoral pathways, industry partnerships and long-term national specialisation.
 
-### 4) The Marsden Fund has moved into the full-proposal stage under its 2026 AI-related rules
+### 2. Governance has moved closer to implementation
 
-The Marsden Fund is now past the EOI phase that dominated earlier discussion. Royal Society Te Apārangi says the 2026 round received **1,021 EOIs** and invited **161** full proposals; the full-proposal deadline was **25 June 2026**, with proposals sent to referees by **30 June** and to panellists by **6–7 July**. The generative-AI settings remain cautious: applicants may use such tools, but they must take full responsibility for content, cited sources and originality. ([royalsociety.org.nz](https://www.royalsociety.org.nz/news/marsden-fund-preliminary-proposals-for-2026?utm_source=openai))
+The University of Auckland’s doctoral guidelines provide the clearest recent example. From 1 September 2026, doctoral candidates must acknowledge all substantive GenAI use, retain evidence of prompts and outputs where appropriate, verify generated material, protect sensitive data and include a declaration of GenAI use in thesis proposals and submitted theses. Examiners are prohibited from uploading thesis material to external GenAI tools or using external AI-detection software. ([auckland.ac.nz](https://www.auckland.ac.nz/en/about-us/about-the-university/policy-hub/research-innovation/doctoral-study/undertaking-research/generative-artificial-intelligence-in-doctoral-research-guidelines.html?utm_source=openai))
+
+This is supported by a growing programme of workshops for researchers, supervisors and postgraduate students. The University’s guidance treats AI use as part of research integrity, privacy, ethics, data management and intellectual-property processes rather than as a standalone technology issue. ([auckland.ac.nz](https://www.auckland.ac.nz/en/research/research-resources/research-ai-software-computing/research-ai/generative-ai-tools.html?utm_source=openai))
+
+### 3. Funding reform is changing the operating environment
+
+Research Funding New Zealand was established during the first quarter of 2026 and is intended to consolidate funding decision-making across much of the science, innovation and technology system. The HRC’s 2026/27 planning documents explicitly refer to preparing for the transition of health-research investment decision-making to RFNZ. ([mbie.govt.nz](https://www.mbie.govt.nz/science-and-technology/science-and-innovation/refocusing-the-science-innovation-and-technology-system/research-funding-new-zealand?utm_source=openai))
+
+The new funding environment places greater emphasis on:
+
+- Alignment with national priority areas.
+- Commercialisation and translation.
+- Research capability and talent development.
+- Cross-institutional collaboration.
+- Monitoring and demonstrating impact.
+
+The 2027 Transition Research Fund is expected to bring investigator-led research into a single structure covering talent development, projects and programmes. Its call for proposals is expected in August 2026. ([mbie.govt.nz](https://www.mbie.govt.nz/science-and-technology/science-and-innovation/funding-information-and-opportunities/investment-funds/transition-research-fund-2027?utm_source=openai))
+
+### 4. New research is examining AI’s effects on knowledge and culture
+
+Since the previous update, the research record has expanded beyond technical applications.
+
+A University of Waikato study published on **4 August 2026** examines how New Zealand content creators use AI in everyday cultural production. It finds that participants experienced pressure to adopt generative AI because of the demands of the attention economy, while using the Māori concept of **kaupapa** to navigate culturally sensitive decisions. ([nature.com](https://www.nature.com/articles/s41599-026-08567-0))
+
+A University of Canterbury paper and related research commentary have also developed a framework for culturally responsive AI chatbots. The work argues that systems built around predominantly Western assumptions may produce weaker engagement and lower trust when used in different cultural settings. ([canterbury.ac.nz](https://www.canterbury.ac.nz/news-and-events/news/2026/ai-chatbots-need-cultural-awareness-to-earn-trust-))
+
+---
 
 ## Current State of AI Adoption
 
-## High-level snapshot
+### High-level maturity assessment
 
-As of **13 July 2026**, AI adoption in New Zealand academic research is best described as **institutionalising from the middle outward**. The strongest evidence is not a national usage number; it is the growing density of **supervisor approvals, thesis declarations, protected-tool rules, data-sensitivity controls, workshop programmes, eResearch support, and funder-side accountability language** now visible across multiple institutions. ([auckland.ac.nz](https://www.auckland.ac.nz/en/about-us/about-the-university/policy-hub/research-innovation/doctoral-study/undertaking-research/generative-artificial-intelligence-in-doctoral-research-guidelines.html?utm_source=openai))
+| Area | Current position |
+|---|---|
+| **Institutional governance** | Emerging-to-established across leading universities |
+| **Researcher training** | Expanding rapidly through workshops, short courses and supervision support |
+| **AI-enabled research infrastructure** | Strong in selected domains, particularly high-performance computing and data-intensive science |
+| **Applied research** | Growing, with health, environmental science, agriculture and spatial data prominent |
+| **Commercialisation** | Active but concentrated in a small number of university-linked ventures |
+| **National coordination** | Incomplete pending the final AI Research Platform decision |
+| **Māori, Pacific and cultural governance** | Increasingly visible in research frameworks and applied studies |
 
-The pattern is also becoming clearer by layer. At the **top of the system**, public coordination remains uncertain because the AI Research Platform outcome is still not visible. In the **middle layer**, universities and infrastructure providers are moving quickly to make AI usable and governable. At the **project layer**, health, climate, earthquake science and outdoor/primary-sector AI remain the most visible applied domains. This is an evidence-based synthesis from the current official record. ([mbie.govt.nz](https://www.mbie.govt.nz/science-and-technology/science-and-innovation/refocusing-the-science-innovation-and-technology-system/public-research-organisations/new-zealand-institute-for-advanced-technology/call-for-proposals-for-the-artificial-intelligence-research-platform?utm_source=openai))
+This assessment is based on the pattern of published institutional policies, research funding decisions, infrastructure case studies, university research outputs and national science-policy documents rather than on a single national adoption survey. ([royalsociety.org.nz](https://www.royalsociety.org.nz/what-we-do/research-practice/generative-artificial-intelligence-in-research-in-aotearoa-new-zealand/guidelines-for-the-best-practice-use-of-generative-artificial-intelligence-in-research-in-aotearoa-new-zealand/?utm_source=openai))
 
-## Latest News and Strategic Developments
+### Adoption is occurring in two different forms
 
-### 1) The AI Research Platform remains the national hinge-point
+#### 1. AI as a research tool
 
-MBIE’s current platform page still presents the investment as live but unresolved, with phase-two proposals due **31 March 2026**, assessment in **mid-April 2026**, and only a note that an updated announcement timeline will be provided later. Earlier official material said the platform was expected to be established in **July 2026** and backed by up to **NZ$70 million over seven years**. That gap between planned and publicly visible timing continues to define the national coordination story. ([mbie.govt.nz](https://www.mbie.govt.nz/science-and-technology/science-and-innovation/refocusing-the-science-innovation-and-technology-system/public-research-organisations/new-zealand-institute-for-advanced-technology/call-for-proposals-for-the-artificial-intelligence-research-platform?utm_source=openai))
+Researchers are using AI for:
 
-### 2) University-level governance is no longer isolated
+- Literature discovery and review.
+- Coding and data analysis.
+- Image, audio and spatial-data interpretation.
+- Simulation and prediction.
+- Scientific model development.
+- Writing, editing and translation.
+- Data generation and workflow automation.
 
-- **University of Auckland:** doctoral GenAI guidelines take effect **1 September 2026**, and doctoral communications are now explicitly steering candidates toward “Discuss-Document-Declare” preparation, workshops, and disclosure expectations. ([auckland.ac.nz](https://www.auckland.ac.nz/en/about-us/about-the-university/policy-hub/research-innovation/doctoral-study/undertaking-research/generative-artificial-intelligence-in-doctoral-research-guidelines.html?utm_source=openai))
-- **University of Waikato:** postgraduate research AI guidelines require disclosure, record-keeping, validation of outputs, supervisor dialogue, and explicit thesis acknowledgement; examiners are asked not to use GenAI to assess theses. ([waikato.ac.nz](https://www.waikato.ac.nz/assets/Uploads/Study-with-us/Find-a-study-option/Postgraduate/Generative-AI-in-Postgraduate-Research-Degree-Guidelines.pdf))
-- **AUT:** the postgraduate AI-in-research site links formal ethics guidelines, AI tool guidance, AI data guidance, workshops, and AI declaration support into one researcher-facing workflow. ([aut.ac.nz](https://www.aut.ac.nz/research/postgraduate-student-support/pg-forms-policies-and-processes/ai-in-postgraduate-research/_recache?utm_source=openai))
-- **Lincoln University:** a new institution-wide Generative AI Policy now explicitly covers research, research training, sovereignty, privacy and future guideline development. ([lincoln.ac.nz](https://www.lincoln.ac.nz/assets/PoliciesAndProcedures/Generative-AI-Policy.pdf))
-- **University of Canterbury:** research students are directed to responsible-research steps that include AI use, while UC’s research AI page says UC has procured secure versions of ChatGPT and Microsoft Copilot plus AI transcription support for endorsed use. ([canterbury.ac.nz](https://www.canterbury.ac.nz/study/uc-graduate-school/current-research-students/conducting-responsible-research))
+University policy is increasingly focused on making these uses transparent, secure and methodologically defensible. ([auckland.ac.nz](https://www.auckland.ac.nz/en/research/research-resources/research-ai-software-computing/research-ai/generative-ai-tools.html?utm_source=openai))
 
-### 3) Infrastructure support is now showing up as concrete research productivity gains
+#### 2. AI as the object of research
 
-REANNZ’s June and July case studies provide unusually direct evidence of AI-enabled academic research in practice. In one example, University of Auckland researcher **Emily Gordon** used REANNZ-supported workflow engineering to run **thousands** of parallel machine-learning jobs for climate-extremes research, improving throughput, reproducibility and fault tolerance. In another, REANNZ highlighted how large-scale simulation is reshaping earthquake forecasting work led by UC researchers. This sits within MBIE’s larger **eResearch Infrastructure Platform**, funded at **$69.65 million over five years** and explicitly positioned as a national enabler for compute-intensive and AI-linked research. ([reannz.co.nz](https://www.reannz.co.nz/case-studies/using-machine-learning-to-accelerate-climate-extremes-research))
+New Zealand researchers are also studying:
 
-### 4) Research capability-building is becoming ecosystem-wide
+- AI trust and cultural responsiveness.
+- The effect of generated content on expert communities.
+- Māori and Indigenous data sovereignty.
+- AI in healthcare decision-making.
+- AI literacy and human capability.
+- Explainable and equitable AI.
+- AI’s implications for creative and cultural work.
 
-ResBaz Aotearoa 2026 ran from **29 June to 3 July** with researcher-facing sessions such as **AI Tools for Literature Reviews**; the speaker listing notes demand was high enough that an extra session was added. At the University of Auckland, responsible-AI workshops for both researchers and supervisors continued through 2026, including sessions on AI in qualitative analysis and AI-assisted workflows. Together, these signals show AI capability-building moving from ad hoc experimentation toward regularised researcher development. ([resbaz.auckland.ac.nz](https://resbaz.auckland.ac.nz/?utm_source=openai))
+This second category is strategically important because it helps shape the social licence, safeguards and local relevance of AI adoption.
+
+---
+
+## Current News and Strategic Developments
+
+### National science investment
+
+The Science Investment Plan 2026–2036 places AI within the broader **Technology for Prosperity** priority area. The plan identifies advanced technology research as a national opportunity and records **$142 million invested through the New Zealand Institute for Advanced Technology** in high-potential areas such as AI and quantum technologies. It also identifies a progressive shift of $122 million toward advanced technologies by 2029/30. ([mbie.govt.nz](https://www.mbie.govt.nz/about/news/governments-science-investment-plan-published?utm_source=openai))
+
+The Government’s wider AI Strategy, released in July 2025, is primarily focused on practical adoption and private-sector innovation rather than frontier model development. For academic research, this creates a policy tension: the national strategy emphasises smart adoption, while the proposed AI Research Platform is intended to build deeper domestic research capability and internationally competitive firms. ([mbie.govt.nz](https://www.mbie.govt.nz/business-and-employment/economic-growth/digital-policy/new-zealands-ai-strategy-investing-with-confidence?utm_source=openai))
+
+### Research funding and talent
+
+The 2026 Tāwhia te Mana Fellowship round is offering distinguished research fellowships in AI Technologies. The eligible scope includes machine learning, natural-language processing, computer vision, generative AI, AI algorithms, AI-specific hardware and advanced analytics driven by AI methods. ([royalsociety.org.nz](https://www.royalsociety.org.nz/what-we-do/funds-and-opportunities/tawhia-te-mana/faq?utm_source=openai))
+
+The Fellowship panel includes senior researchers from the Universities of Otago, Canterbury, Auckland, Massey and Waikato. This distribution indicates that AI capability is being recognised as a cross-university national field rather than being confined to a single institution. ([royalsociety.org.nz](https://www.royalsociety.org.nz/what-we-do/funds-and-opportunities/tawhia-te-mana/mana-tuarangi/panel?utm_source=openai))
+
+### Researcher development
+
+The University of Auckland is running dedicated sessions on AI for literature reviews and responsible AI in research. Its doctoral communications now frame preparation around **“Discuss–Document–Declare”**, reflecting a shift from informal experimentation to auditable research practice. ([auckland.ac.nz](https://www.auckland.ac.nz/en/students/academic-information/postgraduate-students/doctoral-candidates/doctoral-news-events/doctoral-news.html?utm_source=openai))
+
+This is consistent with broader sector activity, including research-software training, eResearch support and AI-literacy programmes. The limiting factor is increasingly not access to AI tools, but the ability to select appropriate tools, evaluate outputs and understand research-specific risks.
+
+---
 
 ## Research Overview
 
-### Health remains the strongest formal adoption cluster
+### Health and clinical research
 
-HRC’s earlier **AI in Healthcare** initiative remains the clearest portfolio-level signal, with **10 studies worth NZ$4.6 million** funded. The more important new development is that this portfolio logic is now extending into large translational programmes: on **11 June 2026**, HRC announced a **NZ$5 million** programme grant for the **REVOLUTION** trial, which will test machine-learning-guided oxygen therapy across **50 ICUs** in New Zealand and Australia and recruit more than **24,000 patients**. HRC describes it as the first major clinical trial worldwide to test whether AI-guided treatment improves ICU survival. ([hrc.govt.nz](https://www.hrc.govt.nz/news-and-events/nz-researchers-awarded-714m-tackle-pressing-health-issues?utm_source=openai))
+Health remains the most advanced formal adoption cluster.
 
-### Climate, hazards and Earth-system science remain major non-health AI domains
+The REVOLUTION trial, led by Professor Paul Young and supported by a NZ$5 million HRC Programme Grant, will evaluate whether machine-learning-guided oxygen therapy improves survival for critically ill patients. The trial will involve 50 ICUs across New Zealand and Australia and recruit more than 24,000 patients. ([hrc.govt.nz](https://hrc.govt.nz/news-and-events/major-nz-led-clinical-trial-test-ai-guided-treatment-critically-ill-patients?utm_source=openai))
 
-REANNZ’s June case study on Emily Gordon’s work shows AI being used to predict the onset of extreme heat events from large climate datasets, with national compute infrastructure enabling much larger experimental campaigns than manual workflows would allow. Its July earthquake-science case study shows another adjacent pattern: AI- and simulation-heavy methods are being embedded in hazard forecasting and public-risk decision support, not merely in exploratory lab work. ([reannz.co.nz](https://www.reannz.co.nz/case-studies/using-machine-learning-to-accelerate-climate-extremes-research))
+Other HRC-funded 2026 research illustrates a broader health-AI pipeline:
 
-### AI literacy itself is becoming a research object and a research capability
+- Physics-constrained AI for marker-less tumour localisation in breast surgery, hosted by the University of Auckland and funded at NZ$150,000.
+- Domain-adapted AI for equitable brain-based cognitive assessment in ADHD, hosted by the University of Otago and funded at NZ$150,000.
+- Continuing HRC investment in AI-enabled healthcare models and practices. ([hrc.govt.nz](https://hrc.govt.nz/resources/research-repository?f%5B0%5D=host%3A2413&f%5B1%5D=host%3A3067&f%5B2%5D=year%3A2020&page=65&query=))
 
-UC-led work on the **Scaffolded AI Literacy (SAIL)** framework, developed with academyEX and AUT collaborators, uses a Delphi process and explicitly incorporates Māori and Pacific perspectives. UC says the framework is informing short courses and its new **Master of AI and Education**, while also informing engagement with the Ministry of Education and the Education Review Office. This matters because AI adoption in academic research increasingly depends on researchers being able to judge where AI should be used, not just how to use it. ([academyex.ac.nz](https://academyex.ac.nz/ai-literacy-research-project/))
+The important development is the move from proof-of-concept systems toward **prospective evaluation, clinical trials, equity assessment and implementation evidence**.
+
+### Environmental, agricultural and spatial research
+
+The University of Canterbury is involved in research using AI-powered acoustic sensors to identify birds and bats in agricultural landscapes. The sensors combine audible and ultrasonic monitoring, embedded AI, connectivity and autonomous field deployment. Human experts validate the AI outputs, reinforcing the importance of human oversight in ecological monitoring. ([canterbury.ac.nz](https://www.canterbury.ac.nz/news-and-events/news/2026/new-research-uses-ai-to-tune-into-nature-s-pest-controllers--))
+
+The project is being conducted on cotton farms in Australia, but UC researchers identify potential relevance to New Zealand horticulture, biodiversity corridors and sustainable pest management. This provides a useful model for how New Zealand researchers can adapt international field research to local primary-sector applications. ([canterbury.ac.nz](https://www.canterbury.ac.nz/news-and-events/news/2026/new-research-uses-ai-to-tune-into-nature-s-pest-controllers--))
+
+REANNZ case studies continue to show AI and machine learning being used with national research-computing infrastructure for climate extremes, weather forecasting, Earth-system modelling and other data-intensive science. ([reannz.co.nz](https://www.reannz.co.nz/case-studies?utm_source=openai))
+
+### AI, expertise and research culture
+
+A University of Auckland study of 24,304 Stack Overflow contributors found that high-reputation contributors began leaving the platform at faster rates following the widespread availability of generative AI tools. The study describes this as **“signal compression”**: when expert and non-expert outputs appear increasingly similar, genuine expertise becomes less visible and less rewarded. ([auckland.ac.nz](https://www.auckland.ac.nz/en/news/2026/07/06/ai-driving-experts-from-online-community---study.html))
+
+Although the study focuses on an online software community, its implications extend to academic research. If researchers, reviewers, students and expert contributors perceive that carefully developed expertise is being flattened into generic generated content, institutions may need to rethink how contribution, originality and scholarly value are recognised.
+
+---
 
 ## Case Studies
 
-### Case Study 1: The AI Research Platform is still the system’s biggest coordination bottleneck
+### Case Study 1: The unresolved AI Research Platform
 
-The platform was designed to create a national centre of gravity for AI research and commercialisation, yet the public award outcome still does not appear on the main MBIE call page. With original official documents pointing to **May 2026** announcements and **1 July 2026** contract commencement, the lag now matters strategically because it delays clarity on concentration of talent, coordination of partners, and the future national specialisation model. ([mbie.govt.nz](https://www.mbie.govt.nz/science-and-technology/science-and-innovation/refocusing-the-science-innovation-and-technology-system/public-research-organisations/new-zealand-institute-for-advanced-technology/call-for-proposals-for-the-artificial-intelligence-research-platform?utm_source=openai))
+**Objective:** Establish a national centre of gravity for AI research, commercialisation and talent development.
 
-### Case Study 2: Governance is becoming a practical research capability
+**Progress:**
 
-Auckland, Waikato, AUT, Lincoln and UC now collectively show a common operating model: **supervisor discussion, approved or protected tools, data-sensitivity controls, transparency requirements, and formal researcher training**. The details differ, but the direction is unmistakable. AI governance in New Zealand academic research is moving from principles to **workflow design**. ([auckland.ac.nz](https://www.auckland.ac.nz/en/about-us/about-the-university/policy-hub/research-innovation/doctoral-study/undertaking-research/generative-artificial-intelligence-in-doctoral-research-guidelines.html?utm_source=openai))
+- Five concepts completed the first phase.
+- Phase-two proposals were due on 31 March 2026.
+- Up to NZ$70 million is available over seven years.
+- Proposed research themes span agentic AI, creative AI, autonomous systems, bioeconomy AI and physical AI.
 
-### Case Study 3: REANNZ shows what “AI-ready infrastructure” looks like in practice
+**Current issue:** No final award announcement is visible on the official MBIE platform page as of 19 August 2026. ([mbie.govt.nz](https://www.mbie.govt.nz/science-and-technology/science-and-innovation/refocusing-the-science-innovation-and-technology-system/public-research-organisations/new-zealand-institute-for-advanced-technology/call-for-proposals-for-the-artificial-intelligence-research-platform?utm_source=openai))
 
-The Emily Gordon climate-extremes project is a strong maturity signal because AI is not being used as a convenience tool; it is being supported through workflow orchestration, large-scale parallel execution, reproducibility improvements and specialist engineering support. That is a more advanced adoption pattern than casual GenAI use and is closer to what durable research capability looks like. ([reannz.co.nz](https://www.reannz.co.nz/case-studies/using-machine-learning-to-accelerate-climate-extremes-research))
+**Significance:** The platform could materially reshape New Zealand’s AI research system, but uncertainty delays clarity over leadership, infrastructure, international partnerships and long-term institutional investment.
 
-### Case Study 4: HRC is pushing health AI from portfolio funding into high-stakes clinical translation
+### Case Study 2: REVOLUTION and the clinical translation of AI
 
-HRC’s earlier AI-in-Healthcare portfolio showed breadth; the **REVOLUTION** trial shows escalation into rigorous, system-level evaluation. It combines academic leadership, national clinical participation, large patient numbers and explicit attention to safe and transparent use of AI-derived models in decision-making. ([hrc.govt.nz](https://www.hrc.govt.nz/news-and-events/nz-researchers-awarded-714m-tackle-pressing-health-issues?utm_source=openai))
+REVOLUTION represents a significant maturity step because it evaluates AI-guided treatment in a large, multi-site randomised clinical setting rather than relying solely on retrospective modelling.
+
+Its significance lies in:
+
+- Large patient numbers.
+- Participation by every major New Zealand ICU.
+- Integration of machine learning with clinical decision-making.
+- Direct measurement of patient outcomes.
+- Explicit attention to safety, transparency and personalised treatment. ([hrc.govt.nz](https://hrc.govt.nz/news-and-events/major-nz-led-clinical-trial-test-ai-guided-treatment-critically-ill-patients?utm_source=openai))
+
+### Case Study 3: University-level governance at Auckland
+
+The University of Auckland’s doctoral framework illustrates how AI governance is becoming part of the research lifecycle.
+
+The model requires:
+
+- Prior discussion with supervisors.
+- Approved tools for sensitive or restricted data.
+- Documentation of substantive AI use.
+- Independent verification of generated material.
+- Declaration in proposals and theses.
+- Protection of candidate intellectual property.
+- Human-led examination and assessment. ([auckland.ac.nz](https://www.auckland.ac.nz/en/about-us/about-the-university/policy-hub/research-innovation/doctoral-study/undertaking-research/generative-artificial-intelligence-in-doctoral-research-guidelines.html?utm_source=openai))
+
+This approach is likely to influence practice elsewhere because it connects AI use with existing research-integrity, privacy, data-management and ethics processes.
+
+### Case Study 4: Hyades and university-linked commercialisation
+
+Hyades, founded by University of Auckland alumni, has raised NZ$1.5 million to develop AI agents that integrate complex spatial datasets. The platform is designed to combine satellite imagery, drone footage, climate records, radar and public datasets into usable spatial machine-learning models.
+
+The company grew out of university research experience and has also received a NZ$400,000 MBIE research-and-development grant. It demonstrates a pathway from research exposure and university entrepreneurship programmes to an investable AI venture. ([auckland.ac.nz](https://www.auckland.ac.nz/en/news/2026/07/28/reaching-for-the-stars--alumni-secure--1-5m-for-startup.html))
+
+---
 
 ## Emerging Trends
 
-### 1) Adoption is shifting from permissive experimentation to governed implementation
+### 1. From permissive use to accountable use
 
-The sector’s strongest current pattern is not merely more AI use. It is **better-specified AI use**: rules for what researchers may do, where they may do it, what data they may use, what they must disclose, and how supervisors and examiners should respond. ([waikato.ac.nz](https://www.waikato.ac.nz/assets/Uploads/Study-with-us/Find-a-study-option/Postgraduate/Generative-AI-in-Postgraduate-Research-Degree-Guidelines.pdf))
+The sector is moving beyond the question of whether researchers may use AI. The more important questions are now:
 
-### 2) The system is increasingly organised around translation and measurable impact
+- Which tools are approved?
+- What data may be entered?
+- How must outputs be validated?
+- What must be disclosed?
+- Who remains accountable?
+- How is intellectual property protected?
 
-The Science Investment Plan, NZIAT investment framing, and Marsden’s 2026 settings all reinforce the same direction of travel: AI research is increasingly being positioned as valuable when it builds national capability, supports commercialisation, and produces real-world benefit rather than publication output alone. ([beehive.govt.nz](https://www.beehive.govt.nz/release/new-science-investment-plan-drive-economic-growth-and-prosperity?utm_source=openai))
+This represents a shift from general principles to operational controls. ([auckland.ac.nz](https://www.auckland.ac.nz/en/about-us/about-the-university/policy-hub/research-innovation/doctoral-study/undertaking-research/generative-artificial-intelligence-in-doctoral-research-guidelines.html?utm_source=openai))
 
-### 3) Human capability is emerging as the limiting factor
+### 2. AI research is becoming more place-based
 
-Across ResBaz, SAIL, AUT’s postgraduate hub, Auckland’s researcher workshops and UC’s applied-AI programme, the sector is signalling that the bottleneck is no longer simple access to tools. The harder problem is building enough people who can use AI **critically, responsibly and contextually** in research settings. ([resbaz.auckland.ac.nz](https://resbaz.auckland.ac.nz/speakers/?utm_source=openai))
+The strongest New Zealand-specific work is not attempting to reproduce the scale of overseas frontier-model development. Instead, it focuses on applications where local conditions matter:
 
-### 4) Aotearoa-specific governance values remain central
+- New Zealand health systems.
+- Māori and Pacific communities.
+- Agriculture, horticulture and forestry.
+- Climate extremes and natural hazards.
+- Spatial and environmental data.
+- Cultural and creative production.
 
-Māori data sovereignty, Indigenous and Pacific data considerations, trusted use, and culturally grounded accountability continue to recur across AUT, Waikato, Lincoln, UC and national research-practice guidance. AI adoption in New Zealand academic research is therefore still being localised rather than simply imported. ([aut.ac.nz](https://www.aut.ac.nz/__data/assets/pdf_file/0004/1095682/AUT-Guidelines-for-the-Ethical-Use-of-GenAI-in-Research-January-2026.pdf))
+This aligns with the Government’s stated preference for smart adoption and niche capability rather than competing directly with the largest global model developers. ([mbie.govt.nz](https://www.mbie.govt.nz/business-and-employment/economic-growth/digital-policy/new-zealands-ai-strategy-investing-with-confidence?utm_source=openai))
+
+### 3. Cultural responsiveness is moving into mainstream AI research
+
+Māori data sovereignty, te Tiriti obligations, mātauranga Māori, Pacific data considerations and cultural responsiveness are increasingly visible in both guidelines and research outputs.
+
+The Royal Society Te Apārangi’s national guidance identifies risks relating to Māori and Pacific data sovereignty. Recent Waikato and Canterbury research shows that these concerns are also becoming empirical research questions, not merely policy principles. ([royalsociety.org.nz](https://www.royalsociety.org.nz/what-we-do/research-practice/generative-artificial-intelligence-in-research-in-aotearoa-new-zealand/guidelines-for-the-best-practice-use-of-generative-artificial-intelligence-in-research-in-aotearoa-new-zealand/?utm_source=openai))
+
+### 4. Translation is being prioritised alongside publication
+
+Funding reform, the Science Investment Plan, HRC health research and university commercialisation activity all point toward stronger expectations that research should produce usable tools, services, firms or public benefits.
+
+This does not eliminate the importance of fundamental research, but it changes the institutional narrative around AI: capability is increasingly judged by the strength of the pathway from research to application. ([mbie.govt.nz](https://www.mbie.govt.nz/about/news/governments-science-investment-plan-published?utm_source=openai))
+
+### 5. Human expertise remains the critical safeguard
+
+The latest evidence reinforces that AI does not eliminate the need for researchers with subject knowledge. It increases the importance of people who can:
+
+- Judge whether an AI output is plausible.
+- Recognise bias or cultural misalignment.
+- Validate sources and models.
+- Protect confidential information.
+- Explain methodological decisions.
+- Identify when AI should not be used.
+
+The Stack Overflow findings and Auckland’s doctoral requirements point to the same conclusion: research systems must preserve incentives for deep expertise while benefiting from AI-enabled productivity. ([auckland.ac.nz](https://www.auckland.ac.nz/en/news/2026/07/06/ai-driving-experts-from-online-community---study.html))
+
+---
+
+## Risks and Constraints
+
+### National coordination risk
+
+The continued absence of a final AI Research Platform decision creates uncertainty over national leadership and may slow the formation of large-scale partnerships.
+
+### Governance fragmentation
+
+Universities are developing their own policies and approved-tool pathways. This creates useful local flexibility but may also produce inconsistent expectations for researchers working across institutions.
+
+### Data sovereignty and cultural harm
+
+External GenAI systems may process Māori data, mātauranga Māori, te reo Māori or other culturally sensitive material without adequate consent, control or contextual understanding. ([royalsociety.org.nz](https://www.royalsociety.org.nz/what-we-do/research-practice/generative-artificial-intelligence-in-research-in-aotearoa-new-zealand/guidelines-for-the-best-practice-use-of-generative-artificial-intelligence-in-research-in-aotearoa-new-zealand/?utm_source=openai))
+
+### Research-integrity risk
+
+Generated text may contain fabricated citations, inaccurate summaries, hidden bias or unacknowledged intellectual borrowing. Institutions are responding through documentation and disclosure requirements rather than relying on AI-detection tools. ([auckland.ac.nz](https://www.auckland.ac.nz/en/about-us/about-the-university/policy-hub/research-innovation/doctoral-study/undertaking-research/generative-artificial-intelligence-in-doctoral-research-guidelines.html?utm_source=openai))
+
+### Loss of expert contribution
+
+If AI-generated outputs make genuine expertise less visible or less rewarded, researchers may disengage from scholarly communities. This could weaken peer learning, open knowledge exchange and the development of future research capability. ([auckland.ac.nz](https://www.auckland.ac.nz/en/news/2026/07/06/ai-driving-experts-from-online-community---study.html))
+
+### Environmental costs
+
+The Royal Society’s guidance recognises environmental impacts as part of responsible GenAI use, while commentary from New Zealand researchers argues that environmental considerations should be treated as central to decisions about whether and when AI is justified. ([royalsociety.org.nz](https://www.royalsociety.org.nz/what-we-do/research-practice/generative-artificial-intelligence-in-research-in-aotearoa-new-zealand/guidelines-for-the-best-practice-use-of-generative-artificial-intelligence-in-research-in-aotearoa-new-zealand/?utm_source=openai))
+
+---
 
 ## Overall Assessment
 
-As of **13 July 2026**, AI in New Zealand academic research is best understood as **broadening institutionally while still waiting for national strategic closure**. The broadening is real: more universities now have explicit research-facing AI rules; infrastructure providers are supporting real AI workloads; national workshops and tool pathways are normalising AI use; and major applied research programmes in health and climate are moving beyond pilot status. ([aut.ac.nz](https://www.aut.ac.nz/research/postgraduate-student-support/pg-forms-policies-and-processes/ai-in-postgraduate-research/_recache?utm_source=openai))
+As of **19 August 2026**, AI in academic research in Aotearoa New Zealand is best characterised as **institutionally consolidating, application-led and increasingly culturally grounded, but not yet nationally coordinated**.
 
-The unresolved piece remains the **AI Research Platform**. Until a public award outcome appears, the sector still lacks clarity on where national AI-research leadership will be anchored and how concentrated New Zealand’s long-term institutional model will become. But below that level, the evidence is now strong: **Aotearoa’s academic research sector is no longer treating AI as peripheral. It is building the governance, infrastructure, skills and translational programmes required to make AI a durable part of research practice.** ([mbie.govt.nz](https://www.mbie.govt.nz/science-and-technology/science-and-innovation/refocusing-the-science-innovation-and-technology-system/public-research-organisations/new-zealand-institute-for-advanced-technology/call-for-proposals-for-the-artificial-intelligence-research-platform?utm_source=openai))
+The most important developments are no longer isolated experiments with individual tools. They are the construction of a broader research operating environment:
+
+- Universities are embedding AI into research integrity, ethics, privacy and doctoral supervision.
+- Funders are supporting large-scale clinical and applied AI programmes.
+- Research infrastructure is enabling high-volume machine-learning workflows.
+- Researchers are studying the social, cultural and epistemic consequences of AI.
+- Commercialisation pathways are producing university-linked AI ventures.
+- National funding reform is placing greater weight on advanced technology and translation.
+
+The central unresolved issue remains the national AI Research Platform. If confirmed, it could consolidate capability and accelerate international positioning. If delayed further, universities and research organisations will continue building AI capability independently, potentially producing a more distributed but less coordinated ecosystem.
+
+The overall direction is nevertheless clear: **AI is no longer peripheral to New Zealand academic research. It is becoming part of the sector’s governance, infrastructure, funding, talent-development and translational architecture—provided that human expertise, Māori and Pacific data sovereignty, cultural responsiveness and research integrity remain central to adoption.**
