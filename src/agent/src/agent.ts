@@ -20,7 +20,14 @@ export const STREAMING_ENABLED =
   (process.env['STREAMING_ENABLED'] ?? 'True') === 'True';
 
 /** Reasoning effort levels the agent accepts, lowest to highest. */
-export const REASONING_EFFORTS = ['minimal', 'low', 'medium', 'high', 'xhigh'] as const;
+export const REASONING_EFFORTS = [
+  'minimal',
+  'low',
+  'medium',
+  'high',
+  'xhigh',
+  'max',
+] as const;
 export type ReasoningEffort = (typeof REASONING_EFFORTS)[number];
 
 /**
@@ -49,12 +56,17 @@ export const DEFAULT_REASONING_EFFORT: ReasoningEffort = process.env[
 // Each provider spells reasoning effort differently. Anthropic's scale starts
 // at "low" and Google's thinkingLevel tops out at "high", so the shared scale
 // is clamped onto what each one accepts rather than passed through blindly.
-const ANTHROPIC_EFFORT: Record<ReasoningEffort, 'low' | 'medium' | 'high' | 'xhigh'> = {
+// OpenAI accepts the full scale as-is.
+const ANTHROPIC_EFFORT: Record<
+  ReasoningEffort,
+  'low' | 'medium' | 'high' | 'xhigh' | 'max'
+> = {
   minimal: 'low',
   low: 'low',
   medium: 'medium',
   high: 'high',
   xhigh: 'xhigh',
+  max: 'max',
 };
 const GOOGLE_THINKING_LEVEL: Record<
   ReasoningEffort,
@@ -65,6 +77,7 @@ const GOOGLE_THINKING_LEVEL: Record<
   medium: 'medium',
   high: 'high',
   xhigh: 'high',
+  max: 'high',
 };
 
 export interface ResearchResult {

@@ -32,7 +32,7 @@ env:
   # Sets the default model name used for the research agent
   RESEARCH_MODEL: ${{ vars.RESEARCH_MODEL || 'gpt-5.4-2026-03-05' }}
   # Sets the default reasoning effort for the research agent
-  # (minimal | low | medium | high | xhigh)
+  # (minimal | low | medium | high | xhigh | max)
   RESEARCH_REASONING_EFFORT: ${{ vars.RESEARCH_REASONING_EFFORT || 'medium' }}
   # Sets the default instruction file for the research agent
   RESEARCH_INSTRUCTIONS_FILENAME: ${{ vars.RESEARCH_INSTRUCTIONS_FILENAME || 'instructions_research.md' }}
