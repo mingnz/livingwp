@@ -12,19 +12,19 @@
   "dependencies": {
     "@astrojs/rss": "^4.0.12",
     "@astrojs/sitemap": "^3.4.1",
-    "@livingwp/article-contract": "*",
     "@fontsource-variable/fraunces": "^5.2.6",
     "@fontsource-variable/newsreader": "^5.2.6",
     "@fontsource/ibm-plex-mono": "^5.2.6",
+    "@livingwp/article-contract": "*",
     "@tailwindcss/typography": "^0.5.16",
     "@tailwindcss/vite": "^4.1.10",
-    "astro": "^5.9.0",
-    "sharp": "^0.34.2",
+    "astro": "^7.2.2",
+    "sharp": "^0.35.3",
     "tailwindcss": "^4.1.10",
-    "zod": "^3.25.0"
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.4",
-    "typescript": "^5.8.0"
+    "typescript": "^7.0.2"
   }
 }

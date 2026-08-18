@@ -1,5 +1,5 @@
 import matter from 'gray-matter';
-import yaml from 'js-yaml';
+import { dump, type DumpOptions } from 'js-yaml';
 
 export type FrontMatter = Record<string, unknown>;
 
@@ -17,10 +17,10 @@ export function parseMarkdown(text: string): [FrontMatter, string] {
  * trailing newline after the body.
  */
 export function formatMarkdown(metadata: FrontMatter, body: string): string {
-  const frontMatter = yaml.dump(metadata, {
+  const frontMatter = dump(metadata, {
     sortKeys: true,
     lineWidth: 80,
     allowUnicode: true,
-  } as yaml.DumpOptions);
+  } as DumpOptions);
   return `---\n${frontMatter}---\n\n${body.trim()}`;
 }

@@ -1,5 +1,6 @@
-import { defineCollection, z } from 'astro:content';
+import { defineCollection } from 'astro:content';
 import { glob } from 'astro/loaders';
+import { z } from 'zod';
 import { articleFrontmatterShape } from '@livingwp/article-contract';
 
 /**
@@ -12,6 +13,10 @@ import { articleFrontmatterShape } from '@livingwp/article-contract';
  * components render it as a `Date`. Unknown keys (e.g. the Jekyll-era `layout`
  * still present in older archives) are stripped, so immutable archives stay
  * valid without re-listing retired fields.
+ *
+ * Zod is imported directly rather than from `astro:content`, whose `z`
+ * re-export is deprecated in Astro 7 now that collections accept any Standard
+ * Schema validator.
  */
 const articles = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './whitepaper/content' }),
