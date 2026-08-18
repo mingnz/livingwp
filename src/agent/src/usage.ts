@@ -17,11 +17,30 @@ interface ModelPricing {
 
 // Default rates are sourced from the providers' public pricing pages and can
 // be overridden in CI via LIVINGWP_MODEL_PRICING_OVERRIDES_JSON.
+//
+// These are standard-tier, short-context rates. OpenAI bills a higher
+// long-context rate for requests over 272K input tokens; a research run is
+// well under that, so the short-context rate is the right one here.
 const DEFAULT_MODEL_PRICING: Record<string, ModelPricing> = {
   'gpt-5.4': {
     input_per_million_usd: 2.5,
     cached_input_per_million_usd: 0.25,
     output_per_million_usd: 15.0,
+  },
+  'gpt-5.6-sol': {
+    input_per_million_usd: 5.0,
+    cached_input_per_million_usd: 0.5,
+    output_per_million_usd: 30.0,
+  },
+  'gpt-5.6-terra': {
+    input_per_million_usd: 2.0,
+    cached_input_per_million_usd: 0.2,
+    output_per_million_usd: 12.0,
+  },
+  'gpt-5.6-luna': {
+    input_per_million_usd: 0.2,
+    cached_input_per_million_usd: 0.02,
+    output_per_million_usd: 1.2,
   },
 };
 const DEFAULT_WEB_SEARCH_COST_PER_1000_USD = 10.0;
