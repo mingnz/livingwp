@@ -29,6 +29,7 @@ export const SITE_TIMEZONE = 'Pacific/Auckland';
 export interface IndustryConfig {
   instructions_filename?: string;
   research_model?: string;
+  research_reasoning_effort?: string;
   title?: string;
   article_kind?: string;
   history_context_count?: number;
