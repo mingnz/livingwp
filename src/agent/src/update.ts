@@ -150,7 +150,13 @@ export async function updateArticles(articleFilter?: string): Promise<UsageRepor
   for (const industryName of industries) {
     try {
       const articleConfig = industryConfig[industryName] ?? {};
-      const { agent, modelName } = await getResearchAgent(industryName, articleConfig);
+      const { agent, modelName, reasoningEffort } = await getResearchAgent(
+        industryName,
+        articleConfig,
+      );
+      console.log(
+        `Researching ${industryName} with ${modelName} (reasoning effort: ${reasoningEffort})`,
+      );
       const existingArticle = loadIndustryArticle(industryName);
       const text = existingArticle ?? getArticleStub(industryName, articleConfig);
       const [frontMatter, body] = parseMarkdown(text);

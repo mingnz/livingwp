@@ -19,6 +19,54 @@ export const DEFAULT_INSTRUCTIONS_FILENAME =
 export const STREAMING_ENABLED =
   (process.env['STREAMING_ENABLED'] ?? 'True') === 'True';
 
+/** Reasoning effort levels the agent accepts, lowest to highest. */
+export const REASONING_EFFORTS = ['minimal', 'low', 'medium', 'high', 'xhigh'] as const;
+export type ReasoningEffort = (typeof REASONING_EFFORTS)[number];
+
+/**
+ * Parse a reasoning effort, rejecting anything off the scale so a typo in a
+ * repository variable fails the run instead of silently reverting to a default.
+ */
+export function parseReasoningEffort(value: string, source: string): ReasoningEffort {
+  const normalized = value.trim().toLowerCase();
+  if ((REASONING_EFFORTS as readonly string[]).includes(normalized)) {
+    return normalized as ReasoningEffort;
+  }
+  throw new Error(
+    `Unknown reasoning effort "${value}" in ${source}. Use one of: ${REASONING_EFFORTS.join(', ')}.`,
+  );
+}
+
+export const DEFAULT_REASONING_EFFORT: ReasoningEffort = process.env[
+  'RESEARCH_REASONING_EFFORT'
+]
+  ? parseReasoningEffort(
+      process.env['RESEARCH_REASONING_EFFORT'],
+      'RESEARCH_REASONING_EFFORT',
+    )
+  : 'medium';
+
+// Each provider spells reasoning effort differently. Anthropic's scale starts
+// at "low" and Google's thinkingLevel tops out at "high", so the shared scale
+// is clamped onto what each one accepts rather than passed through blindly.
+const ANTHROPIC_EFFORT: Record<ReasoningEffort, 'low' | 'medium' | 'high' | 'xhigh'> = {
+  minimal: 'low',
+  low: 'low',
+  medium: 'medium',
+  high: 'high',
+  xhigh: 'xhigh',
+};
+const GOOGLE_THINKING_LEVEL: Record<
+  ReasoningEffort,
+  'minimal' | 'low' | 'medium' | 'high'
+> = {
+  minimal: 'minimal',
+  low: 'low',
+  medium: 'medium',
+  high: 'high',
+  xhigh: 'high',
+};
+
 export interface ResearchResult {
   text: string;
   finishReason: Awaited<ReturnType<ToolLoopAgent['generate']>>['finishReason'];
@@ -35,12 +83,16 @@ interface ResolvedModel {
 }
 
 /**
- * Resolve a model name to a provider, model instance, and that provider's
- * hosted web-search tool. Bare model names (e.g. "gpt-5.4-2026-03-05")
- * default to OpenAI for backwards compatibility with existing config;
- * "anthropic/..." and "google/..." prefixes select other providers.
+ * Resolve a model name to a provider, model instance, that provider's hosted
+ * web-search tool, and its reasoning-effort option. Bare model names (e.g.
+ * "gpt-5.4-2026-03-05") default to OpenAI for backwards compatibility with
+ * existing config; "anthropic/..." and "google/..." prefixes select other
+ * providers.
  */
-export function resolveModel(modelName: string): ResolvedModel {
+export function resolveModel(
+  modelName: string,
+  reasoningEffort: ReasoningEffort = DEFAULT_REASONING_EFFORT,
+): ResolvedModel {
   const [prefix, rest] = modelName.includes('/')
     ? [modelName.slice(0, modelName.indexOf('/')), modelName.slice(modelName.indexOf('/') + 1)]
     : ['openai', modelName];
@@ -53,7 +105,7 @@ export function resolveModel(modelName: string): ResolvedModel {
         searchTools: { web_search: openai.tools.webSearch() },
         // Keep GPT-5 behaviour explicit so output shape stays stable.
         providerOptions: {
-          openai: { reasoningEffort: 'medium', textVerbosity: 'medium' },
+          openai: { reasoningEffort, textVerbosity: 'medium' },
         },
       };
     case 'anthropic':
@@ -61,12 +113,18 @@ export function resolveModel(modelName: string): ResolvedModel {
         provider: 'anthropic',
         model: anthropic(rest),
         searchTools: { web_search: anthropic.tools.webSearch_20250305({ maxUses: 20 }) },
+        providerOptions: { anthropic: { effort: ANTHROPIC_EFFORT[reasoningEffort] } },
       };
     case 'google':
       return {
         provider: 'google',
         model: google(rest),
         searchTools: { google_search: google.tools.googleSearch({}) },
+        providerOptions: {
+          google: {
+            thinkingConfig: { thinkingLevel: GOOGLE_THINKING_LEVEL[reasoningEffort] },
+          },
+        },
       };
     default:
       throw new Error(
@@ -82,11 +140,21 @@ export const WEB_SEARCH_TOOL_NAMES = new Set(['web_search', 'google_search']);
 export async function getResearchAgent(
   industryName: string,
   config: IndustryConfig = {},
-): Promise<{ agent: ToolLoopAgent; modelName: string }> {
-  // Per-article config wins over the RESEARCH_MODEL default, so only set
-  // research_model when an article must be pinned to a specific model.
+): Promise<{ agent: ToolLoopAgent; modelName: string; reasoningEffort: ReasoningEffort }> {
+  // Per-article config wins over the RESEARCH_MODEL / RESEARCH_REASONING_EFFORT
+  // defaults, so only set research_model or research_reasoning_effort when an
+  // article must be pinned away from what the environment selects.
   const modelName = config.research_model ?? DEFAULT_MODEL_NAME;
-  const { provider, model, searchTools, providerOptions } = resolveModel(modelName);
+  const reasoningEffort = config.research_reasoning_effort
+    ? parseReasoningEffort(
+        config.research_reasoning_effort,
+        `research_reasoning_effort for ${industryName}`,
+      )
+    : DEFAULT_REASONING_EFFORT;
+  const { provider, model, searchTools, providerOptions } = resolveModel(
+    modelName,
+    reasoningEffort,
+  );
 
   const tools: ToolSet = { ...searchTools };
   // File search uses OpenAI-hosted vector stores, so it is OpenAI-only.
@@ -116,7 +184,7 @@ export async function getResearchAgent(
     ...(providerOptions ? { providerOptions } : {}),
   });
 
-  return { agent, modelName };
+  return { agent, modelName, reasoningEffort };
 }
 
 function logToolCall(toolName: string, input: unknown): void {
