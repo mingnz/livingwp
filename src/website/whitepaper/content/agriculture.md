@@ -5,134 +5,418 @@ article_kind: industry
 article_latest: true
 article_series: agriculture
 article_summary: >-
-  AI in New Zealand agriculture is now best understood as a set of
-  production-grade tools tied to specific farm and orchard decisions rather than
-  a broad, uniform “AI wave.” The commercial centre of gravity remains dairy,
-  especially in livestock control, pasture intelligence, and farmer-facing
-  decision support.…
-article_updated_at: '2026-07-13T22:53:45+12:00'
+  AI adoption in New Zealand agriculture is continuing to develop through
+  specific, workflow-embedded applications rather than a single sector-wide
+  transformation. Dairy remains the most commercially advanced area, while
+  horticulture is producing some of the country’s strongest new computer-vision
+  and robotics…
+article_updated_at: '2026-08-18T13:08:35+12:00'
 article_version: false
 description: >-
-  AI in New Zealand agriculture is now best understood as a set of
-  production-grade tools tied to specific farm and orchard decisions rather than
-  a broad,…
+  AI adoption in New Zealand agriculture is continuing to develop through
+  specific, workflow-embedded applications rather than a single sector-wide…
 permalink: /whitepaper/agriculture/
 title: AI in Agriculture
 ---
 
-# AI in Agriculture in Aotearoa New Zealand: A Living Whitepaper
-*Updated 13 July 2026*
+# AI in Agriculture in Aotearoa New Zealand: A Living Whitepaper  
+*Updated 18 August 2026*  
+*Previous update: 13 July 2026*
 
 ## Introduction
 
-AI in New Zealand agriculture is now best understood as a set of **production-grade tools tied to specific farm and orchard decisions** rather than a broad, uniform “AI wave.” The commercial centre of gravity remains dairy, especially in livestock control, pasture intelligence, and farmer-facing decision support. Horticulture and arable are advancing through narrower but high-value use cases such as fruit-quality prediction, disease-risk modelling, and seed screening. This is happening in a sector of major economic weight: MPI’s **June 2026 SOPI** expects food and fibre export revenue to reach **NZ$64.3 billion** in the year to **30 June 2026**, including **NZ$28.6 billion from dairy**, with growth also supported by stronger apple and kiwifruit exports. ([mpi.govt.nz](https://www.mpi.govt.nz/resources-and-forms/economic-intelligence/situation-and-outlook-for-primary-industries?utm_source=openai))
+AI adoption in New Zealand agriculture is continuing to develop through **specific, workflow-embedded applications** rather than a single sector-wide transformation. Dairy remains the most commercially advanced area, while horticulture is producing some of the country’s strongest new computer-vision and robotics developments. Arable farming is adopting lower-risk information and knowledge tools, and government agencies are beginning to use generative AI in biosecurity and regulatory workflows.
+
+The primary sector is operating in a favourable but demanding economic environment. MPI forecasts food and fibre export revenue of **NZ$64.3 billion** for the year to 30 June 2026, including **NZ$28.6 billion from dairy** and **NZ$9.5 billion from horticulture**. These export values provide a strong incentive to use AI for productivity, labour, quality assurance, environmental performance and market access. ([mpi.govt.nz](https://www.mpi.govt.nz/resources-and-forms/economic-intelligence/situation-and-outlook-for-primary-industries?utm_source=openai))
+
+---
 
 ## Executive Snapshot
 
-- **Dairy remains the most advanced AI segment.** Halter’s virtual fencing and animal-management platform, Aimer’s pasture-intelligence system, and DairyNZ’s DAiSY assistant are still the clearest examples of AI being used in day-to-day farm operations. ([halterhq.com](https://www.halterhq.com/en-nz/news/halter-launches-world-first-virtual-fencing-via-satellite?utm_source=openai))
-- **The biggest shift since 10 June 2026 is stronger institutional embedding.** AI is moving from startup deployment into co-funded programmes, farmer support channels, and sector-wide delivery mechanisms, notably through DairyNZ’s new **Responsible Dairy** programme and Halter’s inclusion in Fonterra’s **2026/27 On-farm Solutions** incentive scheme. ([dairynz.co.nz](https://www.dairynz.co.nz/research/science-projects/responsible-dairy-programme/))
-- **Horticulture AI remains narrower than dairy, but often strategically higher stakes.** Recent momentum is concentrated around fruit-quality visibility before packout, early disease detection, and contamination screening, with Hectre, Lincoln Agritech/STELLA, and Plant & Food Research’s Hyperseeds work standing out. ([auckland.ac.nz](https://www.auckland.ac.nz/en/news/2026/02/16/hectre-raises-millions-to-tackle-global-fruit-waste.html?utm_source=openai))
-- **Public-good AI is hardening into sector infrastructure.** The On-Farm Emissions Calculator, AgResearch’s Map and Zap®, and MPI’s use of AI-enabled cameras in hornet eradication all show AI moving beyond private software into public research, biosecurity, and sector capability. ([agresearch.co.nz](https://www.agresearch.co.nz/news/new-emissions-calculator-gives-farmers-a-clearer-picture-of-on-farm-greenhouse-gases/?utm_source=openai))
-- **The binding constraints are still trust, integration, and proof of value.** DairyNZ continues to frame GenAI as a support tool rather than a substitute for farmer judgement, and MBIE’s AI strategy material still highlights a national SME adoption gap. ([dairynz.co.nz](https://www.dairynz.co.nz/news/farmers-using-artificial-intelligence-to-save-time/))
+- **Dairy remains the most mature AI segment**, led by pasture intelligence, livestock wearables, virtual fencing and farmer-facing decision support.
+- **Horticulture has generated the strongest new research and commercialisation signal since July**, particularly through computer vision that can model fruit hidden inside dense canopies.
+- **Arable adoption is beginning with trusted information access**, illustrated by the launch of FAR’s AI assistant, rather than autonomous machinery or fully automated decision-making.
+- **Government is moving AI into biosecurity administration**, with a four-month generative-AI pilot designed to support the development of import health standards while leaving decisions with expert officials.
+- **The physical-AI opportunity is becoming more concrete.** Research is increasingly focused on systems that can sense, interpret and act in outdoor environments, including orchards, farms and irrigation systems.
+- **The adoption bottlenecks remain unchanged:** connectivity, interoperability, trust, independent validation, data quality and demonstrable return on investment.
+- **There is still no evidence of mass adoption across New Zealand farms.** The current pattern is selective adoption by technically confident operators, technology-led enterprises, research farms and sector organisations.
 
-## What Changed Since the Previous Update on 10 June 2026
+---
 
-- **Aimer launched a new pasture stack on 30 June 2026** that combines proprietary satellite data, AI-powered smartphone measurement, and live paddock modelling. Aimer says it is already used on **more than 650 farms** with **more than 10,000 pasture measurements a week**. ([aimer-farming.com](https://www.aimer-farming.com/blog-articles/aimer-farming-launches-pasture-system-combining-satellite-smartphone-measurement-and-live-farm-modelling))
-- **DairyNZ’s Responsible Dairy programme became the clearest new institutional signal.** The seven-year programme is funded at **NZ$45.85 million**, with **NZ$18.34 million** from MPI’s Primary Sector Growth Fund, and will test next-generation systems and technologies across **35 to 40 partner farms**. ([dairynz.co.nz](https://www.dairynz.co.nz/research/science-projects/responsible-dairy-programme/))
-- **Halter entered a more mainstream adoption channel via Fonterra.** From **8 July 2026**, eligible Fonterra farmers can apply for **up to NZ$2,000 + GST** toward Halter under the co-op’s **2026/27 On-farm Solutions** initiative. ([halterhq.com](https://www.halterhq.com/en-nz/articles/fonterra-on-farm-solutions))
-- **Fieldays 2026 strengthened the “innovation funnel” story.** Organisers reported a **marked increase in AI-based solutions**, and the Prototype Award went to **Scanabull**, whose WeighApp uses **3D LiDAR and AI** to estimate cattle liveweights from a phone scan. ([fieldays.co.nz](https://www.fieldays.co.nz/further-afield/news-from-further-afield/fieldays-2026-innovation-awards-participants-lead-the-way?utm_source=openai))
-- **The national AI research-platform outcome still does not appear to be publicly finalised.** On MBIE’s AI Research Platform page, the phase-two timetable is visible and MBIE says **“an update on a timeline of announcements will be made in due course”**; no final platform award is shown on the public material visible in July 2026. This is an inference from the current public pages, not a formal delay notice. ([mbie.govt.nz](https://www.mbie.govt.nz/science-and-technology/science-and-innovation/refocusing-the-science-innovation-and-technology-system/public-research-organisations/new-zealand-institute-for-advanced-technology/call-for-proposals-for-the-artificial-intelligence-research-platform?utm_source=openai))
+## What Changed Since the Previous Update
 
-## Current News and Market Developments
+### 1. Government began testing generative AI for biosecurity standards
 
-### 1) Dairy and livestock AI are moving deeper into the operating layer
+On **25 July 2026**, the Government announced a pilot of a generative-AI tool to assist Biosecurity New Zealand in developing import health standards. The tool is intended to support document-heavy work involving evidence and regulatory material, while final decisions remain with Biosecurity New Zealand experts. The pilot is scheduled to run for four months. ([beehive.govt.nz](https://www.beehive.govt.nz/release/new-ai-tool-help-develop-biosecurity-standards))
 
-Halter remains the clearest scaled example of AI in New Zealand agriculture. Its **28 April 2026** direct-to-satellite launch matters because it reduces a core deployment bottleneck: connectivity. Halter says the new One NZ Satellite/Starlink integration removes the need for on-farm infrastructure for beef operations, could expand access for New Zealand beef farms by **at least 20%**, and accompanies new tools for reproduction, animal behaviour, and precision pasture management. Halter also says it now serves **more than 2,000 farmers and ranchers** across New Zealand, Australia, and the US, and has sold **one million collars**. ([halterhq.com](https://www.halterhq.com/en-nz/news/halter-launches-world-first-virtual-fencing-via-satellite?utm_source=openai))
+This is significant for agriculture because import health standards govern the movement of plant, animal and biological products into New Zealand. If successful, the system could help improve the speed and consistency of approvals, including access to new plant genetics, without removing expert oversight.
 
-The more important July development is that Halter is no longer only a high-growth agritech product; it is also being channelled through mainstream dairy incentives. Its inclusion in Fonterra’s **2026/27 On-farm Solutions** scheme suggests wearable AI is moving closer to accepted farm-improvement spend, especially where it can be framed around efficiency and emissions outcomes. That does not prove universal adoption, but it is a strong signal that AI is entering ordinary farm capital decisions rather than sitting only with early adopters. ([halterhq.com](https://www.halterhq.com/en-nz/articles/fonterra-on-farm-solutions))
+**Strategic significance:**
 
-Aimer is the other major livestock-side signal. Its **30 June 2026** launch of **AIMER Satellite** pushes pasture AI from smartphone measurement into a blended system of satellite observation, farm-specific paddock modelling, and AI-assisted estimation. The company says direct smartphone measurement exceeds **90% accuracy**, while the broader satellite-linked system is designed to maintain **around 80% daily accuracy** between observations. Those are company-reported figures, but strategically the launch matters because it addresses the central New Zealand dairy problem: pasture decisions have to be made daily, not just when measurements are convenient. ([aimer-farming.com](https://www.aimer-farming.com/blog-articles/aimer-farming-launches-pasture-system-combining-satellite-smartphone-measurement-and-live-farm-modelling))
+- AI adoption is moving beyond farms and agritech companies into the regulatory infrastructure that supports agriculture.
+- The use case is relatively low-risk compared with autonomous farm decisions because experts remain accountable.
+- It provides an early example of government using domain-grounded generative AI for a nationally important agricultural function.
 
-DairyNZ’s recent commentary reinforces that pasture-based fit is decisive. In its **16 June 2026** article, DairyNZ argued that New Zealand’s grazing model should shape how technologies are developed and adopted, and highlighted pasture productivity measurement as a high-potential area only if tools are easy to use, cost-effective, and relevant to day-to-day decisions. That framing aligns closely with the commercial logic behind Aimer, Halter, and other workflow-native systems. ([dairynz.co.nz](https://www.dairynz.co.nz/news/unlocking-tech-s-potential-in-our-unique-dairy-landscape/?utm_source=openai))
+### 2. University of Canterbury launched HoloCrop commercialisation pathway
 
-### 2) Sector institutions are becoming AI deployers, not just observers
+On **28 July 2026**, the University of Canterbury announced a new spinout, **HoloCrop**, based on AI and computer-vision research that creates detailed 3D models of individual plants. The system can identify and measure fruit hidden behind leaves, including apples, cherries and grapes, and track fruit growth over time. ([canterbury.ac.nz](https://www.canterbury.ac.nz/news-and-events/news/2026/ai-technology-sees-through-leaves-to-transform-horticulture-))
 
-DairyNZ is now using AI directly in farmer-facing delivery through **DAiSY**, its website assistant. DairyNZ says DAiSY draws from **more than 1,100 pages** and **880 tools and resources**, and responds only from DairyNZ website content. That matters because institution-led AI lowers one of agriculture’s biggest barriers to adoption: trust. In practice, this is a retrieval-and-summarisation layer grounded in known sector material rather than an open-ended consumer chatbot. ([dairynz.co.nz](https://www.dairynz.co.nz/about-daisy/?utm_source=openai))
+The technology has been developed through approximately 15 years of research supported by more than **NZ$32 million** in government investment in computer vision, AI and agricultural robotics. Data has been collected across **20 commercial farms**. In testing, fruit counts were reportedly within approximately **2–3%** of the correct figure, compared with potential inaccuracies of up to **23%** in conventional sampling. These are university-reported test results and should not yet be treated as independently verified commercial performance. ([canterbury.ac.nz](https://www.canterbury.ac.nz/news-and-events/news/2026/ai-technology-sees-through-leaves-to-transform-horticulture-))
 
-The new **Responsible Dairy** programme is an even bigger sign of institutional embedding. DairyNZ says the programme will bring together science, farming, finance, fertiliser, and technology partners — including **Halter** and **Gallagher** — to test stacked technologies, model next-generation systems, and accelerate adoption on commercial farms. The design implies that the next stage of AI adoption will be less about isolated tools and more about combinations of wearables, data systems, environmental measurement, and farm-system redesign. ([dairynz.co.nz](https://www.dairynz.co.nz/research/science-projects/responsible-dairy-programme/))
+HoloCrop’s importance lies in its potential to connect AI perception with future physical automation:
 
-### 3) Horticulture and arable AI are still narrower, but the economics are sharp
+- More accurate crop forecasting.
+- Better planning for labour, packaging and storage.
+- Improved selective harvesting.
+- Potential support for pruning, thinning, spraying and harvesting robots.
+- More precise measurement of fruit size, volume, surface area and location.
 
-Hectre remains one of the strongest commercial signals in horticulture. The Auckland-founded company raised an oversubscribed **NZ$12 million Series A** in **February 2026** to expand its AI and computer-vision systems for fruit sizing, colour, and quality before produce reaches the packhouse. University of Auckland reporting says the raise will support expanded R&D and hiring. The strategic importance is straightforward: pre-packhouse visibility improves storage, grading, and sales decisions before value is lost. ([auckland.ac.nz](https://www.auckland.ac.nz/en/news/2026/02/16/hectre-raises-millions-to-tackle-global-fruit-waste.html?utm_source=openai))
+### 3. FAR launched a domain-grounded AI assistant for arable growers
 
-Lincoln Agritech’s **STELLA** work shows the export-risk side of horticulture AI. In Hawke’s Bay, the project is combining automated spore samplers, UAV and satellite imagery, and environmental monitoring to feed **AI-powered risk models** for bull’s-eye rot in apples. Lincoln Agritech links the work directly to New Zealand’s apple-export exposure, noting that apple exports reached a record **NZ$1 billion in 2025**. This is a strong example of AI being justified not by labour saving alone, but by market access, reputation, and storage-loss prevention. ([lincolnagritech.co.nz](https://lincolnagritech.co.nz/lincoln-agritech-enables-ai-driven-apple-disease-detection-in-new-zealand/?utm_source=openai))
+The Foundation for Arable Research’s **Ask FAR AI** went live on **6 August 2026**. It searches and summarises information from the FAR website and provides links back to the underlying research documents. The system is deliberately restricted to FAR material, which allows its answers to be grounded in New Zealand arable research rather than general internet content. ([far.org.nz](https://www.far.org.nz/resources/ask-far))
 
-In arable and seed systems, Plant & Food Research’s **Hyperseeds** project with the Foundation for Arable Research is one of the more concrete 2026 examples. The collaboration uses **hyperspectral imaging and AI** to pre-screen seed for contaminants, targeting a labour-intensive quality-assurance bottleneck. The importance here is not scale today, but breadth: AI is spreading into New Zealand agriculture where visual inspection, purity, and quality assurance have high economic value. ([plantandfood.com](https://www.plantandfood.com/en-au/article/hyperseeds-embracing-ai-to-find-solutions-for-nzs-seed-industry))
+This is a particularly relevant adoption model for agriculture. Rather than asking growers to trust a general-purpose chatbot, Ask FAR AI provides:
 
-### 4) Public-good AI is becoming more visible as sector infrastructure
+- A constrained knowledge base.
+- References to original source material.
+- Faster access to extension information.
+- A low-cost, low-risk entry point for growers and advisers.
+- A feedback mechanism for assessing answer quality.
 
-The **On-Farm Emissions Calculator**, launched in **October 2025**, remains one of the most important enabling tools because it is the first calculator to apply the **government-mandated standard released in December 2024**. AgResearch says the platform is designed not only for direct farmer use but also so agri-tech providers and processors can embed the same methodology in their own systems later. In other words, it is less an end-state app than a standardised substrate for future advisory and optimisation tools. ([agresearch.co.nz](https://www.agresearch.co.nz/news/new-emissions-calculator-gives-farmers-a-clearer-picture-of-on-farm-greenhouse-gases/?utm_source=openai))
+The launch suggests that trusted information retrieval may become one of the earliest mainstream uses of generative AI in agriculture.
 
-AgResearch’s **Map and Zap®** is a similar infrastructure signal on the weed-control side. The system uses AI to identify early-stage weeds and then map or laser-zap them, with AgResearch estimating weeds cost New Zealand agriculture and forestry **at least NZ$1.7 billion annually**. The significance is that AI is being developed for physical intervention, not just analytics. ([agresearch.co.nz](https://www.agresearch.co.nz/products-and-services/map-and-zap/))
+### 4. The national AI research platform remains agriculturally relevant but publicly unresolved
 
-MPI’s **yellow-legged hornet** response adds a biosecurity example. In **March 2026**, Biosecurity New Zealand introduced **AI-enabled cameras** from the University of Exeter’s Vespa AI team to help monitor hornet activity and locate nests. That is not mainstream farm software, but it is still agricultural AI: it supports the protection of production systems through earlier and better surveillance. ([mpi.govt.nz](https://www.mpi.govt.nz/news/media-releases/new-technology-introduced-for-autumn-push-in-hornet-eradication?utm_source=openai))
+The Government’s AI Research Platform process continues to include major agriculture-relevant concepts, including the **BioAI Platform** and a proposed **Physical AI** platform focused on systems that can sense, learn and act in outdoor environments. MBIE’s published material describes up to **NZ$70 million over seven years** for the national AI research platform process. ([mbie.govt.nz](https://www.mbie.govt.nz/about/news/concepts-selected-for-ai-research-platform?utm_source=openai))
 
-## Research Overview
+As of **18 August 2026**, the public MBIE material reviewed for this update still describes the phase-two concepts and says that an announcement timeline would be provided. I found no publicly posted final platform award in the official material reviewed. This should be treated as a status observation based on the currently visible public information, not as confirmation that the process has been cancelled or formally delayed. ([mbie.govt.nz](https://www.mbie.govt.nz/science-and-technology/science-and-innovation/refocusing-the-science-innovation-and-technology-system/public-research-organisations/new-zealand-institute-for-advanced-technology/call-for-proposals-for-the-artificial-intelligence-research-platform?utm_source=openai))
 
-DairyNZ’s current AI research framing remains cautious. Its farmer-facing material says GenAI uptake is growing, but trust and accuracy remain key, and its formal guidance still positions AI primarily as a **decision-support** tool rather than an autonomous farm manager. ([dairynz.co.nz](https://www.dairynz.co.nz/news/farmers-using-artificial-intelligence-to-save-time/))
+The eventual decision will matter to agriculture because it could determine whether New Zealand develops shared national capability in:
 
-The **2025 International Precision Dairy Farming Conference** proceedings remain one of the best practical research windows into New Zealand conditions. A Southland chatbot case study reported that farm managers routinely monitor **4 to 7 applications** across weather, pasture, soil moisture, and livestock data, and that farmer interest centred on synthesising fragmented systems rather than adding yet another standalone tool. ([dairynz.co.nz](https://www.dairynz.co.nz/media/eh0nza1b/proceedings-4th-international-precision-dairy-farming-conference-new-zealand-2025.pdf?utm_source=openai))
+- Outdoor and physical AI.
+- Agricultural robotics.
+- Low-power edge AI.
+- Agricultural and environmental datasets.
+- Safe testing and certification.
+- Commercialisation pathways for research-based agritech.
 
-AgResearch continues to represent the deepest public research bench in the field. It says it has **more than 50 AI-focused projects** in planning or implementation, including CT-scan analysis for livestock traits linked to methane emissions, feed efficiency, welfare, and meat quality. The AgResearch/Bioeconomy Science Institute portfolio suggests that AI in New Zealand agriculture is increasingly as much a science-platform capability as a startup category. ([agresearch.co.nz](https://www.agresearch.co.nz/news/agresearch-leads-with-cutting-edge-genomics-and-imaging-technologies/?utm_source=openai))
+---
 
-At the science-system level, government settings are becoming more commercialisation-oriented. MBIE’s **Science Investment Plan 2026–2036** says **NZ$142 million** has been invested through the New Zealand Institute for Advanced Technology in high-potential areas such as AI and quantum, while new IP rules took effect from **1 July 2026** to give publicly funded researchers more control over commercial outcomes. For agriculture, that matters because the next wave of value is likely to come from translation and deployment, not just research output. ([mbie.govt.nz](https://www.mbie.govt.nz/dmsdocument/32023-science-investment-plan-2026-2036))
+## Current State of AI Adoption by Segment
+
+## 1. Dairy and Livestock
+
+Dairy remains the strongest area of commercial AI adoption in New Zealand. The leading use cases are not generic chatbots but systems attached to daily farm decisions:
+
+- Livestock movement and virtual fencing.
+- Animal behaviour and health monitoring.
+- Pasture measurement and growth forecasting.
+- Feed and grazing decisions.
+- Reproduction and mating support.
+- Farmer-facing decision assistants.
+
+Aimer’s government-backed project is designed to develop an AI agent that supports decisions affecting productivity, profit and net greenhouse-gas emissions across dairy and beef pasture systems. MPI lists the project as a three-year programme with **NZ$600,000 in MPI funding** and **NZ$1.075 million in co-investment**, with support from Ravensdown, Cropmark Seeds and Fonterra. ([mpi.govt.nz](https://www.mpi.govt.nz/dmsdocument/71899/direct?utm_source=openai))
+
+DairyNZ’s current guidance provides a useful counterbalance to the stronger commercial claims. Its research indicates that the number of farmers using generative AI remains relatively small, with current applications concentrated in:
+
+- Decision support.
+- Task enhancement.
+- Communication.
+- Summarising information.
+- Creating farm-specific chatbots from trusted documents.
+
+DairyNZ continues to emphasise that AI should support farmer judgement rather than replace it, and that outputs require validation. ([dairynz.co.nz](https://www.dairynz.co.nz/people/productive-workplaces/using-artificial-intelligence-on-farm/?utm_source=openai))
+
+### Assessment
+
+Dairy is the most advanced segment because AI can be tied directly to measurable operational outcomes. However, the market remains divided between:
+
+- **Embedded operational AI**, such as collars, pasture systems and automated monitoring.
+- **Voluntary generative AI use**, which is still at an early-adoption stage.
+
+The first category is materially more mature than the second.
+
+---
+
+## 2. Horticulture
+
+Horticulture is becoming New Zealand’s most important frontier for computer vision, plant-level modelling and physical AI.
+
+HoloCrop is the most significant new development since the previous update. Its plant-level 3D modelling approach addresses one of the central problems in orchard automation: fruit and plant structures are often hidden behind foliage, making accurate forecasting and robotic manipulation difficult. ([canterbury.ac.nz](https://www.canterbury.ac.nz/news-and-events/news/2026/ai-technology-sees-through-leaves-to-transform-horticulture-))
+
+The wider horticultural technology landscape is also moving toward AI-enabled precision application. The 2026 New Zealand Horticulture Conference included a session titled **“AI-Powered Plant-by-Plant Spraying,”** indicating that precision spraying and plant-level machine perception are becoming part of mainstream industry discussion. The conference programme is evidence of sector interest, but it does not by itself demonstrate widespread commercial deployment in New Zealand. ([hortnzevents.co.nz](https://www.hortnzevents.co.nz/?utm_source=openai))
+
+Other horticultural AI developments already identified in the previous update remain important:
+
+- Hectre’s computer vision for fruit sizing, colour and quality assessment.
+- Lincoln Agritech’s STELLA work on disease-risk modelling in apples.
+- Plant & Food Research’s hyperspectral and AI-based seed screening.
+- Robotics Plus technologies, now continued through Yamaha Agriculture.
+
+### Assessment
+
+Horticulture has a narrower adoption base than dairy but often presents a stronger economic case for AI because small improvements in:
+
+- Crop forecasting.
+- Fruit grading.
+- Storage allocation.
+- Disease detection.
+- Labour planning.
+- Harvest timing.
+
+can protect substantial export value. The sector is moving from computer vision as a measurement tool toward computer vision as the sensory layer for autonomous machinery.
+
+---
+
+## 3. Arable Farming
+
+Arable AI adoption remains earlier-stage and more cautious. FAR reports that New Zealand arable growers are relatively willing to consider digital technology, but adoption is held back by doubts about suitability for local conditions and uncertainty over return on investment. Rural connectivity is also a material constraint, particularly for systems requiring continuous high-bandwidth data exchange. ([far.org.nz](https://www.far.org.nz/resources/checking-the-tech-for-arable))
+
+FAR’s technology strategy emphasises the need for tools that can operate with low bandwidth, intermittent connectivity or no internet connection. This is highly relevant to AI applications involving machinery, field imagery and real-time crop analytics. ([far.org.nz](https://www.far.org.nz/resources/checking-the-tech-for-arable))
+
+Ask FAR AI provides a more accessible starting point. It does not require growers to install specialist machinery or sensors; instead, it improves access to existing research and extension material. This may be a useful model for broader rural AI adoption because it demonstrates immediate value without requiring major capital expenditure. ([far.org.nz](https://www.far.org.nz/resources/ask-far))
+
+FAR has also scheduled an August webinar on AI tools for arable businesses, suggesting that the sector is moving into a capability-building and evaluation phase rather than simply promoting technology adoption. ([far.org.nz](https://www.far.org.nz/events?utm_source=openai))
+
+### Assessment
+
+The likely sequence for arable AI adoption is:
+
+1. Search and knowledge access.
+2. Farm record and agronomy assistance.
+3. Precision application and variable-rate management.
+4. Computer vision for weeds, pests and crop condition.
+5. Autonomous machinery and robotics.
+
+The sector is not yet at the final stages in any broad-based sense.
+
+---
+
+## 4. Public-Good, Environmental and Biosecurity AI
+
+AI is increasingly being developed as part of New Zealand’s agricultural infrastructure rather than only as commercial farm software.
+
+### Biosecurity
+
+The new Biosecurity New Zealand pilot is the clearest recent example. It applies generative AI to evidence-heavy regulatory work while keeping expert decision-making in place. ([beehive.govt.nz](https://www.beehive.govt.nz/release/new-ai-tool-help-develop-biosecurity-standards))
+
+### Emissions and climate
+
+The 2026 Ag Emissions Centre innovation round explicitly welcomed advanced technologies, including AI, for agricultural greenhouse-gas mitigation. Research challenges include:
+
+- Automatic identification of urine patches.
+- Improved prediction of biological outcomes.
+- Precision feeding.
+- Better delivery of mitigation technologies in pasture-based systems.
+
+The round provides up to **NZ$2 million** for larger projects, plus smaller feasibility grants. ([ag-emissions.nz](https://www.ag-emissions.nz/news-and-events/innovation-investment-round/?utm_source=openai))
+
+### Soil moisture and irrigation
+
+The University of Canterbury is developing the **ANZ Soil Moisture Data Assimilation System**, which combines ground sensors, satellite signals and advanced modelling to estimate soil moisture at field scale several times a day. The system is intended to support dairy, grazing, arable and irrigated cropping systems. ([canterbury.ac.nz](https://www.canterbury.ac.nz/news-and-events/news/2026/ai-powered-system-set-to-transform-water-use-for-farmers-))
+
+### Livestock genomics and imaging
+
+AgResearch’s 2025 annual report describes more than **50 AI-focused projects**, including the use of AI to analyse historical CT scans, thermal images, hyperspectral images and ultrasound. These applications are being used to investigate traits associated with methane emissions, feed efficiency, animal health and meat quality. ([agresearch.co.nz](https://www.agresearch.co.nz/assets/Documents/AgR-AR-2025-FULL-v3.6.pdf?utm_source=openai))
+
+### Assessment
+
+Public-good AI is strategically important because it can address problems that are too broad, long-term or infrastructure-dependent for individual farms to solve independently. It also creates shared data and research capability that private agritech companies may later commercialise.
+
+---
+
+## Research and Evidence Overview
+
+### Domain-grounded AI is emerging as the preferred model
+
+FAR’s AI assistant and DairyNZ’s DAiSY illustrate a common design principle: AI is more trusted when it is restricted to authoritative, relevant and traceable information. FAR limits Ask FAR AI to its own research library and provides source links, while DairyNZ similarly positions its assistant as grounded in DairyNZ content. ([far.org.nz](https://www.far.org.nz/resources/ask-far))
+
+This model is likely to be more acceptable to farmers than general-purpose AI because it reduces the risk of unsupported or contextually inappropriate recommendations.
+
+### Physical AI is becoming a national research priority
+
+The proposed national AI platform concepts focus on AI systems that operate in complex environments such as farms, forests, coasts and worksites. Agriculture is an especially suitable test environment because it combines:
+
+- Unstructured outdoor conditions.
+- Variable weather and terrain.
+- Biological variation.
+- Sparse connectivity.
+- High-value but repetitive tasks.
+- The need for human oversight.
+
+HoloCrop provides a commercial example of this direction, while the proposed Physical AI platform represents the broader research and infrastructure opportunity. ([mbie.govt.nz](https://www.mbie.govt.nz/science-and-technology/science-and-innovation/refocusing-the-science-innovation-and-technology-system/public-research-organisations/new-zealand-institute-for-advanced-technology/call-for-proposals-for-the-artificial-intelligence-research-platform?utm_source=openai))
+
+### Independent validation remains limited
+
+Many performance claims in New Zealand agritech continue to come from company or institution announcements. These claims may be credible, but the sector still lacks large numbers of independent, longitudinal studies comparing AI-enabled farms with conventional operations over multiple seasons.
+
+This is particularly important for:
+
+- Pasture growth predictions.
+- Labour savings.
+- Animal-health alerts.
+- Emissions outcomes.
+- Yield improvements.
+- Reduced chemical use.
+
+The need for independent evaluation is reflected in FAR’s technology strategy, which was created partly to assess whether tools are suitable for New Zealand conditions and deliver genuine value. ([far.org.nz](https://www.far.org.nz/resources/checking-the-tech-for-arable))
+
+---
 
 ## Case Studies
 
-### Halter: AI as farm infrastructure
-Halter now spans virtual fencing, remote shifting, behaviour monitoring, reproduction tools, and pasture management, with direct-to-satellite capability extending use into remote beef systems. Its new place inside a Fonterra incentive scheme is a strong signal that the product is moving from standout innovation toward more standardised farm adoption channels. ([halterhq.com](https://www.halterhq.com/en-nz/news/halter-launches-world-first-virtual-fencing-via-satellite?utm_source=openai))
+### HoloCrop: AI perception for orchard-scale automation
 
-### Aimer Farming: pasture AI built for pasture systems
-Aimer’s 2026 progress shows what a New Zealand-specific AI stack looks like: smartphone-first measurement, digital-twin paddock models, satellite augmentation, and direct alignment with grazing decisions. Its relevance comes from system fit more than headline scale. ([aimer-farming.com](https://www.aimer-farming.com/blog-articles/aimer-farming-launches-pasture-system-combining-satellite-smartphone-measurement-and-live-farm-modelling))
+**Use case:** 3D plant modelling, fruit counting and harvest forecasting.  
+**Sector:** Apples, cherries, grapes and other high-value crops.  
+**Status:** Research commercialisation through a University of Canterbury spinout.
 
-### Hectre: AI before the packhouse
-Hectre’s raise confirms investor confidence in horticultural AI that helps growers and packhouses make earlier decisions on storage, grading, and sales. It remains one of the clearest export-oriented AI growth stories in New Zealand agriculture. ([auckland.ac.nz](https://www.auckland.ac.nz/en/news/2026/02/16/hectre-raises-millions-to-tackle-global-fruit-waste.html?utm_source=openai))
+HoloCrop demonstrates a shift from simply detecting objects to building a structured digital representation of the entire plant. The system’s potential value lies in allowing growers and machines to understand not only where fruit is, but how it is attached to the plant, how large it is and how it changes over time. ([canterbury.ac.nz](https://www.canterbury.ac.nz/news-and-events/news/2026/ai-technology-sees-through-leaves-to-transform-horticulture-))
 
-### Lincoln Agritech / STELLA: AI for export-risk management
-STELLA is a high-value example of AI being used to detect what conventional sensing cannot: disease risk before symptoms appear in storage or overseas markets. In export horticulture, that kind of foresight is strategically important. ([lincolnagritech.co.nz](https://lincolnagritech.co.nz/lincoln-agritech-enables-ai-driven-apple-disease-detection-in-new-zealand/?utm_source=openai))
+### Aimer Farming: AI for pasture decisions
 
-### Scanabull: the widening innovation funnel
-Scanabull’s 2026 Fieldays Prototype Award win shows how AI is spreading into smaller, narrower use cases with obvious farm utility — in this case, cattle liveweight estimation from a phone scan. That is exactly the kind of tool that can diffuse faster than generic “AI platforms.” ([fieldays.co.nz](https://www.fieldays.co.nz/further-afield/news-from-further-afield/winners-announced-for-2026-fieldays-innovation-awards-with-aws))
+**Use case:** Pasture measurement, growth forecasting and grazing decisions.  
+**Sector:** Dairy and beef.  
+**Status:** Government-backed commercial development.
+
+Aimer represents a strongly New Zealand-specific AI model. It is designed around pasture-based systems and seeks to connect farm measurements with operational decisions such as stock movement, silage timing and grazing management. Its design reflects the fact that New Zealand farms require frequent decisions across variable paddocks rather than a single standardised production environment. ([mpi.govt.nz](https://www.mpi.govt.nz/dmsdocument/71899/direct?utm_source=openai))
+
+### Ask FAR AI: Trusted information access for growers
+
+**Use case:** Searching, summarising and referencing arable research.  
+**Sector:** Arable farming.  
+**Status:** Live since 6 August 2026.
+
+Ask FAR AI is a useful example of a low-risk adoption pathway. It does not attempt to replace agronomists or independently generate farm prescriptions. Instead, it reduces the time required to find relevant New Zealand research and points users to the original documents. ([far.org.nz](https://www.far.org.nz/resources/ask-far))
+
+### Biosecurity New Zealand: Generative AI for regulatory work
+
+**Use case:** Supporting the development of import health standards.  
+**Sector:** Biosecurity, horticulture, agriculture and trade.  
+**Status:** Four-month pilot.
+
+The pilot demonstrates how AI can be introduced into a high-consequence environment through a controlled workflow. AI supports research and drafting, but expert officials retain decision-making responsibility. ([beehive.govt.nz](https://www.beehive.govt.nz/release/new-ai-tool-help-develop-biosecurity-standards))
+
+### Halter: AI and wearable technology as farm infrastructure
+
+**Use case:** Virtual fencing, livestock management, animal monitoring and pasture control.  
+**Sector:** Dairy, beef and pastoral farming.  
+**Status:** Commercially scaled and increasingly supported through mainstream industry channels.
+
+Halter remains one of the clearest examples of AI becoming part of the farm operating layer. Its significance is not simply the use of AI, but the combination of sensors, software, animal behaviour data and physical control systems in a daily farm workflow.
+
+---
 
 ## Core Trends
 
-### 1) Workflow-embedded AI is still outperforming general-purpose AI
-The strongest systems are attached to an existing farm job: move cattle, estimate pasture, detect disease risk, screen seed, calculate emissions, or identify weeds. The more a tool produces an action rather than a generic insight, the better its adoption prospects appear. ([halterhq.com](https://www.halterhq.com/en-nz/news/halter-launches-world-first-virtual-fencing-via-satellite?utm_source=openai))
+### 1. AI is moving from insight to action
 
-### 2) New Zealand’s pasture-based dairy model continues to shape the market
-DairyNZ’s recent material, MBIE’s AI strategy examples, and Aimer’s product design all point in the same direction: the highest-value tools in New Zealand are those built for grazing systems rather than imported from housed or row-crop contexts. ([dairynz.co.nz](https://www.dairynz.co.nz/news/unlocking-tech-s-potential-in-our-unique-dairy-landscape/?utm_source=openai))
+The most promising systems do not merely display information. They help farmers decide when to:
 
-### 3) Institutional channels are reducing adoption friction
-DairyNZ’s DAiSY, the Responsible Dairy programme, and Fonterra-linked incentives suggest a maturing market in which sector bodies are helping validate, fund, and normalise AI use. That is an important shift from pure startup-led diffusion. ([dairynz.co.nz](https://www.dairynz.co.nz/about-daisy/?utm_source=openai))
+- Move stock.
+- Measure pasture.
+- Apply inputs.
+- Irrigate.
+- Spray individual plants.
+- Forecast harvest volumes.
+- Review regulatory evidence.
 
-### 4) Horticulture AI is often easier to justify where export risk is concentrated
-Compared with dairy, horticulture AI adoption is narrower, but the economic case can be sharper because a single grading, storage, or disease-detection failure can destroy significant value. Hectre and STELLA fit that pattern closely. ([auckland.ac.nz](https://www.auckland.ac.nz/en/news/2026/02/16/hectre-raises-millions-to-tackle-global-fruit-waste.html?utm_source=openai))
+The closer AI is to a specific action with a visible economic outcome, the stronger its adoption prospects appear.
 
-### 5) Public-interest AI is becoming part of the operating environment
-From emissions accounting to biosecurity surveillance and non-chemical weed control, AI is no longer only a private farm-software story. It is increasingly part of New Zealand’s agricultural capability stack. ([agresearch.co.nz](https://www.agresearch.co.nz/news/new-emissions-calculator-gives-farmers-a-clearer-picture-of-on-farm-greenhouse-gases/?utm_source=openai))
+### 2. Narrow, trusted systems are outperforming generic AI
+
+The development of Ask FAR AI, DAiSY and farm-specific assistants points to a preference for AI that is:
+
+- Grounded in recognised sources.
+- Traceable.
+- Limited in scope.
+- Designed for a specific user group.
+- Integrated with existing workflows.
+
+This is likely to be more influential in agriculture than general-purpose chatbots.
+
+### 3. Physical AI is expanding the definition of agritech
+
+AI in agriculture increasingly includes systems that sense and act in the physical world:
+
+- Livestock collars.
+- Autonomous orchard vehicles.
+- AI sprayers.
+- Robotic harvesters.
+- Machine-vision platforms.
+- Soil and environmental sensing systems.
+
+New Zealand’s outdoor conditions may become a competitive advantage for testing these technologies, provided the country can develop shared infrastructure and reliable commercial pathways.
+
+### 4. Horticulture is emerging as the leading research frontier
+
+Dairy has the stronger commercial base, but horticulture is attracting major technical attention because it combines:
+
+- Labour shortages.
+- High-value crops.
+- Complex biological environments.
+- Significant waste and grading costs.
+- Strong incentives for precision harvesting and spraying.
+
+HoloCrop is an important signal that New Zealand research is progressing from experimental computer vision toward commercial plant intelligence.
+
+### 5. Adoption is increasingly institution-led
+
+Sector organisations, public research institutions and government agencies are becoming active participants in AI adoption through:
+
+- Co-investment.
+- Knowledge assistants.
+- Research platforms.
+- Demonstration farms.
+- Biosecurity pilots.
+- Environmental measurement systems.
+- Technology evaluation programmes.
+
+This institutional layer may be as important as startup innovation in moving AI from early adopters into broader agricultural use.
+
+---
 
 ## Constraints and Risks
 
-- **Trust and validation remain decisive.** DairyNZ’s guidance continues to emphasise trust, data quality, and the role of AI as support rather than replacement. ([dairynz.co.nz](https://www.dairynz.co.nz/news/farmers-using-artificial-intelligence-to-save-time/))
-- **Interoperability is still a practical bottleneck.** Research from the precision-dairy conference shows farmers already managing multiple apps and wanting better synthesis across systems. ([dairynz.co.nz](https://www.dairynz.co.nz/media/eh0nza1b/proceedings-4th-international-precision-dairy-farming-conference-new-zealand-2025.pdf?utm_source=openai))
-- **Many of the strongest performance claims are still company-reported.** That is especially true for commercial pasture, livestock, and wearable systems, so the sector still needs more independent, longitudinal validation. This is an inference based on the current mix of company announcements and sector commentary. ([aimer-farming.com](https://www.aimer-farming.com/blog-articles/aimer-farming-launches-pasture-system-combining-satellite-smartphone-measurement-and-live-farm-modelling))
-- **The SME adoption gap still matters.** MBIE’s AI state-of-play material says **68% of SMEs** had no plans to evaluate or invest in AI, a material issue in a primary-sector ecosystem dominated by smaller operators and suppliers. ([mbie.govt.nz](https://www.mbie.govt.nz/business-and-employment/economic-growth/digital-policy/new-zealands-ai-strategy-investing-with-confidence/new-zealands-state-of-play))
-- **National AI research coordination is still in formation.** Agriculture-relevant concepts are prominent in the AI Research Platform process, but the final public outcome had not been posted on the current MBIE material visible in July 2026. ([mbie.govt.nz](https://www.mbie.govt.nz/science-and-technology/science-and-innovation/refocusing-the-science-innovation-and-technology-system/public-research-organisations/new-zealand-institute-for-advanced-technology/call-for-proposals-for-the-artificial-intelligence-research-platform?utm_source=openai))
+- **Adoption remains uneven.** DairyNZ reports that generative-AI use among farmers is still relatively small. ([dairynz.co.nz](https://www.dairynz.co.nz/news/farmers-using-artificial-intelligence-to-save-time/?utm_source=openai))
+- **Connectivity limits deployment.** FAR identifies low bandwidth and intermittent rural connectivity as continuing barriers. ([far.org.nz](https://www.far.org.nz/resources/checking-the-tech-for-arable))
+- **Return on investment is not always proven.** Growers remain cautious about tools that lack independent evidence under New Zealand conditions. ([far.org.nz](https://www.far.org.nz/resources/checking-the-tech-for-arable))
+- **Data interoperability is unresolved.** Farmers often use multiple systems for weather, pasture, livestock, soil and compliance data.
+- **Performance claims require longer validation.** HoloCrop’s test results are promising, but commercial reliability across seasons and crop types remains to be demonstrated. ([canterbury.ac.nz](https://www.canterbury.ac.nz/news-and-events/news/2026/ai-technology-sees-through-leaves-to-transform-horticulture-))
+- **AI does not remove accountability.** The Biosecurity New Zealand pilot explicitly retains expert decision-making, reinforcing the importance of human oversight in high-consequence applications. ([beehive.govt.nz](https://www.beehive.govt.nz/release/new-ai-tool-help-develop-biosecurity-standards))
+- **Māori data sovereignty and participation need to be embedded early.** The proposed national AI platform concepts identify Māori governance and data sovereignty as part of their design principles. ([mbie.govt.nz](https://www.mbie.govt.nz/science-and-technology/science-and-innovation/refocusing-the-science-innovation-and-technology-system/public-research-organisations/new-zealand-institute-for-advanced-technology/call-for-proposals-for-the-artificial-intelligence-research-platform?utm_source=openai))
+- **AI capability is concentrated.** Larger agritech businesses, research organisations and well-capitalised farms are better positioned to experiment than smaller operators.
+
+---
+
+## Outlook: August 2026 to August 2027
+
+The most likely developments over the next year are:
+
+1. **More AI assistants grounded in sector-specific research and farm records.**
+2. **Greater integration of AI with sensors, machinery and farm-management platforms.**
+3. **Expansion of computer vision in orchards, packhouses and crop protection.**
+4. **More government and sector-funded demonstrations of emissions and environmental tools.**
+5. **Increased emphasis on edge computing and offline functionality for rural settings.**
+6. **A clearer national research and commercialisation structure if the AI Research Platform decision is finalised.**
+7. **More independent testing of agritech claims, particularly around productivity, emissions and labour savings.**
+
+These are assessments based on the direction of current research, government funding, sector programmes and commercial activity rather than formal forecasts.
+
+---
 
 ## Conclusion
 
-As of **13 July 2026**, AI adoption in New Zealand agriculture is best described as **practical, selective, and increasingly embedded in sector institutions**. Dairy remains the most mature segment, led by livestock wearables, pasture intelligence, and trusted advisory interfaces. Horticulture and arable continue to adopt AI where quality, disease, and export assurance create clear economic leverage. Public-good AI is also becoming more consequential through emissions, weeds, and biosecurity. ([halterhq.com](https://www.halterhq.com/en-nz/news/halter-launches-world-first-virtual-fencing-via-satellite?utm_source=openai))
+As of **18 August 2026**, AI adoption in New Zealand agriculture is best described as **selective, practical and increasingly institutionalised**.
 
-The key change since the previous update on **10 June 2026** is not a single breakthrough model. It is the strengthening of the **adoption layer**: new pasture-intelligence capability from Aimer, new institutional funding and testbeds through Responsible Dairy, new farmer incentive pathways via Fonterra-linked support for Halter, and stronger evidence from Fieldays that AI is broadening into a larger pool of practical farm tools. ([aimer-farming.com](https://www.aimer-farming.com/blog-articles/aimer-farming-launches-pasture-system-combining-satellite-smartphone-measurement-and-live-farm-modelling))
+Dairy remains the most mature commercial segment, with AI embedded in pasture, livestock and farm-management workflows. Horticulture is gaining momentum through advanced computer vision, digital plant models and the early commercialisation of physical-AI systems. Arable farming is adopting AI more cautiously, beginning with trusted information access and technology evaluation. Government is extending AI into biosecurity administration, while public research programmes are applying it to emissions, soil moisture, genomics and environmental monitoring.
 
-The near-term winners are still the same kinds of systems that have been leading for the past year, but the evidence base is stronger now. In New Zealand agriculture, the tools most likely to move from early-adopter enthusiasm into mainstream use are those that combine **workflow fit, trusted grounding, low-friction deployment, and visible farm economics**. ([dairynz.co.nz](https://www.dairynz.co.nz/news/unlocking-tech-s-potential-in-our-unique-dairy-landscape/?utm_source=openai))
+The most important change since the **13 July 2026** update is not a single breakthrough model. It is the widening of the adoption ecosystem:
+
+- Biosecurity New Zealand is testing generative AI in regulatory work.
+- HoloCrop is turning long-running computer-vision research into a commercial pathway.
+- FAR has launched a referenced AI assistant for growers.
+- Research programmes are linking AI to physical systems, environmental measurement and agricultural emissions.
+- The national AI platform process continues to position agriculture as a core application domain.
+
+New Zealand agriculture is not yet experiencing universal AI adoption. However, the sector is moving beyond experimentation toward a more durable model based on **trusted data, domain-specific tools, physical-world integration and measurable farm outcomes**. The technologies most likely to achieve mainstream adoption will be those that work in rural conditions, fit existing farm decisions, operate with limited connectivity, respect human and Māori governance expectations, and demonstrate value over multiple seasons.

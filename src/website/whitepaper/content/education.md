@@ -5,158 +5,416 @@ article_kind: industry
 article_latest: true
 article_series: education
 article_summary: >-
-  AI in New Zealand education is now best understood as embedded, governed more
-  explicitly, and still unevenly operationalised. Since the previous update on
-  10 June 2026, the most important movement has not been a dramatic jump in
-  classroom use; it has been the thickening of system infrastructure around AI:
-  new Budget…
-article_updated_at: '2026-07-13T22:48:00+12:00'
+  AI adoption in New Zealand education has moved from widespread experimentation
+  to normalised, but weakly coordinated, use.
+article_updated_at: '2026-08-18T13:04:32+12:00'
 article_version: false
 description: >-
-  AI in New Zealand education is now best understood as embedded, governed more
-  explicitly, and still unevenly operationalised. Since the previous update on
-  10…
+  AI adoption in New Zealand education has moved from widespread experimentation
+  to normalised, but weakly coordinated, use.
 permalink: /whitepaper/education/
 title: AI in Education
 ---
 
 # AI in Education in New Zealand: A Living Whitepaper  
-*Updated for publication on 13 July 2026*
+*Updated for publication on 18 August 2026*  
 
 ## Executive Snapshot
 
-AI in New Zealand education is now best understood as **embedded, governed more explicitly, and still unevenly operationalised**. Since the previous update on **10 June 2026**, the most important movement has not been a dramatic jump in classroom use; it has been the **thickening of system infrastructure** around AI: new Budget 2026 funding for NZQA pilots, further senior curriculum consultation activity, stronger institutional assessment redesign in universities, and more visible signposting of AI rules inside the NCEA ecosystem. ([education.govt.nz](https://www.education.govt.nz/our-work/publications/corporate-documents/budget-2026/investing-secondary-achievement?utm_source=openai))
+AI adoption in New Zealand education has moved from **widespread experimentation to normalised, but weakly coordinated, use**.
 
-The adoption picture remains broad. TALIS 2024 still provides the strongest national benchmark: **69% of New Zealand Year 7–10 teachers** had used AI in the previous year, versus **36% across the OECD** lower-secondary average, while the most common uses remained planning and summarisation rather than marking. At the same time, teachers continue to report strong demand for professional learning in AI. ([educationcounts.govt.nz](https://www.educationcounts.govt.nz/publications/series/teaching-and-learning-international-survey/talis-2024-publications/talis-2024-first-report?utm_source=openai))
+The most significant development since the previous update on **13 July 2026** is the release of the Education Review Office’s national report, *Ready or Not: How are Schools Responding to Artificial Intelligence?* The report provides the clearest current picture of AI use in New Zealand schools. It found that more than **90% of principals**, more than **80% of teachers**, and **75% of students** reported using AI. However, formal policies, professional learning, and shared expectations have not kept pace. ([odt.co.nz](https://www.odt.co.nz/news/national/its-addictive-ai-damaging-critical-thinking-in-schools-report-finds-ujwe515m))
 
-The sector’s current centre of gravity is increasingly clear. In schools, official guidance still frames AI as **teacher-supporting, not teacher-replacing**, especially in assessment. In tertiary education, leading institutions are redesigning assessment architectures, formalising AI tool access, and building governance models that explicitly include privacy, Te Tiriti, and data sovereignty. At system level, NZQA remains the most mature production user, and is now backed by fresh public funding to expand AI and machine-learning pilots in assessment design, delivery, and moderation. ([education.govt.nz](https://www.education.govt.nz/education-professionals/schools-year-0-13/digital-technology/generative-ai?utm_source=openai))
+The central finding is therefore no longer that New Zealand schools are “beginning” to adopt AI. Rather, AI is already embedded in everyday education, while the system is still developing the governance and capability needed to use it safely and pedagogically well.
 
-## What Has Changed Since 10 June 2026
+Key developments since 13 July include:
 
-- **Budget 2026 added direct funding for AI pilots in national assessment.** The Ministry says Budget 2026 includes **$2.1 million operating funding** for NZQA to develop pilots and proofs of concept for automated text scoring, AI, and machine learning to support **marking, moderation, and exam development** in NCEA and New Zealand Scholarship. ([education.govt.nz](https://www.education.govt.nz/our-work/publications/corporate-documents/budget-2026/investing-secondary-achievement?utm_source=openai))
-- **NZQA has now baked AI exploration into its 2026/27 forward plan.** In its new Statement of Performance Expectations for **1 July 2026 to 30 June 2027**, NZQA says it will continue to grow digital assessment offerings and explore emerging technologies such as AI to support assessment design and delivery. ([www2.nzqa.govt.nz](https://www2.nzqa.govt.nz/assets/About-us/Publications/Strategic-documents/NZQA-SPE-2026-2027.pdf?utm_source=openai))
-- **Senior secondary curriculum consultation moved into Group 3.** Tāhūrangi’s Phase 5 consultation page, updated **9 July 2026**, says Group 3 subjects are open for feedback from **6 July to 3 August 2026**, while four further subjects still require more development before release. ([newzealandcurriculum.tahurangi.education.govt.nz](https://newzealandcurriculum.tahurangi.education.govt.nz/consultation-for-phase-5/5637349326.p?utm_source=openai))
-- **The NCEA site now has a dedicated GenAI page.** As of **12 July 2026**, NCEA.education includes a page titled **“Generative AI in NCEA assessment”**, but it currently does little more than point users back to Ministry guidance. That makes it a visibility and navigation change rather than a substantive policy change. ([ncea.education.govt.nz](https://ncea.education.govt.nz/generative-ai-ncea-assessment))
-- **University AI strategies have become more publicly legible.** Since late May and June, AUT has published a clearer public-facing AI strategy and assessment model, while the University of Canterbury has pushed AI literacy further into formal framework-building, short courses, student support, and postgraduate programme design. ([aut.ac.nz](https://www.aut.ac.nz/about/ai-at-aut/auts-ai-approach-and-principles?utm_source=openai))
+- The ERO has called for a **national AI-in-education framework** and more consistent policies for teacher and student use.
+- ERO evidence shows that **57% of teachers** believe AI has negatively affected students’ critical thinking; this rises to **72% among secondary teachers**.
+- **38% of secondary students** and **20% of primary and intermediate students** reported using AI in ways they knew they should not.
+- The NCEA website now has a dedicated **Generative AI in NCEA assessment** page, improving visibility of existing Ministry guidance.
+- Day of AI Aotearoa has moved from a 10-school pilot toward nationwide Years 5–10 availability, with reported gains in student understanding and teacher confidence.
+- The University of Auckland has published GenAI guidelines for doctoral research, taking effect on **1 September 2026**.
+- The University of Canterbury is enrolling students in a new postgraduate certificate focused specifically on AI and digital education, with the first September 2026 course beginning on **28 September 2026**.
 
-## Overall State of Adoption
+The overall direction remains clear: New Zealand is favouring **human-led, augmentation-first adoption**, with particular emphasis on authentic assessment, AI literacy, privacy, cultural legitimacy, and professional judgement.
 
-### Schools and kura: mainstream use, patchy readiness
+---
 
-The best national picture remains TALIS 2024. It shows AI use is already mainstream among many teachers, but mostly for **lesson planning, content support, and summarisation**, not high-stakes assessment judgment. Among New Zealand teachers who had used AI, **78%** had used it to generate lesson plans and activities and **73%** to learn about or summarise a topic, while only **12%** had used it to assess or mark student work. Professional-learning demand remains high, especially in secondary settings. ([educationcounts.govt.nz](https://www.educationcounts.govt.nz/publications/series/teaching-and-learning-international-survey/talis-2024-publications/talis-2024-first-report?utm_source=openai))
+## What Has Changed Since 13 July 2026
 
-NZCER’s primary-school AI research still sharpens that picture. Its 2025 report, based on end-2024 surveys, found widespread experimentation by teachers and substantial student exposure, but also significant gaps in policy clarity, premium tool access, and confidence. Three-quarters of responding teachers had no school-funded premium AI access, fewer than half felt confident teaching responsible AI use, and **85%** wanted more training. Students commonly used AI more outside school than inside it and were often unsure what their school rules were. ([nzcer.org.nz](https://www.nzcer.org.nz/research/publications/generative-artificial-intelligence-aotearoa-new-zealand-primary-schools?language=mi&utm_source=openai))
+### 1. ERO has supplied the missing national school-sector evidence
 
-The Ministry’s current guidance remains explicitly augmentation-first. It says AI should improve teaching and learning by supporting knowledgeable and skilled teachers, that human oversight is essential, and that AI used for marking must support rather than replace teacher professional judgment. It also reiterates that schools with consent to assess must have authenticity policies that include acceptable GenAI use. ([education.govt.nz](https://www.education.govt.nz/education-professionals/schools-year-0-13/digital-technology/generative-ai?utm_source=openai))
+The ERO report is the most important new development. It draws on survey responses from:
 
-### Assessment is the main governance battleground
+- 1,587 students
+- 859 teachers
+- 472 school leaders
+- 889 parents and whānau
+- Interviews, focus groups, and visits to eight schools
 
-The strongest policy movement is still around assessment. Ministry guidance says AI-assisted marking is more suited to **assessment for learning** than to complex or summative judgment, and the companion marking guidance says **AI use to mark NCEA internal assessments is discouraged** and should be limited to supporting the assessor’s final judgment. ([web-assets.education.govt.nz](https://web-assets.education.govt.nz/s3fs-public/2025-10/1373%20GenAI%20Marking%20Tools%20flyer_V2.pdf?VersionId=Oz_o7IGHBcO7x7DAX6SXlIT2JF60QBmv&utm_source=openai))
+The report found that AI is already widely used across school communities, primarily for information searching, idea generation, lesson development, resource creation, communication, and administrative work. ([odt.co.nz](https://www.odt.co.nz/news/national/its-addictive-ai-damaging-critical-thinking-in-schools-report-finds-ujwe515m))
 
-This is increasingly consistent with what universities are doing. The University of Auckland’s Two-Lane Approach requires all courses and programmes to implement the model by **2027**, distinguishing between controlled assessments where AI is restricted by default and uncontrolled assessments where AI use may be unrestricted. AUT has adopted a similar institution-wide **two-channel** approach, with Channel 1 for invigilated, non-AI summative judgments and Channel 2 for AI-permitted settings, supported by its “Points of Observation of Learning” model. ([teachwell.auckland.ac.nz](https://teachwell.auckland.ac.nz/assessment/two-lane-approach-to-assessment/?utm_source=openai))
+### 2. The governance gap is now measurable
 
-The implication is now hard to miss: in New Zealand, the credible response to AI is shifting away from detector-led enforcement and toward **assessment redesign, disclosure, observation, and staged assurance of learning**. That is visible across Ministry, AUT, and Auckland materials alike. ([web-assets.education.govt.nz](https://web-assets.education.govt.nz/s3fs-public/2025-10/1373%20GenAI%20Marking%20Tools%20flyer_V2.pdf?VersionId=Oz_o7IGHBcO7x7DAX6SXlIT2JF60QBmv&utm_source=openai))
+Although the Ministry has published high-level GenAI guidance, **73% of teachers surveyed by ERO had not seen it**. Many schools did not have formal AI policies, and teachers applied different rules to student AI use. ([odt.co.nz](https://www.odt.co.nz/news/national/its-addictive-ai-damaging-critical-thinking-in-schools-report-finds-ujwe515m))
 
-### Tertiary education: operating models are maturing
+This changes the character of the policy debate. The question is no longer whether guidance exists. It is whether guidance is:
 
-The University of Auckland remains one of the clearest examples of AI codification in teaching and assessment. Its Two-Lane model is now an explicit institutional position, and its public AI-in-education hub continues to push course-level implementation and second-half 2026 Cogniti deployments. Cogniti is integrated into Canvas and positioned as a bounded, course-specific AI environment rather than a free-for-all external chatbot. ([teachwell.auckland.ac.nz](https://teachwell.auckland.ac.nz/assessment/two-lane-approach-to-assessment/?utm_source=openai))
+- Visible to schools
+- Understood by teachers and students
+- Converted into operational policy
+- Supported by professional learning
+- Consistent across school contexts
 
-AUT has become more publicly explicit as well. Its published AI principles emphasise equity, integrity, Māori and Indigenous data considerations, human-centred deployment, and the irreplaceable value of human-to-human connection in education. In learning and assessment, AUT says it is taking a **whole-of-institution approach** to redesign, implementing new assessment principles through **2025 and 2026** and openly treating AI adaptation as a core strategic project rather than a peripheral teaching issue. ([aut.ac.nz](https://www.aut.ac.nz/about/ai-at-aut/auts-ai-approach-and-principles?utm_source=openai))
+### 3. AI literacy provision is scaling outside formal government policy
 
-The University of Otago remains the clearest example of institution-level governance maturity. Its AI Governance Policy, effective **10 March 2026**, applies across development, procurement, deployment, and use of AI systems; explicitly references Te Tiriti obligations, Māori data sovereignty, Pacific values, and environmental impact; and requires risk assessment and approval before AI is used on confidential or restricted data. ([otago.ac.nz](https://www.otago.ac.nz/about/administration/policies/policy-collection/ai-governance-policy?utm_source=openai))
+Day of AI Aotearoa has begun moving from pilot activity to broader national delivery. The programme provides curriculum-aligned resources for Years 5–10 and incorporates Aotearoa-specific concepts including whakapapa, tikanga, kaitiakitanga, and data sovereignty. Its 2025 pilot reportedly increased student understanding of AI from **20% to 64%**, while the pilot found that **92% of participating students were already using AI**. These are programme-level evaluation findings rather than a national estimate, but they demonstrate the potential value of structured AI literacy. ([dayofai.org](https://dayofai.org/news/australian-and-new-zealand-students-receive-free-curriculum-aligned-ai-literacy-through-tailored-local-programs))
 
-The University of Canterbury is also broadening the tertiary picture. UC’s June 2026 SAIL announcement frames AI literacy as more than tool use, stressing critical judgment, citizenship, and inclusion of Māori and Pacific voices. UC has also embedded AI in student support and governance through endorsed tools, AI skills workshops, and formal postgraduate offerings, including a new **Master of Applied Artificial Intelligence** with an education pathway and a new **Master of AI and Education** referenced in UC’s own reporting. ([canterbury.ac.nz](https://www.canterbury.ac.nz/news-and-events/news/2026/new-research-helps-rethink-ai-literacy-in-education-?utm_source=openai))
+### 4. Tertiary institutions are formalising AI use in research and teaching
 
-### System agencies: NZQA is still the most mature production user
+The University of Auckland’s new doctoral research guidelines will apply to all doctoral candidates and supervisors from **1 September 2026**. They require GenAI use to be consistent with academic integrity, research integrity, privacy, copyright, intellectual property, research-data management, and relevant legal requirements. ([auckland.ac.nz](https://www.auckland.ac.nz/en/about-us/about-the-university/policy-hub/research-innovation/doctoral-study/undertaking-research/generative-artificial-intelligence-in-doctoral-research-guidelines.html))
 
-NZQA’s use of AI in co-requisite literacy assessment remains the most consequential live deployment in the sector. NZQA’s current marking page says that from **May 2025**, it began using a combination of automated machine marking, automated text scoring, and human marking for literacy and numeracy co-requisites, with automated text scoring applied to all digitally submitted Writing assessments and human check-marking used for boundary cases. ([www2.nzqa.govt.nz](https://www2.nzqa.govt.nz/ncea/subjects/litnum/marking/?utm_source=openai))
+The University of Canterbury is also expanding formal capability-building. Its Postgraduate Certificate in AI and Digital Education includes courses on AI foundations, authentic assessment redesign, AI-enabled learning design, ethics, data governance, equity, and learner agency. The September 2026 intake begins on **28 September 2026**. ([uconline.ac.nz](https://uconline.ac.nz/courses/postgraduate-certificate-in-ai-and-digital-education))
 
-NZQA’s public material continues to describe the May 2025 deployment as a major milestone: more than **55,000** writing assessments were marked with automated text scoring, results came back **3.5 weeks earlier**, and human check-marking remained in place for over a third of responses near the achievement boundary. NZQA also says its AI work is guided by public-service principles including transparency, safety, accountability, and human-centred values. ([www2.nzqa.govt.nz](https://www2.nzqa.govt.nz/about-us/news/embracing-ai-in-student-assessments/?utm_source=openai))
+---
 
-What is new is not only that NZQA is already using AI at scale, but that the Government is now funding the next layer: pilots for AI and machine learning in **marking, moderation, and exam development**, alongside new NZQA planning language about using AI in future assessment design and delivery. ([education.govt.nz](https://www.education.govt.nz/our-work/publications/corporate-documents/budget-2026/investing-secondary-achievement?utm_source=openai))
+## Current State of AI Adoption
 
-## Policy, Governance, and Trust
+## Schools and kura: high adoption, uneven strategic control
 
-### Official school guidance is stable, but more operational than before
+The ERO findings show that AI is now part of normal school activity.
 
-There has been no major new Ministry AI policy shift since the **22 May 2026** guidance refresh, but that guidance remains one of the most operationally important documents in the sector. It gives schools concrete boundaries on marking, personal-information handling, age restrictions, school-policy design, and authenticity expectations for assessment. ([education.govt.nz](https://www.education.govt.nz/education-professionals/schools-year-0-13/digital-technology/generative-ai?utm_source=openai))
+### Common uses
 
-A small but telling July development is that AI is now easier to find inside the NCEA support environment itself. The dedicated NCEA GenAI page does not yet add new policy, but it signals that AI in assessment has become a standing issue in national qualifications support rather than a side topic. ([ncea.education.govt.nz](https://ncea.education.govt.nz/generative-ai-ncea-assessment))
+Principals and school leaders commonly use AI to:
 
-### Privacy, children’s rights, and Māori data concerns are intensifying constraints
+- Draft communications
+- Summarise information
+- Reduce administrative workload
+- Prepare initial documents and reports
 
-The privacy environment is becoming more important, not less. The Privacy Commissioner’s **2026 annual survey**, published **11 May 2026**, found that **71%** of New Zealanders were concerned about children’s privacy and **67%** were concerned about agencies or businesses using AI to make decisions about people using personal data. Māori respondents showed higher concern and lower trust on many measures. ([privacy.org.nz](https://www.privacy.org.nz/tuhono-connect/surveys/2026-annual-survey-on-privacy/?utm_source=openai))
+Teachers commonly use AI to:
 
-The Commissioner’s new education-sector children’s privacy guidance makes the implications for schools more concrete. Chapter 16 says AI use in education must comply with the Privacy Act, warns about risks such as vendors using learner data to train models, profiling, inappropriate chatbot interactions, and overcollection of personal information, and recommends careful due diligence before new tools are introduced. Separate AI guidance also says organisations should conduct privacy impact assessments and engage with Māori about risks to taonga information. ([privacy.org.nz](https://www.privacy.org.nz/resources-and-learning/a-z-topics/protecting-children-and-young-peoples-privacy/childrens-privacy-guidance-for-the-education-sector/chapter-16-digital-technologies/?utm_source=openai))
+- Develop lesson resources
+- Tailor learning materials
+- Generate ideas
+- Support planning
+- Assist with differentiation and personalisation
 
-This means that in New Zealand, **trust, privacy, and cultural legitimacy are no longer secondary implementation issues**. They are now core constraints on how AI can scale in education. ([privacy.org.nz](https://www.privacy.org.nz/tuhono-connect/surveys/2026-annual-survey-on-privacy/?utm_source=openai))
+Students commonly use AI to:
+
+- Find information
+- Generate ideas
+- Correct spelling and grammar
+- Improve paragraphs
+- Complete repetitive or time-consuming parts of schoolwork
+
+The dominant model remains **support rather than replacement**. School leaders and teachers generally view AI as a tool that should assist professional practice while leaving educational judgement with people. ([odt.co.nz](https://www.odt.co.nz/news/national/its-addictive-ai-damaging-critical-thinking-in-schools-report-finds-ujwe515m))
+
+### Student use is normalised, but not always educationally productive
+
+Seventy-five percent of students surveyed by ERO reported using AI. Secondary students were more likely than primary students to use AI independently and routinely. Some students described AI as a useful source of inspiration, while others described it as a “crutch” that could replace thinking. ([odt.co.nz](https://www.odt.co.nz/news/national/its-addictive-ai-damaging-critical-thinking-in-schools-report-finds-ujwe515m))
+
+The most significant risk identified by ERO is not simply cheating. It is **cognitive offloading**: students using AI to avoid effort, uncertainty, practice, or independent reasoning.
+
+- 57% of teachers believed AI had negatively affected students’ critical thinking.
+- Among secondary teachers, the figure was 72%.
+- 38% of secondary students and 20% of primary/intermediate students reported using AI in ways they knew they should not.
+- 14% of students reported knowingly using AI inappropriately for assessments or tests.
+- The figure was 19% among secondary students. ([odt.co.nz](https://www.odt.co.nz/news/national/its-addictive-ai-damaging-critical-thinking-in-schools-report-finds-ujwe515m))
+
+These findings suggest that the main educational challenge is becoming **how to preserve learning effort and agency**, not simply how to detect AI-generated text.
+
+---
+
+## Assessment and academic integrity
+
+Assessment remains the principal governance battleground.
+
+### School assessment
+
+The Ministry’s position remains that AI should support teaching and learning but must not replace teacher responsibility or professional judgement. Schools are expected to maintain authenticity policies covering acceptable GenAI use. AI-generated work cannot be accepted as a student’s own evidence where the assessed knowledge or skill has not been independently demonstrated. ([education.govt.nz](https://www.education.govt.nz/education-professionals/schools-year-0-13/digital-technology/generative-ai?utm_source=openai))
+
+The ERO report found a broad shared expectation that AI should not be used in assessment unless it is explicitly permitted. However, implementation varies between schools and teachers. ([odt.co.nz](https://www.odt.co.nz/news/national/its-addictive-ai-damaging-critical-thinking-in-schools-report-finds-ujwe515m))
+
+The practical trend is toward:
+
+- Process evidence
+- Draft checkpoints
+- Oral explanation
+- In-class writing
+- Version histories
+- Personalised or locally grounded tasks
+- Clear disclosure of AI use
+- Assessment designs that require students to explain and defend their thinking
+
+This is consistent with the Ministry’s existing emphasis on authenticity and with the assessment redesign approaches being developed in tertiary education.
+
+### NCEA
+
+The NCEA website now includes a dedicated page titled **“Generative AI in NCEA assessment”**, published on **30 July 2026**. The page currently directs users to Ministry guidance rather than introducing a new rule, but it makes AI more visible within the national qualifications support environment. ([ncea.education.govt.nz](https://ncea.education.govt.nz/generative-ai-ncea-assessment?utm_source=openai))
+
+The current position remains:
+
+- GenAI is not permitted in NCEA external assessment.
+- Schools must have policies covering acceptable GenAI use.
+- Student evidence must be authentic.
+- AI use in internal assessment must be considered in relation to the relevant standard and conditions of assessment.
+- Teachers remain responsible for final decisions.
+
+### NZQA’s emerging role
+
+NZQA remains the most mature operational user of AI in the education system. Its automated text-scoring system was used for more than 55,000 Writing assessments in May 2025, with human check-marking for boundary cases and results returned 3.5 weeks faster than the previous year. ([www2.nzqa.govt.nz](https://www2.nzqa.govt.nz/about-us/news/embracing-ai-in-student-assessments/?utm_source=openai))
+
+Budget 2026 provided NZQA with **$2.1 million in operating funding** for pilots and proofs of concept involving automated text scoring, AI, and machine learning in marking, moderation, and exam development. ([education.govt.nz](https://www.education.govt.nz/our-work/publications/corporate-documents/budget-2026/investing-secondary-achievement?utm_source=openai))
+
+NZQA’s stated approach is cautious:
+
+- Test tools using historic digital assessment material.
+- Roll out only where results are as good as or better than human work.
+- Keep subject specialists responsible for quality assurance.
+- Treat AI as a member of the assessment team rather than an autonomous decision-maker.
+- Address privacy, bias, security, Māori data sovereignty, and cultural context.
+
+This represents a more controlled form of AI adoption than the largely informal use occurring in schools.
+
+---
+
+## Tertiary education: from experimentation to institutional operating models
+
+New Zealand universities are moving beyond broad statements about responsible AI and developing more specific operating models.
+
+### University of Auckland
+
+The University of Auckland’s Two-Lane Approach remains one of the clearest tertiary responses to GenAI:
+
+- A controlled lane for assessments requiring direct demonstration of unaided knowledge and skills.
+- A more open lane where AI use is permitted and treated as part of the learning environment.
+
+The University has now extended this institutionalisation into doctoral research. From **1 September 2026**, doctoral candidates and supervisors must follow specific guidelines covering acceptable use, disclosure, originality, data protection, research ethics, intellectual property, and academic integrity. ([auckland.ac.nz](https://www.auckland.ac.nz/en/about-us/about-the-university/policy-hub/research-innovation/doctoral-study/undertaking-research/generative-artificial-intelligence-in-doctoral-research-guidelines.html))
+
+### AUT
+
+AUT continues to position AI as a whole-of-institution education transformation project. Its approach includes:
+
+- Assessment redesign
+- AI integration across disciplines
+- Student and staff capability-building
+- AI-use guidance within Canvas
+- Academic-integrity education
+- Workshops on AI-supported research and information evaluation
+
+AUT’s published learning-and-teaching approach is explicitly focused on preparing graduates for an AI-integrated workforce while retaining human judgement, critical thinking, and human connection. ([aut.ac.nz](https://www.aut.ac.nz/about/ai-at-aut/ai-in-learning-and-teaching?utm_source=openai))
+
+### University of Canterbury
+
+UC is developing both research and formal qualifications in AI education.
+
+Its SAIL framework defines AI literacy as more than tool operation. It emphasises:
+
+- Understanding what AI is and how it works
+- Practical use
+- Critical evaluation
+- Social, cultural, and ethical consequences
+- AI citizenship
+- The ability to decide when not to use AI
+
+The framework was developed with input from education, industry, computer science, Māori, and Pacific perspectives. ([canterbury.ac.nz](https://www.canterbury.ac.nz/news-and-events/news/2026/new-research-helps-rethink-ai-literacy-in-education-?utm_source=openai))
+
+UC’s new Postgraduate Certificate in AI and Digital Education translates this agenda into professional learning. The qualification focuses on pedagogically appropriate AI use, authentic assessment, learner agency, data governance, equity, and ethical practice. ([uconline.ac.nz](https://uconline.ac.nz/courses/postgraduate-certificate-in-ai-and-digital-education))
+
+### University of Otago
+
+The University of Otago is hosting the 2026 New Zealand AI in Higher Education Symposium on **2 September 2026**. The event includes presentations, an Immersion Lab, and Agentic Innovation Awards focused on practical AI systems and workflows in higher education. ([otago.ac.nz](https://www.otago.ac.nz/news/events/2026-new-zealand-ai-in-higher-education-symposium?utm_source=openai))
+
+The symposium is a sign that AI in tertiary education is becoming a distinct professional and institutional field rather than a collection of isolated experiments.
+
+---
 
 ## Research Overview
 
-### National evidence: teachers are ahead on use, not yet on capability coherence
+### ERO: the strongest new school-sector evidence
 
-TALIS 2024 remains the strongest official evidence base for system-wide teacher use. New Zealand teachers are ahead of many international peers in AI exposure and use, but not yet in settled capability, especially around assessment and professional learning. That combination still defines the current phase: **broad familiarity, incomplete operational maturity**. ([educationcounts.govt.nz](https://www.educationcounts.govt.nz/publications/series/teaching-and-learning-international-survey/talis-2024-publications/talis-2024-first-report?utm_source=openai))
+ERO’s report is the first major national assessment of AI use across New Zealand schools to combine the perspectives of students, teachers, leaders, and parents and whānau. Its most important contribution is to show the gap between:
 
-### NZCER: adoption is real, but access and guidance remain uneven
+- High levels of AI use
+- Moderate confidence in educational benefits
+- Significant concern about critical thinking
+- Low awareness of official guidance
+- Inconsistent school policy
 
-NZCER’s primary-school study is still the most useful New Zealand research on how AI is actually entering classrooms. Its value lies less in national representativeness than in showing how even relatively engaged teachers experience AI: high experimentation, limited funded access, uncertain rules, and a strong call for more training and clearer frameworks. ([nzcer.org.nz](https://www.nzcer.org.nz/research/publications/generative-artificial-intelligence-aotearoa-new-zealand-primary-schools?language=mi&utm_source=openai))
+The report’s recommendation for a national framework is therefore grounded in evidence of a coordination problem, not simply a desire for more regulation. ([odt.co.nz](https://www.odt.co.nz/news/national/its-addictive-ai-damaging-critical-thinking-in-schools-report-finds-ujwe515m))
 
-### UC’s SAIL framework: AI literacy is becoming a substantive field of work
+### SAIL: AI literacy as critical judgement
 
-The University of Canterbury’s June 2026 reporting on the **Scaffolded AI Literacy (SAIL)** framework is a meaningful addition to the evidence base because it pushes AI literacy beyond “how to prompt” and toward staged understanding, critical judgment, and AI citizenship across age groups and contexts. UC also says the work has informed short courses and its Master of AI and Education, while Professor Kathryn MacCallum is engaging with both the Ministry and ERO. ([canterbury.ac.nz](https://www.canterbury.ac.nz/news-and-events/news/2026/new-research-helps-rethink-ai-literacy-in-education-?utm_source=openai))
+The peer-reviewed SAIL research, published in *Computers and Education: Artificial Intelligence*, presents a New Zealand-grounded framework for equitable AI literacy. It was developed through a Delphi study involving local and international experts and pays particular attention to data sovereignty, cultural misrecognition, and equitable participation in AI futures. ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S2666920X26000469?utm_source=openai))
 
-### ERO is still studying the issue, not yet closing it
+Its significance is conceptual as well as practical. It shifts AI literacy from:
 
-ERO’s evidence programme still lists **“How are schools and students using AI?”** as an active question. As of **13 July 2026**, that means national evaluation is still catching up with practice rather than fully defining it. ([evidence.ero.govt.nz](https://www.evidence.ero.govt.nz/questions-we-are-answering/?utm_source=openai))
+> Knowing which buttons to press
+
+toward:
+
+- Understanding how systems work
+- Evaluating outputs
+- Recognising bias and limitations
+- Making ethical decisions
+- Understanding wider social impacts
+- Deciding when use is inappropriate
+
+### NZCER: continuing evidence of uneven readiness
+
+NZCER’s primary-school research remains an important baseline. It found widespread experimentation, limited access to premium tools, low confidence in teaching responsible AI use, and strong demand for further teacher training. ([nzcer.org.nz](https://www.nzcer.org.nz/research/publications/generative-artificial-intelligence-aotearoa-new-zealand-primary-schools?language=mi&utm_source=openai))
+
+The ERO findings broadly reinforce this pattern, although ERO suggests that AI use is now widespread across schools rather than confined to early-adopter communities.
+
+### Youth-led research
+
+The Youth AI Research Network, running from **May 2026 to May 2027**, is placing rangatahi in the role of research partners rather than simply survey respondents. The Aotearoa strand is being led by FutureLearning and FutureMakers and focuses on whether AI helps students learn well and be well. It explicitly incorporates Te Tiriti obligations, Māori and Pacific student experience, and student ownership of research contributions. ([futurelearning.nz](https://futurelearning.nz/yairn))
+
+This work may help address a current weakness in the evidence base: policy and strategy discussions have often been led by institutions and adults, while student voice has been less systematically represented.
+
+---
 
 ## Case Studies
 
-### 1) NZQA: AI at national assessment scale
+### 1. Education Review Office: AI-assisted drafting with human accountability
 
-NZQA remains the strongest case study of operational AI in education because the deployment is real, national, and quality-assured. It combines automated scoring with human check-marking, is already embedded in live literacy assessment operations, and is now being extended through government-backed pilots into adjacent areas such as moderation and exam development. ([www2.nzqa.govt.nz](https://www2.nzqa.govt.nz/ncea/subjects/litnum/marking/?utm_source=openai))
+ERO now uses AI-assisted drafting to help create initial school-report narratives from evaluation evidence. The organisation states that all analysis, judgements, findings, quality assurance, and final published content remain human-led and accountable to ERO staff. ([ero.govt.nz](https://www.ero.govt.nz/how-ero-reviews/how-ero-reviews-schoolskura-english-medium/reporting?utm_source=openai))
 
-### 2) University of Auckland: bounded course AI plus assessment redesign
+This is a useful public-sector case study because it illustrates a bounded model:
 
-The University of Auckland offers the clearest combination of **assessment model plus tooling**. The Two-Lane Approach gives a whole-of-programme logic for when AI should be restricted or permitted, while Cogniti offers a controlled course-based AI environment inside Canvas. That pairing is important because it moves beyond abstract principles to practical delivery architecture. ([teachwell.auckland.ac.nz](https://teachwell.auckland.ac.nz/assessment/two-lane-approach-to-assessment/?utm_source=openai))
+- AI assists with drafting.
+- Humans retain analytical and evaluative responsibility.
+- The process is disclosed publicly.
+- AI use operates within public-service rules and governance.
 
-### 3) AUT: whole-of-institution assessment redesign
+### 2. NZQA: automated text scoring at national scale
 
-AUT’s case is notable because it is not treating AI as a local teaching innovation but as a university-wide redesign challenge. Its two-channel model, AI principles, and phased implementation of new assessment policy suggest a more systemic response focused on assurance of learning rather than prohibition. ([aut.ac.nz](https://www.aut.ac.nz/about/ai-at-aut/auts-ai-approach-and-principles?utm_source=openai))
+NZQA’s Writing assessment deployment remains the strongest live example of high-stakes AI use in New Zealand education. It combines automated scoring with human check-marking and specialist oversight. The approach is designed to improve speed and consistency without removing human accountability. ([www2.nzqa.govt.nz](https://www2.nzqa.govt.nz/about-us/news/embracing-ai-in-student-assessments/?utm_source=openai))
 
-### 4) University of Otago: governance-first institutional maturity
+### 3. Day of AI Aotearoa: culturally grounded AI literacy
 
-Otago’s AI Governance Policy is a case study in whole-organisation readiness. It builds AI into formal committee structures, risk management, data protection, Te Tiriti obligations, and staff capability expectations. In the New Zealand context, that is a significant marker of institutional maturity. ([otago.ac.nz](https://www.otago.ac.nz/about/administration/policies/policy-collection/ai-governance-policy?utm_source=openai))
+Day of AI Aotearoa provides free classroom resources for Years 5–10. Its pilot showed reported gains in understanding and teacher confidence, while its curriculum includes Aotearoa-specific concepts such as whakapapa, tikanga, kaitiakitanga, and data sovereignty. ([dayofai.org](https://dayofai.org/news/australian-and-new-zealand-students-receive-free-curriculum-aligned-ai-literacy-through-tailored-local-programs))
 
-### 5) Ministry case studies: school-level authenticity redesign
+Its importance lies in treating AI literacy as a universal educational entitlement rather than a specialist technology subject.
 
-The Ministry’s Aotea College and Hobsonville Point Secondary School case studies remain important because they show how schools are responding without relying on AI detectors. The approaches include checkpoints, common templates, authenticity criteria, verbal checks, and policy changes designed to make student process more visible. ([education.govt.nz](https://www.education.govt.nz/education-professionals/schools-year-0-13/digital-technology/generative-ai?utm_source=openai))
+### 4. University of Auckland: formal GenAI rules for doctoral research
+
+The University of Auckland’s doctoral guidelines demonstrate how tertiary institutions are moving from general principles to specific governance. The guidelines address acceptable use, disclosure, originality, privacy, research data, copyright, and supervisor responsibilities. ([auckland.ac.nz](https://www.auckland.ac.nz/en/about-us/about-the-university/policy-hub/research-innovation/doctoral-study/undertaking-research/generative-artificial-intelligence-in-doctoral-research-guidelines.html))
+
+### 5. University of Canterbury: professionalising AI in education
+
+UC’s postgraduate certificate provides an emerging model for building AI capability among educators and education leaders. It focuses on judgement, pedagogy, assessment, ethics, and equity rather than software proficiency alone. ([uconline.ac.nz](https://uconline.ac.nz/courses/postgraduate-certificate-in-ai-and-digital-education))
+
+---
+
+## Policy, Governance, and Trust
+
+### The case for a national framework is strengthening
+
+The Ministry currently provides practical school guidance, but ERO’s findings suggest that dissemination and implementation are insufficient. A national framework would likely need to clarify:
+
+- Permitted and prohibited uses by education level
+- Student and teacher responsibilities
+- Assessment and disclosure expectations
+- Privacy and procurement requirements
+- Professional-learning expectations
+- Māori data sovereignty and cultural safety
+- Expectations for AI literacy
+- Treatment of AI in learning support and assistive technologies
+- Response protocols for misuse, deepfakes, and harmful digital content
+
+### Privacy and cultural legitimacy remain central
+
+The Ministry warns that general-purpose AI systems may be weak on mātauranga Māori, te reo Māori, Pacific languages, and Polynesian cultures. Schools are also advised not to enter personal, confidential, sensitive, or copyright-protected information into external AI systems. ([education.govt.nz](https://www.education.govt.nz/education-professionals/schools-year-0-13/digital-technology/generative-ai?utm_source=openai))
+
+The implications are significant:
+
+- A tool can be technically impressive but culturally unreliable.
+- Data collected from learners may be reused to train commercial systems.
+- Bias may be difficult to detect without local evaluation data.
+- AI outputs may flatten important distinctions between iwi, hapū, whānau, and Pacific communities.
+- Procurement decisions can become de facto curriculum and cultural decisions.
+
+New Zealand’s AI-in-education model therefore cannot be judged solely by productivity or cost. It must also be judged by privacy, equity, cultural fit, transparency, and trust.
+
+---
 
 ## Emerging Trends
 
-### 1) Augmentation remains dominant
+### 1. Adoption is becoming normalised faster than governance
 
-Across schools, tertiary institutions, and NZQA, the dominant New Zealand model is still **AI as support**: planning, tutoring, feedback, workflow assistance, marking support, and service navigation, with human judgment retained at the final decision points. ([education.govt.nz](https://www.education.govt.nz/education-professionals/schools-year-0-13/digital-technology/generative-ai?utm_source=openai))
+AI use is now routine for many educators and students, but formal policy and professional learning remain uneven. This is the defining implementation gap identified by ERO. ([odt.co.nz](https://www.odt.co.nz/news/national/its-addictive-ai-damaging-critical-thinking-in-schools-report-finds-ujwe515m))
 
-### 2) Assessment redesign is hardening into doctrine
+### 2. Critical thinking is replacing cheating as the primary concern
 
-The sector is converging on a shared answer to AI: redesign assessment rather than pretend AI can be excluded from all learning contexts. Ministry guidance, Auckland’s Two-Lane model, and AUT’s two-channel approach all reinforce that shift. ([web-assets.education.govt.nz](https://web-assets.education.govt.nz/s3fs-public/2025-10/1373%20GenAI%20Marking%20Tools%20flyer_V2.pdf?VersionId=Oz_o7IGHBcO7x7DAX6SXlIT2JF60QBmv&utm_source=openai))
+Academic integrity remains important, particularly in NCEA and tertiary assessment. However, ERO’s findings show that educators are increasingly concerned about students losing independence, persistence, creativity, and confidence in their own reasoning.
 
-### 3) AI literacy is scaling faster than formal curriculum change
+### 3. AI literacy is shifting from technical skill to civic capability
 
-The quickest movement is in **AI literacy frameworks, resources, workshops, and local operating models**, not in a standalone compulsory AI subject. That is visible in Ministry resources, UC’s SAIL framework, AI Forum’s Blueprint emphasis on talent and literacy, and ongoing curriculum consultation that embeds AI in subjects such as Digital Technologies and Computer Science. ([newzealandcurriculum.tahurangi.education.govt.nz](https://newzealandcurriculum.tahurangi.education.govt.nz/introduction-to-artificial-intelligence/5637235331.p?utm_source=openai))
+SAIL, Day of AI, and the AI Forum’s national blueprint all point toward a broader model of AI literacy involving:
 
-### 4) The next battleground is implementation quality
+- Critical thinking
+- Ethical reasoning
+- Cultural awareness
+- Data rights
+- Verification
+- Creativity
+- Responsible participation in an AI-mediated society
 
-The key divide is no longer between adopters and non-adopters. It is between institutions with coherent governance, funded tools, staff development, and assessment redesign capability, and those still relying on ad hoc teacher improvisation. TALIS, NZCER, and the contrasting maturity of university models all point in that direction. ([educationcounts.govt.nz](https://www.educationcounts.govt.nz/__data/assets/pdf_file/0006/250791/TALIS-2024-Findings-for-New-Zealand-1.pdf?utm_source=openai))
+### 4. Assessment redesign is becoming the durable response
 
-### 5) New Zealand’s distinctive feature remains cultural and privacy legitimacy
+The sector is steadily moving away from an assumption that AI can be excluded from all learning contexts. Instead, it is distinguishing between:
 
-Te Tiriti obligations, Māori data sovereignty, children’s privacy, and community trust are not side issues in New Zealand’s AI-in-education story. They are part of the design brief itself, and they are becoming more prominent across policy, university governance, and public-attitudes data. ([otago.ac.nz](https://www.otago.ac.nz/about/administration/policies/policy-collection/ai-governance-policy?utm_source=openai))
+- Assessments where AI is restricted or prohibited
+- Assessments where AI use is explicitly permitted
+- Learning activities where AI can support exploration, feedback, or iteration
+
+This approach places the emphasis on valid evidence of learning rather than unreliable AI detection.
+
+### 5. AI capability is becoming a formal education product
+
+The launch of AI-specific postgraduate qualifications, professional certificates, short courses, symposia, and communities of practice indicates that AI in education is becoming an established field of professional development.
+
+### 6. Student voice is becoming more important
+
+The emergence of YAIRN suggests that future policy may be informed not only by teacher and institutional perspectives but also by student-led research into learning, wellbeing, belonging, and equity.
+
+---
+
+## Outlook: August 2026 to August 2027
+
+The next year is likely to be shaped by five developments:
+
+1. **A stronger push for national school guidance** following ERO’s recommendation for a centrally provided, deliberate, and consistent framework.
+2. **Further NZQA AI pilots** in marking, moderation, and exam development, supported by Budget 2026 funding.
+3. **Greater integration of AI literacy into curriculum and professional learning**, rather than the creation of a standalone subject across all contexts.
+4. **More institution-specific tertiary rules**, including doctoral, research, assessment, and procurement guidance.
+5. **More local evidence on student experience**, including Māori, Pacific, regional, and student-led perspectives.
+
+The updated Years 0–10 curriculum is planned for publication by **9 September 2026**, with some curriculum content released earlier and broader implementation expected to proceed through 2027. AI literacy is likely to be shaped through these curriculum changes and associated resources rather than through a single national AI subject. ([tahurangi.education.govt.nz](https://tahurangi.education.govt.nz/Y0-10_delivery-dates?utm_source=openai))
+
+---
 
 ## Conclusion
 
-As of **13 July 2026**, AI in education in New Zealand is best characterised as **normalised in use, increasingly structured in governance, and still uneven in execution**. The most meaningful recent developments since **10 June 2026** are system-level rather than sensational: Budget 2026 funding for NZQA AI pilots, forward planning inside NZQA, continued Phase 5 curriculum consultation, and more explicit university-wide models for assessment and AI governance. ([education.govt.nz](https://www.education.govt.nz/our-work/publications/corporate-documents/budget-2026/investing-secondary-achievement?utm_source=openai))
+As of **18 August 2026**, AI in New Zealand education is best described as:
 
-The overall trajectory is clearer now than it was a month ago. New Zealand is not moving toward an “AI replaces educators” model. It is moving toward a model in which AI supports teaching, literacy, service delivery, and selected assessment operations, while **human judgment, authenticity, privacy, and cultural legitimacy** become more explicit conditions of use. ([education.govt.nz](https://www.education.govt.nz/education-professionals/schools-year-0-13/digital-technology/generative-ai?utm_source=openai))
+> **Widespread in use, uneven in governance, increasingly formalised in tertiary education, and contested over its effects on learning and critical thinking.**
 
-The defining challenge from here is implementation quality at scale. New Zealand has already crossed from experimentation into operational adoption, but a fully coherent national operating model still does not exist. The organisations furthest ahead are those treating AI not as a gadget question but as a **whole-system education design problem** spanning pedagogy, assessment, governance, data, equity, and trust. ([educationcounts.govt.nz](https://www.educationcounts.govt.nz/__data/assets/pdf_file/0006/250791/TALIS-2024-Findings-for-New-Zealand-1.pdf?utm_source=openai))
+The ERO report marks a major shift in the evidence base. It confirms that AI is no longer a peripheral or emerging issue for schools. Students, teachers, and leaders are already using it at scale. Yet the system lacks consistent policies, shared expectations, and sufficient professional learning.
+
+New Zealand’s emerging response is not to prohibit AI entirely or to allow unrestricted automation. It is to develop a **human-led model** built around:
+
+- Authentic assessment
+- Teacher and academic judgement
+- Critical AI literacy
+- Privacy and data sovereignty
+- Māori and Pacific perspectives
+- Transparent governance
+- Deliberate assessment redesign
+- Student agency and wellbeing
+
+The next phase will test whether this model can move from institutional exemplars and local initiatives into consistent practice across all schools, kura, and tertiary providers. The country has crossed the adoption threshold. The strategic challenge now is to ensure that adoption improves education rather than merely accelerating the production of educational work.
