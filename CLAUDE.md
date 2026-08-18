@@ -42,7 +42,7 @@ The two halves share only the markdown files and the `@livingwp/article-contract
 
 ### Provider flexibility
 
-The research model is set per-article in `industries.json` via `research_model`. Bare model names (e.g. `gpt-5.4-2026-03-05`) default to OpenAI; prefix with `anthropic/` or `google/` to use those providers. Web search is provider-hosted, so `resolveModel()` in `src/agent/src/agent.ts` maps each provider to its own search tool (`openai.tools.webSearch`, `anthropic.tools.webSearch_20250305`, `google.tools.googleSearch`). File search (OpenAI vector stores) is OpenAI-only.
+The research model defaults to the `RESEARCH_MODEL` environment variable (see `DEFAULT_MODEL_NAME` in `src/agent/src/agent.ts`), which CI sets from the `RESEARCH_MODEL` repository variable. An article can pin a different model in `industries.json` via `research_model`, which takes precedence over the environment variable; articles without the key follow it. Bare model names (e.g. `gpt-5.4-2026-03-05`) default to OpenAI; prefix with `anthropic/` or `google/` to use those providers. Web search is provider-hosted, so `resolveModel()` in `src/agent/src/agent.ts` maps each provider to its own search tool (`openai.tools.webSearch`, `anthropic.tools.webSearch_20250305`, `google.tools.googleSearch`). File search (OpenAI vector stores) is OpenAI-only.
 
 ### Core Data Flow
 

@@ -83,6 +83,8 @@ export async function getResearchAgent(
   industryName: string,
   config: IndustryConfig = {},
 ): Promise<{ agent: ToolLoopAgent; modelName: string }> {
+  // Per-article config wins over the RESEARCH_MODEL default, so only set
+  // research_model when an article must be pinned to a specific model.
   const modelName = config.research_model ?? DEFAULT_MODEL_NAME;
   const { provider, model, searchTools, providerOptions } = resolveModel(modelName);
 
