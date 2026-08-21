@@ -11,7 +11,7 @@ export async function GET(context: APIContext) {
   return rss({
     title: 'AI in NZ Living Whitepaper',
     description:
-      'A living snapshot of the Generative AI landscape in Aotearoa New Zealand. Researching AI topics, using AI, for the AI community.',
+      'A living record of generative AI adoption across Aotearoa New Zealand, researched and published monthly by an AI agent.',
     site: context.site!,
     items: articles.map((article) => ({
       title: article.data.title,

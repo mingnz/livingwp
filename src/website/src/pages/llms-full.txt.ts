@@ -18,9 +18,9 @@ export const GET: APIRoute = async ({ site }) => {
   );
 
   const parts: string[] = [
-    '# AI in NZ Living Whitepaper — full content',
+    '# AI in NZ Living Whitepaper: full content',
     '',
-    `> Latest edition of every report — researched, written, and published autonomously by an AI agent for ${PUBLISHER_NAME}, with every run auditable on GitHub.`,
+    `> The latest edition of every report. An AI agent researches, writes, and publishes each one for ${PUBLISHER_NAME}, and every run is auditable on GitHub.`,
     `> Source: ${abs('/')} · Index: ${abs('/llms.txt')}`,
     '',
     '---',

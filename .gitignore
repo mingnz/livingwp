@@ -8,3 +8,14 @@ dist/
 
 # Playwright MCP scratch output
 .playwright-mcp/
+
+# macOS
+.DS_Store
+
+# Local agent tooling (skills, settings)
+.agents/
+.claude/
+skills-lock.json
+
+# Local planning notes
+docs/plans/
