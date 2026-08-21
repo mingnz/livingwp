@@ -13,7 +13,7 @@ import { getFileLinkTool, getFileSearchTool } from './fileSearch.js';
 import { loadInstruction, type IndustryConfig } from './files.js';
 
 export const DEFAULT_MODEL_NAME =
-  process.env['RESEARCH_MODEL'] ?? 'gpt-5.4-2026-03-05';
+  process.env['RESEARCH_MODEL'] ?? 'gpt-5.6-luna';
 export const DEFAULT_INSTRUCTIONS_FILENAME =
   process.env['RESEARCH_INSTRUCTIONS_FILENAME'] ?? 'instructions_research.md';
 export const STREAMING_ENABLED =
@@ -98,7 +98,7 @@ interface ResolvedModel {
 /**
  * Resolve a model name to a provider, model instance, that provider's hosted
  * web-search tool, and its reasoning-effort option. Bare model names (e.g.
- * "gpt-5.4-2026-03-05") default to OpenAI for backwards compatibility with
+ * "gpt-5.6-luna") default to OpenAI for backwards compatibility with
  * existing config; "anthropic/..." and "google/..." prefixes select other
  * providers.
  */

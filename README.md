@@ -95,11 +95,11 @@ The settings for each generated article are defined in [`src/agent/config/indust
 
 - Add a new industry article. A new page will be created and added to the site the next time the update process runs.
 - Configure special non-industry articles such as the `nz` monthly national snapshot.
-- Pin one article to a specific model via `research_model`. Bare names (e.g. `gpt-5.4-2026-03-05`) use OpenAI; prefix with `anthropic/` or `google/` to use those providers. Leave the key out to use the default model for every article.
+- Pin one article to a specific model via `research_model`. Bare model names use OpenAI; prefix with `anthropic/` or `google/` to use those providers. Leave the key out to use the default model for every article.
 - Pin one article to a specific reasoning effort via `research_reasoning_effort`: `minimal`, `low`, `medium`, `high`, `xhigh`, or `max`. Leave the key out to use the default effort for every article.
 - Add a new instructions file to [`src/agent/prompts/`](https://github.com/mingnz/livingwp/blob/main/src/agent/prompts/) and use it to prompt the research agent for a specific article or industry.
 
-The agent is built on the [Vercel AI SDK](https://ai-sdk.dev), so it works with any supported provider. The default research model is `gpt-5.4-2026-03-05` (OpenAI), overridden by the `RESEARCH_MODEL` environment variable (a repository variable of that name in GitHub Actions). Each provider's hosted web-search tool is used automatically based on the resolved provider.
+The agent is built on the [Vercel AI SDK](https://ai-sdk.dev), so it works with any supported provider. The default research model tracks a current frontier model and is set by the `RESEARCH_MODEL` environment variable (a repository variable of that name in GitHub Actions), with a fallback default in `src/agent/src/agent.ts`. Each provider's hosted web-search tool is used automatically based on the resolved provider.
 
 Reasoning effort works the same way. The default is `medium`, overridden by the `RESEARCH_REASONING_EFFORT` environment variable. The scale is shared across providers and mapped onto each one's own option: OpenAI's `reasoningEffort`, Anthropic's `effort`, and Google's `thinkingLevel`. OpenAI accepts the whole scale. Anthropic has no level below `low`, and Google's tops out at `high`, so the ends clamp to the nearest supported level on those providers.
 

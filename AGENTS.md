@@ -28,7 +28,7 @@ When adding features, changing workflows, or updating the architecture, update t
 - Default research prompt: `src/agent/prompts/instructions_research.md`
 - NZ snapshot prompt: `src/agent/prompts/instructions_research_nz_snapshot.md`
 
-The agent uses the Vercel AI SDK's `ToolLoopAgent`. `resolveModel()` in `agent.ts` maps a model name to a provider and that provider's hosted web-search tool: bare names (e.g. `gpt-5.4-2026-03-05`) → OpenAI; `anthropic/...` and `google/...` prefixes select other providers. Adding a provider means adding a case there.
+The agent uses the Vercel AI SDK's `ToolLoopAgent`. `resolveModel()` in `agent.ts` maps a model name to a provider and that provider's hosted web-search tool: bare names (e.g. `gpt-5.6-luna`) → OpenAI; `anthropic/...` and `google/...` prefixes select other providers. Adding a provider means adding a case there.
 
 Runtime flow:
 
