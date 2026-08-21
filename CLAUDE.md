@@ -42,7 +42,7 @@ The two halves share only the markdown files and the `@livingwp/article-contract
 
 ### Provider flexibility
 
-The research model defaults to the `RESEARCH_MODEL` environment variable (see `DEFAULT_MODEL_NAME` in `src/agent/src/agent.ts`), which CI sets from the `RESEARCH_MODEL` repository variable. An article can pin a different model in `industries.json` via `research_model`, which takes precedence over the environment variable; articles without the key follow it. Bare model names (e.g. `gpt-5.4-2026-03-05`) default to OpenAI; prefix with `anthropic/` or `google/` to use those providers.
+The research model defaults to the `RESEARCH_MODEL` environment variable (see `DEFAULT_MODEL_NAME` in `src/agent/src/agent.ts`), which CI sets from the `RESEARCH_MODEL` repository variable. An article can pin a different model in `industries.json` via `research_model`, which takes precedence over the environment variable; articles without the key follow it. Bare model names default to OpenAI; prefix with `anthropic/` or `google/` to use those providers. Docs and website copy don't name a specific model — they say "frontier model" so the copy doesn't go stale when `RESEARCH_MODEL` changes.
 
 Reasoning effort follows the same pattern: `RESEARCH_REASONING_EFFORT` (default `medium`) sets `DEFAULT_REASONING_EFFORT`, and an article can pin `research_reasoning_effort` in `industries.json`. The shared scale is `minimal | low | medium | high | xhigh | max`; `resolveModel()` maps it onto each provider's own option (OpenAI `reasoningEffort`, Anthropic `effort`, Google `thinkingConfig.thinkingLevel`), clamping the ends that a provider doesn't support. An off-scale value throws rather than falling back to a default.
 
