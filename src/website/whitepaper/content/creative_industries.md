@@ -8,24 +8,18 @@ article_summary: >-
   AI adoption across Aotearoa New Zealand’s creative industries is broadening
   from individual experimentation into organisational practice. The latest
   evidence does not suggest a sudden shift to fully automated creative
-  production. Instead, it points to a more incremental model: AI is being used
-  to accelerate research,…
+  production.
 article_updated_at: '2026-08-19T00:34:23+12:00'
 article_version: false
 description: >-
   AI adoption across Aotearoa New Zealand’s creative industries is broadening
-  from individual experimentation into organisational practice. The latest
-  evidence…
+  from individual experimentation into organisational practice.
 permalink: /whitepaper/creative_industries/
 title: AI in Creative Industries
 ---
 
 # AI in Creative Industries in Aotearoa New Zealand: A Living Whitepaper
 
-**Article slug:** `creative_industries`  
-**Updated:** August 18, 2026  
-**Previous update:** July 13, 2026  
-**Research cutoff:** August 18, 2026  
 
 ## Introduction
 
@@ -118,7 +112,7 @@ The practical implication is that New Zealand’s creative industries remain in 
 
 ## Current State by Subsector
 
-## 1. Journalism and Publishing
+### 1. Journalism and Publishing
 
 Journalism continues to provide the clearest public evidence of operational AI adoption in New Zealand.
 
@@ -142,7 +136,7 @@ TVNZ’s principles similarly permit AI for research, transcription, translation
 
 New Zealand journalism is moving toward **AI-assisted scale without fully automated editorial authorship**. The strongest use cases increase coverage or reduce routine workload. However, public trust, provenance and transparency remain limiting factors. AUT’s 2026 Trust in News research found that 60% of New Zealanders remain uncomfortable with news mostly produced by AI. ([aut.ac.nz](https://www.aut.ac.nz/news/stories/trust-in-news-up-significantly-in-2026?utm_source=openai))
 
-## 2. Screen, Film, Television and VFX
+### 2. Screen, Film, Television and VFX
 
 Screen remains the sector with the most developed formal AI governance.
 
@@ -168,7 +162,7 @@ The proposed **Aotearoa Creative Artificial Intelligence Research Institute**, l
 
 Screen-sector adoption is likely to remain concentrated in pre-visualisation, script analysis, asset development, visual effects, post-production and production planning. The strongest governance trend is the movement from voluntary principles to **funding-stage disclosure and assessment**.
 
-## 3. Advertising, Marketing and Commercial Creative
+### 3. Advertising, Marketing and Commercial Creative
 
 Commercial creative is likely to be the fastest-normalising segment of the market.
 
@@ -189,7 +183,7 @@ The 2026 Huffer controversy demonstrated how quickly commercial AI use can becom
 
 The commercial sector is moving fastest toward **AI-native operating models**, but the most defensible organisations will be those that combine production efficiency with clear consent, transparent contracts, brand accountability and human creative direction.
 
-## 4. Music
+### 4. Music
 
 Music remains the creative subsector where AI adoption, economic risk and rights concerns are most tightly connected.
 
@@ -219,7 +213,7 @@ The most recent New Zealand development is procedural: NZ On Air’s current mus
 
 Music is likely to remain a cautious-adoption sector. Creators may use AI privately or experimentally while resisting public release where provenance, consent, compensation or cultural integrity cannot be demonstrated.
 
-## 5. Games and Creative Technology
+### 5. Games and Creative Technology
 
 Games and interactive media remain New Zealand’s strongest creative-technology growth frontier.
 
@@ -240,7 +234,7 @@ The **Creative Tech Accelerator**, co-designed by Microsoft, NZIST and Seen Vent
 
 Games and VFX may generate the largest long-term productivity gains from AI, but they also face significant questions about artistic labour, data provenance, training pipelines and the preservation of distinctive human-made worlds.
 
-## 6. Arts Funding, Education and Creative Institutions
+### 6. Arts Funding, Education and Creative Institutions
 
 Creative New Zealand’s guidance makes clear that AI use will not, by itself, disadvantage an applicant. It asks creators to disclose AI use, lead with their own voice, review outputs, respect IP, protect private information and seek appropriate cultural advice for projects involving Indigenous, Pacific or other communities. ([creativenz.govt.nz](https://creativenz.govt.nz/funding-and-support/advice-and-support/making-an-application/use-of-artificial-intelligence))
 

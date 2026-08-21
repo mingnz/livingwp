@@ -6,23 +6,18 @@ article_latest: true
 article_series: nz
 article_summary: >-
   The past month has produced a clearer sign of AI becoming part of New
-  Zealand’s economic and administrative infrastructure. The strongest
-  developments were Mercury’s NZ$53 million investment in Datagrid, a new
-  generative-AI pilot for biosecurity standards, a refreshed public-service AI
-  guidance and toolkit, and a…
+  Zealand’s economic and administrative infrastructure.
 article_updated_at: '2026-08-19T00:21:35+12:00'
 article_version: false
 description: >-
   The past month has produced a clearer sign of AI becoming part of New
-  Zealand’s economic and administrative infrastructure. The strongest
-  developments were…
+  Zealand’s economic and administrative infrastructure.
 permalink: /whitepaper/nz/
 title: State of AI in New Zealand
 ---
 
 # State of AI in New Zealand
 
-**Updated: 18 August 2026**
 
 ## Executive Summary
 

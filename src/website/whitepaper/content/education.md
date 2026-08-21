@@ -17,8 +17,6 @@ title: AI in Education
 ---
 
 # AI in Education in New Zealand: A Living Whitepaper  
-*Updated for publication on 18 August 2026*  
-*Previous update: 13 July 2026*
 
 ## Executive Snapshot
 

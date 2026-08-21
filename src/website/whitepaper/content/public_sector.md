@@ -6,24 +6,18 @@ article_latest: true
 article_series: public_sector
 article_summary: >-
   AI adoption across New Zealand’s public sector is moving from broad
-  experimentation toward practical, mission-specific deployment. The most recent
-  developments show agencies applying AI to biosecurity standards, tourism
-  information, mental-health service navigation, regulatory work, digital
-  identity, and internal…
+  experimentation toward practical, mission-specific deployment.
 article_updated_at: '2026-08-19T00:28:01+12:00'
 article_version: false
 description: >-
   AI adoption across New Zealand’s public sector is moving from broad
-  experimentation toward practical, mission-specific deployment. The most
-  recent…
+  experimentation toward practical, mission-specific deployment.
 permalink: /whitepaper/public_sector/
 title: AI in Public Sector
 ---
 
 # AI in Public Sector in Aotearoa New Zealand: A Living Whitepaper
 
-**Updated: August 18, 2026**  
-**Article slug:** `public_sector`  
 **Update window:** July 14–August 18, 2026
 
 ## Introduction

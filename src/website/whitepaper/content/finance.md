@@ -8,24 +8,18 @@ article_summary: >-
   AI adoption across New Zealand’s financial sector is becoming more
   operational, measurable, and customer-outcome focused. The sector is still not
   characterised by widespread autonomous lending, underwriting, investment, or
-  advice decisions. Instead, the strongest adoption continues to occur in fraud
-  prevention,…
+  advice decisions.
 article_updated_at: '2026-08-19T00:36:27+12:00'
 article_version: false
 description: >-
   AI adoption across New Zealand’s financial sector is becoming more
-  operational, measurable, and customer-outcome focused. The sector is still
-  not…
+  operational, measurable, and customer-outcome focused.
 permalink: /whitepaper/finance/
 title: AI in Finance
 ---
 
 # AI in Finance in Aotearoa New Zealand: A Living Whitepaper
 
-**Article slug:** `finance`  
-**Snapshot date:** **August 18, 2026**  
-**Previous edition:** July 13, 2026  
-**Update window:** July 14–August 18, 2026
 
 ## Introduction
 

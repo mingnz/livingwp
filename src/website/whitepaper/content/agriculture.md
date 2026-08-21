@@ -5,23 +5,20 @@ article_kind: industry
 article_latest: true
 article_series: agriculture
 article_summary: >-
-  > Editorial date note: The latest verified information available for this
-  update is dated 18 August 2026. The supplied date of 19 August 2026 is one day
-  ahead of the current reporting date.
+  AI adoption in New Zealand agriculture is becoming more practical, targeted
+  and institutionally supported. The sector is not experiencing a single,
+  uniform technology transition.
 article_updated_at: '2026-08-19T00:30:04+12:00'
 article_version: false
 description: >-
-  > Editorial date note: The latest verified information available for this
-  update is dated 18 August 2026. The supplied date of 19 August 2026 is one day
-  ahead…
+  AI adoption in New Zealand agriculture is becoming more practical, targeted
+  and institutionally supported.
 permalink: /whitepaper/agriculture/
 title: AI in Agriculture
 ---
 
 # AI in Agriculture in Aotearoa New Zealand: A Living Whitepaper  
-*Updated 18 August 2026*  
 
-> **Editorial date note:** The latest verified information available for this update is dated **18 August 2026**. The supplied date of **19 August 2026** is one day ahead of the current reporting date.
 
 ## Introduction
 
