@@ -17,7 +17,37 @@ contains two parts:
 - **`packages/article-contract`** – the shared article frontmatter contract used
   by both, so the agent and site can't drift.
 
-![system diagram](docs/assets/system.excalidraw.png)
+```mermaid
+flowchart LR
+    subgraph actions[GitHub Actions]
+        trigger[Pipeline<br/>monthly · manual]
+    end
+
+    subgraph agent[src/agent]
+        research[Research Agent<br/>Vercel AI SDK]
+        search[Web Search<br/>provider-hosted, cited]
+    end
+
+    subgraph content[Markdown content]
+        latest[Latest article]
+        archive[Archived editions]
+    end
+
+    subgraph website[src/website]
+        astro[Astro build]
+        pages[GitHub Pages]
+    end
+
+    trigger --> research
+    research <--> search
+    latest -->|reads previous| research
+    research -->|writes new edition| latest
+    latest -->|outgoing version| archive
+    latest -->|auto-merged PR<br/>audit trail| astro
+    archive --> astro
+    astro --> pages
+    pages -.->|reader flags an issue| issue[GitHub Issue]
+```
 
 ## Autonomous publishing
 
