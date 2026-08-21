@@ -164,8 +164,6 @@ URL, or
 
 Title, author, organisation, and date
 
-Remove tracking query parameters (such as utm_*) from cited URLs.
-
 Do not include:
 
 Follow-up questions

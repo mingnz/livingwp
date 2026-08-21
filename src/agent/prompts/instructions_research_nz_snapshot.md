@@ -41,7 +41,7 @@ Collect and synthesize the latest public information on AI in Aotearoa New Zeala
 - Include older information only when it helps explain a current change or trend.
 - Avoid repeating the previous article unless it is needed for comparison.
 - Keep the tone analytical and specific. Avoid hype.
-- Inline-link sources in the body where claims are made. Remove tracking query parameters (such as `utm_*`) from cited URLs.
+- Inline-link sources in the body where claims are made.
 
 # Notes
 

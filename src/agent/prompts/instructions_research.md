@@ -40,9 +40,9 @@ page's meta description and social cards.]
 - The website renders the article title, updated date, latest/archived status, and edition history above the body. Do not repeat run metadata inside the article: no article slug, no "Updated" / "Previous update" / "Research cutoff" lines, no frontmatter. Start directly with the H1, then the opening summary paragraph.
 - Use exactly one H1. Use `##` for sections and `###` for subsections; do not skip heading levels.
 - Write dates as "18 August 2026".
-- Inline-link sources in the body where claims are made. Remove tracking query parameters (such as `utm_*`) from cited URLs.
+- Inline-link sources in the body where claims are made.
 - Use bullet points for enumerable facts; use prose for analysis and synthesis.
-- Aim for roughly 2,500–4,000 words: informative but concise, avoiding overly technical detail unless crucial.
+- Be as concise and readable as possible. Every section should earn its length: prefer tight prose over exhaustive coverage, cut repetition across sections, and avoid overly technical detail unless crucial.
 
 # Notes
 
