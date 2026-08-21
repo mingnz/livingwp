@@ -90,7 +90,7 @@ The agent writes exactly these fields. Retired Jekyll-era fields (`layout`, `dat
 
 ### GitHub Actions Workflows
 
-- `run_agent.yml` — Runs the agent and opens a PR with updated articles
+- `run_agent.yml` — Runs the agent monthly (cron `23 1 1 * *`) or on demand, opens a PR with updated articles, then auto-merges it and dispatches the website deploy (manual runs can opt out via the `auto_merge` input). The merged PR + usage comment + run logs are the audit trail; there is no human review gate.
 - `add_industry.yml` — Adds a new industry to config and generates its first article
 - `deploy_website.yml` — Builds the Astro site (Node 22, `npm ci` at root + `npm run build:site`) and deploys to GitHub Pages (triggers on `src/website/**` changes to main)
 

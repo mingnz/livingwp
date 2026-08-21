@@ -19,7 +19,7 @@ export const GET: APIRoute = async ({ site }) => {
   const lines: string[] = [
     '# AI in NZ Living Whitepaper',
     '',
-    '> A living record of how generative AI is being adopted across industries in Aotearoa New Zealand. Each report is researched and written by an AI agent, reviewed by the community, and updated as the landscape evolves. Reports cite primary sources inline.',
+    '> A living record of how generative AI is being adopted across industries in Aotearoa New Zealand. Each report is researched, written, and published autonomously by an AI agent each month, with a public audit trail of every run on GitHub. Reports cite primary sources inline.',
     '',
   ];
 

@@ -17,7 +17,7 @@ export const GET: APIRoute = ({ props, site }) => {
   const source = new URL(entry.data.permalink, site).href;
   const header =
     `> Source: ${source} · Updated ${formatDate(entry.data.article_updated_at)} · ${PUBLISHER_NAME}\n` +
-    '> Researched and written by an AI agent, reviewed by the community.\n\n';
+    '> Researched, written, and published autonomously by an AI agent; every run is auditable on GitHub.\n\n';
   return new Response(header + (entry.body ?? ''), {
     headers: { 'Content-Type': 'text/markdown; charset=utf-8' },
   });

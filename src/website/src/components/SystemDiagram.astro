@@ -22,8 +22,8 @@ const nodes: Node[] = [
     id: 'trigger',
     rect: [24, 172, 168, 76],
     title: 'Pipeline',
-    sub: 'scheduled · manual',
-    desc: 'A GitHub Actions workflow starts a run — on a schedule or on demand.',
+    sub: 'monthly · manual',
+    desc: 'A GitHub Actions workflow starts a run automatically at the start of each month (or on demand).',
   },
   {
     id: 'agent',
@@ -52,7 +52,7 @@ const nodes: Node[] = [
     rect: [836, 172, 160, 76],
     title: 'Website',
     sub: 'GitHub Pages',
-    desc: 'A pull request is opened for review; once merged, the site rebuilds and deploys automatically.',
+    desc: 'A pull request is opened and merged automatically — it stays on GitHub as the audit trail — then the site rebuilds and deploys.',
   },
 ];
 
@@ -86,10 +86,10 @@ const descId = 'system-diagram-desc';
     >
       <title id={titleId}>How the Living Whitepaper is published</title>
       <desc id={descId}>
-        A GitHub Actions pipeline runs the research agent, which uses live web
-        search to rewrite each report. The agent reads the previous Markdown
-        version and writes a new one, which is reviewed and then built and
-        deployed to the website.
+        A GitHub Actions pipeline runs the research agent monthly, which uses
+        live web search to rewrite each report. The agent reads the previous
+        Markdown version and writes a new one, which is published autonomously
+        and then built and deployed to the website.
       </desc>
 
       <defs>
