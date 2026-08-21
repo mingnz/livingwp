@@ -1,68 +1,51 @@
-Collect and synthesize the latest information on AI adoption in a specific industry within New Zealand, producing a detailed and well-organized report that serves as a "Living Whitepaper." This report should include recent news, research, and case studies, offering a high-level snapshot of the current state of AI.
+Collect and synthesize the latest information on AI adoption in a specific industry within Aotearoa New Zealand, producing a detailed and well-organized report that serves as a "Living Whitepaper." The report gives industry professionals and stakeholders a current, evidence-based snapshot of the state of AI adoption in their sector.
 
-# Gather Information
+# Research
 
-- Search and collect the latest news articles, research papers, and case studies related to AI adoption in the specified industry within New Zealand.
-- Focus on reputable sources for accurate and relevant information.
-
-# Content Organization
-
-- Create clear headings and subheadings to structure the report, ensuring it's easy to navigate.
-- Use bullet points for concise information and summaries.
-- Highlight key findings and insights in each section.
+- Search for the latest news, government announcements, research papers, and case studies related to AI adoption in the specified industry within New Zealand.
+- Prioritize reputable primary or near-primary sources: government releases, regulators, universities, established New Zealand media, industry bodies, and company announcements with substantive detail.
+- Distinguish announcements from operating deployments. A funding decision or pilot announcement is not evidence that a system is running at scale.
+- If a previous article is provided, treat it as the baseline: verify whether its key claims have progressed, stalled, or been superseded, and search beyond its scope for new developments.
 
 # Analysis and Synthesis
 
-- Analyze the collected information to identify patterns, trends, and important developments within the industry.
-- Provide a synthesis of findings to offer a comprehensive view of AI adoption and its impacts.
+- Identify patterns, trends, and important developments; synthesize across sources rather than listing items.
+- Label vendor-reported, self-reported, or otherwise unverified results as such.
+- Say explicitly where evidence is thin, mixed, or missing instead of padding with weakly related material.
+- Keep the tone analytical and specific. Avoid hype.
 
-# Steps
+# Article Structure
 
-1. **Research Collection**: Gather recent information on AI adoption from reputable sources.
-2. **Information Sorting**: Categorize the information into sections such as News, Research, Case Studies, Trends, and Conclusions.
-3. **Content Development**: Write the report using clear headings and subheadings. Summarize findings in a digestible format.
-4. **Conclusion Synthesis**: Conclude with an overall assessment of AI adoption in the industry.
-5. **Publication Preparation**: Prepare the report for automatic publication, ensuring it meets format requirements.
+Use this skeleton. Merge, rename, or omit a section when the evidence warrants it, but always keep the opening summary paragraph and the "What Has Changed" section:
 
-# Output Format
+```
+# AI in [Industry] in New Zealand: A Living Whitepaper
 
-- Use headings and subheadings for clarity.
-- Implement bullet points and summaries for easy digestibility.
-- Limit content to essentials, avoiding overly technical details unless crucial.
+[Opening summary: one or two sentences, under 300 characters, that stand
+alone as a description of the article. It is extracted verbatim for the
+page's meta description and social cards.]
 
-# Examples
+## Executive Summary
+## What Has Changed Since the Last Update
+## Current State of AI Adoption
+## Governance, Policy and Regulation
+## Case Studies
+## Trends
+## Outlook
+## Overall Assessment
+```
 
-**Example Structure:**
+# Formatting and Site Context
 
-**Title: AI Adoption in [Industry] in New Zealand: A Living Whitepaper**
-
-- **Introduction**
-  - Overview of the industry's state in New Zealand.
-- **Current News**
-
-  - [Bullet points summarizing recent news articles]
-
-- **Research Overview**
-
-  - Summary of recent studies and their findings.
-
-- **Case Studies**
-
-  - Description and analysis of notable case studies and their outcomes.
-
-- **Trends and Predictions**
-
-  - Current trends and future predictions regarding AI in the industry.
-
-- **Conclusion**
-  - Overall assessment and strategic insights.
-
-(Examples should be substantive, reflecting realistic data and insights specific to [Industry] and longer explanations would be expected in actual content.)
+- The website renders the article title, updated date, latest/archived status, and edition history above the body. Do not repeat run metadata inside the article: no article slug, no "Updated" / "Previous update" / "Research cutoff" lines, no frontmatter. Start directly with the H1, then the opening summary paragraph.
+- Use exactly one H1. Use `##` for sections and `###` for subsections; do not skip heading levels.
+- Write dates as "18 August 2026".
+- Inline-link sources in the body where claims are made. Remove tracking query parameters (such as `utm_*`) from cited URLs.
+- Use bullet points for enumerable facts; use prose for analysis and synthesis.
+- Aim for roughly 2,500–4,000 words: informative but concise, avoiding overly technical detail unless crucial.
 
 # Notes
 
+- The audience is stakeholders within the New Zealand industry looking for strategic insights.
 - Ensure all sources are credible and up-to-date.
-- Aim for an informative yet concise report suitable for industry professionals seeking quick insights.
-- Consider the audience: mainly stakeholders within the New Zealand industry looking for strategic insights.
-- If a previous report is provided, use this as a baseline and update it with the latest findings. However, also don't limit the scope to the content in the previous report - look for new developments also and highlight changes since the last report.
-- The output should be publication ready, do not include any followup suggestions or anything else similar.
+- The output is published verbatim as the article body. Do not include process notes, follow-up suggestions, or any text outside the article.
