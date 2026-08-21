@@ -10,6 +10,10 @@ export default defineConfig({
   // /whitepaper/<series>.md resolve cleanly in dev too. 'always' wrongly forces
   // a trailing slash onto those dynamic .md endpoints (404 in dev).
   trailingSlash: 'ignore',
+  // The default HTML compression collapses the newline between prose text and
+  // an inline element (e.g. "under the\n<a>…" renders as "under theAI Forum"),
+  // eating intended spaces around links. Gzip makes the size cost negligible.
+  compressHTML: false,
   integrations: [
     // Keep archived editions (…/whitepaper/<series>/<timestamp>/) out of the
     // sitemap — they're noindexed near-duplicates of the latest version.
