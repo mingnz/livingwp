@@ -24,7 +24,7 @@ Exclude AI use in unrelated sectors (e.g. health, finance, retail).
 Geographic and Temporal Constraints
 Geographic scope: Apart from explicitly mentioned, focus on New Zealand
 
-Temporal scope: Past 18 months only
+Temporal scope: Past 12 months only
 
 Exclude any source older than this timeframe
 
@@ -90,31 +90,31 @@ Content that does not clearly describe AI usage
 Exclude content from industry websites that is primarily promotional, aspirational, or does not explicitly describe AI methods, applications, and observed outcomes.
 
 Required Whitepaper Structure (Do Not Deviate)
-Use only the following main headings:
+Use exactly the following markdown headings. The document title is the only H1; every other main heading is an H2 (`##`). "Title" is not a section heading — do not output a heading named "Title".
 
-Title
+# AI Adoption in the AEC Sector in New Zealand: A Living Whitepaper
 
-AI Adoption in the AEC Sector in New Zealand: A Living Whitepaper
+Immediately after the H1, open with one or two sentences (under 300 characters) summarising the current state of AI adoption in the NZ AEC sector. This paragraph is extracted verbatim as the page description.
 
-Introduction
+## Introduction
 
 High-level synthesis of AI adoption in NZ AEC over the past 12 months
 
-Policy and Frameworks
+## Policy and Frameworks
 
 Relevant New Zealand government policies, strategies, and AI governance frameworks affecting the AEC sector, including alignment with the AI Blueprint for Aotearoa and the AEC Working Group mandate.
 
-Current News
+## Current News
 
 Bullet-point summary of key NZ AI-related AEC news from the past 12 months, with emphasis on relevance and implications.
 
-Research Overview
+## Research Overview
 
 Industry-led research and reports
 
 Summary of AI in AEC research capabilities at NZ universities and recent research studies
 
-Case Studies
+## Case Studies
 
 NZ-based, AI-explicit case studies
 
@@ -122,15 +122,15 @@ Describe: context, AI method, application, observed outcomes or impacts
 
 Avoid promotional language
 
-Trends and Outlook
+## Trends and Outlook
 
 Identification of current trends and future predictions related to AI adoption in the AEC sector in NZ based on the observed signals from the research, policy, governance, and practice. Identification of what kind of AI-based startups are emerging for the AEC sector in NZ? Identification what learnings and risks are emerging from the AI adoption in AEC. What early signals or trends suggest how AI might influence business models in the New Zealand AEC sector?
 
-A Global Perspective
+## A Global Perspective
 
 In similar economies to NZ, what are the major trends in the AI adoption in the AEC sector? What kind of AI-based startups are emerging in the AEC sector? What kind of internal AI capabilities are being developed by the AEC companies? What are the visible impacts, key risks, and learnings globally? What early signals or trends suggest how AI might influence business models in the AEC sector? - This section is intended to go beyond NZ context and provide a global overview. So do not limit to search in the NZ context in this section.
 
-Conclusion
+## Conclusion
 
 Overall assessment of AI adoption in the NZ AEC sector, highlighting strategic insights. Additionally, outline the next steps that should be taken based on the current state and the lessons learned.
 
@@ -148,11 +148,15 @@ Avoid technical depth unless essential for clarity
 Output and Formatting Rules
 Use Markdown
 
-Use clear headings and subheadings, make them Bold (Only keep main headings and subheadings bold).
+Use exactly one H1 (the document title). Use ## for main sections and ### for subsections; do not skip heading levels.
+
+Do not add bold markers to heading text (the website styles headings), and do not bold body text.
+
+The website renders the article title, updated date, and edition history above the body. Do not repeat run metadata inside the article: no article slug and no "Updated", "Previous update", or "Research cutoff" lines.
+
+Write dates as "18 August 2026".
 
 Use bullet points for summaries
-
-Do not bold anything apart from the headings and subheadings.
 
 Cite sources using:
 
@@ -194,7 +198,7 @@ Legal or regulatory advice
 
 Speculative technologies without NZ evidence
 
-Global benchmarking
+Global benchmarking outside the "A Global Perspective" section
 
 Final Instruction
 

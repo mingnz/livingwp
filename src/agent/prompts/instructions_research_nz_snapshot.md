@@ -23,16 +23,17 @@ Collect and synthesize the latest public information on AI in Aotearoa New Zeala
 # Output Structure
 
 - Write in publication-ready markdown.
-- Use a strong opening paragraph that works as a standalone homepage summary.
-- Use clear headings and concise paragraphs or bullets where they improve readability.
+- Immediately after the H1, open with a one-to-two sentence summary (under 300 characters) that stands alone as a description of the month — it is extracted verbatim for the page's meta description and homepage summary. Put the fuller narrative in the Executive Summary.
+- Use clear headings and concise paragraphs or bullets where they improve readability. Use exactly one H1, `##` for sections.
 - Recommended structure:
   - `# State of AI in New Zealand`
-  - `**Updated: [date]**`
   - `## Executive Summary`
   - `## What Happened in the Past Month`
   - `## Trend Line Across Recent Snapshots`
   - `## What Looks Quiet, Unchanged, or Early`
   - `## Overall Assessment`
+- The website renders the article title, updated date, and edition history above the body. Do not repeat run metadata inside the article: no article slug and no "Updated" line.
+- Write dates as "18 August 2026".
 
 # Content Guidance
 
