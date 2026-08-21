@@ -1,12 +1,22 @@
 name: Update whitepapers
 
 on:
+  schedule:
+    # Beginning of each month: 01:23 UTC on the 1st (~1:23pm on the 1st in
+    # Pacific/Auckland). Scheduled runs update every article and merge
+    # automatically; the PR, commits, and action logs remain as the audit trail.
+    - cron: "23 1 1 * *"
   workflow_dispatch:
     inputs:
       article_filter:
         description: "Filter for articles to update (optional)"
         required: false
         default: ""
+      auto_merge:
+        description: "Merge the generated PR automatically"
+        required: false
+        type: boolean
+        default: true
   workflow_call:
     inputs:
       article_filter:
@@ -27,6 +37,9 @@ permissions:
   contents: write
   pull-requests: write
   issues: write
+  # Needed to dispatch the website deploy after an auto-merge (pushes made
+  # with GITHUB_TOKEN don't trigger other workflows on their own).
+  actions: write
 
 env:
   # Sets the default model name used for the research agent
@@ -113,8 +126,12 @@ jobs:
             ## Changes
             - Updated article content based on latest research
             - Generated on: ${{ github.run_id }}
+            - Run logs: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
 
-            Please review the changes before merging.
+            Scheduled runs merge this PR automatically. The PR, its commits, the
+            usage report comment, and the linked run logs form the audit trail
+            for this update — if anything looks wrong, open an issue or a
+            follow-up PR.
           branch: ${{ env.BRANCH_NAME }}
           delete-branch: true
           draft: false
@@ -171,3 +188,27 @@ jobs:
           issue-number: ${{ steps.pr_number.outputs.number }}
           body-path: ${{ runner.temp }}/livingwp-usage-comment.md
           edit-mode: replace
+
+      # Autonomous publishing: scheduled runs (and manual runs unless opted
+      # out) merge their own PR. The merged PR, its commits, the usage comment,
+      # and this action's logs remain as the audit trail for the run.
+      - name: Merge pull request
+        if: ${{ !inputs.branch_name && steps.pr_number.outputs.number != '' && (github.event_name == 'schedule' || inputs.auto_merge == true) }}
+        id: merge_pr
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ steps.pr_number.outputs.number }}
+        run: |
+          gh pr merge "$PR_NUMBER" \
+            --repo "$GITHUB_REPOSITORY" \
+            --squash \
+            --delete-branch
+          echo "merged=true" >> "$GITHUB_OUTPUT"
+
+      # Merges made with GITHUB_TOKEN don't fire push-triggered workflows, so
+      # kick off the website deploy explicitly.
+      - name: Trigger website deploy
+        if: ${{ steps.merge_pr.outputs.merged == 'true' }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run deploy_website.yml --repo "$GITHUB_REPOSITORY" --ref main

@@ -1,0 +1,36 @@
+name: Article feedback
+description: Flag an error or problem in a published article
+title: "Article feedback: "
+labels: ["article-feedback"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Articles on this site are researched, written, and published
+        autonomously by an AI agent. If you've spotted something wrong —
+        a factual error, a broken or misattributed source, or misleading
+        framing — this is the place to report it. Each update's pull
+        request and action logs record how the agent arrived at its
+        output, which helps when investigating a report.
+  - type: input
+    id: article-url
+    attributes:
+      label: Article URL
+      description: Link to the article (and edition) the issue is about.
+      placeholder: https://example.com/whitepaper/healthcare/
+    validations:
+      required: true
+  - type: textarea
+    id: whats-wrong
+    attributes:
+      label: What's wrong?
+      description: Quote the problematic passage and explain the issue.
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested correction or source
+      description: Optional — a correction, or a source that supports it.
+    validations:
+      required: false

@@ -5,8 +5,10 @@
 
 An open source experiment tracking how generative AI is used across Aotearoa
 New Zealand. The site publishes a monthly national "State of AI in New Zealand"
-snapshot alongside sector-specific living articles. The repository contains two
-parts:
+snapshot alongside sector-specific living articles. The whole pipeline is
+autonomous: at the start of each month a GitHub Actions run researches,
+rewrites, and publishes every article with no human in the loop. The repository
+contains two parts:
 
 - **`src/agent`** – the TypeScript code for an LLM agent that gathers research and
   writes updates.
@@ -15,7 +17,59 @@ parts:
 - **`packages/article-contract`** – the shared article frontmatter contract used
   by both, so the agent and site can't drift.
 
-![system diagram](docs/assets/system.excalidraw.png)
+```mermaid
+flowchart LR
+    subgraph actions[GitHub Actions]
+        trigger[Pipeline<br/>monthly · manual]
+    end
+
+    subgraph agent[src/agent]
+        research[Research Agent<br/>Vercel AI SDK]
+        search[Web Search<br/>provider-hosted, cited]
+    end
+
+    subgraph content[Markdown content]
+        latest[Latest article]
+        archive[Archived editions]
+    end
+
+    subgraph website[src/website]
+        astro[Astro build]
+        pages[GitHub Pages]
+    end
+
+    trigger --> research
+    research <--> search
+    latest -->|reads previous| research
+    research -->|writes new edition| latest
+    latest -->|outgoing version| archive
+    latest -->|auto-merged PR<br/>audit trail| astro
+    archive --> astro
+    astro --> pages
+    pages -.->|reader flags an issue| issue[GitHub Issue]
+```
+
+## Autonomous publishing
+
+The `run_agent.yml` workflow runs on a monthly schedule (01:23 UTC on the 1st,
+early afternoon on the 1st in Pacific/Auckland) and can also be started
+manually from the Actions tab. Each run:
+
+1. Researches and rewrites every configured article.
+2. Opens a pull request with the changes and a token-usage report comment.
+3. Merges the pull request automatically and triggers the website deploy.
+
+No human approves an update before it goes live. Instead, every run leaves a
+complete audit trail: the merged pull request records the exact content
+changes, the usage comment records model and token spend, and the Actions run
+logs record how the agent arrived at its output. If a published article has a
+problem, use the "Flag an issue" link on the article page (or open an
+[article feedback issue](https://github.com/mingnz/livingwp/issues/new?template=article-feedback.yml)
+directly) and it can be corrected in a follow-up run or manual edit.
+
+Manual runs merge automatically too by default; untick the `auto_merge` input
+when dispatching the workflow to leave the pull request open for review
+instead.
 
 ## Contributing
 
@@ -23,7 +77,7 @@ We welcome contributions from the community! There are two main ways you can get
 
 - **Open a Pull Request**: If you want to make direct edits to the code or documentation, please fork the repository and open a Pull Request with your changes. This includes updates to the agent logic, website, or any other part of the project.
 
-- **Open an Issue**: If you have suggestions, ideas, or have found a bug, feel free to open an Issue. This is a great way to propose new features, report problems, or discuss improvements.
+- **Open an Issue**: If you have suggestions, ideas, or have found a bug, feel free to open an Issue. This is a great way to propose new features, report problems, or discuss improvements. To report a problem in a published article, use the "Flag an issue" link on the article page — it pre-fills the article feedback template.
 
 ### Editing the Research Prompts
 
@@ -107,18 +161,15 @@ flowchart TD
 
     D --> E[Commit Changes]
 
-    E -->     F[Open PR<br/>for Review]
+    E --> F[Open PR<br/>Audit Trail]
 
-    F --> G{Human Review}
+    F --> G[Auto-Merge PR]
 
-    G -->|Needs Edits| H[Human Makes Edits<br/>to PR]
-    G -->|Approve| I[Merge PR]
+    G --> H[GitHub Action<br/>Auto Deploy to Website]
 
-    H --> G
+    H --> I[End]
 
-    I --> J[GitHub Action<br/>Auto Deploy to Website]
-
-    J --> K[End]
+    H -.->|Reader flags an issue| J[GitHub Issue<br/>Human Follow-up]
 ```
 
 ## Development

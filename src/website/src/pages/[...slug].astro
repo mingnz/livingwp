@@ -54,6 +54,16 @@ const articleSchema = articleNode(Astro.site!, {
 const markdownUrl = data.article_latest
   ? `/whitepaper/${data.article_series}.md`
   : undefined;
+
+// Articles are published autonomously, so give readers a direct feedback
+// channel: pre-filled GitHub issue creation via the article-feedback form.
+const flagIssueUrl =
+  'https://github.com/mingnz/livingwp/issues/new?' +
+  new URLSearchParams({
+    template: 'article-feedback.yml',
+    title: `Article feedback: ${data.title} (${formatDate(data.article_updated_at)} edition)`,
+    'article-url': canonical.href,
+  }).toString();
 ---
 
 <Base
@@ -132,6 +142,13 @@ const markdownUrl = data.article_latest
             </a>
           )
         }
+        <a
+          class="font-mono text-clay hover:text-pounamu-deep inline-block text-[0.72rem] tracking-[0.14em] uppercase underline decoration-rule underline-offset-4 transition-colors"
+          href={flagIssueUrl}
+          rel="noopener"
+        >
+          ⚑ Flag an issue
+        </a>
       </div>
     </article>
 
