@@ -5,316 +5,451 @@ article_kind: industry
 article_latest: true
 article_series: architecture_engineering_construction
 article_summary: >-
-  This update retains publicly available evidence published between 18 February
-  2025 and 18 August 2026. It incorporates new evidence since the previous
-  update of 13 July 2026, while retaining earlier evidence that remains within
-  the 18-month scope.
-article_updated_at: '2026-08-19T00:39:11+12:00'
+  AI adoption in New Zealand AEC is moving from experimentation to bounded
+  operational use, especially in safety monitoring, document intelligence, asset
+  information and hazard modelling. Sector-wide uptake remains uneven and poorly
+  measured.
+article_updated_at: '2026-08-22T10:23:17+12:00'
 article_version: false
 description: >-
-  This update retains publicly available evidence published between 18 February
-  2025 and 18 August 2026. It incorporates new evidence since the previous
-  update…
+  AI adoption in New Zealand AEC is moving from experimentation to bounded
+  operational use, especially in safety monitoring, document intelligence,
+  asset…
 permalink: /whitepaper/architecture_engineering_construction/
 title: AI in Architecture, Engineering and Construction
 ---
 
-# **Title**
+# AI Adoption in the AEC Sector in New Zealand: A Living Whitepaper
 
-AI Adoption in the AEC Sector in New Zealand: A Living Whitepaper
+AI adoption in New Zealand AEC is moving from experimentation to bounded operational use, especially in safety monitoring, document intelligence, asset information and hazard modelling. Sector-wide uptake remains uneven and poorly measured.
 
-Updated: 18 August 2026
+## Introduction
 
-# **Introduction**
+This edition reviews publicly available evidence from the past 12 months.
 
-This update retains publicly available evidence published between 18 February 2025 and 18 August 2026. It incorporates new evidence since the previous update of 13 July 2026, while retaining earlier evidence that remains within the 18-month scope.
+AI adoption across New Zealand’s architecture, engineering and construction system is becoming more visible, but remains uneven by organisation size, discipline and application area.
 
-AI adoption across New Zealand’s architecture, engineering, and construction system is increasingly visible, but remains uneven. The strongest public evidence is concentrated in:
+The strongest evidence is concentrated in:
 
-- Computer-vision safety and site-monitoring systems.
-- AI-assisted document review, procedure retrieval, and consenting analysis.
-- Infrastructure, flood, hazard, and asset-condition modelling.
+- Computer-vision safety monitoring and road-worker protection.
+- AI-assisted engineering-document review and operational-procedure retrieval.
+- Natural-language access to geotechnical and infrastructure information.
+- Machine learning for flood, hazard and asset-condition assessment.
+- AI-assisted consenting research.
 - Environmental and cultural-impact decision support.
-- AI capability development within professional bodies, universities, and sector organisations.
+- Professional education, university research and internal capability development.
 
-Public evidence of scaled AI use in architectural design authoring, structural engineering production workflows, offsite manufacturing, supply-chain optimisation, and autonomous construction robotics remains limited. The available evidence is predominantly based on case studies, research prototypes, professional guidance, and company-authored reports rather than independently evaluated sector-wide deployment data. (MBIE, New Zealand’s Strategy for Artificial Intelligence: Investing with Confidence, July 2025; AI Forum NZ, AI Blueprint for Aotearoa, May 2026.) ([mbie.govt.nz](https://www.mbie.govt.nz/business-and-employment/economic-growth/digital-policy/new-zealands-ai-strategy-investing-with-confidence?utm_source=openai))
+Public evidence of scaled AI use in architectural design production, structural design authoring, offsite manufacturing, supply-chain optimisation and autonomous construction robotics remains limited. Most available evidence consists of research outputs, pilots, case studies, professional guidance and company-authored reports rather than independently measured sector-wide deployment data.
 
-There is still no publicly available, independently measured New Zealand-wide rate of AI adoption across the AEC sector. The AI Forum NZ AEC Working Group opened an AEC-specific survey on 30 July 2026 to collect evidence about usage, perceived value, governance, barriers, and capability needs. Results had not been published by 18 August 2026. This limits confidence in claims about sector-wide penetration. ([aec.aiforum.org.nz](https://aec.aiforum.org.nz/knowledgehub/ai-in-aec-survey-share-your-perspective/))
+The AI Forum NZ AEC Working Group’s sector survey, launched on 30 July 2026, is intended to address this evidence gap. At the time of this update, results had not been published. (AI Forum NZ AEC Working Group, “AI in AEC Survey: Share Your Perspective,” 30 July 2026.) ([aec.aiforum.org.nz](https://aec.aiforum.org.nz/knowledgehub/ai-in-aec-survey-share-your-perspective/))
 
-The clearest change over the past year is movement from general awareness toward bounded, governed use. The Transpower case study published in July 2026 describes AI agents being used in critical infrastructure for engineering-document review and operational procedure retrieval. The use case is deliberately constrained to approved knowledge sources and human validation, indicating that trust, accountability, and information boundaries are becoming central adoption conditions. ([aec.aiforum.org.nz](https://aec.aiforum.org.nz/knowledgehub/case-study-transpowers-ai-agents-in-critical-infrastructure/))
+The current pattern is best described as bounded augmentation. AI is being applied to repetitive, information-heavy or observation-intensive tasks while professional, regulatory and operational accountability remains with people.
 
-# **Policy and Frameworks**
+## Policy and Frameworks
 
-New Zealand’s primary national policy anchor remains MBIE’s New Zealand’s Strategy for Artificial Intelligence: Investing with Confidence, published in July 2025. The strategy focuses on adoption and application rather than frontier-model development, with an emphasis on productivity, private-sector uptake, innovation, skills, and responsible use. Its implications for AEC are indirect but significant because it establishes the national policy environment within which firms, infrastructure owners, councils, and regulators are expected to consider AI. ([mbie.govt.nz](https://www.mbie.govt.nz/business-and-employment/economic-growth/digital-policy/new-zealands-ai-strategy-investing-with-confidence?utm_source=openai))
+The AI Blueprint for Aotearoa, refreshed in May 2026, identifies the AEC Working Group as a sector workstream supporting a productive, digitally enabled and trusted built environment.
 
-The Public Service AI Framework provides the main governance reference for public-sector agencies. It applies to all forms of AI used in public services and is structured around:
+The AEC workstream’s stated 2030 vision is a highly productive AEC sector in which:
+
+- Transparent, data-driven processes are normal practice.
+- AI supports housing delivery, infrastructure resilience and emissions reduction.
+- High-technology roles help address workforce ageing.
+- Industry, academia and government collaborate on commercialised solutions.
+- Public trust and AI literacy underpin adoption.
+
+The Blueprint identifies recurring sector barriers:
+
+- Weak or inconsistent data capture.
+- Cultural resistance to change.
+- Business-model friction.
+- Unresolved liability and compliance questions.
+- Limited workforce capability.
+- Funding and infrastructure constraints.
+- The need to build trust through education and visible evidence.
+
+Its 2026 priorities include living whitepapers, an AEC AI knowledge hub, an industry aggregator of tools and practices, engagement with banks, insurers and regulators, pilot projects demonstrating value and risk reduction, and advocacy for certification and liability frameworks. (AI Forum NZ, AI Blueprint for Aotearoa, May 2026.) ([aiforum.org.nz](https://aiforum.org.nz/wp-content/uploads/2026/05/NZT009-AI_Blueprint_Report-v05.pdf))
+
+The AEC Working Group’s own mandate is organised around four workstreams:
+
+- Assess: readiness and adoption frameworks.
+- Upskill: training and support.
+- Inform: knowledge sharing, research and case studies.
+- Innovate: pilots and AI-enabled innovation in design, construction and infrastructure.
+
+Its public knowledge hub is now functioning as a sector evidence and capability platform. The Working Group describes its purpose as accelerating responsible AI adoption across New Zealand’s built environment while supporting productivity, resilience, sustainability and equity. (AI Forum NZ AEC Working Group, 2026.) ([aec.aiforum.org.nz](https://aec.aiforum.org.nz/))
+
+The 2026 cross-agency survey of New Zealand government organisations provides a relevant public-sector context. Fifty-nine organisations reported 545 AI use cases, compared with 272 use cases reported by 70 organisations in 2025. The survey describes a shift from experimentation toward implementation, although it does not identify AEC-specific adoption rates. The findings are relevant to councils, infrastructure owners, transport agencies and regulators because many public-sector AI applications involve search, document analysis, workflow automation and decision support. (Government Digital Delivery Agency, “2026 Cross-Agency Survey for Artificial Intelligence Use Cases,” August 2026.) ([digital.govt.nz](https://www.digital.govt.nz/dmsdocument/264~report-2026-cross-agency-survey-for-artificial-intelligence-ai-use-cases/html?utm_source=openai))
+
+The Public Service AI Framework and Responsible AI Guidance for the Public Service remain important reference points for public bodies. Their principles include:
 
 - Inclusive and sustainable development.
 - Human-centred values.
 - Transparency and explainability.
 - Safety and security.
 - Accountability.
+- Human oversight.
+- Privacy and data ethics.
+- Traceable data and risk management.
 
-Its supporting work programme is organised around governance, guardrails, capability, innovation, social licence, and New Zealand’s global voice. These themes are directly relevant to councils, transport agencies, infrastructure owners, building regulators, and other public bodies whose AI use may affect planning, consenting, asset management, safety, or public information. ([digital.govt.nz](https://www.digital.govt.nz/standards-and-guidance/technology-and-architecture/artificial-intelligence/public-service-artificial-intelligence-framework?trk=public_post_comment-text&utm_source=openai))
+Although the framework is not specific to AEC, these principles are directly relevant where AI may affect consenting, infrastructure planning, asset management, safety monitoring or public information. (NZ Digital Government, Public Service AI Framework; Responsible AI Guidance for the Public Service: GenAI.) ([digital.govt.nz](https://www.digital.govt.nz/standards-and-guidance/technology-and-architecture/artificial-intelligence/public-service-artificial-intelligence-framework?trk=public_post_comment-text&utm_source=openai))
 
-The Public Service AI Work Programme to 2027, updated in January 2026, provides a more operational programme. It includes:
+Privacy settings are becoming more relevant to construction and infrastructure applications that use cameras, facial recognition, voice recognition, gait analysis or automated identity verification. The Biometric Processing Privacy Code 2025 came into force on 3 November 2025, with the transition period for existing processing ending on 3 August 2026. Amendment No. 1 took effect on 1 May 2026. The code requires attention to necessity, proportionality, safeguards, transparency, accuracy, storage and security. (Office of the Privacy Commissioner, Biometric Processing Privacy Code 2025, 2025–2026.) ([privacy.org.nz](https://www.privacy.org.nz/privacy-principles/codes-of-practice/biometric-processing-privacy-code/?utm_source=openai))
 
-- A public-service AI hub and shared repositories.
-- Common-use case acceleration.
-- AI sandbox and safe-trial environments.
-- AI assurance models and toolkits.
-- AI safety and security certification.
-- Workforce training and communities of practice.
-- Measurement of public-sector AI use.
+Engineering New Zealand’s current professional discussion frames AI as an assistant rather than a replacement for professional judgement. Document comparison, compliance checking, report drafting and information retrieval are identified as practical uses, while human validation remains necessary for accuracy, relevance, safety and professional accountability. (Engineering New Zealand, “How Engineers Are Using AI in Practice,” 30 April 2026.) ([engineeringnz.org](https://www.engineeringnz.org/news-insights/beyond-the-hype-using-ai-in-practice/?utm_source=openai))
 
-The programme is not AEC-specific, but its mechanisms are relevant to government-led planning, consent, infrastructure, and regulatory workflows. ([digital.govt.nz](https://www.digital.govt.nz/standards-and-guidance/technology-and-architecture/artificial-intelligence/public-service-ai-work-programme?utm_source=openai))
+## Current News
 
-The 2025 cross-agency survey provides the most current public-sector adoption baseline. Seventy agencies reported 272 AI use cases, including 55 already deployed and operational. The most common categories were assisted search, digital detection and analysis, workflow automation, and data summary and analysis. These categories correspond closely with information-heavy AEC functions such as consenting, asset records, technical documentation, compliance review, and infrastructure monitoring. ([digital.govt.nz](https://www.digital.govt.nz/dmsdocument/263~report-2025-cross-agency-survey-for-artificial-intelligence-ai-use-cases/html?utm_source=openai))
+- The AEC Working Group published a Transpower case study on 16 July 2026 describing GPT-based Copilot agents for engineering methodology reviews and operational-procedure retrieval. The agents are restricted to approved internal sources and remain subject to human review. (AI Forum NZ AEC Working Group, “Transpower’s AI Agents in Critical Infrastructure,” 16 July 2026.) ([aec.aiforum.org.nz](https://aec.aiforum.org.nz/knowledgehub/case-study-transpowers-ai-agents-in-critical-infrastructure/))
 
-The Biometric Processing Privacy Code 2025 is relevant to construction and infrastructure applications involving facial recognition, identity verification, gait analysis, voice recognition, or other biometric categorisation. The code was issued on 21 July 2025. It applied from 3 November 2025 to new biometric processing, with the transition period for existing processing ending on 3 August 2026. Amendment No. 1 took effect on 1 May 2026. This is particularly relevant to AI-enabled site access, worker monitoring, safety systems, and public-space surveillance. ([privacy.org.nz](https://www.privacy.org.nz/privacy-principles/codes-of-practice/biometric-processing-privacy-code/?utm_source=openai))
+- The AEC Working Group launched its sector-wide AI in AEC survey on 30 July 2026. The survey seeks information about current use, organisational governance, capability, barriers and training needs. Results were not yet public at the time of this update. (AI Forum NZ AEC Working Group, “AI in AEC Survey: Share Your Perspective,” 30 July 2026.) ([aec.aiforum.org.nz](https://aec.aiforum.org.nz/knowledgehub/ai-in-aec-survey-share-your-perspective/))
 
-Engineering New Zealand’s AI professional-practice guidance provides an important profession-specific interpretation of responsible AI use. It states that AI may assist with document search, report drafting, checklist generation, incident-data analysis, and standards interpretation, but cannot replace engineering judgement, sign-off, physical inspection, peer review, or professional accountability. The guidance also identifies risks associated with hallucinated standards clauses, confidential data, and inappropriate reliance on public AI tools. ([engineeringnz.org](https://www.engineeringnz.org/programmes/engineering-and-ai/ai-in-professional-practice/))
+- The AEC Working Group published the PILLARS framework on 12 August 2026. It treats prompting as a form of specification and emphasises role definition, task boundaries, source control, audience, requirements and review. The article identifies document review, site-note structuring, tender drafting and technical-language translation as suitable lower-risk applications, while retaining engineering, safety and compliance decisions as human responsibilities. (AI Forum NZ AEC Working Group, “AI Prompts for AEC: The PILLARS Framework for Better Briefs,” 12 August 2026.) ([aec.aiforum.org.nz](https://aec.aiforum.org.nz/knowledgehub/ai-prompts-aec-pillars-framework/))
 
-The AI Blueprint for Aotearoa, refreshed in May 2026, positions the AEC Working Group as a sector workstream focused on a productive, digitally enabled, and trusted AEC sector. It identifies sector challenges including weak data capture, cultural resistance, business-model friction, liability settings, compliance uncertainty, limited workforce capability, and the need for public trust. It also records the AEC Working Group’s living whitepaper and 2025–2026 AI-literacy programme. ([aiforum.org.nz](https://aiforum.org.nz/wp-content/uploads/2026/05/NZT009-AI_Blueprint_Report-v05.pdf))
+- Beca reported in May 2026 that its BEYON platform, developed with MBIE for the New Zealand Geotechnical Database, includes a conversational AI capability for querying geospatially relevant geotechnical information. Beca reported reductions of up to 40% in selected information-retrieval tasks, although the public evidence is company-authored. (Beca, “From Data to Decisions: Building a Resilient Aotearoa New Zealand with Digital Twin and AI,” May 2026.) ([beca.com](https://www.beca.com/about-us/news-and-awards/may-2026/from-data-to-decisions-building-a-resilient-aotearoa-new-zealand-with-digital-twin-and-ai?utm_source=openai))
 
-# **Current News**
+- Downer’s 2025 sustainability reporting documented continued deployment of R/VISION, an AI computer-vision system developed with RUSH Digital for safety monitoring in New Zealand transport and construction environments. The system had moved from mobile pilots toward permanent integration at Penrose, Auckland. (Downer, 2025 Sustainability Report, 2025–2026.) ([downergroup.com](https://downergroup.com/case-studies/smarter-safety-in-motion-r-vision-at-work/?utm_source=openai))
 
-- On 16 July 2026, the AI Forum NZ AEC Working Group published a case study on Transpower’s use of Microsoft 365 Copilot agents for engineering methodology reviews and operational-procedure retrieval. The agents are restricted to approved internal sources and require human review. The engineering review agent reportedly saves approximately 30–45 minutes per review, while the procedure agent has become the most-used AI agent within the reported operational context. ([aec.aiforum.org.nz](https://aec.aiforum.org.nz/knowledgehub/case-study-transpowers-ai-agents-in-critical-infrastructure/))
+- Auckland Council’s Healthy Waters programme reported a trial of machine-learning-enabled hotspot cameras to detect stormwater blockages in real time. The trial involved assessing up to 50 potential camera locations in the Tāmaki North catchment. (Auckland Council, Ōmaru Joint Management Committee agenda, 18 September 2025.) ([infocouncil.aucklandcouncil.govt.nz](https://infocouncil.aucklandcouncil.govt.nz/Open/2025/09/20250918_%C5%8CJMCC_AGN_13673_AT.htm?utm_source=openai))
 
-- On 30 July 2026, the AEC Working Group launched an AEC-specific survey seeking evidence about actual AI use, organisational governance, capability, barriers, and training needs. The launch confirms that the sector still lacks a consolidated, public evidence base on adoption. ([aec.aiforum.org.nz](https://aec.aiforum.org.nz/knowledgehub/ai-in-aec-survey-share-your-perspective/))
+- Engineering New Zealand’s 2026 AI programme has increasingly focused on applied use, including AI agents, workflow automation, structural-engineering administration, geotechnical information retrieval and governance. This indicates that professional capability development is moving beyond general awareness toward discipline-specific use. (Engineering New Zealand, AI news and insights, 2026.) ([engineeringnz.org](https://www.engineeringnz.org/news-insights/ai/))
 
-- On 6 August 2026, Engineering New Zealand delivered a full-day workshop on generative AI for engineers, designers, and technical professionals. The programme included AI agents, practical workflow applications, ethics, privacy, and governance. This indicates that sector capability-building is moving from general awareness toward applied professional education. ([engineeringnz.org](https://www.engineeringnz.org/courses-events/exploring-the-power-of-generative-ai-9418/?utm_source=openai))
+## Research Overview
 
-- On 8 July 2026, Engineering New Zealand’s AI programme highlighted continuing activity around AI use in surveying and engineering firms, including firm-level examples and professional learning. The organisation’s broader guidance continues to frame AI as an assistant rather than a decision-maker. ([engineeringnz.org](https://www.engineeringnz.org/news-insights/ai-may-2026/?utm_source=openai))
+### Industry-led research and reports
 
-- In June 2026, BRANZ published a set of AI and machine-learning articles covering AI-assisted consenting, construction applications, generative-AI limitations, and machine-learning models for atmospheric corrosion rates of metals across Aotearoa. The material reinforces that BRANZ’s current work is focused on identifying practical applications while acknowledging reliability and verification constraints. ([branz.co.nz](https://www.branz.co.nz/design-build/analysis-and-opinions/digital-and-data/ai-and-machine-learning?utm_source=openai))
+The AI Forum NZ AEC Working Group’s knowledge hub is the most concentrated source of recent New Zealand AEC-specific AI material. Its outputs cover:
 
-- On 2 July 2026, the AEC Working Group published “Guardrails at Speed,” focused on risk, compliance, contracts, liability, insurance, and responsible AI. The prominence of these topics suggests that governance is becoming a primary sector concern rather than a secondary consideration. (AI Forum NZ AEC Working Group, “Guardrails at Speed: AI Governance, Risk & Compliance in the AEC Sector,” 2 July 2026.)
+- Critical-infrastructure agents.
+- Computer-vision safety.
+- Environmental and cultural-impact decision support.
+- Construction-lifecycle data.
+- Consent and planning information.
+- Governance, risk and professional practice.
+- AI literacy and capability development.
 
-# **Research Overview**
+The evidence is valuable for identifying emerging use cases, but outcomes are commonly self-reported and are not yet supported by a common independent evaluation framework. (AI Forum NZ AEC Working Group, Knowledge Hub, 2025–2026.) ([aec.aiforum.org.nz](https://aec.aiforum.org.nz/knowledgehub/))
 
-**Industry-led research and reports**
+BRANZ’s AI-assisted consenting project remains one of the most directly relevant New Zealand AEC research programmes. The project examines where AI could assist building control officers with large volumes of consent documentation, including:
 
-BRANZ’s AI-assisted consenting research remains one of the most directly relevant New Zealand AEC research projects. It examines whether AI can assist building control officers with the manual checking and interpretation of large volumes of consent documentation. Publicly described use cases include completeness checking, interpretation of supporting evidence and specifications, and assistance with written requests for further information. The project identifies potential efficiency gains but does not establish that AI can replace consent-officer judgement or statutory decision-making. ([branz.co.nz](https://www.branz.co.nz/design-build/research-project/can-ai-be-helpful-in-the-consenting-process?utm_source=openai))
+- Pre-submission completeness and accuracy checks.
+- Interpretation of specifications and supporting evidence.
+- Drafting and improving requests for further information.
+- Linking explanations to relevant Building Code clauses.
 
-BRANZ has also published material on machine learning for atmospheric corrosion rates of metals across Aotearoa. This is relevant to building-material durability, maintenance planning, and climate-related asset performance. Publicly available information describes the application area but provides limited detail on operational deployment or measured industry impact. ([branz.co.nz](https://www.branz.co.nz/design-build/analysis-and-opinions/digital-and-data/ai-and-machine-learning?utm_source=openai))
+The research does not establish that AI can replace building-control judgement or statutory decision-making. Its public status remains focused on identifying and assessing feasible use cases. (BRANZ, “Can AI Be Helpful in the Consenting Process,” updated 2 July 2026.) ([branz.co.nz](https://www.branz.co.nz/design-build/research-project/can-ai-be-helpful-in-the-consenting-process?utm_source=openai))
 
-The AI Forum NZ AI in Action report, published in August 2025, reported strong economy-wide productivity signals, including efficiency improvements reported by 91% of surveyed businesses, operating-cost reductions reported by 77%, and positive financial impacts reported by approximately half. The report is not AEC-specific and should not be treated as an AEC adoption measure. It does, however, provide context for the wider shift from experimentation toward productivity-oriented use. ([aiforum.org.nz](https://aiforum.org.nz/reports/ai-in-action-key-findings-from-new-zealands-third-ai-productivity-report/?utm_source=openai))
+Beca’s FY25 reporting described an internal AI Centre of Excellence, approved generative-AI tools and training for staff. It also reported client and internal projects involving AI, digital twins and information management. This is evidence of internal capability formation within a major New Zealand AEC organisation, but not a sector-wide measure of adoption. (Beca, Annual Report FY25, 2025.) ([beca.com](https://www.beca.com/getmedia/1e8e87c3-6ea1-4930-a845-a4839362db0e/Beca-Annual-Report-FY25-externalfinal1.pdf?utm_source=openai))
 
-The AI Forum NZ AEC Working Group’s public knowledge hub has developed into an important source of sector evidence. Its outputs include case studies on infrastructure, safety, environmental decision support, construction lifecycle data, and AI governance. The evidence is useful for identifying emerging applications, but many outcomes remain self-reported and are not independently benchmarked. ([aec.aiforum.org.nz](https://aec.aiforum.org.nz/knowledgehub/))
+Engineering New Zealand’s 2026 material records increasing use of AI for comparison, checking, document retrieval, drafting and workflow support. It also reports continuing professional concern about hallucinations, confidentiality, data handling and the need for human review. (Engineering New Zealand, “How Engineers Are Using AI in Practice,” 30 April 2026.) ([engineeringnz.org](https://www.engineeringnz.org/news-insights/beyond-the-hype-using-ai-in-practice/?utm_source=openai))
 
-Engineering New Zealand’s professional guidance is also a form of industry-led research and capability development. It identifies practical applications across engineering disciplines while emphasising verification, confidentiality, professional judgement, and compliance with the Building Act, Health and Safety at Work Act, and engineering ethical obligations. ([engineeringnz.org](https://www.engineeringnz.org/programmes/engineering-and-ai/ai-in-professional-practice/))
+### University research capabilities and recent studies
 
-**Summary of AI in AEC research capabilities at NZ universities and recent research studies**
+Recent publicly documented work indicates that New Zealand university capability is strongest in:
 
-Public university capability is strongest in:
-
-- Infrastructure resilience and hazard modelling.
-- Flood forecasting and spatial risk analysis.
-- Computer vision and asset surveying.
-- Smart-building operation and energy control.
-- Construction risk classification.
-- Digital built-environment systems.
+- Hazard, flood and climate-risk modelling.
+- Geospatial information and infrastructure planning.
+- Computer vision and spatial sensing.
+- Smart-building operation.
+- Construction productivity and lean systems.
+- Urban planning and digital governance.
 - AI education for engineering and architecture.
+- Agentic AI and human–AI collaboration.
 
-Evidence remains more limited for live New Zealand deployment in architectural design offices, offsite manufacturing, autonomous construction robotics, and AI-enabled supply-chain management.
+A University of Canterbury doctoral thesis published in 2026 developed hybrid hydrodynamic and machine-learning methods for rapid pluvial flood-risk assessment. The methods were implemented and validated using the Wairewa rural catchment in Aotearoa New Zealand. The work is relevant to stormwater planning, infrastructure resilience and long-term hazard assessment, but remains a research output rather than evidence of routine operational deployment. (Andrea Pozo Estivariz, University of Canterbury, “Advancing Methods of Rapid Flood Risk Assessment Using Climate Informed Hybrid Approaches of Hydraulic Modelling and Machine Learning,” 2026.) ([ir.canterbury.ac.nz](https://ir.canterbury.ac.nz/items/acf6750b-772b-4f91-9701-8dfd1daa004f/full))
 
-- Pozo, Wilson, Katurji, Méndez, Bosserelle, and Lane published a 2026 University of Canterbury-led study on hybrid hydrodynamic–machine-learning modelling for rapid flood-scenario assessment in Aotearoa New Zealand. The research combined a hydrodynamic flood model with a Random Forest machine-learning approach to support rapid inundation assessment. It demonstrates a relevant research pathway for infrastructure resilience, although further validation using real rainfall scenarios was identified as necessary. ([onlinelibrary.wiley.com](https://onlinelibrary.wiley.com/doi/abs/10.1111/jfr3.70206?utm_source=openai))
+University of Canterbury researchers also published work using deep learning to improve the resolution and accuracy of satellite-derived elevation data. The model was assessed for applications including flood-risk mapping, infrastructure design, stormwater planning and environmental planning. Reported results included a ten-fold improvement in spatial resolution and approximately 72% improvement in elevation accuracy against basic datasets, subject to further validation. (Xiandong Cai and Matthew Wilson, University of Canterbury, “UC Innovation Makes Global Flood-Risk Mapping Affordable,” 27 November 2025.) ([canterbury.ac.nz](https://www.canterbury.ac.nz/news-and-events/news/2025/uc-innovation-makes-global-flood-risk-mapping-affordable---))
 
-- Patel, Scheepbouwer, and van der Walt of the University of Canterbury published a 2025 study applying NLP and machine learning to 254,923 New Zealand infrastructure projects. The model classified project challenges such as regulatory hurdles, budget constraints, and environmental factors. It achieved a reported cross-validation mean accuracy of 74.6%. The study is a research prototype rather than evidence of operational deployment. ([docs.lib.purdue.edu](https://docs.lib.purdue.edu/cib-conferences/vol1/iss1/325/))
+A 2026 IGLC paper by researchers from Auckland University of Technology and Massey University examined the relationship between AI methods and lean-construction concepts. Its analysis found that machine learning, computer vision and real-time analytics had broad connections across lean-construction constructs, while identifying that systematic integration remains fragmented. (Ali Bidhendi, Sina Golsorkhi, Mani Poshdar and Mostafa Babaeian Jelodar, “Mapping AI and Lean Construction Integration,” IGLC 34, 2026.) ([iglc.net](https://iglc.net/Papers/Details/2522))
 
-- A 2026 Building and Environment paper involving Massey University’s School of Built Environment examined machine-learning microservices for natural-ventilation control in smart buildings. The research used predictive and reinforcement-learning algorithms to control ventilation and indoor conditions in a building in Cambridge, Massachusetts. It provides evidence of New Zealand university capability in AI-enabled building operations, but not of a New Zealand field deployment. ([mro.massey.ac.nz](https://mro.massey.ac.nz/items/1a2a55e6-e2b2-4bb4-972b-e4502ea72885?utm_source=openai))
+University of Auckland researchers published research in October 2025 on the ethical and social risks of AI-driven urban planning. Surveys and interviews across Auckland, Wellington, Hamilton and Christchurch included planners, policymakers, Māori and community leaders, and developers of AI-based planning tools. The research identified concerns about bias, transparency, accountability and the risk that planning systems could favour some communities while overlooking others. (University of Auckland, “Can AI-Driven City Planning Be Fair and Inclusive?,” 23 October 2025.) ([auckland.ac.nz](https://www.auckland.ac.nz/en/news/2025/10/23/can-ai-driven-city-planning-be-fair-and-inclusive.html))
 
-- The University of Canterbury’s Spatial and Image Learning group, updated in June 2026, describes collaboration with Waka Kotahi, Christchurch City Council, Christchurch Airport, and other New Zealand organisations. Its work includes machine-learning applications for road-sign and road-surface surveying using LiDAR and panoramic imagery, as well as asset-surveying automation. ([canterbury.ac.nz](https://www.canterbury.ac.nz/research/about-uc-research/research-groups-and-centres/spatial-and-image-learning--sail--group))
+The University of Auckland’s architecture programme has begun incorporating AI-assisted design and representation into formal coursework, with emphasis on documenting decisions, testing outputs and maintaining a provenance trail. This indicates movement in architectural education toward critical and accountable use rather than unrestricted tool adoption. (University of Auckland, ARCHHTC 704 course description, published 5 February 2026.) ([study.auckland.ac.nz](https://study.auckland.ac.nz/ords/r/uoa/catalogue/course?clear=6&p0_catalogue_term=99&p0_catalogue_year=2026&p6_code=ARCHHTC+704&utm_source=openai))
 
-- The University of Auckland Smart Digital Lab identifies research linking machine learning, BIM, mixed reality, simulation, robotics, and digital-twin systems for construction planning, safety, production management, infrastructure damage assessment, and emergency evacuation. This is evidence of sustained research capability, although the public material does not establish broad commercial deployment. ([auckland.ac.nz](https://www.auckland.ac.nz/en/engineering/our-research/engineering-research/research-areas-and-facilities/sdl.html))
+The University of Auckland also led a proposal for a national agentic-AI research platform that received seed funding in December 2025. The proposed platform includes partners from universities, government and industry, including Beca. Its initial focus is broader than AEC, but the proposed work on safe agents, robotics and automation is relevant to future infrastructure and construction applications. (University of Auckland, “New Zealand AI Research Platform Proposal Successful in First Stage,” 18 December 2025.) ([auckland.ac.nz](https://www.auckland.ac.nz/en/news/2025/12/18/new-zealand-ai-research-proposal-reaches-first-stage.html))
 
-- The University of Auckland’s 2026/2027 architecture research programme includes a project surveying AI tools for architectural design, documentation, quality assurance, Building Code and NZS verification, and architectural education. The project description explicitly states that most identified tools were not yet applied in the School of Architecture or in New Zealand architecture offices, providing useful evidence of the adoption gap. ([auckland.ac.nz](https://www.auckland.ac.nz/assets/study/scholarships-and-funding/types-of-scholarships/undergraduate-scholarships/summer-research-scholarships/srs2026/eng-architecture-srs2026.pdf))
+Massey University researchers have contributed to work on AI-enabled natural-ventilation control and smart-building operation using predictive and reinforcement-learning methods. The work demonstrates New Zealand capability in AI for building operations, although the reported case environment was outside New Zealand and does not establish domestic deployment. (Massey University researchers, Building and Environment, 2026.) ([mro.massey.ac.nz](https://mro.massey.ac.nz/bitstreams/3770def0-c184-43c9-af3b-838b6ac590e5/download?utm_source=openai))
 
-- The University of Canterbury’s 2026 doctoral research programme includes physics-informed machine learning for flood forecasting in Canterbury catchments, in partnership with Environment Canterbury. This indicates continued movement toward AI research embedded in local infrastructure and environmental decision contexts. ([canterbury.ac.nz](https://www.canterbury.ac.nz/news-and-events/news/2026/uc-phds-to-tackle-urgent-environmental-challenges-))
+Public evidence remains limited for recent New Zealand university research specifically addressing:
 
-# **Case Studies**
+- AI-generated architectural documentation in live practices.
+- AI for structural-design authoring.
+- AI in prefabricated manufacturing.
+- AI-based construction supply-chain optimisation.
+- Autonomous general construction robotics.
+- Independently evaluated AI deployment on New Zealand construction projects.
 
-**NZ-based, AI-explicit case studies**
+## Case Studies
 
-**Transpower: AI agents in critical infrastructure**
+### Transpower: AI agents in critical infrastructure
 
-- Context: Transpower needed to manage increasing engineering-methodology reviews and rapid access to operational procedures across a complex electricity-transmission system.
-- AI method: GPT-based Microsoft 365 Copilot agents operating within an internal environment and restricted to approved SharePoint-hosted knowledge sources.
-- Application: First-pass engineering-document assessments and conversational retrieval of operational procedures.
-- Observed outcomes: The engineering-review agent reportedly saves approximately 30–45 minutes per review. The operational-procedure agent has received positive feedback and become the most-used reported AI agent in the organisation.
-- Significance: The case demonstrates a bounded-assistant model for critical infrastructure. The system does not replace engineering judgement; it identifies missing information, directs users to relevant material, and supports human review.
-- Limitation: Reported outcomes are organisation-authored and have not been independently evaluated in the public case study. (AI Forum NZ AEC Working Group, “Transpower’s AI Agents in Critical Infrastructure,” 16 July 2026.) ([aec.aiforum.org.nz](https://aec.aiforum.org.nz/knowledgehub/case-study-transpowers-ai-agents-in-critical-infrastructure/))
+- Context: Transpower faced increasing engineering-methodology reviews and a large body of operational procedures used across a complex electricity-transmission system.
+- AI method: GPT-based Microsoft 365 Copilot agents using approved SharePoint knowledge sources, internal access controls and a restricted corporate environment.
+- Application: First-pass review of engineering methodology documents and conversational retrieval of operational procedures.
+- Observed outcomes: The engineering-review agent reportedly saves approximately 30–45 minutes per review. The operational-procedure agent became the most-used reported AI agent within the relevant operational context.
+- Governance pattern: The agents identify missing information and direct users to relevant material, but engineers and control-room staff remain responsible for validation and decisions.
+- Limitation: Results are reported through an AEC Working Group case study and have not been independently evaluated publicly.
 
-**Downer and R/VISION: computer-vision safety monitoring**
+(AI Forum NZ AEC Working Group, “Transpower’s AI Agents in Critical Infrastructure,” 16 July 2026.) ([aec.aiforum.org.nz](https://aec.aiforum.org.nz/knowledgehub/case-study-transpowers-ai-agents-in-critical-infrastructure/))
 
-- Context: Downer applied AI-enabled safety monitoring in transport and construction environments involving live traffic, mobile plant, pedestrians, and public interfaces.
+### Downer and RUSH Digital: R/VISION safety monitoring
+
+- Context: New Zealand road-construction and maintenance environments involve live traffic, mobile plant, pedestrians and changing work zones.
 - AI method: Computer vision and AI models applied to site-camera feeds.
-- Application: Detection of exclusion-zone breaches, excessive speed, PPE non-compliance, and pedestrian–plant interaction risks.
-- Observed outcomes: Downer reported improved visibility of near misses and critical risks, identification of high-risk locations and behavioural trends, and reduced pedestrian–mobile-plant interface risks. The system was reported as moving from pilot activity to permanent integration at Penrose in Auckland.
-- Significance: This is one of the clearest examples of AI being applied repeatedly in a New Zealand AEC operating environment rather than only in a research demonstration.
-- Limitation: Public evidence is primarily company-reported and does not provide a controlled comparison of safety outcomes. (Downer, 2025 Sustainability Report, August 2025.)
+- Application: Detection of exclusion-zone breaches, excessive speed, PPE non-compliance and plant–person interaction risks.
+- Observed outcomes: Downer reported improved visibility of near misses and critical risks, identification of high-risk locations and behavioural trends, and reduced pedestrian–mobile-plant interface risks.
+- Deployment status: The system progressed from mobile pilots across several sites to permanent integration at Penrose, Auckland. Downer’s reporting also described 20 mobile units installed and further units scheduled.
+- Limitation: Public evidence is primarily company-reported and does not provide a controlled comparison of injury, incident or exposure rates.
 
-**Auckland Council, Mott MacDonald, and Lynker Analytics: stormwater monitoring and asset-condition prediction**
+(Downer, 2025 Sustainability Report; Downer and RUSH Digital, “Smarter Safety in Motion: R/VISION at Work,” 2025–2026.) ([downergroup.com](https://downergroup.com/case-studies/smarter-safety-in-motion-r-vision-at-work/?utm_source=openai))
 
-- Context: Auckland Council’s Healthy Waters team faced fragmented monitoring and asset information across stormwater operations.
-- AI method: Image-processing AI for blockage detection and machine learning for pipe-condition prediction.
-- Application: Monitoring stormwater structures for blockages and flooding, and forecasting deterioration to support renewal planning.
-- Observed outcomes: The case study reports more efficient monitoring, faster response, and better-targeted asset-renewal planning.
-- Significance: The example shows AI being used in public-asset management rather than only in project delivery.
-- Limitation: The public evidence is a sector case study and does not include independently verified cost, accuracy, or lifecycle-performance measures. (AI Forum NZ AEC Working Group, “Data-driven decisions for better city planning and management,” December 2025.)
+### Beca and MBIE: AI access to the New Zealand Geotechnical Database
 
-**Preformance Technologies: AI across the construction lifecycle**
+- Context: Geotechnical information is relevant to infrastructure design, consenting, hazard planning and resilience decisions.
+- AI method: A conversational AI agent integrated into Beca’s BEYON platform and the New Zealand Geotechnical Database.
+- Application: Natural-language questions about geotechnical information with geospatially grounded responses.
+- Observed outcomes: Beca reported that selected information-retrieval tasks were reduced by up to 40% and that the capability was deployed at scale for the database.
+- Significance: The case demonstrates AI being applied to a national technical information resource rather than only to internal administration.
+- Limitation: The public evidence is provider-authored and provides limited independent detail on accuracy, error rates, user numbers or downstream consenting outcomes.
 
-- Context: Preformance identified fragmented workflows, inconsistent data, and loss of information between pre-construction, delivery, and asset handover.
-- AI method: AI model auditing, AI-enabled sequencing, reality-capture comparison, machine-learning or language-model interfaces, and AI-supported facilities-management workflows.
-- Application: Model checking, progress verification, quality assurance, as-built validation, and asset-data handover.
-- Observed outcomes: The case study reported that each dollar spent on digital pre-construction checking saved 28 dollars on site, and that a drilling-robot implementation reduced both cost and programme time by more than 30%.
-- Significance: The reported use pattern is broader than a single AI tool and treats AI as a layer across project information, delivery assurance, and operations.
-- Limitation: The reported benefits are not independently verified and include outcomes from digital and robotic interventions that may not be attributable to AI alone. (AI Forum NZ AEC Working Group, “Preformance Case Study,” 19 December 2025.)
+(Beca, “From Data to Decisions: Building a Resilient Aotearoa New Zealand with Digital Twin and AI,” May 2026.) ([beca.com](https://www.beca.com/about-us/news-and-awards/may-2026/from-data-to-decisions-building-a-resilient-aotearoa-new-zealand-with-digital-twin-and-ai?utm_source=openai))
 
-**Mana Review AI: cultural-impact and environmental decision support**
+### Auckland Council: machine-learning stormwater monitoring
 
-- Context: Infrastructure and environmental projects require coordination among councils, iwi, hapū, planners, engineers, and consent professionals.
-- AI method: Large language models, retrieval-augmented generation, knowledge graphs, and structured cultural frameworks linked to mātauranga Māori.
-- Application: Support for cultural-impact assessments, environmental-monitoring interpretation, policy analysis, and consent-process information.
-- Observed outcomes: The case study reports improved accessibility to planning information, more efficient preparation of cultural-impact material, and stronger integration of mātauranga Māori.
-- Significance: This expands the visible New Zealand AEC AI landscape beyond productivity and safety into culturally informed environmental governance.
-- Limitation: The evidence is early-stage and case-study based. The public material emphasises human oversight but does not provide independent accuracy or outcome measures. (AI Forum NZ AEC Working Group, “AI Supporting Cultural Impact & Environmental Decision-Making,” 26 March 2026.)
+- Context: Healthy Waters identified a need for more proactive detection of stormwater blockages and flooding risks.
+- AI method: Machine-learning-enabled hotspot cameras.
+- Application: Real-time detection of blockage indicators such as debris in stormwater assets.
+- Deployment status: The council was trialling cameras at two locations in the upper Tāmaki North catchment and assessing up to 50 further sites.
+- Intended impact: Earlier identification of blockages, improved maintenance targeting and faster response to localised flooding risks.
+- Limitation: The public council record describes a trial and planned deployment but does not yet report validated performance, cost or lifecycle results.
 
-# **Trends and Outlook**
+(Auckland Council, Ōmaru Joint Management Committee agenda, 18 September 2025.) ([infocouncil.aucklandcouncil.govt.nz](https://infocouncil.aucklandcouncil.govt.nz/Open/2025/09/20250918_%C5%8CJMCC_AGN_13673_AT.htm?utm_source=openai))
 
-- Adoption is concentrating in narrow, information-rich, high-friction tasks. The strongest New Zealand examples involve safety monitoring, technical-document review, consent support, asset analytics, environmental interpretation, and infrastructure-risk assessment.
+### Mana Review AI: cultural-impact and environmental decision support
 
-- Human-in-the-loop use remains the dominant operating model. Transpower, Engineering New Zealand, BRANZ, and the AEC Working Group all describe AI as assisting professional work rather than independently replacing engineering, regulatory, or operational judgement. ([aec.aiforum.org.nz](https://aec.aiforum.org.nz/knowledgehub/case-study-transpowers-ai-agents-in-critical-infrastructure/))
+- Context: Infrastructure and environmental projects require coordination among councils, iwi, hapū, planners, engineers and consent professionals.
+- AI method: LLMs, retrieval-augmented generation, knowledge graphs and structured cultural frameworks incorporating mātauranga Māori.
+- Application: Support for cultural-impact assessments, environmental-monitoring interpretation, planning-provision analysis and consent-process information.
+- Observed outcomes: The case study reports improved access to planning information, more efficient preparation of cultural-impact material and stronger integration of mātauranga Māori.
+- Governance pattern: The platform is described as decision support rather than an automated decision-maker, with practitioner and knowledge-holder oversight.
+- Limitation: Public evidence is early-stage and does not include independent accuracy, cultural-outcome or consent-performance measures.
 
-- Capability formation continues to outpace scaled deployment. National policy, public-service programmes, university courses, professional education, and the AEC Working Group’s activities are expanding faster than the publicly documented body of independently evaluated operational deployments.
+(AI Forum NZ AEC Working Group, “AI Supporting Cultural Impact & Environmental Decision-Making,” 26 March 2026.) ([aec.aiforum.org.nz](https://aec.aiforum.org.nz/knowledgehub/case-study-ai-supporting-cultural-impact-environmental-decision-making/))
 
-- Data quality and information boundaries are recurring constraints. The Transpower case depends on approved and maintained knowledge sources. The Auckland Council and Preformance examples similarly identify organised, contextualised data as a prerequisite for useful AI. This suggests that the principal bottleneck is often not model availability but the quality, ownership, accessibility, and governance of project and asset information.
+### BRANZ: AI-assisted building consenting research
 
-- Public-sector and regulatory workflows are becoming a significant target area. AI-assisted consenting, government assisted-search use cases, cultural-impact analysis, and operational-procedure agents all involve large document collections, repeated checks, and complex information retrieval.
+- Context: Building consent authorities process large volumes of technical documentation and requests for further information.
+- AI method: Proposed use of document interpretation, completeness checking, language support and clause-linked explanation.
+- Application: Identifying where AI could assist building control officers without transferring statutory responsibility to an AI system.
+- Observed outcomes: Building control officers identified potential value in reducing time spent on manual checks and improving the consistency and clarity of requests for further information.
+- Significance: The project provides a New Zealand-specific example of AI being assessed within a regulated AEC workflow.
+- Limitation: The public material describes use-case discovery and feasibility assessment rather than a completed operational deployment.
 
-- Architecture appears to be an earlier-stage adoption area in New Zealand than infrastructure analytics or engineering support. The University of Auckland’s 2026 architecture research project states that many AI tools are not yet applied in New Zealand architecture offices and that reliable data on architectural AI adoption is lacking. ([auckland.ac.nz](https://www.auckland.ac.nz/assets/study/scholarships-and-funding/types-of-scholarships/undergraduate-scholarships/summer-research-scholarships/srs2026/eng-architecture-srs2026.pdf))
+(BRANZ, “Can AI Be Helpful in the Consenting Process,” updated 2 July 2026.) ([branz.co.nz](https://www.branz.co.nz/design-build/research-project/can-ai-be-helpful-in-the-consenting-process?utm_source=openai))
 
-- The emerging New Zealand AI-based AEC startup and service pattern is still small and not comprehensively mapped. Public evidence points to activity in:
+### NZTA Innovation Fund: AI-based road-worker safety systems
+
+- Context: Roadworks create risks for workers and road users in changing traffic environments.
+- AI method: Computer vision, machine learning and sensor-based detection, including LiDAR-supported systems.
+- Application: Real-time identification of road-worker, vehicle and work-zone risks.
+- Development status: Waka Kotahi funding supported further development of R/VISION and a separate LiDAR and AI-based road-worker safety system.
+- Significance: The funding demonstrates public-sector support for testing AI directly in transport-construction safety contexts.
+- Limitation: The public information describes development and testing rather than verified long-term safety outcomes.
+
+(NZ Transport Agency Waka Kotahi, Innovation Fund round-two recipients, 2025–2026.) ([nzta.govt.nz](https://www.nzta.govt.nz/about-us/innovations/innovation-fund/about/round-two-recipients?utm_source=openai))
+
+## Trends and Outlook
+
+The evidence points to several current trends.
+
+- AI adoption is concentrating in narrow, repeatable and information-rich tasks. Document retrieval, technical checking, safety observation, asset monitoring, flood assessment and consent support are more visible than autonomous design or construction.
+
+- Human-in-the-loop use remains the dominant operating model. Transpower, Engineering New Zealand, BRANZ and the AEC Working Group consistently position AI as an assistant, reviewer or decision-support system rather than an accountable professional.
+
+- Data quality is a central adoption constraint. The Beca, Transpower and BRANZ examples all depend on controlled, structured or authoritative information sources. This suggests that information provenance, maintenance and access rights are often more important than the availability of a general-purpose model.
+
+- Public infrastructure and regulatory workflows are emerging as important application areas. AI is being tested where organisations manage large document collections, repeated assessments, asset networks or time-sensitive operational information.
+
+- Computer vision is one of the more mature AEC application categories in New Zealand. The Downer and NZTA examples involve repeated observation of physical environments and real-time alerts, although evidence of safety impact remains largely self-reported.
+
+- Architecture is developing capability, but public evidence of production adoption remains weaker than evidence from infrastructure, safety and technical information management. University of Auckland activity indicates that architectural education is beginning to focus on provenance, reflection and responsible AI-assisted design.
+
+- Construction robotics remains limited but visible. Public evidence is stronger for robotic drilling, inspection, surveying and machine-assisted tasks than for autonomous general construction. AI-specific evidence is still sparse in New Zealand.
+
+- Internal capability is becoming more formalised. Beca’s AI Centre of Excellence, Engineering New Zealand’s professional education and the AEC Working Group’s structured workstreams indicate a shift from individual experimentation toward organisational capability-building.
+
+- New Zealand’s visible AI-based AEC startup and service activity is small and not comprehensively mapped. Publicly documented categories include:
 
   - Computer-vision safety and compliance monitoring.
-  - Spatial and LiDAR-based infrastructure intelligence.
+  - LiDAR and spatial infrastructure intelligence.
+  - AI agents for technical documents and procedures.
   - Consent and environmental decision support.
   - Construction-quality and progress assurance.
-  - Asset-condition prediction.
-  - AI agents for technical documents and operational procedures.
+  - Asset-condition and hazard prediction.
+  - Voice and field-information capture.
 
-  This is an evidence-based categorisation of visible activity, not a complete market inventory.
+- The main emerging risks are:
 
-- The principal risks are becoming clearer:
+  - Incorrect or hallucinated technical information.
+  - Misinterpretation of Building Code provisions, standards or project requirements.
+  - Overreliance on AI-generated explanations.
+  - Privacy and surveillance risks from site cameras and biometric systems.
+  - Exposure of confidential project, client or infrastructure information.
+  - Unclear professional and contractual accountability.
+  - Bias in urban planning and infrastructure prioritisation.
+  - Misrepresentation or inappropriate use of mātauranga Māori.
+  - Weak independent validation of claimed productivity and safety benefits.
+  - Uneven access to capability between large organisations and smaller firms.
+  - Deskilling or reduced entry-level learning through excessive automation.
 
-  - Hallucinated or incorrect technical information.
-  - Incorrect interpretation of standards, Building Code provisions, or project requirements.
-  - Privacy, surveillance, and biometric-processing risks.
-  - Insecure handling of confidential client, project, or infrastructure information.
-  - Professional liability and unclear accountability for AI-assisted outputs.
-  - Bias, cultural misrepresentation, or inappropriate handling of Māori data and mātauranga Māori.
-  - Weak independent evaluation of claimed productivity, safety, and cost benefits.
-  - Workforce displacement or deskilling in document-heavy and entry-level professional tasks.
-  - Uneven access to AI capability between large organisations and small or specialist firms.
+The business-model signals are currently incremental rather than disruptive. AI is being incorporated into existing professional and operational services, including:
 
-- Business-model change is appearing primarily as augmentation of existing AEC services. The visible pattern is AI-enabled safety-as-a-service, document intelligence, asset analytics, design and compliance support, and internal workflow agents. Public evidence does not yet support claims of wholesale replacement of established architecture, engineering, or construction business models.
+- Safety monitoring and assurance.
+- Engineering information services.
+- Document and compliance review.
+- Asset intelligence.
+- Environmental and planning support.
+- Digital construction and handover.
+- Internal workflow agents.
 
-- The next likely development is greater integration between AI agents and controlled organisational knowledge. Transpower’s case suggests a direction in which firms deploy domain-specific assistants connected to approved internal documents, rather than relying only on open-ended public chatbots.
+The likely near-term effect is a reallocation of professional effort rather than wholesale replacement. Repetitive search, checking, drafting, reporting and monitoring tasks may require less manual time, while the value of domain expertise, review, judgement and accountability may increase.
 
-- Construction robotics remains a limited but increasingly visible category in New Zealand. Public evidence is stronger for robotic drilling, inspection, surveying, and reality capture than for autonomous general construction. The AEC Working Group’s public case studies and university research provide early signals, but not evidence of widespread domestic adoption.
+The main uncertainty is not whether AI tools will become more capable, but whether AEC organisations can generate reliable value from them while maintaining traceability, safety, cultural legitimacy and professional trust.
 
-- The current evidence suggests that New Zealand’s near-term AI advantage is more likely to come from domain-specific application, public infrastructure knowledge, local environmental data, and professional trust than from development of frontier AI models.
+## A Global Perspective
 
-# **A Global Perspective**
+Global evidence indicates that AEC AI adoption remains early despite rapid growth in attention, investment and capability.
 
-Global evidence indicates that AEC AI adoption remains early even while investment and organisational attention are increasing. The 2025 RICS global construction survey of more than 2,200 professionals found that approximately 45% of respondents reported no AI implementation, 34% were in early pilot phases, just under 12% reported regular use in specific processes, and fewer than 1% reported fully embedded organisation-wide use. The results point to cautious experimentation rather than mature, broad deployment. ([rics.org](https://www.rics.org/news-insights/artificial-intelligence-in-construction-report))
+The RICS AI in Construction 2025 report, based on more than 2,200 professionals worldwide, found that:
+
+- 45% of organisations reported no AI implementation.
+- 34% were in early pilot phases.
+- Approximately 12% reported regular use in specific processes.
+- Around 1% reported organisation-wide implementation.
+- 46% identified skills shortages as a barrier.
+- 37% identified integration challenges.
+- 30% identified poor data quality as a barrier.
+- Design optioneering was the area most often expected to experience significant impact over the following five years.
+
+The findings show a substantial gap between confidence in AI’s potential and mature implementation. (Royal Institution of Chartered Surveyors, AI in Construction 2025, September 2025.) ([rics.org](https://www.rics.org/news-insights/optimism-high-for-ai-in-construction-but-skills-shortages-and-integration-challenges-adoption?utm_source=openai))
 
 The main global application areas are:
 
-- Design optioneering and engineering analysis.
+- Design optioneering and generative design.
+- Engineering analysis and checking.
 - Cost estimation and project controls.
-- Document and tender intelligence.
+- Scheduling and resource planning.
+- Tender, contract and document analysis.
 - Computer-vision progress and quality monitoring.
-- Predictive maintenance and asset inspection.
-- Safety and compliance monitoring.
+- Safety and compliance observation.
+- Predictive maintenance and facilities management.
 - Construction robotics and autonomous equipment.
-- Building-energy optimisation and facilities management.
+- Building-energy optimisation.
 
-Singapore provides one of the clearest examples of state-led built-environment AI coordination. In February 2026, Singapore announced a S$30 million Built Environment AI Centre of Excellence, jointly launched by the Ministry of National Development and the Singapore University of Technology and Design. Its objectives include addressing construction and facilities-management labour shortages, climate impacts, productivity, sustainability, and the development of professionals with both AI and built-environment expertise. ([www1.bca.gov.sg](https://www1.bca.gov.sg/resources/newsroom/stronger-support-and-partnerships-to-bring-urban-innovations-to-the-market/))
+Architecture appears to be moving faster than broader construction in some comparable economies. RIBA’s 2025 survey reported that 59% of UK practices used AI on at least some projects, up from 41% in 2024. Its 2026 report describes broader use across visualisation, project management, regulatory compliance, technical delivery and practice management. It also records concerns about intellectual property, employment, fees, environmental impact and the career path for junior professionals. (Royal Institute of British Architects, AI Report 2025 and AI Report 2026.) ([riba.org](https://www.riba.org/news/second-riba-ai-report-shows-surge-in-usage-among-uk-architects/?utm_source=openai))
 
-Singapore’s Urban Redevelopment Authority also reported active or planned AI applications across urban planning and management. Examples include deep-learning computer vision for detecting unsafe parking and an LLM-based Development Control Assistant designed to help developers, architects, and the public navigate planning guidelines. The latter had been piloted internally before planned release to industry. ([ura.gov.sg](https://www.ura.gov.sg/news/media/pr26-43/))
+Australia provides a relevant regional comparison. Infrastructure Australia reported that 64% of surveyed building and construction firms had invested in digitalisation during the previous year. Investments included AI, machine learning, robotics, automation and enterprise AI systems. Separate data cited in the report indicated that 14.3% of Australian construction SMEs used AI, compared with 19.8% across all sectors. (Infrastructure Australia, 2025 Infrastructure Market Capacity Report.) ([infrastructureaustralia.gov.au](https://www.infrastructureaustralia.gov.au/reports/2025-infrastructure-market-capacity-report?utm_source=openai))
 
-Australia provides a relevant regional signal. Infrastructure Australia reported that 64% of surveyed building and construction firms had invested in digitalisation during the previous year, including investments in BIM, AI, robotics, automation, data monitoring, and enterprise AI systems. The figure is not an AI-only adoption rate, but it indicates that AI is increasingly being considered alongside broader digitalisation and modern methods of construction. ([infrastructureaustralia.gov.au](https://www.infrastructureaustralia.gov.au/reports/2025-infrastructure-market-capacity-report?utm_source=openai))
+Singapore is pursuing a more coordinated public-sector and industry approach. The Building and Construction Authority’s 2026 AI guidance identifies applications across planning, design, construction and facilities management, including AI-enhanced BIM workflows, model checking, documentation, data management and workflow automation. (Building and Construction Authority Singapore, “Artificial Intelligence for the Built Environment,” updated 4 August 2026.) ([www1.bca.gov.sg](https://www1.bca.gov.sg/growth-and-transformation/productivity/ai/?utm_source=openai))
 
-Large global AEC firms are building internal AI capabilities rather than relying solely on external software vendors. AECOM’s 2025 annual report describes:
+Singapore’s Urban Redevelopment Authority has also reported AI applications in urban management, including deep-learning computer vision for unsafe-parking detection and an LLM-based Development Control Assistant intended to help users navigate planning guidelines. (Urban Redevelopment Authority Singapore, “Urban Lab Unveils AI Tools to Transform Urban Planning and Urban Systems,” 3 June 2026.) ([ura.gov.sg](https://www.ura.gov.sg/news/media/pr26-43/?utm_source=openai))
+
+Global AEC companies are building internal AI capabilities rather than relying only on general-purpose vendors. AECOM’s 2025 annual report describes:
 
 - An AI for Engineering platform.
-- A proprietary enterprise AI assistant known as Oscar.
-- More than 200 professionals with advanced AI, machine-learning, mathematics, physics, and data-science expertise.
-- An AI governance policy adopted in 2025.
-- Risk classifications for permissible, high-risk, and prohibited AI uses.
-- AI deployment across multiple regions and project types.
+- An enterprise AI assistant.
+- More than 200 professionals with advanced AI, machine-learning, mathematics, physics and data-science expertise.
+- An AI governance policy introduced in 2025.
+- Risk categories for permissible, high-risk and prohibited uses.
+- AI applications in bids, project management, environmental reporting, engineering workflows and design optimisation.
 
-The report also describes AI applications in bid responses, project and programme management, environmental reporting, engineering workflows, and design optimisation. ([sec.gov](https://www.sec.gov/Archives/edgar/data/0000868857/000086885726000008/aecom2025_arx10k.pdf?utm_source=openai))
+The report also describes AI deployment across multiple regions and project types. These claims are company-reported, but they demonstrate the scale at which large AEC firms are beginning to develop internal platforms and specialist teams. (AECOM, Annual Report 2025.) ([aecom.com](https://aecom.com/annual-report/?utm_source=openai))
 
-Global startup activity is clustering around specific physical and information workflows rather than general-purpose construction automation. The 2026 Construction Robotics Report by Zacua Ventures, Hilti Ventures, and 94 Ventures identifies current revenue concentration in:
+Global startup activity is clustering around bounded physical and information workflows rather than general-purpose autonomous construction.
 
-- Layout and measurement.
-- Groundworks and earthmoving.
-- Structural and rebar work.
-- Inspection and digital capture.
+Visible startup categories include:
 
-It identifies greater startup activity in interiors and finishes, MEP and utilities, envelope and façade work, and other areas where repetitive physical tasks can be combined with machine perception and robotic control. ([zacuaventures.com](https://zacuaventures.com/construction-robotics-report-2026/))
-
-Other visible startup categories include:
-
-- Computer-vision progress tracking, such as Buildots’ image-based construction-management platform.
-- AI-enabled estimating, scheduling, procurement, and project controls.
-- Document and contract-risk analysis.
+- Computer-vision progress tracking.
+- Image-based quality and defect detection.
+- AI-enabled estimating and scheduling.
+- Contract and document-risk analysis.
 - Site-inspection and claims-evidence capture.
-- Autonomous or semi-autonomous equipment.
-- AI-enabled facilities management and predictive maintenance.
+- Autonomous layout, measurement and surveying.
+- Robotic drilling, rebar, earthworks and finishing.
+- AI-enabled facilities management.
+- Building-energy and predictive-maintenance systems.
 
-Buildots’ 2025 funding announcement described the use of AI and computer vision to automate construction-progress tracking and extend analysis across more stages of the construction lifecycle. ([prnewswire.com](https://www.prnewswire.com/news-releases/buildots-raises-45-million-to-scale-ai-powered-operational-excellence-in-construction-302468184.html?utm_source=openai))
+The 2026 Construction Robotics Report by Zacua Ventures, Hilti Ventures and 94 Ventures identifies current activity in layout and measurement, groundworks, structural and rebar work, inspection and digital capture. It also records growing interest in interiors, MEP, utilities, envelope and façade work. (Zacua Ventures, Hilti Ventures and 94 Ventures, Construction Robotics Report 2026.) ([zacuaventures.com](https://zacuaventures.com/wp-content/uploads/2026/03/Construction_Robotics_Report_2026.pdf?utm_source=openai))
 
-The global visible impacts remain mixed:
+Buildots provides an example of the global computer-vision model. Its platform processes images captured on construction sites to compare actual progress with planned work. A 2025 funding announcement described expansion of the platform across more stages of the construction lifecycle. (Buildots, funding announcement, 29 May 2025.) ([techcrunch.com](https://techcrunch.com/2025/05/29/buildots-raises-45m-to-help-companies-track-construction-progress/?utm_source=openai))
 
-- AI is reducing time spent on document retrieval, first drafts, progress reporting, and repetitive inspection tasks.
-- Computer vision and spatial intelligence are improving the frequency and consistency of site and asset observation.
-- Robotics is becoming more viable in constrained workflows, but remains a very small proportion of total construction activity.
-- Large AEC firms are developing proprietary platforms, internal AI teams, and governance systems.
-- Industry-wide adoption remains limited by data quality, skills, integration costs, liability, safety, and uncertain business value.
+The visible global impacts are mixed:
 
-The principal global learning is that AI adoption is progressing through narrow, repeatable workflows before broader transformation. The strongest business-model signal is the emergence of AI-enabled professional and operational services, often delivered through recurring software, data, monitoring, or assurance relationships. This is an inference from the combination of internal AEC platforms, computer-vision services, asset-intelligence systems, and robotics providers rather than evidence of a single dominant model. ([rics.org](https://www.rics.org/news-insights/artificial-intelligence-in-construction-report))
+- Less time spent on document retrieval, reporting and repetitive checking.
+- More frequent and consistent observation of site and asset conditions.
+- Faster design exploration and early-stage option assessment.
+- Improved access to operational and project information.
+- Emerging reductions in manual work for constrained robotic tasks.
+- Greater internal investment by large AEC organisations in data, AI teams and governance.
 
-# **Conclusion**
+The main global risks and lessons are:
 
-AI adoption in New Zealand’s AEC sector is now credible and increasingly visible, but remains uneven and insufficiently measured. The strongest verified activity is in computer-vision safety monitoring, AI-assisted document and procedure review, infrastructure and environmental analytics, asset-condition prediction, consenting research, and sector capability development.
+- Pilots frequently fail to progress into routine operational use.
+- Poor data quality and fragmented systems limit reliability.
+- Skills, integration and change management remain major barriers.
+- AI outputs may be plausible but technically wrong.
+- Professional accountability does not transfer automatically to the technology provider.
+- Smaller firms may lack the resources to develop internal capability.
+- AI can reduce entry-level work that traditionally supports professional learning.
+- Computer vision and biometrics create workforce privacy and surveillance concerns.
+- Environmental costs associated with computing are increasingly relevant to sustainability claims.
 
-The July 2026 Transpower case is an important new signal. It shows AI being applied inside a critical-infrastructure organisation through bounded agents, approved knowledge sources, and human validation. This strengthens the evidence that New Zealand AEC organisations are moving beyond informal experimentation toward controlled operational use.
+The strongest global business-model signal is the growth of AI-enabled professional and operational services. These services are being delivered through recurring software, data, monitoring, assurance and asset-management relationships rather than through one-off technology sales alone. This is an inference from the combined evidence on enterprise AEC platforms, computer-vision services, asset intelligence and construction robotics. ([rics.org](https://www.rics.org/news-insights/optimism-high-for-ai-in-construction-but-skills-shortages-and-integration-challenges-adoption?utm_source=openai))
 
-The public evidence remains weakest in scaled architectural design production, structural engineering authoring, offsite manufacturing, supply-chain optimisation, and autonomous construction robotics. University research and industry initiatives exist in these areas, but public evidence of sustained production deployment is limited.
+## Conclusion
+
+AI adoption in New Zealand’s AEC sector is increasingly credible, but remains uneven and insufficiently measured. The strongest public evidence is in:
+
+- Computer-vision safety monitoring.
+- AI-assisted engineering-document and procedure review.
+- Geotechnical and infrastructure information retrieval.
+- Flood and hazard modelling.
+- Asset-condition monitoring.
+- Consent-process research.
+- Environmental and cultural-impact decision support.
+- Professional and organisational capability development.
+
+The Transpower case is an important signal because it demonstrates bounded AI agents operating in a critical-infrastructure context. Approved knowledge sources, restricted access and human validation are treated as conditions of trust rather than optional safeguards.
+
+The Beca, Downer, Auckland Council and BRANZ examples show that New Zealand adoption is developing across both private and public-sector environments. The common pattern is targeted application to tasks that are repetitive, information-intensive, time-sensitive or difficult to observe consistently.
+
+The public evidence remains weakest for:
+
+- Scaled architectural design production.
+- Structural engineering authoring.
+- Offsite manufacturing.
+- Supply-chain optimisation.
+- Autonomous general construction.
+- Independently verified sector-wide productivity gains.
 
 The principal strategic themes are:
 
-- AI is being adopted first where work is repetitive, information-heavy, and difficult to scale manually.
-- Data quality, provenance, and access boundaries are prerequisites for reliable value.
-- Professional accountability remains human even where AI performs substantial analytical or drafting work.
-- Governance, privacy, copyright, cultural considerations, and liability are becoming adoption conditions.
-- Capability-building is occurring through professional education, university research, public-sector programmes, and sector working groups.
-- Large AEC organisations are beginning to build internal AI platforms and specialist capability.
-- New Zealand’s visible opportunity lies in applying AI to local infrastructure, environmental, hazard, public-asset, and culturally informed decision contexts.
+- AI is being adopted first as an augmentation layer over existing AEC processes.
+- Data quality, provenance and access boundaries are prerequisites for useful deployment.
+- Human professional accountability remains central.
+- Governance, privacy, cultural legitimacy and information security are becoming adoption conditions.
+- Large organisations are beginning to build internal AI platforms and specialist capability.
+- Small and medium-sized firms may face a capability and access gap.
+- New Zealand’s strongest opportunities lie in applying AI to local infrastructure, environmental, hazard, geospatial and culturally informed decision contexts.
 
-The next steps indicated by the evidence are system-level:
+The next steps indicated by the current evidence are system-level:
 
-- Publish and analyse the AEC Working Group’s sector survey findings.
+- Publish and analyse the AEC Working Group’s sector survey.
 - Increase the number of independently evaluated New Zealand AEC case studies.
-- Report measured outcomes from AI-assisted consenting, infrastructure, safety, and asset-management applications.
-- Clarify how AI assurance connects with existing professional, regulatory, contractual, and safety accountabilities.
-- Continue sector-wide development of AI literacy and domain-specific capability.
-- Strengthen attention to privacy, biometric processing, Māori data governance, mātauranga Māori, and cultural legitimacy.
-- Improve the quality, traceability, and interoperability of project and asset data used in AI systems.
+- Develop consistent measures for accuracy, productivity, safety, quality and risk reduction.
+- Clarify how AI assurance interacts with professional, contractual, regulatory and health-and-safety accountability.
+- Continue AI literacy and domain-specific capability development across the workforce.
+- Strengthen treatment of privacy, biometric processing, Māori data governance, mātauranga Māori and cultural legitimacy.
+- Improve the quality, traceability and interoperability of project and asset information.
+- Create stronger links between universities, public infrastructure owners, professional bodies and AEC firms.
 
-Overall, New Zealand AEC is moving from awareness toward bounded augmentation. The most likely near-term effect is not full automation of the project lifecycle, but gradual reduction of information friction, improved visibility of safety and asset conditions, faster technical review, and stronger decision support within professionally governed workflows.
+Overall, New Zealand AEC is moving from awareness toward bounded augmentation. The most likely near-term effect is not full automation of the project lifecycle, but gradual reduction of information friction, faster technical review, improved visibility of safety and asset conditions, and stronger decision support within professionally governed workflows.
