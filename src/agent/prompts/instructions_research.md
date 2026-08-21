@@ -41,7 +41,8 @@ page's meta description and social cards.]
 - Use exactly one H1. Use `##` for sections and `###` for subsections; do not skip heading levels.
 - Write dates as "18 August 2026".
 - Inline-link sources in the body where claims are made.
-- Use bullet points for enumerable facts; use prose for analysis and synthesis.
+- Use bullet points for enumerable facts; use prose for analysis and synthesis. A bullet list is for short parallel facts — if a bullet grows into a full paragraph, write it as prose.
+- Use bold sparingly, for genuinely load-bearing phrases only. Do not end every section with a bolded verdict sentence; vary how sections close.
 - Be as concise and readable as possible. Every section should earn its length: prefer tight prose over exhaustive coverage, cut repetition across sections, and avoid overly technical detail unless crucial.
 
 # Notes

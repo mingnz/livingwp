@@ -200,15 +200,27 @@ export async function getResearchAgent(
   return { agent, modelName, reasoningEffort };
 }
 
-function logToolCall(toolName: string, input: unknown): void {
-  if (WEB_SEARCH_TOOL_NAMES.has(toolName)) {
-    const query =
-      (input as { query?: string; action?: { query?: string } } | undefined)?.query ??
-      (input as { action?: { query?: string } } | undefined)?.action?.query;
-    console.log(`[Web search] query=${JSON.stringify(query ?? input)}`);
-  } else if (toolName === 'file_search') {
-    console.log(`[File search] input=${JSON.stringify(input)}`);
+/**
+ * Pull a human-readable query out of a web-search tool payload. Providers
+ * differ: Anthropic puts `query` on the tool-call input, while OpenAI's
+ * provider-executed search emits an empty tool-call input and only reports
+ * the action (search / openPage / findInPage) on the tool result.
+ */
+export function describeWebSearch(value: unknown): string | undefined {
+  if (value == null || typeof value !== 'object') return undefined;
+  const { query, queries, url, pattern, action } = value as {
+    query?: string;
+    queries?: string[];
+    url?: string;
+    pattern?: string;
+    action?: unknown;
+  };
+  if (typeof query === 'string' && query) return query;
+  if (Array.isArray(queries) && queries.length > 0) return queries.join(' | ');
+  if (typeof url === 'string' && url) {
+    return typeof pattern === 'string' && pattern ? `${url} (find: ${pattern})` : url;
   }
+  return describeWebSearch(action);
 }
 
 export async function performResearch(
@@ -219,9 +231,27 @@ export async function performResearch(
   if (STREAMING_ENABLED) {
     console.log(`Researching: ${topic}`);
     const result = await agent.stream({ prompt: initialInput });
+    // Web-search calls whose query was already logged at tool-call time, so
+    // the tool-result pass doesn't log the same search twice.
+    const loggedSearchCallIds = new Set<string>();
     for await (const part of result.stream) {
       if (part.type === 'tool-call') {
-        logToolCall(part.toolName, part.input);
+        if (WEB_SEARCH_TOOL_NAMES.has(part.toolName)) {
+          const query = describeWebSearch(part.input);
+          if (query) {
+            loggedSearchCallIds.add(part.toolCallId);
+            console.log(`[Web search] ${query}`);
+          }
+        } else if (part.toolName === 'file_search') {
+          console.log(`[File search] input=${JSON.stringify(part.input)}`);
+        }
+      } else if (
+        part.type === 'tool-result' &&
+        WEB_SEARCH_TOOL_NAMES.has(part.toolName) &&
+        !loggedSearchCallIds.has(part.toolCallId)
+      ) {
+        const query = describeWebSearch(part.output) ?? describeWebSearch(part.input);
+        console.log(`[Web search] ${query ?? '(query not reported by provider)'}`);
       }
     }
     // Stream is complete → the result promises are now populated.
