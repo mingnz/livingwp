@@ -19,9 +19,6 @@ title: AI in Healthcare
 ---
 
 # AI Adoption in Healthcare in New Zealand: A Living Whitepaper  
-**Article slug:** `healthcare`  
-**Updated:** 18 August 2026  
-**Previous update:** 13 July 2026  
 
 ## Executive Summary
 
@@ -132,7 +129,7 @@ Health NZ expects the findings to inform a decision in **mid-to-late 2027** on w
 
 ## Current State of AI Adoption
 
-## 1. Emergency departments: the most mature national deployment
+### 1. Emergency departments: the most mature national deployment
 
 AI scribes remain the clearest example of AI adoption at scale in New Zealand healthcare.
 
@@ -148,7 +145,7 @@ However, the deployment experience also shows that adoption is not equivalent to
 
 The national rollout is therefore operationally significant, but it remains a **human-in-the-loop documentation system**, not autonomous clinical AI. ([rnz.co.nz](https://www.rnz.co.nz/news/national/589774/emergency-doctors-estimate-ai-scribe-heidi-saving-up-to-10-minutes-per-patient))
 
-## 2. Primary care: rapid but uneven adoption
+### 2. Primary care: rapid but uneven adoption
 
 Primary care remains the most dynamic setting outside hospitals.
 
@@ -172,7 +169,7 @@ The evidence suggests that adoption is expanding faster than standardisation. Pr
 
 Medtech’s February 2026 launch of Medtech AI illustrates the direction of travel. Its platform is integrated into Medtech Evolution, uses patient-record context, generates structured notes and correspondence, and requires clinician review before information is written back to the record. ([medtechglobal.com](https://medtechglobal.com/nz/news/?utm_source=openai))
 
-## 3. Patient engagement and health coaching: an emerging category
+### 3. Patient engagement and health coaching: an emerging category
 
 The Tāmaki Health and Groov deployment represents a shift from AI used behind the scenes to AI interacting directly with patients.
 
@@ -186,7 +183,7 @@ The model is deliberately bounded:
 
 This category may become important because it addresses a structural problem in New Zealand healthcare: much of chronic-disease management occurs outside clinical appointments. However, patient-facing AI creates additional requirements around safety-netting, language, cultural appropriateness, digital access and escalation reliability. ([healthcareitnews.com](https://www.healthcareitnews.com/news/anz/tamaki-health-extends-health-coaching-ai))
 
-## 4. Mental health: high potential, high governance risk
+### 4. Mental health: high potential, high governance risk
 
 Mental health is becoming a significant AI adoption area, with three distinct pathways now visible:
 
@@ -204,7 +201,7 @@ The potential benefits include faster navigation, improved consistency and addit
 
 The funded helpline triage programme should therefore be viewed as a major test of whether New Zealand can apply AI safely in a high-risk, high-volume environment without allowing the tool to replace clinical judgement. ([beehive.govt.nz](https://www.beehive.govt.nz/release/telehealth-investment-deliver-faster-access-support?utm_source=openai))
 
-## 5. Screening and diagnostics: the leading clinical scale-up pipeline
+### 5. Screening and diagnostics: the leading clinical scale-up pipeline
 
 Breast screening remains the most visible national clinical AI programme. Health NZ is pursuing procurement and validation of a mammogram-reading tool, with a proposed model in which AI would perform one of the independent reads while clinicians retain responsibility for diagnosis, follow-up and treatment decisions. A rollout from early 2027 has been proposed, subject to testing and validation. ([beehive.govt.nz](https://www.beehive.govt.nz/release/ai-breast-screening-tool-one-step-closer?utm_source=openai))
 
@@ -218,7 +215,7 @@ Diabetic retinal screening provides a more cautious local lesson. A New Zealand 
 
 The central conclusion was that apparently simple AI use cases can become complex once they meet real clinical workflows and equity requirements. ([nzmj.org.nz](https://nzmj.org.nz/journal/vol-139-no-1637/implementation-of-artificial-intelligence-in-healthcare-in-aotearoa-new-zealand-learnings-from-the-diabetic-retinal-screening-us?utm_source=openai))
 
-## 6. Clinical decision support: research is advancing faster than deployment
+### 6. Clinical decision support: research is advancing faster than deployment
 
 The strongest example is the **REVOLUTION trial**, announced by the Health Research Council in June 2026.
 

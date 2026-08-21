@@ -20,7 +20,6 @@ title: AI in Academic Research
 # AI in Academic Research in Aotearoa New Zealand: A Living Whitepaper
 
 **Last updated: 19 August 2026**  
-**Article slug:** `academic_research`  
 **Update window:** 14 July–19 August 2026, building on the previous update of 13 July 2026.
 
 ## Introduction
