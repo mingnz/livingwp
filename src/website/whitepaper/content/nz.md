@@ -5,89 +5,136 @@ article_kind: snapshot
 article_latest: true
 article_series: nz
 article_summary: >-
-  The past month has produced a clearer sign of AI becoming part of New
-  Zealand’s economic and administrative infrastructure.
-article_updated_at: '2026-08-19T00:21:35+12:00'
+  August ended with AI moving from plans to institutions and infrastructure:
+  NZIAT launched, Datagrid broke ground, public-service use doubled, and local
+  startups raised capital. Regulation and skills also moved, but national
+  research funding remains unclear.
+article_updated_at: '2026-09-01T18:20:35+12:00'
 article_version: false
 description: >-
-  The past month has produced a clearer sign of AI becoming part of New
-  Zealand’s economic and administrative infrastructure.
+  August ended with AI moving from plans to institutions and infrastructure:
+  NZIAT launched, Datagrid broke ground, public-service use doubled, and local…
 permalink: /whitepaper/nz/
 title: State of AI in New Zealand
 ---
 
 # State of AI in New Zealand
 
+August ended with AI moving from plans to institutions and infrastructure: NZIAT launched, Datagrid broke ground, public-service use doubled, and local startups raised capital. Regulation and skills also moved, but national research funding remains unclear.
 
 ## Executive Summary
 
-The past month has produced a clearer sign of AI becoming part of New Zealand’s economic and administrative infrastructure. The strongest developments were **Mercury’s NZ$53 million investment in Datagrid**, a new **generative-AI pilot for biosecurity standards**, a refreshed **public-service AI guidance and toolkit**, and a nationwide **AI hackathon festival**. Alongside a new round of early-stage funding for Auckland startup Hyades, the pattern is broader than last month’s mainly institutional focus: AI is now attracting capital, being tested in operational government work, and building a more visible national talent pipeline. ([mercury.co.nz](https://www.mercury.co.nz/investors/news))
+The past month marks a shift from AI preparation to **visible national capability-building**. The New Zealand Institute for Advanced Technology (NZIAT) formally launched in Auckland, Datagrid began horizontal construction on its Southland AI data-centre campus, and a government survey showed public-sector AI use cases had doubled in a year, with more moving into operational use. ([beehive.govt.nz](https://www.beehive.govt.nz/release/new-zealand-institute-advanced-technology-launches-auckland))
 
-This is still not a breakout month for frontier research or commercial scale. The national AI Research Platform remains publicly unresolved, health produced no new announcement comparable to the recent telehealth and emergency-department deployments, and there is little evidence of a broad wave of major private-sector AI rollouts. The current picture is therefore one of **selective acceleration**: infrastructure and public-sector enablement are moving, while the country’s largest research and commercialisation bet remains stalled in public view. ([mbie.govt.nz](https://www.mbie.govt.nz/science-and-technology/science-and-innovation/refocusing-the-science-innovation-and-technology-system/public-research-organisations/new-zealand-institute-for-advanced-technology/call-for-proposals-for-the-artificial-intelligence-research-platform?utm_source=openai))
+The private ecosystem also strengthened. Wellington-based finance automation startup Sterling raised **NZ$3.8 million**, Auckland manufacturer-focused startup RossOps joined Google’s 2026 Australia and New Zealand AI accelerator, and new business research showed growing demand for practical AI systems rather than generic experimentation. ([scoop.co.nz](https://www.scoop.co.nz/stories/BU2608/S00132/nzs-sterling-lands-38m-to-run-finance-on-autopilot.htm?utm_source=openai))
+
+The picture is therefore broader and more tangible than in July. However, it is still not a frontier-model or mass-adoption story. The final outcome of the Government’s **up to NZ$70 million AI Research Platform** remains difficult to verify in public official material, while health, enterprise deployment, and comprehensive regulation remain works in progress. ([mbie.govt.nz](https://www.mbie.govt.nz/dmsdocument/31352-call-for-proposals-for-the-artificial-intelligence-research-platform?utm_source=openai))
 
 ## What Happened in the Past Month
 
-### Energy and infrastructure became the month’s biggest strategic signal
+### New Zealand’s advanced-technology institution moved into operation
 
-The most consequential development was **Mercury’s investment in Datagrid New Zealand**, announced on **22 July**. Mercury invested **US$30 million, or NZ$53 million, for a 12.7 percent minority stake** in Datagrid Holding Group. Mercury said Datagrid’s Southland project has resource consent, that a final investment decision is expected later in 2026, and that the new partnership will allow horizontal construction work to begin. ([mercury.co.nz](https://www.mercury.co.nz/investors/news))
+The most important institutional development was the formal launch of **NZIAT on 21 August 2026**. The institute is New Zealand’s fourth Public Research Organisation and has been established to accelerate research and commercialisation in advanced technologies including artificial intelligence, quantum technologies, and advanced materials. Its Auckland base at GridAKL is intended to connect public research infrastructure with investors, startups, and industry. ([beehive.govt.nz](https://www.beehive.govt.nz/release/new-zealand-institute-advanced-technology-launches-auckland))
 
-This changes the character of the Datagrid story. Earlier announcements positioned the project primarily as a developer-led proposal for large-scale AI and hyperscale computing. A strategic investment by one of New Zealand’s major renewable electricity generators gives it a stronger domestic infrastructure partner and links the project directly to future electricity demand and generation planning. That does not guarantee the project will be built at its proposed scale, but it is a more substantive commitment than another round of promotional material. ([datagrid.nz](https://www.datagrid.nz/pr1-rc?utm_source=openai))
+The launch followed the appointment of **Steve O’Connor as permanent chair**, announced on 18 August. O’Connor had served as establishment chair since January, while Marko Bogoievski joined the board as a director. The appointments give NZIAT a more permanent governance structure as it moves from establishment into investment and delivery. ([beehive.govt.nz](https://www.beehive.govt.nz/release/permanent-chair-appointed-new-zealand-institute-advanced-technology))
 
-The project is also becoming a social-licence issue. Reporting from Southland has highlighted community questions about electricity use, water, noise, transparency, and the local economic benefits of a large AI facility. The infrastructure debate is therefore broadening from “can New Zealand attract compute?” to “under what conditions should New Zealand host it?” ([theguardian.com](https://www.theguardian.com/world/2026/jul/10/new-zealand-first-datacentre-concern-locals-makarewa-invercargill-datagrid?utm_source=openai))
+For AI, the significance is strategic rather than immediate. NZIAT is intended to become the institutional home for the country’s largest AI research-and-commercialisation investment. Its public launch is real progress, but it does not yet resolve which AI platform will receive the major allocation or how the platform will operate nationally.
 
-### Government moved AI into a practical biosecurity workflow
+### Datagrid progressed from consent to construction
 
-On **25 July**, Biosecurity Minister Andrew Hoggard announced a four-month pilot of a generative-AI tool to help develop **import health standards**. The tool is intended to assist with document-heavy analysis and produce more consistent, evidence-based standards, while final decisions remain with Biosecurity New Zealand experts. ([beehive.govt.nz](https://www.beehive.govt.nz/release/new-ai-tool-help-develop-biosecurity-standards))
+Datagrid’s Southland project produced its clearest implementation signal yet. On **18 August**, the company said horizontal works had begun at its 49-hectare Makarewa site, with HEB Construction selected to build access roads, upgrade surrounding infrastructure, excavate the site, and construct a six-metre-high visual and noise bund. The foundation platform, cable landing station, and power substation are expected to be completed by the end of 2026. ([datagrid.nz](https://www.datagrid.nz/pr1-rc))
 
-This is a useful example of where public-sector AI is currently most credible in New Zealand: not autonomous decision-making, but structured assistance with large bodies of technical material. It also extends the adoption story beyond health and general administration into one of the country’s economically important and risk-sensitive systems. Biosecurity is a high-consequence environment, so the explicit retention of expert decision-making is as important as the technology itself. ([beehive.govt.nz](https://www.beehive.govt.nz/release/new-ai-tool-help-develop-biosecurity-standards))
+This is a meaningful step beyond the resource consent and Mercury investment covered in the previous snapshot. It does not prove that the proposed 280MW AI campus will be completed at full scale, but it indicates that the project has entered physical site development rather than remaining only a planning proposition.
 
-### Public-service AI governance became more operational
+The project is also sharpening the national debate about what New Zealand should receive in return for hosting AI infrastructure. The questions are no longer limited to electricity demand and data-centre construction. They include ownership, local value capture, employment, water and land use, and whether New Zealand becomes a location for high-value AI activity or primarily a host for offshore computing capacity. ([auckland.ac.nz](https://www.auckland.ac.nz/en/news/2026/08/20/NZ-AI-hub-no-guarantee-of-wealth.html?utm_source=openai))
 
-Digital government published refreshed **Responsible AI Guidance for the Public Service: GenAI** on **28 July**, followed by a consolidated **Public Service AI Toolkit** on **29 July**. The material covers governance, security, procurement, skills, hallucinations, accountability, transparency, privacy, bias, accessibility, and considerations for Māori, Pacific, and other communities. The toolkit also includes an agency policy template and guidance on managing records created by AI systems. ([dns.govt.nz](https://dns.govt.nz/standards-and-guidance/technology-and-architecture/artificial-intelligence/responsible-ai-guidance-for-the-public-service-genai?utm_source=openai))
+### Public-sector AI adoption became measurable
 
-The significance is less about a new legal regime than about implementation capacity. New Zealand already has a Public Service AI Framework and a two-year AI work programme, but the late-July material gives agencies more practical support for deciding whether and how to use generative AI. It points towards a public service trying to standardise responsible experimentation rather than leaving each agency to develop its own approach. ([dns.govt.nz](https://dns.govt.nz/standards-and-guidance/technology-and-architecture/artificial-intelligence?utm_source=openai))
+The Government Digital Delivery Agency’s **2026 cross-agency AI survey**, published on 19 August, provides the strongest quantitative evidence yet that AI is spreading through the public sector.
 
-The guidance also shows where official concerns are concentrated: procurement and vendor risk, privacy, security, accountability, misinformation, fairness, and the quality of customer interactions with government. Those priorities align with wider public anxiety. The Privacy Commissioner’s 2026 research found that **67 percent** of respondents were concerned about government agencies or businesses using AI to make decisions about them with their personal information. ([dns.govt.nz](https://dns.govt.nz/standards-and-guidance/technology-and-architecture/artificial-intelligence/responsible-ai-guidance-for-the-public-service-genai))
+Fifty-nine participating organisations reported **545 AI use cases**, compared with 272 reported by 70 organisations in 2025. The number of use cases therefore doubled, although the participating organisations were not identical between the two surveys. More than half of the organisations reported six or more use cases, with an average of about nine per agency. ([digital.govt.nz](https://www.digital.govt.nz/dmsdocument/264~report-2026-cross-agency-survey-for-artificial-intelligence-ai-use-cases/html))
 
-### Early-stage AI capital showed a modest but real improvement
+The more important shift is in maturity. The survey identified **167 use cases in operational phases**, three times the number recorded in 2025. The most common applications are in administration, digital and technology functions, communications, policy, project management, and corporate and human-resources work. Generative AI was the most common technology, followed by natural-language processing, agentic AI, and machine learning. ([digital.govt.nz](https://www.digital.govt.nz/dmsdocument/264~report-2026-cross-agency-survey-for-artificial-intelligence-ai-use-cases/html))
 
-Auckland startup **Hyades** attracted attention in late July after raising capital to develop its geospatial AI platform. University of Auckland coverage described the company as having raised **$1.5 million**, while more detailed funding reporting broke that into a **NZ$1.1 million pre-seed round** led by Icehouse Ventures and supported by K1W1 and angels, plus a **NZ$400,000 New to R&D grant**. ([auckland.ac.nz](https://www.auckland.ac.nz/en/news.html?utm_source=openai))
+This changes the interpretation of recent public-service guidance. The guidance and toolkit released in July were not simply preparatory documents for hypothetical future use. They are being accompanied by a growing body of live and operational work. The remaining barriers are increasingly about reliability, data sovereignty, cost, skills, and public acceptance rather than whether agencies have started experimenting at all. ([digital.govt.nz](https://www.digital.govt.nz/dmsdocument/264~report-2026-cross-agency-survey-for-artificial-intelligence-ai-use-cases/html))
 
-Hyades is building tools that combine satellite, drone, radar, and other spatial data into AI-ready risk models for areas such as agriculture, insurance, mining, and climate science. The company remains early-stage, but the round is notable because it is a locally founded, technically specialised AI business rather than a general software company adding AI features. ([startupdaily.net](https://www.startupdaily.net/topic/funding/kiwi-ai-mapping-data-startup-hyades-plants-910000-pre-seed/?utm_source=openai))
+### Public-service AI capability-building widened
 
-The deal should not be mistaken for a venture-capital wave. It is better read as evidence that New Zealand can still generate investable AI companies in domains connected to the country’s existing strengths: land, agriculture, environmental monitoring, and complex physical systems.
+On **18 August**, the Leadership Development Centre and Government Digital Delivery Agency launched a free, self-paced **AI Development Series** for public servants. It covers AI fundamentals, safe and responsible use, practical prompting and checking, and the implications of AI for public-sector roles. ([digital.govt.nz](https://www.digital.govt.nz/news/new-ai-training-supports-safe-and-practical-use-across-the-public-service?utm_source=openai))
 
-### The ecosystem focused on participation and capability-building
+The emphasis on human judgement, oversight, and checking AI-generated content is consistent with the wider public-service approach: use AI to support work and improve service delivery, while retaining accountability for decisions. This is less dramatic than an autonomous government system, but more likely to produce repeatable adoption across agencies.
 
-From **3 to 10 August**, the AI Forum’s **Aotearoa AI Hackathon Festival** ran across multiple locations nationwide. Participants worked on challenges including food insecurity, digital accessibility, workforce upskilling, cross-border collaboration, and Indigenous environmental custodianship. Local winners are being considered for national judging, with finalists due to pitch at the Aotearoa AI Summit in September. ([aihackathon.nz](https://aihackathon.nz/?utm_source=openai))
+### Education began building AI into secondary-school pathways
 
-The festival is primarily an ecosystem and capability event, not evidence of commercial deployment. Its importance lies in widening participation beyond established technology companies and university labs. The inclusion of Māori and environmental themes also reflects the direction of New Zealand’s AI conversation: practical problem-solving, inclusion, and local context rather than simply reproducing overseas frontier-model narratives. ([aiforum.org.nz](https://aiforum.org.nz/event/aotearoa-ai-hackathon-2026/?utm_source=openai))
+The Government announced seven new industry-led secondary-school subjects on **6 August**, including **Applied Intelligent Systems**. The subject is designed to teach students how to use low- or no-code technologies to design, deploy, and evaluate AI-enabled workflows and agents. ([beehive.govt.nz](https://www.beehive.govt.nz/release/new-subjects-bring-industry-and-classroom-closer-together))
+
+This is an important change in the skills pipeline. Earlier AI initiatives focused mainly on adult upskilling, university research, or support for businesses already trying to adopt the technology. Bringing applied intelligent systems into secondary education signals an attempt to normalise AI as part of ordinary technical and vocational learning.
+
+The approach is also deliberately practical. It frames AI alongside manufacturing, infrastructure, food and fibre, health services, and engineering rather than as a standalone computer-science specialism. That fits New Zealand’s emerging strengths in applied and sector-specific AI.
+
+### Local startup capital concentrated around practical agents
+
+The strongest local funding story was **Sterling**, which raised **NZ$3.8 million** in a seed round led by Blackbird on 14 August. The Wellington and Auckland startup is building AI workflows for finance teams, including invoice processing, bank reconciliation, reporting, and month-end routines. Its system is designed to log actions and escalate ambiguous cases to human staff. ([scoop.co.nz](https://www.scoop.co.nz/stories/BU2608/S00132/nzs-sterling-lands-38m-to-run-finance-on-autopilot.htm?utm_source=openai))
+
+Sterling is a useful signal because it reflects the kind of AI business New Zealand is currently producing and funding: vertical, workflow-oriented, and aimed at measurable operational work. It is not trying to compete with global model providers. Its opportunity lies in integrating AI into existing business systems and earning trust in processes where errors have financial consequences.
+
+Business demand appears to be following a similar pattern. First Focus analysed 108 AI project ideas submitted by New Zealand small and medium-sized businesses. The proposals included preparing quotes from architectural plans, converting handwritten dispatch notes into sales orders, reviewing contracts, searching SharePoint, and monitoring project margins. Five projects were selected for up to **NZ$20,000** each in implementation support. ([firstfocus.co.nz](https://firstfocus.co.nz/insights/what-100-new-zealand-businesses-want-to-build-with-ai/?utm_source=openai))
+
+### New Zealand startups gained international ecosystem exposure
+
+Google announced its **2026 Australia and New Zealand AI accelerator cohort** on 31 August. The ten-week, equity-free programme selected 15 seed and Series A companies working on AI and machine-learning products. The cohort includes Auckland-based manufacturing startup **RossOps**, which develops AI tools for capturing and searching operational knowledge on factory floors. ([blog.google](https://blog.google/intl/en-au/company-news/google-for-startups-accelerator-introducing-our-2026-australia-new-zealand-ai-cohort/))
+
+The cohort is not equivalent to a funding round, and it covers both Australia and New Zealand. Its significance is ecosystem-level: local companies are gaining access to technical mentoring, cloud infrastructure, and international networks while building products around manufacturing, supply chains, energy, spatial data, and other physical-world applications.
+
+### Regulation expanded to include AI companions
+
+The Government’s proposed **Online Safety Bill**, introduced on **24 August**, would bring emerging technologies including AI companion platforms into the online-safety framework. The Bill proposes age checks for high-risk social-media platforms using methods including existing account information, facial age estimation, digital identity services, and formal identification. It would also create an online-safety regulator and allow penalties of up to 10 percent of a platform’s global revenue. ([beehive.govt.nz](https://www.beehive.govt.nz/release/government-moves-ban-u16s-social-media))
+
+The Bill is not an AI Act and has not yet become law. Its importance is that AI systems are increasingly being addressed through adjacent policy areas such as child safety, online harms, privacy, and platform accountability. It also highlights a new regulatory tension: some of the proposed safeguards, such as facial age estimation, introduce their own questions about accuracy, privacy, and data governance.
+
+### Health AI remained promising but mostly early-stage
+
+The Mental Health and Wellbeing Strategy launched on **6 August** includes a planned **AI Navigation** service to help people find suitable mental-health and addiction support. The proposal is framed as a navigation and access tool, not an autonomous clinical decision-maker. ([beehive.govt.nz](https://www.beehive.govt.nz/release/promised-mental-health-strategy-launched))
+
+This extends the health sector’s AI activity beyond the emergency-department scribe rollout and telehealth triage work covered in previous snapshots. However, AI Navigation remains a planned action rather than a demonstrated nationwide deployment. Health therefore remains an important area of activity, but not the month’s strongest evidence of new operational scale.
 
 ## Trend Line Across Recent Snapshots
 
-The story has shifted across the last three snapshots:
+The direction across the recent snapshots is now clearer:
 
-- **March:** infrastructure, data centres, privacy, and research-platform mechanics dominated.
-- **May and early June:** practical adoption support, public-service tooling, health procurement, and cyber readiness broadened the picture.
-- **June and July:** AI became more embedded in science policy, business support, health services, and institutional risk management.
-- **The current month:** the emphasis moved towards **physical infrastructure, operational government pilots, and early-stage capital**.
+- **March:** attention centred on infrastructure, privacy, cyber risk, and the mechanics of the national AI Research Platform.
+- **May and June:** activity broadened into business support, health procurement, public-service tooling, and workforce readiness.
+- **July:** government pilots, responsible-use guidance, biosecurity, and early-stage startup capital became more visible.
+- **August:** the focus shifted towards **institutional execution, physical infrastructure, measurable public-sector adoption, and vertical AI companies**.
 
-That suggests momentum is **broadening and becoming more tangible**, but not yet accelerating evenly. Infrastructure is now attracting serious domestic capital. Government agencies are building repeatable processes for responsible use. Startups are finding selective funding in specialised domains. At the same time, the activity remains concentrated in a relatively small number of projects and institutions. ([datagrid.nz](https://www.datagrid.nz/pr1-rc?utm_source=openai))
+Momentum is therefore **broadening and becoming more concrete**, but not accelerating uniformly.
 
-The contrast with health is notable. Health remains New Zealand’s most visible AI deployment sector because of the nationwide emergency-department scribe rollout and the mental-health telehealth triage project described in the previous snapshot. But no new health announcement in the current period matched those earlier milestones. That suggests deployment momentum is real but episodic rather than yet forming a continuous national rollout programme.
+The public sector now has stronger evidence of movement from experimentation into operational use. Infrastructure has moved from consent and investment into site works. Education is beginning to build AI capability into technical pathways. Local capital is appearing around agentic and workflow-specific products rather than only general-purpose software.
+
+At the same time, the activity remains distributed. There is still no single national deployment programme comparable to a frontier-model initiative, and the strongest local commercial stories are small numbers of specialised companies rather than a broad funding wave.
 
 ## What Looks Quiet, Unchanged, or Early
 
-The biggest unresolved issue remains the **AI Research Platform**. MBIE’s public page still says that phase-two proposals were due on **31 March 2026**, that the assessment panel met in mid-April, and that an announcement timeline will be provided “in due course.” The programme offers up to **NZ$70 million over seven years**, and earlier documentation anticipated a May announcement and July contracting. No public selection announcement is visible on the current MBIE platform material. ([mbie.govt.nz](https://www.mbie.govt.nz/science-and-technology/science-and-innovation/refocusing-the-science-innovation-and-technology-system/public-research-organisations/new-zealand-institute-for-advanced-technology/call-for-proposals-for-the-artificial-intelligence-research-platform?utm_source=openai))
+The biggest unresolved issue remains the **national AI Research Platform**.
 
-That delay is increasingly important. New Zealand is now making visible commitments to AI infrastructure and public-sector adoption, but the central research-and-commercialisation platform intended to build long-term domestic capability remains uncertain. Until that process is concluded, the country’s AI system still lacks a clear national research anchor.
+The original MBIE timetable anticipated a funding decision in late April 2026, an announcement in May, contract negotiations from May to July, and a 1 July contract commencement. Public official material now confirms that NZIAT is progressing work on AI, but does not clearly identify the successful platform, publish a final award decision, or explain how the up-to-NZ$70 million allocation is being deployed. ([mbie.govt.nz](https://www.mbie.govt.nz/dmsdocument/31352-call-for-proposals-for-the-artificial-intelligence-research-platform?utm_source=openai))
 
-Private-sector adoption also remains difficult to assess. The month produced a substantial infrastructure investment and one notable startup funding round, but little public evidence of major enterprise deployments by banks, manufacturers, retailers, or exporters. The available evidence still points to experimentation, capability-building, and specialised use cases rather than widespread transformation.
+That ambiguity is increasingly conspicuous. New Zealand now has a launched advanced-technology institute, a growing public-sector adoption base, and active private infrastructure projects. Yet the country’s central research-and-commercialisation bet remains difficult for the public to track.
+
+Large-enterprise adoption is also still hard to assess. Datacom’s survey of 207 senior leaders found that 66 percent of organisations had provided AI skills training in the previous year, while 59 percent employed or planned to employ dedicated AI talent. But only 22 percent reported having a dedicated AI leadership role. The same research found substantial concern about offshore data risks, alongside a much smaller share with formal policies governing where critical data is stored and managed. ([datacom.com](https://datacom.com/nz/en/solutions/artificial-intelligence/ai-insights/state-of-ai-index-2026?utm_source=openai))
+
+This suggests that capability-building is ahead of governance maturity. Businesses are hiring, training, and experimenting, but many have not yet settled ownership, accountability, data residency, or integration questions.
+
+Health AI also remains early in several important areas. AI Navigation is still a planned service, breast-screening AI remains at the procurement and validation stage, and there was no new health deployment in this period matching the scale of the emergency-department scribe rollout.
 
 ## Overall Assessment
 
-August’s picture is stronger than July’s in one important respect: AI is no longer only being formalised through policy and guidance. It is now being connected to **electricity infrastructure, construction decisions, biosecurity operations, and startup finance**.
+August was a stronger month than July because several previously abstract initiatives became more observable.
 
-But the country is still moving in a distributed and cautious way. The most credible projects use AI to assist experts, process complex information, or improve access to specialised capability. The most ambitious infrastructure project is attracting money but also scrutiny. The ecosystem is active, yet still more effective at convening and prototyping than at producing repeated large-scale commercial outcomes.
+NZIAT now exists as an operating national institution. Datagrid has entered site construction. Public-sector AI use can be measured in hundreds of use cases, with a growing share in operational phases. Schools are beginning to teach the design and evaluation of AI-enabled workflows. Local investors are backing specialised companies that automate real business processes.
 
-The best overall description is therefore **selective acceleration under unresolved structural constraints**. New Zealand is building the conditions for wider AI adoption, and the national picture is broadening across government, infrastructure, research, and startups. However, the missing AI Research Platform, limited evidence of large enterprise deployment, and unresolved social-licence questions around compute mean the country has not yet crossed from institutional preparation into nationally scaled AI execution.
+The overall pattern is **selective acceleration with improving institutional depth**. New Zealand is not showing evidence of a broad frontier-AI race or economy-wide transformation. It is, however, developing a more credible applied-AI system around public services, infrastructure, vocational education, manufacturing, finance, and sector-specific research.
+
+The main constraint is no longer a lack of activity. It is the absence of coordination and scale. Until the AI Research Platform’s outcome is made clear, enterprise adoption becomes more measurable, and the social and economic terms of AI infrastructure are better defined, New Zealand’s AI system will remain active but fragmented.
+
+The national picture is moving forward—but through a series of practical, specialised bets rather than one decisive breakthrough.
