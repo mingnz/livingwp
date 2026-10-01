@@ -5,354 +5,366 @@ article_kind: industry
 article_latest: true
 article_series: finance
 article_summary: >-
-  AI in New Zealand finance is moving into bounded production: customer service,
-  fraud, claims and open banking are advancing, while advice, lending and
-  agentic payments remain tightly governed, unevenly measured and largely
-  human-supervised.
-article_updated_at: '2026-09-01T18:38:51+12:00'
+  AI adoption in New Zealand finance is broadening but remains bounded: service,
+  fraud, open banking and investment discovery are live, while advice, lending,
+  claims and agentic payments remain closely controlled and unevenly evidenced.
+article_updated_at: '2026-10-01T20:33:14+13:00'
 article_version: false
 description: >-
-  AI in New Zealand finance is moving into bounded production: customer service,
-  fraud, claims and open banking are advancing, while advice, lending and
-  agentic…
+  AI adoption in New Zealand finance is broadening but remains bounded: service,
+  fraud, open banking and investment discovery are live, while advice, lending,…
 permalink: /whitepaper/finance/
 title: AI in Finance
 ---
 
 # AI in Finance in Aotearoa New Zealand: A Living Whitepaper
 
-AI in New Zealand finance is moving into bounded production: customer service, fraud, claims and open banking are advancing, while advice, lending and agentic payments remain tightly governed, unevenly measured and largely human-supervised.
+AI adoption in New Zealand finance is broadening but remains bounded: service, fraud, open banking and investment discovery are live, while advice, lending, claims and agentic payments remain closely controlled and unevenly evidenced.
 
 ## Executive Summary
 
-- **The strongest evidence of adoption remains in customer service, fraud prevention, workflow automation and claims support.** Kiwibank has newly disclosed AI-powered customer-service tools, while Vero and Tower have reported live deployments in insurance operations. ([kiwibank.co.nz](https://www.kiwibank.co.nz/about-us/news-and-updates/media-releases/kiwibank-full-year-results-for-the-year-ended-30-june-2026/?utm_source=openai))
-- **Open banking has moved from implementation to measurable use.** MBIE reports more than 408,000 regulated open-banking payment requests worth NZ$130 million in July 2026, alongside more than 19 million data-sharing requests. ([mbie.govt.nz](https://www.mbie.govt.nz/business-and-employment/business/consumer-data-right/consumer-data-right-in-aotearoa-new-zealand/uptake-of-consumer-data-right?utm_source=openai))
-- **The open-banking operating model is changing.** Payments NZ has announced that its API Centre will close at the end of September 2026, with standards-management responsibility transferring to MBIE. ([paymentsnz.co.nz](https://www.paymentsnz.co.nz/resources/articles/payments-nz-announces-closure-of-api-centre/?utm_source=openai))
-- **Financial advice is now the FMA’s most explicit AI-specific supervisory focus.** Its August thematic review is designed to understand how AI is being used, what conduct risks arise, and what safeguards firms have implemented. ([fma.govt.nz](https://www.fma.govt.nz/library/reports-and-papers/?utm_source=openai))
-- **Evidence of autonomous consequential decision-making remains limited but is no longer absent.** Tower reports completing one fully automated motor claim from lodgement through approval and payment without manual intervention. This is significant, but it is not evidence of scaled autonomous claims handling. ([tower.co.nz](https://www.tower.co.nz/wp-content/uploads/2026/05/HY26-Results-Announcement.pdf?utm_source=openai))
-- **Agentic finance remains primarily preparatory.** Visa’s Agentic Ready programme and Mastercard’s authenticated transaction with Westpac are testing the identity, consent, tokenisation, liability and fraud-control layers needed for agent-initiated payments. ([visa.co.nz](https://www.visa.co.nz/about-visa/newsroom/press-releases/visa-welcomes-partners-into-agentic-ready-program-to-unlock-agentic-commerce.html?utm_source=openai))
-- **The data is still fragmented and often vendor-reported.** Experian research suggests substantial interest in AI-assisted underwriting among New Zealand institutions, but the sample is small and does not establish sector-wide production adoption. ([ecommercenews.co.nz](https://ecommercenews.co.nz/story/new-zealand-lenders-adopt-ai-amid-data-readiness-gap?utm_source=openai))
+- **Operational adoption is expanding across customer service.** ASB reports that conversational IVR helped reduce average call-wait times by about 40% in FY26. Kiwibank has introduced AI-powered customer-service tools, while Westpac, Tower and Vero have disclosed live AI-enabled service deployments. ([asb.co.nz](https://www.asb.co.nz/documents/media-centre/media-releases/as-full-year-result-2026.html))
+- **Open banking has moved beyond implementation into measurable activity.** MBIE reports more than 556,000 payment requests worth NZ$158.5 million and more than 24 million data-sharing requests in August 2026. ([mbie.govt.nz](https://www.mbie.govt.nz/business-and-employment/business/consumer-data-right/consumer-data-right-in-aotearoa-new-zealand/uptake-of-consumer-data-right?utm_source=openai))
+- **The open-banking operating model has now changed.** The Payments NZ API Centre ceased operating on 30 September 2026. MBIE is taking responsibility for regulatory standards management, although the handover will continue over the following months. ([apicentre.paymentsnz.co.nz](https://www.apicentre.paymentsnz.co.nz/news/articles/open-banking-moves-into-its-next-phase/))
+- **Financial advice remains the principal AI-specific conduct test.** The FMA’s AI-in-advice surveys closed on 18 September 2026, but no findings had been published by 1 October. The available evidence still indicates that AI is used mainly to support advisers rather than replace them. ([fma.govt.nz](https://www.fma.govt.nz/library/reports-and-papers/thematic-review-ai-in-financial-advice/))
+- **Consumer trust is conditional rather than absent.** Financial Services Council research found that 42% of consumers were comfortable with financial-services organisations using AI, but only 35% were comfortable with AI making automated financial decisions. Seventy percent expressed concern about privacy and personal data. These are industry-sponsored findings and should not be treated as an official national statistic. ([blog.fsc.org.nz](https://blog.fsc.org.nz/what-do-kiwis-think-of-ai?hs_amp=true))
+- **Evidence of autonomous consequential decision-making remains narrow.** Tower has reported one fully automated motor claim from lodgement to payment, while Sharesies’ AI Search is explicitly positioned as investment discovery rather than advice and warns that results may be inaccurate or hallucinated. ([earningscalls.dev](https://earningscalls.dev/transcripts/tower-limited_twr_earnings_call_transcript_2026-05-20?utm_source=openai))
+- **The strongest evidence of scaled AI adoption is still in bounded workflows:** contact-centre assistance, transcription, summarisation, sentiment analysis, fraud detection, customer triage and workflow automation. Evidence of scaled autonomous lending, advice, claims adjudication, investment management or payments remains limited.
 
-The sector’s direction is therefore clearer than its aggregate maturity: financial institutions are deploying AI where outputs can be bounded, reviewed and embedded into existing controls. The shift toward independent decision-making is visible mainly in isolated claims automation, advice experimentation, credit-risk tooling and payment demonstrations.
+The sector has therefore progressed since the previous update, but not in the direction of general-purpose autonomous finance. New Zealand institutions are adding AI to live processes while retaining human accountability, defined permissions and existing regulatory controls.
 
 ## What Has Changed Since the Last Update
 
-### Open banking now has usage data, not just readiness claims
+### Open banking now has a second month of strong usage data
 
-The previous article correctly identified open banking as maturing infrastructure. The latest MBIE figures strengthen that conclusion by showing actual regulated usage.
+MBIE’s August figures reinforce the conclusion that regulated open banking is becoming an operating utility rather than a readiness exercise.
 
-In July 2026:
+In August 2026:
 
-- More than **408,000 open-banking payment requests** were processed.
-- The combined value of those payments exceeded **NZ$130 million**.
-- More than **19 million requests** to securely share banking data were processed.
-- The number of accredited requestors reached **14**, six more than in May.
-- Three new accredited requestors—Centrapay, Experian and Trail—were added during July. ([mbie.govt.nz](https://www.mbie.govt.nz/business-and-employment/business/consumer-data-right/consumer-data-right-in-aotearoa-new-zealand/uptake-of-consumer-data-right?utm_source=openai))
+- More than **556,000 open-banking payment requests** were processed.
+- The combined value exceeded **NZ$158 million**.
+- More than **24 million banking-data sharing requests** were processed.
+- The number of accredited requestors remained at **14**.
 
-These figures demonstrate live activity, although they should not be treated as evidence that AI-enabled financial products have already achieved mass adoption. Open banking is an enabling layer. The extent to which the data is being used for AI-driven affordability assessment, financial guidance, fraud detection or personalisation is not publicly quantified.
+Compared with July, payment requests increased by 36%, payment value by 22% and data-sharing requests by 28%. The figures demonstrate live usage, although they do not show how much activity is being used for AI-driven affordability assessment, personalisation, financial guidance or fraud detection. Open banking is an enabling data and payments layer, not itself evidence of AI adoption. ([mbie.govt.nz](https://www.mbie.govt.nz/business-and-employment/business/consumer-data-right/consumer-data-right-in-aotearoa-new-zealand/uptake-of-consumer-data-right?utm_source=openai))
 
-### Stewardship of open-banking standards is moving to MBIE
+Payments NZ’s API Centre reported slightly different August figures—545,681 payments worth NZ$152.9 million—because its reporting covers its own ecosystem of standards users rather than the full MBIE regulated-activity measure. The difference illustrates why sector comparisons need to distinguish between regulatory reporting and industry-platform reporting. ([apicentre.paymentsnz.co.nz](https://www.apicentre.paymentsnz.co.nz/news/articles/open-banking-moves-into-its-next-phase/))
 
-On 21 August 2026, Payments NZ announced that the API Centre would cease operating at the end of September. Responsibility for standards management will transfer to MBIE. Payments NZ reported that more than 401,000 open-banking payments were completed in July, with more than 221,000 customers authorising payments or data-sharing consents during the month. ([paymentsnz.co.nz](https://www.paymentsnz.co.nz/resources/articles/payments-nz-announces-closure-of-api-centre/?utm_source=openai))
+### The API Centre has closed, but open banking has not
 
-This is an institutional change rather than an AI deployment. Its importance lies in the transition from an industry-coordinated implementation phase to a more formal regulatory and administrative model. For financial institutions and fintechs, future priorities will include continuity of standards, onboarding of accredited requestors, operational reliability and the expansion of services beyond the initial banking channels.
+The API Centre ceased operating on **30 September 2026**, ending its industry-led role in open-banking standards development, management and governance. MBIE now leads the regulatory standards function under the Customer and Product Data Act 2025.
 
-### Kiwibank has disclosed AI-powered customer-service tools in production
+This is an institutional change, not an AI deployment. Its significance for AI lies in the infrastructure underneath future financial products: data access, consent, authentication, interoperability, reliability and auditability. The transition is not complete. Payments NZ says the handover of standards, tools, certification arrangements and support functions will continue after the closure date, while open-banking services remain operational. ([apicentre.paymentsnz.co.nz](https://www.apicentre.paymentsnz.co.nz/news/articles/open-banking-moves-into-its-next-phase/))
 
-Kiwibank’s financial results for the year ended 30 June 2026, released on 20 August, state that the bank introduced AI-powered tools within customer-service operations so staff could spend more time helping customers. The announcement does not disclose the specific tools, deployment scale, model type or performance outcomes. ([kiwibank.co.nz](https://www.kiwibank.co.nz/about-us/news-and-updates/media-releases/kiwibank-full-year-results-for-the-year-ended-30-june-2026/?utm_source=openai))
+### ASB provides new quantified evidence from a live AI deployment
 
-This is nevertheless useful new evidence. It confirms that AI adoption is not confined to the largest internationally connected banks and insurers. It also reinforces the prevailing New Zealand model: AI is being introduced inside service operations to support employees, rather than presented as a replacement for frontline banking staff.
+ASB’s FY26 results add one of the clearest bank-specific performance claims since the previous update. The bank says its conversational IVR can answer simple questions and route customers to the appropriate specialist, helping reduce average call-wait times by approximately 40% compared with FY25. ([asb.co.nz](https://www.asb.co.nz/documents/media-centre/media-releases/as-full-year-result-2026.html))
 
-Kiwibank had already been using AI-enabled voicebot and customer-service capabilities through Genesys Cloud. Genesys reports reductions in transfers, average handling time and abandonment rates, but those results are vendor-reported and relate to an implementation that predates the latest financial-results disclosure. ([genesys.com](https://www.genesys.com/customer-stories/kiwibank?utm_source=openai))
+This is stronger evidence than a generic statement that AI is being explored, but it remains a company-reported operational metric. ASB does not disclose the system’s containment rate, error rate, transfer rate, customer-satisfaction effects or how performance varies across customer groups.
 
-### The previous MBIE consultation deadline has changed
+The result strengthens the assessment that customer service is the leading production use case. It does not indicate that ASB has transferred responsibility for complex advice, lending or complaints decisions to an AI system.
 
-The previous article stated that MBIE’s capital-markets consultation closed on 25 August 2026. The current MBIE page lists the submission deadline as **15 September 2026 at 5pm**. The consultation continues to ask how New Zealand should respond to digital and AI-related innovation in financial products and markets. ([mbie.govt.nz](https://www.mbie.govt.nz/have-your-say/consultation-on-capital-markets-reform?utm_source=openai))
+### The FMA’s AI review has passed its evidence-gathering deadline
 
-The consultation is not an AI-specific regulatory framework and does not authorise new AI use cases. Its significance is agenda-setting: AI is now explicitly part of the Government’s consideration of capital-market competitiveness, product design and market integrity.
+The FMA opened its thematic review of AI in financial advice on 6 August 2026. It sought information from advice providers, technology firms, legal advisers and industry stakeholders on governance, oversight, suitability, record-keeping and consumer outcomes. The surveys closed on **18 September 2026**. ([fma.govt.nz](https://www.fma.govt.nz/library/reports-and-papers/thematic-review-ai-in-financial-advice/))
 
-### Westpac has reached the announced deployment window, but outcome evidence remains thin
+No findings or sector-wide adoption figures had been published by 1 October. The review therefore remains a regulatory fact-finding exercise, not a new AI rulebook.
 
-Westpac announced in April that it expected to deploy Microsoft Dynamics 365 Contact Centre as a Service across all its contact centres by August 2026. The platform gives customer-service staff real-time access to customer and product information during conversations. ([westpac.co.nz](https://www.westpac.co.nz/about-us/media/westpac-nz-becomes-first-major-nz-company-to-launch-microsoft-ai-tool-to-support-human-to-human-customer-conversations/?utm_source=openai))
+This qualifies but does not overturn the previous assessment. The FMA’s March access-to-advice review found that digital and hybrid advice models were expanding, while the predominant use of AI was to enable advisers rather than replace them. Regulatory returns also show that the estimated number of clients receiving digital advice rose from approximately 86,500 in 2024 to more than 164,800 in 2025. That growth is evidence of digital advice, not necessarily AI-generated advice. ([fma.govt.nz](https://www.fma.govt.nz/news/all-releases/media-releases/improve-new-zealanders-access-to-financial-advice/?utm_source=openai))
 
-The scheduled deployment window has now passed. However, the public information reviewed for this edition does not include official post-deployment metrics such as resolution time, customer satisfaction, error rates, escalation rates or workforce effects. The deployment should therefore be classified as an announced and apparently operational technology rollout, but not yet as a publicly evidenced productivity success.
+### RBNZ has placed AI within a longer-term banking-system framework
 
-### The “no autonomous claims decisions” assessment needs qualification
+The Reserve Bank’s **Future of Banking Study**, published on 17 September 2026, considers three possible 2035 scenarios: continued dominance by incumbent banks, stronger digital challengers, and a more interconnected banking ecosystem.
 
-The previous article assessed public evidence of autonomous consequential decision-making as limited. That remains broadly correct, but it requires a qualification.
+The study does not predict which scenario will occur. It identifies AI, cloud services, data sharing and interconnected providers as forces that could increase efficiency and competition while also creating more complex operational, concentration and resilience risks. This moves the discussion beyond individual pilots toward the structure of the financial system itself. ([rbnz.govt.nz](https://www.rbnz.govt.nz/hub/publications/bulletin/2026/future-of-banking))
 
-Tower’s 2026 half-year results state that the company completed its first fully automated motor claim, from lodgement to approval and payment, without manual intervention. Tower also says it expanded automation across the claims process. ([tower.co.nz](https://www.tower.co.nz/wp-content/uploads/2026/05/HY26-Results-Announcement.pdf?utm_source=openai))
+### Consumer-facing investment AI is now a clearer part of the evidence base
 
-This is the clearest publicly disclosed New Zealand example of a consequential insurance process being completed without manual intervention. It is not evidence that Tower has shifted to autonomous claims adjudication at scale: the disclosure describes a first completed claim, not the volume, eligibility rules, exception rates or governance arrangements for the wider system.
+Sharesies continues to offer AI Search, which scans public financial data and produces investment-related summaries and search results. The platform explicitly says that AI Search does not provide financial advice, that no human has reviewed each result, and that outputs may be inaccurate, outdated or misleading. ([intercom.help](https://intercom.help/sharesies/en/articles/9464903-searching-with-ai-search))
+
+This is a useful boundary case. It shows that AI can be placed directly in front of retail investors without being presented as regulated personalised advice. It also demonstrates why disclosure, product classification and customer expectations matter: an AI tool can influence investment behaviour even when its provider says it is not making a recommendation.
 
 ## Current State of AI Adoption
 
-Public evidence points to a sector with meaningful operational adoption but limited transparency about aggregate scale.
+Public evidence points to meaningful operational adoption but limited transparency about aggregate scale.
 
 | Use case | Current position | Assessment |
 |---|---|---|
-| Fraud and scam prevention | A major regulatory and institutional priority, supported by real-time monitoring and detection systems | Established, but unevenly disclosed |
-| Customer-service assistance | Live deployments at banks and insurers, including Kiwibank, Westpac, Tower and Vero | Most visibly scaling |
-| Voicebots and self-service | Operating in selected banking and insurance contact centres | Mature in bounded workflows |
-| Complaints and vulnerability detection | Vero is using sentiment analysis to identify dissatisfaction, complaints and possible vulnerability | Early production |
-| Claims automation | Tower reports one fully automated motor claim and broader process automation | Early, tightly bounded |
-| Financial advice | Digital tools, adviser copilots and some pure-AI advice examples are present; the FMA is investigating the sector | Exploratory and supervised |
-| Credit and underwriting | Strong interest in AI-assisted decision support, but limited public evidence of autonomous lending at scale | Emerging |
-| Open banking | Live payment and data-sharing activity is growing rapidly | Infrastructure operational |
-| Agentic payments | Demonstrations and ecosystem programmes are underway | Experimental |
+| Customer-service assistance | Live deployments at ASB, Kiwibank, Westpac and insurers | Most visibly scaling |
+| Voicebots and conversational IVR | Operating in banking contact centres for simple questions and routing | Established in bounded workflows |
+| Transcription, summaries and knowledge assistance | Operating in insurance and banking contact centres | Production use, with limited independent measurement |
+| Sentiment, complaints and vulnerability detection | Vero has rolled out AI analysis across consumer and business operations | Early production with conduct implications |
+| Fraud and scam prevention | Major institutional and regulatory priority | Established capability, uneven disclosure |
+| Claims automation | Tower reports one fully automated motor claim and broader automation | Early, tightly bounded |
+| Financial advice | Digital advice is growing; AI-specific use is under FMA review | Expanding but not transparent |
+| Credit and underwriting | High reported interest in AI decision support; limited local deployment evidence | Emerging |
+| Investment discovery | Sharesies AI Search is customer-facing and live | Live, but expressly not advice |
+| Open banking | Payment and data-sharing infrastructure operating at growing volume | Operational enabling layer |
+| Agentic payments | Authenticated demonstrations and readiness programmes | Experimental |
 | Autonomous investment or trading | Little strong public evidence of scaled local deployment | Limited disclosure |
 
 ### Customer service is the clearest production pattern
 
-The best-documented deployments place AI between a customer interaction and a human employee.
+The common design places AI between a customer interaction and a human employee.
 
-At Vero, Salesforce AI Sentiment Analysis was piloted across approximately 45,000 interactions before being rolled out across consumer and business operations. Vero says the system analyses calls and emails for sentiment, possible complaints and indicators of vulnerability, with staff expected to review flagged interactions and decide what action is appropriate. ([suminsured.vero.co.nz](https://suminsured.vero.co.nz/newsroom/vero-launches-ai-powered-customer-sentiment-monitoring-to-streng.html?utm_source=openai))
+At ASB, conversational IVR handles simple questions and triages calls. At Westpac, Microsoft Dynamics 365 Contact Centre as a Service provides staff with customer and product information during conversations. Kiwibank has disclosed AI-powered tools within customer-service operations. Tower uses real-time transcription, summaries, knowledge assistance and automated quality assurance across sales, service and claims. ([asb.co.nz](https://www.asb.co.nz/documents/media-centre/media-releases/as-full-year-result-2026.html))
 
-Tower’s Amazon Connect deployment uses real-time transcription, automated quality assurance, call summaries, knowledge assistance and other AI-supported capabilities across sales, service and claims. Tower reports that customer interaction time fell by approximately 15% over seven months, with more than 796,000 minutes saved and average handling time reduced by two minutes and 38 seconds. ([tower.co.nz](https://www.tower.co.nz/news/contact-centre-cuts-call-time/?utm_source=openai))
+The reported benefits are mainly speed, reduced handling time and improved employee access to information. These are appropriate early use cases because outputs can be reviewed, corrected or overridden without necessarily changing the underlying product, price or eligibility decision.
 
-A separate AWS case study reports different figures for a six-month period, including a 26% improvement in average call-handling time, an 18% improvement in email-handling time, 8,200 agent hours freed and a four-point increase in net promoter score. These figures are vendor- or company-supplied and use different measurement periods, so they should not be directly compared with Tower’s own announcement. ([aws.amazon.com](https://aws.amazon.com/solutions/case-studies/tower-insurance-deloitte/?utm_source=openai))
-
-The common pattern is more important than the exact percentages: AI is being integrated into live service workflows where its outputs can be reviewed, corrected and audited.
+The public evidence remains largely self-reported. Institutions generally do not publish error rates, escalation rates, repeat contacts, customer outcomes or the effect on vulnerable customers. Efficiency claims should therefore be treated as indicators of adoption, not independently verified proof of net benefit.
 
 ### Fraud and scam prevention remains strategically important
 
-Fraud detection is one of the most consistently cited finance-AI use cases in New Zealand. The FMA’s 2026/27 Financial Conduct Report identifies fraud detection and prevention—including mortgage fraud, insurance fraud and fraudulent KiwiSaver first-home withdrawals—as a cross-sector priority. ([fma.govt.nz](https://www.fma.govt.nz/library/reports-and-papers/financial-conduct-report))
+Fraud detection, transaction monitoring, identity verification and scam intervention remain among the most credible uses for machine learning in finance. The FMA’s 2026/27 conduct priorities identify fraud detection and prevention as a cross-sector issue, while banks continue to invest in real-time monitoring, customer authentication and scam controls. ([fma.govt.nz](https://www.fma.govt.nz/library/reports-and-papers/financial-conduct-report/?utm_source=openai))
 
-Banks are also strengthening related controls through real-time transaction monitoring, identity verification, Confirmation of Payee and scam-intervention measures. However, public disclosure generally describes capabilities rather than performance. There is limited independently verified information on false-positive rates, fraud losses avoided, customer friction or the treatment of vulnerable customers.
+The evidence gap is significant. Public disclosures usually describe the existence of capabilities rather than their performance. There is little independently verified information on:
 
-This matters because fraud models often operate in consequential settings. A system that blocks or delays a payment may reduce fraud while also creating financial harm, distress or access problems for legitimate customers. The operational question is therefore not simply whether a model detects more suspicious activity, but whether institutions can explain, review and remediate its decisions.
+- False-positive rates.
+- Fraud losses avoided.
+- Customer friction created by interventions.
+- Payment delays or blocked legitimate transactions.
+- Outcomes for customers with limited digital access.
+- How human reviewers handle disputed classifications.
 
-### AI is beginning to enter claims decisions
+The relevant question is not simply whether AI detects more suspicious activity. It is whether institutions can explain, review and remediate decisions that affect access to money.
 
-The Tower example indicates that AI and automation are moving closer to the decision boundary in insurance.
+### Advice is digitally active but AI-specific evidence remains thin
 
-Tower’s AI-enabled contact centre is principally an assistive system. Its fully automated motor claim is different because it covers the complete journey from lodgement to payment. The available disclosure does not state whether AI made the underlying coverage decision, or whether deterministic rules and integrated assessing systems performed most of the work. It also does not disclose the claim’s complexity, value or eligibility criteria. ([tower.co.nz](https://www.tower.co.nz/wp-content/uploads/2026/05/HY26-Results-Announcement.pdf?utm_source=openai))
+The FMA’s evidence indicates growing interest in digital and hybrid advice, including adviser copilots, client-analysis dashboards, compliance tools, budgeting tools and financial-wellbeing applications. The predominant model remains adviser-enabled rather than adviser-replaced. ([fma.govt.nz](https://www.fma.govt.nz/assets/Reports/Access-to-advice-Financial-advice-sector-challenges-and-opportunities.pdf?utm_source=openai))
 
-The appropriate assessment is therefore **bounded straight-through processing**, rather than general autonomous claims adjudication. The case is strategically important because it shows that the boundary between workflow automation and consequential decision-making is beginning to move.
+This distinction is important. A digital advice facility may use automated rules, forms and workflow software without using generative AI. Conversely, an adviser may use a generative AI tool internally without exposing it to the customer or relying on it for the final recommendation.
 
-### Advice remains predominantly human-enabled
+The FMA’s review should clarify where New Zealand firms sit across that spectrum. Until its findings are released, there is insufficient evidence to quantify production use of AI-generated recommendations, suitability assessments or personalised investment advice.
 
-The FMA’s March review of access to financial advice found examples of AI agents, compliance tools, client-analysis dashboards, record-keeping systems, budget-analysis tools and financial-wellbeing applications. It reported that the predominant use of AI was to enable advisers rather than replace them, with adviser oversight and accountability retained. ([fma.govt.nz](https://www.fma.govt.nz/assets/Reports/Access-to-advice-Financial-advice-sector-challenges-and-opportunities.pdf?utm_source=openai))
+### Lending and underwriting show demand ahead of public evidence
 
-The same review found consumer trust in AI-provided advice varied from 28% to 41% across the products tested. Those results should not be interpreted as a national measure of consumer acceptance, but they indicate a substantial difference between willingness to use AI for administration or information retrieval and willingness to rely on AI for personalised financial decisions. ([fma.govt.nz](https://www.fma.govt.nz/assets/Reports/Access-to-advice-Financial-advice-sector-challenges-and-opportunities.pdf?utm_source=openai))
+Experian research published in August reported that 76% of surveyed New Zealand financial institutions were using agentic AI to support underwriters. However, the New Zealand sample contained only 51 respondents, and the research was vendor-sponsored.
 
-### Lending and underwriting show high interest but limited local evidence
+The same research found that 65% of respondents described their organisations as emerging or early in AI use across fraud and credit-risk underwriting. Forty-nine percent cited a lack of trust in AI outputs, 41% poor data quality and 37% fragmented data systems as challenges. Only 2% said they were comfortable with fully autonomous decisioning at scale across most use cases. ([ecommercenews.co.nz](https://ecommercenews.co.nz/story/new-zealand-lenders-adopt-ai-amid-data-readiness-gap))
 
-Experian research reported that 76% of surveyed New Zealand financial institutions were using agentic AI to support underwriters. It also reported that only 2% considered their data fully ready for AI-driven decision-making, while 69% described it as not ready or only partially ready. The New Zealand sample comprised 51 respondents. ([ecommercenews.co.nz](https://ecommercenews.co.nz/story/new-zealand-lenders-adopt-ai-amid-data-readiness-gap?utm_source=openai))
+These findings should not be treated as a sector-wide production-adoption statistic. They are more useful as an indication of market appetite and constraints. The available evidence suggests that lenders are interested in AI-assisted decisioning but remain cautious about delegating high-consequence credit decisions.
 
-These findings are useful as an indication of market sentiment and experimentation, but they should not be treated as a national adoption statistic. The research is vendor-sponsored, the sample is relatively small, and “using agentic AI to support underwriters” may include pilots, decision support and limited workflow assistance rather than autonomous lending.
+### Claims automation has crossed a narrow threshold
 
-The broader conclusion is credible: appetite for AI in credit and fraud risk is ahead of the data, integration and governance foundations needed for dependable deployment.
+Tower’s disclosure remains the strongest public New Zealand example of AI or automation reaching a consequential insurance process. The company reports completing its first fully automated motor claim from lodgement through approval and payment without manual intervention. It also reports broader claims automation and substantial contact-centre time savings. ([earningscalls.dev](https://earningscalls.dev/transcripts/tower-limited_twr_earnings_call_transcript_2026-05-20?utm_source=openai))
+
+This should be classified as **bounded straight-through processing**, not general autonomous claims adjudication. The public disclosure does not establish:
+
+- How many claims are eligible for the automated pathway.
+- The claim’s value or complexity.
+- Whether AI made the coverage decision or supported a rule-based workflow.
+- Exception and escalation rates.
+- Customer appeal or remediation arrangements.
+- Whether outcomes differ for vulnerable customers.
+
+The strategic importance is nevertheless clear: a live customer-affecting process has been completed without manual intervention. The next evidence threshold is scale and outcome quality.
+
+### Investment discovery is live, but not advice
+
+Sharesies’ AI Search shows a different route into financial services: AI is used to interpret natural-language queries, summarise public financial information and help users discover investments.
+
+The product’s own warnings are significant. Sharesies says no human has considered the accuracy or relevance of each result, and that users should independently verify information before taking investment action. This makes the tool a live consumer-facing AI application, but not evidence of autonomous investment management or regulated personalised advice. ([intercom.help](https://intercom.help/sharesies/en/articles/9464903-searching-with-ai-search))
+
+### Open banking and agentic payments are enabling layers
+
+Open banking is now operating at meaningful volume, but public data does not identify how extensively AI is being applied on top of it. Potential uses include cash-flow analysis, affordability assessment, financial coaching, fraud detection and embedded payments. Evidence of those specific AI applications remains limited.
+
+Agentic payments remain further behind. Mastercard and Westpac completed authenticated agent-led purchases in February 2026, while ANZ New Zealand, ASB, BNZ and Kiwibank joined Visa’s Agentic Ready programme. These activities test identity, consent, tokenisation, transaction visibility and controls. They are important technical and commercial demonstrations, but not evidence of mainstream autonomous payments. ([westpac.co.nz](https://www.westpac.co.nz/about-us/media/mastercard-completes-nzs-first-authenticated-agentic-transactions-with-westpac/?utm_source=openai))
 
 ## Governance, Policy and Regulation
 
-### The FMA has moved from general research to use-case-specific supervision
+### The FMA is becoming the central conduct reference point
 
-The FMA’s 2024 research found that all 13 participating financial-services organisations either used generative AI or expected to adopt it soon. The research covered banking, insurance, asset management and financial advice, and found that firms were taking a cautious approach focused on security and risk management. ([fma.govt.nz](https://www.fma.govt.nz/library/research/understanding-ai-in-financial-services/?utm_source=openai))
+The FMA’s AI-in-advice review is the most direct supervisory examination of AI use in New Zealand finance. It is exploring governance, oversight, suitability, record-keeping, consumer outcomes and legal questions across advice providers and technology firms. Its fact-finding status means firms remain subject to existing obligations rather than a new AI-specific licensing regime. ([fma.govt.nz](https://www.fma.govt.nz/library/reports-and-papers/thematic-review-ai-in-financial-advice/))
 
-The regulator’s position is now more specific. Its 2026/27 Financial Conduct Report identifies digitisation, including AI, as an opportunity to improve access to advice, while also announcing a thematic review of how AI is used in practice, the associated conduct risks and the safeguards firms have in place. ([fma.govt.nz](https://www.fma.govt.nz/library/reports-and-papers/financial-conduct-report))
-
-The FMA published the thematic review on 6 August 2026. It is exploratory and fact-finding rather than a new set of licence conditions. Its immediate importance is evidential: it should give the regulator a better picture of whether AI is being used for administration, advice preparation, personalised recommendations, client interaction or final advice outcomes. ([fma.govt.nz](https://www.fma.govt.nz/library/reports-and-papers/?utm_source=openai))
+The FMA also assumed responsibility for the Credit Contracts and Consumer Finance Act from the Commerce Commission on **1 July 2026**. That makes the FMA the single conduct regulator for financial markets, including consumer credit. The change is not AI-specific, but it increases the importance of FMA expectations for AI-assisted lending, affordability assessments, disclosures and fair treatment. ([comcom.govt.nz](https://www.comcom.govt.nz/business/transfer-of-responsibility-for-regulation-of-consumer-credit/?utm_source=openai))
 
 ### Prudential concerns extend beyond model accuracy
 
-RBNZ’s May 2026 Financial Stability Report identifies several AI-related risks:
+RBNZ has identified AI-related risks involving third-party concentration, biased or misleading outputs, cyber risk, operational resilience, credit effects and the amplification of loss of confidence through social media and synthetic content. Its Future of Banking Study adds growing use of AI, cloud services, data sharing and interconnected providers to the long-term risk landscape. ([rbnz.govt.nz](https://www.rbnz.govt.nz/financial-stability/financial-stability-report/financial-stability-reports/2026/may/financial-stability-report-may-2026/web-version?utm_source=openai))
 
-- Dependence on a small number of third-party AI providers.
-- Biased, misleading or fraudulent outputs.
-- Increased cyber risk.
-- Operational-resilience weaknesses.
-- Possible credit and employment effects from AI-driven disruption.
-- Amplification of loss of confidence through social media and AI. ([rbnz.govt.nz](https://www.rbnz.govt.nz/financial-stability/financial-stability-report/financial-stability-reports/2026/may/financial-stability-report-may-2026/web-version?utm_source=openai))
+For boards and senior management, this means AI risk cannot be treated solely as a model-validation issue. It also involves:
 
-The Reserve Bank’s 2026 smaller-bank stress-test scenario includes a “name crisis” in which social media and AI contribute to deposit withdrawals. This does not mean that AI has caused such a run in New Zealand. It shows that supervisors now regard AI-generated information, synthetic content and automated amplification as part of the financial stability threat environment. ([rbnz.govt.nz](https://www.rbnz.govt.nz/hub/publications/bulletin/2026/2026-banking-and-insurance-stress-tests-scenarios?utm_source=openai))
+- Dependence on external model and cloud providers.
+- Data-processing and privacy arrangements.
+- Continuity if a provider, API or model becomes unavailable.
+- Concentration across multiple institutions using the same platform.
+- Cybersecurity and prompt-injection risks.
+- Customer communication when an AI-enabled process fails.
 
-### Agentic systems require a different control model
+### Agentic systems require controls over actions, not only outputs
 
-The National Cyber Security Centre’s May 2026 guidance on agentic AI recommends tight permissions, careful risk assessment and avoiding broad or unrestricted access to sensitive data or critical systems. It emphasises that agents can introduce risks through integrations, downstream actions, prompt injection and limited visibility into what the system has done. ([ncsc.govt.nz](https://www.ncsc.govt.nz/protect-your-organisation/careful-adoption-of-agentic-ai-services/?utm_source=openai))
+The NCSC’s joint guidance on agentic AI recommends careful risk assessment, narrow permissions and protection against threats arising through integrations, downstream actions and reduced visibility into what an agent has done. ([ncsc.govt.nz](https://www.ncsc.govt.nz/protect-your-organisation/careful-adoption-of-agentic-ai-services/?utm_source=openai))
 
-For financial institutions, this has direct implications for payment agents, customer-service agents and internal workflow agents. The control question shifts from “Was the model’s answer accurate?” to a wider set of questions:
+For finance, the control questions are broader than whether a generated answer is accurate:
 
 - What systems can the agent access?
-- What actions can it take?
-- Who authorised those actions?
-- Can the action be reversed?
+- What payments, changes or communications can it initiate?
+- What consent or authority limits apply?
+- Can an action be reversed?
 - Is there a complete audit trail?
+- Can a human intervene before execution?
 - What happens when the agent encounters ambiguous or malicious information?
 
-### Privacy disclosures are becoming more explicit
+These questions become especially important for payment agents, customer-service agents with account access and internal agents connected to lending or claims systems.
 
-ANZ updated its privacy statement in August 2026 to explain that AI may be used to support operations, customer service, complaints, fraud and scam detection, identity verification, credit and lending activities, and personalisation. It also stated that information may be analysed to create new insights. ([anz.co.nz](https://www.anz.co.nz/comms/changes-to-rates-fees-and-agreements/))
+### Open-banking governance is entering a regulatory-led phase
 
-This is not evidence that every listed use case is operating in production. It is evidence that AI is becoming part of the formal customer-information and privacy architecture of a major bank. Such disclosures are likely to become more common as firms move from experimentation to embedded use.
+MBIE now manages the Consumer Data Right and is responsible for the regulated open-banking standards framework. The Ministry’s current guidance roadmap includes operational performance, outages, authentication, customer experience, testing and issue escalation. ([mbie.govt.nz](https://www.mbie.govt.nz/business-and-employment/business/consumer-data-right/standards-for-the-consumer-data-right?utm_source=openai))
 
-### New Zealand’s regulatory posture remains principles-based
+This is relevant to AI because future AI-enabled financial products will depend on reliable, permissioned and traceable data access. If the underlying APIs are inconsistent, difficult to authenticate or poorly understood by customers, more advanced AI use cases will inherit those weaknesses.
 
-The current framework is not a single AI law for finance. Instead, existing conduct, privacy, outsourcing, operational-resilience, prudential and fair-treatment obligations are being applied to AI-enabled systems.
+### No standalone AI-finance regime has emerged
 
-MBIE’s responsible-AI guidance advises businesses to retain human review for outputs affecting customers, pricing, eligibility or finances, and to use agents initially for low-risk tasks with tight permissions. ([business.govt.nz](https://www.business.govt.nz/operations/getting-started-with-ai/safe-and-smart-ai-use?utm_source=openai))
+The policy picture remains principles-based. Existing conduct, privacy, credit, outsourcing, operational-resilience, prudential and cyber obligations continue to apply when AI is introduced.
 
-The FMA’s advice review, the RBNZ’s financial-stability analysis and the NCSC’s agentic-AI guidance all point in the same direction: firms can innovate, but they remain accountable for the outcomes produced by systems they deploy or procure.
+MBIE’s capital-markets reform consultation, which included digital and AI-related innovation in financial products and markets, closed on **15 September 2026**. No resulting AI-specific policy framework had been announced by 1 October. ([mbie.govt.nz](https://www.mbie.govt.nz/have-your-say/consultation-on-capital-markets-reform?utm_source=openai))
 
 ## Case Studies
 
-### Vero: sentiment analysis for complaints and vulnerability
+### Tower: service automation moving toward straight-through claims
 
-**Deployment:** Salesforce AI Sentiment Analysis across consumer and business sales and service operations.
+Tower’s Amazon Connect deployment uses transcription, summaries, knowledge assistance and automated quality assurance across customer interactions. The company reports a 15% reduction in customer interaction time over seven months and more than 796,000 minutes saved. These figures are company-reported. ([tower.co.nz](https://www.tower.co.nz/news/contact-centre-cuts-call-time/?utm_source=openai))
 
-**Function:** Analyses customer calls and emails for positive, neutral or negative sentiment, possible complaints and indicators of vulnerability.
+Tower also reports its first fully automated motor claim from lodgement to approval and payment without manual intervention. The case demonstrates that automated execution has begun in a narrow insurance workflow, but does not establish scaled autonomous claims decision-making.
 
-**Reported scale:** Approximately 45,000 interactions in the pilot; more than 65,000 sentiment outcomes after launch; approximately 10% of customer email and voice interactions analysed in real time.
+**Assessment:** Strong evidence of production service automation; early evidence of bounded consequential automation; insufficient public evidence on scale, exceptions or customer outcomes.
 
-**Human oversight:** Staff review flagged interactions and decide whether intervention is required.
+### Vero: AI sentiment analysis for complaints and vulnerability
 
-**Assessment:** Vero provides one of the strongest New Zealand examples of AI being linked to conduct and customer-protection objectives. The system expands quality monitoring beyond small manual samples, but the reported figures are company-supplied and do not establish accuracy, bias or customer-outcome improvements independently. ([suminsured.vero.co.nz](https://suminsured.vero.co.nz/newsroom/vero-launches-ai-powered-customer-sentiment-monitoring-to-streng.html?utm_source=openai))
+Vero piloted Salesforce AI Sentiment Analysis across approximately 45,000 customer interactions before rolling it out across consumer and business operations. The system analyses calls and emails for sentiment, possible complaints and indicators of vulnerability. Flagged interactions are reviewed by staff. ([suminsured.vero.co.nz](https://suminsured.vero.co.nz/newsroom/vero-launches-ai-powered-customer-sentiment-monitoring-to-streng.html?utm_source=openai))
 
-### Tower: AI-enabled service and a first fully automated motor claim
+**Assessment:** This is a notable use of AI for conduct monitoring rather than only efficiency. It could help identify dissatisfaction that manual sampling misses, but the public disclosure does not provide independent evidence of classification accuracy, bias or improved complaint outcomes.
 
-**Deployment:** Amazon Connect contact-centre platform with real-time transcription, AI-assisted support, knowledge assistance, summaries and automated quality assurance.
+### ASB: conversational IVR in customer service
 
-**Reported outcomes:** Tower says customer interaction time fell by approximately 15% over seven months, with more than 796,000 minutes saved and average handling time reduced by two minutes and 38 seconds. ([tower.co.nz](https://www.tower.co.nz/news/contact-centre-cuts-call-time/?utm_source=openai))
+ASB reports that conversational IVR can answer simple questions and route callers to appropriate specialists, contributing to an approximately 40% reduction in average call-wait times compared with FY25. ([asb.co.nz](https://www.asb.co.nz/documents/media-centre/media-releases/as-full-year-result-2026.html))
 
-**Claims automation:** Tower’s half-year results state that the company completed its first fully automated motor claim from lodgement to approval and payment without manual intervention. ([tower.co.nz](https://www.tower.co.nz/wp-content/uploads/2026/05/HY26-Results-Announcement.pdf?utm_source=openai))
-
-**Assessment:** Tower shows two different adoption stages. Contact-centre AI is operating at meaningful scale, while end-to-end claims automation remains an early and bounded deployment. The claim example warrants close attention because it represents a move from employee assistance toward automated execution of a customer-affecting process.
-
-### Kiwibank: AI tools inside customer service
-
-**Deployment:** Kiwibank’s FY26 results state that AI-powered tools were introduced within customer-service operations.
-
-**Related capability:** Kiwibank has also deployed Genesys Cloud voicebot and contact-centre capabilities. Genesys reports reductions in transfers, abandonment, average speed of answer and average handling time, alongside improved agent-routing accuracy. ([kiwibank.co.nz](https://www.kiwibank.co.nz/about-us/news-and-updates/media-releases/kiwibank-full-year-results-for-the-year-ended-30-june-2026/?utm_source=openai))
-
-**Assessment:** The latest Kiwibank disclosure is important because it confirms continuing AI adoption at a New Zealand-owned challenger bank. The absence of technical detail and independently verified metrics means the maturity of the newer AI tools cannot yet be assessed. The operating model nevertheless appears consistent with the sector-wide pattern of AI-enabled service rather than autonomous banking decisions.
+**Assessment:** A credible production use case with a quantified operational result. The result remains self-reported and does not show whether shorter waits translated into better resolution, fewer repeat contacts or improved outcomes for customers with complex needs.
 
 ### Westpac: AI-supported human conversations
 
-**Deployment:** Microsoft Dynamics 365 Contact Centre as a Service, introduced in April 2026.
+Westpac began rolling out Microsoft Dynamics 365 Contact Centre as a Service in April 2026. The platform provides customer-service representatives with relevant customer and product information during live conversations. Westpac expected full contact-centre deployment by August, but no public post-deployment performance metrics had been identified by 1 October. ([westpac.co.nz](https://www.westpac.co.nz/about-us/media/westpac-nz-becomes-first-major-nz-company-to-launch-microsoft-ai-tool-to-support-human-to-human-customer-conversations/))
 
-**Function:** Provides customer-service staff with relevant customer and product information during live conversations.
+**Assessment:** The deployment is evidence of live AI-enabled infrastructure, not yet of a publicly demonstrated productivity outcome.
 
-**Status:** Westpac announced an intention to complete deployment across all contact centres by August 2026. ([westpac.co.nz](https://www.westpac.co.nz/about-us/media/westpac-nz-becomes-first-major-nz-company-to-launch-microsoft-ai-tool-to-support-human-to-human-customer-conversations/?utm_source=openai))
+Westpac has also become the first New Zealand bank accredited to issue digital identity credentials under the Government’s Digital Identity Services Trust Framework. This is not itself an AI deployment, but it is a relevant enabling development for identity verification, fraud reduction and future digital financial services. ([westpac.co.nz](https://www.westpac.co.nz/about-us/media/westpac-becomes-first-nz-bank-accredited-to-issue-digital-id-credentials/))
 
-**Assessment:** Westpac is a significant case because AI is being placed directly into regulated customer interactions at a major bank. The available public evidence confirms the rollout plan but does not yet provide official post-deployment results. It should therefore be treated as operational deployment with limited outcome disclosure, rather than a demonstrated productivity success.
+### Sharesies: AI Search for investment discovery
 
-### Agentic payments: Mastercard, Westpac and Visa’s banking network
+Sharesies’ AI Search generates investment-related summaries from public financial information and groups potentially relevant investments. The product is not presented as financial advice, and Sharesies warns that results may be inaccurate or outdated and have not been reviewed by a human. ([intercom.help](https://intercom.help/sharesies/en/articles/9464903-searching-with-ai-search))
 
-**Mastercard and Westpac:** In February 2026, Mastercard and Westpac completed authenticated agentic transactions in New Zealand using a Westpac-issued debit card to purchase cinema tickets. ([mastercard.com](https://www.mastercard.com/news/ap/en/newsroom/press-releases/en/2026/mastercard-completes-new-zealand-s-first-authenticated-agentic-transactions-with-westpac-bringing-trust-transparency-and-security-to-ai-powered-commerce/?utm_source=openai))
+**Assessment:** This is one of the clearest examples of AI being placed directly in front of retail investors in New Zealand. It also demonstrates the practical boundary between an informational search product and a regulated personalised recommendation.
 
-**Visa programme:** ANZ New Zealand, ASB, BNZ and Kiwibank joined Visa’s Agentic Ready programme, which focuses on tokens, identity, risk and consumer controls for agent-initiated payments. ([visa.co.nz](https://www.visa.co.nz/about-visa/newsroom/press-releases/visa-welcomes-partners-into-agentic-ready-program-to-unlock-agentic-commerce.html?utm_source=openai))
+### Mastercard and Westpac: authenticated agentic payments
 
-**Assessment:** These are demonstrations and ecosystem-preparation activities, not mainstream agentic banking. Their significance lies in testing the trust layer around machine-initiated financial activity: delegated authority, transaction visibility, authentication, fraud monitoring, customer control and liability.
+Mastercard and Westpac completed authenticated agent-led transactions using a Westpac-issued debit card, including cinema-ticket and accommodation purchases. Visa has separately enrolled ANZ New Zealand, ASB, BNZ and Kiwibank in its Agentic Ready programme. ([westpac.co.nz](https://www.westpac.co.nz/about-us/media/mastercard-completes-nzs-first-authenticated-agentic-transactions-with-westpac/?utm_source=openai))
+
+**Assessment:** These are controlled demonstrations and ecosystem-readiness activities. Their value lies in testing identity, consent, tokenisation, transaction visibility and liability before agents are permitted to act more broadly. They should not be described as mainstream autonomous banking.
 
 ## Trends
 
 ### 1. Production adoption is concentrated in bounded workflows
 
-The most credible deployments have clear inputs, constrained outputs and identifiable human owners. Examples include transcription, summarisation, knowledge retrieval, sentiment classification, fraud alerts, call routing and workflow prioritisation.
+The most credible deployments have defined inputs, constrained outputs and identifiable human owners. Transcription, call routing, summarisation, knowledge retrieval, sentiment classification and fraud alerts are easier to monitor than open-ended advice or lending.
 
-This is a more conservative adoption pattern than the language of “autonomous finance” suggests. In New Zealand, firms appear to be using AI where it can improve throughput without transferring final responsibility for lending, advice, claims or investment decisions to a model.
+New Zealand’s adoption pattern is therefore more conservative than the language of “autonomous finance” suggests.
 
-### 2. Customer protection is becoming a practical route to adoption
+### 2. The boundary is moving from assistance toward execution
 
-AI used to detect vulnerability, identify complaints, prevent scams or improve service quality can be justified through customer outcomes as well as efficiency.
+The Tower claim and agentic-payment demonstrations show that AI and automation are moving closer to consequential actions. The change is incremental rather than wholesale:
 
-Vero’s deployment is particularly notable because it turns customer-interaction data into a conduct-monitoring signal. The risk is that sentiment or vulnerability classifications could themselves be inaccurate or overly simplistic. Strong governance will require escalation pathways, human review and monitoring for unequal treatment.
+- First, AI summarises or recommends.
+- Then it prioritises or routes.
+- Next, it executes within a defined workflow.
+- Human review remains for exceptions, disputes and higher-risk cases.
 
-### 3. Data foundations are now the limiting factor
+The governance burden increases at each step.
 
-Open banking is providing structured, consented data-sharing infrastructure, while banks continue to modernise core platforms and customer-data environments. Yet vendor research indicates that data quality, lineage, integration and readiness remain substantial barriers to AI-driven decisioning. ([ecommercenews.co.nz](https://ecommercenews.co.nz/story/new-zealand-lenders-adopt-ai-amid-data-readiness-gap?utm_source=openai))
+### 3. Trust separates “helping” from “deciding”
 
-This creates a two-speed market. Firms can deploy relatively narrow AI features on top of existing systems, but more ambitious applications—such as real-time affordability assessment, personalised financial guidance or automated underwriting—depend on clean data, consistent definitions, reliable APIs and auditable decision records.
+The FSC research provides a useful demand-side distinction. Consumers are relatively receptive to AI that helps answer questions, identify scams or reduce paperwork. Comfort falls when AI determines whether a claim is paid, a recommendation is suitable, a loan is approved or an investment is appropriate. ([blog.fsc.org.nz](https://blog.fsc.org.nz/what-do-kiwis-think-of-ai?hs_amp=true))
 
-### 4. Agentic finance is developing through payments before advice or lending
+This suggests that transparency and human accountability will be commercial requirements as well as regulatory expectations.
 
-Payments provide a relatively controllable environment for testing agent autonomy. Transaction limits, tokenisation, authentication and dispute processes can be defined more clearly than the boundaries of open-ended financial advice or credit decisions.
+### 4. Data foundations are limiting ambitious use cases
 
-The current New Zealand activity therefore indicates infrastructure preparation rather than a commercial shift to autonomous finance. Adoption will depend on whether customers understand what an agent is authorised to do and whether institutions can allocate responsibility when an agent makes a mistake.
+Experian’s survey points to poor data quality, fragmented systems and lack of trust in outputs as barriers to AI adoption. Open banking may improve access to structured, consented data, but it does not automatically solve data lineage, identity matching, affordability definitions or explainability. ([ecommercenews.co.nz](https://ecommercenews.co.nz/story/new-zealand-lenders-adopt-ai-amid-data-readiness-gap))
 
-### 5. Vendor platforms are becoming part of the operating model
+The likely result is a two-speed market: narrow AI features will continue to spread, while more ambitious decisioning applications remain constrained by data and governance.
 
-Many deployments are built around large technology platforms: Salesforce, Microsoft Dynamics, Amazon Connect and Genesys Cloud. This can accelerate implementation, but it also increases dependence on third-party providers, model updates, data-processing arrangements and platform availability.
+### 5. Third-party platforms are becoming part of the operating model
 
-RBNZ’s concern about concentration among third-party AI providers is therefore relevant even when the immediate use case is low risk. A small service tool can become operationally important if it is embedded across contact centres, claims processes or fraud operations. ([rbnz.govt.nz](https://www.rbnz.govt.nz/financial-stability/financial-stability-report/financial-stability-reports/2026/may/financial-stability-report-may-2026/web-version?utm_source=openai))
+Many public deployments use large technology platforms, including Microsoft, Salesforce, Amazon Web Services and Genesys. This accelerates adoption but creates dependencies around provider concentration, model changes, data residency, service availability and contract terms.
 
-### 6. Measurement and disclosure remain uneven
+RBNZ’s concerns about cloud and third-party concentration are therefore relevant even when the initial use case appears low risk. A contact-centre tool can become operationally significant once embedded across customer service, complaints and claims. ([rbnz.govt.nz](https://www.rbnz.govt.nz/financial-stability/financial-stability-report/financial-stability-reports/2026/may/financial-stability-report-may-2026/web-version?utm_source=openai))
 
-Public announcements commonly provide:
+### 6. Measurement remains less mature than deployment
 
-- Deployment dates.
-- Customer or employee counts.
-- Time saved.
-- Handling-time reductions.
-- Productivity percentages.
-- Customer-experience scores.
+Institutions increasingly disclose deployment dates, customer counts and time savings. They disclose much less about:
 
-They less often provide:
-
-- Error rates.
-- False-positive rates.
-- Model drift.
-- Bias testing.
-- Complaint volumes involving AI.
+- Accuracy and hallucination rates.
+- False positives and false negatives.
 - Human override rates.
+- Complaints involving AI.
+- Bias testing.
+- Model drift.
 - Privacy incidents.
 - Workforce effects.
-- Cost of operation.
+- Total cost of ownership.
 
-This makes cross-firm comparison difficult. Some reported results are also not directly comparable because they cover different periods, populations or definitions of handling time. Tower’s differing company and vendor figures illustrate why headline performance claims should be treated cautiously. ([tower.co.nz](https://www.tower.co.nz/news/contact-centre-cuts-call-time/?utm_source=openai))
-
-### 7. Financial advice is likely to become the next major governance test
-
-Advice combines personal data, suitability, explanation, professional accountability and consumer trust. It is therefore more difficult to automate safely than call summarisation or transaction classification.
-
-The FMA’s thematic review should clarify whether firms are using AI for internal productivity, adviser support, digital guidance, personalised recommendations or the delivery of regulated advice itself. Its findings may become the most important near-term reference point for the sector.
+This limits meaningful cross-firm comparison. Vendor and company-reported metrics are useful signals, but they should not be treated as independently verified sector performance.
 
 ## Outlook
 
 ### Through the remainder of 2026
 
-Several developments will determine whether the sector’s current AI activity becomes durable adoption:
+The following developments are likely to matter most:
 
 1. **FMA findings on AI in financial advice**  
-   The regulator’s fact-finding work should reveal how far AI has moved into advice production and what controls firms are using. The key distinction will be between tools that prepare or support advice and systems that independently generate regulated recommendations.
+   The key distinction will be between internal productivity tools, adviser support, digital guidance, personalised recommendations and AI that independently generates regulated advice.
 
-2. **Further open-banking growth**  
-   July’s activity figures show momentum, but the next test is the quality and usefulness of services built on the infrastructure. Usage will need to translate into products that customers understand and trust, not merely higher API traffic. ([mbie.govt.nz](https://www.mbie.govt.nz/business-and-employment/business/consumer-data-right/consumer-data-right-in-aotearoa-new-zealand/uptake-of-consumer-data-right?utm_source=openai))
+2. **The first full regulatory transition for open banking**  
+   MBIE will need to maintain standards continuity, participant support, conformance processes and third-party engagement after the API Centre’s closure. Kiwibank is due to have account-information open-banking services ready from December 2026, which should broaden the data-holder ecosystem. ([mbie.govt.nz](https://www.mbie.govt.nz/business-and-employment/business/consumer-data-right/consumer-data-right-policy-design/open-banking?utm_source=openai))
 
-3. **A managed transition of standards stewardship**  
-   The transfer from Payments NZ’s API Centre to MBIE should preserve implementation continuity while clarifying responsibility for standards, accreditation and future expansion. ([paymentsnz.co.nz](https://www.paymentsnz.co.nz/resources/articles/payments-nz-announces-closure-of-api-centre/?utm_source=openai))
+3. **More evidence from claims automation**  
+   Stakeholders should look for disclosure of automated-claim volumes, eligibility rules, exception rates, appeals, human intervention and outcomes for vulnerable customers.
 
-4. **More evidence from claims automation**  
-   Tower’s first fully automated motor claim may be followed by further straight-through processing. Stakeholders should seek data on eligibility, exception handling, customer appeals, human review and outcomes for vulnerable customers.
+4. **More bank-specific service metrics**  
+   ASB’s 40% wait-time reduction is a useful benchmark, but the sector needs more information on resolution quality, repeat contacts, customer satisfaction and workforce impacts.
 
 5. **Controlled agentic-payment trials**  
-   Visa, Mastercard, banks and merchants are likely to continue testing agent identity, consent, transaction controls and dispute resolution. These trials will be more informative if firms disclose failure modes and customer safeguards, not just successful demonstrations.
+   Visa, Mastercard, banks and merchants are likely to continue testing agent identity, consent, transaction limits, dispute resolution and fraud controls. The quality of evidence will improve if unsuccessful or disputed transactions are disclosed alongside successful demonstrations.
 
 ### Into 2027
 
-The most likely path is incremental expansion rather than a sudden transition to autonomous finance:
+The most likely path is incremental expansion:
 
 - AI copilots will become standard in customer-service and operations teams.
-- Fraud and scam systems will become more integrated with identity, payments and customer communications.
+- Fraud and scam systems will integrate more closely with identity, payments and customer communications.
 - Open-banking data will support more budgeting, cash-flow and embedded-finance services.
-- Digital and hybrid advice models will expand, subject to FMA expectations.
+- Digital and hybrid advice models will expand under closer FMA scrutiny.
 - Claims and lending automation will grow in narrow, rule-defined segments.
-- Model-risk management, third-party oversight and operational resilience will become more formal board-level responsibilities.
+- Model-risk management and third-party oversight will become more formal board responsibilities.
+- Customers will increasingly expect clear disclosure when AI materially shapes an interaction or decision.
 
-The sector may also face greater pressure to demonstrate workforce effects. Productivity gains are not equivalent to headcount reduction, and public trust may be affected if AI adoption is perceived primarily as a mechanism for reducing access to human support.
+The main strategic risk is not that New Zealand institutions fail to adopt AI. It is that adoption spreads faster than measurement, accountability and resilience controls.
 
 ## Overall Assessment
 
-As of **1 September 2026**, AI in Aotearoa New Zealand finance is **operationally established in selected service, fraud, workflow and insurance applications, while more consequential uses remain bounded, experimental or weakly disclosed**.
+As of **1 October 2026**, AI in Aotearoa New Zealand finance is **operationally established in customer service, fraud, workflow, sentiment monitoring and selected insurance processes, while advice, lending, investment decisions and agentic payments remain bounded, experimental or weakly disclosed**.
 
-The previous assessment remains substantially sound but needs three updates:
+Since the previous update:
 
-- Open banking has progressed from technical readiness to measurable regulated usage.
-- Kiwibank and Tower provide further evidence that AI is operating in live customer and claims workflows.
-- Tower’s first fully automated motor claim shows that autonomous execution has begun in a narrow setting, even though scaled autonomous decision-making remains unproven.
+- Open banking has continued its rapid growth and entered a regulatory-led transition.
+- ASB has added quantified evidence of live AI-assisted customer service.
+- The FMA’s advice review has completed its consultation phase but has not yet produced findings.
+- RBNZ has placed AI within a broader analysis of how New Zealand banking could evolve through 2035.
+- Consumer-facing investment discovery through AI is now a clearer part of the local evidence base.
+- No evidence has emerged of scaled autonomous lending, advice, investment management or claims adjudication.
 
-The sector’s dominant model is still:
+The dominant operating model remains:
 
 > **AI as copilot, detector, classifier, workflow engine and bounded automation layer—with human accountability retained for higher-consequence outcomes.**
 
-The strategic issue is no longer whether financial institutions can deploy AI. They can. The harder questions are whether they can measure its effects, govern third-party dependencies, explain its outputs, protect customer agency and demonstrate that efficiency gains improve—not weaken—fair treatment, resilience and trust.
+The strategic question is no longer whether financial institutions can deploy AI. They can. The harder questions are whether they can demonstrate reliable customer outcomes, control third-party dependencies, protect privacy and agency, explain consequential decisions, and ensure that efficiency gains strengthen rather than weaken fairness, resilience and trust.
