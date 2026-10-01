@@ -5,363 +5,410 @@ article_kind: industry
 article_latest: true
 article_series: creative_industries
 article_summary: >-
-  AI use across Aotearoa New Zealand’s creative industries is becoming routine
-  in workflows and distribution, but evidence of scaled generative production
-  remains limited. Governance, consent, cultural integrity and entry-level work
-  now shape adoption as much as efficiency.
-article_updated_at: '2026-09-01T18:35:50+12:00'
+  AI adoption in Aotearoa’s creative industries is expanding through
+  translation, research, marketing, accessibility and administration, while
+  scaled generative production remains rare. Rights, provenance, cultural
+  governance and entry-level work now shape the pace of adoption.
+article_updated_at: '2026-10-01T20:30:46+13:00'
 article_version: false
 description: >-
-  AI use across Aotearoa New Zealand’s creative industries is becoming routine
-  in workflows and distribution, but evidence of scaled generative production…
+  AI adoption in Aotearoa’s creative industries is expanding through
+  translation, research, marketing, accessibility and administration, while
+  scaled generative…
 permalink: /whitepaper/creative_industries/
 title: AI in Creative Industries
 ---
 
 # AI in Creative Industries in Aotearoa New Zealand: A Living Whitepaper
 
-AI use across Aotearoa New Zealand’s creative industries is becoming routine in workflows and distribution, but evidence of scaled generative production remains limited. Governance, consent, cultural integrity and entry-level work now shape adoption as much as efficiency.
+AI adoption in Aotearoa’s creative industries is expanding through translation, research, marketing, accessibility and administration, while scaled generative production remains rare. Rights, provenance, cultural governance and entry-level work now shape the pace of adoption.
 
 ## Executive Summary
 
-The latest evidence points to **broad but uneven AI adoption**. Generative AI is already common among digitally active creators, but use is concentrated in ideation, transcription, translation, summarisation, optimisation, accessibility and administration rather than fully automated public-facing production.
+The previous update’s central conclusion still holds: AI adoption is broad but uneven, and the strongest evidence concerns assistive workflows rather than autonomous public-facing production.
 
-The strongest evidence of operating deployment is in journalism and publishing. Google-supported pilots report faster multilingual translation, increased story production and improved search capability, although the results are primarily self-reported and have not been independently audited. Marketing teams are also embedding AI across planning, creative development, modelling, optimisation and reporting.
+Since 1 September 2026, the evidence base has improved in three ways:
 
-By contrast, evidence remains thin for independent arts, music production, screen production and games. These sectors are clearly experimenting and developing governance responses, but public reporting rarely distinguishes between a funding announcement, a limited pilot and a system operating at scale.
+- New Zealand journalism now has a larger documented set of operating deployments, including transcription, translation, research, metadata and content transformation.
+- Music and publishing organisations have moved from general concern to explicit positions on licensing, transparency, Māori cultural property and creator control.
+- Government and industry support for small-business adoption has expanded, although there is still no public breakdown showing how many creative businesses are participating or what systems they have deployed.
 
-Several developments since the previous update are significant:
+The main development is therefore not a sudden shift to AI-generated films, books, music or visual art. It is the **institutionalisation of AI around creative work**: organisations are deciding which tools can be used, what material can be supplied, where human review is required and how use should be disclosed.
 
-- The music industry has made consent, licensing and training-data records part of its 2026 election-policy platform.
-- AI discovery and agent-mediated search are becoming commercial strategy issues, not simply content-production issues.
-- Public funding agencies are turning AI disclosure, cultural authenticity and human creative leadership into routine assessment requirements.
-- AI capability is entering the vocational education pipeline through a new industry-led Applied Intelligent Systems subject.
-- The national evidence base remains incomplete. The 2026 Survey of Business Operations includes AI adoption and impact questions, but results are not yet available.
+The evidence remains strongest in journalism and publishing, followed by marketing and selected language or accessibility applications. Screen, games, music production, visual arts and independent creative practice show substantial experimentation and policy activity, but public evidence of scaled deployment remains limited.
 
-The emerging Aotearoa model is therefore **human-led, workflow-oriented and increasingly governed upstream through funding, commissioning, education and rights policy**.
+A small qualitative study from Massey University also sharpens the workforce picture. Its ten interviewees could not identify specific examples of paid creative roles already being displaced by generative AI, but they did report substitution of low-paid, freelance and unpaid work that traditionally helps new entrants build experience and networks. The study is small and exploratory, but its warning is more specific than general claims about automation.
+
+The emerging Aotearoa model remains **human-led, workflow-oriented and governed through rights policy, public funding, cultural consultation and professional norms**.
 
 ## What Has Changed Since the Last Update
 
-### Music rights have moved from sector concern to election-policy demand
+### Music rights have become a more detailed election issue
 
-On 25 August 2026, 12 organisations from the Aotearoa music community published a [2026 Music Manifesto](https://www.apraamcos.co.nz/about-us/news-and-events/2026-music-manifesto-published). Its AI and copyright demands are among the clearest sector positions yet published in New Zealand.
+On 16 September 2026, Recorded Music NZ published [*AI, Copyright and the Future of NZ Music*](https://nzmusic.org.nz/music-industry-news/ai-copyright-and-the-future-of-nz-music-recorded-music-publishes-position-paper/). The paper follows the broader music-industry manifesto published in August but makes the requested policy settings more operational.
 
-The manifesto calls on the next Government to:
+Recorded Music NZ is calling for:
 
-- Introduce no new copyright exceptions allowing AI companies to train on music without permission.
-- Preserve artists’ and rights holders’ ability to choose how their work is used.
-- Require AI companies to keep meaningful records of the music used for training.
-- Provide those records to rights holders on request.
-- Treat music as a growth and export industry alongside screen and games.
+- No weakening of existing copyright protection to facilitate AI training.
+- AI companies to license music through ordinary rights-holder channels.
+- Meaningful records of the material used to train AI systems.
+- A coordinated Government response covering copyright, employment, cultural effects and wider AI risks.
 
-The document does not oppose musicians using AI as an assistive creative tool. Its distinction is between creator-controlled use and commercial systems trained on copyrighted music without consent. This is a more precise position than a general pro- or anti-AI stance, and it is likely to shape political debate during the 2026 election cycle. ([apraamcos.co.nz](https://www.apraamcos.co.nz/about-us/news-and-events/2026-music-manifesto-published))
+This is a sector position, not current law. Its significance is that the music industry is no longer arguing only against “AI” in general. It is distinguishing between creator-controlled use of assistive tools and commercial systems trained on music without permission or transparent records. ([nzmusic.org.nz](https://nzmusic.org.nz/music-industry-news/ai-copyright-and-the-future-of-nz-music-recorded-music-publishes-position-paper/?utm_source=openai))
 
-### Newsroom pilots are beginning to acquire operating pathways
+The issue is now part of the 2026 election environment. Labour’s [AI Action Plan](https://www.labour.org.nz/news/release-labour-will-make-ai-work-for-new-zealanders/) proposes a copyright framework under which creators control and are paid for the use of their work. That is also a policy proposal rather than enacted law. ([labour.org.nz](https://www.labour.org.nz/news/release-labour-will-make-ai-work-for-new-zealanders/))
 
-The [Google News AI Workshops](https://blog.google/intl/en-nz/company-news/helping-new-zealand-and-pacific-publishers-succeed-online/) remain the clearest recent examples of AI moving beyond experimentation into repeatable newsroom workflows.
+### Publishing has formalised its position
 
-Google reports that:
+The Publishers Association of New Zealand – Te Rau o Tākupu has published an [Artificial Intelligence Position Statement](https://publishers.org.nz/panz-artificial-intelligence-position-statement-2/). It recognises existing use of AI across publishing operations and creative processes, including potential benefits for accessibility, discoverability, efficiency and innovation.
 
-- Pacific Media Network reduced manual translation of daily bulletins into Tongan and Cook Islands Māori from up to three hours to approximately 15 minutes. Google says the tool is being rolled out regionally in September 2026.
-- The Central App used an AI tool to identify story angles in council meeting transcripts. Two reporters reportedly doubled their story output.
-- Newsroom NZ used an AI tool to help reporters produce search metadata, with self-rated SEO confidence rising from 2.7 to 4.3 out of five.
+The statement also places publishing’s AI position within a specifically Aotearoa framework:
 
-These are meaningful operating signals, but they remain **vendor- and participant-reported results**. The evidence establishes that the tools are being used in live workflows or pilots; it does not establish sector-wide productivity gains, financial returns or long-term editorial effects. The wider 18-month Google programme for New Zealand and Pacific publishers is an announced capability programme, not evidence that all participating organisations are operating AI systems at scale. ([blog.google](https://blog.google/intl/en-nz/company-news/helping-new-zealand-and-pacific-publishers-succeed-online/))
+- Existing New Zealand copyright law continues to apply.
+- Human creativity and professional contribution should be respected.
+- AI development and use should be transparent and accountable.
+- Māori language, knowledge and creative works require careful consideration and engagement consistent with Te Tiriti o Waitangi.
+- Innovation should support, rather than undermine, the sustainability of publishing and authorship.
 
-### AI discovery is becoming a commercial creative issue
+This is evidence of sector governance and advocacy, not evidence that publishers have adopted AI at a particular scale. The statement is nevertheless important because it shows that publishing is moving toward organisational principles rather than leaving AI decisions entirely to individual authors or suppliers. ([publishers.org.nz](https://publishers.org.nz/panz-artificial-intelligence-position-statement-2/))
 
-The [IAB New Zealand Discovery: AI & Search Summit](https://www.iab.org.nz/news-resources/discovery-ai-search-summit-event-wrap), held in August and summarised on 19 August, framed AI-generated answers, agent-mediated search and changing consumer behaviour as central issues for advertisers, agencies, publishers and media owners.
+### Small-business support has expanded, but creative adoption is still unmeasured
 
-The significance is strategic. Creative organisations increasingly need to consider not only how content is produced, but how it is represented, retrieved and recommended by AI systems. This creates a new layer of work around structured content, brand authority, metadata, search visibility and the accuracy of AI-generated summaries.
+On 22 September 2026, the Government extended its [AI Advisory Pilot](https://www.beehive.govt.nz/release/government-extends-ai-support-small-businesses) to support a further 120 small businesses through to 30 June 2027.
 
-The summit itself is evidence of sector attention and capability-building, not evidence that New Zealand businesses have broadly implemented agentic marketing systems. ([iab.org.nz](https://www.iab.org.nz/news-resources/discovery-ai-search-summit-event-wrap))
+The pilot provides:
 
-### The adoption baseline has become more useful, but not more granular
+- Expert advice on suitable AI use cases.
+- A tailored AI roadmap.
+- Co-funding of implementation costs of up to $15,000.
+- Support delivered through the Regional Business Partner Network.
 
-The latest national creator data remains Manatū Taonga’s [2025 Cultural Participation Survey](https://www.mch.govt.nz/publications/new-zealanders-cultural-participation-2025). It found that 69% of creators use digital tools, representing 28% of adults, and that 65% of those digitally active creators use generative AI.
+The Government says around 150 businesses had already joined the pilot, while approximately 650 businesses attended AI-related courses funded through the network between July 2025 and June 2026. These figures cover the wider small-business population, not the creative industries specifically. There is no public evidence yet showing how many creative agencies, studios, publishers, artists or production companies have received support, or whether participation has resulted in operating deployments. ([beehive.govt.nz](https://www.beehive.govt.nz/release/government-extends-ai-support-small-businesses))
 
-The denominator matters. The figure does not mean that 65% of all New Zealand creators or adults use generative AI. It indicates substantial adoption among a digitally active subset. The main uses remain exploratory and assistive:
+The extension is still relevant to creative industries because much of the sector consists of small companies, sole traders and project-based businesses that lack dedicated technology staff. It reduces an adoption barrier, but it does not by itself demonstrate adoption.
 
-- 49% use generative AI to explore or improve ideas.
-- 34% use it to generate or produce creative work.
-- 14% use it to share work more widely or improve accessibility.
+### Capability-building is becoming more visible than deployment
 
-Among creators who do not use digital tools, 36% identify a lack of skills or knowledge as a barrier. ([mch.govt.nz](https://www.mch.govt.nz/publications/new-zealanders-cultural-participation-2025))
+Two September initiatives illustrate the shift toward capability and governance.
 
-### There is still no new public evidence of scaled AI production in several subsectors
+On 23 September, the University of Auckland launched [Huanui: The AI Initiative](https://www.auckland.ac.nz/en/news/2026/09/23/university-auckland-ai-research.html). The initiative is intended to support research, teaching, business engagement and responsible AI practice, with mātauranga Māori and Indigenous perspectives among its stated foundations. It is a capability and research hub, not a creative-industry deployment programme. ([auckland.ac.nz](https://www.auckland.ac.nz/en/news/2026/09/23/university-auckland-ai-research.html))
 
-Since the previous update, publicly available material has not established a major operating deployment in independent visual arts, music production, screen production or games comparable to the newsroom examples.
+The [AI Forum’s Creative Industries workstream](https://aiforum.org.nz/event/ai-blueprint-for-aotearoa-workstream-updates-sustainable-ai-environment-social-licence-creative-industries/) also held a public update on 22 September. Its wider Blueprint calls for baseline data on AI use by New Zealand creative professionals and businesses, clearer distinctions between operational AI and generative creative output, practical training and local examples of responsible implementation. ([aiforum.org.nz](https://aiforum.org.nz/wp-content/uploads/2026/05/NZT009-AI_Blueprint_Report-v05.pdf))
 
-The developments in these areas remain primarily:
+The implication is that the sector is still building the conditions for adoption. Capability programmes, principles and research partnerships are progressing faster than publicly documented commercial deployments.
 
-- Governance requirements.
-- Training and capability programmes.
-- Creative experiments and competitions.
-- Proposals for research infrastructure.
-- Advocacy over copyright, consent and cultural rights.
+### The proposed national creative AI platform is not yet evidence of operation
 
-That does not mean adoption is absent. It means that much of it is private, embedded inside commercial software, or not publicly documented.
+The Aotearoa Creative AI Research Institute, led by Wētā FX, remains documented as one of five concepts shortlisted to develop proposals for the national AI research platform. The concept includes computer vision, imaging, complex data models, digital twins and AI rights management.
+
+The New Zealand Institute for Advanced Technology formally launched in August 2026 and says it is progressing work in AI. However, public information reviewed for this update does not establish that the Aotearoa Creative AI Research Institute has been selected as the final funded platform or that it is operating as a functioning research institute. The concept should therefore be treated as a research proposal within a national funding process, not as an active sector-wide capability. ([mbie.govt.nz](https://www.mbie.govt.nz/about/news/concepts-selected-for-ai-research-platform?utm_source=openai))
+
+### The core evidence gaps remain
+
+The [Survey of Business Operations 2026](https://www.mbie.govt.nz/business-and-employment/business/support-for-business/survey-of-business-operations-2026) includes questions on business AI adoption, impacts, workforce and innovation. Results are still not publicly available.
+
+This means New Zealand still lacks a reliable national measure of:
+
+- AI adoption by creative subsector.
+- The number of businesses using AI in production or administration.
+- Changes in staffing, freelance work or revenue.
+- Productivity gains attributable to AI.
+- The proportion of AI-generated material reaching audiences.
+- Differences between large organisations, small firms, independent practitioners and Māori or Pacific-led organisations.
+
+The previous update’s caution about the evidence base therefore remains justified. ([mbie.govt.nz](https://www.mbie.govt.nz/business-and-employment/business/support-for-business/survey-of-business-operations-2026?utm_source=openai))
 
 ## Current State of AI Adoption
 
-### National creative practice: broad experimentation, limited measurement
+### Journalism and publishing: the clearest operating evidence
 
-Aotearoa has a relatively strong measure of individual creator use but a weak measure of organisational adoption. The Cultural Participation Survey captures whether creators use digital tools and generative AI, but not the maturity of their workflows, the scale of commercial deployment, the effect on employment or whether AI-generated outputs reach audiences.
+Journalism remains the most documented area of AI adoption in Aotearoa.
 
-The [2026 Survey of Business Operations](https://www.mbie.govt.nz/business-and-employment/business/support-for-business/survey-of-business-operations-2026), being conducted by MBIE and Stats NZ, includes questions on AI adoption and impact. Its results should improve the national evidence base, but no findings are yet available. Until then, claims about AI adoption in creative businesses should be treated as indicative rather than comprehensive. ([mbie.govt.nz](https://www.mbie.govt.nz/business-and-employment/business/support-for-business/survey-of-business-operations-2026?utm_source=openai))
+As of 16 September 2026, the [J·Index New Zealand dataset](https://jindex.ai/country/new-zealand) recorded 31 verified, source-linked AI implementations across 17 news organisations between 2019 and 2026. The cases include NZME, Stuff, RNZ, TVNZ, Te Hiku Media, Pacific Media Network, The Central App and other publishers.
 
-### Journalism and publishing: the most mature documented use
+The most common documented uses are:
 
-Journalism remains the best-documented New Zealand creative subsector for operational AI.
+- Transcription and translation.
+- Research and document analysis.
+- Metadata and search optimisation.
+- Content transformation and summarisation.
+- Audio and visual production.
+- Recommendation and curation.
+- Limited automation of routine or data-driven stories.
 
-The [AUT Journalism, Media and Democracy baseline report](https://openrepository.aut.ac.nz/items/cbea9155-0239-4658-b706-28039c7b0bb6) identifies AI use in:
+The dataset records a relatively high proportion of transcription and translation cases compared with the global sample. That is significant in Aotearoa, where multilingual journalism, te reo Māori and Pacific-language broadcasting create practical use cases that are not reducible to generic content generation. ([jindex.ai](https://jindex.ai/country/new-zealand))
 
-- Searching and research.
-- Transcription.
-- Summarising long documents.
-- Spelling and grammar checking.
-- Content transformation.
-- Audio and video generation.
-- Homepage curation and recommendations.
-- Drafting or assisting with some news articles.
+Recent examples include:
 
-Publicly documented examples include NZME’s BusinessDesk use of AI to generate articles from NZX announcements, Stuff’s use of AI for first drafts from single-source material, and AI-assisted curation and recommendation within digital news products.
+- **Pacific Media Network:** a custom Gemini workflow translates daily news bulletins into Tongan and Cook Islands Māori. The reported time saving remains vendor- and participant-reported, and the planned extension to additional regional languages is not yet evidence of completed scale-up.
+- **The Central App:** an AI workflow identifies possible stories in local-council meeting transcripts. Google reports that two reporters doubled their output, but the result has not been independently audited.
+- **Te Waha Nui:** AI was used for interview transcription, research support and parts of a te reo Māori translation workflow, with staff checking the output and disclosing the use to readers.
+- **Te Hiku Media:** the Kaituhi system provides automatic speech recognition and editable transcription for te reo Māori material, with human correction before publication or captioning.
 
-The dominant pattern is not autonomous journalism. It is **structured automation around repeatable, low- to medium-complexity tasks**, followed by human checking or editorial control. ([aut.ac.nz](https://www.aut.ac.nz/news/stories/ai-assisted-news-common-in-nz?utm_source=openai))
+The pattern is consistent: AI is most defensible where it handles a bounded task and a journalist, broadcaster or language specialist remains responsible for accuracy, context and publication.
 
-The main constraint is trust. AUT’s 2026 [Trust in News research](https://www.aut.ac.nz/news/stories/trust-in-news-up-significantly-in-2026) found that 60% of New Zealanders remain uncomfortable with news mostly produced by AI, even with some human oversight. RNZ’s principles generally prohibit knowingly publishing or broadcasting generative-AI-created material, while permitting assistive use for research, brainstorming, administration, summarisation and transformation of existing content. TVNZ similarly requires human accountability, risk assessment and disclosure where AI materially affects editorial or audience-facing content. ([aut.ac.nz](https://www.aut.ac.nz/news/stories/trust-in-news-up-significantly-in-2026?utm_source=openai))
+The evidence does not support a conclusion that New Zealand newsrooms are moving rapidly toward autonomous journalism. It supports a more limited conclusion: **AI-assisted newsroom infrastructure is becoming operational in selected organisations**.
 
-### Advertising and marketing: institutionalising faster than other creative fields
+### Marketing and advertising: workflow integration remains ahead of measurement
 
-Commercial marketing appears to be the fastest-normalising area of AI adoption.
+Marketing continues to show some of the most mature organisational integration. The previous update’s Trade Me example remains relevant: AI was reported across briefing, strategy, creative development, modelling, optimisation, reporting and anomaly detection.
 
-The Marketing Association’s [Digital Day Out report](https://marketing.org.nz/resource-hub/social-media/digital-day-out-ai-creativity-human-connection) describes Trade Me’s Marketing Guild as using AI across:
+The important feature is not the number of tools but the breadth of workflow coverage. Marketing teams are using AI across planning and performance functions, while human staff retain responsibility for brand positioning, cultural fit, approvals and risk.
 
-- Briefing and strategy.
-- Creative development.
-- Data modelling.
-- Copy optimisation.
-- Performance reporting.
-- Anomaly detection.
+Public evidence remains self-reported. There is still no independent New Zealand-wide measurement of whether AI has reduced costs, increased campaign effectiveness, changed agency staffing or improved creative quality. The sector has moved further toward routine use, but not toward transparent benchmarking.
 
-Trade Me’s stated principle was “co-pilot, not autopilot”. This is consistent with the broader evidence: AI is being positioned as an operating layer across the marketing lifecycle rather than simply as a copywriting tool.
+The same distinction applies to AI-mediated discovery. New Zealand creative organisations increasingly need to consider how brands, stories and cultural content are summarised and recommended by search engines, chatbots and agents. That creates new work around structured information, metadata, authority and provenance, but public evidence of widespread agentic marketing deployment remains thin.
 
-The evidence is still largely self-reported. The Trade Me account demonstrates organisational integration, but it does not provide an independently measured comparison of productivity, campaign effectiveness, staffing or creative quality. Similarly, a trade-press report on [Xero’s AI-powered global campaign](https://shots.net/news/view/xero-drives-global-expansion-with-ai-powered-campaign) describes the creation of 600 campaign variations across eight markets in eight weeks. That is evidence of significant production scale, but it is not a New Zealand-only deployment and the reported results come from the company and agency involved.
+### Screen, film and VFX: formal governance is ahead of production evidence
 
-The sector’s next challenge is discoverability. AI systems may become an important route through which audiences encounter brands, products, publishers and cultural content. This makes factual accuracy, structured information, brand distinctiveness and rights-cleared source material part of creative competitiveness.
+The screen sector continues to have the clearest public governance framework.
 
-### Screen, film and VFX: governance is more advanced than deployment evidence
+NZ On Air’s [AI Content Creator Guidance](https://www.nzonair.govt.nz/documents/1277/NZ_On_Air_-_AI_Content_Creator_Guidance.pdf) requires applicants proposing AI use to explain how it will affect development, production or distribution. Assessment includes cultural authenticity, creative integrity, consultation, rights, technical capability and the role of human judgement.
 
-The screen sector has the most developed formal AI governance among publicly funded creative fields.
+The guidance explicitly states that AI should support rather than replace human creativity. Applicants remain responsible for permissions, intellectual property and legal compliance; NZ On Air is not acting as an industry-wide rights regulator. ([nzonair.govt.nz](https://www.nzonair.govt.nz/documents/1277/NZ_On_Air_-_AI_Content_Creator_Guidance.pdf))
 
-The New Zealand Film Commission’s [June 2026 funding guidance](https://www.nzfilm.co.nz/assets/resources/Final-Published-HPTRM-Version-June-2026.pdf) requires applicants to outline proposed AI use. Applications are assessed for:
+NZFC’s AI guidance and funding requirements follow a similar direction, particularly around te ao Māori, mātauranga Māori, disclosure and human creative leadership. The latest public-sector development is therefore governance by funding design, not regulation of every production tool.
 
-- Cultural authenticity and appropriate consultation.
-- Respect for te ao Māori and mātauranga Māori.
-- Preservation of human creative leadership.
-- Transparency about AI’s role.
-- Legal and ethical implications.
-- Wider effects on the screen workforce and industry.
+Public evidence of operating AI use in commercial New Zealand productions remains limited. The [Aotearoa 1 Minute AI Film Festival](https://filmfreeway.com/1MinuteAIFilmFestival), the AI and Creativity Summit and September’s WIFT NZ discussion show active experimentation and professional debate. They do not demonstrate that generative production has become a normal production model across the screen sector.
 
-NZ On Air’s [AI Content Creator Guidance](https://www.nzonair.govt.nz/documents/1277/NZ_On_Air_-_AI_Content_Creator_Guidance.pdf) takes a similar approach. It asks applicants to explain how AI supports rather than replaces human creativity, identify risks, demonstrate technical capability and disclose the role of AI in content creation. NZ On Air explicitly notes that it does not enforce copyright law; responsibility remains with applicants, producers and commissioners. ([nzfilm.co.nz](https://www.nzfilm.co.nz/assets/resources/Final-Published-HPTRM-Version-June-2026.pdf))
+The 30 September decision by NZFC to end its Core Funding Programme from 30 June 2027 is not an AI policy, but it will change the institutional environment in which screen organisations develop capability, advocacy and professional standards. NZFC says targeted industry-development funding will continue. ([nzfilm.co.nz](https://www.nzfilm.co.nz/news/new-zealand-film-commission-to-conclude-core-funding-programme-in-june-2027))
 
-This is a significant shift in practice. AI is no longer only a production question. It is now part of **funding assessment, cultural risk management and accountability to audiences**.
+### Music: assistive use is plausible; commercial rights remain unsettled
 
-However, governance should not be confused with adoption. The Aotearoa AI and Creativity Summit, FutureFrames and the One Minute AI Film Festival demonstrate active experimentation and skills development. Public evidence of AI being used across large numbers of commercial New Zealand productions remains limited.
+Music creators are likely to continue using AI for low-risk or assistive tasks such as:
 
-### Music: assistive use is accepted, but commercial rights remain contested
+- Idea development and arrangement.
+- Editing and production assistance.
+- Translation and accessibility.
+- Promotion and audience analysis.
+- Administration and rights management.
 
-Music has a mixed adoption profile. The [APRA AMCOS research on AI and music](https://www.apraamcos.co.nz/about/supporting-the-industry/research-papers/aiandmusic) indicates that many Australasian music creators are early users of AI tools and that more than half believe AI can assist human creativity. At the same time, 82% expressed concern about their ability to earn a living, and the research projected that 23% of music creators’ revenues could be at risk by 2028. These are Australasian survey findings and projections, not a current New Zealand-only measurement.
+The boundary is more contested where AI generates voices, imitates artists, produces substantial musical material or uses copyrighted recordings for training.
 
-New Zealand’s immediate response has been governance rather than prohibition. NZ On Air’s music-funding process asks applicants to explain how AI or generative AI will be used in song creation. Its criteria include cultural authenticity, creative integrity, transparency, technical capability, accessibility and industry impact.
+NZ On Air’s current music-funding process asks applicants to explain proposed AI use and directs them to its AI guidance. The guidance assesses cultural authenticity, creative integrity, distinctiveness, transparency and technical capability, but does not determine copyright ownership or enforce rights management. ([nzonair.govt.nz](https://www.nzonair.govt.nz/funding/music-funding/applying-for-music-funding/))
 
-The 2026 Music Manifesto adds a stronger rights position: no unlicensed AI training on music, meaningful records of training material and a right for creators to choose whether their work is used. The practical adoption model is therefore likely to remain:
+The September Recorded Music NZ position paper strengthens the rights-holder position described in the previous update. It seeks licensing and training-data transparency rather than a blanket ban on artists using assistive tools. That distinction is likely to remain central to future policy.
 
-- Private experimentation.
-- AI-assisted songwriting and production.
-- Tools for promotion, translation, accessibility and audience analysis.
-- Human-led releases where rights and provenance can be demonstrated.
-- Caution around synthetic voices, imitation and fully generated recordings.
+There is still no public New Zealand dataset showing how many released songs contain AI-generated elements, how often synthetic voices are used, or whether AI has changed the economics of local music production.
 
-### Games and creative technology: strong economic incentives, weak AI-specific data
+### Games: strong technical incentives, little AI-specific reporting
 
-New Zealand’s games sector continues to provide a strong environment for AI experimentation. NZ On Air’s 2026 Game Development Sector Rebate data records 43 recipient studios, $829 million in combined revenue, 194 games in development and 98.3% export revenue. Ninety percent of recipient studios are SMEs. ([nzonair.govt.nz](https://www.nzonair.govt.nz/news/newsletter-august-2026/?utm_source=openai))
+The games sector has the strongest structural incentives to use AI in areas such as prototyping, localisation, quality assurance, asset production, animation, simulation and production management.
 
-These conditions create incentives to use AI for:
+The September [Games Quarterly](https://www.nzonair.govt.nz/news/games-quarterly-september-2026/) reports that the 2026 Game Development Sector Rebate supported 43 studios, with combined reported revenue of $829 million and 194 games in development. Ninety percent of recipient studios are small or medium-sized. These figures demonstrate a substantial digital-production base, but the rebate data does not identify which studios use AI or how AI affects employment, revenue, output or intellectual property. ([nzonair.govt.nz](https://www.nzonair.govt.nz/news/games-quarterly-september-2026/?utm_source=openai))
 
-- Prototyping.
-- Asset generation.
-- Localisation.
-- Testing and quality assurance.
-- Animation and rigging.
-- Simulation.
-- Production management.
+The evidence gap is particularly important in games because AI use may be embedded inside commercial development software and therefore invisible in public reporting. The sector may be adopting AI more deeply than the available evidence suggests, but that remains an inference rather than a measured finding.
 
-But the GDSR data does not identify which studios use AI or measure its contribution to revenue, staffing or output. It is therefore evidence of sector scale and technical capacity, not evidence of AI adoption itself.
+### Independent arts, design and cultural practice: visible experimentation, limited scale
 
-Games and VFX may ultimately generate some of the largest productivity gains because their workflows contain substantial volumes of repeatable digital production. They also face some of the most difficult questions about training data, originality, artistic labour and the preservation of distinctive human-made worlds.
+Independent arts and design have the least systematic public evidence of adoption.
 
-### Arts, cultural institutions and education: capability is becoming a policy priority
+September’s [Algorithm & Aesthetic II exhibition](https://www.whitecliffe.ac.nz/news-events/events/algorithm-aesthetic-ii-exhibition-ai-riso-exhibition/) at Whitecliffe brought together artists, designers and researchers examining AI, authorship, originality, automation and human intervention. Its use of risograph printing deliberately contrasted digital generation with physical process and material imperfection.
 
-Independent arts and cultural institutions have less publicly documented AI deployment than media and marketing. The main opportunities identified in government research are accessibility, transcription, translation, collection discovery, digital preservation and assistance with administration.
+This is useful evidence of creative inquiry and public engagement, not evidence of commercial deployment. Similar caution applies to AI film festivals, workshops and artist talks: they show experimentation, skills development and debate, but not necessarily durable business models or scaled production. ([whitecliffe.ac.nz](https://www.whitecliffe.ac.nz/news-events/events/algorithm-aesthetic-ii-exhibition-ai-riso-exhibition/))
 
-Manatū Taonga’s [Culture in the Digital Age Long-term Insights Briefing](https://www.mch.govt.nz/publications/culture-digital-age-long-term-insights-briefing-2025) places AI within a longer-term cultural system shaped by Māori data sovereignty, te reo Māori, cultural stewardship, sustainability and unequal access to technology. It also warns that accessibility tools need testing with affected communities and should not be treated as substitutes for accessibility by design. ([mch.govt.nz](https://www.mch.govt.nz/publications/culture-digital-age-long-term-insights-briefing-2025))
+### Workforce effects: the strongest concern is at the entry level
 
-Workforce development is beginning to reflect this shift. On 6 August 2026, the Electrotechnology, Information Technology, and Creative Industry Skills Board announced that it would lead development of [Applied Intelligent Systems](https://etitcisb.nz/etitc-isb-to-lead-and-support-two-new-industry-led-subjects/) for the senior secondary system. The subject is intended to cover machine learning, agentic systems, human oversight, ethical reasoning and the design of intelligent workflows across industries including creative practice.
+The most specific recent workforce evidence comes from a [Massey University pilot study](https://www.massey.ac.nz/about/news/pilot-study-shows-generative-ai-use-in-creative-industries-impacts-entry-level-roles/). The study involved ten one-hour interviews with people across filmmaking, music, design agencies and digital art.
 
-This is an important capability signal, but it remains an announcement and development process rather than evidence that the new subject is already being widely taught.
+Its findings were mixed:
+
+- Interviewees were concerned about displacement but could not identify specific examples of paid creative roles already being eliminated by generative AI.
+- AI was being used for low-value administrative work.
+- Some low-paid, freelance and unpaid tasks that help people enter the industry were being replaced.
+- Participants reported time savings but generally no noticeable impact on profitability.
+- Most would not deploy AI outputs commercially without extensive human review.
+
+Because the sample is small and qualitative, it cannot establish sector-wide employment effects. It does, however, identify a plausible mechanism of harm: AI may remove the early-career work through which emerging creatives build portfolios, relationships and judgement before it replaces established creative occupations. ([massey.ac.nz](https://www.massey.ac.nz/about/news/pilot-study-shows-generative-ai-use-in-creative-industries-impacts-entry-level-roles/))
 
 ## Governance, Policy and Regulation
 
 ### Copyright remains unresolved
 
-New Zealand still does not have a dedicated generative-AI copyright framework.
+New Zealand’s current copyright framework has not settled the central generative-AI questions.
 
-MBIE’s [Copyright Act update](https://www.mbie.govt.nz/business-and-employment/business/intellectual-property/copyright/updates-to-the-copyright-act) states that Cabinet has invited the Minister of Commerce and Consumer Affairs to report by **31 March 2027** on a possible framework for generative AI.
+The Government’s [Copyright Act update](https://www.mbie.govt.nz/business-and-employment/business/intellectual-property/copyright/updates-to-the-copyright-act) confirms that Cabinet has asked the Minister of Commerce and Consumer Affairs to report by 31 March 2027 on a possible copyright framework for generative AI.
 
-The Government’s current copyright package addresses Free Trade Agreement obligations and other targeted reforms, but it does not settle:
+The unresolved issues include:
 
-- Whether AI developers may train on copyright works.
-- Whether creators can opt out or license training use.
-- Whether AI-generated outputs qualify for copyright.
-- Who owns AI-assisted works.
+- Whether AI developers may train on copyright works without permission.
+- Whether creators can opt out or require licensing.
+- Whether training-data records must be disclosed.
+- Whether AI-assisted and AI-generated outputs qualify for copyright.
+- Who owns works created with substantial AI involvement.
 - How voice, likeness and style imitation should be treated.
-- How collective cultural knowledge should be protected.
+- How Māori cultural knowledge and collective interests should be protected.
 
-The music industry’s election manifesto therefore arrives while the law remains open. Its demand for no new AI-training exceptions is a policy position, not current law. ([mbie.govt.nz](https://www.mbie.govt.nz/business-and-employment/business/intellectual-property/copyright/updates-to-the-copyright-act?utm_source=openai))
+The June 2026 copyright package strengthened several existing creator and cultural-institution settings, but it did not resolve generative-AI training or output rights. The Recorded Music NZ and PANZ positions therefore seek to influence a policy process that remains open. ([mbie.govt.nz](https://www.mbie.govt.nz/business-and-employment/business/intellectual-property/copyright/updates-to-the-copyright-act?utm_source=openai))
 
-### Public funding is becoming a practical governance lever
+### Public funding remains the most immediate governance mechanism
 
-The most immediate AI regulation affecting creative practitioners is not legislation. It is the way public funders assess applications.
+For many practitioners, the most immediate AI requirements are set by funders rather than legislation.
 
-NZFC, NZ On Air and Creative New Zealand all expect applicants to disclose AI use and take responsibility for:
+NZ On Air and NZFC ask applicants to explain:
 
-- Human authorship and creative direction.
-- Cultural integrity.
-- Privacy and intellectual property.
-- Appropriate consultation.
-- Audience transparency.
-- Risk management.
-- The effect of AI on the wider creative workforce.
+- The purpose and extent of AI use.
+- The human creative contribution.
+- Rights, permissions and data sources.
+- Cultural consultation.
+- Disclosure and audience transparency.
+- Technical and quality controls.
+- Potential effects on the creative workforce.
 
-This approach has two effects. It encourages responsible experimentation, but it also creates additional compliance and documentation requirements for small organisations. The likely direction is toward lightweight provenance records: what tools were used, what material was supplied, what decisions remained human and how final outputs were reviewed.
+This is a practical model for a small creative economy. It allows funding agencies to require accountability without attempting to regulate every commercial tool.
 
-### Māori rights and cultural governance cannot be treated as generic ethics
+Its limitation is coverage. Public funding conditions do not apply to every private commission, advertising campaign, independent release or software workflow. They also place documentation demands on small organisations that may have limited legal or administrative capacity.
 
-Government guidance increasingly recognises that AI risks in Aotearoa are not limited to individual copyright ownership. Māori communities have raised concerns about the use of collective knowledge, whakapapa, traditional stories, te reo Māori and other taonga in systems controlled by multinational companies.
+### Māori and Pacific cultural governance is becoming a practical adoption condition
 
-MBIE’s responsible-AI guidance warns that generative outputs may resemble existing copyright works, recommends licensing assessments and record-keeping, and advises organisations to work with Māori where Māori data or cultural knowledge is involved. The [National Intellectual Property Management Policy](https://www.mbie.govt.nz/science-and-technology/science-and-innovation/refocusing-the-science-innovation-and-technology-system/research-commercialisation/intellectual-property-ip-management-policy), updated on 18 August 2026, also requires Treaty, Māori, mātauranga Māori and Indigenous rights and interests to be properly considered in publicly funded research commercialisation. ([mbie.govt.nz](https://www.mbie.govt.nz/business-and-employment/business/support-for-business/responsible-ai-guidance-for-businesses/artificial-intelligence-system-specific-considerations/use-and-outputs?utm_source=openai))
+The sector’s governance debate is not limited to generic concerns about bias or copyright.
 
-These policies do not create a complete framework for cultural data sovereignty, but they establish a direction: cultural legitimacy is part of responsible AI capability, not an optional communications exercise.
+The relevant questions include:
 
-### Trust, sustainability and human accountability are converging
+- Whether te reo Māori and Pacific languages are represented accurately.
+- Whether cultural knowledge is being used with permission and appropriate authority.
+- Whether collective interests can be represented through individual contracts.
+- Whether AI outputs reproduce stereotypes or decontextualised cultural material.
+- Whether language and cultural data remain under local control.
+- Whether communities benefit from systems built using their knowledge and creative work.
 
-AI governance is expanding beyond accuracy and copyright. Public concerns also include job displacement, reduced human interaction, privacy, over-reliance on automated systems and the environmental cost of AI infrastructure.
+PANZ’s position statement, Huanui’s stated research principles and NZ On Air’s funding guidance all point toward a model in which cultural legitimacy is part of technical and professional competence. This is not yet a complete system of Māori data sovereignty or cultural intellectual-property protection, but it is a clear direction of travel. ([publishers.org.nz](https://publishers.org.nz/panz-artificial-intelligence-position-statement-2/))
 
-For creative organisations, this means that a defensible AI deployment increasingly needs to answer four questions:
+### Election policy may accelerate the debate, but not the legal outcome
 
-1. What value does the system add?
-2. What human responsibility remains?
-3. Whose material, culture or identity is being used?
-4. Who benefits and who bears the cost?
+Labour’s September AI Action Plan proposes an Office of AI, support for small businesses and community organisations, an AI-in-education team, productivity-sharing measures and a copyright framework for creators.
+
+The proposal is politically relevant because the 2026 general election is scheduled for 7 November 2026. It should not be confused with enacted policy, and other parties’ final positions may differ. The immediate practical effect is to make creator compensation, copyright and accountability part of the election debate rather than solely an official review process. ([labour.org.nz](https://www.labour.org.nz/news/release-labour-will-make-ai-work-for-new-zealanders/))
 
 ## Case Studies
 
-### Pacific Media Network: translation as an assistive deployment
+### Pacific Media Network: multilingual translation
 
-Google reports that Pacific Media Network built a Gemini-based tool to translate daily news bulletins into Tongan and Cook Islands Māori. The reported reduction from up to three hours to approximately 15 minutes illustrates a high-value use case: AI increases language coverage while human journalists and broadcasters retain editorial responsibility.
+Pacific Media Network’s AI translation workflow remains one of the clearest examples of a high-value use case in Aotearoa.
 
-The planned regional rollout in September 2026 will be a useful test of whether a successful pilot can operate reliably across different content, dialect and quality-control conditions. Until deployment results are published independently, the reported time saving should be treated as provisional. ([blog.google](https://blog.google/intl/en-nz/company-news/helping-new-zealand-and-pacific-publishers-succeed-online/))
+The system translates daily news bulletins into Tongan and Cook Islands Māori. Google reports that manual translation time fell from as much as three hours to approximately 15 minutes. Human journalists and broadcasters remain responsible for checking the material.
 
-### The Central App: document analysis for local reporting
+The case demonstrates why language and accessibility applications may be among the most valuable uses of AI for New Zealand creative organisations. It also shows the limits of current evidence: the time-saving figure is self-reported, and public information does not yet establish the quality, cost or audience effects of regional expansion. ([jindex.ai](https://jindex.ai/country/new-zealand))
 
-The Central App’s AI tool identifies potential story angles in dense council meeting transcripts. Google says two reporters doubled their output and were able to identify stories before official livestreams.
+### The Central App: extracting stories from public documents
 
-This is a strong example of AI supporting journalism where the bottleneck is not writing but finding relevant information in large public documents. It also illustrates why domain-specific workflows may be more valuable than general-purpose content generation. The claim remains participant-reported and does not show whether the additional stories produced greater audience reach, revenue or public value. ([blog.google](https://blog.google/intl/en-nz/company-news/helping-new-zealand-and-pacific-publishers-succeed-online/))
+The Central App uses AI to identify potential story angles in local-council meeting transcripts. Reporters use the suggestions to find and pursue stories before official livestreams are released.
 
-### Trade Me: AI embedded across the marketing lifecycle
+This is a strong example of AI addressing an information bottleneck rather than replacing editorial judgement. The value comes from finding relevant material in a large document set; the reporter still decides whether the issue is newsworthy, verifies the facts and develops the story.
 
-Trade Me’s Marketing Guild provides a more organisationally mature example. AI is described as being used from strategy and briefing through to modelling, creative development, reporting and anomaly detection.
+Google’s reported doubling of output is not independently audited and does not show whether the additional stories generated greater audience reach, revenue or public value. ([jindex.ai](https://jindex.ai/country/new-zealand))
 
-The case demonstrates that adoption maturity is better measured by **workflow integration** than by the number of individual AI tools in use. It also supports the view that human judgement remains central in brand positioning, cultural fit, risk and final approval. The public account does not, however, provide audited productivity or campaign-performance data. ([marketing.org.nz](https://marketing.org.nz/resource-hub/social-media/digital-day-out-ai-creativity-human-connection?hs_amp=true&utm_source=openai))
+### Te Waha Nui: disclosed assistive use
 
-### NZ On Air and NZFC: governance by funding design
+Te Waha Nui used AI for interview transcription, research support and parts of a te reo Māori translation workflow. Staff checked the output and disclosed the use to readers.
 
-The most scalable public-sector intervention is the inclusion of AI questions in funding applications.
+The case is important because it combines three features that are likely to become standard:
 
-Rather than banning AI, NZ On Air and NZFC require applicants to explain its purpose, risks, cultural implications, technical controls and effect on human creativity. This creates a governance model suited to a small creative economy: it can be applied before public money is committed, without requiring a separate regulator for every tool or production workflow.
+1. A bounded assistive task.
+2. Human checking by people with relevant editorial and language expertise.
+3. Disclosure where AI materially contributed to the work.
 
-Its limitation is enforcement. Funding agencies can assess applications, but they cannot resolve every underlying copyright, licensing or labour issue.
+This is a more defensible model than presenting AI-generated material as wholly human-produced, particularly for stories involving language revitalisation and cultural knowledge. ([jindex.ai](https://jindex.ai/country/new-zealand))
+
+### Trade Me: integrated marketing use
+
+Trade Me’s Marketing Guild remains the clearest publicly described example of AI being integrated across a commercial marketing workflow.
+
+AI is reported to support briefing, strategy, modelling, creative development, optimisation, reporting and anomaly detection. The organisation’s “co-pilot, not autopilot” framing captures the current mainstream adoption model: AI increases speed and analytical capacity, while people retain responsibility for judgement, brand and risk.
+
+The account is self-reported. It does not establish audited cost savings, changes in headcount or improvements in campaign performance.
+
+### Whitecliffe: creative practice as critique
+
+Whitecliffe’s Algorithm & Aesthetic II exhibition provides a useful counterpoint to operational case studies. Rather than presenting AI simply as a productivity tool, the participating artists and researchers examined authorship, originality, automation and human intervention.
+
+The exhibition shows that AI is entering creative education and public discourse as a subject of critique as well as a production technology. It should not be counted as evidence of scaled industry adoption, but it indicates that cultural responses are developing alongside technical experimentation. ([whitecliffe.ac.nz](https://www.whitecliffe.ac.nz/news-events/events/algorithm-aesthetic-ii-exhibition-ai-riso-exhibition/))
 
 ## Trends
 
-### 1. Workflow AI is ahead of synthetic public-facing content
+### 1. Operational AI remains ahead of synthetic public-facing content
 
-The strongest evidence concerns translation, transcription, document analysis, metadata, summarisation, research, administration and optimisation. These tasks have clear boundaries and can be checked by human specialists.
+The strongest evidence continues to concern translation, transcription, research, summarisation, metadata, accessibility, administration and optimisation.
 
-Fully synthetic film, music, journalism or visual art remains less defensible where provenance, originality, cultural meaning or audience trust are central.
+These tasks are bounded, relatively easy to review and often address clear labour bottlenecks. Fully synthetic journalism, music, film, literature or visual art remains more difficult to defend where provenance, originality, cultural meaning and audience trust are central.
 
-### 2. Adoption is shifting from experimentation to operating models
+### 2. The sector is moving from tool experimentation to workflow governance
 
-The important change is not simply that more creators have access to AI. It is that organisations are defining:
+The maturity question is increasingly not “does this organisation use AI?” but:
 
-- Approved tools.
-- Human review points.
-- Disclosure requirements.
-- Data-handling rules.
-- Procurement criteria.
-- Cultural consultation processes.
-- Records of AI involvement.
+- Which tools are approved?
+- What data can be supplied?
+- Who checks the output?
+- When is use disclosed?
+- How are prompts, source materials and edits recorded?
+- How are rights and cultural permissions established?
+- Who benefits from productivity gains?
 
-This is the beginning of organisational maturity, although many small creative businesses lack the time and expertise to formalise these practices.
+This shift is visible in funder questionnaires, newsroom principles, publisher statements and sector position papers. Formal governance remains uneven, especially among sole traders and small studios, but it is becoming part of ordinary professional practice.
 
-### 3. Distribution and discoverability are becoming part of production
+### 3. Rights policy is becoming part of competitiveness
 
-AI is changing how audiences find content. Search summaries, recommendation systems and agent-mediated discovery can influence which creators, brands and stories are visible.
+The music and publishing positions show that rights are not only a compliance issue. They may become a competitive differentiator.
 
-For New Zealand content, this raises a particular risk: local work may be produced successfully but remain difficult for audiences to find within global systems. NZ On Air’s 2026 audience research found that 81% of New Zealanders like seeing New Zealand faces and places on television, while 41% would listen to more New Zealand music if it appeared on their streaming service. The problem is therefore not only production capacity; it is discoverability and distribution. ([nzonair.govt.nz](https://www.nzonair.govt.nz/news/where-are-the-audiences-2026/))
+Creators and organisations with clear provenance, consent and licensing processes may be better positioned with funders, commissioners, platforms, audiences and international partners. Conversely, systems that cannot explain where training material came from may face reputational, legal and commissioning risk.
 
-### 4. Rights and consent are becoming competitive conditions
+### 4. Aotearoa’s distinctive opportunity is language and cultural capability
 
-The 2026 Music Manifesto shows that rights holders are not rejecting technological change. They are seeking control over training inputs, licensing, attribution and remuneration.
+Translation, transcription, captioning, language learning, archival discovery and accessibility are areas where New Zealand organisations can develop locally relevant systems.
 
-Similar concerns apply across screen, advertising, publishing and visual arts, particularly where AI can reproduce a person’s voice, face, style or cultural identity. Organisations with clear provenance and consent processes will be better positioned with funders, commissioners, audiences and international partners.
+The opportunity is not simply to apply global models to local content. It is to build processes that respect language variation, cultural authority, community consent and Māori and Pacific data interests. That requires more than technical accuracy. It requires governance by the people whose knowledge and identity the systems represent.
 
-### 5. Entry-level work remains the most vulnerable part of the workforce
+### 5. Entry-level creative work is a more immediate concern than mass professional displacement
 
-The immediate labour risk is not necessarily the disappearance of established creative professions. It is the reduction of low-paid, freelance, assistant and unpaid work through which emerging practitioners acquire portfolios, networks and practical judgement.
+The Massey pilot does not show widespread job losses. It does show that AI can remove low-paid or unpaid tasks before replacing established occupations.
 
-This risk is difficult to measure because the work is often informal and distributed across small businesses. It also creates a policy tension: AI may lower barriers to entry for some creators while removing the first professional steps for others.
+That distinction matters for policy and education. If junior researchers, assistants, production runners, copy editors, designers and freelance contributors lose access to early work, the industry may experience a delayed capability shortage even if current productivity improves.
 
-### 6. The evidence is still biased toward visible, well-resourced organisations
+### 6. Capability programmes are multiplying faster than evaluation
 
-Large media companies, technology partners, funders and industry bodies are more likely to publish AI case studies. Independent artists, Māori-led organisations, Pacific practitioners and small studios are less likely to have the resources to document adoption publicly.
+The Government’s small-business pilot, Applied Intelligent Systems subject, Huanui, AI Forum workstreams and proposed national creative AI research platform all indicate expanding capability investment.
 
-The absence of evidence should not be interpreted as absence of use. It does mean that sector-wide claims should be made cautiously.
+What remains missing is systematic evaluation:
+
+- Which programmes lead to sustained use?
+- Which tools produce measurable value?
+- Are benefits retained by creative workers or captured by platforms and clients?
+- Do Māori and Pacific practitioners have equal access?
+- Does AI strengthen local creative ownership or increase dependence on offshore providers?
+
+Until these questions are measured, the sector should distinguish carefully between capability-building and adoption.
+
+### 7. Evidence remains biased toward visible organisations
+
+Large media companies, technology partners, universities, public funders and industry bodies are more likely to publish AI case studies. Independent artists, small studios, Māori-led organisations and Pacific practitioners often have less capacity or incentive to document their use.
+
+The lack of public evidence outside journalism and marketing therefore does not prove that adoption is absent. It means that claims about scale, productivity and workforce effects should remain cautious.
 
 ## Outlook
 
-Over the next 12 months, the most consequential developments are likely to be:
+The next six to twelve months are likely to be shaped by:
 
-- The September 2026 regional rollout of Pacific Media Network’s translation workflow, which will test whether a newsroom pilot can scale across Pacific-language content.
-- Further integration of AI disclosure into NZFC, NZ On Air and Creative New Zealand funding and commissioning processes.
-- Publication of MBIE and Stats NZ findings from the 2026 Survey of Business Operations.
-- Political debate over the music industry’s demands for consent, licensing and AI training records.
-- Continued growth in AI-driven search, recommendation and agent-mediated discovery.
-- More use of AI for accessibility, multilingual content and audience segmentation.
-- Greater demand for provenance records covering prompts, source material, human edits and final approvals.
-- More pressure from creators over digital replicas, voice imitation, synthetic performance and training data.
-- Further scrutiny of entry-level employment and whether productivity gains are reaching creative workers.
-- The 31 March 2027 deadline for Government advice on a possible New Zealand generative-AI copyright framework.
+- The 7 November 2026 general election and competing proposals on creator rights, AI governance and small-business support.
+- Continued public debate over the Recorded Music NZ position paper and related copyright demands.
+- Further guidance or policy development before the Government’s 31 March 2027 deadline for advice on a generative-AI copyright framework.
+- Publication of results from the 2026 Survey of Business Operations.
+- Possible clarification of whether the Aotearoa Creative AI Research Institute becomes a funded and operating platform.
+- More disclosure and provenance requirements in public funding and commissioning.
+- Further testing of AI translation and transcription in Māori and Pacific-language media.
+- Continued pressure to measure effects on freelance and entry-level creative work.
+- Greater use of AI for audience discovery, metadata, localisation and accessibility.
+- More negotiations over synthetic voices, digital replicas, likeness, style imitation and training-data records.
 
-The main uncertainty is not whether AI capability will improve. It is whether New Zealand’s creative institutions can convert that capability into sustainable creative businesses while retaining local ownership, cultural legitimacy and professional pathways.
+The practical question for creative organisations is becoming less whether to use AI and more where it creates defensible value. The strongest candidates are workflows where the problem is repetitive, the output can be checked and the use does not compromise authorship, cultural authority or audience trust.
 
 ## Overall Assessment
 
-AI adoption in Aotearoa New Zealand’s creative industries is **broad, uneven and increasingly institutionalised**.
+AI adoption in Aotearoa New Zealand’s creative industries has progressed, but mainly through **documented workflow use and stronger governance rather than scaled synthetic production**.
 
-Journalism and marketing show the clearest evidence of operating use. Screen and public funding have the most developed governance. Music has the strongest organised resistance to unlicensed training and the clearest demand for creator control. Games and VFX have substantial technical incentives but little public AI-specific measurement. Independent arts and cultural organisations remain the least visible in the evidence base.
+Journalism and publishing remain the best-evidenced subsectors. Marketing shows broad organisational integration, although its results are mostly self-reported. Music has developed the clearest rights-based policy response. Screen and public funding have the most mature formal governance. Games and VFX have strong technical incentives but limited AI-specific data. Independent arts and design show active experimentation but little evidence of durable commercial deployment.
 
-The sector is not moving uniformly toward autonomous content generation. The dominant model remains **human-led, assistive and workflow-oriented**.
+The latest evidence also makes the labour issue more precise. The immediate risk is not necessarily the rapid disappearance of established creative professions. It is the erosion of the small, low-paid and informal tasks through which new practitioners enter the industry.
 
-New Zealand’s distinctive challenge is to ensure that AI adoption strengthens, rather than extracts from, its creative ecosystem. That requires more than access to tools. It requires rights and consent, cultural governance, transparent commissioning, skills development, evidence-based evaluation and a fair distribution of productivity gains.
+New Zealand’s likely advantage lies in practical, culturally grounded applications: multilingual media, accessibility, archival discovery, local storytelling, creative technology and rights-aware production systems. Capturing that advantage will require more than access to global AI tools. It will require evidence, consent, provenance, cultural governance, workforce investment and a fair distribution of productivity gains.
+
+The central assessment remains unchanged: **the Aotearoa creative sector is adopting AI, but it is doing so cautiously, unevenly and under increasing pressure to prove that the technology strengthens rather than extracts from the creative ecosystem.**
