@@ -1,39 +1,141 @@
 ---
 import Base from '../../layouts/Base.astro';
-import SnapshotFeature from '../../components/SnapshotFeature.astro';
-import ArticleIndex from '../../components/ArticleIndex.astro';
+import PageIntro from '../../components/PageIntro.astro';
+import SectorGrid from '../../components/SectorGrid.astro';
+import { formatDate, getEditionArchive, getLatestSnapshot, summaryOf } from '../../lib/articles';
+
+const snapshot = await getLatestSnapshot();
+const { months, rows } = await getEditionArchive();
+const years = [...new Set(months.map((m) => m.year))].join('–');
+const newestYear = months[0]?.year;
+
+const chipClass = (latest: boolean) => [
+  'inline-flex h-9 min-w-11 items-center justify-center rounded-full px-3 text-[0.8rem] font-semibold transition hover:scale-110',
+  latest ? 'bg-teal text-white' : 'bg-teal-pale text-teal hover:bg-lime-pale',
+];
 ---
 
 <Base
   title="Articles"
   description="A national AI snapshot plus sector-by-sector reports on AI adoption in Aotearoa New Zealand, researched and written by an AI agent."
 >
-  <section class="py-14 sm:py-16">
-    <h1 class="font-display reveal text-4xl font-semibold tracking-tight sm:text-5xl">
-      Articles
-    </h1>
-    <p class="reveal reveal-1 text-ink-muted mt-5 max-w-2xl text-lg leading-relaxed">
-      Each article is researched and written by an AI agent, then published here as
-      a living document. Start with the national snapshot for a cross-sector view,
-      then open any industry report to read the latest version or browse its update
-      history.
-    </p>
-  </section>
+  <PageIntro title="Articles">
+    Start with the national snapshot for the cross-sector view. Open any sector report
+    to read the latest edition or step back through its history.
+  </PageIntro>
 
-  <div class="reveal reveal-2">
-    <SnapshotFeature
-      heading="National monthly overview"
-      primaryLabel="Open the latest snapshot"
-    />
-  </div>
+  {
+    snapshot && (
+      <section class="rise mx-auto max-w-6xl px-5 sm:px-8" style="--delay: 0.18s">
+        <a
+          href={snapshot.data.permalink}
+          class="card-lift flex flex-wrap items-center gap-x-10 gap-y-6 rounded-3xl bg-teal p-8 text-white sm:p-10"
+        >
+          <span class="flex flex-[1_1_32rem] flex-col gap-3">
+            <span class="text-sm font-semibold tracking-[0.08em] text-teal-mint uppercase">
+              National snapshot · {formatDate(snapshot.data.article_updated_at)}
+            </span>
+            <span class="text-4xl leading-tight font-bold tracking-[-0.03em]">
+              {snapshot.data.title}
+            </span>
+            <span class="font-serif text-lg leading-normal text-teal-pale">
+              {summaryOf(snapshot)}
+            </span>
+          </span>
+          <span class="flex items-center gap-2 rounded-full bg-lime px-6 py-3.5 font-semibold text-ink">
+            Open the snapshot
+          </span>
+        </a>
+      </section>
+    )
+  }
 
-  <section class="reveal reveal-3 py-14 sm:py-16">
+  <section class="mx-auto max-w-6xl px-5 pt-24 pb-10 sm:px-8">
     <h2
       id="industry-reports"
-      class="font-display mb-8 scroll-mt-8 text-2xl font-semibold tracking-tight sm:text-3xl"
+      class="scroll-mt-8 border-b-2 border-ink pb-5 text-4xl font-bold tracking-[-0.03em]"
     >
-      Industry reports
+      Sector reports
     </h2>
-    <ArticleIndex />
+    <div class="mt-8">
+      <SectorGrid showEditionCount />
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-5 pt-16 sm:px-8">
+    <h2 id="past-editions" class="scroll-mt-8 text-3xl font-bold tracking-[-0.025em]">
+      Past editions
+    </h2>
+    <p class="mt-2 font-serif text-lg text-ink-soft">
+      Every earlier edition stays online, unchanged, at its own address. The dark label
+      in each row is the latest edition.
+    </p>
+
+    <!-- Phones: one card per report, editions as wrapping date labels. -->
+    <ul class="mt-7 space-y-3 md:hidden">
+      {
+        rows.map((row) => (
+          <li data-reveal class="rounded-[1.25rem] border-[1.5px] border-line p-5">
+            <a href={row.permalink} class="font-semibold hover:text-teal">
+              {row.title}
+            </a>
+            <span class="mt-3 flex flex-wrap gap-1.5">
+              {months.flatMap((m) =>
+                (row.cells[m.key] ?? []).map((e) => (
+                  <a href={e.permalink} aria-label={e.label} class:list={chipClass(e.latest)}>
+                    {e.day} {m.label}
+                    {m.year !== newestYear && ` ${m.year}`}
+                  </a>
+                )),
+              )}
+            </span>
+          </li>
+        ))
+      }
+    </ul>
+
+    <!-- Wider screens: a report × month grid. -->
+    <div data-reveal class="mt-7 hidden overflow-x-auto rounded-[1.25rem] border-[1.5px] border-line md:block">
+      <table class="w-full min-w-[54rem] border-collapse text-[0.95rem]">
+        <caption class="sr-only">Editions of each report by month, {years}</caption>
+        <thead>
+          <tr class="bg-mist text-left">
+            <th scope="col" class="px-5 py-4 font-semibold">Report</th>
+            {
+              months.map((m) => (
+                <th scope="col" class="px-2 py-4 font-semibold">
+                  {m.label}
+                  <span class="block text-xs font-normal text-ink-muted">{m.year}</span>
+                </th>
+              ))
+            }
+          </tr>
+        </thead>
+        <tbody>
+          {
+            rows.map((row) => (
+              <tr class="border-t border-line">
+                <th scope="row" class="px-5 py-3 text-left font-medium">
+                  <a href={row.permalink} class="hover:text-teal">
+                    {row.title}
+                  </a>
+                </th>
+                {months.map((m) => (
+                  <td class="px-2 py-2.5">
+                    <span class="flex gap-1">
+                      {(row.cells[m.key] ?? []).map((e) => (
+                        <a href={e.permalink} aria-label={e.label} class:list={chipClass(e.latest)}>
+                          {e.day}
+                        </a>
+                      ))}
+                    </span>
+                  </td>
+                ))}
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
   </section>
 </Base>

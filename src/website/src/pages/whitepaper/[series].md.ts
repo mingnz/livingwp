@@ -1,6 +1,6 @@
 import type { APIRoute } from 'astro';
 import { getLatestArticles, formatDate } from '../../lib/articles';
-import { PUBLISHER_NAME } from '../../lib/seo';
+import { PUBLISHER_NAME } from '../../lib/site';
 
 // Clean-markdown view of the latest edition of each report, for AI crawlers
 // and "copy as markdown" — e.g. /whitepaper/healthcare.md.

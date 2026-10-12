@@ -2,146 +2,310 @@
 @plugin '@tailwindcss/typography';
 
 @theme {
-  --font-display: 'Fraunces Variable', Georgia, serif;
+  --font-sans: 'Outfit Variable', ui-sans-serif, system-ui, sans-serif;
   --font-serif: 'Newsreader Variable', Georgia, serif;
-  --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, monospace;
 
-  /* Warm paper + ink editorial palette, pounamu green accent, clay secondary */
-  --color-paper: #f5f0e6;
-  --color-cream: #fbf8f1;
-  --color-parchment: #ece4d2;
-  --color-ink: #211d15;
-  --color-ink-muted: #6e6452;
-  --color-rule: #d8cfba;
-  --color-pounamu: #16654e;
-  --color-pounamu-deep: #0c4534;
-  --color-clay: #a8501f;
+  /* AI Forum NZ palette: deep teal ink, teal and lime accents. */
+  --color-ink: #10292c;
+  --color-ink-soft: #2c4447;
+  --color-ink-muted: #4f6a6c;
+  --color-teal: #165d61;
+  --color-teal-deep: #0b3f42;
+  --color-teal-bright: #2bbac1;
+  --color-teal-pale: #e6f1ef;
+  /* Light teal for small text on teal fills. */
+  --color-teal-mint: #a8e6d8;
+  --color-mist: #f1f6f5;
+  --color-line: #d5e1e0;
+  --color-line-soft: #e1eae9;
+  --color-line-strong: #c9d8d6;
+  --color-lime: #38c40e;
+  --color-lime-soft: #9bef73;
+  --color-lime-pale: #c6eeb4;
+  /* Lime dark enough for text on white (WCAG AA). */
+  --color-lime-ink: #22790a;
+  /* Text on the dark ink footer. */
+  --color-on-ink: #c9dcda;
+  --color-on-ink-muted: #a9c4c1;
+  --color-on-ink-faint: #8fb3b0;
+  --color-amber-pale: #fff4d6;
+  --color-amber-ink: #4a3a06;
+  --color-amber: #e3c35a;
+  --color-amber-deep: #2e2404;
 
-  --animate-pulse-ring: pulse-ring 2.4s cubic-bezier(0.2, 0.6, 0.4, 1) infinite;
+  --ease-out-expo: cubic-bezier(0.22, 1, 0.36, 1);
+}
 
-  @keyframes pulse-ring {
-    0% {
-      transform: scale(0.5);
-      opacity: 0.8;
-    }
-    70%,
-    100% {
-      transform: scale(2.4);
-      opacity: 0;
-    }
+@layer base {
+  body {
+    @apply bg-white font-sans text-ink antialiased;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-teal-bright);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  ::selection {
+    background: var(--color-lime-pale);
   }
 }
 
-/* ── Paper grain ── */
-body::after {
-  content: '';
-  position: fixed;
-  inset: 0;
-  z-index: 100;
-  pointer-events: none;
-  opacity: 0.5;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.04 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+/* ── Brand strip: the lime-to-teal gradient, drifting slowly ── */
+@keyframes strip-drift {
+  to {
+    background-position: 200% 50%;
+  }
 }
 
-/* ── Keyboard focus: a visible pounamu ring for all interactive elements ── */
-:focus-visible {
-  outline: 2px solid var(--color-pounamu);
-  outline-offset: 2px;
-  border-radius: 1px;
+.brand-strip {
+  height: 6px;
+  background: linear-gradient(90deg, #38c40e, #2bbac1, #165d61, #2bbac1, #38c40e);
+  background-size: 200% 100%;
+  animation: strip-drift 12s linear infinite;
 }
 
-/* ── Page-load staggered reveal ── */
+/* ── Live dot ── */
+@keyframes live-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgb(56 196 14 / 0.55);
+  }
+  70%,
+  100% {
+    box-shadow: 0 0 0 10px rgb(56 196 14 / 0);
+  }
+}
+
+.live-dot {
+  display: inline-block;
+  width: 0.55rem;
+  height: 0.55rem;
+  flex: none;
+  border-radius: 999px;
+  background: var(--color-lime);
+  animation: live-pulse 2.2s ease-out infinite;
+}
+
+/* ── Lime highlighter that draws in under a phrase ── */
+@keyframes mark-draw {
+  from {
+    background-size: 0% 100%;
+  }
+}
+
+.mark {
+  padding-inline: 0.1em;
+  background: linear-gradient(transparent 62%, var(--color-lime-soft) 62%) no-repeat;
+  background-size: 100% 100%;
+  animation: mark-draw 1s 0.7s cubic-bezier(0.65, 0, 0.35, 1) both;
+}
+
+/* ── Entrance reveals ──
+   `.rise` plays on page load. `[data-reveal]` waits until the element scrolls
+   into view (Base.astro adds `.is-visible`). Hidden states apply only when
+   scripting is on, so content never stays invisible without JS. */
 @keyframes rise {
   from {
     opacity: 0;
-    transform: translateY(16px);
+    transform: translateY(18px);
+  }
+}
+
+.rise {
+  animation: rise 0.8s var(--ease-out-expo) both;
+  animation-delay: var(--delay, 0s);
+}
+
+@media (scripting: enabled) {
+  [data-reveal]:not(.is-visible) {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+}
+
+[data-reveal] {
+  transition:
+    opacity 0.8s var(--ease-out-expo),
+    transform 0.8s var(--ease-out-expo);
+  transition-delay: var(--delay, 0s);
+}
+
+/* ── Interactive cards: lift on hover, nudge the arrow ── */
+.card-lift {
+  transition:
+    transform 0.35s var(--ease-out-expo),
+    border-color 0.25s,
+    box-shadow 0.35s var(--ease-out-expo);
+}
+
+.card-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px -24px rgb(16 41 44 / 0.45);
+}
+
+.card-lift .nudge {
+  transition: transform 0.3s var(--ease-out-expo);
+}
+
+.card-lift:hover .nudge {
+  transform: translateX(4px);
+}
+
+/* ── Reading progress (scroll-driven; hidden where unsupported) ── */
+@keyframes progress-grow {
+  from {
+    transform: scaleX(0);
   }
   to {
+    transform: scaleX(1);
+  }
+}
+
+.reading-progress {
+  display: none;
+}
+
+@supports (animation-timeline: scroll()) {
+  .reading-progress {
+    display: block;
+    transform-origin: 0 50%;
+    animation: progress-grow linear both;
+    animation-timeline: scroll(root);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  [data-reveal]:not(.is-visible) {
     opacity: 1;
     transform: none;
   }
 }
 
-.reveal {
-  animation: rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
-}
-.reveal-1 { animation-delay: 0.07s; }
-.reveal-2 { animation-delay: 0.16s; }
-.reveal-3 { animation-delay: 0.26s; }
-.reveal-4 { animation-delay: 0.38s; }
-
-@media (prefers-reduced-motion: reduce) {
-  .reveal,
-  .reveal-1,
-  .reveal-2,
-  .reveal-3,
-  .reveal-4 {
-    animation: none;
-  }
-  *,
-  ::before,
-  ::after {
-    animation-duration: 0.01ms !important;
-    transition-duration: 0.01ms !important;
-  }
-}
-
-/* ── Article prose: editorial overrides on top of @tailwindcss/typography ── */
+/* ── Article prose ── */
 .article-prose {
   @apply prose prose-lg max-w-none font-serif;
-  --tw-prose-body: var(--color-ink);
+  font-size: 1.25rem;
+  line-height: 1.65;
+  --tw-prose-body: var(--color-ink-soft);
   --tw-prose-headings: var(--color-ink);
   --tw-prose-bold: var(--color-ink);
-  --tw-prose-links: var(--color-pounamu);
+  --tw-prose-links: var(--color-teal);
   --tw-prose-quotes: var(--color-ink);
-  --tw-prose-quote-borders: var(--color-pounamu);
-  --tw-prose-hr: var(--color-rule);
-  --tw-prose-th-borders: var(--color-rule);
-  --tw-prose-td-borders: var(--color-rule);
-  --tw-prose-bullets: var(--color-clay);
-  --tw-prose-counters: var(--color-clay);
+  --tw-prose-quote-borders: var(--color-lime);
+  --tw-prose-hr: var(--color-line);
+  --tw-prose-th-borders: var(--color-line);
+  --tw-prose-td-borders: var(--color-line);
+  --tw-prose-bullets: var(--color-teal-bright);
+  --tw-prose-counters: var(--color-teal);
   --tw-prose-captions: var(--color-ink-muted);
   --tw-prose-code: var(--color-ink);
 }
 
 .article-prose :where(h1, h2, h3, h4) {
-  font-family: var(--font-display);
-  font-weight: 560;
-  letter-spacing: -0.015em;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  letter-spacing: -0.02em;
   text-wrap: balance;
+  scroll-margin-top: 2rem;
 }
 
-.article-prose :where(h1) {
-  font-size: 2.1em;
-  line-height: 1.12;
+/* Some older editions use h1 for sections; render them like h2. */
+.article-prose :where(h1, h2) {
+  font-size: 1.6em;
+  line-height: 1.15;
+  margin-top: 2.2em;
+  padding-top: 1.4em;
+  border-top: 1px solid var(--color-line);
 }
 
-.article-prose :where(h2) {
-  border-top: 1px solid var(--color-rule);
-  padding-top: 1em;
-  margin-top: 1.8em;
+.article-prose > :where(h1:first-child, h2:first-child) {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+}
+
+.article-prose :where(h3) {
+  font-size: 1.15em;
+  font-weight: 600;
 }
 
 .article-prose :where(a) {
   font-weight: inherit;
-  text-decoration-color: color-mix(in srgb, var(--color-pounamu) 35%, transparent);
-  text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
-  transition: text-decoration-color 0.15s ease;
+  text-decoration-color: var(--color-lime);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  transition: color 0.15s;
 }
 
 .article-prose :where(a:hover) {
-  text-decoration-color: var(--color-pounamu);
+  color: var(--color-teal-deep);
 }
 
+.article-prose :where(blockquote) {
+  font-style: italic;
+  font-weight: 400;
+  border-left-width: 4px;
+}
+
+.article-prose :where(blockquote p:first-of-type)::before,
+.article-prose :where(blockquote p:last-of-type)::after {
+  content: none;
+}
+
+.article-prose :where(li)::marker {
+  font-family: var(--font-sans);
+}
+
+/* Tables: sans, compact, scroll sideways inside their own box. */
 .article-prose :where(table) {
-  font-family: var(--font-mono);
-  font-size: 0.72em;
-  line-height: 1.5;
+  display: block;
+  overflow-x: auto;
+  font-family: var(--font-sans);
+  font-size: 0.75em;
+  line-height: 1.45;
+  border: 1px solid var(--color-line);
+  border-radius: 0.875rem;
+}
+
+.article-prose :where(thead) {
+  background: var(--color-mist);
 }
 
 .article-prose :where(thead th) {
+  font-weight: 600;
+  padding: 0.75em 1em;
+}
+
+.article-prose :where(tbody td) {
+  padding: 0.75em 1em;
+}
+
+/* Inline citations, rewritten by rehype-article from "([domain](url))". */
+.article-prose :where(a.source-chip) {
+  display: inline-block;
+  padding: 0 0.6em;
+  border-radius: 999px;
+  background: var(--color-teal-pale);
+  color: var(--color-teal);
+  font-family: var(--font-sans);
+  font-size: 0.65em;
   font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
+  line-height: 1.8;
+  text-decoration: none;
+  vertical-align: 0.15em;
+  white-space: nowrap;
+  transition: background-color 0.2s;
+}
+
+.article-prose :where(a.source-chip:hover) {
+  background: var(--color-lime-pale);
 }

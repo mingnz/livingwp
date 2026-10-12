@@ -1,0 +1,48 @@
+---
+import Arrow from './Arrow.astro';
+import { getIndustryReports, getSeriesHistory, shortTitle, summaryOf } from '../lib/articles';
+
+interface Props {
+  /** Show how many editions each report has. */
+  showEditionCount?: boolean;
+}
+
+const { showEditionCount = false } = Astro.props;
+const reports = await getIndustryReports();
+const counts = showEditionCount
+  ? await Promise.all(reports.map(async (r) => (await getSeriesHistory(r.data.article_series)).length))
+  : [];
+---
+
+<ul class="grid grid-cols-[repeat(auto-fill,minmax(16rem,1fr))] gap-5">
+  {
+    reports.map((report, i) => (
+      <li data-reveal style={`--delay: ${(i % 4) * 0.07}s`}>
+        <a
+          href={report.data.permalink}
+          class="card-lift flex h-full min-h-72 flex-col gap-3.5 rounded-[1.25rem] border-[1.5px] border-line bg-white p-7 hover:border-teal-bright"
+        >
+          <span class="flex items-center justify-between text-[0.95rem] font-semibold text-lime-ink">
+            {String(i + 1).padStart(2, '0')}
+            {showEditionCount ? (
+              <span class="text-sm font-normal text-ink-muted">{counts[i]} editions</span>
+            ) : (
+              <span class="h-1 w-7 rounded-full bg-lime" aria-hidden="true" />
+            )}
+          </span>
+          <span class="text-2xl leading-tight font-semibold tracking-tight">
+            {shortTitle(report.data.title)}
+          </span>
+          <span class="flex-1">
+            <span class="line-clamp-4 font-serif text-lg leading-normal text-ink-soft">
+              {summaryOf(report)}
+            </span>
+          </span>
+          <span class="flex items-center gap-2 text-[0.95rem] font-semibold text-teal">
+            Read report <Arrow />
+          </span>
+        </a>
+      </li>
+    ))
+  }
+</ul>

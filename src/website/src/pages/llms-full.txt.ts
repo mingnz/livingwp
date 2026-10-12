@@ -5,7 +5,7 @@ import {
   formatDate,
   type Article,
 } from '../lib/articles';
-import { PUBLISHER_NAME } from '../lib/seo';
+import { PUBLISHER_NAME } from '../lib/site';
 
 // The full corpus in one fetch: the latest edition of every report,
 // concatenated. Lets an LLM ingest the whole site without crawling.

@@ -3,22 +3,20 @@
  * sitewide (Base.astro); Article nodes reference them by @id so search engines
  * and AI crawlers resolve a single connected entity graph.
  */
+import { GITHUB_URL, ORG_URL, PUBLISHER_NAME, SITE_TITLE } from './site';
 
 const ref = (site: URL, hash: string) => new URL(hash, site).href;
 
 export const ORG_ID = '/#org';
 export const WEBSITE_ID = '/#website';
 
-export const PUBLISHER_NAME =
-  'AI Forum New Zealand — Generative AI Working Group';
-
 export function organizationNode(site: URL): Record<string, unknown> {
   return {
     '@type': 'Organization',
     '@id': ref(site, ORG_ID),
     name: PUBLISHER_NAME,
-    url: 'https://aiforum.org.nz',
-    sameAs: ['https://github.com/mingnz/livingwp'],
+    url: ORG_URL,
+    sameAs: [GITHUB_URL],
   };
 }
 
@@ -26,7 +24,7 @@ export function webSiteNode(site: URL): Record<string, unknown> {
   return {
     '@type': 'WebSite',
     '@id': ref(site, WEBSITE_ID),
-    name: 'AI in NZ Living Whitepaper',
+    name: SITE_TITLE,
     url: new URL('/', site).href,
     inLanguage: 'en-NZ',
     publisher: { '@id': ref(site, ORG_ID) },

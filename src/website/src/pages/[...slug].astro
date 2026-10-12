@@ -1,14 +1,20 @@
 ---
 import { render } from 'astro:content';
 import Base from '../layouts/Base.astro';
-import EditionTimeline from '../components/EditionTimeline.astro';
+import Arrow from '../components/Arrow.astro';
+import EditionHistory from '../components/EditionHistory.astro';
 import ogImage from '../assets/ainz.jpg';
 import { articleNode } from '../lib/seo';
+import { feedbackUrl } from '../lib/site';
 import {
+  formatDate,
   getAllArticles,
+  getIndustryReports,
+  getLatestSnapshot,
   getSeriesHistory,
   permalinkToSlug,
-  formatDate,
+  shortTitle,
+  summaryOf,
   type Article,
 } from '../lib/articles';
 
@@ -27,135 +33,250 @@ interface Props {
 }
 
 const { entry } = Astro.props;
-const { Content } = await render(entry);
 const { data } = entry;
+const { Content, headings } = await render(entry);
+const sections = headings.filter((h) => h.depth === 2);
 
 const history = await getSeriesHistory(data.article_series);
-const latest = data.article_latest
-  ? undefined
-  : history.find((e) => e.data.article_latest);
+const position = history.findIndex((e) => e.id === entry.id);
+const editionNumber = history.length - position;
+const latest = history[0];
+const isLatest = data.article_latest;
 
-const description = data.description ?? data.article_summary ?? '';
-const canonical = new URL(entry.data.permalink, Astro.site);
-// First edition in the series = original publication; this edition = modified.
-const firstPublished =
-  history[history.length - 1]?.data.article_updated_at ?? data.article_updated_at;
-
+const summary = summaryOf(entry);
+const canonical = new URL(data.permalink, Astro.site);
 const articleSchema = articleNode(Astro.site!, {
   url: canonical,
   headline: data.title,
-  description,
-  datePublished: firstPublished,
+  description: summary,
+  // First edition in the series = original publication; this edition = modified.
+  datePublished: history[history.length - 1].data.article_updated_at,
   dateModified: data.article_updated_at,
   image: new URL(ogImage.src, Astro.site),
 });
 
-// Clean-markdown view for AI crawlers / "copy as markdown" — latest editions only.
-const markdownUrl = data.article_latest
-  ? `/whitepaper/${data.article_series}.md`
-  : undefined;
+// Clean-markdown view for AI crawlers and "copy as markdown"; latest editions only.
+const markdownUrl = isLatest ? `/whitepaper/${data.article_series}.md` : undefined;
 
-// Articles are published autonomously, so give readers a direct feedback
-// channel: pre-filled GitHub issue creation via the article-feedback form.
-const flagIssueUrl =
-  'https://github.com/mingnz/livingwp/issues/new?' +
-  new URLSearchParams({
-    template: 'article-feedback.yml',
-    title: `Article feedback: ${data.title} (${formatDate(data.article_updated_at)} edition)`,
-    'article-url': canonical.href,
-  }).toString();
+// Articles publish without review, so give readers a direct feedback channel.
+const reportUrl = feedbackUrl({
+  title: `Article feedback: ${data.title} (${formatDate(data.article_updated_at)} edition)`,
+  articleUrl: canonical.href,
+});
+
+// Keep reading: the snapshot (unless we're on it), then the next reports A–Z.
+const snapshot = await getLatestSnapshot();
+const reports = await getIndustryReports();
+const start = reports.findIndex((r) => r.data.article_series === data.article_series) + 1;
+const rotated = [...reports.slice(start), ...reports.slice(0, start)].filter(
+  (r) => r.data.article_series !== data.article_series,
+);
+const keepReading = [
+  ...(snapshot && snapshot.data.article_series !== data.article_series ? [snapshot] : []),
+  ...rotated,
+].slice(0, 3);
 ---
 
 <Base
   title={data.title}
-  description={description}
-  noindex={!data.article_latest}
+  description={data.description ?? summary}
+  noindex={!isLatest}
   jsonLd={[articleSchema]}
 >
-  <div
-    class="gap-12 py-10 sm:py-14 lg:grid lg:grid-cols-[minmax(0,1fr)_13rem] lg:gap-16"
-  >
-    <article class="min-w-0">
-      <header class="reveal">
-        <nav class="font-mono text-ink-muted text-[0.7rem] tracking-[0.14em] uppercase">
-          <a class="hover:text-pounamu-deep transition-colors" href="/whitepaper/">
-            Articles
-          </a>
-          <span aria-hidden="true" class="mx-2">/</span>
-          <span>{data.title}</span>
-        </nav>
+  <div aria-hidden="true" class="sticky top-0 z-10 h-1">
+    <div class="reading-progress h-1 bg-lime"></div>
+  </div>
 
-        <div class="mt-6 flex flex-wrap items-center gap-3">
-          {
-            data.article_latest ? (
-              <span class="bg-pounamu-deep font-mono px-2.5 py-1 text-[0.65rem] tracking-[0.14em] text-paper uppercase">
-                Latest
-              </span>
-            ) : (
-              <span class="bg-clay font-mono px-2.5 py-1 text-[0.65rem] tracking-[0.14em] text-paper uppercase">
-                Archived
-              </span>
-            )
-          }
-          <time
-            datetime={data.article_updated_at.toISOString()}
-            class="font-mono text-ink-muted text-[0.72rem] tracking-wider uppercase"
-          >
-            {formatDate(data.article_updated_at)}
-          </time>
-        </div>
+  <section class="bg-mist">
+    <div class="mx-auto max-w-6xl px-5 pt-10 pb-12 sm:px-8 sm:pt-12 sm:pb-14">
+      <nav aria-label="Breadcrumb" class="flex gap-2 text-sm text-ink-muted">
+        <a href="/whitepaper/" class="hover:text-teal">Articles</a>
+        <span aria-hidden="true">/</span>
+        <span>{shortTitle(data.title)}</span>
+      </nav>
 
-        {
-          latest && (
-            <p class="border-clay bg-cream mt-6 border-l-2 px-4 py-3 text-[0.95rem]">
-              You're reading an archived edition.{' '}
-              <a
-                class="text-pounamu-deep font-medium underline underline-offset-4"
-                href={latest.data.permalink}
-              >
-                Read the latest version
-              </a>{' '}
-              from {formatDate(latest.data.article_updated_at)}.
+      {
+        !isLatest && (
+          <div class="rise mt-6 flex flex-wrap items-center gap-x-5 gap-y-3 rounded-2xl bg-amber-pale px-5 py-4 text-amber-ink">
+            <p class="flex-[1_1_20rem]">
+              You’re reading the {formatDate(data.article_updated_at)} edition. The latest
+              edition is from {formatDate(latest.data.article_updated_at)}.
             </p>
+            <a
+              href={latest.data.permalink}
+              class="rounded-full bg-ink px-4.5 py-2.5 text-[0.95rem] font-semibold text-white hover:bg-teal"
+            >
+              Read the latest edition
+            </a>
+          </div>
+        )
+      }
+
+      <div class="rise mt-7 flex flex-wrap items-center gap-x-4 gap-y-2">
+        {
+          isLatest ? (
+            <span class="inline-flex items-center gap-2 rounded-full bg-ink px-3.5 py-1.5 text-[0.8rem] font-semibold tracking-wide text-white">
+              <span class="live-dot" />
+              Latest edition
+            </span>
+          ) : (
+            <span class="rounded-full bg-amber px-3.5 py-1.5 text-[0.8rem] font-semibold tracking-wide text-amber-deep">
+              Archived edition
+            </span>
           )
         }
-      </header>
-
-      <div class="article-prose reveal reveal-1 mt-10">
-        <Content />
+        <span class="text-[0.95rem] text-ink-soft">
+          {isLatest ? 'Updated' : 'Published'}
+          <time datetime={data.article_updated_at.toISOString()}>
+            {formatDate(data.article_updated_at)}
+          </time>
+          · Edition {editionNumber} of {history.length}
+        </span>
       </div>
 
-      <div class="mt-14 flex flex-wrap items-center gap-x-7 gap-y-2">
+      <h1
+        class="rise mt-5 max-w-4xl text-[clamp(2.75rem,6vw,4.75rem)] leading-none font-bold tracking-[-0.04em] text-balance"
+        style="--delay: 0.08s"
+      >
+        {data.title}
+      </h1>
+      {
+        summary && (
+          <p
+            class="rise mt-6 max-w-3xl font-serif text-xl leading-snug text-ink-soft sm:text-2xl"
+            style="--delay: 0.16s"
+          >
+            {summary}
+          </p>
+        )
+      }
+      <div class="rise mt-7 flex flex-wrap gap-2.5" style="--delay: 0.24s">
         <a
-          class="font-mono text-ink-muted hover:text-pounamu-deep inline-block text-[0.72rem] tracking-[0.14em] uppercase underline decoration-rule underline-offset-4 transition-colors"
-          href="/whitepaper/"
+          href={reportUrl}
+          rel="noopener"
+          class="inline-flex items-center gap-2 rounded-full border-[1.5px] border-line-strong bg-white px-4.5 py-2.5 text-[0.95rem] font-medium transition hover:-translate-y-0.5 hover:border-teal-bright"
         >
-          ← Back to all articles
+          <svg class="size-4" viewBox="0 0 16 16" aria-hidden="true">
+            <path d="M3 14V2.5M3 3h8l-1.5 3L11 9H3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+          </svg>
+          Report a problem
         </a>
         {
           markdownUrl && (
             <a
-              class="font-mono text-ink-muted hover:text-pounamu-deep inline-block text-[0.72rem] tracking-[0.14em] uppercase underline decoration-rule underline-offset-4 transition-colors"
               href={markdownUrl}
+              class="inline-flex items-center gap-2 rounded-full border-[1.5px] border-line-strong bg-white px-4.5 py-2.5 text-[0.95rem] font-medium transition hover:-translate-y-0.5 hover:border-teal-bright"
             >
+              <svg class="size-4" viewBox="0 0 16 16" aria-hidden="true">
+                <rect x="1.5" y="3.5" width="13" height="9" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.4"></rect>
+                <path d="M4 10V6l2 2 2-2v4M11 6v4M9.5 8.5L11 10l1.5-1.5" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
               View as Markdown
             </a>
           )
         }
-        <a
-          class="font-mono text-clay hover:text-pounamu-deep inline-block text-[0.72rem] tracking-[0.14em] uppercase underline decoration-rule underline-offset-4 transition-colors"
-          href={flagIssueUrl}
-          rel="noopener"
-        >
-          ⚑ Flag an issue
-        </a>
       </div>
+    </div>
+  </section>
+
+  <div
+    class="mx-auto grid max-w-6xl gap-12 px-5 pt-14 sm:px-8 lg:grid-cols-[12rem_minmax(0,1fr)_16rem] lg:gap-10 xl:gap-14"
+  >
+    {
+      sections.length > 1 && (
+        <nav aria-label="On this page" class="hidden lg:block">
+          <div class="sticky top-8">
+            <p class="text-xs font-semibold tracking-[0.08em] text-ink-muted uppercase">On this page</p>
+            <ol class="mt-3.5 text-[0.95rem]" data-toc>
+              {sections.map((h) => (
+                <li>
+                  <a
+                    href={`#${h.slug}`}
+                    class="block border-l-[3px] border-line-soft py-2 pl-3 text-ink-muted transition-all hover:border-teal-bright hover:pl-4 hover:text-ink aria-[current=true]:border-lime aria-[current=true]:font-semibold aria-[current=true]:text-ink"
+                  >
+                    {h.text}
+                  </a>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </nav>
+      )
+    }
+
+    <article class="article-prose min-w-0 lg:col-start-2" data-article>
+      <Content />
     </article>
 
-    <aside class="reveal reveal-2 border-rule mt-14 border-t pt-8 lg:mt-0 lg:border-t-0 lg:pt-0">
-      <div class="lg:sticky lg:top-10">
-        <EditionTimeline entry={entry} />
+    <aside class="lg:col-start-3">
+      <div class="lg:sticky lg:top-8">
+        <EditionHistory entry={entry} />
       </div>
     </aside>
   </div>
+
+  <section class="mx-auto mt-20 grid max-w-6xl gap-5 px-5 sm:px-8 md:grid-cols-2">
+    <div data-reveal class="flex flex-col gap-3.5 rounded-3xl bg-teal p-9 text-white">
+      <h2 class="text-3xl leading-tight font-bold tracking-tight">Spot something wrong?</h2>
+      <p class="font-serif text-lg leading-normal text-teal-pale">
+        An AI agent wrote this edition, and no one reviewed it before it went live.
+        Reporting a problem opens a public issue on GitHub.
+      </p>
+      <a
+        href={reportUrl}
+        rel="noopener"
+        class="mt-1.5 self-start rounded-full bg-lime px-6 py-3.5 font-semibold text-ink transition hover:-translate-y-0.5 hover:bg-lime-soft"
+      >
+        Report a problem
+      </a>
+    </div>
+    <div data-reveal style="--delay: 0.1s" class="rounded-3xl bg-mist p-9">
+      <h2 class="text-3xl leading-tight font-bold tracking-tight">Keep reading</h2>
+      <ul class="mt-3">
+        {
+          keepReading.map((a, i) => (
+            <li class:list={[i < keepReading.length - 1 && 'border-b border-line']}>
+              <a
+                href={a.data.permalink}
+                class="group flex items-center justify-between gap-4 py-3.5 text-lg font-medium hover:text-teal"
+              >
+                {a.data.title}
+                <Arrow class="text-teal transition-transform group-hover:translate-x-1" />
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
 </Base>
+
+<script>
+  // Highlight the "On this page" entry for the section in view.
+  function initToc() {
+    const toc = document.querySelector('[data-toc]');
+    const article = document.querySelector('[data-article]');
+    if (!toc || !article) return;
+    const links = new Map(
+      [...toc.querySelectorAll<HTMLAnchorElement>('a')].map((a) => [a.hash.slice(1), a]),
+    );
+    const headings = [...article.querySelectorAll<HTMLElement>('h2[id]')].filter((h) =>
+      links.has(h.id),
+    );
+    const setCurrent = (id: string) =>
+      links.forEach((a, key) => a.setAttribute('aria-current', String(key === id)));
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries.filter((e) => e.isIntersecting);
+        if (visible.length) setCurrent(visible[0].target.id);
+      },
+      { rootMargin: '0px 0px -70% 0px' },
+    );
+    headings.forEach((h) => observer.observe(h));
+    if (headings[0]) setCurrent(headings[0].id);
+    document.addEventListener('astro:before-swap', () => observer.disconnect(), { once: true });
+  }
+
+  document.addEventListener('astro:page-load', initToc);
+</script>

@@ -47,10 +47,12 @@ Runtime flow:
 - Content collection + frontmatter schema: `src/website/src/content.config.ts`
 - Collection query helpers: `src/website/src/lib/articles.ts`
 - Article route: `src/website/src/pages/[...slug].astro`
-- Industry article list component: `src/website/src/components/ArticleIndex.astro`
-- Snapshot feature component: `src/website/src/components/SnapshotFeature.astro`
-- Edition history component: `src/website/src/components/EditionTimeline.astro`
-- Site styles (Tailwind v4 theme + prose overrides): `src/website/src/styles/global.css`
+- Sitewide names and links (site title, working group, GitHub, feedback URL): `src/website/src/lib/site.ts`
+- Markdown plugin (strips the duplicated title and summary, turns citations into source chips): `src/website/src/lib/article-plugin.mjs`
+- Sector report grid: `src/website/src/components/SectorGrid.astro`
+- Edition history: `src/website/src/components/EditionHistory.astro`
+- How-it-works pipeline animation (GSAP): `src/website/src/components/Pipeline.astro`
+- Site styles (Tailwind v4 theme, AI Forum palette, motion, prose overrides): `src/website/src/styles/global.css`
 - Latest article pages: `src/website/whitepaper/content/*.md`
 - Archived article pages: `src/website/whitepaper/content/archive/<slug>/*.md`
 
@@ -156,9 +158,10 @@ Notes:
 
 ### Working on the article layout
 
-- `src/website/src/components/SnapshotFeature.astro` renders the latest national snapshot on the homepage and article index.
-- `src/website/src/components/ArticleIndex.astro` must list only latest non-snapshot pages.
-- The edition history timeline is generated dynamically from frontmatter. There is no separate data file.
+- The homepage and article index render the latest national snapshot inline from `getLatestSnapshot()`.
+- `src/website/src/components/SectorGrid.astro` must list only latest non-snapshot pages.
+- The edition history list and the past-editions table (`getEditionArchive()`) are generated from frontmatter. There is no separate data file.
+- `article-plugin.mjs` is a Sätteri hast plugin. Astro caches rendered content, so delete `src/website/node_modules/.astro` after changing it.
 - Archived pages must remain inside the content collection glob. Do not exclude `src/website/whitepaper/content/archive`.
 
 ### Content expectations

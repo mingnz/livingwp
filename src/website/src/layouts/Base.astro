@@ -1,16 +1,14 @@
 ---
-import '@fontsource-variable/fraunces';
+import '@fontsource-variable/outfit';
 import '@fontsource-variable/newsreader';
 import '@fontsource-variable/newsreader/wght-italic.css';
-import '@fontsource/ibm-plex-mono/400.css';
-import '@fontsource/ibm-plex-mono/500.css';
 import '../styles/global.css';
 import { ClientRouter } from 'astro:transitions';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import ogImage from '../assets/ainz.jpg';
-
 import { organizationNode, webSiteNode } from '../lib/seo';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../lib/site';
 
 interface Props {
   title?: string;
@@ -21,15 +19,9 @@ interface Props {
   jsonLd?: Record<string, unknown>[];
 }
 
-const siteTitle = 'AI in NZ Living Whitepaper';
-const {
-  title,
-  description = 'A living record of generative AI adoption across Aotearoa New Zealand, researched and published monthly by an AI agent.',
-  noindex = false,
-  jsonLd = [],
-} = Astro.props;
+const { title, description = SITE_DESCRIPTION, noindex = false, jsonLd = [] } = Astro.props;
 
-const pageTitle = title ? `${title} · Living Whitepaper` : siteTitle;
+const pageTitle = title ? `${title} · Living Whitepaper` : SITE_TITLE;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const socialImage = new URL(ogImage.src, Astro.site);
 
@@ -48,6 +40,7 @@ const jsonLdHtml = JSON.stringify(structuredData).replace(/</g, '\\u003c');
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#165d61" />
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
     {noindex && <meta name="robots" content="noindex, follow" />}
@@ -57,14 +50,14 @@ const jsonLdHtml = JSON.stringify(structuredData).replace(/</g, '\\u003c');
     <link
       rel="alternate"
       type="application/rss+xml"
-      title={siteTitle}
+      title={SITE_TITLE}
       href={new URL('/feed.xml', Astro.site)}
     />
     <meta property="og:type" content="website" />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
-    <meta property="og:site_name" content={siteTitle} />
+    <meta property="og:site_name" content={SITE_TITLE} />
     <meta property="og:image" content={socialImage} />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content={pageTitle} />
@@ -73,11 +66,36 @@ const jsonLdHtml = JSON.stringify(structuredData).replace(/</g, '\\u003c');
     <script type="application/ld+json" is:inline set:html={jsonLdHtml} />
     <ClientRouter />
   </head>
-  <body class="bg-paper text-ink font-serif antialiased">
+  <body class="flex min-h-screen flex-col">
     <Header />
-    <main class="mx-auto w-full max-w-6xl px-5 sm:px-8">
+    <main class="flex-1 pb-24">
       <slot />
     </main>
     <Footer />
   </body>
 </html>
+
+<script>
+  // Reveal [data-reveal] elements as they scroll into view. Runs on the first
+  // load and after every client-side navigation.
+  function initReveal() {
+    const pending = document.querySelectorAll('[data-reveal]:not(.is-visible)');
+    if (!('IntersectionObserver' in window)) {
+      pending.forEach((el) => el.classList.add('is-visible'));
+      return;
+    }
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (!entry.isIntersecting) continue;
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      },
+      { rootMargin: '0px 0px -8% 0px' },
+    );
+    pending.forEach((el) => observer.observe(el));
+  }
+
+  document.addEventListener('astro:page-load', initReveal);
+</script>
