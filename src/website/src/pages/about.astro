@@ -4,6 +4,31 @@ import Arrow from '../components/Arrow.astro';
 import { GITHUB_URL, ORG_NAME, ORG_NAME_MI, ORG_URL, WORKING_GROUP } from '../lib/site';
 
 const link = 'underline decoration-lime decoration-2 underline-offset-4 hover:text-teal-deep';
+
+const site = new URL('/', Astro.site).href.replace(/\/$/, '');
+const agentPrompt = `I want to suggest a change to the Living Whitepaper, an open-source project that publishes monthly reports on AI adoption in Aotearoa New Zealand.
+
+Website: ${site} (an index for AI agents is at ${site}/llms.txt)
+Code: ${GITHUB_URL}
+
+My suggestion: [describe it in your own words]
+
+Read the repository's README and AGENTS.md, work out where this change belongs, and explain what you would change and why. Then help me submit it: as a pull request if you can, or as a GitHub issue I can copy and paste.`;
+
+const agentSteps = [
+  {
+    title: 'Open an AI agent',
+    body: 'Any coding agent works: Claude Code, Codex, GitHub Copilot, Cursor and others. A chat assistant that can browse the web works too.',
+  },
+  {
+    title: 'Paste the prompt',
+    body: 'Copy the prompt below and replace the bracketed line with your idea, in plain language.',
+  },
+  {
+    title: 'Review and submit',
+    body: 'The agent reads the project, proposes a change and helps you open a pull request or an issue. The maintainers review it from there.',
+  },
+];
 ---
 
 <Base
@@ -29,7 +54,8 @@ const link = 'underline decoration-lime decoration-2 underline-offset-4 hover:te
         </p>
         <p>
           The project is open source. The prompts, workflows and code are all on
-          <a href={GITHUB_URL} class={link}>GitHub</a>, and contributions are welcome.
+          <a href={GITHUB_URL} class={link}>GitHub</a>, and contributions are welcome,
+          including <a href="#contribute" class={link}>ones made with an AI agent</a>.
         </p>
       </div>
     </div>
@@ -53,7 +79,7 @@ const link = 'underline decoration-lime decoration-2 underline-offset-4 hover:te
         class="card-lift flex flex-col gap-2 rounded-[1.25rem] border-[1.5px] border-line p-7 hover:border-teal-bright"
       >
         <span class="text-xl font-semibold">Open source</span>
-        <span class="leading-normal text-ink-soft">Read the prompts and agent code, or open a pull request.</span>
+        <span class="leading-normal text-ink-soft">Read the prompts and agent code, or ask an AI agent to suggest a change for you.</span>
         <span class="mt-1 flex items-center gap-1.5 font-semibold text-teal">View on GitHub <Arrow /></span>
       </a>
       <a
@@ -68,4 +94,69 @@ const link = 'underline decoration-lime decoration-2 underline-offset-4 hover:te
       </a>
     </aside>
   </section>
+
+  <section id="contribute" class="mx-auto max-w-6xl scroll-mt-8 px-5 pt-24 sm:px-8">
+    <h2 class="border-b-2 border-ink pb-5 text-4xl font-bold tracking-[-0.03em]">
+      Suggest a change with an AI agent
+    </h2>
+    <p class="mt-6 max-w-3xl font-serif text-xl leading-normal text-ink-soft">
+      You don’t need to know how the code works to help. Point your favourite AI agent at
+      the project, describe what you would change, and let it do the technical work. It
+      can fix a report, add a sector, improve a prompt or tidy the website.
+    </p>
+
+    <ol class="mt-10 grid gap-8 md:grid-cols-3">
+      {
+        agentSteps.map(({ title, body }, i) => (
+          <li data-reveal style={`--delay: ${i * 0.1}s`} class="flex flex-col gap-2.5">
+            <span class="flex size-10 items-center justify-center rounded-full bg-lime font-bold">
+              {i + 1}
+            </span>
+            <h3 class="mt-2 text-xl font-semibold">{title}</h3>
+            <p class="font-serif text-lg leading-normal text-ink-soft">{body}</p>
+          </li>
+        ))
+      }
+    </ol>
+
+    <figure data-reveal class="mt-10 overflow-hidden rounded-3xl bg-ink text-on-ink">
+      <figcaption class="flex flex-wrap items-center justify-between gap-3 border-b border-white/10 px-6 py-4">
+        <span class="text-sm font-semibold tracking-[0.08em] text-on-ink-faint uppercase">
+          Prompt to copy
+        </span>
+        <button
+          type="button"
+          class="inline-flex h-11 items-center gap-2 rounded-full bg-lime px-5 text-sm font-semibold text-ink transition hover:bg-lime-soft"
+          data-copy-prompt
+        >
+          <svg class="size-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <rect x="5" y="5" width="9" height="9" rx="1.5"></rect>
+            <path d="M11 5V3.5A1.5 1.5 0 0 0 9.5 2h-6A1.5 1.5 0 0 0 2 3.5v6A1.5 1.5 0 0 0 3.5 11H5"></path>
+          </svg>
+          <span data-copy-label>Copy prompt</span>
+        </button>
+      </figcaption>
+      <pre
+        class="overflow-x-auto px-6 py-5 font-sans text-[0.95rem] leading-relaxed whitespace-pre-wrap"
+        data-prompt>{agentPrompt}</pre>
+    </figure>
+  </section>
 </Base>
+
+<script>
+  document.addEventListener('astro:page-load', () => {
+    const button = document.querySelector<HTMLButtonElement>('[data-copy-prompt]');
+    const prompt = document.querySelector('[data-prompt]');
+    const label = button?.querySelector('[data-copy-label]');
+    if (!button || !prompt || !label) return;
+    button.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(prompt.textContent ?? '');
+        label.textContent = 'Copied';
+      } catch {
+        label.textContent = 'Select the text to copy';
+      }
+      setTimeout(() => (label.textContent = 'Copy prompt'), 2000);
+    });
+  });
+</script>

@@ -65,7 +65,7 @@ trail instead: the merged pull request records the content changes, the usage
 comment records model and token spend, and the Actions run logs record how the
 agent produced its output.
 
-To report a problem in a published article, use the "Flag an issue" link on the
+To report a problem in a published article, use the "Report a problem" link on the
 article page, or open an
 [article feedback issue](https://github.com/mingnz/livingwp/issues/new?template=article-feedback.yml)
 directly. Problems are corrected in a follow-up run or a manual edit.
@@ -75,14 +75,21 @@ for review, untick the `auto_merge` input when dispatching the workflow.
 
 ## Contributing
 
-There are two ways to contribute:
+There are three ways to contribute:
 
+- **Ask an AI agent.** You don't need to read the code. Open a coding agent
+  such as Claude Code, Codex, GitHub Copilot or Cursor, or a chat assistant
+  that can browse the web. Point it at this repository or at
+  [livingwhitepaper.com](https://www.livingwhitepaper.com), describe the change
+  in plain language, and ask it to propose an edit and open a pull request or
+  draft an issue. The [About page](https://www.livingwhitepaper.com/about/#contribute)
+  has a prompt to copy.
 - **Open a pull request.** Fork the repository and open a pull request with
   your changes. This applies to the agent code, the website, and the
   documentation.
 - **Open an issue.** Use issues to propose features, report bugs, or discuss
-  changes. To report a problem in a published article, use the "Flag an issue"
-  link on the article page; it pre-fills the article feedback template.
+  changes. To report a problem in a published article, use the "Report a
+  problem" link on the article page; it pre-fills the article feedback template.
 
 ### Editing the research prompts
 
