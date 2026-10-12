@@ -1,0 +1,51 @@
+---
+import { formatDate, formatMonthYear, getSeriesHistory, type Article } from '../lib/articles';
+
+interface Props {
+  entry: Article;
+}
+
+const { entry } = Astro.props;
+const history = await getSeriesHistory(entry.data.article_series);
+const oldest = history[history.length - 1];
+---
+
+<nav aria-labelledby="edition-history" class="rounded-[1.25rem] border-[1.5px] border-line p-6">
+  <h2 id="edition-history" class="text-lg font-bold">Edition history</h2>
+  <p class="mt-1 text-sm text-ink-muted">
+    {history.length} editions since {formatMonthYear(oldest.data.article_updated_at)}
+  </p>
+  <ol class="mt-4 max-h-[60vh] overflow-y-auto">
+    {
+      history.map((edition, i) => {
+        const current = edition.id === entry.id;
+        return (
+          <li class="relative flex items-center gap-3.5">
+            <span class="relative flex w-3 flex-none flex-col items-center self-stretch" aria-hidden="true">
+              <span class:list={['w-0.5 flex-1', i === 0 ? 'bg-transparent' : 'bg-line']} />
+              <span
+                class:list={[
+                  'size-3 rounded-full',
+                  current ? 'live-dot' : 'bg-teal',
+                ]}
+              />
+              <span class:list={['w-0.5 flex-1', i === history.length - 1 ? 'bg-transparent' : 'bg-line']} />
+            </span>
+            <a
+              href={edition.data.permalink}
+              aria-current={current ? 'page' : undefined}
+              class:list={['flex-1 py-2 text-[0.95rem] hover:text-teal', current && 'font-bold']}
+            >
+              <time datetime={edition.data.article_updated_at.toISOString()}>
+                {formatDate(edition.data.article_updated_at)}
+              </time>
+            </a>
+            <span class="text-xs font-semibold text-lime-ink">
+              {edition.data.article_latest ? 'Latest' : `No. ${history.length - i}`}
+            </span>
+          </li>
+        );
+      })
+    }
+  </ol>
+</nav>

@@ -49,7 +49,7 @@ export const GET: APIRoute = async ({ site }) => {
     '## About',
     '',
     `- [How it works](${abs('/how-it-works/')}): how the AI agent researches and publishes each report`,
-    `- [About](${abs('/about/')}): the AI Forum NZ Generative AI Working Group`,
+    `- [About](${abs('/about/')}): the AI Forum NZ Agentic AI Working Group`,
     '',
   );
 

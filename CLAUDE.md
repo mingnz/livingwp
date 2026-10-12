@@ -28,7 +28,7 @@ You can also run a workspace directly, e.g. `npm start -w livingwp-agent -- heal
 ### Workspaces
 
 - **`src/agent`** (`livingwp-agent`) — the TypeScript research/update agent.
-- **`src/website`** (`livingwp-website`) — the Astro 5 + Tailwind v4 site.
+- **`src/website`** (`livingwp-website`) — the Astro 7 + Tailwind v4 site.
 - **`packages/article-contract`** (`@livingwp/article-contract`) — the shared
   frontmatter contract (a Zod-shape factory) consumed by both of the above, so
   the field definitions cannot drift between writer and reader.
@@ -86,7 +86,9 @@ The agent writes exactly these fields. Retired Jekyll-era fields (`layout`, `dat
 - `src/website/src/content.config.ts` — Content collection; builds its schema from the shared contract
 - `src/website/src/pages/[...slug].astro` — Article page (routes from permalinks, edition timeline)
 - `src/website/src/lib/articles.ts` — Collection query helpers (latest/snapshot/history)
-- `src/website/src/styles/global.css` — Tailwind v4 theme tokens + article prose styles
+- `src/website/src/lib/site.ts` — Sitewide names and links (working group, GitHub, feedback URL)
+- `src/website/src/lib/article-plugin.mjs` — Markdown plugin: strips the duplicated title/summary, turns citations into source chips
+- `src/website/src/styles/global.css` — Tailwind v4 theme tokens (AI Forum palette), motion, article prose styles
 
 ### GitHub Actions workflows
 

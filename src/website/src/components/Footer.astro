@@ -1,45 +1,62 @@
 ---
-const year = new Date().getFullYear();
+import {
+  GITHUB_URL,
+  ORG_NAME,
+  ORG_NAME_MI,
+  ORG_URL,
+  WORKING_GROUP,
+  feedbackUrl,
+} from '../lib/site';
+
+const columns = [
+  {
+    heading: 'Project',
+    links: [
+      { href: '/whitepaper/', label: 'Articles' },
+      { href: '/how-it-works/', label: 'How it works' },
+      { href: '/about/', label: 'About' },
+    ],
+  },
+  {
+    heading: 'Elsewhere',
+    links: [
+      { href: GITHUB_URL, label: 'GitHub' },
+      { href: '/feed.xml', label: 'RSS feed' },
+      { href: feedbackUrl(), label: 'Report a problem' },
+    ],
+  },
+];
 ---
 
-<footer class="border-ink/90 mt-24 border-t-2">
-  <div
-    class="mx-auto grid max-w-6xl gap-10 px-5 py-12 sm:grid-cols-[2fr_1fr_1fr] sm:px-8"
-  >
+<footer class="bg-ink text-on-ink">
+  <div class="mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:grid-cols-[2fr_1fr_1fr] sm:px-8">
     <div>
-      <p class="font-display text-lg font-semibold tracking-tight">Living Whitepaper</p>
-      <p class="text-ink-muted mt-3 max-w-md text-[0.95rem] leading-relaxed">
-        A living record of AI adoption across Aotearoa New Zealand. An AI agent
-        researches, writes, and publishes each monthly update, and every run is
-        auditable on GitHub.
+      <p class="text-xl font-bold text-white">{WORKING_GROUP}</p>
+      <p class="mt-1.5">
+        <a href={ORG_URL} class="hover:text-white">{ORG_NAME}</a> · {ORG_NAME_MI}
+      </p>
+      <p class="mt-5 max-w-md text-[0.95rem] leading-relaxed text-on-ink-muted">
+        A monthly record of AI adoption across Aotearoa New Zealand, researched and
+        written by an AI agent. Every run is public on GitHub.
       </p>
     </div>
-    <div>
-      <p class="font-mono text-ink-muted text-[0.65rem] tracking-[0.14em] uppercase">
-        Project
-      </p>
-      <ul class="mt-3 space-y-2 text-[0.95rem]">
-        <li><a class="hover:text-pounamu-deep underline decoration-rule underline-offset-4 transition-colors" href="/whitepaper/">Articles</a></li>
-        <li><a class="hover:text-pounamu-deep underline decoration-rule underline-offset-4 transition-colors" href="/how-it-works/">How it works</a></li>
-        <li><a class="hover:text-pounamu-deep underline decoration-rule underline-offset-4 transition-colors" href="/about/">About</a></li>
-      </ul>
-    </div>
-    <div>
-      <p class="font-mono text-ink-muted text-[0.65rem] tracking-[0.14em] uppercase">
-        Elsewhere
-      </p>
-      <ul class="mt-3 space-y-2 text-[0.95rem]">
-        <li><a class="hover:text-pounamu-deep underline decoration-rule underline-offset-4 transition-colors" href="https://github.com/mingnz/livingwp">GitHub</a></li>
-        <li><a class="hover:text-pounamu-deep underline decoration-rule underline-offset-4 transition-colors" href="https://aiforum.org.nz">AI Forum NZ</a></li>
-        <li><a class="hover:text-pounamu-deep underline decoration-rule underline-offset-4 transition-colors" href="/feed.xml">RSS feed</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="border-rule border-t">
-    <p
-      class="font-mono text-ink-muted mx-auto max-w-6xl px-5 py-4 text-[0.65rem] tracking-[0.14em] uppercase sm:px-8"
-    >
-      © {year} AI Forum New Zealand · Open source · Researched by AI, auditable by anyone
-    </p>
+    {
+      columns.map(({ heading, links }) => (
+        <div>
+          <p class="text-xs font-semibold tracking-[0.08em] text-on-ink-faint uppercase">
+            {heading}
+          </p>
+          <ul class="mt-3 space-y-1">
+            {links.map(({ href, label }) => (
+              <li>
+                <a href={href} class="inline-block py-1 text-lime-soft hover:text-white">
+                  {label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))
+    }
   </div>
 </footer>

@@ -2,6 +2,8 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
+import { satteri } from '@astrojs/markdown-satteri';
+import { articlePlugin } from './src/lib/article-plugin.mjs';
 
 export default defineConfig({
   site: 'https://www.livingwhitepaper.com',
@@ -14,6 +16,10 @@ export default defineConfig({
   // an inline element (e.g. "under the\n<a>…" renders as "under theAI Forum"),
   // eating intended spaces around links. Gzip makes the size cost negligible.
   compressHTML: false,
+  markdown: {
+    // Strip the duplicated title/summary and turn citations into chips.
+    processor: satteri({ hastPlugins: [articlePlugin] }),
+  },
   integrations: [
     // Keep archived editions (…/whitepaper/<series>/<timestamp>/) out of the
     // sitemap — they're noindexed near-duplicates of the latest version.

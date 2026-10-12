@@ -10,15 +10,16 @@
     "typecheck": "astro check"
   },
   "dependencies": {
+    "@astrojs/markdown-satteri": "^0.3.5",
     "@astrojs/rss": "^4.0.12",
     "@astrojs/sitemap": "^3.4.1",
-    "@fontsource-variable/fraunces": "^5.2.6",
     "@fontsource-variable/newsreader": "^5.2.6",
-    "@fontsource/ibm-plex-mono": "^5.2.6",
+    "@fontsource-variable/outfit": "^5.3.0",
     "@livingwp/article-contract": "*",
     "@tailwindcss/typography": "^0.5.16",
     "@tailwindcss/vite": "^4.1.10",
     "astro": "^7.2.2",
+    "gsap": "^3.15.0",
     "sharp": "^0.35.3",
     "tailwindcss": "^4.1.10",
     "zod": "^4.4.3"

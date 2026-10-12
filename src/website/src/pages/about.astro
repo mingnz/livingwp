@@ -1,34 +1,71 @@
 ---
 import Base from '../layouts/Base.astro';
+import Arrow from '../components/Arrow.astro';
+import { GITHUB_URL, ORG_NAME, ORG_NAME_MI, ORG_URL, WORKING_GROUP } from '../lib/site';
+
+const link = 'underline decoration-lime decoration-2 underline-offset-4 hover:text-teal-deep';
 ---
 
 <Base
   title="About"
-  description="About the AI Forum NZ Generative AI Working Group and the Living Whitepaper project."
+  description={`About the ${ORG_NAME} ${WORKING_GROUP} and the Living Whitepaper project.`}
 >
-  <section class="max-w-2xl py-14 sm:py-16">
-    <h1 class="font-display reveal text-4xl font-semibold tracking-tight sm:text-5xl">
-      About
-    </h1>
-    <div class="article-prose reveal reveal-1 mt-8">
-      <p>
-        The Generative AI Working Group was formed under the
-        <a href="https://aiforum.org.nz">AI Forum New Zealand</a> to explore and
-        share developments in this fast-moving field.
-      </p>
-      <p>
-        This site is part of that initiative: a living record of how industries
-        across Aotearoa are adopting generative AI. An AI agent researches,
-        writes, and publishes every sector report at the start of each month.
-        There is no human in the loop during generation. Instead, every run
-        leaves a public audit trail on GitHub, and each article carries a
-        flag-an-issue link so anyone can report a problem.
-      </p>
-      <p>
-        The project is fully open source. You can inspect the prompts, workflows,
-        and code that power the system on
-        <a href="https://github.com/mingnz/livingwp">GitHub</a>.
-      </p>
+  <section class="mx-auto flex max-w-6xl flex-wrap items-start gap-14 px-5 pt-14 sm:px-8 sm:pt-16">
+    <div class="max-w-3xl min-w-0 flex-[999_1_32rem]">
+      <h1 class="rise text-[clamp(2.75rem,6vw,4.75rem)] leading-none font-bold tracking-[-0.04em]">
+        About
+      </h1>
+      <div class="rise mt-8 space-y-5 font-serif text-xl leading-relaxed text-ink-soft" style="--delay: 0.08s">
+        <p>
+          The {WORKING_GROUP} is part of the <a href={ORG_URL} class={link}>{ORG_NAME}</a>.
+          It explores developments in AI and shares what it learns with the wider community.
+        </p>
+        <p>
+          The Living Whitepaper is one of its projects: a monthly record of how sectors
+          across Aotearoa New Zealand are adopting AI. An AI agent researches, writes and
+          publishes every report. No one reviews an edition before it goes live. Instead,
+          each run leaves a public audit trail on GitHub, and every article has a link to
+          report a problem.
+        </p>
+        <p>
+          The project is open source. The prompts, workflows and code are all on
+          <a href={GITHUB_URL} class={link}>GitHub</a>, and contributions are welcome.
+        </p>
+      </div>
     </div>
+
+    <aside class="flex flex-[1_1_18rem] flex-col gap-4">
+      <a
+        href={ORG_URL}
+        data-reveal
+        style="--delay: 0.2s"
+        class="card-lift flex flex-col gap-2 rounded-[1.25rem] bg-teal p-7 text-white"
+      >
+        <span class="text-[13px] font-semibold tracking-[0.08em] text-teal-mint uppercase">Published by</span>
+        <span class="text-2xl font-bold tracking-tight">{WORKING_GROUP}</span>
+        <span class="text-teal-pale">{ORG_NAME} · {ORG_NAME_MI}</span>
+        <span class="mt-2 flex items-center gap-1.5 font-semibold text-lime-soft">aiforum.org.nz <Arrow /></span>
+      </a>
+      <a
+        href={GITHUB_URL}
+        data-reveal
+        style="--delay: 0.3s"
+        class="card-lift flex flex-col gap-2 rounded-[1.25rem] border-[1.5px] border-line p-7 hover:border-teal-bright"
+      >
+        <span class="text-xl font-semibold">Open source</span>
+        <span class="leading-normal text-ink-soft">Read the prompts and agent code, or open a pull request.</span>
+        <span class="mt-1 flex items-center gap-1.5 font-semibold text-teal">View on GitHub <Arrow /></span>
+      </a>
+      <a
+        href="/feed.xml"
+        data-reveal
+        style="--delay: 0.4s"
+        class="card-lift flex flex-col gap-2 rounded-[1.25rem] bg-mist p-7"
+      >
+        <span class="text-xl font-semibold">Stay up to date</span>
+        <span class="leading-normal text-ink-soft">Get each new edition in your feed reader on the 1st of the month.</span>
+        <span class="mt-1 flex items-center gap-1.5 font-semibold text-teal">Subscribe via RSS <Arrow /></span>
+      </a>
+    </aside>
   </section>
 </Base>

@@ -2,20 +2,26 @@
 import Base from '../layouts/Base.astro';
 ---
 
-<Base title="Page not found">
-  <section class="py-24 text-center sm:py-32">
-    <p class="font-display text-pounamu-deep/20 text-[7rem] leading-none font-semibold sm:text-[10rem]">
+<Base title="Page not found" noindex>
+  <section class="mx-auto max-w-6xl px-5 py-24 text-center sm:px-8 sm:py-32">
+    <p
+      class="rise bg-linear-to-r from-lime via-teal-bright to-teal bg-clip-text text-[7rem] leading-none font-bold tracking-tighter text-transparent sm:text-[10rem]"
+    >
       404
     </p>
-    <h1 class="font-display mt-4 text-2xl font-semibold tracking-tight">
-      This page doesn't exist.
+    <h1 class="rise mt-4 text-3xl font-bold tracking-tight" style="--delay: 0.08s">
+      This page doesn’t exist
     </h1>
-    <p class="text-ink-muted mt-3">It may have been moved or removed.</p>
-    <a
-      href="/"
-      class="font-mono text-pounamu-deep hover:text-pounamu mt-8 inline-block text-[0.72rem] tracking-[0.14em] uppercase underline decoration-pounamu/40 underline-offset-4 transition-colors"
-    >
-      Go to the homepage
-    </a>
+    <p class="rise mt-3 font-serif text-xl text-ink-soft" style="--delay: 0.16s">
+      It may have moved. Every edition keeps its address, so try the articles list.
+    </p>
+    <div class="rise mt-9 flex flex-wrap justify-center gap-3" style="--delay: 0.24s">
+      <a href="/whitepaper/" class="rounded-full bg-teal px-6 py-3.5 font-semibold text-white hover:bg-teal-deep">
+        Browse articles
+      </a>
+      <a href="/" class="rounded-full border-[1.5px] border-teal px-6 py-3.5 font-semibold text-teal hover:bg-mist">
+        Go to the homepage
+      </a>
+    </div>
   </section>
 </Base>

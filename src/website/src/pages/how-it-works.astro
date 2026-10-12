@@ -1,42 +1,112 @@
 ---
 import Base from '../layouts/Base.astro';
-import SystemDiagram from '../components/SystemDiagram.astro';
+import PageIntro from '../components/PageIntro.astro';
+import Pipeline from '../components/Pipeline.astro';
+import { GITHUB_URL, feedbackUrl } from '../lib/site';
+
+const record = [
+  {
+    title: 'The pull request',
+    body: 'One per run, merged automatically and kept as the record.',
+    icon: '<circle cx="8" cy="7" r="3"/><circle cx="8" cy="21" r="3"/><circle cx="20" cy="21" r="3"/><path d="M8 10v8M20 18v-6a3 3 0 0 0-3-3h-4"/>',
+  },
+  {
+    title: 'Content changes',
+    body: 'The exact diff between last month’s edition and this one.',
+    icon: '<rect x="5" y="4" width="18" height="20" rx="2"/><path d="M9 11h4M11 9v4M9 18h6"/>',
+  },
+  {
+    title: 'Usage report',
+    body: 'Token usage and cost for the run, posted on the pull request.',
+    icon: '<path d="M5 23V13M11 23V7M17 23V15M23 23V10"/>',
+  },
+  {
+    title: 'Action logs',
+    body: 'The full workflow logs, showing how the agent reached its output.',
+    icon: '<rect x="4" y="5" width="20" height="18" rx="2"/><path d="M8 11l3 3-3 3M14 17h6"/>',
+  },
+];
 ---
 
 <Base
-  title="How it Works"
-  description="How an AI agent researches and publishes sector reports on generative AI adoption in Aotearoa New Zealand."
+  title="How it works"
+  description="How an AI agent researches and publishes monthly reports on AI adoption in Aotearoa New Zealand, and how every run is recorded on GitHub."
 >
-  <section class="py-14 sm:py-16">
-    <div class="max-w-2xl">
-      <h1 class="font-display reveal text-4xl font-semibold tracking-tight sm:text-5xl">
-        How it works
-      </h1>
-      <div class="article-prose reveal reveal-1 mt-8">
+  <PageIntro title="How it works">
+    An AI agent updates this site every month. No one approves an edition before it
+    goes live. This is what happens in one run.
+  </PageIntro>
+
+  <section class="rise mx-auto max-w-6xl px-5 sm:px-8" style="--delay: 0.18s">
+    <Pipeline />
+  </section>
+
+  <section class="mx-auto max-w-6xl px-5 pt-24 sm:px-8 sm:pt-28">
+    <h2 class="border-b-2 border-ink pb-5 text-4xl font-bold tracking-[-0.03em]">
+      Unsupervised, but not out of sight
+    </h2>
+    <p class="mt-6 max-w-3xl font-serif text-xl leading-normal text-ink-soft">
+      Every run leaves a public record on GitHub. Anyone can check what changed and how
+      the agent got there.
+    </p>
+    <ul class="mt-8 grid grid-cols-[repeat(auto-fill,minmax(15rem,1fr))] gap-5">
+      {
+        record.map(({ title, body, icon }, i) => (
+          <li
+            data-reveal
+            style={`--delay: ${i * 0.08}s`}
+            class="flex flex-col gap-2.5 rounded-[1.25rem] border-[1.5px] border-line p-7"
+          >
+            <svg
+              class="size-7 text-teal"
+              viewBox="0 0 28 28"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              set:html={icon}
+            />
+            <h3 class="text-xl font-semibold">{title}</h3>
+            <p class="leading-normal text-ink-soft">{body}</p>
+          </li>
+        ))
+      }
+    </ul>
+
+    <div
+      data-reveal
+      class="mt-14 flex flex-wrap gap-x-10 gap-y-4 rounded-3xl bg-amber-pale p-8 sm:p-10"
+    >
+      <h2 class="flex-[1_1_16rem] text-3xl leading-tight font-bold tracking-tight">
+        Read it with care
+      </h2>
+      <div class="flex-[2_1_24rem] space-y-3.5 font-serif text-lg leading-normal text-amber-ink">
         <p>
-          An AI agent keeps this site up to date, fully autonomously. At the start
-          of each month it searches the web for recent news, research, and case
-          studies for every sector, writes a fresh version of each report with its
-          sources cited inline, and publishes the result. No human approves the
-          update before it goes live.
+          The agent can misread a source, miss a development or overstate a trend. Much of
+          the evidence it finds is self-reported by the organisations involved.
         </p>
         <p>
-          The agent works unsupervised, but not out of sight. Every run leaves a
-          complete audit trail on GitHub: the pull request it merged, the exact
-          content changes, a token-usage report, and the action logs showing how
-          the agent arrived at its output. If you spot something wrong, use the
-          "Flag an issue" link on any article to open a GitHub issue.
-        </p>
-        <p>
-          Previous versions of each report are archived automatically, so you can
-          trace how each report has changed. The prompts, agent code, and
-          workflows are all open source: explore the
-          <a href="https://github.com/mingnz/livingwp">GitHub repository</a> to
-          see how it works or to contribute.
+          Check the cited source before you rely on a claim. If something looks wrong,
+          report it from the article.
         </p>
       </div>
     </div>
 
-    <SystemDiagram />
+    <div class="mt-10 flex flex-wrap gap-3">
+      <a
+        href={GITHUB_URL}
+        class="rounded-full bg-teal px-6 py-3.5 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-teal-deep"
+      >
+        View the repository on GitHub
+      </a>
+      <a
+        href={feedbackUrl()}
+        class="rounded-full border-[1.5px] border-teal px-6 py-3.5 font-semibold text-teal transition hover:bg-mist"
+      >
+        Report a problem
+      </a>
+    </div>
   </section>
 </Base>
