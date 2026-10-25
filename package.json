@@ -17,5 +17,8 @@
     "build:site": "npm run build -w livingwp-website",
     "dev:site": "npm run dev -w livingwp-website",
     "typecheck": "npm run typecheck -w @livingwp/article-contract -w livingwp-agent -w livingwp-website"
+  },
+  "overrides": {
+    "postcss-selector-parser": "^7.1.6"
   }
 }

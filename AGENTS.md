@@ -110,7 +110,8 @@ A single workspace can also be driven directly, e.g. `npm start -w livingwp-agen
 
 Notes:
 
-- All three GitHub Actions workflows `npm ci` at the repo root with Node `22`. Keep the single root `package-lock.json` committed and in sync. Per-package lockfiles must not exist.
+- All three GitHub Actions workflows `npm ci` at the repo root with Node `24`. Keep the single root `package-lock.json` committed and in sync. Per-package lockfiles must not exist.
+- The website workspace pins TypeScript 6 because `astro check` does not support TypeScript 7. The agent and article-contract workspaces retain their own TypeScript 7 tooling; keep these workspace-specific versions rather than forcing one compiler across the monorepo.
 - The agent reads and writes content under `src/website/whitepaper/content`, resolved relative to the agent module location, so it works regardless of the current working directory.
 
 ## GitHub Actions

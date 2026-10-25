@@ -61,19 +61,19 @@ jobs:
     steps:      
       - name: Checkout repository
         if: ${{ !inputs.branch_name }} 
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}          
 
       - name: Checkout branch
         if: ${{ inputs.branch_name }} 
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           ref: ${{ inputs.branch_name }} 
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: 24
           cache: npm
@@ -99,7 +99,8 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           GOOGLE_GENERATIVE_AI_API_KEY: ${{ secrets.GOOGLE_GENERATIVE_AI_API_KEY }}
           LIVINGWP_USAGE_COMMENT_PATH: ${{ runner.temp }}/livingwp-usage-comment.md
-        run: npm run agent -- "${{ inputs.article_filter }}"
+          ARTICLE_FILTER: ${{ inputs.article_filter }}
+        run: npm run agent -- "$ARTICLE_FILTER"
 
       - name: Check for changes
         id: changes
@@ -115,7 +116,7 @@ jobs:
       - name: Create Pull Request
         if:  ${{ !inputs.branch_name && steps.changes.outputs.changes == 'true' }} 
         id: create_pr
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@22a9089034f40e5a961c8808d113e2c98fb63676 # v7
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: "chore: generate article updates (${{ github.run_id }})"
@@ -138,7 +139,7 @@ jobs:
 
       - name: Commit changes to PR
         if:  ${{ inputs.branch_name && steps.changes.outputs.changes == 'true' }} 
-        uses: devops-infra/action-commit-push@v1.5.0
+        uses: devops-infra/action-commit-push@f066ea8e19660de57d3d3a4a0b9d294ea2612e20 # v1.5.0
         with:
           github_token: "${{ secrets.GITHUB_TOKEN }}"
           commit_prefix: "chore: "
@@ -174,7 +175,7 @@ jobs:
       - name: Find existing generation usage comment
         id: usage_comment
         if: ${{ steps.pr_number.outputs.number != '' }}
-        uses: peter-evans/find-comment@v4
+        uses: peter-evans/find-comment@b30e6a3c0ed37e7c023ccd3f1db5c6c0b0c23aad # v4
         with:
           issue-number: ${{ steps.pr_number.outputs.number }}
           comment-author: "github-actions[bot]"
@@ -182,7 +183,7 @@ jobs:
 
       - name: Comment generation usage on PR
         if: ${{ steps.pr_number.outputs.number != '' }}
-        uses: peter-evans/create-or-update-comment@v5
+        uses: peter-evans/create-or-update-comment@e8674b075228eee787fea43ef493e45ece1004c9 # v5
         with:
           comment-id: ${{ steps.usage_comment.outputs.comment-id }}
           issue-number: ${{ steps.pr_number.outputs.number }}
