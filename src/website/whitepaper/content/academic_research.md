@@ -5,100 +5,104 @@ article_kind: industry
 article_latest: true
 article_series: academic_research
 article_summary: >-
-  New Zealand’s academic AI activity is expanding through research projects,
-  international partnerships and tighter doctoral governance, but adoption
-  remains selective: national usage data and the promised NZIAT AI platform are
-  still incomplete.
-article_updated_at: '2026-10-01T20:28:47+13:00'
+  AI in Aotearoa’s academic research sector is moving from isolated projects
+  towards shared procurement, formal governance and deeper capability-building.
+  Yet national usage, impact data and the promised AI research platform remain
+  unresolved.
+article_updated_at: '2026-11-01T20:55:13+13:00'
 article_version: false
 description: >-
-  New Zealand’s academic AI activity is expanding through research projects,
-  international partnerships and tighter doctoral governance, but adoption
-  remains…
+  AI in Aotearoa’s academic research sector is moving from isolated projects
+  towards shared procurement, formal governance and deeper capability-building.
+  Yet…
 permalink: /whitepaper/academic_research/
 title: AI in Academic Research
 ---
 
 # AI in Academic Research in New Zealand: A Living Whitepaper
 
-New Zealand’s academic AI activity is expanding through research projects, international partnerships and tighter doctoral governance, but adoption remains selective: national usage data and the promised NZIAT AI platform are still incomplete.
+AI in Aotearoa’s academic research sector is moving from isolated projects towards shared procurement, formal governance and deeper capability-building. Yet national usage, impact data and the promised AI research platform remain unresolved.
 
 ## Executive Summary
 
-- **The evidence base has improved, but adoption is still not nationally measurable.** The [New Zealand Research Information System (NZRIS)](https://www.mbie.govt.nz/about/news/new-platform-provides-a-system-wide-view-of-new-zealand-research) went live on 23 September 2026, bringing together funding and research-activity information from major public funders. It is a significant measurement improvement, but it does not record how researchers use AI inside their workflows and is not yet comprehensive. ([mbie.govt.nz](https://www.mbie.govt.nz/about/news/new-platform-provides-a-system-wide-view-of-new-zealand-research?utm_source=openai))
+- **The most consequential new development is sector-wide procurement.** On 23 October 2026, the Tertiary Education Commission closed a request for proposals for enterprise-grade generative-AI services and capability-building across universities, polytechnics and wānanga. The opportunity was sized for up to approximately 420,000 staff and students, but no supplier award or deployment has yet been publicly identified. ([Tertiary Education Commission RFP](https://www.gets.govt.nz/TEC/ExternalTenderDetails.htm?id=35015091)) ([gets.govt.nz](https://www.gets.govt.nz/TEC/ExternalTenderDetails.htm?id=35015091))
 
-- **International AI research activity has moved into funded projects.** New Zealand organisations are participating in Horizon Europe projects on marine AI-powered bioprospecting and distributed generative-AI agents. These are substantive research collaborations, but they are not evidence of broad operational AI deployment across universities. ([mbie.govt.nz](https://www.mbie.govt.nz/science-and-technology/science-and-innovation/international-opportunities/horizon-europe-research-fund/successful-horizon-europe-pillar-2-projects-with-new-zealand-partners?utm_source=openai))
+- **AI is now more firmly embedded in the national research-funding architecture.** The [Pillar Investment Plans 2026–2031](https://www.mbie.govt.nz/science-and-technology/science-and-innovation/agencies-policies-and-budget-initiatives/science-investment-plan-2026-2036/pillar-investment-plans-2026-2031), released on 2 October 2026, place technology and advanced computing within a wider framework for directing public research investment. ([MBIE](https://www.mbie.govt.nz/about/news/plans-focus-science-investment-on-stronger-economy-and-society)) ([mbie.govt.nz](https://www.mbie.govt.nz/science-and-technology/science-and-innovation/agencies-policies-and-budget-initiatives/science-investment-plan-2026-2036/pillar-investment-plans-2026-2031?utm_source=openai))
 
-- **University-level governance is becoming more operational.** The University of Auckland’s requirement for doctoral candidates to discuss, document and declare GenAI use has been in force since 1 September 2026. It provides one of the clearest examples of AI governance being embedded in the research lifecycle. ([auckland.ac.nz](https://www.auckland.ac.nz/en/students/academic-information/postgraduate-students/doctoral-candidates/your-doctoral-journey/doctoral-forms.html?utm_source=openai))
+- **Research capability is strengthening through people and institutions.** Royal Society Te Apārangi awarded both 2026 Mana Tūārangi Distinguished Researcher Fellowships in AI Technologies, to Professor Albert Bifet and Professor Bing Xue. Victoria University of Wellington has also appointed Aotearoa’s first Chair of Advanced Artificial Intelligence. ([Royal Society Te Apārangi](https://www.royalsociety.org.nz/news/2026-22-researchers-awarded-tawhia-te-mana-research-fellowships); [Victoria University of Wellington](https://www.wgtn.ac.nz/news/2026/10/victoria-university-appoints-aotearoas-first-chair-of-advanced-artificial-intelligence)) ([royalsociety.org.nz](https://www.royalsociety.org.nz/news/2026-22-researchers-awarded-tawhia-te-mana-research-fellowships))
 
-- **New research hubs are treating AI as an interdisciplinary and societal issue.** The University of Auckland launched Huanui: The AI Initiative, centred on human judgement, Māori and Indigenous perspectives, and collaboration between researchers, business, government and communities. ([auckland.ac.nz](https://www.auckland.ac.nz/en/news/2026/09/23/university-auckland-ai-research.html?utm_source=openai))
+- **Governance is becoming more operational.** The University of Otago’s staff policy now requires approved tools, data classification, human oversight, disclosure of significant use and additional controls for Māori and Pacific data. The University of Auckland’s doctoral declaration requirements remain in force. ([University of Otago](https://www.otago.ac.nz/administration/policies/policy-collection/staff-use-of-ai-systems-policy-and-procedures)) ([otago.ac.nz](https://www.otago.ac.nz/administration/policies/policy-collection/staff-use-of-ai-systems-policy-and-procedures))
 
-- **Research-to-implementation pathways are visible but remain narrow.** University of Auckland spin-out RosterLab has entered a Health New Zealand pilot based on doctoral research into healthcare rostering. The pilot is operating in selected services, but its impact has not yet been independently evaluated. ([auckland.ac.nz](https://www.auckland.ac.nz/en/news/2026/09/15/the-hidden-healthcare-problem-rosterlab-is-trying-to-solve.html))
+- **Research about AI is expanding alongside research with AI.** University of Canterbury researchers are studying AI literacy, assessment and the representation of Aotearoa New Zealand, Māori and Pacific perspectives in higher education. The work is active research, not evidence of sector-wide implementation. ([University of Canterbury](https://www.canterbury.ac.nz/news-and-events/news/2026/innovative-uc-research-takes-a-closer-look-at-ai-in-education)) ([canterbury.ac.nz](https://www.canterbury.ac.nz/news-and-events/news/2026/innovative-uc-research-takes-a-closer-look-at-ai-in-education-))
 
-- **The national AI platform remains unresolved in public documentation.** NZIAT’s current AI page describes an AI Growth Engine being established, but does not identify a successful phase-two platform proposal. Government planning documents continue to describe the AI platform as an investment under development rather than a fully operating national centre. ([nziat.co.nz](https://www.nziat.co.nz/our-work/artificial-intelligence-ai/))
+- **Operating examples remain selective.** Local research tooling such as Waikato’s TuiML is available as an alpha open-source system for agent-supported machine learning, while domain-specific research continues in health, environmental monitoring, bioeconomy science and edge AI. These examples show capability, but not uniform adoption across academic disciplines. ([TuiML](https://tuiml.ai/); [University of Waikato](https://www.waikato.ac.nz/news-events/news/waikato-ai-director-awarded-distinguished-researcher-fellowship/)) ([tuiml.ai](https://tuiml.ai/?utm_source=openai))
 
-- **The strongest adoption signals remain domain-specific.** Health imaging, robotics, bioeconomy research, climate science, software engineering and AI governance show concrete activity. Evidence of routine generative-AI use across academic disciplines, or of sector-wide productivity gains, remains thin.
+- **The evidence gap remains the sector’s central weakness.** NZRIS improves visibility of funded research but is not a complete or real-time census, and it does not measure how researchers use AI, whether use improves research quality or productivity, or how benefits and risks are distributed. ([NZRIS disclaimer](https://www.nzris.govt.nz/using-this-site/disclaimer)) ([nzris.govt.nz](https://www.nzris.govt.nz/using-this-site/disclaimer?utm_source=openai))
 
 ## What Has Changed Since the Last Update
 
-### NZRIS has created a new evidence layer
+### A national tertiary AI procurement process has begun
 
-The most important system-level change is the launch of NZRIS on 23 September 2026. The platform brings together information from MBIE, Royal Society Te Apārangi and the Health Research Council, and its public interface currently lists approximately 15 funds, 5,500 grants, 665 organisations and 4,000 outputs. ([mbie.govt.nz](https://www.mbie.govt.nz/about/news/new-platform-provides-a-system-wide-view-of-new-zealand-research?utm_source=openai))
+The clearest shift since the 1 October 2026 edition is the Tertiary Education Commission’s procurement of enterprise generative-AI services for the tertiary sector.
 
-For AI in academic research, NZRIS could make it easier to identify publicly funded projects, collaborating organisations and emerging concentrations of capability. It may eventually support more systematic analysis of AI-related research funding across health, environment, agriculture, engineering and the social sciences.
+The request for proposals sought one or more commercially licensed services that could support teaching, learning, research and organisational work. Required capabilities included advanced reasoning, research assistance, document and data analysis, multimodal functions, and the creation or use of AI assistants or agents. The procurement also included implementation and capability-building support, not just licences. ([GETS procurement notice](https://www.gets.govt.nz/TEC/ExternalTenderDetails.htm?id=35015091)) ([gets.govt.nz](https://www.gets.govt.nz/TEC/ExternalTenderDetails.htm?id=35015091))
 
-Its limitations are important:
+This is strategically important for academic research because it moves the discussion beyond individual staff experimenting with consumer tools. A sector-level arrangement could provide:
 
-- The initial dataset is not a complete census of New Zealand research.
-- Coverage depends on participating funders and research organisations.
-- Data availability and classification vary between providers.
-- NZRIS records reported administrative and descriptive information, not scientific quality, research impact or actual tool usage.
-- The system does not contain research papers, raw datasets or detailed workflow records. ([nzris.govt.nz](https://www.nzris.govt.nz/using-this-site/disclaimer?utm_source=openai))
+- Enterprise identity and access management.
+- More consistent privacy and security controls.
+- Institutionally approved tools for research and administration.
+- Shared training and support.
+- Better commercial terms than separate institutional purchases.
+- A common basis for responsible adoption across universities, polytechnics and wānanga.
 
-NZRIS therefore improves visibility of the research system without yet solving the central AI-adoption question: how often researchers use AI, for which tasks, with what results and under what conditions.
+However, the procurement is not evidence that these services are running across the sector. The notice records the tender as closed on 23 October 2026 and states that each eligible institution would retain the choice of whether to participate and which supplier or suppliers to use. No successful supplier, contract value, implementation timetable or participation list is identified on the public notice. ([gets.govt.nz](https://www.gets.govt.nz/TEC/ExternalTenderDetails.htm?id=35015091))
 
-### Horizon Europe participation has produced new AI projects
+The procurement should therefore be classified as **sector-enabling infrastructure in formation**, not as operational adoption.
 
-Two newly listed Horizon Europe projects provide stronger evidence of active international research participation than the earlier pipeline announcements.
+### AI has moved into the new research-funding architecture
 
-The four-year **AIMARIA** project, led by a European consortium with Victoria University of Wellington as the New Zealand partner, began on 1 September 2026. It will use AI and marine-microbiome data to support bioprospecting for medicines, enzymes and industrial compounds. MBIE has allocated NZ$606,913.21 in top-up funding to the New Zealand organisation. ([mbie.govt.nz](https://www.mbie.govt.nz/science-and-technology/science-and-innovation/international-opportunities/horizon-europe-research-fund/successful-horizon-europe-pillar-2-projects-with-new-zealand-partners?utm_source=openai))
+The [Pillar Investment Plans 2026–2031](https://www.mbie.govt.nz/science-and-technology/science-and-innovation/agencies-policies-and-budget-initiatives/science-investment-plan-2026-2036/pillar-investment-plans-2026-2031), released on 2 October 2026, translate the Government’s Science Investment Plan into five-year priorities for Research Funding New Zealand, the Health Research Council, NZIAT and other parts of the science system. The plans cover Technology for Prosperity, Primary Industries and Bioeconomy, Environment Sustainability and Resilience, and Healthy People and a Thriving Society. ([MBIE](https://www.mbie.govt.nz/science-and-technology/science-and-innovation/agencies-policies-and-budget-initiatives/science-investment-plan-2026-2036/pillar-investment-plans-2026-2031)) ([mbie.govt.nz](https://www.mbie.govt.nz/science-and-technology/science-and-innovation/agencies-policies-and-budget-initiatives/science-investment-plan-2026-2036/pillar-investment-plans-2026-2031?utm_source=openai))
 
-The **CoAgent** project, listed with a duration beginning on 1 October 2026, includes Auckland University of Technology and has received NZ$453,190.22 in MBIE top-up funding. It focuses on distributed, energy-efficient and trustworthy multi-agent generative AI operating across cloud, edge and physical environments. AUT researchers are contributing work on neuromorphic and brain-inspired agentic AI. ([mbie.govt.nz](https://www.mbie.govt.nz/science-and-technology/science-and-innovation/international-opportunities/horizon-europe-research-fund/successful-horizon-europe-pillar-2-projects-with-new-zealand-partners?utm_source=openai))
+For academic AI, the significance is institutional rather than immediately operational. AI is no longer appearing only as a standalone technology investment or a series of separate grants. It is being positioned as a capability that cuts across productivity, primary industries, health, environmental resilience and advanced computing.
 
-These projects represent a step forward from proposal activity to contracted international research. They should still be distinguished from operational deployment:
+The funding environment is also becoming more selective. The 2026 Endeavour Fund round used contract extensions rather than a new open contest, with AI-related work among the projects receiving continued support. Examples include machine-learning tools for monitoring cell-based protein production and an AI-enabled photonic device for chemical-free Varroa mite control. These extensions maintain research momentum, but they do not represent new national deployments. ([MBIE Endeavour Fund](https://www.mbie.govt.nz/about/news/endeavour-fund-projects-to-receive-2026-extensions)) ([mbie.govt.nz](https://www.mbie.govt.nz/about/news/endeavour-fund-projects-to-receive-2026-extensions?utm_source=openai))
 
-- They are funded research programmes.
-- Their expected outputs include methods, models, prototypes and research results.
-- They do not show that these systems are running at scale in New Zealand universities or industry.
-- The CoAgent project had a future start date of 1 October 2026 at the time of the latest public listing.
+### National AI strategy has become more delivery-focused
 
-### Huanui adds a human-centred research and engagement hub
+The Artificial Intelligence Researchers Association released the third edition of [Aotearoa New Zealand Artificial Intelligence – A Strategic Approach](https://www.airesearchers.nz/blog/post/171238/new-whitepaper-sets-out-a-strategic-approach-to-ai-for-aotearoa-new-zealand/) on 5 October 2026.
 
-The University of Auckland launched **Huanui: The AI Initiative** on 23 September. Based in the Business School, the initiative is intended to support research, teaching, innovation and public engagement rather than promote a particular commercial AI product. Its planned activities include an AI think tank, executive-in-residence roles, faculty champions and student AI partners. ([auckland.ac.nz](https://www.auckland.ac.nz/en/news/2026/09/23/university-auckland-ai-research.html?utm_source=openai))
+The association proposes an ambition for New Zealand to move from 35th in the Global AI Index to the top 25 by 2030 and the top 15 by 2035. Its recommendations focus on Te Tiriti o Waitangi and te ao Māori, a connected research–industry–government ecosystem, areas of national strength, safe adoption and durable social licence. These are the association’s recommendations rather than government commitments, but they provide an increasingly concrete benchmark against which future policy can be assessed. ([airesearchers.nz](https://www.airesearchers.nz/blog/post/171238/new-whitepaper-sets-out-a-strategic-approach-to-ai-for-aotearoa-new-zealand/))
 
-Huanui is notable because it frames AI capability as more than technical model development. Its stated approach places human judgement, purpose, whanaungatanga, kaitiakitanga, mahi tahi and rangatiratanga at the centre of research and engagement.
+The whitepaper’s most relevant argument for academic research is that adoption of overseas tools alone will not create enduring national capability. New Zealand also needs researchers who can build, adapt, fine-tune, evaluate and assure systems for local conditions, supported by appropriate infrastructure, data and partnerships. ([airesearchers.nz](https://www.airesearchers.nz/blog/post/171238/new-whitepaper-sets-out-a-strategic-approach-to-ai-for-aotearoa-new-zealand/))
 
-The initiative is still a newly launched institutional programme. There is not yet public evidence of its research outputs, sustained external partnerships or measurable impact. Its significance at this stage is strategic: it provides a visible institutional home for interdisciplinary AI research and translation.
+This represents a shift from asking whether New Zealand should use AI to asking what kinds of research capability must remain locally controlled.
 
-### A university spin-out has reached a live health-system pilot
+### Research leadership and talent investment have strengthened
 
-RosterLab provides one of the clearest examples of academic AI research moving into an operating environment.
+On 28 October 2026, Royal Society Te Apārangi announced that both 2026 Mana Tūārangi Distinguished Researcher Fellowships would be awarded in AI Technologies. Professor Albert Bifet of the University of Waikato and Professor Bing Xue of Te Herenga Waka—Victoria University of Wellington each received up to NZ$220,000 over two years. ([royalsociety.org.nz](https://www.royalsociety.org.nz/news/2026-22-researchers-awarded-tawhia-te-mana-research-fellowships))
 
-The company emerged from University of Auckland doctoral research into mathematical optimisation for complex hospital rosters. In July 2026, it confirmed a contract with HealthX, Health New Zealand’s digital innovation programme, for an initial pilot involving medical radiation technologist teams at Counties Manukau, Waikato, Starship and Waitematā. ([auckland.ac.nz](https://www.auckland.ac.nz/en/news/2026/09/15/the-hidden-healthcare-problem-rosterlab-is-trying-to-solve.html))
+Bifet’s programme focuses on adaptive edge-AI agents that can operate on low-power devices and learn from changing environments. Proposed application areas include environmental monitoring, precision agriculture and resilient infrastructure. Xue’s fellowship focuses on efficient, explainable and locally owned AI systems that can work with smaller multimodal datasets and remain useful for New Zealand applications in areas such as aquaculture, agriculture, environment and health. ([Albert Bifet](https://www.royalsociety.org.nz/what-we-do/funds-and-opportunities/tawhia-te-mana/mana-tuarangi/mtr-recipients/albert-bifet); [Bing Xue](https://www.royalsociety.org.nz/what-we-do/funds-and-opportunities/tawhia-te-mana/mana-tuarangi/mtr-recipients/bing-xue)) ([royalsociety.org.nz](https://www.royalsociety.org.nz/what-we-do/funds-and-opportunities/tawhia-te-mana/mana-tuarangi/mtr-recipients/bing-xue?utm_source=openai))
 
-RosterLab reports that earlier work with Middlemore Hospital reduced roster-management time from approximately 120 hours per month to fewer than 20 hours. That result is company-reported and relates to prior work, not the current HealthX pilot. The University of Auckland also states that the pilot’s impact across participating services remains to be evaluated. ([auckland.ac.nz](https://www.auckland.ac.nz/en/news/2026/09/15/the-hidden-healthcare-problem-rosterlab-is-trying-to-solve.html))
+Victoria University of Wellington has separately appointed Professor Prasenjit Mitra as the Bob Dykes Chair in Advanced Artificial Intelligence. The role is intended to build interdisciplinary research capacity, mentor future leaders and strengthen links with government, industry and international researchers. His research programme includes safe and resource-efficient language technologies and applications in healthcare, environmental science, disaster preparedness and computational social science. ([Victoria University of Wellington](https://www.wgtn.ac.nz/news/2026/10/victoria-university-appoints-aotearoas-first-chair-of-advanced-artificial-intelligence)) ([wgtn.ac.nz](https://www.wgtn.ac.nz/news/2026/10/victoria-university-appoints-aotearoas-first-chair-of-advanced-artificial-intelligence?utm_source=openai))
 
-The case is strategically important because it shows the full pathway from doctoral research to commercialisation and health-system testing. It also demonstrates why a funded pilot should not be described as a proven, scaled deployment.
+These appointments are important signals of capability-building. They are not, by themselves, evidence that research systems have been adopted at scale.
 
-### The national AI platform still has no publicly named operator
+### Research into AI literacy and higher education has become more locally grounded
 
-The unresolved AI Research Platform remains the main point of continuity from the previous update.
+University of Canterbury researchers presented new work on generative AI in New Zealand higher education on 21 October 2026. The study is examining how academics approach AI in teaching and assessment, whose knowledge and worldviews are represented in AI systems, and how AI literacy affects learning design. The collaboration includes links with Fiji National University. ([canterbury.ac.nz](https://www.canterbury.ac.nz/news-and-events/news/2026/innovative-uc-research-takes-a-closer-look-at-ai-in-education-))
 
-NZIAT’s current AI page says that responsibility for the investment process moved to NZIAT in 2026 and that the organisation is establishing an AI Growth Engine. It does not identify a successful phase-two proposal or describe a commissioned national platform with user access, infrastructure, staff or operating metrics. ([nziat.co.nz](https://www.nziat.co.nz/our-work/artificial-intelligence-ai/))
+The research builds on the Scaffolded AI Literacy framework, developed with Māori and Pacific expertise. The framework treats AI literacy as more than the ability to operate a chatbot. It includes critical judgement about when AI should be used, how its outputs should be evaluated, and what social and cultural assumptions are embedded in the technology. ([SAIL framework project](https://academyex.ac.nz/ai-literacy-research-project/)) ([canterbury.ac.nz](https://www.canterbury.ac.nz/news-and-events/news/2026/new-research-helps-rethink-ai-literacy-in-education-))
 
-The Government’s [Science Investment Plan 2026–2036](https://www.mbie.govt.nz/dmsdocument/32023-science-investment-plan-2026-2036) continues to refer to the AI platform as an investment under development and describes coordination between NZIAT and Research Funding New Zealand. ([mbie.govt.nz](https://www.mbie.govt.nz/dmsdocument/32023-science-investment-plan-2026-2036?utm_source=openai))
+This is relevant to academic research because the sector’s governance problem is not only how to prevent misuse. It is also how to help researchers decide which tasks are appropriate for AI, how to document use and how to preserve disciplinary and cultural judgement.
 
-The public record therefore supports a cautious conclusion: **the national AI investment is committed in principle, but the operating centre of gravity has not yet been publicly established.**
+### The national AI research platform remains unresolved
+
+There has been no publicly documented transition from the AI Research Platform contest to a clearly identified, operating national centre.
+
+The [NZIAT AI page](https://www.nziat.co.nz/our-work/artificial-intelligence-ai/) continues to describe an AI Growth Engine as being established. The MBIE platform page still describes the five phase-one concepts, the phase-two process and funding of up to NZ$70 million over seven years, but does not identify the final operator, contract terms, user-access arrangements or operating metrics. ([nziat.co.nz](https://www.nziat.co.nz/our-work/artificial-intelligence-ai/))
+
+The result is a widening gap between strategic intent and public operating evidence. New Zealand has more AI projects, researchers, policies and investment signals than it did a year ago, but the intended national centre of gravity is still not visible as a functioning platform.
 
 ## Current State of AI Adoption
 
@@ -106,320 +110,327 @@ The public record therefore supports a cautious conclusion: **the national AI in
 
 | Area | Current position |
 |---|---|
-| **AI as a research method** | Established in selected fields including medical imaging, robotics, climate science, computational biology and optimisation |
-| **Generative AI in everyday research work** | Clearly occurring through writing, coding, literature discovery and analysis support, but prevalence is not measured nationally |
-| **Doctoral and postgraduate practice** | Moving towards formal disclosure, supervisor oversight and documented verification |
-| **Research infrastructure** | National computing and data infrastructure exists; the AI-specific national platform remains unresolved |
-| **International collaboration** | Strengthening through Horizon Europe and other cross-border research partnerships |
-| **Applied and translational research** | Active in health, bioeconomy, environmental monitoring and autonomous systems, with relatively few publicly documented scaled deployments |
-| **AI as an object of research** | Expanding across computer science, health, ethics, public policy, human–robot interaction and Indigenous data governance |
-| **Institutional governance** | Progressing from general principles towards data classification, tool approval and lifecycle controls |
-| **Māori and Pacific research governance** | Increasingly visible in co-design, funding criteria and research methods, but implementation and decision rights remain uneven |
-| **National coordination** | Incomplete pending clearer delivery of the NZIAT AI Growth Engine or platform |
-| **Adoption measurement** | Still weak; project announcements and infrastructure statistics are more available than usage, productivity or impact data |
+| **AI as a research method** | Established in selected fields including medical imaging, machine learning, robotics, environmental science, bioeconomy research and optimisation |
+| **Generative AI in research workflows** | Clearly occurring in writing, coding, literature discovery, research support and analysis, but prevalence is not measured nationally |
+| **Sector-wide access to GenAI** | Moving from institutional experimentation towards aggregated procurement; no public evidence yet of a completed sector-wide rollout |
+| **Research infrastructure** | NZRIS is operating as a national information system; the AI-specific national platform remains unresolved |
+| **Local and edge AI capability** | Strengthening through research programmes, open-source tools and funded work on efficient, explainable and on-device systems |
+| **Doctoral and postgraduate governance** | Moving towards declarations, supervisor oversight, verification and examiner restrictions |
+| **Institutional governance** | Becoming more operational through data classification, approved-tool lists, AI-system owners and disclosure requirements |
+| **International collaboration** | Strong through Horizon Europe and other partnerships, but local ownership and long-term capability remain important questions |
+| **Applied and translational research** | Active in health, primary industries, environmental monitoring and public-service problems; scaled deployments remain limited |
+| **Māori and Pacific governance** | More visible in policy, research design and AI-literacy work, but implementation and decision rights remain uneven |
+| **Adoption measurement** | Weak; funding and project data are improving faster than evidence of use, impact, quality or productivity |
 
-### AI is being used most credibly where the research problem is well defined
+### AI adoption is strongest where the research problem is specific
 
-The strongest evidence concerns AI embedded in established research workflows rather than unrestricted use of general-purpose chatbots.
+The most credible evidence continues to come from well-defined research problems rather than general-purpose chatbot use.
 
-Current examples include:
+Examples include:
 
 - MRI analysis and prediction of stroke recovery.
-- Computer vision and robotics for Māori sign-language interpretation.
-- AI and brain-signal analysis for health assessment.
-- Machine learning for climate and environmental modelling.
-- Optimisation and AI-assisted workforce planning.
-- AI-enabled marine and bioeconomy research.
-- Research into agentic, neuromorphic and distributed AI systems.
-- Software tools for detecting and repairing violations in LLM-generated code.
+- Computer vision and robotics for Turi Māori.
+- Machine learning for environmental and climate data.
+- Edge AI for sensors, trap cameras and agricultural systems.
+- AI-supported bioeconomy and drug-discovery research.
+- Optimisation for healthcare rostering.
+- Explainable AI for decision-support and disinformation research.
+- Agentic and distributed AI systems.
 
-This pattern suggests that adoption is being driven by specific research problems, available datasets, domain expertise and access to computing resources. It does not yet resemble uniform adoption across the academic workforce.
+This pattern suggests that AI adoption is being driven by domain knowledge, usable datasets, specialist researchers and a clear pathway to validation. It is not yet uniform across the academic workforce.
 
-### Health research shows both progress and caution
+### Generative AI is entering research support work, but impact is unmeasured
 
-The University of Auckland’s stroke-recovery research combines MRI scans, image processing and AI models to investigate why patients with apparently similar strokes can have different outcomes. The research uses scans from hundreds of patients and aims to identify patterns that could eventually support more personalised rehabilitation planning. ([auckland.ac.nz](https://www.auckland.ac.nz/en/news/2026/09/22/ai-sheds-light-on-why-stroke-recovery-differs.html))
+The University of Auckland’s Research Services team reported running two AI upskilling sessions in October 2026, testing contextual prompting, Gemini Gems and NotebookLM for research-support activities. The team identified possible uses for repeatable assistants and engagement materials, while also noting the continuing importance of human expertise and relationship-building. ([University of Auckland](https://www.auckland.ac.nz/en/news/2026/10/20/exploring-ai-by-doing.html)) ([auckland.ac.nz](https://www.auckland.ac.nz/en/news/2026/10/20/exploring-ai-by-doing.html))
 
-The project is more than halfway through its doctoral research phase and has produced conference presentations and published research. However, the researchers state that further validation with larger datasets is required, including future work using New Zealand imaging data, before any tool could be used clinically. ([auckland.ac.nz](https://www.auckland.ac.nz/en/news/2026/09/22/ai-sheds-light-on-why-stroke-recovery-differs.html))
+This is useful evidence of institutional experimentation, but it is not an evaluation of productivity or research quality. The university has not publicly reported time savings, error rates, adoption levels or effects on research-services outcomes from the workshops.
 
-This is representative of the current research position: AI is producing useful analytical capability and scientific insight, but many systems remain at the validation or translational-research stage.
+The same caution applies to most reported uses of generative AI in academic environments. Evidence is strongest that people are experimenting with the tools. Evidence is weaker on whether use is sustained, appropriately governed, reproducible or beneficial.
 
-### Research about AI is expanding alongside research with AI
+### NZRIS improves visibility but not adoption measurement
 
-New Zealand universities are not only applying AI to other disciplines. They are also building research programmes around AI’s social, cultural and technical consequences.
+NZRIS is now live and brings together reported funding and research-activity information from multiple providers. At launch it included data from MBIE, Royal Society Te Apārangi and the Health Research Council, with further organisations and datasets expected over time. ([MBIE](https://www.mbie.govt.nz/about/news/new-platform-provides-a-system-wide-view-of-new-zealand-research)) ([mbie.govt.nz](https://www.mbie.govt.nz/about/news/new-platform-provides-a-system-wide-view-of-new-zealand-research?utm_source=openai))
 
-Recent examples include:
+This creates a stronger basis for mapping AI-related research investment, organisations and outputs. However, NZRIS explicitly warns that it is not a complete or real-time census, that coverage varies across providers, and that the absence of a record does not prove the absence of activity. It records structured administrative and descriptive information rather than research quality, impact or workflow behaviour. ([NZRIS disclaimer](https://www.nzris.govt.nz/using-this-site/disclaimer)) ([nzris.govt.nz](https://www.nzris.govt.nz/using-this-site/disclaimer?utm_source=openai))
 
-- Human-centred and values-led AI research through Huanui.
-- Investigation of ethnic and gender bias in LLM-generated clinical vignettes at the University of Canterbury.
-- Research into human–robot interaction and perceived robot threat.
-- Indigenous data and algorithmic sovereignty research at the University of Waikato.
-- Māori sign-language robotics co-designed with Turi Māori, whānau, iwi and hapū.
-- Research into agentic AI, distributed systems and brain-inspired computing through international consortia. ([canterbury.ac.nz](https://www.canterbury.ac.nz/study/uc-graduate-school/future-research-students/research-projects/evaluating-ethnic-and-gender-bias-in-llm-generated-clinical-vign?utm_source=openai))
+NZRIS can therefore answer questions such as:
 
-This breadth is an asset. It reduces the risk that the national research agenda becomes limited to imported productivity tools or narrow commercial applications. It also increases the need for shared standards across disciplines with different approaches to evidence, ethics and reproducibility.
+- Which organisations receive public funding for AI-related research?
+- Which fields and collaborators appear in funded projects?
+- Where are research outputs and capability clusters emerging?
 
-### Adoption data remains the weakest part of the picture
+It cannot yet answer:
 
-There is still no published, representative national measure covering:
-
-- Use of AI by academic discipline.
-- Differences between researchers, doctoral candidates and professional staff.
-- Adoption by career stage, institution or community.
-- Use of commercial, open-source or locally hosted models.
-- Effects on research productivity, quality or reproducibility.
-- Costs, energy use and infrastructure demand.
-- The number of AI projects progressing from prototype to sustained use.
-- The extent to which Māori and Pacific data or mātauranga Māori are involved in AI projects.
-
-The launch of NZRIS should improve visibility of funded activity, but it will not automatically provide these measures. A separate research-practice survey, combined with workflow and infrastructure data, is still required.
+- How many researchers use generative AI?
+- Which tools or models are being used?
+- What data is being entered into those systems?
+- Whether AI improves research productivity or reproducibility.
+- Whether adoption differs by discipline, career stage, institution or community.
+- How much AI-related computing, energy or licensing is being consumed.
 
 ## Governance, Policy and Regulation
 
-### New Zealand’s national approach remains principles-based
+### The national approach remains principles-based
 
-The Government’s AI strategy continues to emphasise adoption and application, with a light-touch regulatory approach based on existing law and OECD principles rather than a standalone AI Act. The strategy explicitly gives greater weight to practical adoption than to competing globally in foundational AI development, while still identifying AI research and advanced technology as national priorities. ([mbie.govt.nz](https://www.mbie.govt.nz/business-and-employment/economic-growth/digital-policy/new-zealands-ai-strategy-investing-with-confidence?utm_source=openai))
+New Zealand’s AI Strategy continues to prioritise adoption and application, using existing law and OECD principles rather than a dedicated AI Act. The strategy emphasises responsible adoption, capability development, international engagement and reducing barriers to use. ([MBIE AI Strategy](https://www.mbie.govt.nz/business-and-employment/economic-growth/digital-policy/new-zealands-ai-strategy-investing-with-confidence)) ([mbie.govt.nz](https://www.mbie.govt.nz/business-and-employment/economic-growth/digital-policy/new-zealands-ai-strategy-investing-with-confidence?utm_source=openai))
 
-For academic research, the practical consequences are that universities, funders, ethics committees, publishers and research teams remain responsible for translating broad principles into operational controls. These controls include:
+For academic research, this leaves universities, funders, ethics committees, publishers and research teams responsible for translating general principles into operational controls. Those controls increasingly include:
 
 - Data classification and approved-tool requirements.
 - Privacy and security assessments.
 - Research-ethics review.
-- Intellectual-property and confidentiality controls.
-- Disclosure of substantive GenAI use.
+- Intellectual-property and confidentiality protections.
+- Disclosure of significant GenAI use.
 - Human verification of outputs.
-- Restrictions on entering sensitive or culturally governed information into external systems.
+- Restrictions on using sensitive, confidential or culturally governed data in external systems.
+- Documentation of models, prompts, versions and outputs where reproducibility requires it.
 
-### Doctoral governance has moved from advice to formal declaration
+### Otago’s policy illustrates the move towards lifecycle governance
 
-The University of Auckland’s GenAI doctoral guidelines took effect on 1 September 2026. Candidates must include a GenAI declaration with their full thesis proposal at confirmation and with their thesis submitted for examination. ([auckland.ac.nz](https://www.auckland.ac.nz/en/students/academic-information/postgraduate-students/doctoral-candidates/your-doctoral-journey/doctoral-forms.html?utm_source=openai))
+The University of Otago’s Staff Use of AI Systems Policy and Procedures took effect on 20 May 2026. It applies to staff, contractors and consultants and explicitly covers research, innovation, operational excellence and service delivery. ([otago.ac.nz](https://www.otago.ac.nz/administration/policies/policy-collection/staff-use-of-ai-systems-policy-and-procedures))
 
-The guidelines require candidates to:
+The policy requires staff to:
 
-- Discuss GenAI use with supervisors.
-- Document tools and substantive uses where reasonable.
-- Explain how outputs were verified or corrected.
-- Disclose content generated or substantively modified by GenAI.
-- Accept responsibility for the final work.
-- Demonstrate comprehensive understanding of the research during confirmation and examination.
+- Complete AI-literacy training.
+- Notify cybersecurity staff before deploying a new AI system.
+- Assign an owner responsible for the system’s lifecycle and compliance.
+- Classify data before processing it in a generative-AI system.
+- Use only tools approved for the relevant data classification.
+- Obtain additional approval for private, confidential or restricted information.
+- Maintain human oversight and auditable alternatives.
+- Disclose significant AI contributions where appropriate.
+- Obtain written endorsement for some uses involving Māori or Pacific data.
 
-Examiners are instructed not to upload thesis material to external GenAI platforms or use external AI-detection software. This approach prioritises disclosure, research understanding and confidentiality over retrospective detection. ([auckland.ac.nz](https://www.auckland.ac.nz/en/about-us/about-the-university/policy-hub/research-innovation/doctoral-study/undertaking-research/generative-artificial-intelligence-in-doctoral-research-guidelines.html?utm_source=openai))
+The policy also explicitly recognises Māori data sovereignty, Pacific data governance, Te Ao Māori principles and environmental impacts from computationally intensive systems. This is a significant move beyond simple academic-integrity rules.
 
-The policy is significant because it applies across the research process, including literature review, data generation, analysis, coding and writing. Its eventual value will depend on implementation consistency and whether the university publishes anonymised evidence about the types and frequency of use.
+The limitation is that a policy demonstrates institutional intent, not implementation quality. Public evidence does not yet show how consistently such requirements are applied across faculties, research groups or external collaborations.
 
-### Sector policy remains more developed around integrity than capability
+### Doctoral governance is becoming more formal
 
-A September 2026 study of 49 Australian and New Zealand university policies found that academic integrity and ChatGPT were dominant themes, while pedagogy and competency were less prominent. The findings suggest that universities have been more comfortable defining prohibited or risky behaviour than specifying how researchers and students should build durable AI capability. ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S2405844026008984?utm_source=openai))
+The University of Auckland’s Generative AI in Doctoral Research Guidelines came into effect on 1 September 2026. Candidates must discuss GenAI use with supervisors, document substantive uses, explain verification and correction, and provide declarations at key points in the doctoral process. ([University of Auckland doctoral guidance](https://www.auckland.ac.nz/en/students/academic-information/postgraduate-students/doctoral-candidates/your-doctoral-journey/doctoral-forms.html)) ([auckland.ac.nz](https://www.auckland.ac.nz/en/students/academic-information/postgraduate-students/doctoral-candidates/doctoral-news-events/doctoral-news.html?utm_source=openai))
 
-This distinction matters for research. A policy can require disclosure without providing researchers with:
+The approach prioritises transparency and demonstrated understanding over attempts to detect AI-generated text after the fact. Examiners are not permitted to upload thesis material to external GenAI systems or use external AI-detection tools.
 
-- Approved systems suitable for sensitive data.
-- Reproducible prompt and workflow records.
-- Training in model evaluation.
-- Guidance on AI-assisted coding and statistical analysis.
-- Access to local or institutionally controlled models.
-- Clear rules for authorship, attribution and intellectual property.
+This is a more defensible approach than relying on unreliable detection. It also creates a potential source of evidence about actual use, if anonymised information from declarations is eventually analysed and published.
 
-A mature research environment needs both safeguards and capability-building.
+### Funders and research assessors are tightening confidentiality controls
 
-### Research assessment and funding controls are tightening
+Royal Society Te Apārangi guidance for council and panel members restricts the use of generative AI in proposal assessment because of risks relating to confidentiality, fabrication and data retention. The Society’s 2026 fellowship settings also designated AI Technologies as a priority area for distinguished researcher awards. ([Royal Society guidance](https://www.royalsociety.org.nz/assets/MF-2026-Guidelines-Council-and-Panel-Members_v1.0.pdf); [Tāwhia te Mana FAQ](https://www.royalsociety.org.nz/what-we-do/funds-and-opportunities/tawhia-te-mana/faq)) ([royalsociety.org.nz](https://www.royalsociety.org.nz/what-we-do/funds-and-opportunities/tawhia-te-mana/faq?utm_source=openai))
 
-Royal Society Te Apārangi’s 2026 guidance prohibits council and panel members from using generative-AI tools to assess proposals because of confidentiality, fabrication and data-retention risks. ([royalsociety.org.nz](https://www.royalsociety.org.nz/assets/MF-2026-Guidelines-Council-and-Panel-Members_v1.0.pdf?utm_source=openai))
+This creates a dual pattern:
 
-The Society has also designated AI Technologies as a research area for the 2026 Tāwhia te Mana distinguished researcher round. The scope includes machine learning, natural-language processing, computer vision, generative AI, adversarial AI, AI hardware and AI-driven analytics. The scheme retains objectives relating to Māori, Pacific and female research leadership. ([royalsociety.org.nz](https://www.royalsociety.org.nz/what-we-do/funds-and-opportunities/tawhia-te-mana/faq?utm_source=openai))
+- AI research is receiving greater strategic recognition.
+- AI use in research evaluation and confidential processes is subject to tighter controls.
 
-Together, these developments show a dual movement: AI research is receiving more explicit institutional recognition, while AI use in research assessment is subject to tighter confidentiality controls.
-
-### Cultural governance is becoming part of technical design
-
-The University of Auckland’s Turi Māori robotics project illustrates a more substantive form of cultural governance. Researchers worked with Turi Māori, whānau, iwi and hapū to develop signs and communication practices before building the AI and robotic system. The project uses computer vision, lip-reading and multimodal modelling, but its design begins with language, identity and community relationships. ([auckland.ac.nz](https://www.auckland.ac.nz/en/news/2026/09/21/robotic-sign-language-interpreter-deaf-maori-development.html?utm_source=openai))
-
-The robots are functioning in a research laboratory and are intended to supplement rather than replace human interpreters. There is no evidence of broad deployment in schools, kōhanga reo or health services.
-
-This is a useful model for locally grounded AI research, but it also raises questions that are not answered by technical performance alone:
-
-- Who controls the resulting data and models?
-- How are consent and collective interests maintained?
-- Can the system be updated without undermining cultural authority?
-- What forms of commercialisation are acceptable?
-- How are errors or inappropriate outputs escalated?
-
-These questions are increasingly central to academic AI research in Aotearoa.
+The sector is therefore moving towards differentiated governance based on the task and data involved, rather than blanket permission or prohibition.
 
 ## Case Studies
 
-### Case Study 1: NZRIS as research-system infrastructure
+### Case Study 1: Tertiary Education Commission AI procurement
 
-**Status:** Operating public information system; not an AI platform.
+**Status:** Closed procurement; not yet evidence of deployment.
 
-NZRIS is now publicly available and provides a common structure for viewing research funding, organisations and reported outputs. Its launch creates an opportunity to map AI-related investment more systematically than was possible through separate funder and university announcements. ([mbie.govt.nz](https://www.mbie.govt.nz/about/news/new-platform-provides-a-system-wide-view-of-new-zealand-research?utm_source=openai))
+The TEC’s RFP is the first visible attempt to create a shared commercial and capability-building pathway for AI across the tertiary sector. It covers research as well as teaching, learning and administration, and explicitly anticipates advanced research tools, document analysis, multimodal systems and agents. ([GETS notice](https://www.gets.govt.nz/TEC/ExternalTenderDetails.htm?id=35015091)) ([gets.govt.nz](https://www.gets.govt.nz/TEC/ExternalTenderDetails.htm?id=35015091))
 
-Its present contribution is informational rather than computational. NZRIS does not host models, provide research compute or measure researcher behaviour. Nor does the absence of an AI-tagged record prove that no relevant activity exists, because coverage and classification remain incomplete. ([nzris.govt.nz](https://www.nzris.govt.nz/using-this-site/disclaimer?utm_source=openai))
+Its potential value is considerable. Researchers often work across institutional boundaries and need access to tools that meet common expectations for privacy, security, identity management and data handling. Shared procurement could reduce duplication and make safe tools more accessible to smaller institutions.
 
-The near-term test is whether universities and funders consistently classify AI-related projects and whether the platform expands beyond its initial provider group.
+The immediate test is not whether a supplier is selected. It is whether participating institutions can demonstrate:
 
-### Case Study 2: Horizon Europe AI collaborations
+- Actual uptake by researchers.
+- Clear rules for sensitive data.
+- Training linked to research practice.
+- Support for reproducibility and record-keeping.
+- Measures of cost, quality and benefit.
+- Interoperability across institutions and research collaborations.
 
-**Status:** Funded international research projects; not evidence of scaled deployment.
+Until those outcomes are visible, this remains an enabling initiative rather than an adoption result.
 
-AIMARIA and CoAgent show how New Zealand is using international collaboration to access research scale that would be difficult to reproduce domestically.
+### Case Study 2: TuiML and local agent-supported machine learning
 
-AIMARIA connects marine science, biotechnology and AI to develop new approaches to bioprospecting. CoAgent addresses distributed multi-agent generative AI, cloud–edge computing and trustworthy agentic systems. Both projects place New Zealand researchers inside larger consortia and provide postgraduate and research-development opportunities. ([mbie.govt.nz](https://www.mbie.govt.nz/science-and-technology/science-and-innovation/international-opportunities/horizon-europe-research-fund/successful-horizon-europe-pillar-2-projects-with-new-zealand-partners?utm_source=openai))
+**Status:** Operating open-source alpha tool; adoption and performance claims are project-reported.
 
-The strategic value is not only the funding. Participation can provide access to international datasets, technical standards, research networks and commercial pathways. The risk is that New Zealand partners remain specialised contributors without building durable local infrastructure or intellectual-property ownership.
+TuiML, developed at the University of Waikato’s AI Institute, is an agent-native machine-learning runtime. It allows AI agents to train, evaluate, benchmark and serve models through local tools rather than requiring a researcher to write all the surrounding code manually. The project is designed to run locally, keeping datasets and trained models on the user’s machine. ([TuiML](https://tuiml.ai/); [TuiML documentation](https://tuiml.ai/getting_started.html)) ([tuiml.ai](https://tuiml.ai/?utm_source=openai))
 
-### Case Study 3: Turi Māori robotic sign-language interpreters
+The project reports benchmark results against scikit-learn and Weka, but it also describes itself as alpha software and cautions that its reliability is not yet comparable to long-established production libraries. The benchmark and readiness claims should therefore be treated as project-reported rather than independently verified. ([tuiml.ai](https://tuiml.ai/?utm_source=openai))
 
-**Status:** Functioning research prototype in a university laboratory.
+TuiML is strategically interesting because it addresses several issues relevant to academic research:
 
-The University of Auckland project led by Dr Ho Seok Ahn and Dr Tauwehe Tamati is developing robotic interpreters for Turi Māori. The system combines motion capture, facial-expression and lip-reading information with a Weighted Multimodal Network to recognise and communicate Māori sign language through sign, text and speech. ([auckland.ac.nz](https://www.auckland.ac.nz/en/news/2026/09/21/robotic-sign-language-interpreter-deaf-maori-development.html?utm_source=openai))
+- Reducing the technical barrier to using machine-learning workflows.
+- Keeping data and models local.
+- Making experiments more inspectable through structured tool calls and research logs.
+- Supporting agent-assisted experimentation without requiring all work to pass through a remote cloud service.
 
-The research began as a Science for Technological Innovation seed project and later received a NZ$1 million Smart Ideas grant to scale the technology over three years. The robots are now built and functioning in the laboratory. ([auckland.ac.nz](https://www.auckland.ac.nz/en/news/2026/09/21/robotic-sign-language-interpreter-deaf-maori-development.html?utm_source=openai))
+The next question is whether tools of this kind become part of reproducible research practice or remain promising prototypes used by a small technical community.
 
-The project demonstrates a form of AI adoption in which cultural co-design is part of the research method rather than a final consultation step. It remains a prototype, and there is no public evidence yet of sustained deployment or independent evaluation in community settings.
+### Case Study 3: Edge AI and locally relevant systems
 
-### Case Study 4: RosterLab’s pathway from PhD research to Health NZ pilot
+**Status:** Funded research programmes; not yet scaled deployment.
 
-**Status:** Commercial system in use with customers; New Zealand Health NZ deployment remains a pilot.
+Professor Albert Bifet’s fellowship programme focuses on edge AI agents that observe, reason and adapt on low-power devices. The proposed applications include environmental monitoring, precision agriculture and resilient infrastructure. Professor Bing Xue’s programme takes a complementary approach, focusing on efficient, explainable and New Zealand-owned AI systems that can learn from smaller and locally relevant datasets. ([Royal Society Te Apārangi](https://www.royalsociety.org.nz/what-we-do/funds-and-opportunities/tawhia-te-mana/mana-tuarangi/mtr-recipients/albert-bifet); [Royal Society Te Apārangi](https://www.royalsociety.org.nz/what-we-do/funds-and-opportunities/tawhia-te-mana/mana-tuarangi/mtr-recipients/bing-xue)) ([royalsociety.org.nz](https://www.royalsociety.org.nz/what-we-do/funds-and-opportunities/tawhia-te-mana/mana-tuarangi/mtr-recipients/bing-xue?utm_source=openai))
 
-RosterLab originated in University of Auckland doctoral research on hospital rostering and now uses optimisation and AI-assisted workforce-management tools. Its July 2026 HealthX contract covers an initial pilot across four Health New Zealand services. ([auckland.ac.nz](https://www.auckland.ac.nz/en/news/2026/09/15/the-hidden-healthcare-problem-rosterlab-is-trying-to-solve.html))
+These programmes reflect a realistic New Zealand research strategy. They do not attempt to compete directly with the largest overseas foundation-model providers. Instead, they target environments where local data, low connectivity, energy efficiency, privacy and domain adaptation matter.
 
-The earlier Middlemore work suggests meaningful administrative potential, with roster-management time reportedly reduced from approximately 120 hours per month to fewer than 20 hours. However, the current pilot has not yet produced an independently evaluated result across the participating services. ([auckland.ac.nz](https://www.auckland.ac.nz/en/news/2026/09/15/the-hidden-healthcare-problem-rosterlab-is-trying-to-solve.html))
+The risk is that research funding produces technically strong demonstrations without a durable route to field testing, shared infrastructure or local commercialisation. Public evidence of those later stages is not yet available.
 
-The case illustrates a credible translational pathway:
+### Case Study 4: AI literacy and higher education research at Canterbury
 
-1. A clearly defined operational problem.
-2. Doctoral research and domain collaboration.
-3. University commercialisation support.
-4. Private investment and company formation.
-5. Adoption testing inside a complex public service.
+**Status:** Active research and framework development; not sector-wide implementation.
 
-It also illustrates the distance between technical performance and institutional adoption. A system must fit clinical workflows, employment rules, fatigue requirements, staff preferences and accountability structures.
+The University of Canterbury’s SAIL framework and related research programme examine what learners and educators need to understand about AI across different ages and educational settings. The framework was developed with Māori and Pacific perspectives and treats AI literacy as critical understanding, practical capability and responsible citizenship. ([University of Canterbury](https://www.canterbury.ac.nz/news-and-events/news/2026/new-research-helps-rethink-ai-literacy-in-education); [SAIL project](https://academyex.ac.nz/ai-literacy-research-project/)) ([canterbury.ac.nz](https://www.canterbury.ac.nz/news-and-events/news/2026/new-research-helps-rethink-ai-literacy-in-education-))
 
-### Case Study 5: AI for stroke-recovery prediction
+The October 2026 study extends this work into higher education, interviewing academics about how they approach AI in teaching and assessment and examining how AI systems represent knowledge and culture. ([canterbury.ac.nz](https://www.canterbury.ac.nz/news-and-events/news/2026/innovative-uc-research-takes-a-closer-look-at-ai-in-education-))
 
-**Status:** Active doctoral and translational research; not a clinical deployment.
+Its relevance to academic research is broader than teaching policy. Researchers also need to understand:
 
-Researchers at the University of Auckland are using MRI data from hundreds of stroke patients to create three-dimensional maps of affected brain pathways and train models that may predict recovery. The research is intended to support more personalised rehabilitation planning. ([auckland.ac.nz](https://www.auckland.ac.nz/en/news/2026/09/22/ai-sheds-light-on-why-stroke-recovery-differs.html))
+- Whether a model’s training data reflects the communities being studied.
+- How cultural assumptions affect generated outputs.
+- When AI assistance weakens rather than strengthens scholarly judgement.
+- How to teach students and research staff to evaluate AI claims.
+- How to distinguish technical fluency from research competence.
 
-The project has generated published research and conference presentations, but the team says further validation is required before clinical use. Future research using New Zealand imaging data will be important for testing whether patterns found in international datasets transfer to local populations. ([auckland.ac.nz](https://www.auckland.ac.nz/en/news/2026/09/22/ai-sheds-light-on-why-stroke-recovery-differs.html))
+This work may become an important foundation for national capability-building if its tools and findings are tested beyond the originating institutions.
 
-This is a typical high-value research application: AI helps extract patterns from complex data, but clinical legitimacy depends on external validation, representativeness, explainability and safe integration into professional decision-making.
+### Case Study 5: University research moving into operational settings
+
+**Status:** Selected pilots and translational research; independent impact evidence remains limited.
+
+The RosterLab case remains one of the clearest examples of academic research moving towards operational use. The University of Auckland spin-out originated in doctoral work on mathematical optimisation for complex hospital rosters and is now involved in a Health New Zealand HealthX pilot across four services. RosterLab reports that earlier work reduced roster-management time at Middlemore from approximately 120 hours per month to fewer than 20 hours, but that result is company-reported and relates to prior work. The current pilot’s impact remains to be evaluated. ([University of Auckland](https://www.auckland.ac.nz/en/news/2026/09/15/the-hidden-healthcare-problem-rosterlab-is-trying-to-solve.html)) ([auckland.ac.nz](https://www.auckland.ac.nz/en/news/2026/09/15/the-hidden-healthcare-problem-rosterlab-is-trying-to-solve.html?utm_source=openai))
+
+Similarly, University of Auckland researchers are using AI and MRI data from hundreds of stroke patients to investigate recovery prediction. The work has produced research outputs and presentations, but further validation with larger and New Zealand-relevant datasets is required before clinical use. ([University of Auckland](https://www.auckland.ac.nz/en/news/2026/09/22/ai-sheds-light-on-why-stroke-recovery-differs.html)) ([auckland.ac.nz](https://www.auckland.ac.nz/en/news/2026/09/22/ai-sheds-light-on-why-stroke-recovery-differs.html?utm_source=openai))
+
+Both cases demonstrate the distance between research promise and institutional adoption. A technically successful model must also fit professional workflows, employment conditions, ethical requirements, data governance, accountability arrangements and user expectations.
 
 ## Trends
 
-### 1. The unit of adoption is becoming the research workflow
+### 1. Adoption is moving from individual tools towards managed access
 
-The central question is shifting from whether an individual researcher may use a chatbot to whether an entire workflow is appropriately designed.
+The TEC procurement indicates that tertiary institutions are beginning to treat generative AI as shared organisational infrastructure rather than an issue for individual staff to resolve independently.
 
-A mature AI-enabled research workflow needs to specify:
+This could improve safety and consistency, but it also creates new questions about vendor concentration, data residency, switching costs and whether common procurement will support disciplinary diversity. A single enterprise tool may be useful for routine research support but unsuitable for highly sensitive Māori, Pacific, health or commercial data.
 
-- What data may enter the system.
-- Which model or service is approved.
-- How outputs are checked.
-- What must be disclosed.
-- How prompts, versions and outputs are retained.
-- How results can be reproduced.
-- Who is accountable when the system changes or fails.
+### 2. Capability-building is outpacing deployment
 
-Auckland’s doctoral declaration, NZRIS’s structured data model and RosterLab’s domain-specific deployment all point towards this workflow-based approach.
+The strongest new signals are fellowships, chairs, frameworks, policies, workshops and funding architecture. These are necessary foundations, but they should not be confused with proven productivity or research impact.
 
-### 2. International collaboration is compensating for limited domestic scale
+The sector is becoming better at showing that an institution has:
 
-The Horizon Europe projects demonstrate a growing strategy: New Zealand researchers contribute specialised expertise to larger international programmes rather than attempting to build every capability domestically.
+- A policy.
+- A training course.
+- A funded project.
+- A research centre.
+- A procurement process.
+- A prototype.
 
-This is likely to remain important for:
+It is still much less able to show:
 
-- Foundation-model research.
-- Distributed and agentic AI.
-- Marine and environmental datasets.
-- AI hardware and energy-efficient computing.
-- Large-scale health validation.
-- International standards and evaluation.
+- Sustained use.
+- Reproducible benefits.
+- Independent evaluation.
+- Cost-effectiveness.
+- Effects on research quality.
+- Effects on Māori and Pacific research interests.
+- Long-term maintenance and ownership.
 
-The challenge is ensuring that participation builds local talent, infrastructure, intellectual property and enduring research capability rather than only short-term project activity.
+### 3. Local adaptation remains more credible than frontier-scale competition
 
-### 3. Local adaptation is more credible than frontier-scale competition
+The most plausible areas of advantage continue to be those where New Zealand offers distinctive data, environments, communities or research problems:
 
-The most plausible areas of advantage remain those where New Zealand offers distinctive environments, datasets, communities or institutional problems:
-
+- Environmental and climate monitoring.
+- Agriculture, horticulture, aquaculture and forestry.
 - Health and population-specific research.
 - Māori and Pacific data governance.
-- Agriculture, forestry and aquaculture.
-- Marine and environmental science.
-- Climate and extreme-weather modelling.
-- Remote and autonomous systems.
-- Language, culture and accessibility technologies.
-- Public-sector and health-system optimisation.
+- Language and accessibility technologies.
+- Edge and autonomous systems.
+- Public-service and health-system optimisation.
+- Efficient and explainable models for smaller datasets.
 
-The Turi Māori robotics project and the stroke-imaging research both demonstrate the value of local context. In each case, success depends on whether imported methods can be adapted to local populations, languages and values.
+The new fellowships, TuiML and the proposed national platform concepts all reinforce this direction.
 
-### 4. Cultural governance is becoming a technical requirement
+### 4. Research governance is becoming workflow-based
 
-Māori and Indigenous perspectives are appearing in research methods, project design, university initiatives and funding expectations. The change is most meaningful where communities participate in defining the problem, data practices and acceptable outcomes.
+The practical question is increasingly not whether a researcher may use AI, but whether the complete research workflow is appropriately designed.
 
-However, public evidence is still stronger for principles and co-design statements than for long-term governance arrangements. The sector has not yet published consistent information on:
+A mature workflow needs to specify:
 
-- Māori and Pacific decision rights over AI projects.
-- Ownership and stewardship of culturally significant datasets.
-- Model evaluation against Māori and Pacific populations.
-- Commercialisation and benefit-sharing arrangements.
-- Long-term maintenance of culturally grounded systems.
+- What data may be entered.
+- Which model or service may be used.
+- How outputs are checked.
+- What must be disclosed.
+- How model versions and outputs are recorded.
+- How results can be reproduced.
+- Who is accountable when an external model changes.
+- How culturally governed data is stewarded.
+- What happens if the system produces harmful or misleading results.
 
-### 5. Research governance is moving faster than impact measurement
+Otago’s policy, Auckland’s doctoral rules and the TEC procurement all point towards this lifecycle approach.
 
-Universities are producing guidance, declarations, workshops and approved-tool processes. Funders are introducing AI-related requirements and restrictions. Yet evidence of effects on research quality, speed, reproducibility or equity remains limited.
+### 5. Cultural governance is becoming part of technical capability
 
-This creates an asymmetry:
+Research teams are increasingly acknowledging that Māori and Pacific perspectives cannot be added only at the end of a technical project. They affect problem definition, data access, model design, evaluation, deployment and benefit-sharing.
 
-- It is increasingly possible to show that a policy exists.
-- It is sometimes possible to show that a project is funded or a prototype is running.
-- It is rarely possible to show independently measured sector-wide impact.
+The evidence is strongest in frameworks and project design. It remains thinner on long-term decision rights, model ownership, commercialisation arrangements, maintenance responsibilities and redress when systems fail.
 
-The next phase of maturity requires evaluation, not only governance documentation.
+### 6. The announcement-to-deployment gap remains substantial
 
-### 6. Announcement activity still exceeds deployment evidence
+Stakeholders should continue to distinguish between:
 
-The sector continues to generate more announcements than independently verified operating results. Stakeholders should distinguish carefully between:
+- A procurement and an operating service.
+- A fellowship and a deployed research capability.
+- A prototype and community use.
+- A pilot and a sustained programme.
+- A vendor-reported efficiency gain and an independently measured result.
+- A national funding commitment and an operating platform.
 
-- A research grant and a running system.
-- A laboratory prototype and community deployment.
-- A pilot and a sustained service.
-- A university spin-out and proven public value.
-- A vendor-reported efficiency gain and an independently evaluated outcome.
-- A national funding commitment and a commissioned platform.
-
-The available evidence supports real and growing adoption in selected research workflows. It does not support claims of uniform or economy-wide academic adoption.
+The sector is making real progress, but the public record still contains more evidence of preparation than of scaled, independently evaluated adoption.
 
 ## Outlook
 
-Over the next year, the most important indicators will be operational:
+The next important indicators are operational rather than rhetorical:
 
-- Whether NZIAT names, contracts and launches the national AI research platform or Growth Engine.
-- Whether researchers can access shared compute, data, evaluation tools and technical support through that investment.
-- Whether NZRIS adds more universities and research organisations and enables reliable AI-related funding analysis.
-- Whether AIMARIA and CoAgent produce public research outputs, postgraduate opportunities and durable New Zealand capability.
-- Whether Auckland’s doctoral declaration generates usable evidence about actual patterns of GenAI use.
-- Whether other universities adopt comparable research-lifecycle controls without creating incompatible requirements for cross-institution teams.
+- Whether the TEC procurement produces a publicly identifiable supplier arrangement and whether institutions actually participate.
+- Whether researchers receive approved tools, training and support for sensitive research workflows.
+- Whether the NZIAT AI Growth Engine names an operator, publishes its work programme and provides meaningful access to researchers.
+- Whether the AI research platform supports shared datasets, compute, evaluation, postgraduate training and commercialisation rather than only coordination.
+- Whether NZRIS expands its provider base and enables reliable analysis of AI-related research investment.
+- Whether the Pillar Investment Plans produce public measures for research capability, infrastructure, commercialisation and social benefit.
+- Whether TuiML and similar local tools move beyond alpha status and publish independent evaluations.
+- Whether the RosterLab Health New Zealand pilot reports outcomes across participating services.
 - Whether health-AI projects progress from retrospective datasets to external and prospective validation.
-- Whether prototypes such as the Turi Māori sign-language robots move into carefully governed community trials.
-- Whether funders and universities publish methods for measuring research quality, reproducibility, environmental cost and productivity effects.
-- Whether Māori and Pacific governance is reflected in ongoing decision rights, stewardship and benefit-sharing rather than only in project principles.
+- Whether Māori and Pacific governance is reflected in durable decision rights, stewardship and benefit-sharing.
+- Whether universities publish anonymised evidence about actual GenAI use in research and doctoral work.
+- Whether the sector conducts a representative national survey of academic and research staff.
 
-A national survey of academic researchers would materially improve policy and institutional decision-making. It should measure not only whether researchers use AI, but which tasks they use it for, what data they provide, how they verify outputs, what barriers they face and whether use differs across disciplines, career stages and communities.
+A useful national survey should distinguish between:
+
+- Writing and editing.
+- Coding and debugging.
+- Literature discovery.
+- Data analysis.
+- Image and signal processing.
+- Research administration.
+- Grant and manuscript preparation.
+- Hypothesis generation.
+- Model development.
+- Use of AI in teaching or assessment.
+- Use of local, open-source, institutional or commercial systems.
+
+It should also measure verification practices, data sensitivity, disclosure, time saved, error rates, research quality, reproducibility and distributional effects.
 
 ## Overall Assessment
 
-As of 1 October 2026, AI in academic research in Aotearoa New Zealand is best characterised as **selective, increasingly governed and more internationally connected, but still weakly measured and nationally uncoordinated**.
+AI in academic research in Aotearoa New Zealand is best characterised as **selective, increasingly governed and more strategically coordinated, but still weakly measured and not yet supported by a visible national AI research platform**.
 
 Since the previous update:
 
-- NZRIS has created a new national information layer for publicly funded research.
-- Horizon Europe participation has produced new AI research projects with New Zealand partners.
-- Huanui has established a visible human-centred AI initiative at the University of Auckland.
-- RosterLab has moved university research into a live Health New Zealand pilot.
-- Research prototypes in health, robotics and culturally grounded language technology have advanced.
-- Doctoral GenAI governance is now operational at a major research-intensive university.
+- The tertiary sector has moved towards aggregated procurement of enterprise generative-AI services.
+- AI has been incorporated more clearly into the national science-investment architecture.
+- New fellowships and an advanced-AI chair are strengthening research leadership.
+- The Artificial Intelligence Researchers Association has published a more delivery-focused national agenda.
+- University policies are moving towards data classification, lifecycle ownership, disclosure and human oversight.
+- Research into AI literacy, cultural representation and assessment is becoming more locally grounded.
+- Local tools such as TuiML show that New Zealand researchers are building practical alternatives to purely cloud-based workflows.
+- Domain-specific research and translational projects continue to produce the strongest evidence of real adoption.
 
-The main uncertainty remains the national AI platform. Government has committed funding and NZIAT has established the institutional framework, but the public record still does not show a named, commissioned and operating national AI research centre.
+The central uncertainty has not changed: public documentation still does not show a named, commissioned and operating national AI research centre. Nor does it yet show how widely academic researchers are using AI or whether use is improving research outcomes.
 
-New Zealand’s academic AI ecosystem is therefore developing through distributed projects, international consortia, university policies, research infrastructure and selected translational pathways. The strategic test is whether those elements become **shared, reproducible and independently evaluated capability**, with Māori and Pacific governance embedded in how systems are designed and used.
+New Zealand is therefore building the conditions for academic AI adoption faster than it is demonstrating sector-wide transformation. The strategic test for the next phase is whether funding, procurement, governance, talent and local research projects become **shared, reproducible and independently evaluated capability**, with Māori and Pacific authority embedded in how AI systems are developed and used.
