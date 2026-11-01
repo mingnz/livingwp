@@ -5,114 +5,87 @@ article_kind: industry
 article_latest: true
 article_series: public_sector
 article_summary: >-
-  AI adoption across Aotearoa New Zealand’s public sector is becoming
-  operational, but central visibility and assurance remain behind the pace of
-  deployment. New evidence shows substantial licence growth, live citizen-facing
-  council tools and more mature agency use, alongside an unconfirmed national AI
-  assistant launch.
-article_updated_at: '2026-10-01T20:24:49+13:00'
+  AI adoption in Aotearoa New Zealand’s public sector is now visibly operational
+  in health, biosecurity, justice and local government, but the system still
+  lacks a consolidated view of usage, value, assurance and Māori data impacts.
+article_updated_at: '2026-11-01T20:50:25+13:00'
 article_version: false
 description: >-
-  AI adoption across Aotearoa New Zealand’s public sector is becoming
-  operational, but central visibility and assurance remain behind the pace of
-  deployment.…
+  AI adoption in Aotearoa New Zealand’s public sector is now visibly operational
+  in health, biosecurity, justice and local government, but the system still…
 permalink: /whitepaper/public_sector/
 title: AI in Public Sector
 ---
 
 # AI in Public Sector in Aotearoa New Zealand: A Living Whitepaper
 
-AI adoption across Aotearoa New Zealand’s public sector is becoming operational, but central visibility and assurance remain behind the pace of deployment. New evidence shows substantial licence growth, live citizen-facing council tools and more mature agency use, alongside an unconfirmed national AI assistant launch.
+AI adoption in Aotearoa New Zealand’s public sector is now visibly operational in health, biosecurity, justice and local government, but the system still lacks a consolidated view of usage, value, assurance and Māori data impacts.
 
 ## Executive Summary
 
-The latest system-wide evidence remains the [2026 cross-agency AI survey](https://www.digital.govt.nz/dmsdocument/264~report-2026-cross-agency-survey-for-artificial-intelligence-ai-use-cases), published on 19 August 2026. It recorded:
+The latest system-wide quantitative evidence remains the [2026 cross-agency AI survey](https://www.digital.govt.nz/dmsdocument/264~report-2026-cross-agency-survey-for-artificial-intelligence-ai-use-cases/html), which recorded:
 
-- **545 AI use cases across 59 organisations**.
-- **432 cases across 42 Public Service organisations**.
-- **113 cases across 17 wider public-sector organisations**.
-- **167 cases in operational phases**, approximately three times the 2025 figure.
-- **31% of reported cases classified as operational**.
+- 545 AI use cases across 59 organisations.
+- 432 cases across 42 Public Service organisations.
+- 113 cases across 17 wider public-sector organisations.
+- 167 cases in operational phases, approximately three times the 2025 figure.
+- Generative AI as the most common technology, followed by natural-language processing, agentic AI and machine learning.
 
-No newer cross-agency adoption survey has been published. The 2026 results therefore remain the best quantitative baseline, but new Official Information Act releases provide a more concrete view of the technology footprint: the Government Digital Delivery Agency held information on **28,728 Microsoft 365 Copilot licences** as at 13 July 2026, alongside 99 Copilot Studio subscriptions and 937 legacy Copilot Studio licences. The figures do not cover all agencies, all AI products or actual usage levels. ([2026 cross-agency survey](https://www.digital.govt.nz/dmsdocument/264~report-2026-cross-agency-survey-for-artificial-intelligence-ai-use-cases)) ([AI licence OIA response](https://www.publicservice.govt.nz/assets/DirectoryFile/OIA-2026-0217-Information-request-regarding-AI-licences-held-by-each-government-department.pdf)) ([digital.govt.nz](https://www.digital.govt.nz/dmsdocument/264~report-2026-cross-agency-survey-for-artificial-intelligence-ai-use-cases/html?utm_source=openai))
+No newer cross-agency survey has been published. The 2026 results therefore remain the best system-wide baseline, but new evidence shows what some of those operational cases look like in practice. Health New Zealand reports AI scribes deployed across emergency departments to 1,250 clinicians in 39 hospitals; Biosecurity New Zealand is using AI-enabled cameras in the yellow-legged hornet response; the Ministry of Justice has deployed an AI-agent workflow for contract management; and Auckland Council reports more than 4,000 citizen requests through its AI assistant. ([digital.govt.nz](https://www.digital.govt.nz/dmsdocument/264~report-2026-cross-agency-survey-for-artificial-intelligence-ai-use-cases/html?utm_source=openai))
 
-The public sector is therefore moving from experimentation to workflow integration, especially in administration, policy, communications, customer support, document processing, tax administration, health and local-government services. The dominant model remains **bounded augmentation**: AI drafts, summarises, classifies or retrieves information while people retain responsibility for decisions.
+Adoption remains concentrated in **bounded augmentation**. AI drafts, retrieves, summarises, classifies and transcribes, while public servants or clinicians retain responsibility for decisions. The strongest operating examples are tied to a defined workflow with a measurable administrative burden, rather than open-ended automated decision-making.
 
-The principal weakness is not lack of activity but lack of system-wide evidence. The Public Service Commission does not hold a consolidated view of agency AI policies, impact assessments, operational audits, reported incidents or assurance gaps. A cross-government AI Assurance Model is expected to be published by the end of October 2026, but it is not yet evidence of a completed operating system. ([publicservice.govt.nz](https://www.publicservice.govt.nz/assets/DirectoryFile/OIA-2026-0222-Information-request-regarding-government-assurance-and-oversight-of-artificial-intelligence-use.pdf))
+The evidence base is still uneven. Licence counts and agency-reported productivity claims show investment and activity, but there is little independent evidence on accuracy, equity, long-term service outcomes or whole-of-life cost. A September 2026 media report based on Written Parliamentary Questions identified more than **$41 million budgeted for AI-related activity in 2026/27**, including HealthX, ACC, NZ Transport Agency and education-sector initiatives. That is a spending signal, not evidence of deployment or realised value. ([z-umbraco-nzb-frontend-lin-as-ae-pr.azurewebsites.net](https://z-umbraco-nzb-frontend-lin-as-ae-pr.azurewebsites.net/news/politics/government-agencies-budgeting-tens-of-millions-for-ai/?utm_source=openai))
 
-The current assessment is **rapidly expanding adoption with incomplete central assurance and limited independent measurement of public value**.
+The central assurance picture has not materially caught up. The current [Public Service AI Toolkit](https://www.digital.govt.nz/standards-and-guidance/technology-and-architecture/artificial-intelligence/public-service-ai-toolkit) provides framework, policy and records-management resources, while the [AI Work Programme](https://www.digital.govt.nz/standards-and-guidance/technology-and-architecture/artificial-intelligence/public-service-ai-work-programme) still describes an assurance model and toolkit as a deliverable. The proposed model has not been publicly evidenced as an operating, system-wide control by 1 November 2026. ([digital.govt.nz](https://www.digital.govt.nz/standards-and-guidance/technology-and-architecture/artificial-intelligence/public-service-ai-toolkit))
+
+The overall assessment is **operational expansion with uneven maturity and incomplete central assurance**.
 
 ## What Has Changed Since the Last Update
 
-### Licence scale is now visible, although not adoption
+### Operating deployments are better documented
 
-The most significant new quantitative evidence since the 1 September 2026 edition is the release of [OIA 2026-0217](https://www.publicservice.govt.nz/assets/DirectoryFile/OIA-2026-0217-Information-request-regarding-AI-licences-held-by-each-government-department.pdf).
+The most important change since the 1 October 2026 edition is not a new national survey. It is the emergence of more specific evidence about systems that are already being used.
 
-As at **13 July 2026**, the Government Digital Delivery Agency held information on:
+A 20 October update from the [Public Service Commission](https://www.publicservice.govt.nz/news/creating-positive-change-through-new-approaches-and-technologies) identified three public-sector initiatives as examples of practical innovation:
 
-- 28,728 Microsoft 365 Copilot licences.
-- 99 Copilot Studio subscriptions.
-- 937 legacy Copilot Studio licences.
+- HealthX and AI-assisted clinical documentation in emergency departments.
+- Biosecurity New Zealand’s AI-enabled detection work in the yellow-legged hornet response.
+- Ministry of Justice AI agents for contract management.
 
-The figures relate to licences held through the Microsoft Cloud, Software and Services Agreement. They do not include all basic Copilot functionality available through other Microsoft products, other AI suppliers, or every public-service department. The Commission explicitly advised that a more accurate picture would require information from individual agencies. ([publicservice.govt.nz](https://www.publicservice.govt.nz/assets/DirectoryFile/OIA-2026-0217-Information-request-regarding-AI-licences-held-by-each-government-department.pdf))
+The examples are presented by the agencies themselves through an official awards process, so reported benefits should be treated as self-reported. They nevertheless provide stronger evidence of operational use than generic references to pilots or planned capability. ([publicservice.govt.nz](https://www.publicservice.govt.nz/news/creating-positive-change-through-new-approaches-and-technologies?_searchAnalytics=eyJlbmdpbmVOYW1lIjoicHJvZC10a20iLCJxdWVyeVN0cmluZyI6IiIsImRvY3VtZW50SWQiOiJzaWx2ZXJzdHJpcGVfY21zX21vZGVsX3NpdGV0cmVlXzI2MjciLCJyZXF1ZXN0SWQiOiJCRVlDM3RJYlEyT0ZidUxCN1YxN3V3In0%3D&utm_source=openai))
 
-This changes the interpretation of the 2026 survey. The survey showed the number of use cases; the licence disclosure shows that a substantial shared-tool infrastructure is also being funded. Neither measure establishes:
+### Health AI has moved from pilot to national frontline deployment
 
-- How many licences are actively used.
-- How frequently they are used.
-- Which workflows they support.
-- Whether staff use approved or unapproved tools.
-- What productivity or service benefits have been realised.
+Health New Zealand’s AI scribe is now one of the clearest examples of scaled public-sector AI in Aotearoa. A February 2026 announcement said the tool was live in every emergency department and had reached 1,250 doctors and frontline staff. The Public Service Commission’s October update described deployment across 39 hospitals. ([beehive.govt.nz](https://www.beehive.govt.nz/release/ai-scribe-now-every-emergency-department?utm_source=openai))
 
-The sector should therefore distinguish between **licensed capacity, active usage, operational deployment and demonstrated outcomes**.
+Health New Zealand has also established HealthX to identify, assess and scale clinician-led digital and AI tools. The programme says it introduced 12 initiatives between its launch in September 2025 and October 2026, including AI-assisted documentation and remote patient monitoring. This represents a shift from isolated experimentation to a repeatable adoption mechanism within a large public system.
 
-### The assurance model has moved closer, but is not yet operating as a central control
+### The national Govt.nz assistant remains unconfirmed
 
-A September OIA response provides a clearer timetable for the proposed [AI Assurance Model](https://www.digital.govt.nz/standards-and-guidance/technology-and-architecture/artificial-intelligence/public-service-ai-work-programme).
+The stated deadline for a Government New Zealand AI assistant was the end of September 2026. The current [Govt.nz app information](https://www.govt.nz/about/the-govt-nz-app) lists government services, emergency alerts, home-screen tools and a digital wallet, but does not identify an AI assistant as an available feature. The [Public Service AI Work Programme](https://www.digital.govt.nz/standards-and-guidance/technology-and-architecture/artificial-intelligence/public-service-ai-work-programme) continues to describe the assistant as a planned deliverable. ([hansard.parliament.nz](https://hansard.parliament.nz/hansard-transcript/2026-05-21/summary-offences-move-on-orders-amendment-bill?lang=en&sId=6f6bca78dabf44dea2284d6e866c4877&utm_source=openai))
 
-The response says the model is intended to support a consistent and proportionate approach to AI risk management and adoption across the public service. It is expected to be publicly available by the **end of October 2026**. The same response says the GDDA does not hold a central dashboard showing, across agencies:
+An Official Information Act release published in October 2026 also provides useful context. The released privacy assessments describe an earlier proof of concept and a 2025 pilot in an isolated sandbox. The pilot documents state that a production deployment would require further privacy assessment and controls. These documents do not establish that a production service was launched later, but they reinforce the distinction between a successful pilot and a live public service. ([publicservice.govt.nz](https://www.publicservice.govt.nz/assets/DirectoryFile/OIA-2026-0224-Information-request-regarding-Maori-data-governance-and-artificial-intelligence-use-Documents-released.pdf))
 
-- Adoption of agency AI policies.
-- Responsible-AI officials or governance groups.
-- AI registers and impact assessments.
-- Pre-deployment assurance or independent review.
-- Operational monitoring or audit.
-- AI incidents or material control failures.
-- Known assurance capability or evidence gaps. ([publicservice.govt.nz](https://www.publicservice.govt.nz/assets/DirectoryFile/OIA-2026-0222-Information-request-regarding-government-assurance-and-oversight-of-artificial-intelligence-use.pdf))
+The assistant should therefore still be described as **planned or unconfirmed**, not as a completed national deployment.
 
-This is a material qualification to the previous edition’s description of a visibility gap. The gap is not merely that information has not been published. In several areas, the central system lead does not hold the information in consolidated form.
+### Workforce capability has become a formal system activity
 
-### The national AI assistant has missed the point at which a launch should have been observable
+On 18 August 2026, the Government Digital Delivery Agency and Leadership Development Centre released a four-part [AI Development Series](https://dns.govt.nz/news/new-ai-training-supports-safe-and-practical-use-across-the-public-service). The material covers AI fundamentals, responsible use, practical prompting and the implications of AI for public-sector work. It is available through the Public Service Core Learning Hub. ([dns.govt.nz](https://dns.govt.nz/news/new-ai-training-supports-safe-and-practical-use-across-the-public-service))
 
-On **21 May 2026**, the Minister for the Public Service and Digitising Government told Parliament that an AI assistant for Government New Zealand would be available by the end of September 2026. ([hansard.parliament.nz](https://hansard.parliament.nz/hansard-transcript/2026-05-21/summary-offences-move-on-orders-amendment-bill?lang=en&sId=6f6bca78dabf44dea2284d6e866c4877&utm_source=openai))
+This is a meaningful capability development step, but the public evidence does not yet show participation rates, completion rates, changes in staff behaviour or whether training is tailored to higher-risk roles such as case workers, procurement officers, clinicians and regulatory staff.
 
-As at **1 October 2026**, the official [Govt.nz app page](https://www.govt.nz/about/the-govt-nz-app) lists emergency alerts, government services, home-screen tools and an upcoming digital wallet. It does not list an AI assistant among the app’s current features. The page was last updated on **14 September 2026** and says digital credentials are coming in October 2026, but it does not confirm a public AI assistant release. ([www.govt.nz](https://www.www.govt.nz/about/the-govt-nz-app/))
+### The assurance deadline has become a test of delivery
 
-The [Public Service AI Work Programme](https://www.digital.govt.nz/standards-and-guidance/technology-and-architecture/artificial-intelligence/public-service-ai-work-programme) still describes the Govt.nz assistant as a planned deliverable. The available evidence therefore supports a more cautious conclusion than the previous edition: the assistant’s public launch is **not confirmed and appears not to have been publicly evidenced by the stated end-September target**. This may represent a delay, a limited release not yet documented in the main public channels, or a change in scope.
+The September OIA response indicated that an AI Assurance Model was expected by the end of October 2026. As at 1 November, the public AI Toolkit still presents general resources rather than a clearly published assurance model with a common risk taxonomy, mandatory evidence requirements, incident reporting process or system-wide compliance view. ([publicservice.govt.nz](https://www.publicservice.govt.nz/assets/DirectoryFile/OIA-2026-0222-Information-request-regarding-government-assurance-and-oversight-of-artificial-intelligence-use.pdf))
 
-The distinction matters because the assistant is intended to be a shared, citizen-facing service rather than an internal productivity tool. Its deployment would require stronger evidence of accuracy, source traceability, accessibility, privacy protections, escalation and ongoing monitoring than a low-risk drafting assistant.
-
-### More operational case studies are now visible
-
-The latest evidence adds several concrete examples beyond the 2026 survey.
-
-- **Inland Revenue** reports that AI and optical character recognition helped process 70% of FamilyBoost claims, while an AI-powered call-summarisation tool delivered a reported 17% reduction in after-call time and was being rolled out more widely. These are agency-reported results, not independent evaluations. ([ird.govt.nz](https://www.ird.govt.nz/about-us/publications/annual-corporate-reports/annual-report/annual-report-2025/progressing-our-strategic-intentions/active-stewardship))
-- **Auckland Council** launched Ask Auckland Council, an AI assistant for reporting issues such as graffiti, illegal dumping, roaming dogs and missed bin collections. The council says an earlier test with 1,000 Aucklanders found that 80% considered it easy to use, compared with 42% for existing channels. These results are council-reported. ([ourauckland.aucklandcouncil.govt.nz](https://ourauckland.aucklandcouncil.govt.nz/news/2026/04/new-ai-assistant-for-fast-easy-problem-reporting/))
-- **Biosecurity New Zealand** began a four-month pilot of a generative-AI tool to support development of import health standards. The announcement explicitly says key decisions remain with biosecurity experts. This is evidence of a pilot, not scaled operational use. ([beehive.govt.nz](https://www.beehive.govt.nz/release/new-ai-tool-help-develop-biosecurity-standards))
+This does not prove that no internal work has occurred. It does mean that the public-facing assurance infrastructure has not yet become clearly observable in the same way as the deployment activity.
 
 ## Current State of AI Adoption
 
-### Adoption is broad, but concentrated in information work
+### The use-case count shows momentum, not maturity by itself
 
-The 2026 cross-agency survey remains the strongest cross-system source. It identifies the highest concentrations of activity in the social, justice, central-agency, health and finance sectors. Common functional areas include administration, digital and technology, communications, policy, project management, corporate services and human resources. Generative AI is the most common technology, followed by natural-language processing, agentic AI and machine learning. ([digital.govt.nz](https://www.digital.govt.nz/dmsdocument/264~report-2026-cross-agency-survey-for-artificial-intelligence-ai-use-cases/html?utm_source=openai))
-
-The pattern is consistent with adoption in other public administrations: agencies are starting with work where:
-
-- Inputs are primarily documents or text.
-- Outputs can be checked by a skilled employee.
-- The system does not itself determine eligibility or entitlement.
-- The process can be bounded by approved data sources.
-- Human escalation remains practical.
+The 2026 survey recorded a 100% increase in reported use cases compared with 2025. It also found that 167 cases were in operational phases, compared with approximately one-third of that number the previous year. The highest numbers were reported in the social, justice, central-agency, health and finance sectors. ([digital.govt.nz](https://www.digital.govt.nz/dmsdocument/264~report-2026-cross-agency-survey-for-artificial-intelligence-ai-use-cases/html?utm_source=openai))
 
 Common applications include:
 
@@ -121,287 +94,277 @@ Common applications include:
 - Information retrieval.
 - Classification and triage.
 - Consultation analysis.
-- Customer-service assistance.
+- Customer-service support.
 - Policy and legal research.
-- Document and claims processing.
+- Claims and document processing.
+- Clinical transcription.
 - Workflow and project reporting.
 
-There is still insufficient public evidence that autonomous agents are operating widely in high-consequence decisions involving benefits, immigration, justice, health treatment or enforcement.
+The pattern remains consistent: organisations start with work in which inputs are largely textual, outputs can be checked by a skilled employee and the system does not itself determine an individual’s legal entitlement or treatment.
 
-### Operational maturity is increasing, but the category remains broad
+The survey’s “operational” category is still broad. It may include a small internal assistant, a production workflow used by a specialist team or a service handling thousands of transactions. The public sector does not yet publish a common maturity framework separating those cases.
 
-The 167 operational cases reported in 2026 are an important maturity signal. They indicate that more systems have moved beyond design, exploration or proof-of-concept stages. ([digital.govt.nz](https://www.digital.govt.nz/dmsdocument/264~report-2026-cross-agency-survey-for-artificial-intelligence-ai-use-cases/html?utm_source=openai))
+### Enterprise tooling is creating capacity faster than value evidence
 
-However, “operational” does not necessarily mean:
+Microsoft Copilot licensing remains a visible indicator of investment. The September OIA disclosure recorded 28,728 Microsoft 365 Copilot licences, 99 Copilot Studio subscriptions and 937 legacy Copilot Studio licences as at 13 July 2026. The figures did not cover every agency, every AI product or actual usage. ([publicservice.govt.nz](https://www.publicservice.govt.nz/assets/DirectoryFile/OIA-2026-0217-Information-request-regarding-AI-licences-held-by-each-government-department.pdf))
 
-- Nationally scaled.
-- Used by large numbers of staff or customers.
-- Integrated into core systems.
-- Independently evaluated.
-- Reliable without extensive human checking.
-- Cost-effective after licensing, integration and assurance costs.
+The appropriate distinction is:
 
-The public evidence still lacks a common maturity framework that distinguishes a small internal assistant from a production service handling thousands of transactions. The next improvement in sector reporting should be a shift from use-case counts to operational measures such as active users, transaction volumes, human-review rates, error rates, escalation rates, cost per transaction and service-quality outcomes.
+1. Licence purchased.
+2. Staff member enabled.
+3. Active user.
+4. Workflow integrated.
+5. Production use.
+6. Demonstrated outcome.
 
-### Enterprise tooling is becoming the default route to adoption
+New Zealand’s public reporting currently moves most easily between the first and fifth categories. It rarely provides the evidence needed for the sixth.
 
-The Copilot licence disclosure suggests that much public-sector adoption is occurring through enterprise productivity suites rather than bespoke national AI systems. This approach has practical advantages:
+### Health is currently the most advanced deployment domain
 
-- Procurement and security arrangements can be shared.
-- Agencies can begin with familiar tools.
-- Data-access controls and identity management are inherited from existing platforms.
-- Staff can use AI in existing applications such as email, documents, meetings and spreadsheets.
+Health New Zealand’s AI scribe deployment is notable because it combines:
 
-It also creates risks. A high licence count can produce the appearance of adoption without corresponding workflow redesign or measurable value. It can also increase dependence on a small number of vendors and make it difficult to identify where AI is being used when functionality is embedded in ordinary software.
+- A clearly defined administrative problem.
+- A national operating environment.
+- Human review of generated clinical notes.
+- A workforce-led adoption mechanism through HealthX.
+- Public reporting of deployment scale.
 
-### Inland Revenue is a clearer example of workflow integration
+The February announcement reported that doctors using the tool saw, on average, one additional patient per shift because of time saved on documentation. It also reported positive staff feedback from Middlemore Hospital. These results are provider-reported and early; they are not an independent evaluation of clinical quality, patient safety, equity or total system cost. ([beehive.govt.nz](https://www.beehive.govt.nz/release/ai-scribe-now-every-emergency-department?utm_source=openai))
 
-Inland Revenue provides one of the strongest public examples of AI moving beyond general experimentation.
+Health New Zealand has also indicated interest in more than 1,000 additional licences, predominantly for mental-health teams. That would extend AI from documentation in emergency departments into a different clinical and privacy context, where language, risk and patient vulnerability require additional assurance. ([beehive.govt.nz](https://www.beehive.govt.nz/release/ai-scribe-now-every-emergency-department?utm_source=openai))
 
-Its 2025 annual reporting describes:
+### Local government is leading in visible citizen-facing use
 
-- AI and optical character recognition supporting FamilyBoost claim processing.
-- AI-powered call summarisation in customer support.
-- An AI fluency programme completed by approximately 2,000 staff.
-- Pilots in policy, legal, software testing and staff-support functions.
-- Work to consider whether tax legislation remains fit for purpose as AI changes how taxpayers obtain information and services. ([ird.govt.nz](https://www.ird.govt.nz/about-us/publications/annual-corporate-reports/annual-report/annual-report-2025/progressing-our-strategic-intentions/active-stewardship))
+Auckland Council’s Ask Auckland Council is a live example of a bounded public-facing service. By 20 June 2026, the council reported:
 
-The agency’s public AI page says AI is used to support productivity, decision-making, compliance-risk management and intervention design, while consequential activity remains subject to human oversight and decision-making. ([ird.govt.nz](https://www.ird.govt.nz/about-us/our-use-of-ai?utm_source=openai))
+- More than 4,000 issues submitted through the assistant.
+- More than 10,000 active sessions.
+- An estimated eight to nine minutes saved per request compared with calling the contact centre.
+- Support for reports involving tree issues, illegal dumping, graffiti, noise, roaming dogs and missed bin collections.
 
-This is a useful model of bounded adoption: AI is applied to high-volume administrative work and decision support, while legal accountability remains with the agency. The evidence is nevertheless principally self-reported, and the published material does not provide a full cost-benefit analysis or independent assessment of error and equity impacts.
+The council also reported that 80% of users in early testing found the tool easy or very easy to use, compared with 42% for existing channels. These are council-reported findings and do not establish whether reports are classified correctly, whether resolution times have improved or whether the service performs equally well across communities. ([ourauckland.aucklandcouncil.govt.nz](https://ourauckland.aucklandcouncil.govt.nz/news/2026/06/ai-tool-saves-aucklanders-up-to-nine-minutes-per-request/))
 
-### Local government is producing some of the most visible citizen-facing deployments
+### Agentic use is emerging in controlled administrative workflows
 
-Auckland Council’s Ask Auckland Council is more advanced publicly than the national Govt.nz assistant. It is available through a web interface and supports problem reporting across several categories. The council says it can interpret everyday language, understand people and place names in te reo Māori, ask follow-up questions and analyse uploaded photographs. ([ourauckland.aucklandcouncil.govt.nz](https://ourauckland.aucklandcouncil.govt.nz/news/2026/04/new-ai-assistant-for-fast-easy-problem-reporting/))
+The Ministry of Justice’s Commercial Services team has used AI agents to reconstruct contract histories from contracts, variations, statements of work and correspondence. The system produces structured contract-management plans, but mandatory human validation remains in place. The Ministry reports that the work has saved hundreds of hours across high-risk and high-value contracts. ([publicservice.govt.nz](https://www.publicservice.govt.nz/news/creating-positive-change-through-new-approaches-and-technologies?_searchAnalytics=eyJlbmdpbmVOYW1lIjoicHJvZC10a20iLCJxdWVyeVN0cmluZyI6IiIsImRvY3VtZW50SWQiOiJzaWx2ZXJzdHJpcGVfY21zX21vZGVsX3NpdGV0cmVlXzI2MjciLCJyZXF1ZXN0SWQiOiJCRVlDM3RJYlEyT0ZidUxCN1YxN3V3In0%3D&utm_source=openai))
 
-This deployment is significant for three reasons:
+This is a more consequential use of AI than drafting an email because the output informs commercial management and decision-making. Its governance is therefore important: retrieval boundaries, source traceability, version control and human validation matter at least as much as the language model itself.
 
-1. It connects AI to a defined service transaction rather than general conversation.
-2. It uses multimodal input, including photographs.
-3. It has been tested with members of the public before wider release.
+### AI is moving into field operations and surveillance
 
-The council’s reported user results are encouraging, but they should not be treated as independent evidence of long-term service improvement. The published material does not report sustained usage, correction rates, complaint rates, cost per report or whether faster reporting leads to faster resolution.
+Biosecurity New Zealand’s yellow-legged hornet response illustrates a different adoption path. AI-enabled cameras are being used alongside traps, radio trackers, thermal drones, bait stations and field teams. MPI says the cameras can identify hornets and automatically alert staff, allowing field resources to be directed more efficiently. ([mpi.govt.nz](https://www.mpi.govt.nz/biosecurity/how-to-find-report-and-prevent-pests-and-diseases/bee-biosecurity/yellow-legged-hornet-sightings-in-auckland-in-2025?utm_source=openai))
 
-### Public-sector AI is also creating new procurement and professional-assurance risks
-
-September reporting on Wellington City Council’s $435,000 Deloitte staffing report alleged that large portions of the report were written using AI and identified serious underlying data and calculation errors. The council decided not to seek a refund, while Deloitte maintained that AI-enabled tools were used with human sign-off. This is a media-reported case rather than an audited finding about the exact extent of AI use. ([RNZ report](https://unmasked.goodfriends.workers.dev/megan-https-www.radionz.co.nz/news/politics/1333511/wellington-city-council-not-seeking-refund-for-flawed-report)) ([unmasked.goodfriends.workers.dev](https://unmasked.goodfriends.workers.dev/megan-https-www.radionz.co.nz/news/politics/1333511/wellington-city-council-not-seeking-refund-for-flawed-report?utm_source=openai))
-
-The case is relevant even though it concerns consultancy work rather than a government-built AI system. It illustrates a wider assurance problem: human sign-off is not sufficient if reviewers do not independently verify source data, calculations, assumptions and conclusions. Public agencies procuring AI-enabled professional services will need to specify:
-
-- When AI may be used.
-- What must be disclosed.
-- What evidence must be retained.
-- Who is responsible for checking outputs.
-- What quality controls apply to quantitative analysis.
-- How errors and remediation will be handled.
+The October Public Service Commission update said the operation had deployed 10 AI detection cameras, more than 2,300 traps, nearly 12,000 bait stations and 200 radio trackers. This is evidence of AI being embedded in a real biosecurity operation rather than tested only in a laboratory or demonstration environment. It does not, however, isolate the contribution of the AI cameras from the wider surveillance system. ([publicservice.govt.nz](https://www.publicservice.govt.nz/news/creating-positive-change-through-new-approaches-and-technologies?_searchAnalytics=eyJlbmdpbmVOYW1lIjoicHJvZC10a20iLCJxdWVyeVN0cmluZyI6IiIsImRvY3VtZW50SWQiOiJzaWx2ZXJzdHJpcGVfY21zX21vZGVsX3NpdGV0cmVlXzI2MjciLCJyZXF1ZXN0SWQiOiJCRVlDM3RJYlEyT0ZidUxCN1YxN3V3In0%3D&utm_source=openai))
 
 ## Governance, Policy and Regulation
 
-### The operating model remains principles-led
+### The policy model remains principles-led and non-binding
 
-The [Public Service AI Framework](https://www.digital.govt.nz/standards-and-guidance/technology-and-architecture/artificial-intelligence/public-service-artificial-intelligence-framework) and [Responsible AI Guidance for the Public Service](https://www.digital.govt.nz/standards-and-guidance/technology-and-architecture/artificial-intelligence/responsible-ai-guidance-for-the-public-service-genai) remain the central instruments for public-sector AI governance.
+The [Public Service AI Framework](https://www.digital.govt.nz/standards-and-guidance/technology-and-architecture/artificial-intelligence/public-service-artificial-intelligence-framework) sets principles covering inclusive development, human-centred values, transparency and explainability, safety and security, and accountability. Agencies are encouraged to align with it, but the framework is not binding. ([digital.govt.nz](https://www.digital.govt.nz/standards-and-guidance/technology-and-architecture/artificial-intelligence/public-service-artificial-intelligence-framework))
 
-They emphasise human-centred values, transparency, accountability, safety, security, fairness and responsible use. The framework is designed to guide agency decisions rather than create a single statutory approval regime. The Government’s wider AI strategy also relies primarily on existing law, including privacy, consumer-protection and human-rights obligations, rather than a dedicated AI Act. ([beehive.govt.nz](https://www.beehive.govt.nz/release/guidance-safe-use-ai-public-sector?utm_source=openai))
+New Zealand’s stated approach remains light-touch, proportionate and risk-based. The framework points agencies to existing obligations including the Privacy Act 2020, Official Information Act 1982, Public Records Act 2005, Human Rights Act 1993, Bill of Rights Act 1990 and Treaty obligations, rather than creating a standalone AI Act. ([digital.govt.nz](https://www.digital.govt.nz/standards-and-guidance/technology-and-architecture/artificial-intelligence/public-service-artificial-intelligence-framework))
 
-This flexible approach is proportionate for low-risk experimentation, but it places more responsibility on agencies to identify risk, document controls and publish information. It also makes central visibility more important. Without consistent registers and assurance evidence, principles can remain aspirational.
+This approach can support experimentation, particularly for low-risk internal use. Its weakness is that outcomes depend heavily on agency capability and the quality of local governance.
 
-### The AI Assurance Model is the key near-term governance test
+### Central visibility remains incomplete
 
-The proposed AI Assurance Model is intended to turn broad principles into practical evidence requirements. According to the September OIA response, it is expected to support consistent risk management and proportionate adoption across the public service, with publication due by the end of October 2026. ([publicservice.govt.nz](https://www.publicservice.govt.nz/assets/DirectoryFile/OIA-2026-0222-Information-request-regarding-government-assurance-and-oversight-of-artificial-intelligence-use.pdf))
+The previous update identified that the GDDA did not hold a consolidated view of agency AI policies, impact assessments, operational audits, incidents or assurance gaps. Nothing in the latest public material indicates that this problem has been resolved.
 
-A credible model should clarify:
+The July [Digital Reset Plan](https://www.publicservice.govt.nz/news/rapid-review-proposes-reset-for-digital-delivery) found that digital investment across government remained fragmented, with duplication, weak system-level prioritisation and limited GDDA influence over funding, design and procurement. Those findings are broader than AI, but they directly affect the ability to scale AI safely and consistently. ([publicservice.govt.nz](https://www.publicservice.govt.nz/news/rapid-review-proposes-reset-for-digital-delivery?_searchAnalytics=eyJlbmdpbmVOYW1lIjoicHJvZC10a20iLCJxdWVyeVN0cmluZyI6IiIsImRvY3VtZW50SWQiOiJzaWx2ZXJzdHJpcGVfY21zX21vZGVsX3NpdGV0cmVlXzI1NzAiLCJyZXF1ZXN0SWQiOiI1bU5fai1IVVRrdUM3QU0xRm84ZnRBIn0%3D&utm_source=openai))
 
-- Which use cases require pre-deployment approval.
-- How AI systems are risk-tiered.
-- When an algorithm or AI impact assessment is required.
-- Minimum requirements for human oversight and contestability.
-- Monitoring expectations after deployment.
-- How agencies should record incidents, exceptions and risk acceptance.
-- What evidence should be made public.
-- How suppliers and contractors are held accountable.
+AI adoption depends on the surrounding digital system: reliable data, identity, records, procurement, security, architecture and benefits measurement. A central AI framework cannot compensate for weak foundations in those areas.
 
-The model’s success will depend less on its wording than on whether agencies use it consistently and whether the GDDA can identify when controls are absent.
+### Māori data governance is still thinly evidenced
 
-### Central governance responsibilities remain incompletely documented
+An October OIA release concerning the Public Service Commission’s own AI use provides a useful, limited example. The Commission said it had no separate Te Tiriti analysis, iwi or Māori engagement, or documents specifically addressing Māori data sovereignty for its AI systems. It also said its approved Microsoft Copilot tool did not use Commission information to train, fine-tune or test the underlying models. ([publicservice.govt.nz](https://www.publicservice.govt.nz/assets/DirectoryFile/OIA-2026-0224-Information-request-regarding-Maori-data-governance-and-artificial-intelligence-use.pdf))
 
-A separate OIA response found that the Public Service Commission did not hold information detailing cross-government AI governance structures, the division of responsibilities among agencies, external advisory mechanisms, or the staff and budget dedicated specifically to cross-government AI governance and risk management. ([publicservice.govt.nz](https://www.publicservice.govt.nz/assets/DirectoryFile/OIA-2026-0223-Information-request-regarding-government-AI-governance-and-risk-management.pdf))
+This response relates to one organisation and should not be generalised across the public sector. It does, however, illustrate a wider evidence problem: references to Māori interests and data sovereignty are common in policy, while public documentation of how those principles change system design, procurement, testing and monitoring remains limited.
 
-This does not mean that no agency has governance arrangements. It means that the central system does not hold a complete, consolidated description of them. For stakeholders, the distinction is important:
+### Procurement assurance is becoming more important
 
-- Agency-level governance may exist.
-- Cross-government coordination may be developing.
-- Central oversight and reporting are not yet fully visible.
+AI is increasingly entering the public sector through software suites, consultants, clinical suppliers and professional-service providers. Agencies may not operate the underlying model, but they remain accountable for work they purchase and rely on.
 
-The result is a distributed model in which capability varies by agency. Larger organisations can support specialist privacy, security, data, legal and procurement functions; smaller councils and agencies may need shared tools and templates to reach the same standard.
+Contracts and procurement processes should address:
 
-### Regulators are being encouraged to use AI in lower-risk work
+- Whether AI may be used.
+- What suppliers must disclose.
+- Where data is processed and stored.
+- What records and prompts must be retained.
+- How outputs are checked.
+- How model changes are managed.
+- Who carries responsibility for errors.
+- What audit and remediation rights apply.
 
-In May 2026, the Government issued guidance to regulators on using AI to increase productivity. The guidance identifies applications such as detecting non-compliance, prioritising monitoring, surfacing evidence and identifying patterns in large datasets, while stating that regulatory decisions remain dependent on human judgement, legal interpretation and accountability. ([beehive.govt.nz](https://www.beehive.govt.nz/release/ai-guidance-issued-clipboard-wielders-how-raise-productivity?utm_source=openai))
-
-This expands the public-sector AI agenda beyond administrative assistance. Risk-based monitoring and inspection prioritisation can materially affect who receives scrutiny and how public resources are allocated. The relevant governance questions are therefore not only whether a model is accurate, but also:
-
-- Which groups may be over-selected for intervention.
-- Whether people can challenge an AI-informed prioritisation.
-- Whether proxy variables reproduce historic bias.
-- Whether staff understand the difference between a risk signal and a finding.
-- Whether the model is monitored for drift.
+Human sign-off is necessary in many settings, but it is not sufficient unless the reviewer has access to source material, time to check the result and clear responsibility for doing so.
 
 ## Case Studies
 
-### Case Study 1: Microsoft Copilot across the public sector
+### Case Study 1: HealthX and emergency-department AI scribes
 
-**Status:** Large shared licence footprint; actual usage and outcomes not centrally measured.
+**Status:** National frontline deployment; benefits evidence is early and mainly self-reported.
 
-The September OIA release provides the clearest available indication of enterprise AI capacity across government. It recorded 28,728 Microsoft 365 Copilot licences as at 13 July 2026, but did not cover every department or every AI product. ([publicservice.govt.nz](https://www.publicservice.govt.nz/assets/DirectoryFile/OIA-2026-0217-Information-request-regarding-AI-licences-held-by-each-government-department.pdf))
+The AI scribe creates draft clinical notes and related documentation from consultations. Clinicians review and confirm the output. The tool has been deployed across emergency departments, reaching 1,250 clinicians in 39 hospitals according to Health New Zealand’s HealthX reporting. ([publicservice.govt.nz](https://www.publicservice.govt.nz/news/creating-positive-change-through-new-approaches-and-technologies?_searchAnalytics=eyJlbmdpbmVOYW1lIjoicHJvZC10a20iLCJxdWVyeVN0cmluZyI6IiIsImRvY3VtZW50SWQiOiJzaWx2ZXJzdHJpcGVfY21zX21vZGVsX3NpdGV0cmVlXzI2MjciLCJyZXF1ZXN0SWQiOiJCRVlDM3RJYlEyT0ZidUxCN1YxN3V3In0%3D&utm_source=openai))
 
-The case illustrates the difference between procurement scale and operational maturity. Licences may support experimentation, training, occasional use or regular workflow integration. Until agencies publish active-use and outcome data, the number should be treated as an infrastructure indicator rather than a productivity result.
+This is currently the strongest example of public-sector AI moving from pilot to national operational use. The main outstanding questions concern clinical error rates, patient consent and understanding, performance across accents and languages, information retention, and whether time saved is converted into better care rather than simply higher workload.
 
-### Case Study 2: Inland Revenue’s administrative and customer-support use
+### Case Study 2: Biosecurity New Zealand’s AI-enabled hornet surveillance
 
-**Status:** Several AI-enabled functions reported in operation or wider rollout; results primarily self-reported.
+**Status:** Operating within a live eradication response.
 
-Inland Revenue reports that AI and optical character recognition support processing of 70% of FamilyBoost claims. It also reports a 17% reduction in post-call time from an AI call-summarisation tool that was being rolled out across frontline services. ([ird.govt.nz](https://www.ird.govt.nz/about-us/publications/annual-corporate-reports/annual-report/annual-report-2025/progressing-our-strategic-intentions/active-stewardship))
+AI-enabled cameras are being used to identify yellow-legged hornets and alert field teams. The technology operates as one component in a broader system involving public reports, traps, bait stations, radio tracking and human surveillance. ([mpi.govt.nz](https://www.mpi.govt.nz/biosecurity/how-to-find-report-and-prevent-pests-and-diseases/bee-biosecurity/yellow-legged-hornet-sightings-in-auckland-in-2025?utm_source=openai))
 
-The agency has combined deployment with capability-building: approximately 2,000 staff completed its AI fluency programme, and the training materials are being adapted for wider public-sector use. It also maintains public information on its AI governance approach, including human oversight and obligations under the Revenue Acts, Privacy Act and Algorithm Charter. ([ird.govt.nz](https://www.ird.govt.nz/about-us/publications/annual-corporate-reports/annual-report/annual-report-2025/progressing-our-strategic-intentions/active-stewardship))
+The case demonstrates the value of AI when it is integrated into an operational response with human escalation. It also shows why attribution matters: the public evidence does not yet quantify how many detections or hours saved are attributable specifically to the AI cameras.
 
-The main evidence gap is independent validation. The published figures do not show whether the time savings persist at scale, whether quality improves, or whether the systems affect different customer groups differently.
+### Case Study 3: Ministry of Justice contract-management agents
 
-### Case Study 3: Ask Auckland Council
+**Status:** Operating workflow; results reported by the agency.
 
-**Status:** Public-facing service launched; reported usability testing completed.
+The Ministry’s Commercial Services team uses AI agents to reconstruct contract histories and prepare structured management plans. Human validation is mandatory, and the solution was built using existing licences. The Ministry reports hundreds of hours saved across high-value contracts. ([publicservice.govt.nz](https://www.publicservice.govt.nz/news/creating-positive-change-through-new-approaches-and-technologies?_searchAnalytics=eyJlbmdpbmVOYW1lIjoicHJvZC10a20iLCJxdWVyeVN0cmluZyI6IiIsImRvY3VtZW50SWQiOiJzaWx2ZXJzdHJpcGVfY21zX21vZGVsX3NpdGV0cmVlXzI2MjciLCJyZXF1ZXN0SWQiOiJCRVlDM3RJYlEyT0ZidUxCN1YxN3V3In0%3D&utm_source=openai))
 
-Ask Auckland Council was launched in April 2026 to help residents report problems including graffiti, illegal dumping, roaming dogs, missed bin collections and party noise. The council says the assistant can interpret natural language, understand te reo Māori place and people names, ask follow-up questions and analyse photographs. ([ourauckland.aucklandcouncil.govt.nz](https://ourauckland.aucklandcouncil.govt.nz/news/2026/04/new-ai-assistant-for-fast-easy-problem-reporting/))
+The case is significant because it shows agentic capability being applied to a constrained back-office task without delegating final authority. A credible evaluation would report the number of contracts processed, correction rates, time saved per contract, and whether the system improves auditability.
 
-Before launch, the council made the assistant available to 1,000 Aucklanders reflecting the city’s demographic profile. It reports that 80% of users found the tool easy to use, compared with 42% for existing channels. ([ourauckland.aucklandcouncil.govt.nz](https://ourauckland.aucklandcouncil.govt.nz/news/2026/04/new-ai-assistant-for-fast-easy-problem-reporting/))
+### Case Study 4: Ask Auckland Council
 
-This is one of the clearest examples of a New Zealand public body moving from internal experimentation to a defined citizen-facing workflow. Its longer-term value will depend on whether reports are correctly classified, whether the assistant reduces incomplete submissions, and whether council response times improve.
+**Status:** Public-facing service in operation.
 
-### Case Study 4: Biosecurity New Zealand’s import-health-standard pilot
+Ask Auckland Council supports problem reporting through a conversational interface and can use photographs, follow-up questions and information about locations and issue types. The council reports growing usage and eight to nine minutes saved per request compared with contact-centre calls. ([ourauckland.aucklandcouncil.govt.nz](https://ourauckland.aucklandcouncil.govt.nz/news/2026/06/ai-tool-saves-aucklanders-up-to-nine-minutes-per-request/))
 
-**Status:** Four-month pilot announced and under development; no public evidence of scaled operation or final results.
+The service is a good example of a narrow citizen workflow. It avoids asking a general-purpose model to answer all government questions and instead connects AI to a defined process with a clear hand-off to council operations.
 
-Biosecurity New Zealand began developing and testing a generative-AI tool to support the document-heavy process of developing import health standards. The Government said the tool would assist with the work while key decisions remained with Biosecurity New Zealand experts. ([beehive.govt.nz](https://www.beehive.govt.nz/release/new-ai-tool-help-develop-biosecurity-standards))
+### Case Study 5: Hutt City Council
 
-This is a representative use case for public-sector AI: large volumes of technical material, a need for evidence retrieval and summarisation, and a clear requirement for expert accountability. As at 1 October 2026, no public evaluation of the pilot’s accuracy, time savings, error rates or safety controls has been identified.
+**Status:** Organisation-wide adoption with public register; several initiatives remain in development.
 
-### Case Study 5: Govt.nz AI assistant
+Hutt City Council reports 300 secure AI licences, a range of internal AI assistants and a public AI register. Its examples include meeting-minute drafting, project briefs, report review, traffic-management-plan review and administrative support for building and consent processes. ([huttcity.govt.nz](https://www.huttcity.govt.nz/council/our-projects/ai-at-council))
 
-**Status:** Planned or unconfirmed national deployment.
+The council is also developing a Community Emergency Response Assistant prototype and exploring AI for LIMs, resource-consent workflows and invoice automation. The council reports that invoice automation saves three to five minutes per invoice, but these results are early and self-reported. The LIM, consent and emergency-response initiatives should be treated as trials or prototypes rather than established production services. ([huttcity.govt.nz](https://www.huttcity.govt.nz/council/our-projects/ai-at-council))
 
-The 2025 pilot tested an AI assistant across government websites and found that 85% of participants considered it more efficient than their previous search methods. It also identified risks involving incorrect information, invented links, overconfidence, personal-data disclosure and confusion between navigation and transactions. ([digital.govt.nz](https://www.digital.govt.nz/blog/lessons-unlocked-what-we-learnt-from-our-ai-assistant-pilot?utm_source=openai))
-
-The pilot’s findings support a cautious design: the assistant should guide users to authoritative information, show sources, acknowledge uncertainty and avoid replacing transactional systems. However, the publicly available Govt.nz app information as at 14 September 2026 does not confirm that the assistant has launched. ([www.govt.nz](https://www.www.govt.nz/about/the-govt-nz-app/))
-
-The project has consequently become a test not only of conversational AI, but of whether government can maintain reliable content, source ownership and rapid correction across multiple agencies.
+Hutt City is notable less for any single tool than for its transparency model: an AI strategy, policy, governance group, risk framework and public register are visible together.
 
 ## Trends
 
-### 1. The licence economy is expanding faster than the measurement system
+### 1. Bounded workflows are outperforming general-purpose public assistants
 
-The public service now has evidence of a large enterprise-AI licence footprint, but not of active usage or realised benefits. This creates a risk that adoption will be reported through procurement and availability rather than through actual service performance.
+The most credible deployments are narrow:
 
-Future reporting should separate:
+- Clinical documentation.
+- Biosecurity surveillance.
+- Contract-history reconstruction.
+- Problem reporting.
+- Invoice and document processing.
 
-- Licences purchased.
+These workflows have defined inputs, outputs, owners and escalation paths. By contrast, the national Govt.nz assistant remains unconfirmed, suggesting that broad conversational access across multiple agencies is harder to operationalise than focused services.
+
+### 2. Deployment is accelerating faster than benefits measurement
+
+The survey measures use cases. OIA releases measure licences. Agencies report time savings and user satisfaction. None of these measures alone establishes public value.
+
+Future reporting should distinguish:
+
 - Active users.
-- Regular users.
-- Operational workflows.
 - Transactions assisted.
 - Human-review rates.
-- Errors and escalations.
-- Costs avoided or incurred.
-- Service and equity outcomes.
+- Error and correction rates.
+- Escalations and complaints.
+- Processing-time changes.
+- Cost per transaction.
+- Workforce workload.
+- Equity and accessibility outcomes.
+- Costs of integration, training and assurance.
 
-### 2. Central assurance is catching up with decentralised experimentation
+Without these measures, the system can identify “busy AI” but not necessarily valuable AI.
 
-The AI Assurance Model, AI policy template and Public Service AI Framework indicate that central government is building common controls. The OIA releases show that central visibility is still incomplete and that the assurance model has not yet become a consolidated monitoring system. ([publicservice.govt.nz](https://www.publicservice.govt.nz/assets/DirectoryFile/OIA-2026-0222-Information-request-regarding-government-assurance-and-oversight-of-artificial-intelligence-use.pdf))
+### 3. Health and local government are becoming practical test beds
 
-The next stage will require more than guidance. Agencies need reusable assessment templates, a common risk taxonomy, supplier controls, monitoring practices and a way to report incidents and lessons across organisational boundaries.
+Health has the strongest evidence of national deployment. Councils have produced some of the clearest public-facing examples and, in Hutt City’s case, a more visible public register.
 
-### 3. Public-facing deployment is slower than internal productivity use
+This may reflect the practical advantages of smaller or more focused operating environments. A council can connect an assistant to a defined service catalogue, while a national service must reconcile content ownership, privacy, accessibility, legal responsibility and changing information across many agencies.
 
-Internal assistants can be deployed with limited exposure if staff are expected to check outputs. Public-facing tools create a different risk profile. Errors may affect people who lack the time, confidence or knowledge to challenge them.
+### 4. Enterprise software is the default adoption route
 
-Auckland Council has moved ahead with a constrained service workflow. The national Govt.nz assistant, by contrast, had a stated end-September target that is not publicly confirmed as delivered. The contrast suggests that focused, bounded services may be easier to operationalise than a general cross-government interface.
+Much adoption appears to be occurring through Microsoft Copilot, Copilot Studio and other existing platforms. This lowers procurement barriers and allows agencies to use familiar identity, security and records-management infrastructure.
 
-### 4. AI is being connected to workforce and structural reform
+It also makes adoption harder to observe. AI features embedded in ordinary productivity tools may not appear as separate systems in agency registers, while licences may be purchased before workflows are redesigned. The boundary between “using software with AI features” and “operating an AI system” is becoming increasingly important for reporting.
 
-Government policy continues to associate AI with productivity, agency consolidation and public-service transformation. The May 2026 public-service overhaul announcement explicitly linked reducing the number of departments with increasing use of AI and other digital tools. ([beehive.govt.nz](https://www.beehive.govt.nz/release/public-service-be-overhauled?utm_source=openai))
+### 5. AI is being linked to public-service reform and fiscal pressure
 
-This creates a higher burden of proof. AI-related savings should account for:
+Government’s wider public-service reform agenda continues to frame digital technology and AI as ways to increase productivity and reduce costs. The July Digital Reset Plan, however, found that the system’s investment and delivery settings were not working effectively. ([publicservice.govt.nz](https://www.publicservice.govt.nz/news/rapid-review-proposes-reset-for-digital-delivery?_searchAnalytics=eyJlbmdpbmVOYW1lIjoicHJvZC10a20iLCJxdWVyeVN0cmluZyI6IiIsImRvY3VtZW50SWQiOiJzaWx2ZXJzdHJpcGVfY21zX21vZGVsX3NpdGV0cmVlXzI1NzAiLCJyZXF1ZXN0SWQiOiI1bU5fai1IVVRrdUM3QU0xRm84ZnRBIn0%3D&utm_source=openai))
 
-- Licences and model usage.
-- Integration and data-cleaning work.
-- Cybersecurity and privacy controls.
-- Human review.
-- Training and change management.
-- Error correction and public appeals.
-- Retention of specialist knowledge.
+This creates a risk of overclaiming. AI savings should account for licensing, integration, data remediation, staff training, human review, error correction and changes in demand. Reducing headcount is not the same as improving service productivity if remaining staff, suppliers or citizens absorb the work.
 
-Without this accounting, claimed productivity gains may represent work transferred to employees, contractors or customers rather than work removed from the system.
+### 6. Transparency is emerging unevenly
 
-### 5. Cultural capability is becoming a practical implementation issue
+Some agencies are publishing their own AI statements, privacy assessments, registers and use-case descriptions. Hutt City Council is a strong example. The Public Service Commission also publishes a transparency statement and a privacy impact assessment for its Microsoft Copilot use. ([huttcity.govt.nz](https://www.huttcity.govt.nz/council/our-projects/ai-at-council))
 
-The public service cannot treat responsible AI as a generic compliance exercise. Systems used in health, social development, justice, biosecurity and local government may affect Māori data, te reo Māori, tikanga, collective interests and relationships with iwi and communities.
-
-The relevant question is not only whether an interface supports te reo Māori. It is whether the system’s data, assumptions, escalation routes and decision boundaries are appropriate for the people and communities affected.
-
-### 6. Procurement assurance is becoming as important as model assurance
-
-The Wellington consultancy controversy, whether or not every reported detail is ultimately substantiated, illustrates the difficulty of supervising AI-enabled professional work. A public agency may not operate the model itself, but it remains responsible for the quality of work it buys and relies on.
-
-Contracts for AI-enabled services should address disclosure, data handling, verification, audit trails, source checking, model changes and liability. Human sign-off should be treated as a control that requires evidence, not as a substitute for evidence.
+However, agency-level transparency remains voluntary and inconsistent. The absence of a consolidated public register means that stakeholders cannot yet determine how many systems are operating in high-impact domains, which are independently assessed, or where agencies have accepted residual risk.
 
 ## Outlook
 
-### Publication of the AI Assurance Model
+### The AI Assurance Model remains the immediate governance test
 
-The most immediate development to watch is the promised publication of the AI Assurance Model by the end of October 2026. Its practical value will depend on whether it specifies minimum evidence requirements and whether agencies are expected to report compliance or exceptions. ([publicservice.govt.nz](https://www.publicservice.govt.nz/assets/DirectoryFile/OIA-2026-0222-Information-request-regarding-government-assurance-and-oversight-of-artificial-intelligence-use.pdf))
+The next important milestone is publication and implementation of the proposed AI Assurance Model. A useful model should specify:
 
-### Confirmation or revision of the Govt.nz assistant
+- Risk tiers for different types of AI use.
+- Minimum pre-deployment evidence.
+- Requirements for privacy, security, accessibility and equity assessment.
+- Human oversight and contestability.
+- Monitoring and incident reporting.
+- Supplier and model-change controls.
+- Public disclosure expectations.
+- Rules for high-impact or agentic systems.
 
-The national AI assistant now requires a clear status update. Government should distinguish among:
+Publication alone will not resolve the assurance gap. The more important question is whether agencies use a common model and whether the centre can identify missing controls.
 
-- A public production launch.
+### The next survey should measure outcomes
+
+The annual survey should evolve from counting use cases to measuring operational value. It should capture deployment scale, users, transactions, human-review rates, error rates, costs and outcomes.
+
+The survey should also record discontinued pilots. A stopped project can provide more useful evidence than a successful announcement if it shows that the technology failed to meet accuracy, cost, privacy or equity requirements.
+
+### Govt.nz needs a clear status decision
+
+The Government should publicly distinguish between:
+
+- A production launch.
 - A limited or invite-only release.
 - A technical deployment not yet promoted.
 - A delayed project.
 - A revised scope within the Govt.nz app programme.
 
-The absence of a clear public status creates avoidable uncertainty about delivery, cost and accountability.
+The longer the status remains unclear, the harder it is for the public and Parliament to assess delivery against the end-September 2026 commitment.
 
-### More agency-level transparency
+### High-consequence use will require stronger evidence
 
-The central system may not hold every agency’s AI information, but agencies can publish their own registers and summaries. Useful disclosures would include purpose, data sources, degree of autonomy, human controls, supplier, lifecycle stage, evaluation results and public contact points.
+AI use in clinical care, benefit administration, regulatory targeting, immigration, justice, compliance and enforcement should not be governed like internal drafting assistance.
 
-Local-government examples show that public registers and plain-language descriptions are feasible, even when they are not yet standard practice.
+For these uses, agencies will need to demonstrate:
 
-### Evidence on benefits and workforce effects
-
-The next cycle of reporting should move beyond claims of productivity and capture whether AI changes service quality, processing times, customer effort and employee workload. Agencies should also report where pilots have been stopped or scaled back. Negative results are valuable evidence for a sector learning how to deploy safely.
-
-### More scrutiny of regulatory and high-consequence uses
-
-As regulators and agencies apply AI to compliance, inspections, prioritisation and risk detection, the need for contestability and impact assessment will increase. Low-risk administrative assistance and high-impact prioritisation should not be governed as if they were the same category of use.
+- What the system is allowed to influence.
+- How people can challenge or correct an outcome.
+- How bias and unequal impacts are tested.
+- How human decision-makers use the output.
+- How performance is monitored after deployment.
+- When the system must be suspended or withdrawn.
 
 ## Overall Assessment
 
-As of **1 October 2026**, AI adoption in Aotearoa New Zealand’s public sector is best described as **operational expansion with an emerging but incomplete assurance infrastructure**.
+As of **1 November 2026**, AI in Aotearoa New Zealand’s public sector is best described as **operational expansion with uneven maturity and incomplete assurance**.
 
-The 2026 survey shows a substantial increase in reported use cases and operational activity. New licence data indicates that enterprise AI capacity is being distributed at considerable scale. Inland Revenue reports AI-enabled claims processing and customer-support gains, Auckland Council has launched a bounded public-facing assistant, and Biosecurity New Zealand is testing AI in technical regulatory work. ([digital.govt.nz](https://www.digital.govt.nz/dmsdocument/264~report-2026-cross-agency-survey-for-artificial-intelligence-ai-use-cases/html?utm_source=openai))
+The strongest evidence is no longer limited to pilots. AI scribes are operating across emergency departments, AI-enabled cameras are supporting biosecurity surveillance, Ministry of Justice agents are assisting contract management, and councils are connecting AI to public service transactions.
 
-The central weakness remains measurement. There is no complete public register of deployed AI, no consolidated view of agency assurance, and limited independent evidence of financial, service-quality, equity or workforce outcomes. The planned AI Assurance Model may address part of this gap, but its publication and adoption are still future milestones. ([publicservice.govt.nz](https://www.publicservice.govt.nz/assets/DirectoryFile/OIA-2026-0222-Information-request-regarding-government-assurance-and-oversight-of-artificial-intelligence-use.pdf))
+The public sector is still weak at proving value. Licence numbers, budget allocations and agency-reported time savings show momentum, but not necessarily durable productivity or better outcomes. Independent evidence on accuracy, equity, workforce effects, privacy and total cost remains thin.
 
-The national Govt.nz AI assistant is also no longer appropriately described as an imminent confirmed launch. A ministerial deadline of the end of September 2026 has passed, while the current Govt.nz app information does not identify the assistant as an available feature. ([hansard.parliament.nz](https://hansard.parliament.nz/hansard-transcript/2026-05-21/summary-offences-move-on-orders-amendment-bill?lang=en&sId=6f6bca78dabf44dea2284d6e866c4877&utm_source=openai))
+The governance model remains principles-led, with existing law and agency accountability doing most of the work. The proposed assurance model, public registers, system-wide monitoring and Māori data governance practices have not yet become sufficiently visible or consistent.
 
-The strongest path remains bounded augmentation:
+The practical direction is nevertheless becoming clearer:
 
-- AI processes, searches, drafts and summarises.
-- Public servants retain decision authority.
-- High-impact uses receive stronger assurance.
-- Public-facing systems show sources and uncertainty.
-- Agencies monitor errors, appeals and unequal impacts.
-- Procurement contracts preserve accountability.
-- Māori perspectives and data sovereignty are addressed at design and deployment stages.
+- Use AI first in bounded, reviewable workflows.
+- Keep decision authority with accountable people.
+- Measure actual usage and outcomes rather than licences alone.
+- Require stronger assurance for clinical, regulatory and citizen-facing systems.
+- Publish agency registers and plain-language explanations.
+- Treat Māori data governance and engagement as design requirements, not policy statements.
+- Preserve non-digital channels and meaningful human access to government.
+- Make suppliers accountable for traceability, security, quality and remediation.
 
-The public sector has moved beyond asking whether AI should be used. The more important questions are now where it is operating, what it is allowed to do, who is accountable when it fails, and whether the claimed benefits survive independent scrutiny.
+The central question is no longer whether the public sector will use AI. It is whether New Zealand can turn rapidly expanding operational use into services that are demonstrably safer, fairer, more effective and better value for the public.
